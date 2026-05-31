@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/audit-workspace"],
+      "description": "审计工作区文件系统访问"
+    }
+  },
+  "wantedConnectors": [
+    {
+      "name": "政策法规数据库",
+      "type": "法规库",
+      "description": "财政部/发改委/省级政策文件的结构化检索和全文获取",
+      "priority": "高"
+    },
+    {
+      "name": "用友/金蝶政务版",
+      "type": "财务系统",
+      "description": "行政事业单位财务数据直接读取：科目余额表、明细账、决算报表",
+      "priority": "高"
+    },
+    {
+      "name": "预算管理一体化系统",
+      "type": "财政系统",
+      "description": "预算指标下达、资金拨付、用款计划数据获取",
+      "priority": "中"
+    },
+    {
+      "name": "政府采购网/公共资源交易平台",
+      "type": "采购数据",
+      "description": "招投标公告、中标结果、合同备案信息自动采集",
+      "priority": "中"
+    },
+    {
+      "name": "企查查/天眼查",
+      "type": "企业信息",
+      "description": "供应商关联关系、股权穿透、负面信息监控",
+      "priority": "中"
+    },
+    {
+      "name": "电子函证中心",
+      "type": "函证系统",
+      "description": "银行函证、往来单位函证自动发送和回函追踪",
+      "priority": "低"
+    }
+  ]
+}

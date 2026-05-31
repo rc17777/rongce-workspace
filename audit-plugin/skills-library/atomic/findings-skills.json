@@ -1,0 +1,83 @@
+{
+  "tier": "atomic",
+  "category": "政策解读与发现生成",
+  "skills": [
+    {
+      "id": "atom-threshold-extract",
+      "name": "制度阈值自动提取",
+      "tool": "policy-digest",
+      "description": "从制度文本中自动识别所有量化阈值：金额门槛、时间期限、人员比例、数量界限。",
+      "constraints": ["必须保留原文出处", "多重条件全部标注"],
+      "param_patterns": {"units": ["万元", "元", "日", "工作日", "%"], "context_window": 2},
+      "failure_modes": ["误提取非门槛数字", "遗漏附则中的例外规定", "未识别跨章节引用的阈值"],
+      "use_conditions": ["政策文件解读阶段"],
+      "evidence_standard": "每个阈值可追溯到原文具体条款"
+    },
+    {
+      "id": "atom-redline-identify",
+      "name": "红线问题自动识别",
+      "tool": "policy-digest",
+      "description": "基于政策文本中的禁止性/强制性条款，自动识别零容忍红线问题。",
+      "constraints": ["仅识别明确禁止/强制的条款", "排除建议性条款"],
+      "param_patterns": {"trigger_words": ["不得", "严禁", "必须", "禁止", "杜绝", "应……不得"]},
+      "failure_modes": ["将一般性要求误标为红线", "遗漏间接表达的禁止条款", "未考虑上位法等效禁止"],
+      "use_conditions": ["政策文件解读阶段"],
+      "evidence_standard": "每条红线标注原文条款和违反后果"
+    },
+    {
+      "id": "atom-version-diff",
+      "name": "制度版本差异分析",
+      "tool": "policy-digest",
+      "description": "对比同一制度不同版本，识别新增/删除/修改条款，发现制度演进信号。",
+      "constraints": ["须报告差异可能原因", "区分政策更新和漏洞修补"],
+      "param_patterns": {"diff_scope": "条款级", "signal_types": ["新增", "删除", "修改", "拆分", "合并"]},
+      "failure_modes": ["误将格式调整识别为实质修改", "未区分外部驱动型修改和内部自主修改"],
+      "use_conditions": ["被审计单位有多版本制度", "关注制度空白期"],
+      "evidence_standard": "每个差异标注新旧版本对应位置"
+    },
+    {
+      "id": "atom-policy-match",
+      "name": "政策依据自动匹配",
+      "tool": "finding-generator",
+      "description": "将审计发现自动匹配到相关政策条款，确保每条问题有法可依。",
+      "constraints": ["必须精确匹配——不得泛泛引用", "一个发现可能需要多条政策依据"],
+      "param_patterns": {"match_fields": ["金额", "程序", "时间", "审批"], "confidence_threshold": 0.8},
+      "failure_modes": ["泛泛匹配到宽泛条款", "遗漏交叉条款"],
+      "use_conditions": ["问题发现阶段"],
+      "evidence_standard": "每条匹配标注条款原文"
+    },
+    {
+      "id": "atom-severity-classify",
+      "name": "问题严重度分级",
+      "tool": "finding-generator",
+      "description": "根据金额/性质/后果/频次将审计发现分为红线/严重/一般/关注。",
+      "constraints": ["红线按政策明文认定", "分级不因被审计单位规模改变"],
+      "param_patterns": {"levels": ["红线", "严重", "一般", "关注"], "factors": ["金额", "系统性", "主观故意", "整改难度", "后果"]},
+      "failure_modes": ["不同等级混为一谈", "红线问题降级处理"],
+      "use_conditions": ["发现问题后分类阶段"],
+      "evidence_standard": "每个分级标注判定依据"
+    },
+    {
+      "id": "atom-root-cause",
+      "name": "根因分析",
+      "tool": "recommendation-engine",
+      "description": "追溯问题根本原因，区分制度缺失/执行不力/系统性缺陷/个体行为。",
+      "constraints": ["不得停留在表象", "需访谈交叉验证"],
+      "param_patterns": {"cause_tree_depth": 3, "cause_types": ["制度缺失", "执行不力", "系统性风险", "个体行为"]},
+      "failure_modes": ["停留在直接原因不追问根因", "归因于个体忽略制度性原因"],
+      "use_conditions": ["生成审计建议前"],
+      "evidence_standard": "根因分析链条+支撑证据"
+    },
+    {
+      "id": "atom-feasibility",
+      "name": "建议可行性评估",
+      "tool": "recommendation-engine",
+      "description": "评估审计建议的可执行性，确保每条建议SMART：具体+可衡量+可达成+相关+有时限。",
+      "constraints": ["建议须指定责任主体", "给出合理时限", "区分立行立改vs逐步改进"],
+      "param_patterns": {"smart_check": ["Specific", "Measurable", "Achievable", "Relevant", "Time-bound"]},
+      "failure_modes": ["建议过于笼统缺乏操作性", "时限不合理", "建议超出被审计单位能力范围"],
+      "use_conditions": ["建议生成阶段"],
+      "evidence_standard": "每条建议的SMART评分"
+    }
+  ]
+}

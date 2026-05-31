@@ -1,0 +1,40 @@
+{
+  "tier": "functional",
+  "category": "政策与方案",
+  "skills": [
+    {
+      "id": "func-policy-digest",
+      "name": "政策文件深度解读",
+      "goal": "从政策/制度文件中系统提取关键要求、红线标准、时间节点、金额门槛、审批流程",
+      "inputs": ["政策文件(PDF/Word)", "制度汇编", "外部法规"],
+      "outputs": ["结构化政策知识库", "红线清单", "审计检查清单"],
+      "typical_time_hours": {"min": 4, "max": 16},
+      "sequence": [
+        {"step": 1, "action": "提取所有制度条款，按资金/采购/资产/合同/人事/决策分类"},
+        {"step": 2, "action": "识别并标注所有量化阈值（金额、时间、比例）→ 原子:threshold-extract"},
+        {"step": 3, "action": "提炼红线问题列表 → 原子:redline-identify"},
+        {"step": 4, "action": "多版本对比（如有）→ 原子:version-diff"},
+        {"step": 5, "action": "生成审计检查清单，逐条标注政策依据"}
+      ],
+      "atomic_skills": ["atom-threshold-extract", "atom-redline-identify", "atom-version-diff"],
+      "applicable_audit_types": ["ALL"]
+    },
+    {
+      "id": "func-risk-assessment",
+      "name": "审计风险评估与方案设计",
+      "goal": "基于政策知识和被审计单位特征，识别关键审计风险并生成实施方案",
+      "inputs": ["政策知识库", "被审计单位基本信息", "历史审计发现"],
+      "outputs": ["风险矩阵", "重点审计领域清单", "实施方案草案"],
+      "typical_time_hours": {"min": 4, "max": 12},
+      "sequence": [
+        {"step": 1, "action": "识别固有风险：基于行业特征、组织规模、业务复杂度"},
+        {"step": 2, "action": "评估控制风险：基于内控设计/执行的初步判断"},
+        {"step": 3, "action": "确定检查风险和样本量"},
+        {"step": 4, "action": "选配审计方法组合（查阅/分析/访谈/盘点/函证/复核等）"},
+        {"step": 5, "action": "排布审计程序表+时间线+人员分工"}
+      ],
+      "atomic_skills": ["atom-risk-matrix", "atom-stratified-sampling"],
+      "applicable_audit_types": ["ALL"]
+    }
+  ]
+}

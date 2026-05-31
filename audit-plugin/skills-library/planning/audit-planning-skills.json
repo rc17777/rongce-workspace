@@ -1,0 +1,141 @@
+{
+  "tier": "planning",
+  "category": "政府审计规划",
+  "skills": [
+    {
+      "id": "plan-performance-evaluation",
+      "name": "政府绩效评价审计",
+      "audit_type": "绩效评价",
+      "applicable_clients": ["行政单位", "事业单位", "专项资金项目"],
+      "phases": [
+        {"seq": 1, "name": "政策学习与指标提取", "goal": "消化评价对象政策依据、绩效目标、指标体系", "weight_pct": 10, "functional_skills": ["func-policy-digest"]},
+        {"seq": 2, "name": "评价方案设计", "goal": "设计评价指标体系、评分标准、数据收集方案", "weight_pct": 15, "functional_skills": ["func-risk-assessment"]},
+        {"seq": 3, "name": "数据采集与分析", "goal": "多维度收集数据（财务/统计/问卷/访谈），交叉验证可靠性", "weight_pct": 30, "functional_skills": ["func-cross-validation"]},
+        {"seq": 4, "name": "指标评分", "goal": "逐指标打分，确保评分有据可查", "weight_pct": 25, "functional_skills": ["func-finding-generator"]},
+        {"seq": 5, "name": "问题发现与分析", "goal": "识别绩效偏差，追溯根因", "weight_pct": 15, "functional_skills": ["func-finding-generator"]},
+        {"seq": 6, "name": "报告与建议", "goal": "绩效评价报告+可量化改进建议", "weight_pct": 5, "functional_skills": ["func-report-generation", "func-recommendation"]}
+      ],
+      "branch_logic": {
+        "预算执行率<80%": "深入分析资金滞留/项目滞后原因",
+        "满意度<基准": "启动服务效能专项分析",
+        "安全事故": "扩大安全相关指标审查"
+      },
+      "critical_risks": [
+        "指标体系偏离政策目标——为评分而评分",
+        "数据来源单一，缺乏交叉验证",
+        "重过程轻结果——关注投入而非产出",
+        "评分主观性过强"
+      ],
+      "typical_duration_days": {"min": 20, "max": 45},
+      "team_size_range": {"min": 3, "max": 6}
+    },
+    {
+      "id": "plan-asset-verification",
+      "name": "行政事业单位资产清查",
+      "audit_type": "资产清查",
+      "applicable_clients": ["行政单位", "事业单位", "学校", "医院"],
+      "phases": [
+        {"seq": 1, "name": "制度学习", "goal": "掌握资产管理制度、配置标准、处置规定", "weight_pct": 8, "functional_skills": ["func-policy-digest"]},
+        {"seq": 2, "name": "账面清查", "goal": "核对资产台账完整性，分类汇总", "weight_pct": 20, "functional_skills": ["func-ledger-extract"]},
+        {"seq": 3, "name": "实地盘点", "goal": "按抽样方案实地核实资产存在性和使用状况", "weight_pct": 35, "functional_skills": ["func-physical-verification"]},
+        {"seq": 4, "name": "价值测试", "goal": "折旧测算+减值评估+差异分析", "weight_pct": 20, "functional_skills": ["func-depreciation-recalc"]},
+        {"seq": 5, "name": "处置审核", "goal": "核查处置程序合规性", "weight_pct": 12, "functional_skills": ["func-three-importances-one-big"]},
+        {"seq": 6, "name": "报告", "goal": "资产清查报告+盘盈盘亏明细+整改建议", "weight_pct": 5, "functional_skills": ["func-report-generation"]}
+      ],
+      "branch_logic": {
+        "盘亏>总资产5%": "启动专项调查，追溯资产流失原因",
+        "发现账外资产": "追溯来源+补充登记+评估入账合规",
+        "超标准配置": "逐项列示+计算超标金额"
+      },
+      "critical_risks": [
+        "账外资产遗漏（捐赠/项目形成/代管资产）",
+        "处置程序不合规（未经评估/未报审批）",
+        "无形资产（软件/专利/数据资产）被忽略",
+        "盘亏原因浅层化——未追溯到管理责任"
+      ],
+      "typical_duration_days": {"min": 15, "max": 35},
+      "team_size_range": {"min": 2, "max": 5}
+    },
+    {
+      "id": "plan-special-bond-audit",
+      "name": "专项债券资金审计",
+      "audit_type": "专项债审计",
+      "applicable_clients": ["地方政府", "项目单位", "平台公司"],
+      "phases": [
+        {"seq": 1, "name": "政策学习", "goal": "掌握专项债管理办法、使用范围、负面清单", "weight_pct": 10, "functional_skills": ["func-policy-digest"]},
+        {"seq": 2, "name": "资金收支核查", "goal": "核实债券资金到位/拨付/使用的全链条", "weight_pct": 25, "functional_skills": ["func-fund-flow-trace"]},
+        {"seq": 3, "name": "项目进度匹配", "goal": "比对资金使用进度与实际工程进度", "weight_pct": 20, "functional_skills": ["func-fund-flow-trace"]},
+        {"seq": 4, "name": "合规性检查", "goal": "核查是否用于负面清单领域、是否挪用/闲置", "weight_pct": 25, "functional_skills": ["func-three-importances-one-big"]},
+        {"seq": 5, "name": "绩效评估", "goal": "评估债券资金使用效益和项目产出", "weight_pct": 15, "functional_skills": ["func-finding-generator"]},
+        {"seq": 6, "name": "报告", "goal": "专项债审计报告+问题清单+整改建议", "weight_pct": 5, "functional_skills": ["func-report-generation", "func-recommendation"]}
+      ],
+      "branch_logic": {
+        "资金闲置>6个月": "重点核查闲置原因+计算闲置成本",
+        "挪用至负面清单": "立即标注红线+追溯审批链",
+        "进度<30%但支出>50%": "深度分析资金-进度偏差原因"
+      },
+      "critical_risks": [
+        "资金挪用于负面清单领域",
+        "虚假进度套取资金",
+        "资金长期闲置未及时调整",
+        "项目收益无法覆盖债券本息"
+      ],
+      "typical_duration_days": {"min": 20, "max": 40},
+      "team_size_range": {"min": 3, "max": 5}
+    },
+    {
+      "id": "plan-internal-control-audit",
+      "name": "行政事业单位内控审计",
+      "audit_type": "内控审计",
+      "applicable_clients": ["行政单位", "事业单位"],
+      "phases": [
+        {"seq": 1, "name": "内控制度收集", "goal": "收集全部制度文件、流程图、岗位说明书", "weight_pct": 8, "functional_skills": ["func-policy-digest"]},
+        {"seq": 2, "name": "关键控制点识别", "goal": "穿行测试+控制矩阵构建", "weight_pct": 20, "functional_skills": ["func-cross-validation"]},
+        {"seq": 3, "name": "设计有效性测试", "goal": "对照《内控规范》评估制度设计", "weight_pct": 22, "functional_skills": ["func-finding-generator"]},
+        {"seq": 4, "name": "执行有效性测试", "goal": "抽样/观察/访谈验证控制实际运行", "weight_pct": 30, "functional_skills": ["func-voucher-sampling"]},
+        {"seq": 5, "name": "缺陷认定", "goal": "按重大/重要/一般分类", "weight_pct": 15, "functional_skills": ["func-finding-generator"]},
+        {"seq": 6, "name": "报告", "goal": "内控审计报告+整改路线图", "weight_pct": 5, "functional_skills": ["func-report-generation", "func-recommendation"]}
+      ],
+      "branch_logic": {
+        "重大缺陷": "立即报告治理层+扩大测试范围",
+        "关键岗位未轮岗": "评估替代控制+扩大实质性测试",
+        "管理层凌驾迹象": "重点关注非常规交易+追加舞弊程序"
+      },
+      "critical_risks": [
+        "管理层凌驾于内控之上",
+        "制度与执行两张皮",
+        "关键岗位长期未轮岗",
+        "信息沟通不畅致控制失效"
+      ],
+      "typical_duration_days": {"min": 15, "max": 30},
+      "team_size_range": {"min": 2, "max": 4}
+    },
+    {
+      "id": "plan-procurement-inspection",
+      "name": "政府采购监督检查",
+      "audit_type": "监督检查",
+      "applicable_clients": ["行政单位", "事业单位", "采购人"],
+      "phases": [
+        {"seq": 1, "name": "法规学习", "goal": "掌握最新采购法规、限额标准、集采目录", "weight_pct": 8, "functional_skills": ["func-policy-digest"]},
+        {"seq": 2, "name": "采购台账整理", "goal": "汇总检查期间完整采购台账", "weight_pct": 15, "functional_skills": ["func-ledger-extract"]},
+        {"seq": 3, "name": "程序合规检查", "goal": "逐项检查采购方式/公告/评审", "weight_pct": 30, "functional_skills": ["func-procurement-compliance"]},
+        {"seq": 4, "name": "供应商关联分析", "goal": "围标串标/关联关系/价格异常检测", "weight_pct": 20, "functional_skills": ["func-procurement-compliance"]},
+        {"seq": 5, "name": "合同执行检查", "goal": "签订/公告/备案/变更/验收全周期", "weight_pct": 20, "functional_skills": ["func-contract-lifecycle"]},
+        {"seq": 6, "name": "报告", "goal": "监督检查报告+问题清单+处理建议", "weight_pct": 7, "functional_skills": ["func-report-generation", "func-recommendation"]}
+      ],
+      "branch_logic": {
+        "发现围标串标": "扩大关联分析+追加投标文件比对",
+        "发现化整为零": "追溯同品目同年度全部采购+计算规避金额",
+        "价格超出市场30%": "启动专项价格调查"
+      },
+      "critical_risks": [
+        "化整为零规避公开招标",
+        "围标串标（关联供应商轮流中标）",
+        "单一来源采购无充分理由",
+        "超合同进度/金额支付"
+      ],
+      "typical_duration_days": {"min": 15, "max": 30},
+      "team_size_range": {"min": 2, "max": 4}
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "",
+  "author": "",
+  "publish_time": "未知时间",
+  "description": "知识图谱、社交网络分析、链路预测、自然语言处理、聚类分析、机器学习、可视化等前沿技术在内部审计和风控中的应用案例",
+  "word_count": 74,
+  "images_count": 5,
+  "content_preview": "id=\"js_content\" style=\"visibility: hidden; opacity: 0; \">点蓝字关注  设为星标 ☆ 优先赏阅 数字化审计-SmartAudit：问题导向、应用至上、解决痛点数字化审计只是数字化转型的一个子集，很多数字化审计中遇到的问题，在业务数字化转型过程中都已遇到，且得到了妥善的解决。技术都是为了解决某些问题发展起来的，看似不同的技术路径后面，都曾经面对过相似的基本问题。提炼和学习解决这些基本问题的思维，能够极大地开拓我们的眼界和思路，应对不同的场景。知识图谱、社交网络分析、链路预测、自然语言处理、数据挖掘、聚类分析、机器学习、非结构化数据处理、可视化等前沿技术在其他领域都有比较成熟的应用，通过迁移学习，也可以在内部审计和风控中有很好的实践效果。本文梳理“数字化审计-SmartAudit”公众号曾经发布过的前沿技术应用实践案例。点击知识点介绍下方的文章链接可直接打开阅读。 知识图谱 知识图谱是由Google公司提出的一个概念，用于语义搜索而建立的知识库，是一种大规模的语义网络，包含实体、概念及其之间的各种语义关系。当前实践中，很多时候谈知识图谱实际上是在讲复杂网络、社交网络分析。可能是从表现形式上看，知识图谱和复杂网络一样，也可认为是一个异质网络。并且在知识图谱构建完成后，会使用很多复杂网络中的算法和方法拓展应用。复杂网络分析关注的焦点是关系和关系的模式，一个复杂网络包括两个基本构成：节点（Node）和连接节点的边（Edge，也称为链接Link）。映射到日常业务中，节点代表的是数据分析的实例对象，如个人、公司或团体，也可能是联系方式、地址等。边则展现了节点之间存在的多种多样的关系（Relation），如股权关系、交易关系、亲属关系、资金往来关系等。利用社交网络分析（SNA）挖出“围标”线索如何找出庞大关系网络中的“小团伙”？链路预测算法挖掘企业间的隐性关联关系图数据库 图数据库（ Graph databases ）很容易被望文生义理解为存储图像的数据库。实际上在四类NoSQL数据库中，图数据库是专业存储和处理各种关系的数据库。图数据库（ Graph databases ）的“图”来源于“图论（ Graph Theory ）”，而不是“图像（Image）”。在图论（ Graph Theory ）中，“图（ Graph ）”是指一些节点和关联这些节点的联系的集合，“图（ Graph ）”将实体表现为节点，实体与其他实体连接的方式表现为联系。通俗地讲，“图（ Graph ）”就是各种各样的“网络（ Network ）”。应用图数据库，可以轻松解答 “核心客户发生风险，会传播给5层之内的哪些客户” 这样的问题。Neo4j：善于处理关系，所以强大（一）Neo4j：善于处理关系，所以强大（二）- 部署和应用Part II 用图数据视角理解数据Part III 实战招标数据异常分析 数据挖掘 著名加籍华人Jiawei Han(韩家炜)对数据挖掘的定义是：从大量的、不完全的、有噪声的、模糊的、随机的实际应用数据中，提取隐含在其中的、人们事先不知道的、但又是潜在有用的信息和知识的过程。常用的数据挖掘算法有决策树（Decision Trees）、聚类分析（Cluster Detection）、回归分析（Logistic Analysis）等。聚类分析视角下审计对象分类与抽样研究关联规则挖掘：让“影子账户”无所遁形自然语言处理 自然语言处理（Natural Language Processing，NLP）是一门集语言学，数学及计算机科学于一体的科学。它的核心目标就是把人的自然语言转换为计算机可以阅读的指令，简单来说就是让机器读懂人的语言。常用的NLP技术和算法包括文本处理中的分词、词频、命名实体识别、依存句法分析。如何快速Get到领导讲话重点？如何解析非结构化文档文本中的隐蔽关系（一）？如何解析非结构化文档文本中的隐蔽关系（二）？ 非结构化数据处理 非结构化数据就是没有没有预定义的数据模型，结构不规则，不是通过二维逻辑表来表现。如办公文档、文本、图片、各类报表、图像和音频/视频信息等等。人的行为是复杂、多维而有具有规律性的，结构化的数据不过是行为结果高度抽象、降维处理后的结果。在存储、算力都有资源限制的时代，将行为抽象为二维表格是最经济的选择。实际上，我们日常产生和接触的更多的是非结构化的数据。如何用Python挖掘照片背后的秘密？半结构化数据的处理和审计应用实例看得到，取得到，才是数据 机器学习 周志华（南京大学人工智能学院院长、计算机系教授）在他那本有名的“西瓜书”《机器学习》中的定义：机器学习是这样一门学科：通过计算的手段，学习经验（也可以说是利用经验）来改善系统的性能。在计算机系统中,经验（Exp",
+  "images": [
+    "https://mmbiz.qlogo.cn/mmbiz_jpg/JsNYYRWVG2DduNnOIocYHdLB1cr1s7x9MSqFtj3CkNOSICngWO3Y8yRPgaKPG8pOOTh0kjMFgBOSHgfoGRaJ8A/0?wx_fmt=jpeg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/JsNYYRWVG2DduNnOIocYHdLB1cr1s7x9wsLicObqfHicDsEpop8sNd3fib09gBdicB3YTia7huOkbNh3KJkub5qFAicQ/640?wx_fmt=jpeg",
+    "http://mmbiz.qpic.cn/mmbiz_png/JsNYYRWVG2CSq5rZyjicBJWHBvWaVb8WV3wbgLffR6MdA0TRQZt4GqA6eWK9H2CDJaxB6eicvR8jHUibvmxWCTBfQ/0?wx_fmt=png",
+    "http://mmbiz.qpic.cn/mmbiz_png/JsNYYRWVG2CSq5rZyjicBJWHBvWaVb8WV3wbgLffR6MdA0TRQZt4GqA6eWK9H2CDJaxB6eicvR8jHUibvmxWCTBfQ/0?wx_fmt=png",
+    "https://res.wx.qq.com/mmbizappmsg/zh_CN/images/pic/pic_blank.gif"
+  ],
+  "url": "https://mp.weixin.qq.com/s/h4tKxobmuvsi8VX3QP2XfA"
+}

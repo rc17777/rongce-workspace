@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-31T14:40:08.157Z",
+  "entries": {
+    "memory:memory/2026-05-09.md:1:26": {
+      "key": "memory:memory/2026-05-09.md:1:26",
+      "path": "memory/2026-05-09.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# 2026-05-09 Daily Log ## 学习：aweskill - 让 AI Agent 学会自己管理 skills 文章来源：微信公众号「北野茶缸子」2026-05-06 原文链接：https://mp.weixin.qq.com/s/Fb0Q7nKEJtORSTz7Ukv_EA ### 核心观点 当前 AI 编码 Agent（Codex、Claude Code、Cursor、Gemini CLI 等）各自有不同的 Skill 目录结构， 管理 Skills 的负担落在人身上。aweskill 的设计目标是让 Agent 自己管理 Skills。 ### aweskill 架构 - **中央仓库**：`~/.aweskill/skills/`，所有 Skills 统一存放 - **Agent 投影**：通过 symlink 把中央仓库的 Skills 投射到各 Agent 的目录 - **内置元 Skills**： - `aweskill`：搜索、安装、更新、Bundle 管理、Agent 投影 - `aweskill-doctor`：同步检查、清理、去重、修复异常 SKILL.md、恢复 - **Agent 引导协议**：README.ai.md，告诉 Agent 如何自主完成初始化 ### 7 个使用场景 1. **初始化新 Agent**：一句话引导 Agent 完成安装和投影 2. **查找安装 Skill**：自然语言 → aweskill find → 选择 → 安装 → 投影 3. **创建项目 Bundle**：将一组 Skill",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "totalScore": 2.2762602839032984,
+      "maxScore": 0.5255337199154504,
+      "firstRecalledAt": "2026-05-15T01:44:08.214Z",
+      "lastRecalledAt": "2026-05-31T14:40:08.157Z",
+      "queryHashes": [
+        "77b4880875c4",
+        "d16d6bad5449",
+        "6c1637fd31ae",
+        "9e3aa4f08dcd",
+        "b4876f8dae1e"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-28",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "aweskill/skills",
+        "aweskill-doctor",
+        "skill.md",
+        "readme.ai.md",
+        "log",
+        "学习",
+        "aweskill",
+        "学会"
+      ]
+    },
+    "memory:memory/2026-05-08.md:1:40": {
+      "key": "memory:memory/2026-05-08.md:1:40",
+      "path": "memory/2026-05-08.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# 2026-05-08 Daily Log ## Skills 安装 - 从微信公众号文章（码上炼AI）学习并安装15个推荐技能 - 成功新装：summarize、markdown-converter、openai-whisper、video-frames、nano-banana-pro - 依赖补装：uv（pip安装）、markitdown（pip安装） - 成功安装：ffmpeg 8.1.1（winget） ## OpenClaw 运行报告 - 版本：2026.4.5 - 模型：Claude Sonnet 4（simpleai代理）+ GLM-5.1备选 - 插件：browser / openclaw-weixin / wecom-openclaw-plugin 均正常 - 无定时任务，运行正常 ## 遗留问题修复（2026-05-08 10:20） ### 已解决 - cryptography 48.0 ARM64 编译失败：降级安装 cryptography 46.0.3（预编译包）✅ - google-genai 2.0.0：通过 pip 直接安装绕过编译问题 ✅ - summarize：安装 trafilatura 2.0.0 作为替代方案 ✅ - VS BuildTools 2022：已安装（C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools）✅ ### 未解决 - whisper / openai-whisper：Python ARM64 无预编译 wheel，需 x64 Py",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.2900618607649363,
+      "maxScore": 0.2900618607649363,
+      "firstRecalledAt": "2026-05-15T01:44:08.214Z",
+      "lastRecalledAt": "2026-05-15T01:44:08.214Z",
+      "queryHashes": [
+        "77b4880875c4"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "openai",
+        "markdown-converter",
+        "openai-whisper",
+        "video-frames",
+        "nano-banana-pro",
+        "8.1.1",
+        "2026.4.5",
+        "glm-5.1备选"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:27": {
+      "key": "memory:memory/2026-05-14.md:1:27",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-05-14 Daily Log ## 学习：PPT Master Skill - 原生可编辑PPT生成工具 文章来源：微信公众号「小龙开发者」2026-05-14 原文链接：https://mp.weixin.qq.com/s/6nrpagpJDLMGt5pDjHVcmA ### 核心观点 市面95%的AI PPT工具只解决\"生成\"不解决\"编辑\"——生成的是图片/网页/固定模板，改个标题排版就崩。 PPT Master 直接操作底层 OOXML/DrawingML，生成真正可编辑的原生 .pptx 文件。 ### 市面AI PPT四类对比 1. 模板填充型——固定模板，灵活度低 2. 图片型——每页一张图，文字都选不了（最多但最坑） 3. HTML演示型——网页幻灯片，无法导入PowerPoint协作 4. 原生PPT型——PPT Master的路子，真正的PowerPoint文件 ### PPT Master 核心能力 - **模板复刻**：读取任意.pptx提取模板结构（字体/配色/母版/布局/图形关系），新生成PPT自动套用 - **原生动画**：直接输出PowerPoint动画，不是HTML特效 - **AI配音+视频导出**：从Speaker Notes读讲稿→TTS生成配音→嵌入音频→导出MP4 - 支持 ElevenLabs、MiniMax、CosyVoice、Qwen TTS - 甚至支持声音克隆 - **Local-first**：数据不上传第三方，不绑定AI厂商 ### 工作流程 文档（PDF/DOCX/URL/Markdo",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.0599402933409823,
+      "maxScore": 0.5299701466704911,
+      "firstRecalledAt": "2026-05-15T03:28:00.973Z",
+      "lastRecalledAt": "2026-05-15T04:04:17.701Z",
+      "queryHashes": [
+        "d16d6bad5449",
+        "6c1637fd31ae"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "生成的是图片/网页/固定模板",
+        "ooxml/drawingml",
+        "读取任意.pptx提取模板结构",
+        "字体/配色/母版/布局/图形关系",
+        "local-first",
+        "pdf/docx/url/markdo",
+        "log",
+        "学习"
+      ]
+    },
+    "memory:memory/2026-05-09.md:23:47": {
+      "key": "memory:memory/2026-05-09.md:23:47",
+      "path": "memory/2026-05-09.md",
+      "startLine": 23,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "3. **创建项目 Bundle**：将一组 Skills 打包为可复用 Bundle，跨 Agent 共享 4. **检查更新**：aweskill update --check 先看后改 5. **修复 Skill 状态**：doctor 系列命令，默认 dry-run，确认后才 apply 6. **迁移配置**：一个 Bundle 投影到另一个 Agent，不用手动复制 7. **备份**：aweskill store backup，恢复比重建容易 ### Agent 可操作工具的设计原则 - 同时为人和 Agent 写文档 - 通过稳定 CLI 被脚本化调用 - 对破坏性操作保持保守 - 在应用变更前可以检查 - 每一步操作后都容易验证 - 本地状态漂移后可以恢复 ### 与 OpenClaw 的对比 - OpenClaw 用 clawhub 做 skill 分发，aweskill 也做类似的事但更强调 Agent 自主操作 - OpenClaw 的 skill 放在 workspace/skills/ 下，aweskill 用中央仓库+投影模式 - aweskill 的 Bundle 概念类似\"技能包\"，可以跨 Agent 复用——OpenClaw 目前没有这个 - aweskill-doctor 的自动修复思路值得借鉴 ### 相关链接 - 官网：https://aweskill.webioinfo.top/ - GitHub：https://github.com/mugpeng/aweskill - Agent 引导文档：https://github.co",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.38111418253039997,
+      "maxScore": 0.38111418253039997,
+      "firstRecalledAt": "2026-05-28T01:28:25.947Z",
+      "lastRecalledAt": "2026-05-28T01:28:25.947Z",
+      "queryHashes": [
+        "9e3aa4f08dcd"
+      ],
+      "recallDays": [
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "backup",
+        "备份",
+        "dry-run",
+        "workspace/skills",
+        "aweskill-doctor",
+        "aweskill.webioinfo.top",
+        "github.com/mugpeng/aweskill",
+        "github.co"
+      ]
+    },
+    "memory:memory/2026-05-28.md:31:51": {
+      "key": "memory:memory/2026-05-28.md:31:51",
+      "path": "memory/2026-05-28.md",
+      "startLine": 31,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- 新增「Skills 技能管理」章节（安装流程、已安装技能清单、路径速查） - 新增「本地环境信息」章节（工作目录、Skills 目录、Secrets 目录） - 添加快速参考命令 4. **更新 `AGENTS.md`** - 新增「Secrets & Keys Security Rules」红色底线规则 - 新增「Skills 技能管理原则」章节，引用 TOOLS.md - 强调密钥禁止写入共享文件 **核心原则（写入 AGENTS.md）：** - `.secrets/` 内容禁止 commit、禁止上传 GitHub、禁止分享 - 密钥统一存放 `.secrets/api-keys/`（纯文本 .txt） - SKILL.md 只注路径，不写内容 **风险提示：** > ⚠️ workspace 中已有部分临时安装脚本（install_paddle*.ps1 等），已在 .gitignore 中标记，待清理 **待办：** - [ ] 清理 workspace 中的遗留临时脚本 - [ ] 逐步为各技能完善密钥配置记录 - [ ] 检查是否有遗漏的敏感文件需要加入 .gitignore",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5921218518278104,
+      "maxScore": 0.5921218518278104,
+      "firstRecalledAt": "2026-05-31T14:40:08.157Z",
+      "lastRecalledAt": "2026-05-31T14:40:08.157Z",
+      "queryHashes": [
+        "b4876f8dae1e"
+      ],
+      "recallDays": [
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "agents.md",
+        "tools.md",
+        "secrets/api-keys",
+        "skill.md",
+        "install-paddle",
+        "新增",
+        "skills",
+        "技能"
+      ]
+    },
+    "memory:memory/2026-05-28.md:1:36": {
+      "key": "memory:memory/2026-05-28.md:1:36",
+      "path": "memory/2026-05-28.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# 2026-05-28 日志 ## 今日工作 ### 技能管理与密钥管理优化 **背景：** 阅读了公众号「One的AI工具箱」文章《很多人没看懂 OpenClaw：真正拉开 Agent 差距的，不是模型，而是 workspace》，其中强调了两点： 1. `.secrets/` 文件夹绝对不能上传 GitHub 或分享给他人 2. Skills 技能管理需要规范化 **执行的操作：** 1. **新建 `.secrets/` 目录** - `~/.openclaw/workspace/.secrets/` - 子目录：`api-keys/`、`credentials/` - 各目录均有 README.md 说明用途和命名规范 2. **新建 `.gitignore`** ``` .secrets/ ← 密钥目录 memory/ ← 日志目录 state/ ← 状态文件 *.log / logs/ ← 日志文件 *.pem / *.key ← 密钥文件 .env ← 环境变量 ``` 目的：防止意外 commit 敏感信息 3. **重构 `TOOLS.md`** - 新增「Secrets 管理」章节（绝对禁止事项、命名规范、使用方式） - 新增「Skills 技能管理」章节（安装流程、已安装技能清单、路径速查） - 新增「本地环境信息」章节（工作目录、Skill",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.563745630008854,
+      "maxScore": 0.563745630008854,
+      "firstRecalledAt": "2026-05-31T14:40:08.157Z",
+      "lastRecalledAt": "2026-05-31T14:40:08.157Z",
+      "queryHashes": [
+        "b4876f8dae1e"
+      ],
+      "recallDays": [
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "openclaw/workspace",
+        "api-keys",
+        "readme.md",
+        "tools.md",
+        "日志",
+        "今日",
+        "工作",
+        "技能"
+      ]
+    }
+  }
+}
