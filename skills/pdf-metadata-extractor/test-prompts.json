@@ -1,0 +1,4 @@
+[
+  {"id": 1, "prompt": "提取这些投标PDF的元数据，看看谁做的、用什么工具做的", "expected": "应输出Author/Creator/Producer/CreationDate等字段，并解释各字段含义"},
+  {"id": 2, "prompt": "pdf-metadata-extractor怎么用？给我一个可以复制粘贴的代码", "expected": "应提供完整的PyMuPDF元数据提取代码模板，含注释和使用说明"}
+]

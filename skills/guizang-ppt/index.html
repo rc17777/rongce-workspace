@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>审计数字化 · 融策实践</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:100%;height:100%;overflow:hidden;background:#1a1f2e;color:#1a1f2e;font-family:'Inter','Noto Sans SC',sans-serif;-webkit-font-smoothing:antialiased}
+  /* === Corporate blue palette === */
+  :root{
+    --primary:#1a1a1a;
+    --primary-light:#333333;
+    --primary-dark:#000000;
+    --accent:#c8a84e;
+    --accent-light:#e8cd7a;
+    --bg-light:#f8f6f0;
+    --bg-dark:#0d0d0d;
+    --text-dark:#1a1a1a;
+    --text-light:#f0ede6;
+    --border:#d4cfc4;
+    --shadow:0 2px 16px rgba(0,0,0,.1);
+  }
+  #deck{position:fixed;inset:0;width:900vw;height:100vh;display:flex;flex-wrap:nowrap;transition:transform .8s cubic-bezier(.65,0,.35,1);z-index:10}
+  .slide{width:100vw;height:100vh;flex:0 0 100vw;position:relative;display:flex;flex-direction:column;overflow:hidden;transition:opacity .3s ease}
+  .slide.light{background:var(--bg-light);color:var(--text-dark)}
+  .slide.dark{background:var(--bg-dark);color:var(--text-light)}
+  .inner{flex:1;padding:6vh 7vw;display:flex;flex-direction:column;overflow:hidden}
+  .header{display:flex;justify-content:space-between;align-items:center;padding-bottom:1.5vh;border-bottom:1px solid var(--border);margin-bottom:3vh}
+  .header .left{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);opacity:.85}
+  .header .right{font-size:11px;font-weight:400;color:#999}
+  .footer{margin-top:auto;padding-top:1.5vh;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10px;color:#94a3b8;letter-spacing:.05em}
+  .tag{display:inline-block;padding:3px 12px;font-size:11px;font-weight:500;border-radius:3px;background:var(--accent);color:#0d0d0d;letter-spacing:.08em}
+  .h1{font-size:clamp(1.8rem,3.2vw,3.6rem);font-weight:700;color:#1a1a1a;line-height:1.25;margin-bottom:1vh}
+  .h2{font-size:clamp(1.3rem,2.2vw,2.5rem);font-weight:600;color:var(--accent);line-height:1.3;margin-bottom:2vh}
+  .h3{font-size:clamp(1rem,1.3vw,1.5rem);font-weight:600;color:var(--primary-dark);margin-bottom:1vh}
+  .body{font-size:clamp(13px,.95vw,15px);font-weight:400;line-height:1.6;color:#4a4a4a;margin-bottom:1.5vh}
+  .card{background:#fff;border-radius:6px;padding:2vh 2vw;box-shadow:var(--shadow);border-left:3px solid var(--accent)}
+  .card-accent{border-left-color:var(--accent);background:linear-gradient(135deg,#fff,#fdf6e3)}
+  .num-lg{font-size:clamp(2rem,3.5vw,4rem);font-weight:700;color:var(--accent);line-height:1}
+  .num-accent{color:var(--accent)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2vw}
+  .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.8vw}
+  .grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1.5vw}
+  .grid-5{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:1.5vw}
+  .flex-row{display:flex;gap:2vw;flex-wrap:wrap}
+  .flex-1{flex:1;min-width:200px}
+  .mt-2{margin-top:2vh}
+  .mb-1{margin-bottom:1vh}
+  .mb-2{margin-bottom:2vh}
+  .p-2{padding:2vh}
+  .text-center{text-align:center}
+  .text-small{font-size:12px;color:#999}
+  hr{border:none;border-top:1px solid var(--border);margin:2vh 0}
+  /* === Navigation === */
+  #nav{position:fixed;left:50%;bottom:3vh;transform:translateX(-50%);z-index:30;display:flex;gap:10px;padding:8px 16px;background:rgba(13,13,13,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;border:1px solid rgba(200,168,78,.2)}
+  #nav .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;border:0;transition:all .3s}
+  #nav .dot.active{background:linear-gradient(90deg,var(--accent),var(--accent-light));width:22px;border-radius:999px}
+  /* === Cover === */
+  .slide-cover{background:linear-gradient(165deg,#0a0a0a 0%,#1a1a1a 40%,#2a2518 100%);color:#f0ede6;justify-content:center;align-items:center;text-align:center;padding:10vh 10vw}
+  .slide-cover .sub{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.5;color:var(--accent);margin-bottom:3vh}
+  .slide-cover h1{font-size:clamp(2rem,4.5vw,5rem);font-weight:700;margin-bottom:2vh;line-height:1.15}
+  .slide-cover .desc{font-size:clamp(1rem,1.3vw,1.4rem);font-weight:300;opacity:.8;max-width:55vw;margin:0 auto 4vh;line-height:1.6}
+  .slide-cover .meta{font-size:12px;opacity:.5;letter-spacing:.1em}
+  .slide-cover .line{width:60px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light));margin:0 auto 3vh;border-radius:1px}
+  .slide-closing{background:linear-gradient(165deg,#0a0a0a 0%,#1a1a1a 60%,#2a2518 100%);color:#f0ede6;justify-content:center;align-items:center;text-align:center;padding:10vh 10vw}
+  .slide-closing h1{font-size:clamp(1.6rem,3vw,3.5rem);font-weight:600;line-height:1.3;margin-bottom:3vh}
+  .slide-closing .line{width:60px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light));margin:0 auto 3vh;border-radius:1px}
+  /* === Full-bleed dark section === */
+  .section-dark{background:var(--bg-dark);color:var(--text-light)}
+  .section-dark .body{color:rgba(255,255,255,.7)}
+  .section-dark .header .left{color:var(--accent);opacity:.7}
+  .section-dark .header{border-color:rgba(255,255,255,.1)}
+  .section-dark .footer{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
+  .section-dark .h1{color:#fff}
+  .section-dark .h2{color:var(--accent)}
+  .section-dark .h3{color:#f1f5f9}
+  .section-dark .card{background:rgba(255,255,255,.04);border-left-color:var(--accent);box-shadow:none;color:rgba(255,255,255,.82);border-left-width:2px}
+  .section-dark .num-lg{color:#fbbf24}
+  .section-dark hr{border-color:rgba(255,255,255,.1)}
+</style>
+</head>
+<body>
+<div id="deck">
+
+<!-- ===== P1: Cover ===== -->
+<section class="slide slide-cover">
+  <div class="sub">RONCCE DIGITAL AUDIT · 2026</div>
+  <h1>审计数字化<br>实战方法论</h1>
+  <div class="line"></div>
+  <div class="desc">融策会计师事务所 · 从数据驱动到智能决策的完整路径<br>知识资产化 · 审计工具智能化 · 团队数字化升级</div>
+  <div class="meta">融策左护法 · 2026年5月</div>
+  <div style="margin-top:4vh;font-size:11px;opacity:.35">← → 翻页 · ESC 索引</div>
+</section>
+
+<!-- ===== P2: Background ===== -->
+<section class="slide light">
+  <div class="inner">
+    <div class="header" style="color:rgba(255,255,255,.6)"><div class="left" style="color:rgba(255,255,255,.6)"><svg viewBox="0 0 80 24" style="height:24px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a84e"/>
+      <stop offset="100%" style="stop-color:#e8cd7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="20" height="20" rx="3" fill="url(#gold)"/>
+  <text x="4" y="17" font-family="serif" font-weight="700" font-size="14" fill="#0d0d0d">R</text>
+  <text x="24" y="17" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="currentColor">融策审计</text>
+</svg>背景 · Context</div><div class="right">02 / 08</div></div>
+    <h1 class="h1">中小事务所的数字化鸿沟</h1>
+    <p class="body">核心矛盾：经验锁在少数资深人员身上，新人培养成本高、周期长、交付能力弱。数字化转型不是买软件，而是"把经验变成系统"。</p>
+    <hr>
+    <div class="grid-3 mt-2">
+      <div class="card">
+        <div class="num-lg">40%</div>
+        <div style="font-weight:500;margin:1vh 0 .5vh">政府审计业务</div>
+        <div class="text-small">通过政府采购中标获取</div>
+      </div>
+      <div class="card">
+        <div class="num-lg">10人</div>
+        <div style="font-weight:500;margin:1vh 0 .5vh">团队规模</div>
+        <div class="text-small">1名合伙人 + 9名助理</div>
+      </div>
+      <div class="card">
+        <div class="num-lg">3年</div>
+        <div style="font-weight:500;margin:1vh 0 .5vh">新人成长周期</div>
+        <div class="text-small">助理专业性弱、难独立交付</div>
+      </div>
+    </div>
+    <div class="card card-accent mt-2">
+      <div class="text-small" style="color:#666;font-weight:500;margin-bottom:4px">破解之道</div>
+      <div style="font-weight:600;color:var(--primary-dark)">第一步：知识资产化。把资深CPA的审计经验固化为可复用的AI技能和工作流。</div>
+    </div>
+    <div class="footer"><div>融策白皮书 2026</div><div>02 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P3: Four Pillars ===== -->
+<section class="slide section-dark">
+  <div class="inner">
+    <div class="header"><div class="left"><svg viewBox="0 0 80 24" style="height:24px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a84e"/>
+      <stop offset="100%" style="stop-color:#e8cd7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="20" height="20" rx="3" fill="url(#gold)"/>
+  <text x="4" y="17" font-family="serif" font-weight="700" font-size="14" fill="#0d0d0d">R</text>
+  <text x="24" y="17" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="currentColor">融策审计</text>
+</svg>战略框架 · Strategy</div><div class="right">03 / 08</div></div>
+    <h2 class="h2">四大转型路径</h2>
+    <div class="grid-2" style="flex:1">
+      <div style="display:flex;flex-direction:column;gap:1.5vh">
+        <div class="card" style="flex:1">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:1vh">路径一</div>
+          <h3 class="h3" style="color:#fff">知识资产化</h3>
+          <div class="body">审计经验 → AI技能工作流。10大盲区清单、底稿模板、法规库全部标准化</div>
+        </div>
+        <div class="card" style="flex:1">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:1vh">路径三</div>
+          <h3 class="h3" style="color:#fff">合同流程线上化</h3>
+          <div class="body">电子签章+自动归档+风险预警，合同签订到执行全链路数字管控</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5vh">
+        <div class="card" style="flex:1">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:1vh">路径二</div>
+          <h3 class="h3" style="color:#fff">审计工具智能化</h3>
+          <div class="body">AI自动筛查+异常检测+报告生成。525万条数据30秒分析，21个可追溯问题</div>
+        </div>
+        <div class="card" style="flex:1">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:1vh">路径四</div>
+          <h3 class="h3" style="color:#fff">客户CRM</h3>
+          <div class="body">客户画像+项目追踪+续约提醒，从单次审计到长期顾问服务升级</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><div>四维路径 · 12个月路线图</div><div>03 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P4: Core Framework ===== -->
+<section class="slide light">
+  <div class="inner">
+    <div class="header"><div class="left"><svg viewBox="0 0 80 24" style="height:24px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a84e"/>
+      <stop offset="100%" style="stop-color:#e8cd7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="20" height="20" rx="3" fill="url(#gold)"/>
+  <text x="4" y="17" font-family="serif" font-weight="700" font-size="14" fill="#0d0d0d">R</text>
+  <text x="24" y="17" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="currentColor">融策审计</text>
+</svg>方法论 · Methodology</div><div class="right">04 / 08</div></div>
+    <h2 class="h2">数据驱动决策四层架构</h2>
+    <div class="grid-4 mt-2">
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div style="font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase">LAYER 1</div>
+        <h3 class="h3" style="margin-top:1vh;font-size:clamp(1rem,1.1vw,1.2rem)">数据采集</h3>
+        <div class="body" style="font-size:13px">原始业务数据、行为数据、环境数据、历史数据全域采集</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div style="font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase">LAYER 2</div>
+        <h3 class="h3" style="margin-top:1vh;font-size:clamp(1rem,1.1vw,1.2rem)">数据治理</h3>
+        <div class="body" style="font-size:13px">清洗去噪、格式统一、分类归档。数据质量决定决策质量</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div style="font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase">LAYER 3</div>
+        <h3 class="h3" style="margin-top:1vh;font-size:clamp(1rem,1.1vw,1.2rem)">分析研判</h3>
+        <div class="body" style="font-size:13px">深度拆解，区分表象与本质，建立数据与业务问题的关联</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div style="font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase">LAYER 4</div>
+        <h3 class="h3" style="margin-top:1vh;font-size:clamp(1rem,1.1vw,1.2rem)">决策迭代</h3>
+        <div class="body" style="font-size:13px">落地执行→新数据反馈→修正方案，持续闭环迭代</div>
+      </div>
+    </div>
+    <hr>
+    <div class="flex-row">
+      <div class="card flex-1" style="border-left-color:#ddd">
+        <div style="font-size:11px;font-weight:600;color:#999;letter-spacing:.1em;text-transform:uppercase">AI分析</div>
+        <div class="body" style="font-size:13px;margin-top:4px">30秒处理525万条数据 · 全量分析+交叉比对+异常检测</div>
+      </div>
+      <div class="card flex-1" style="border-left-color:#ddd">
+        <div style="font-size:11px;font-weight:600;color:#999;letter-spacing:.1em;text-transform:uppercase">人做判断</div>
+        <div class="body" style="font-size:13px;margin-top:4px">问题定性、专业判断、最终结论由人完成</div>
+      </div>
+    </div>
+    <div class="footer"><div>来源：溪石《大数据驱动决策》</div><div>04 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P5: Blind Spots ===== -->
+<section class="slide section-dark">
+  <div class="inner">
+    <div class="header"><div class="left"><svg viewBox="0 0 80 24" style="height:24px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a84e"/>
+      <stop offset="100%" style="stop-color:#e8cd7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="20" height="20" rx="3" fill="url(#gold)"/>
+  <text x="4" y="17" font-family="serif" font-weight="700" font-size="14" fill="#0d0d0d">R</text>
+  <text x="24" y="17" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="currentColor">融策审计</text>
+</svg>审计盲区 · Blind Spots</div><div class="right">05 / 08</div></div>
+    <h2 class="h2">十大审计盲区速查清单</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1vh 2vw;flex:1;padding-top:1vh">
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">01</span>
+        <span style="font-size:13px;font-weight:400">合同之外隐形交易</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">06</span>
+        <span style="font-size:13px;font-weight:400">离职/外包人员管控</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">02</span>
+        <span style="font-size:13px;font-weight:400">长期挂账/小金库</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">07</span>
+        <span style="font-size:13px;font-weight:400">沉默证据缺失记录</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">03</span>
+        <span style="font-size:13px;font-weight:400">电子数据与系统日志</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">08</span>
+        <span style="font-size:13px;font-weight:400">隐蔽关联交易</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">04</span>
+        <span style="font-size:13px;font-weight:400">临时机构专项小组</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">09</span>
+        <span style="font-size:13px;font-weight:400">费用报销灰色地带</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">05</span>
+        <span style="font-size:13px;font-weight:400">非核心边缘业务</span>
+      </div>
+      <div class="card" style="display:flex;gap:1vw;align-items:center;padding:1.5vh 1.5vw">
+        <span style="font-size:11px;font-weight:700;color:var(--accent);min-width:28px">10</span>
+        <span style="font-size:13px;font-weight:400">制度执行最后一公里</span>
+      </div>
+    </div>
+    <div class="footer"><div>来源：内审人生 · 已整合进 rongce-gov-audit</div><div>05 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P6: Research System ===== -->
+<section class="slide light">
+  <div class="inner">
+    <div class="header"><div class="left"><svg viewBox="0 0 80 24" style="height:24px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a84e"/>
+      <stop offset="100%" style="stop-color:#e8cd7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="20" height="20" rx="3" fill="url(#gold)"/>
+  <text x="4" y="17" font-family="serif" font-weight="700" font-size="14" fill="#0d0d0d">R</text>
+  <text x="24" y="17" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="currentColor">融策审计</text>
+</svg>研究体系 · Research</div><div class="right">06 / 08</div></div>
+    <h2 class="h2">三档自适应深度研究</h2>
+    <div class="grid-3">
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div class="tag" style="background:var(--accent);margin-bottom:1.5vh">Light</div>
+        <h3 class="h3">5页决策备忘</h3>
+        <div class="body" style="font-size:13px">6步流程 · 无图<br>30分钟产出<br>用于日常快决策</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div class="tag" style="background:var(--accent);margin-bottom:1.5vh">Medium</div>
+        <h3 class="h3">10-15页分析</h3>
+        <div class="body" style="font-size:13px">8步+质量门 · 3-8张图<br>1-2小时产出<br>用于部门汇报</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <div class="tag" style="background:var(--accent);margin-bottom:1.5vh">Heavy</div>
+        <h3 class="h3">1.5万字旗舰</h3>
+        <div class="body" style="font-size:13px">11步+多LLM · 20+图<br>半天产出<br>用于战略规划</div>
+      </div>
+    </div>
+    <hr>
+    <div class="flex-row">
+      <div class="card flex-1" style="border-left-color:#ddd">
+        <div style="font-size:11px;font-weight:600;color:var(--primary);letter-spacing:.1em;text-transform:uppercase">质量门6维度</div>
+        <div style="font-size:13px;margin-top:6px;color:#666">事实 · 单位 · 引用 · 连贯 · 论证 · 语言<br>三轮自查，不过关回滚</div>
+      </div>
+      <div class="card flex-1" style="border-left-color:#ddd">
+        <div style="font-size:11px;font-weight:600;color:var(--primary);letter-spacing:.1em;text-transform:uppercase">多LLM分工</div>
+        <div style="font-size:13px;margin-top:6px;color:#666">Claude写+编排 · GPT-5核验 · DeepSeek润色<br>各司其职，三重把关</div>
+      </div>
+    </div>
+    <div class="footer"><div>来源：analyst-research (MIT开源)</div><div>06 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P7: Case Study ===== -->
+<section class="slide section-dark">
+  <div class="inner">
+    <div class="header"><div class="left">实战案例 · Case Study</div><div class="right">07 / 08</div></div>
+    <h2 class="h2">金川医保 · 525万条数据全量分析</h2>
+    <div class="grid-2" style="flex:1">
+      <div style="display:flex;flex-direction:column;gap:1.5vh">
+        <div class="card">
+          <div class="body" style="margin-bottom:1vh">240MB .xltx → Excel COM SaveAs → pandas分块读取</div>
+          <div style="font-size:clamp(1.2rem,1.8vw,2rem);font-weight:700;color:var(--accent)">525万</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.6)">行 × 111列 · 30秒完成全量分析</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1vw">
+          <div class="card text-center" style="padding:1.5vh 1vw">
+            <div style="font-size:clamp(1.4rem,2vw,2.2rem);font-weight:700;color:var(--accent)">2,393</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">分解住院检出</div>
+          </div>
+          <div class="card text-center" style="padding:1.5vh 1vw">
+            <div style="font-size:clamp(1.4rem,2vw,2.2rem);font-weight:700;color:var(--accent)">1,812</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">进销存异常品种</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5vh">
+        <div class="card card-accent" style="flex:1;display:flex;flex-direction:column;justify-content:center;color:var(--primary-dark)">
+          <div style="font-size:1.2vw;font-weight:600;line-height:1.5;margin-bottom:1vh">"很不错，帮了大忙"</div>
+          <div style="font-size:12px;color:#999">—— 融策平头哥，审计发现反馈</div>
+        </div>
+        <div style="display:flex;gap:.8vw;flex-wrap:wrap">
+          <span style="background:rgba(255,255,255,.1);color:var(--accent);padding:4px 12px;border-radius:3px;font-size:11px;font-weight:600">P0异常 5个</span>
+          <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);padding:4px 12px;border-radius:3px;font-size:11px;font-weight:600">P1异常 4个</span>
+          <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);padding:4px 12px;border-radius:3px;font-size:11px;font-weight:600">P2异常 8个</span>
+          <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);padding:4px 12px;border-radius:3px;font-size:11px;font-weight:600">37个Sheet</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><div>2026-05-20 · 金川县医保数据审计</div><div>07 / 08</div></div>
+  </div>
+</section>
+
+<!-- ===== P8: Closing ===== -->
+<section class="slide slide-closing">
+  <h1>AI让执行变快了<br>但什么是好的<br><span style="color:var(--accent)">这个判断还得靠人</span></h1>
+  <div class="line"></div>
+  <div style="font-size:1.1vw;font-weight:300;opacity:.7;max-width:50vw;line-height:1.6">
+    skill是容器，专业经验才是内容。<br>
+    工具是放大器，你得先有个东西让它放大。
+  </div>
+  <div style="margin-top:5vh;">
+    <span style="display:inline-block;padding:8px 24px;border:1px solid rgba(255,255,255,.3);border-radius:4px;font-size:12px;letter-spacing:.15em;opacity:.6">融策左护法 · 2026</span>
+  </div>
+</section>
+
+</div>
+
+<div id="nav"></div>
+
+<script>
+(function(){
+  const deck=document.getElementById('deck');
+  const slides=deck.querySelectorAll('.slide');
+  const nav=document.getElementById('nav');
+  let idx=0, total=slides.length, lock=false;
+  deck.style.width=(total*100)+'vw';
+  slides.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.className='dot';b.dataset.i=i;
+    b.onclick=()=>go(i);
+    nav.appendChild(b);
+  });
+  function go(n){
+    if(lock)return;
+    idx=Math.max(0,Math.min(total-1,n));
+    deck.style.transform='translateX('+(-idx*100)+'vw)';
+    nav.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  }
+  let startX=0;
+  addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();go(idx+1)}
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();go(idx-1)}
+    if(e.key==='Escape'){window.location.hash=idx}
+  });
+  addEventListener('wheel',e=>{
+    if(e.deltaY>0&&idx<total-1)go(idx+1);else if(e.deltaY<0&&idx>0)go(idx-1);
+  },{passive:true});
+  addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+  addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-startX;
+    if(Math.abs(dx)>50){dx<0?go(idx+1):go(idx-1)}
+  },{passive:true});
+  go(0);
+})();
+</script>
+</body>
+</html>
