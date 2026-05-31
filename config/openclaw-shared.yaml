@@ -1,0 +1,166 @@
+# OpenClaw 共享配置（三台电脑同步用）
+# ⚠️ 此文件不含 API Key，每台电脑需单独配置密钥
+# 安装方式: 将此文件内容合并到 openclaw.json 或用 openclaw config apply
+
+# ============================================================
+# 模型配置（不含 apiKey）
+# ============================================================
+models:
+  mode: merge
+  providers:
+    deepseek:
+      baseUrl: https://api.deepseek.com
+      api: openai-completions
+      # apiKey 在各电脑的 .env 或 openclaw.json 中单独配置
+      models:
+        - id: deepseek-chat
+          name: deepseek-chat
+          api: openai-completions
+          reasoning: false
+          input: [text]
+          contextWindow: 200000
+          maxTokens: 8192
+        - id: deepseek-v4-pro
+          name: deepseek-v4-pro
+          api: openai-completions
+          reasoning: true
+          input: [text]
+          contextWindow: 200000
+          maxTokens: 8192
+        - id: deepseek-v4-flash
+          name: deepseek-v4-flash
+          api: openai-completions
+          reasoning: false
+          input: [text]
+          contextWindow: 200000
+          maxTokens: 8192
+    dashscope:
+      baseUrl: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api: openai-completions
+      # apiKey 在各电脑的 .env 或 openclaw.json 中单独配置
+      models:
+        - id: qwen-vl-max
+          name: Qwen-VL-Max
+          contextWindow: 32000
+          reasoning: false
+          input: [text, image]
+          maxTokens: 8192
+
+# ============================================================
+# Agent 定义
+# ============================================================
+agents:
+  defaults:
+    model:
+      primary: deepseek/deepseek-v4-pro
+    models:
+      deepseek/deepseek-chat:       { alias: DeepSeek }
+      deepseek/deepseek-v4-pro:     { alias: "DeepSeek V4 Pro" }
+      google/gemini-3-flash-preview: { alias: "Gemini 3 Flash" }
+      google/gemini-3.1-pro-preview: { alias: "Gemini 3.1 Pro" }
+      google/gemini-2.0-flash:      { alias: "Gemini 2.0 Flash" }
+    # ⚠️ workspace 路径按各电脑实际情况修改
+    workspace: D:\openclaw-workspace
+    compaction:
+      mode: safeguard
+    maxConcurrent: 4
+    subagents:
+      maxConcurrent: 8
+  list:
+    - id: main
+      name: 主助手
+      agentDir: D:\openclaw-workspace
+    - id: audit-data-analyst
+      name: 审计数据分析师
+      agentDir: D:\openclaw-workspace\agents\audit-data-analyst
+      model:
+        primary: deepseek/deepseek-chat
+      skills:
+        - data-analyst-cn
+        - audit-data-analysis-methods
+        - financial-fraud-detection
+        - procurement-audit-models
+        - python-dataviz
+
+# ============================================================
+# 工具配置
+# ============================================================
+tools:
+  profile: full
+  media:
+    image:
+      enabled: true
+      models:
+        - provider: dashscope
+          model: qwen-vl-max
+  elevated:
+    enabled: true
+
+# ============================================================
+# 插件
+# ============================================================
+plugins:
+  allow:
+    - browser
+    - deepseek
+    - openclaw-weixin
+    - wecom-openclaw-plugin
+    - google
+  entries:
+    deepseek:              { enabled: true }
+    browser:               { enabled: true }
+    google:                { enabled: true }
+    openclaw-weixin:       { enabled: true }
+    wecom-openclaw-plugin: { enabled: true }
+
+# ============================================================
+# 频道
+# ============================================================
+channels:
+  openclaw-weixin:
+    enabled: true
+
+# ============================================================
+# 浏览器
+# ============================================================
+browser:
+  defaultProfile: openclaw
+
+# ============================================================
+# Session
+# ============================================================
+session:
+  dmScope: per-channel-peer
+
+# ============================================================
+# Gateway
+# ============================================================
+gateway:
+  port: 18789
+  mode: local
+  bind: loopback
+  controlUi:
+    allowInsecureAuth: true
+    allowedOrigins: [null]
+
+# ============================================================
+# 其他
+# ============================================================
+hooks:
+  internal:
+    enabled: true
+    entries:
+      session-memory:
+        enabled: true
+
+update:
+  checkOnStart: false
+
+commands:
+  native: auto
+  nativeSkills: auto
+  restart: true
+  ownerDisplay: raw
+
+messages:
+  ackReactionScope: group-mentions
