@@ -241,3 +241,121 @@ re.compile(r'\b([0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}\b')
 | 文本相似度 | audit-data-analyst | 多份标书内容雷同检测 |
 | 报价规律 | audit-benford | 报价数字分布异常检测 |
 | 关联关系 | audit-contract-analyze | 投标方关联关系分析 |
+
+
+---
+
+## 电子招投标串通投标大数据审计（四种方法）
+
+> 来源：常智（审计署驻太原特派办）《中国审计》2023年第4期
+
+### 逻辑链（标准格式）
+
+```
+采集电子招投标数据(MAC/IP/标段/投标人/保证金)
+→ 方法1: MAC/IP自连接 → 同一电脑编制标书 → 串标疑点
+→ 方法2: Neo4j股权穿透(1-4层) → 隐蔽控股关系 → 围标疑点
+→ 方法3: FP-growth频繁项集 → 同一批人多次陪标+置信度1.0 → 职业陪标团队
+→ 方法4: NLP余弦相似度>0.9 → 标书文本雷同 → 同一人编制标书
+→ 证据闭环: MAC登记表+IP查询结果+工商股权图+标书比对报告 → 串通投标认定
+```
+
+### 方法一：MAC地址/IP地址自连接比对
+
+**适用场景**：发现同一电脑编制标书、同一地点上传投标文件
+
+**核心SQL**：
+```sql
+-- 自连接查同标段同MAC或同IP的投标人
+SELECT a.标段编号, a.投标人 AS 投标人A, b.投标人 AS 投标人B,
+  a.MAC地址, a.IP地址
+FROM 投标信息表 a
+JOIN 投标信息表 b ON a.标段编号 = b.标段编号
+WHERE a.投标人 <> b.投标人
+  AND (a.MAC地址 = b.MAC地址 OR a.IP地址 = b.IP地址);
+```
+
+**判断标准**：
+- MAC相同 = 同一台电脑 = 同一人编制标书
+- IP相同 = 同一地点 = 同一人办理投标
+- 再查：这些疑点投标人中谁中标了 → 串标+围标完整画像
+
+### 方法二：Neo4j图数据库股权穿透
+
+**适用场景**：发现投标人之间的隐蔽控股关系
+
+**核心查询**（Neo4j Cypher）：
+```cypher
+-- 1-4层股权穿透，找同标段投标的关联企业
+MATCH p=(z:标段)<-[:投标]-(x:企业)-[:持股*1..4]->(y:企业)-[:投标]->(z)
+RETURN p;
+```
+
+**穿透结果示例**：
+```
+A → 持股100% B → 持股90% C → 持股90% D
+→ A实际控制D = 81% (100%×90%×90%)
+→ A和D同时投同一标段 → 围标
+```
+
+### 方法三：FP-growth关联规则挖掘
+
+**适用场景**：发现"职业"陪标团队（同一批人每次一同出现）
+
+**Python伪代码**：
+```python
+from mlxtend.frequent_patterns import fpgrowth
+
+# 投标人名称→数字映射
+df_encoded = encode_bidder_names(df)
+
+# FP-growth挖掘频繁项集
+frequent_itemsets = fpgrowth(df_encoded, min_support=0.3, use_colnames=True)
+
+# 结果示例：
+# frozenset({1867,1862},{1856,1860}) | support=9 | confidence=1.0
+# → 4家企业在9个项目中同时出现,1867/1862投标的项目{1856,1860}全部参与
+# → 再查: 其中某家每次都中标 → 职业陪标团队
+```
+
+### 方法四：NLP标书文本相似度
+
+**适用场景**：发现不同投标人的标书内容雷同
+
+**核心步骤**：
+1. 语义编码器训练（抓取相似标书文本）
+2. 标书非格式化数据 → 标准化格式
+3. 计算余弦相似度（值越接近1越雷同）
+
+```python
+from sklearn.metrics.pairwise import cosine_similarity
+
+# 对标书文本进行向量化
+vector1 = model.encode(标书A内容)
+vector2 = model.encode(标书B内容)
+
+# 计算余弦相似度
+similarity = cosine_similarity([vector1], [vector2])[0][0]
+
+# 相似度>0.9 = 高度雷同 = 同一人编制标书
+if similarity > 0.9:
+    print(f'疑点: 标书A与标书B相似度{similarity:.2%}')
+```
+
+### 四种方法对比
+
+| 方法 | 数据源 | 技术 | 发现 | 难度 |
+|------|--------|------|------|------|
+| MAC/IP自连接 | 电子招投标系统 | SQL self join | 同电脑/同地点 | 低 |
+| Neo4j股权穿透 | 工商数据+投标数据 | 图数据库Cypher | 隐蔽控股 | 中 |
+| FP-growth陪标 | 投标历史数据 | 关联规则挖掘 | 职业陪标 | 中高 |
+| NLP标书比对 | 标书全文 | 语义向量+余弦相似 | 文本雷同 | 高 |
+
+### 与现有技能的联动
+
+| 本方法 | 配套技能 | 联动方式 |
+|--------|---------|---------|
+| MAC/IP自连接 | bid-collusion-audit | 使用本技能已有MAC/IP检测模块 |
+| Neo4j股权穿透 | 工商查询+web_search | 先查工商，再导入Neo4j |
+| FP-growth陪标 | audit-data-analyst | Python/mlxtend库分析 |
+| NLP标书比对 | pdf-metadata-extractor | 先提取文本，再做相似度 |
