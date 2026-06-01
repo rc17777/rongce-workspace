@@ -2,14 +2,16 @@
 name: audit-data-analyst
 description: >
   审计数据分析实战技能。覆盖SQL审计查询、Python审计分析、异常检测、
-  审计机器学习、数字技能修炼、审计项目全流程等。
+  审计机器学习、数字技能修炼、审计项目全流程、非结构化数据处理算法自动匹配。
   适用场景：(1) SQL审计查询——5类高频场景（关联比对/异常值/时间序列/重复检测/Top-N）
   (2) Python审计分析——pandas全流程、异常检测（Z-score/IQR/Benford）
   (3) 审计机器学习——3个ML案例（聚类/异常森林/分类）
   (4) 审计项目全流程——从数据获取到报告输出
   (5) 审计数字技能——Excel/SQL/Python/Power BI/统计学全链路
+  (6) 算法自动匹配——按数据类型+审计场景自动推荐算法链（OCR/Simhash/PDF提取/关键词批处理等）
   触发词：审计数据分析、SQL审计、Python审计、大数据审计、异常检测、审计查询、
-  审计效率、审计机器学习、审计ML、审计项目、审计全流程、Benford法则、审计数据清洗。
+  审计效率、审计机器学习、审计ML、审计项目、审计全流程、Benford法则、审计数据清洗、
+  非结构化数据、OCR、文本相似度、批处理、算法选型、用什么算法。
 ---
 
 # 审计数据分析实战技能（基于数审派公众号16篇文章）
@@ -214,3 +216,50 @@ for line, pred in zip(test_lines, predictions):
 - 教育资金：标注教育支出Y/非教育支出N
 - 环保资金：标注环保支出Y/非环保支出N
 - 核心原理：任何有明确支出范围的专项资金都可以构建Y/N分类器
+
+---
+
+## L5：算法自动匹配层（Algorithm Auto-Select）
+
+> 来源：CASE-001 / CASE-NONSTRUCT-226 / CASE-DATA-VOUCHER 等已入库案例
+> 核心思想：不再靠人工记忆"哪个场景用哪个算法"，而是按"数据类型+审计目标"自动匹配
+
+### 场景→算法 速查表
+
+| 你说的审计场景 | 输入数据 | 算法链 | 工具入口 |
+|-------------|---------|--------|---------|
+| 围标串标检测（海量） | 压缩包+PDF+Word | 内存解压→PDF提取→Simhash初步去重 | `py tools/ocr/ocr_batch.py` |
+| 围标串标检测（少量精读） | PDF/Word | 元数据提取→身份证/Author比对→TF-IDF精确比对 | `tools/nlp/audit_nlp.py — compare_bid_similarity()` |
+| 合同条款批量审查 | Word/PDF | Word关键词高亮→jieba词频→缺失条款检查 | `tools/nlp/audit_nlp.py — check_contract_completeness()` |
+| 招投标文件批量筛查 | 压缩包+PDF | 解压→Simhash初筛→关键词检测→生成疑点表 | Simhash + Aspose逻辑Python版 |
+| 财务凭证翻查 | 图片/PDF扫描件 | PaddleOCR→NLP实体提取→交叉比对 | `tools/ocr/ocr_batch.py` + `tools/nlp/audit_nlp.py` |
+| 扫描件文字提取 | 图片/PDF | PaddleOCR 直接调用 | `tools/ocr/ocr_batch.py` |
+| 多源数据交叉验证 | Excel/CSV + PDF | SQL多维分析 + PDF数据比对 | `audit-sql-patterns` + `tools/nlp/` |
+| 团伙行为检测 | 交易明细数据 | 多维分析→Apriori→K-Means | Knime / Python sklearn |
+
+### 算法注册表
+
+完整算法清单见 `C:\Users\Admin\AuditKB\tools\ALGORITHM_REGISTRY.md`
+
+包含8个核心算法：压缩包内存解压 / Word关键词高亮 / PDF文本+表格提取 / Simhash海量去重 / PDF元数据提取 / OCR中文识别 / jieba分词词频 / TF-IDF精确比对
+
+### 自动调取逻辑
+
+```
+用户说："查这5份投标文件有没有围标串标"
+    ↓
+AI判断：数据类型=PDF（少量），场景=围标串标检测
+    ↓
+匹配算法链：pdf_meta + tfidf_compare
+    ↓
+执行：tools/nlp/audit_nlp.py — compare_bid_similarity()
+    ↓
+输出：两两相似度矩阵 + 🔴串标嫌疑标注
+```
+
+### 与已有层的衔接
+
+- L1(数据查询) + L5 = 结构化SQL + 非结构化批处理 = 全覆盖
+- L2(数据分析) + L5 = Z-score/IQR + Simhash/OCR = 结构+非结构双轨异常检测
+- L3(机器学习) + L5 = KMeans/Isolation Forest + Apriori关联规则 = 深度团伙挖掘
+- L4(AI赋能) + L5 = 大模型定性 + 批处理量产 = 从"看一份"到"看全部"

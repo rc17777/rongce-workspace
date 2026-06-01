@@ -1,17 +1,14 @@
-import urllib.request, re, html, sys, time
+import urllib.request, ssl, re, html, sys, time
 sys.stdout.reconfigure(encoding='utf-8')
-url = 'https://down.mptext.top/api/public/v1/download?url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2Fyt37MGcoSt46-02teb6XgQ&format=html'
-# Try multiple times
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+url = 'https://down.mptext.top/api/public/v1/download?url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FQgg1xOsEEKC_GVyhfDwjbA&format=html'
 for attempt in range(3):
     try:
         time.sleep(2)
-        req = urllib.request.Request(url, headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml',
-            'Accept-Language': 'zh-CN,zh;q=0.9',
-            'Connection': 'keep-alive'
-        })
-        r = urllib.request.urlopen(req, timeout=30)
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0','Accept': 'text/html','Accept-Language': 'zh-CN,zh;q=0.9'})
+        r = urllib.request.urlopen(req, timeout=30, context=ctx)
         raw = r.read().decode('utf-8', errors='replace')
         print(f'Attempt {attempt+1} OK, len={len(raw)}')
         break
@@ -31,11 +28,8 @@ if m:
     c = re.sub(r'<[^>]+>', '', c)
     c = html.unescape(c)
     c = re.sub(r'\n\s*\n\s*\n+', '\n\n', c).strip()
-    with open(r'C:\Users\Admin\.openclaw\workspace\temp_art5.txt', 'w', encoding='utf-8') as f: f.write(c)
+    with open(r'C:\Users\Admin\.openclaw\workspace\temp_art8.txt', 'w', encoding='utf-8') as f: f.write(c)
     print('OK:', len(c), 'chars')
-    print(c[:2000])
+    print(c[:2500])
 else:
-    print('Not found')
-    i = raw.find('js_content')
-    if i > 0: print(repr(raw[i:i+300]))
-    else: print('js_content not in HTML')
+    print('Content not found')

@@ -3,18 +3,14 @@ sys.stdout.reconfigure(encoding='utf-8')
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-url = 'https://down.mptext.top/api/public/v1/download?url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2F6EeD-ZsHOUhNQ69htyVs8g&format=html'
+url = 'https://down.mptext.top/api/public/v1/download?url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FxYImvmKDHdp1vvEdAlhcHA&format=html'
 for attempt in range(3):
     try:
         time.sleep(2)
-        req = urllib.request.Request(url, headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Accept': 'text/html',
-            'Accept-Language': 'zh-CN,zh;q=0.9'
-        })
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0','Accept': 'text/html','Accept-Language': 'zh-CN,zh;q=0.9'})
         r = urllib.request.urlopen(req, timeout=30, context=ctx)
         raw = r.read().decode('utf-8', errors='replace')
-        print(f'Attempt {attempt+1} OK, len={len(raw)}')
+        print(f'OK, len={len(raw)}')
         break
     except Exception as e:
         print(f'Attempt {attempt+1} failed: {e}')
@@ -32,8 +28,8 @@ if m:
     c = re.sub(r'<[^>]+>', '', c)
     c = html.unescape(c)
     c = re.sub(r'\n\s*\n\s*\n+', '\n\n', c).strip()
-    with open(r'C:\Users\Admin\.openclaw\workspace\temp_art6.txt', 'w', encoding='utf-8') as f: f.write(c)
+    with open(r'C:\Users\Admin\.openclaw\workspace\temp_art9.txt', 'w', encoding='utf-8') as f: f.write(c)
     print('OK:', len(c), 'chars')
     print(c[:2500])
 else:
-    print('Content div not found')
+    print('Not found')
