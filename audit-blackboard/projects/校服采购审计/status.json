@@ -1,0 +1,27 @@
+{
+  "project_id": "校服采购审计",
+  "project_name": "校服采购审计",
+  "biz_type": "招投标审计",
+  "created_at": "2026-06-21T16:53:33.471761+08:00",
+  "phase": "collision_done",
+  "agents": {
+    "required": [
+      "bid_hunter",
+      "law_inspector",
+      "workpaper_crafter",
+      "report_writer",
+      "review_sentinel"
+    ],
+    "optional": [
+      "data_scout",
+      "contract_hound"
+    ]
+  },
+  "findings_count": 9,
+  "collision_count": 6,
+  "logs": [
+    "[16:53] 3个Agent完成: 0个发现",
+    "[16:53] 3个Agent完成: 9个发现",
+    "[16:53] 碰撞分析完成: 6个交叉线索"
+  ]
+}

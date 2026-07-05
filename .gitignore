@@ -1,2 +1,91 @@
-﻿.openclaw/skills/cbwxy-image-2/config.txt
-../skills/cbwxy-image-2/config.txt
+# ============================================================
+# OpenClaw Workspace .gitignore
+# ============================================================
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.so
+*.pyd
+
+# ── Node ──
+node_modules/
+*.node
+
+# ── 生成数据（2GB+，不push） ──
+output/
+temp/
+tmp/
+logs/
+*.log
+
+# ── 敏感信息 ──
+config/*.env
+models.json
+**/models.json
+**/config.txt
+secrets/
+.env
+*.key
+*key*.txt
+
+# ── 系统 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*~
+
+# ── 临时测试文件 ──
+tmp_*.py
+test_*.ps1
+_*.py
+tmp_*/
+tmp/*
+
+# ── 技能导出 ──
+paper-craft-skills/
+paper_skill_verify/
+rongce-ocr-agent/
+
+# ── 大文件/二进制 ──
+*.pptx
+*.drawio.png
+*.jpeg
+*.jpg
+*.png
+*.pdf
+*.exe
+*.zip
+*.7z
+*.rar
+*.dll
+*.iso
+*.pdb
+
+# ── OCR缓存 ──
+.rag_index/
+ocr_policy_text/
+extracted_policy_text/
+
+# ── 知识库（1GB+，首次push后按需加入） ──
+knowledge/
+
+# ── 知识库资产迁移日志 ──
+asset_*.csv
+
+# ── 杂项 ──
+.clawhub/
+archive/
+*.bat.bak
+
+# ── OpenClaw内部 ──
+.openclaw/
+
+# ── 遗留输出目录 ──
+outputs/

@@ -1,0 +1,152 @@
+{
+  "schema_name": "rongce_audit_rule_v1",
+  "description": "融策审计规则库单条规则结构。用于从案例、底稿、法规中提炼可执行、可复核、可进入底稿的审计规则。",
+  "required_fields": [
+    "rule_id",
+    "rule_name",
+    "module",
+    "audit_type",
+    "risk_topic",
+    "rule_level",
+    "case_source",
+    "case_summary",
+    "problem_pattern",
+    "required_data",
+    "data_fields",
+    "detection_logic",
+    "risk_level",
+    "evidence_chain",
+    "audit_action",
+    "output_wording",
+    "validation_method",
+    "status",
+    "version",
+    "last_updated"
+  ],
+  "fields": {
+    "rule_id": {
+      "type": "string",
+      "description": "规则编号，如 JZ-HYJY-001、GC-HT-001。"
+    },
+    "rule_name": {
+      "type": "string",
+      "description": "规则名称。"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "M1 会议纪要重点事项分析",
+        "M2 合同条款抽取与付款异常比对",
+        "M3 凭证摘要合规关键词筛查",
+        "M4 人员名单身份碰撞",
+        "M5 投标/报告/验收文本相似度比对"
+      ]
+    },
+    "audit_type": {
+      "type": "string",
+      "description": "审计类型，如经责、预算执行、专项资金、工程、采购、绩效等。"
+    },
+    "risk_topic": {
+      "type": "string",
+      "description": "风险主题，如决策程序、资金用途、合同履约、人员资格、围标串标等。"
+    },
+    "rule_level": {
+      "type": "string",
+      "enum": ["A底稿级", "B疑点级", "C提示级"]
+    },
+    "case_source": {
+      "type": "string",
+      "description": "案例来源、Obsidian 文件、报告、底稿或法规依据。"
+    },
+    "case_summary": {
+      "type": "string",
+      "description": "案例摘要。"
+    },
+    "problem_pattern": {
+      "type": "string",
+      "description": "问题表现。"
+    },
+    "trigger_terms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "关键词、短语、异常表达、文本模式。"
+    },
+    "required_data": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "必需资料。"
+    },
+    "optional_data": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "辅助资料。"
+    },
+    "data_fields": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "需要的字段。"
+    },
+    "detection_logic": {
+      "type": "string",
+      "description": "可执行判断逻辑。"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2", "P3", "P0/P1", "P1/P2", "P2/P3"]
+    },
+    "evidence_chain": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "形成底稿或报告所需证据链。"
+    },
+    "audit_action": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "建议核查动作。"
+    },
+    "output_wording": {
+      "type": "string",
+      "description": "疑点输出表述。"
+    },
+    "report_wording": {
+      "type": "string",
+      "description": "可进入报告的问题表述模板。"
+    },
+    "false_positive_note": {
+      "type": "string",
+      "description": "常见误报场景。"
+    },
+    "validation_method": {
+      "type": "string",
+      "description": "如何验证规则有效性。"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["草稿", "试运行", "有效", "高误报", "停用", "升级"]
+    },
+    "metrics": {
+      "type": "object",
+      "description": "规则运行效果指标。",
+      "fields": {
+        "hit_count": {"type": "integer"},
+        "confirmed_count": {"type": "integer"},
+        "excluded_count": {"type": "integer"},
+        "workpaper_count": {"type": "integer"},
+        "report_count": {"type": "integer"},
+        "amount_involved": {"type": "number"}
+      }
+    },
+    "owner": {
+      "type": "string",
+      "description": "规则维护人。"
+    },
+    "version": {
+      "type": "string",
+      "description": "版本号。"
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "最后更新时间，YYYY-MM-DD。"
+    }
+  }
+}

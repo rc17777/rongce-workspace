@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-01T03:52:41.154Z",
+  "entries": {
+    "memory:memory/2026-06-30.md:1:15": {
+      "key": "memory:memory/2026-06-30.md:1:15",
+      "path": "memory/2026-06-30.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-06-30 ## 15:20 - 专项审计报告AI复核模型 v2.0 - 用户要求完善“审计报告AI复核模型”。 - 已在 `RONGCE_AI_HUB/models/专项审计报告AI复核模型_v2.0.md` 固化模型。 - 模型结构：四层十五维、三类证据、四级风险、五张底稿。 - 在 `RONGCE_AI_HUB/README.md` 增加 `models/` 入口说明。 - 后续复核专项审计报告时，优先调用该模型，再结合 `audit-report-review` 技能和知识库法规/案例。 ## 18:14 - 报告复核结论自检规则 - 东安湖大剧院复核中，初版把“合格档文字引用瑕疵”列为P1重大，用户指出项目实际得分91分，按良好档100%兑付，不影响319.60万元结论。 - 已将该问题修正为P2一般，并更新桌面Excel成果表，新增“结论自检表”。 - 已在 `RONGCE_AI_HUB/models/专项审计报告AI复核模型_v2.0.md` 增加 D5“AI结论自复核”。 - 后续复核强制执行：每条P0/P1/P2结论必须回答“事实是否真实、依据是否匹配、影响是否成立、反证是否排除”，防止把文字瑕疵误判为金额或出具条件问题。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8433652196361077,
+      "maxScore": 0.8433652196361077,
+      "firstRecalledAt": "2026-06-30T15:06:59.288Z",
+      "lastRecalledAt": "2026-06-30T15:06:59.288Z",
+      "queryHashes": [
+        "83f1ab9fdaf6"
+      ],
+      "recallDays": [
+        "2026-06-30"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "rongce-ai-hub/readme.md",
+        "audit-report-review",
+        "技能和知识库法规/案例",
+        "不影响319.60万元结论",
+        "每条p0/p1/p2结论必须回答",
+        "审计",
+        "报告"
+      ]
+    },
+    "memory:memory/2026-06-25.md:86:110": {
+      "key": "memory:memory/2026-06-25.md:86:110",
+      "path": "memory/2026-06-25.md",
+      "startLine": 86,
+      "endLine": 110,
+      "source": "memory",
+      "snippet": "- python-docx 操作 docx 的 OxmlElement 插入时，段落删除后索引会失效，需要重新获取段落列表 - 第四章重构时第一次删除范围出错，导致新内容插入到错误位置，第二次修复后结构正确 - 长脚本写入时遇到 path 参数缺失的 ValidationError（忘记传 path），已修正 - 纯文本 ASCII 表格在 docx 中可能因字体不同导致对齐偏差，用户需检查排版效果 ## 技能调用 - 使用了 read/write 工具进行文件操作 - 使用了 Python 脚本批量修改 docx 文件（python-docx 库） - 评标诊断报告使用了 Markdown 表格进行结构化展示 ## 用户偏好 - 融策平头哥要求直接高效，投标方案修改后需立即可用 - 关注政府采购评标专家视角，文档必须便于评审专家快速定位评分点 --- ## 凌晨 02:59~03:45 — 标书模板 v2 制作 ### Adobe InDesign 问答 - 用户问InDesign是什么，解释为专业排版软件，可用于标书排版 - 标书排版审美建议：配色单一主色、字体两种、留白、表格规范 ### 标书模板迭代 - **v1 初稿**: python-docx生成基本模板（封面→目录→公司简介→实施方案→业绩→排版规范） - **用户反馈**: 配色普通、表格不顺眼、无封面图、排版不丰富",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8420043105973128,
+      "maxScore": 0.8420043105973128,
+      "firstRecalledAt": "2026-06-30T15:06:59.288Z",
+      "lastRecalledAt": "2026-06-30T15:06:59.288Z",
+      "queryHashes": [
+        "83f1ab9fdaf6"
+      ],
+      "recallDays": [
+        "2026-06-30"
+      ],
+      "conceptTags": [
+        "python-docx",
+        "read/write",
+        "python-docx生成基本模板",
+        "python",
+        "docx",
+        "操作",
+        "oxmlelement",
+        "插入"
+      ]
+    },
+    "memory:memory/2026-06-24.md:47:61": {
+      "key": "memory:memory/2026-06-24.md:47:61",
+      "path": "memory/2026-06-24.md",
+      "startLine": 47,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "- 最后push成功：`f2c9ab9..481ee6d master -> master` - 历史已用filter-repo清理大文件 - Git config已设http.proxy=127.0.0.1:7890 ## 21:14 Git自动同步 - 4个文件更改（INDX.md更新+PDF报告），已commit并push成功 - 远程已同步至`106907f` ## 今日用到的关键命令/路径 - RAG索引：D:\\openclaw-workspace\\.rag_index\\rag_index.json - RAG Web服务：python D:\\openclaw-workspace\\scripts\\rag_server.py - RAG重建索引：python D:\\openclaw-workspace\\scripts\\rag_rebuild.py - RAG命令行查询：python D:\\openclaw-workspace\\scripts\\rag_query.py \"问题\" - Git filter-repo路径清理：`git filter-repo --force --path \"文件\" --invert-paths`",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "totalScore": 2.5575317694112947,
+      "maxScore": 0.8525105898037648,
+      "firstRecalledAt": "2026-06-30T16:07:45.976Z",
+      "lastRecalledAt": "2026-06-30T17:35:49.038Z",
+      "queryHashes": [
+        "7eae783e416c",
+        "d5fb47b7cbc5",
+        "6444afceab9c"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "历史已用filter-repo清理大文件",
+        "config已设http.proxy",
+        "127.0.0.1",
+        "indx.md更新",
+        "今日用到的关键命令/路径",
+        "openclaw-workspace",
+        "rag-index",
+        "rag-index.json"
+      ]
+    },
+    "memory:memory/2026-06-24.md:23:55": {
+      "key": "memory:memory/2026-06-24.md:23:55",
+      "path": "memory/2026-06-24.md",
+      "startLine": 23,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "- 引擎：TF-IDF + sklearn + DeepSeek API - 界面：Flask Web服务运行在 `http://localhost:5000` - API key已配置（sk-dbc61b4...） - 一键重建索引脚本：`python scripts/rag_rebuild.py` ## 20:00-20:17：RAG实时同步三方案完成 - **方案A**：桌面`更新知识库.bat` — 双击一键重建索引 ✅ - **方案B**：`rag_watcher.py` — 文件监控，15秒轮询自动重建 ✅ - **方案C**：每日凌晨3:00 cron自动重建 ✅ - 同时创建`启动RAG知识库.bat` — 一键启动Web服务 - 两个bat均已通过测试（Index rebuild OK，localhost:5000正常） - 注意：bat通过PowerShell运行时有字符编码无关错误，桌面双击无问题 ## RAG关键文件清单 | 文件 | 用途 | |:----|:----| | `scripts/rag_rebuild.py` | 重建索引（knowledge+obsidian） | | `scripts/rag_query.py` | 命令行问答 | | `scripts/rag_server.py` | Flask Web服务（localhost:5000） | | `scripts/rag_watcher.py` | 文件监控自动重建 | | `桌面/更新知识库.bat` | 一键重建索引 | | `桌面/启动RAG知识库.bat` | 一键启动",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8440466528523821,
+      "maxScore": 0.8440466528523821,
+      "firstRecalledAt": "2026-06-30T17:35:49.038Z",
+      "lastRecalledAt": "2026-06-30T17:35:49.038Z",
+      "queryHashes": [
+        "6444afceab9c"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "tf-idf",
+        "sk-dbc61b4",
+        "scripts/rag-rebuild.py",
+        "00-20",
+        "更新知识库.bat",
+        "rag-watcher.py",
+        "启动rag知识库.bat",
+        "scripts/rag-query.py"
+      ]
+    },
+    "memory:memory/2026-05-29.md:137:149": {
+      "key": "memory:memory/2026-05-29.md:137:149",
+      "path": "memory/2026-05-29.md",
+      "startLine": 137,
+      "endLine": 149,
+      "source": "memory",
+      "snippet": "## 智析Agent session自动恢复（00:04-00:06） ### 问题 用户反馈每次打开智析Agent都显示\"未连接数据库\"。因为data_source是内存DuckDB，重启后丢失。 ### 修复 1. `data/session.py` — to_dict/from_dict 新增 upload_folder 字段持久化 2. `api/chat.py` — 新增 auto-recover 逻辑：检测到 session 有 upload_folder 但无 data_source 时，自动重新加载磁盘上的 Excel/CSV 文件 3. `agent/agent.py` — 补充 `import os`（之前遗漏导致 NameError） ### 效果 重启服务器后，回到之前的session，文件自动恢复加载，无需重新上传。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.84370648764028,
+      "maxScore": 0.84370648764028,
+      "firstRecalledAt": "2026-06-30T23:52:53.125Z",
+      "lastRecalledAt": "2026-06-30T23:52:53.125Z",
+      "queryHashes": [
+        "e504582ff2fb"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "04-00",
+        "因为data-source是内存duckdb",
+        "data/session.py",
+        "to-dict/from-dict",
+        "upload-folder",
+        "api/chat.py",
+        "auto-recover",
+        "data-source"
+      ]
+    },
+    "memory:memory/2026-07-01.md:43:60": {
+      "key": "memory:memory/2026-07-01.md:43:60",
+      "path": "memory/2026-07-01.md",
+      "startLine": 43,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "- 过滤掉二次生成物（案例卡片、模板、标准作业包、实战试点包、训练清单、方法词典、资料总览、老板版、融策标准作业体系）。 - 生成目录：`C:\\Users\\scrccpa\\Documents\\Obsidian Vault\\审计案例库-OCR\\融策标准作业体系 v2.0\\` - 初始真实案例/文章口径为 668 篇，抽取 42 张案例卡片。 - v2.0 结构： - `01-训练清单\\场景-审计逻辑-可复用方法训练清单 v2.0.md` - `02-案例卡片\\` - `03-融策审计项目可直接套用模板包\\` - `04-融策标准作业包 v2.0\\` - `05-融策实战试点包 v2.0\\` - v2.0 覆盖率检查脚本：`scripts/audit_v2_coverage.py` - v2.0 同步脚本：`scripts/rongce_v2_sync.py` - 将训练清单升级为全量覆盖。 - 生成 `00-覆盖率与同步机制说明.md`。 - 说明口径：当时总资料清单 809 条，真实案例/文章 668 条，二次产物或非核心场景 141 条，v2.0 文件 89 个，全量训练清单覆盖 668/668。 ### 逐篇审计逻辑提炼与场景同步 - 用户明确不要“每日自动同步任务”，要求每个案例、文章、政策法规逐篇提炼审计逻辑，并同步到不同审计场景案例库，最终同步到 Obsidian。 - 新增脚本：`scripts/enrich_and_sync_scene_cases.py`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8242402149118951,
+      "maxScore": 0.8242402149118951,
+      "firstRecalledAt": "2026-07-01T00:41:17.741Z",
+      "lastRecalledAt": "2026-07-01T00:41:17.741Z",
+      "queryHashes": [
+        "bc1727163b39"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "审计案例库-ocr",
+        "v2.0",
+        "初始真实案例/文章口径为",
+        "01-训练清单",
+        "场景-审计逻辑-可复用方法训练清单",
+        "v2.0.md",
+        "02-案例卡片",
+        "03-融策审计项目可直接套用模板包"
+      ]
+    },
+    "memory:memory/2026-06-08.md:22:42": {
+      "key": "memory:memory/2026-06-08.md:22:42",
+      "path": "memory/2026-06-08.md",
+      "startLine": 22,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "- 用户要求重抓容诚解读全文 → 被微信验证码/防抓取拦截（browser + web_fetch + web_search 全部失败） ## 待办 - [ ] Python 3.14.0a5 稳定性差，建议降级到 3.11/3.12 - [ ] Lenovo Vantage 反复崩溃可考虑卸载（占 C 盘空间） ### C盘深度清理（五轮，释放 9.9 GB） - 初始：101.9G/118G（剩余16.1G）→ 最终：92.0G/118G（剩余26G） - 第一轮（安全）：WPS addons\\pool 旧版插件缓存 3.15GB + 微信 Msg\\Multi 群聊缩略图 495MB + download/cache/log 189MB → **-4.3GB** - 第二轮（确认后）：WPS backup 245MB + 微信 FileStorage\\File 205MB → **-0.2GB** - 第三轮（浏览器+cache）：Edge 四大缓存目录（Cache/Service Worker/component_crx_cache/Code Cache）+ npm cache + pip cache → **-1.6GB** - 第四轮：WinGet Packages 旧安装包 1.19GB + ms-playwright 670MB → **-1.8GB** - ⚠️ 副作用：删除 ms-playwright 后 `playwright install chromium` 无法完成（下载被 Windows Defender 拦截），browser 工具依赖 Pl",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8192507510826887,
+      "maxScore": 0.8192507510826887,
+      "firstRecalledAt": "2026-07-01T00:41:17.741Z",
+      "lastRecalledAt": "2026-07-01T00:41:17.741Z",
+      "queryHashes": [
+        "bc1727163b39"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "被微信验证码/防抓取拦截",
+        "web-fetch",
+        "web-search",
+        "3.14.0a5",
+        "3.11/3.12",
+        "9.9",
+        "101.9g/118g"
+      ]
+    },
+    "memory:memory/2026-05-26.md:1:21": {
+      "key": "memory:memory/2026-05-26.md:1:21",
+      "path": "memory/2026-05-26.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# 2026-05-26 日志 ## 今日工作记录 ### 审计记录复核 — 吴博医保基金项目 - 融策平头哥要求复核 `（吴博医保基金）融策审计过程记录系统=项目经理版(2).xlsx` - 8个Sheet的工作簿，审计过程17条记录 **发现3个严重问题：** 1. **Sheet4「访谈记录」完全空白** — 但Sheet2第8行记录了一次访谈（向医保局监管股了解DRG/DIP），访谈记录表无对应内容 2. **Sheet5「问题与证据」完全空白** — 8条标记异常（串换药品、死亡人员支付、死亡参保、超量开药等）均未归集到问题清单，\"三证据原则\"框架空转 3. **Sheet6「三级复核记录」完全空白** — 项目经理/CPA/总负责人三级复核全空 **第8行DRG/DIP记录专项分析：** - 结论\"不存在DGR系统比DIP系统结算占比低的情况\"有表述问题（\"DGR\"笔误、\"不存在\"可被误读） - 实质上审计判断\"调整审计手册\"是对的（没用DIP就不查DRG vs DIP比较） - 已给出修改建议 **其他：** 日期为Excel序列号、第11行缺执行人、第5行发现栏含\"嫌疑\"字眼应转问题清单 ### 审计术语讨论",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.8529039623058414,
+      "maxScore": 0.8529039623058414,
+      "firstRecalledAt": "2026-07-01T03:52:41.154Z",
+      "lastRecalledAt": "2026-07-01T03:52:41.154Z",
+      "queryHashes": [
+        "dbc473971312"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "向医保局监管股了解drg/dip",
+        "项目经理/cpa/总负责人三级复核全空",
+        "第8行drg/dip记录专项分析",
+        "日志",
+        "今日",
+        "工作",
+        "记录",
+        "审计"
+      ]
+    },
+    "memory:memory/2026-06-21.md:27:49": {
+      "key": "memory:memory/2026-06-21.md:27:49",
+      "path": "memory/2026-06-21.md",
+      "startLine": 27,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "## 杂志审计技能提取（经责+企业审计） - 从 `_all_batches.json` 和 `magazine_extract/` 提取 \"05-经济责任审计\"和\"07-企业审计\"两批文章 - 去重后：经责 6 篇，企业 5 篇，来源为《审计案例》2026 年 1-5 册 - 产出 2 个 v2 方法库文件： - `skills/magazine-knowledge/econ-responsibility-methods-v2.md`（15.6KB） - `skills/magazine-knowledge/enterprise-audit-methods-v2.md`（18.6KB） - 每个文件含：SQL/Python 模板、违规模式清单、融策业务匹配方案 ## Gateway 稳定性诊断 - 用户反复报告\"卡死\"，经查 Gateway 今日重启了 7+ 次（08:48-20:01） - 根因：WebSocket webchat 频繁断连（1001/1005/1006）触发看门狗自动重启 - 次要因素：DeepSeek API model-pricing fetch 偶发失败、3.2 秒响应超时 - MEMORY.md 检查正常（6.5KB，远低于 20KB 限制） - 截止 22:00，Gateway 已稳定运行约 2 小时 ## 版本确认 - CLI `openclaw --version` → `2026.6.9`，npm registry 确认已是最新 - 早期重装从淘宝镜像拿到 `2026.5.4`（已过时），当前运行的是 OneClaw 桌面",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7909234582471442,
+      "maxScore": 0.7909234582471442,
+      "firstRecalledAt": "2026-07-01T03:52:41.154Z",
+      "lastRecalledAt": "2026-07-01T03:52:41.154Z",
+      "queryHashes": [
+        "dbc473971312"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "all-batches.json",
+        "magazine-extract",
+        "05-经济责任审计",
+        "07-企业审计",
+        "1-5",
+        "15.6kb",
+        "18.6kb"
+      ]
+    },
+    "memory:memory/2026-06-21.md:1:31": {
+      "key": "memory:memory/2026-06-21.md:1:31",
+      "path": "memory/2026-06-21.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# 2026-06-21 日志 ## OpenClaw 重装 - 平头哥要求从 `rc17777/openclaw` 重装 - 发现该 fork 无任何 release/tag，只有源码 - GitHub 在这台机器上完全不通（直连 reset，代理 SSL 握手失败） - 最终通过官方安装脚本 `https://openclaw.ai/install.ps1` 走 npm 安装 - npm registry 走淘宝镜像 `npmmirror.com` - 安装版本: `openclaw@2026.5.4`（CLI），旧 OneClaw 桌面版 `2026.6.9` 不受影响 - 安装位置: `C:\\Users\\scrccpa\\AppData\\Roaming\\npm\\openclaw.cmd` - Gateway 重启成功 ## 关键发现 - npm 淘宝镜像版本滞后（2026.5.4 vs 2026.6.9） - 代理 `127.0.0.1:7890` 在跑但 Git 无法通过其连接 GitHub（SSL 握手失败） - 桌面版 OneClaw（`D:\\Users\\scrccpa\\AppData\\Local\\Programs\\OneClaw\\`）版本其实比 CLI 新 ## Doctor 迁移 - 297 task registry + 59 task delivery + 192 task flow 侧车记录迁移到 SQLite - 19 条 Memory Core 短期回忆迁移 - 遗留配置警告：deepseek plugin 未安装，bundledDisco",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7760572317950041,
+      "maxScore": 0.7760572317950041,
+      "firstRecalledAt": "2026-07-01T03:52:41.154Z",
+      "lastRecalledAt": "2026-07-01T03:52:41.154Z",
+      "queryHashes": [
+        "dbc473971312"
+      ],
+      "recallDays": [
+        "2026-07-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "rc17777/openclaw",
+        "release/tag",
+        "openclaw.ai/install.ps1",
+        "npmmirror.com",
+        "2026.5.4",
+        "2026.6.9",
+        "openclaw.cmd"
+      ]
+    }
+  }
+}

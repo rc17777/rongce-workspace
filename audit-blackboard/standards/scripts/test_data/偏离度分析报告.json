@@ -1,0 +1,142 @@
+[
+  {
+    "finding_id": "F-2026-001",
+    "agent": "expert_bias_detector",
+    "timestamp": "2026-06-24T20:24:38.363217",
+    "type": "评标异常",
+    "severity": "高",
+    "summary": "[Kendall W协调系数] nan - 专家评分一致性严重不一致（需关注），W=0.2500",
+    "confidence": 85,
+    "entities": [
+      NaN,
+      NaN
+    ],
+    "evidence": [
+      "检测方法: Kendall W协调系数",
+      "专家人数: 6.0",
+      "投标人数: 5.0",
+      "协调系数W: 0.25",
+      "一致性评价: 严重不一致（需关注）",
+      "风险等级: 高",
+      "说明: 专家评分一致性严重不一致（需关注），W=0.2500"
+    ],
+    "law_refs": [],
+    "related_findings": [],
+    "amount": null,
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-002",
+    "agent": "expert_bias_detector",
+    "timestamp": "2026-06-24T20:24:38.363712",
+    "type": "评标异常",
+    "severity": "中",
+    "summary": "[Z-score偏离] 专家C - 该专家评分比均值偏离 1.5 个标准差",
+    "confidence": 65,
+    "entities": [
+      "专家C",
+      "投标人1"
+    ],
+    "evidence": [
+      "检测方法: Z-score偏离",
+      "风险等级: 中",
+      "说明: 该专家评分比均值偏离 1.5 个标准差",
+      "专家: 专家C",
+      "投标人: 投标人1",
+      "该专家评分: 98.08",
+      "该投标人平均评分: 93.44",
+      "偏离标准差: 3.03",
+      "Z-score: 1.53",
+      "偏离方向: 偏高"
+    ],
+    "law_refs": [],
+    "related_findings": [],
+    "amount": null,
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-003",
+    "agent": "expert_bias_detector",
+    "timestamp": "2026-06-24T20:24:38.363908",
+    "type": "评标异常",
+    "severity": "中",
+    "summary": "[Z-score偏离] 专家F - 该专家评分比均值偏离 1.8 个标准差",
+    "confidence": 65,
+    "entities": [
+      "专家F",
+      "投标人5"
+    ],
+    "evidence": [
+      "检测方法: Z-score偏离",
+      "风险等级: 中",
+      "说明: 该专家评分比均值偏离 1.8 个标准差",
+      "专家: 专家F",
+      "投标人: 投标人5",
+      "该专家评分: 94.66",
+      "该投标人平均评分: 91.8",
+      "偏离标准差: 1.57",
+      "Z-score: 1.82",
+      "偏离方向: 偏高"
+    ],
+    "law_refs": [],
+    "related_findings": [],
+    "amount": null,
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-004",
+    "agent": "expert_bias_detector",
+    "timestamp": "2026-06-24T20:24:38.364090",
+    "type": "评标异常",
+    "severity": "高",
+    "summary": "[IQR异常值] 专家F - 超出四分位距正常范围",
+    "confidence": 85,
+    "entities": [
+      "专家F",
+      "投标人5"
+    ],
+    "evidence": [
+      "检测方法: IQR异常值",
+      "风险等级: 高",
+      "说明: 超出四分位距正常范围",
+      "专家: 专家F",
+      "投标人: 投标人5",
+      "该专家评分: 94.66",
+      "偏离方向: 偏高",
+      "Q1: 91.05",
+      "Q3: 91.89",
+      "IQR: 0.84",
+      "正常范围: [89.78, 93.15]"
+    ],
+    "law_refs": [],
+    "related_findings": [],
+    "amount": null,
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-005",
+    "agent": "expert_bias_detector",
+    "timestamp": "2026-06-24T20:24:38.364305",
+    "type": "评标异常",
+    "severity": "高",
+    "summary": "[极端打分模式] 专家D - 该专家对所有投标人打分完全一致(90.0分)，严重异常",
+    "confidence": 85,
+    "entities": [
+      "专家D",
+      NaN
+    ],
+    "evidence": [
+      "检测方法: 极端打分模式",
+      "风险等级: 高",
+      "说明: 该专家对所有投标人打分完全一致(90.0分)，严重异常",
+      "专家: 专家D",
+      "模式: 完全一致",
+      "统一分数: 90.0",
+      "评分次数: 5.0"
+    ],
+    "law_refs": [],
+    "related_findings": [],
+    "amount": null,
+    "status": "未确认"
+  }
+]

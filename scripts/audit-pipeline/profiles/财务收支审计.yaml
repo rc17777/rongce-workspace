@@ -1,0 +1,131 @@
+# ============================================================
+# 场景：财务收支审计
+# 重点：费用真实性、资金合法性、预算执行、内控制度
+# 规则条件使用结构化格式：{col: 列名, op: 操作符, val: 值}
+# 操作符: eq/ne/gt/gte/lt/lte
+# ============================================================
+
+name: "财务收支审计"
+description: "针对被审计单位财务收支合规性、费用真实性、资金安全性的模型组合"
+audit_type: "financial"
+
+data_requirements:
+  必备:
+    - "序时账（凭证级，含12个核心字段）"
+    - "科目余额表"
+    - "辅助余额表（供应商/客户往来）"
+  建议:
+    - "预算批复文件"
+    - "合同台账"
+    - "银行对账单"
+
+models:
+  - id: "rule_engine"
+    name: "规则引擎"
+    enabled: true
+    weight: 1.0
+    rules:
+      - id: "R01"
+        desc: "制单人与审核人同一人（内控缺陷）"
+        level: "高"
+        weight: 15
+        conditions:
+          - {col: "f_制单审核同一人", op: "eq", val: 1}
+
+      - id: "R02"
+        desc: "大额凭证无附件（>=5万元无附件）"
+        level: "高"
+        weight: 30
+        conditions:
+          - {col: "f_是否大额", op: "eq", val: 1}
+          - {col: "f_无附件", op: "eq", val: 1}
+
+      - id: "R03"
+        desc: "大额现金支付（现金科目+>=5万元）"
+        level: "高"
+        weight: 35
+        conditions:
+          - {col: "f_是否现金", op: "eq", val: 1}
+          - {col: "f_是否大额", op: "eq", val: 1}
+
+      - id: "R04"
+        desc: "凑整报销（>=3000元整千+模糊摘要）"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否整千", op: "eq", val: 1}
+          - {col: "f_摘要模糊度", op: "gte", val: 0.5}
+
+      - id: "R05"
+        desc: "周末+大额交易"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否周末", op: "eq", val: 1}
+          - {col: "f_是否大额", op: "eq", val: 1}
+
+      - id: "R06"
+        desc: "节假前后+大额交易"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否节假前后", op: "eq", val: 1}
+          - {col: "f_是否大额", op: "eq", val: 1}
+
+      - id: "R07"
+        desc: "月末突击花钱"
+        level: "中"
+        weight: 15
+        conditions:
+          - {col: "f_是否月末", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 10000}
+
+      - id: "R08"
+        desc: "借贷不平"
+        level: "高"
+        weight: 25
+        conditions:
+          - {col: "f_借贷不平", op: "eq", val: 1}
+
+      - id: "R09"
+        desc: "费用类科目大额整数（>=1万整百）"
+        level: "中"
+        weight: 15
+        conditions:
+          - {col: "f_是否费用类", op: "eq", val: 1}
+          - {col: "f_是否整百", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 10000}
+
+      - id: "R10"
+        desc: "摘要含暂/补/冲/调+大额"
+        level: "中"
+        weight: 10
+        conditions:
+          - {col: "f_摘要含冲调", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 5000}
+
+  - id: "benford"
+    name: "Benford数字分布检测"
+    enabled: true
+    weight: 0.6
+    threshold:
+      p_value: 0.01
+      mad: 0.015
+
+  - id: "statistical"
+    name: "统计异常检测（Z分法）"
+    enabled: true
+    weight: 0.8
+    threshold:
+      z_score: 3.0
+
+  - id: "frequency"
+    name: "频率异常检测（按科目）"
+    enabled: true
+    weight: 0.6
+    group_by: "科目名称"
+
+risk_mapping:
+  "高": "列为重点，扩大抽查至同类凭证"
+  "中": "补充取证，询问经办人"
+  "低": "正常采样确认"

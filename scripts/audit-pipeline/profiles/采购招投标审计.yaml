@@ -1,0 +1,90 @@
+# ============================================================
+# 场景：采购招投标审计
+# 重点：围标串标、供应商关联、报价规律、合同异常
+# ============================================================
+
+name: "采购招投标审计"
+description: "针对采购全流程合规性、围标串标识别、供应商关联穿透的模型组合"
+audit_type: "procurement"
+
+data_requirements:
+  必备:
+    - "采购台账（含供应商、金额、方式、时间）"
+    - "招投标文件（至少开标一览表）"
+    - "合同台账"
+  建议:
+    - "供应商工商信息（天眼查导出）"
+    - "评标委员会名单"
+    - "投标保证金缴纳记录"
+
+models:
+  - id: "rule_engine"
+    name: "采购规则引擎"
+    enabled: true
+    weight: 1.0
+    rules:
+      - id: "P01"
+        desc: "年末突击采购"
+        level: "中"
+        weight: 15
+        conditions:
+          - {col: "f_是否年末", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 10000}
+
+      - id: "P02"
+        desc: "大额采购无附件（>=10万无附件）"
+        level: "高"
+        weight: 30
+        conditions:
+          - {col: "金额", op: "gte", val: 100000}
+          - {col: "f_无附件", op: "eq", val: 1}
+
+      - id: "P03"
+        desc: "大额现金采购"
+        level: "高"
+        weight: 35
+        conditions:
+          - {col: "f_是否现金", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 30000}
+
+      - id: "P04"
+        desc: "整数大额采购（>=10万整千，疑似虚列）"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否整千", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 100000}
+
+      - id: "P05"
+        desc: "周末+大额采购"
+        level: "中"
+        weight: 15
+        conditions:
+          - {col: "f_是否周末", op: "eq", val: 1}
+          - {col: "f_是否大额", op: "eq", val: 1}
+
+  - id: "benford"
+    name: "Benford数字分布检测"
+    enabled: true
+    weight: 0.5
+    threshold:
+      p_value: 0.01
+      mad: 0.015
+
+  - id: "statistical"
+    name: "统计异常检测（Z分法）"
+    enabled: true
+    weight: 0.8
+    threshold:
+      z_score: 2.5
+
+  - id: "frequency"
+    name: "供应商频率异常检测"
+    enabled: true
+    weight: 1.0
+    group_by: "供应商"
+
+risk_mapping:
+  "高": "串联L1-L10围标检测体系，扩大至同类型采购"
+  "中": "调取完整招标文件，重点审查"
+  "低": "正常采样确认"

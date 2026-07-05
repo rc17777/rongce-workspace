@@ -1,0 +1,9 @@
+{
+  "daily_budget_cny": 100,
+  "warning_threshold": 0.7,
+  "critical_threshold": 0.9,
+  "max_flash_requests_per_day": 5000,
+  "max_v4pro_requests_per_day": 2000,
+  "alert_channel": "console",
+  "webhook_url": ""
+}
