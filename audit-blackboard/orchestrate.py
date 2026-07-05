@@ -34,10 +34,15 @@ BIZ_AGENT_MAP = {
     'bidding':               {'required': ['bid_hunter','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['data_scout','contract_hound','expert_bias_detector']},
     'soe':                   {'required': ['data_scout','contract_hound','bid_hunter','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['expert_bias_detector']},
     'engineering':           {'required': ['data_scout','contract_hound','bid_hunter','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['expert_bias_detector']},
-    'performance':           {'required': ['data_scout','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['contract_hound','expert_bias_detector']},
+    'performance':           {'required': ['performance_evaluator','data_scout','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['contract_hound','expert_bias_detector']},
     'subsidy':               {'required': ['data_scout','contract_hound','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['bid_hunter','expert_bias_detector']},
     'energy':                {'required': ['data_scout','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['contract_hound','expert_bias_detector']},
     'cost_benefit':          {'required': ['data_scout','contract_hound','law_inspector','workpaper_crafter','report_writer','review_sentinel'], 'optional': ['expert_bias_detector']},
+    # 工程咨询业务线
+    'budget_preparation':    {'required': ['budget_estimator','fiscal_reviewer','report_writer','review_sentinel'], 'optional': ['data_scout']},
+    'fiscal_review':         {'required': ['fiscal_reviewer','settlement_auditor','report_writer','review_sentinel'], 'optional': ['budget_estimator','data_scout']},
+    'full_process_consult':  {'required': ['budget_estimator','settlement_auditor','fiscal_reviewer','contract_hound','report_writer','review_sentinel'], 'optional': ['data_scout','bid_hunter']},
+    'engineering_settlement':{'required': ['settlement_auditor','report_writer','review_sentinel'], 'optional': ['budget_estimator','fiscal_reviewer','contract_hound']},
 }
 
 BIZ_ALIASES = {
@@ -53,6 +58,11 @@ BIZ_ALIASES = {
     '政府补贴':'subsidy','补贴':'subsidy',
     '能源审计':'energy','能源':'energy',
     '成本效益':'cost_benefit','成本':'cost_benefit',
+    # 工程咨询别名
+    '工程预算编制':'budget_preparation','预算编制':'budget_preparation','预算':'budget_preparation',
+    '财政评审':'fiscal_review','财评':'fiscal_review',
+    '全过程工程咨询':'full_process_consult','全过程':'full_process_consult','全咨':'full_process_consult',
+    '工程结算':'engineering_settlement','结算':'engineering_settlement',
 }
 
 MCP_TOOLS = {
@@ -65,12 +75,18 @@ MCP_TOOLS = {
     'review_sentinel': [],
     'expert_bias_detector': ['expert_bias_detection'],
     'data_desensitizer': ['desensitize_excel'],
+    'budget_estimator':  [],
+    'settlement_auditor':[],
+    'fiscal_reviewer':   [],
+    'performance_evaluator':[],
 }
 
 AGENT_LABELS = {
     'data_scout':'数据侦察兵','contract_hound':'合同猎犬','bid_hunter':'招投标猎手',
     'law_inspector':'法规检察官','workpaper_crafter':'底稿工匠','report_writer':'报告笔杆子','review_sentinel':'复核哨兵',
     'expert_bias_detector':'评标偏离度检测','data_desensitizer':'数据脱敏',
+    # 工程咨询Agent
+    'budget_estimator':'预算工程师','settlement_auditor':'结算审计师','fiscal_reviewer':'财政评审员','performance_evaluator':'绩效评价师',
 }
 
 

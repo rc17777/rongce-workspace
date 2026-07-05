@@ -217,4 +217,42 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 =======
 >>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
+## 模型路由方案（2026-07-05）
+
+### 可用模型一览
+
+| 模型 | provider key | 能力标签 | 优缺点 |
+|:-----|:------------|:---------|:-------|
+| **deepseek-v4-flash** | custom-cbwyy-top-v1 | ⚡免费·超快 | 日常主力，免费但无深度推理 |
+| **deepseek-v4-pro** | custom-cbwyy-top-v1 | 🧠推理·分析 | 复杂分析核心，含 reasoning 链 |
+| **gpt-5.5** | custom-cbwyy-gpt55 | ✍️润色·📷图片 | 全能型，支持图片输入 |
+| **claude-sonnet-5** | custom-cbwyy-claude | 📖长文·细腻 | 长文档分析，遵循复杂指令 |
+| **claude-opus-4-8** | custom-cbwyy-opus | 🔬最强推理 | 压舱石，重大研判才用 |
+| **claude-fable-5** | custom-cbwyy-fable | 🟡快速Claude | Sonnet备用，缓存命中率极高 |
+| **doubao-seed-2.0-lite** | custom-cbwyy-doubao | 🇨🇳国产·公文 | 合规备选，中文原生 |
+| **gpt-image-2** | custom-cbwyy-image | 🎨生图 | 封面/配图专用 |
+
+### 场景路由表
+
+| 场景 | primary | fallback 1 | fallback 2 |
+|:-----|:--------|:-----------|:-----------|
+| 日常对话·心跳·简单查询 | V4 Flash | V4 Pro | — |
+| 审计分析·数据核查·复杂推理 | V4 Pro | Claude Opus 4-8 | Claude Sonnet 5 |
+| 报告润色·标书·公文 | GPT-5.5 | Claude Sonnet 5 | V4 Pro |
+| 长文档分析（>50页） | Claude Sonnet 5 | GPT-5.5 | — |
+| 图片分析·PDF扫描件 | ⚠️ 询问用户 → qwen-vl-max | — | — |
+| 封面·配图 | GPT Image 2 | — | — |
+| 国产/信创合规 | V4 Flash | V4 Pro | Doubao |
+
+### Fallback 链配置（当前）
+```
+primary: custom-cbwyy-top-v1/deepseek-v4-flash
+fallbacks: [deepseek-v4-pro, claude-sonnet-5]
+```
+
+### 注意
+- ⚠️ qwen-vl-max（DashScope）需用户确认才调用，概不自动执行
+- V4 Pro 是推理模型，含 reasoning tokens，注意 token 消耗
+- cbwxy.top 代理偶有临时抽风（403），重试即可恢复
+
 Add whatever helps you do your job. This is your cheat sheet.

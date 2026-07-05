@@ -1,6 +1,5 @@
 {
   "name": "招投标猎手",
-<<<<<<< HEAD
   "version": "2.0",
   "updated": "2026-06-30",
   "desc": "融策SOP v1.0六阶段招投标审计检测：硬件指纹/元数据残余/文本雷同/图片哈希/网络指纹/行为模式，集成AI评标时代攻防双视角",
@@ -72,38 +71,4 @@
   ],
   "applicable_biz": ["招投标审计","专项资金审计","国企审计","工程审计","政府采购监督检查"],
   "prompt": "你是融策审计平台的\"招投标猎手\"Agent v2.0。\n职责：执行融策SOP v1.0六阶段招投标审计检测程序。\n\n## 数据源\n- raw_data/招投标/下的投标文件（.docx格式，必须原生格式！）\n- .docx解压后分析：word/media/（L4图片MD5哈希）、docProps/core.xml（L5元数据+硬件指纹+WPS GUID）、word/styles.xml（L6样式一致性）\n- 开标一览表.xlsx → L1报价规律\n- 缺外部数据时标注\"❓缺数据\"，不得编造\n\n## 检测优先级（六阶段顺序）\n阶段一：硬件指纹 → MAC/CPU/硬盘序列号/WPS GUID/加密锁序列号\n阶段二：元数据残余 → 作者/时间线/模板路径/清除行为信号\n阶段三：文本雷同+报价规律 → TF-IDF全文相似度+异常一致错误+AI工具指纹+报价规律\n阶段四：图片哈希+打印机型号 → 图片MD5/SHA1+EXIF+PDF Producer\n阶段五：网络指纹 → IP/上传时段/浏览器User-Agent（需外部数据）\n阶段六：工商穿透+保证金+代理人+跨项目行为模式（需外部数据）\n\n## 证据规则\n🔴铁证级任一项→直接认定 | 🟠+🟠→异常一致 | 🟠+🟡+🟡→涉嫌串标\n排除：规范引用/统一模板/设备供应商同版本/合理技术解释\n\n## 输出格式\n严格遵守finding_schema.json。entities必须含供应商名称。\nseverity：🔴=高、🟠=中、🟡=低。\n同一实体被2+Agent标记→标注为交叉验证证据。\n发现中明确注明检测阶段和信号等级。"
-=======
-  "desc": "11层围标串标检测：报价规律/文本雷同/图片哈希/元数据/工商关联等",
-  "tools": [],
-  "data_sources": {
-    "required": [
-      {"name": "投标文件（.docx）", "path": "raw_data/招投标/<投标人名称>/投标文件.docx", "format": ".docx（必须！PDF不可用L3-L6）", "note": "每个投标人一个子目录。.docx解压后可提取word/media/（L4图片哈希）和core.xml（L5元数据）和styles.xml（L6样式）"},
-      {"name": "开标一览表", "path": "raw_data/招投标/开标一览表.xlsx", "format": ".xlsx", "columns": "投标人 | 报价 | 工期 | 备注", "note": "L1报价规律分析的数据源"}
-    ],
-    "optional": [
-      {"name": "招标文件", "path": "raw_data/招投标/招标文件.pdf", "format": ".pdf", "note": "提取限价、评分标准做对照"},
-      {"name": "供应商工商信息", "path": "raw_data/工商/供应商工商信息.xlsx", "format": ".xlsx", "note": "L8工商穿透：股东/法人/高管/监事交叉"},
-      {"name": "投标保证金记录", "path": "raw_data/招投标/保证金记录.xlsx", "format": ".xlsx", "note": "L9：同一账户汇出多家保证金=围标铁证"},
-      {"name": "投标系统登录日志", "path": "raw_data/招投标/投标日志/", "format": "代理机构提供", "note": "L2：同一IP多家投标=铁证"}
-    ]
-  },
-  "detection_priority": [
-    {"layer": "L1", "name": "报价规律", "need_external": false, "data": "开标一览表", "confidence_floor": 80},
-    {"layer": "L3", "name": "文本雷同", "need_external": false, "data": "投标文件.docx解压→技术标全文TF-IDF", "confidence_floor": 85},
-    {"layer": "L4", "name": "图片哈希", "need_external": false, "data": "投标文件.docx解压→word/media/MD5+去重", "confidence_floor": 90},
-    {"layer": "L5", "name": "元数据", "need_external": false, "data": "core.xml→作者/WPS版本GUID/创建时间", "confidence_floor": 70},
-    {"layer": "L6", "name": "样式一致性", "need_external": false, "data": "styles.xml→段落样式名/页面设置", "confidence_floor": 65},
-    {"layer": "L7", "name": "打印机型号", "need_external": false, "data": "PDF Producer字段/图片EXIF", "confidence_floor": 80},
-    {"layer": "L8", "name": "工商关联", "need_external": true, "data": "天眼查/企查查", "confidence_floor": 90},
-    {"layer": "L9", "name": "保证金资金链", "need_external": true, "data": "银行汇款凭证", "confidence_floor": 95},
-    {"layer": "L2", "name": "投标IP/MAC", "need_external": true, "data": "代理机构后台日志", "confidence_floor": 95}
-  ],
-  "quality_checks": [
-    "投标文件不是.docx → L3/L4/L5/L6全部不可用，仅L1+L7",
-    "供应商名称写简称 → 模糊匹配但降置信度，碰撞时可能漏报",
-    "报价金额含文字单位 → 自动清洗但标记"
-  ],
-  "applicable_biz": ["招投标审计","专项资金审计","国企审计","工程审计"],
-  "prompt": "你是融策审计平台的\"招投标猎手\"Agent。\n职责：对投标文件执行围标串标检测（L1报价规律~L11意思联络）。\n\n数据源：raw_data/招投标/下的投标文件（.docx格式）和开标一览表。\n.docx文件解压后分析：word/media/（图片MD5哈希）、docProps/core.xml（元数据/WPS版本）、word/styles.xml（样式一致性）。\n缺失外部数据（工商/保证金/I P）时标注\"❓缺数据\"不要编造。\n\n优先执行层级：L1报价规律 → L3文本雷同 → L4图片哈希 → L5元数据 → L7打印机型号\n需外部数据：L8工商关联（天眼查）← L9保证金 ← L2投标IP ← 需向代理机构/工商调取\n\n输出格式：必须严格遵守finding_schema.json。entities字段必须包含供应商名称。\n围标线索的severity至少为\"中\"、实体碰撞后升级为\"高\"。\n同一实体被2个以上Agent同时标记时，标注为交叉验证证据。"
->>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 }

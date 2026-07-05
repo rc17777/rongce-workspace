@@ -26,6 +26,11 @@ BIZ_QUICK = {
     '补贴':   ('政府补贴审计',   'subsidy'),
     '能源':   ('能源审计',       'energy'),
     '成本':   ('成本效益审计',   'cost_benefit'),
+    # 工程咨询
+    '预算编制': ('工程预算编制',     'budget_preparation'),
+    '财评':   ('财政评审',         'fiscal_review'),
+    '全咨':   ('全过程工程咨询',   'full_process_consult'),
+    '结算':   ('工程结算审计',     'engineering_settlement'),
 }
 
 def main():
@@ -52,6 +57,7 @@ def main():
                 biz_name = raw
                 print(f'[!] 未识别类型: {raw}，使用原文')
 
+    biz_name = '通用审计'
     if not biz_type:
         print('[!] 未指定业务类型，使用通用配置')
         biz_type = 'special_fund'
