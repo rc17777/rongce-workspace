@@ -54,6 +54,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **模板文件**：`D:\openclaw-workspace\bid_aba\融策标书模板_v2_高级版.docx`
 - **生成脚本**：`D:\openclaw-workspace\scripts\标书模板生成_v2.py`
 
+<<<<<<< HEAD
 ## Token预算工具（守卫脚本在 scripts/guards/）
 
 - **费用守卫** (已修复✅): `scripts/guards/deepseek_cost_guard.py`
@@ -88,6 +89,83 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **工作流集成**: `scripts/guards/workflow_with_budget.py`
   ```python
   from workflow_with_budget import check_budget, before_ocr, before_report
+=======
+## Token预算工具
+
+- **预算估算**: `scripts/token_budget.py`
+  ```bash
+  # 估算单个文件
+  python scripts/token_budget.py --files "报告.docx" --task "分析" --reasoning
+  
+  # 估算整个目录
+  python scripts/token_budget.py --dir "projects/某项目/raw_data/" --task "生成报告"
+  
+  # 超阈值交互确认
+  python scripts/token_budget.py --dir "raw_data/" --task "ocr" --confirm --threshold 50000
+  
+  # JSON输出（给其他脚本调用）
+  python scripts/token_budget.py --files "1.pdf" --json
+  ```
+
+- **费用守卫**: `scripts/deepseek_cost_guard.py`
+  ```bash
+  # 初始化配置
+  python scripts/deepseek_cost_guard.py init
+  
+  # 检查今日费用（每次心跳自动执行）
+  python scripts/deepseek_cost_guard.py check
+  
+  # 查看昨日日报
+  python scripts/deepseek_cost_guard.py daily
+  
+  # 查看限额配置
+  python scripts/deepseek_cost_guard.py limit
+  ```
+  配置: `config/cost_guard.json`（预算/阈值/日限）
+
+- **API 限流**: `scripts/api_guard.py`
+  ```python
+  from api_guard import guarded_chat_completion, batch_process
+  
+  # 带熔断的单次调用
+  response = guarded_chat_completion(model="deepseek-v4-flash", messages=[...])
+  
+  # 带限流的批量处理
+  results = batch_process(items, processor_func, model="flash", batch_size=10, delay_sec=1)
+  ```
+
+- **Spawn 安全**: `scripts/spawn_guard.py`
+  ```python
+  from spawn_guard import safe_spawn, validate_spawn_params
+  
+  # 自动设置超时
+  params = safe_spawn(task="OCR分析", model="deepseek-v4-flash")
+  # → 自动设置 runTimeoutSeconds=600, cleanup="delete"
+  
+  # 参数验证
+  ok, msg = validate_spawn_params(kwargs)
+  ```
+
+- **工作流集成**: `scripts/workflow_with_budget.py`
+  ```python
+  from workflow_with_budget import check_budget, before_ocr, before_report
+  
+  # 通用检查
+  ok, estimate = check_budget(
+      files=["data.xlsx"],
+      task="分析",
+      reasoning=True,
+      threshold=50000,
+      auto_confirm=True
+  )
+  
+  # 快捷函数
+  if before_ocr(["scan1.pdf", "scan2.pdf"]):
+      run_ocr()
+  
+  if before_report(["findings.json"], reasoning=True):
+      generate_report()
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
   ```
 
 - **审计黑板集成**: `audit-blackboard/launch.py` 和 `orchestrate.py` 已内置预算检查
@@ -95,12 +173,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - `orchestrate.py` prepare: 检查数据目录预算
   - `orchestrate.py` collect: 大量findings时提示预算风险
 
+<<<<<<< HEAD
 ### ⚠️ DeepSeek 直连 provider 已移除
 旧key `sk-4253...31f7` 已失效(401)，现通过 `custom-cbwyy-top-v1`（cbwxy.top代理）走DeepSeek模型。如需直连DeepSeek，找平头哥要新key后加到 models.json。
 
 ### ⚠️ Qwen-VL 图片分析规则
 涉及 `qwen-vl-max` 的图片/PDF分析，必须先询问用户确认，不得自动调用。
 
+=======
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 - **默认阈值配置**:
   | 任务类型 | 阈值(token) | 默认模型 |
   |---------|------------|---------|
@@ -122,6 +203,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **模板文件**：`D:\openclaw-workspace\bid_aba\融策标书模板_v2_高级版.docx`
 - **生成脚本**：`D:\openclaw-workspace\scripts\标书模板生成_v2.py`
 
+<<<<<<< HEAD
 ## 财政监督检查模型 Skill
 
 - **Skill**: `fiscal-supervision-model`
@@ -133,4 +215,6 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - `references/rule-library-v1.md`：首批30条识别规则
   - `references/output-spec.md`：Excel输出物规范
 
+=======
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 Add whatever helps you do your job. This is your cheat sheet.

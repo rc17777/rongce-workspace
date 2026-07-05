@@ -17,6 +17,7 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+<<<<<<< HEAD
 ## 融策 AI 统一中枢
 
 以往技能、记忆、知识库已统一到入口：`RONGCE_AI_HUB/`。
@@ -29,6 +30,8 @@ Don't ask permission. Just do it.
 
 处理复杂业务时按“Memory 定上下文、Skill 定流程、Knowledge 补资料”的顺序调用。不要把三者物理混成一个大文件；统一入口即可，避免上下文爆炸和隐私泄露。
 
+=======
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
@@ -64,6 +67,26 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+<<<<<<< HEAD
+=======
+## Subagent Spawning（强制）
+
+**每次 spawn 子代理必须指定 `runTimeoutSeconds`**，禁止无限期等待：
+
+- 批量OCR/数据处理类任务：`runTimeoutSeconds: 300~600`（5~10分钟）
+- 轻量查询/取数任务：`runTimeoutSeconds: 120~180`（2~3分钟）
+- 不确定耗时的任务：先设 `300`，根据进度让子代理中途汇报后主动退出
+
+**为什么：** 不设超时 = 任务完成后子代理空转等待 = 持续消耗 token 直到手动终止。
+
+```
+spawn 参数检查清单：
+✅ runTimeoutSeconds  ← 必填
+✅ cleanup: "delete"（一次性任务）
+✅ delivery.mode 是否需要推送
+```
+
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 ## External vs Internal
 
 **Safe to do freely:**

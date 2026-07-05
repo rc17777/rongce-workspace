@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "last_updated": "2026-07-02T23:56:41.669930+08:00",
+=======
+  "last_updated": "2026-06-27T10:50:06.614112+08:00",
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
   "count": 26,
   "models": {
     "cognitivecomputations/dolphin-mistral-24b-venice-edition:free": {
@@ -170,6 +174,17 @@
       "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
       "created": 1769917427
     },
+<<<<<<< HEAD
+=======
+    "openrouter/owl-alpha": {
+      "id": "openrouter/owl-alpha",
+      "name": "Owl Alpha",
+      "context_length": 1048756,
+      "modality": "text->text",
+      "description": "Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, an",
+      "created": 1777398589
+    },
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
     "poolside/laguna-m.1:free": {
       "id": "poolside/laguna-m.1:free",
       "name": "Poolside: Laguna M.1 (free)",
@@ -178,6 +193,7 @@
       "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai/), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling a",
       "created": 1777388504
     },
+<<<<<<< HEAD
     "poolside/laguna-xs-2.1:free": {
       "id": "poolside/laguna-xs-2.1:free",
       "name": "Poolside: Laguna XS 2.1 (free)",
@@ -186,6 +202,8 @@
       "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines...",
       "created": 1783002429
     },
+=======
+>>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
     "poolside/laguna-xs.2:free": {
       "id": "poolside/laguna-xs.2:free",
       "name": "Poolside: Laguna XS.2 (free)",
