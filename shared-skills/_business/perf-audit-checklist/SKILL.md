@@ -1,13 +1,11 @@
 ---
-name: perf-audit-checklist
-description: >
-  绩效审计发现逻辑检查清单。
-  基于审计署2025年度审计报告揭示的绩效管理问题，提炼事前/事中/事后全链条发现逻辑。
-  覆盖：绩效目标设定、立项论证、执行监控（资金闲置/骗取套取/挤占挪用）、
-  效益评价、结果应用五大环节。
-  Use when the user asks about 绩效审计发现逻辑, 绩效评价检查清单,
-  审计问题定性依据, 资金闲置发现方法, 骗取套取审计, 挤占挪用检查,
-  零基预算审计, 绩效目标合理性, 或需要可复用的绩效审计工作模板。
+name: "perf-audit-checklist"
+description: ">"
+business_line: "预算绩效管理"
+methods: "逻辑检查; 事前评估; 事中监控; 事后评价"
+difficulty: "中级"
+keywords: "绩效审计, 绩效评价, 目标设置, 资金闲置, 骗补套取, 挤占挪用"
+status: "reviewed"
 ---
 
 # 绩效审计发现逻辑检查清单

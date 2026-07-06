@@ -1,6 +1,11 @@
 ---
-name: special-bond-audit
-description: 政府专项债券全周期审计 - 覆盖发行、使用、管理、偿还四环节的审计方法
+name: "special-bond-audit"
+description: "政府专项债券全周期审计 - 覆盖发行、使用、管理、偿还四环节的审计方法"
+business_line: "政府专项债券审计"
+methods: "四环节法; 资金追踪; 收益覆盖分析"
+difficulty: "高级"
+keywords: "专项债, 政府债券, 债券审计, 发行使用管理偿还"
+status: "draft"
 ---
 
 # 专项债券审计技能

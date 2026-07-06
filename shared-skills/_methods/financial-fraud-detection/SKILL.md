@@ -1,6 +1,12 @@
 ---
-name: financial-fraud-detection
-description: "财务造假检测工具 — Benford定律数字分布检验 + 异常交易模式识别。用于国企审计、专项资金审计、政府采购审计中的凭证/流水/发票金额异常检测。Triggers: '财务造假', 'Benford', 'Benford定律', '本福特定律', '虚假发票', '虚列支出', '人为操纵'."
+name: "financial-fraud-detection"
+description: >
+  财务造假检测工具 — Benford定律数字分布检验 + 异常交易模式识别。用于国企审计、专项资金审计、政府采购审计中的凭证/流水/发票金额异常检测。Triggers: '财务造假', 'Benford', 'Benford定律', '本福特定律', '虚假发票', '虚列支出', '人为操纵'.
+business_line: "通用审计方法"
+methods: "Benford定律; 异常交易检测; 数字分布分析"
+difficulty: "高级"
+keywords: "财务造假, Benford, 虚假发票, 虚列支出, 人为操纵"
+status: "stable"
 ---
 
 # Financial Fraud Detection — 财务造假筛查

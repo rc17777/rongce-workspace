@@ -1,6 +1,12 @@
 ---
-name: procurement-audit-models
-description: "采购审计模型库 — 围标串标识别+供应商关联挖掘。基于群众语言堂公众号《政府采购审计大数据技术超详细操作》及审计一线实战提炼。Triggers: '围标串标', '采购审计', '供应商关联', '投标IP相同', '报价规律', '标书比对', '政府采购'."
+name: "procurement-audit-models"
+description: >
+  采购审计模型库 — 围标串标识别+供应商关联挖掘。基于群众语言堂公众号《政府采购审计大数据技术超详细操作》及审计一线实战提炼。Triggers: '围标串标', '采购审计', '供应商关联', '投标IP相同', '报价规律', '标书比对', '政府采购'.
+business_line: "招投标审计"
+methods: "关联分析; 文本相似度; 图像哈希; 报价规律; FP-Growth"
+difficulty: "高级"
+keywords: "招投标, 围标串标, 供应商关联, TF-IDF, 同IP, 标书比对"
+status: "stable"
 ---
 
 # Procurement Audit Models — 采购审计模型库

@@ -1,6 +1,12 @@
 ---
-name: apriori-audit
-description: Apriori association rule algorithm for audit anomaly detection. Finds frequent co-occurrence patterns in transactional data to detect collusion rings (bid-rigging groups, healthcare fraud gangs, etc.) and missing-relationship anomalies (procedures that should co-occur but don't). Use when audit work involves (1) Finding groups of entities that frequently appear together across transactions, (2) Detecting abnormal co-occurrence patterns in bidding/medical/transaction data, (3) Computing support/confidence/lift metrics for association rules, (4) Identifying missing expected associations (should-be-there-but-isn't), or (5) Building frequent itemset analysis for any audit domain.
+name: "apriori-audit"
+description: >
+  Apriori association rule algorithm for audit anomaly detection. Finds frequent co-occurrence patterns in transactional data to detect collusion rings (bid-rigging groups, healthcare fraud gangs, etc.) and missing-relationship anomalies (procedures that should co-occur but don't). Use when audit work involves (1) Finding groups of entities that frequently appear together across transactions, (2) Detecting abnormal co-occurrence patterns in bidding/medical/transaction data, (3) Computing support/confidence/lift metrics for association rules, (4) Identifying missing expected associations (should-be-there-but-isn't), or (5) Building frequent itemset analysis for any audit domain.
+business_line: "通用审计方法"
+methods: "Apriori关联规则; 频繁项集; 支持度/置信度/提升度"
+difficulty: "高级"
+keywords: "关联规则, Apriori, 围标识别, 共现分析, 缺失关联"
+status: "stable"
 ---
 
 # Apriori 关联规则审计分析
