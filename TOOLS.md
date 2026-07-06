@@ -37,7 +37,10 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
-### draw.io
+### 数据目录（换电脑时需迁移）
+
+- **杂志资料OCR**: `D:\杂志资料`（1086 MB / 1450文件，审计杂志文章OCR结果，knowledge/知识库的外部参考数据源）
+- **备份规则**: 换新电脑时从旧D盘拷贝到新D盘根目录，路径保持一致
 
 - Executable: `D:\dwaw\draw.io\draw.io.exe` (v30.0.1)
 - CLI export: `& "D:\dwaw\draw.io\draw.io.exe" -x -f png -e -b 10 -o <output> <input.drawio>`
