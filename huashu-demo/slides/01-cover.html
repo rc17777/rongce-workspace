@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, initial-scale=1.0">
+<title>融策 · 政府审计宣传册</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  :root {
+    --deep-blue: #0A1F3F; --teal: #1A5C6E; --gold: #C5955C;
+    --warm-gray: #F5F2EC; --paper: #FAFAF8;
+    --ink: #1a1a1a; --ink-light: #5a5a5a; --ink-lighter: #8a8a8a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Noto Sans SC',-apple-system,sans-serif;
+    background: var(--paper); color: var(--ink);
+    width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  /* Masthead */
+  .masthead {
+    height: 72px; display: flex; align-items: center;
+    padding: 0 56px; gap: 16px;
+    border-bottom: 1px solid rgba(10,31,63,0.08);
+    font-size: 11px; color: var(--ink-lighter); letter-spacing: 0.05em;
+  }
+  .masthead .brand { font-weight: 600; color: var(--deep-blue); }
+  .masthead .sep { color: var(--gold); }
+  .masthead .spacer { flex:1; }
+  .masthead .page-num { font-feature-settings:"tnum"; }
+  /* Footer */
+  .footer {
+    height: 48px; display: flex; align-items: center;
+    padding: 0 56px; font-size: 10px; color: var(--ink-lighter);
+    border-top: 1px solid rgba(10,31,63,0.06);
+  }
+  /* Content area */
+  .content { flex:1; display: flex; overflow: hidden; position: relative; }
+  /* Shared components */
+  .kicker {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; letter-spacing: 0.25em; color: var(--teal); font-weight: 500;
+  }
+  .kicker::before { content:''; width: 24px; height: 1px; background: var(--gold); }
+  h1 {
+    font-family: 'Noto Serif SC',serif; font-weight: 700;
+    font-size: 40px; line-height: 1.25; color: var(--deep-blue);
+  }
+  h1 .hl { color: var(--gold); }
+  h2 {
+    font-family: 'Noto Serif SC',serif; font-weight: 600;
+    font-size: 24px; line-height: 1.4; color: var(--deep-blue);
+  }
+  .stat-num { font-family: 'Noto Serif SC',serif; font-size: 56px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .stat-label { font-size: 13px; color: var(--ink-light); margin-top: 8px; }
+  .divider { width: 48px; height: 2px; background: var(--gold); margin: 16px 0; }
+</style>
+</head>
+<body>
+<div class="masthead">
+  <img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span>
+  <span class="sep">·</span>
+  <span>政府审计专业服务</span>
+  <span class="spacer"></span>
+  
+</div>
+<div class="content" style="background:url('../shared/cover-ai-4k.png') center/cover no-repeat; align-items:center; justify-content:center; flex-direction:column; position:relative;">
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.3);"></div>
+  <div style="position:relative; z-index:1; text-align:center; padding:60px;">
+    <div style="font-size:18px; color:rgba(255,255,255,0.7); letter-spacing:0.4em; margin-bottom:40px; font-weight:300;">SICHUAN RONGCE</div>
+    <h1 style="font-size:96px; color:#fff; font-weight:900; margin-bottom:16px; line-height:1.15;">
+      政府<span style="color:var(--gold);">审计</span>·工程<span style="color:var(--gold);">咨询</span>
+    </h1>
+    <div style="font-family:'Noto Serif SC',serif; font-size:32px; color:rgba(255,255,255,0.5); font-style:italic; margin-bottom:40px; letter-spacing:0.08em;">
+      Government Audit & Engineering Consulting
+    </div>
+    <div class="divider" style="margin:0 auto 40px; width:80px;"></div>
+    <div style="font-family:'Noto Serif SC',serif;font-size:26px;color:rgba(255,255,255,.78);line-height:1.8;margin:-12px auto 34px;max-width:980px;letter-spacing:.06em;">
+      以审计证据链和数据穿透能力，服务财政资金治理现代化
+    </div>
+    <div style="display:flex; gap:48px; justify-content:center; color:rgba(255,255,255,0.7); font-size:20px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif SC',serif; font-size:48px; color:var(--gold);">12+</div>
+        <div style="margin-top:4px;">年政府审计经验</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif SC',serif; font-size:48px; color:var(--gold);">10+</div>
+        <div style="margin-top:4px;">核心业务线</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif SC',serif; font-size:48px; color:var(--gold);">AI+</div>
+        <div style="margin-top:4px;">数据驱动审计</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

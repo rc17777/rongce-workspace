@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
+<title>融策证据链方法论</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
+.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em}
+.masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
+.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
+.content{flex:1;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.25em;color:var(--gold);font-weight:500}
+.kicker::before{content:'';width:28px;height:1px;background:var(--gold)}
+.pillar{background:#fff;border:1px solid rgba(10,31,63,.08);padding:32px 26px 26px;position:relative;overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
+.pillar:hover{border-color:var(--gold);box-shadow:0 6px 30px rgba(10,31,63,.08);transform:translateY(-2px)}
+.pillar .pillar-num{font-family:'Noto Serif SC',serif;font-size:72px;font-weight:900;color:rgba(10,31,63,.03);position:absolute;top:-8px;right:10px;line-height:1;pointer-events:none}
+.pillar .pillar-icon{font-size:38px;margin-bottom:12px;line-height:1}
+.pillar .pillar-title{font-family:'Noto Serif SC',serif;font-size:23px;font-weight:700;color:var(--db);margin-bottom:10px}
+.pillar .pillar-desc{font-size:16px;color:var(--il);line-height:1.85;flex:1}
+.cap-tag{display:inline-block;font-size:14px;padding:5px 14px;border-radius:3px;margin:0 6px 6px 0;font-weight:500}
+</style></head>
+<body>
+<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
+<div class="content">
+  <!-- ===== UPPER: manifesto, dark, expanded ===== -->
+  <div style="background:var(--db);padding:64px 80px 56px;color:#fff;position:relative;overflow:hidden;flex:0 0 auto">
+    <div style="position:absolute;top:-80px;right:-80px;width:280px;height:280px;border:1px solid rgba(197,149,92,.06);border-radius:50%"></div>
+    <div style="position:absolute;bottom:-50px;left:180px;width:140px;height:140px;border:1px solid rgba(197,149,92,.08);border-radius:50%"></div>
+    <div style="position:relative;z-index:1;display:flex;align-items:flex-start;gap:56px">
+      <div style="flex:1">
+        <div class="kicker" style="color:var(--gold);font-size:15px">融策方法论</div>
+        <h1 style="font-family:'Noto Serif SC',serif;font-weight:700;font-size:52px;color:#fff;line-height:1.3;margin-top:18px">
+          把经验型审计<br>升级为<span style="color:var(--gold)">证据链审计</span>
+        </h1>
+        <div style="margin-top:28px;display:flex;gap:40px">
+          <div style="font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;color:var(--gold)">数据</div>
+          <div style="font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;color:rgba(255,255,255,.3)">→</div>
+          <div style="font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;color:var(--teal)">知识</div>
+          <div style="font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;color:rgba(255,255,255,.3)">→</div>
+          <div style="font-family:'Noto Serif SC',serif;font-size:38px;font-weight:700;color:rgba(255,255,255,.6)">判断</div>
+        </div>
+      </div>
+      <div style="flex:1;padding-top:70px">
+        <p style="font-family:'Noto Serif SC',serif;font-size:22px;color:rgba(255,255,255,.65);line-height:2.1">
+          政府审计的价值，不是把问题写成文字，而是把<span style="color:var(--gold);font-weight:600">资金、项目、责任、整改</span>串成可复核的证据链。AI只是工具，真正的壁垒是融策把数据、法规、案例和项目经验组织成一套可持续进化的方法。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Gold stripe separator -->
+  <div style="height:3px;background:linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);flex-shrink:0"></div>
+  <!-- ===== LOWER: pillars + evidence + bar, solid white ===== -->
+  <div style="background:var(--pap);padding:40px 80px 36px;flex:1;display:flex;flex-direction:column">
+    <!-- Four pillars -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;flex:1;margin-bottom:20px">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon" style="color:var(--gold)">🔬</div>
+        <div class="pillar-title">数据穿透力</div>
+        <div class="pillar-desc">
+          打通财政、税务、工商、社保、工程五大数据源，让财政资金的<span style="color:var(--gold);font-weight:600">每一段流向都可见</span>。不是看一张表、一个科目，而是看完整链路。
+        </div>
+        <div style="margin-top:16px">
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">多源异构融合</span>
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">Benford筛查</span>
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">Apriori关联</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon" style="color:var(--teal)">🧠</div>
+        <div class="pillar-title">知识驱动力</div>
+        <div class="pillar-desc">
+          不是靠一个人的经验吃饭，而是把团队<span style="color:var(--teal);font-weight:600">12年积累+13,000条法规案例</span>沉淀为可调用、可推理的知识系统，经验不随人走。
+        </div>
+        <div style="margin-top:16px">
+          <span class="cap-tag" style="background:rgba(26,92,110,.1);color:var(--teal)">RAG知识库</span>
+          <span class="cap-tag" style="background:rgba(26,92,110,.1);color:var(--teal)">法规图谱</span>
+          <span class="cap-tag" style="background:rgba(26,92,110,.1);color:var(--teal)">案例推理</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon" style="color:var(--db)">⚡</div>
+        <div class="pillar-title">交叉验证力</div>
+        <div class="pillar-desc">
+          财务审计看资金，工程咨询看实物——<span style="color:var(--db);font-weight:600">双牌照的基因让我们天然具备交叉验证能力</span>。钱到底花到钢筋水泥里了，还是不见了？我们有能力说清楚。
+        </div>
+        <div style="margin-top:16px">
+          <span class="cap-tag" style="background:rgba(10,31,63,.06);color:var(--db)">资金×工程量</span>
+          <span class="cap-tag" style="background:rgba(10,31,63,.06);color:var(--db)">15维报告复核</span>
+          <span class="cap-tag" style="background:rgba(10,31,63,.06);color:var(--db)">全链路金额追踪</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-icon" style="color:var(--gold)">🔄</div>
+        <div class="pillar-title">持续进化力</div>
+        <div class="pillar-desc">
+          每完成一个项目，<span style="color:var(--gold);font-weight:600">方法论就进化一次</span>。Agent学会一种新的异常模式，识别规则新增一条，知识库丰富一层——不是一家用AI的事务所，是一家在审计中持续训练AI的事务所。
+        </div>
+        <div style="margin-top:16px">
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">多Agent协作</span>
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">思维链沉淀</span>
+          <span class="cap-tag" style="background:rgba(197,149,92,.1);color:var(--gold)">规则自迭代</span>
+        </div>
+      </div>
+    </div>
+    <!-- Evidence row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:20px">
+      <div style="background:rgba(197,149,92,.05);border:1px solid rgba(197,149,92,.12);padding:20px 24px;text-align:center">
+        <div style="font-family:'Noto Serif SC',serif;font-size:40px;font-weight:700;color:var(--gold);line-height:1">5大</div>
+        <div style="font-size:15px;color:var(--il);margin-top:6px;line-height:1.6">财政·税务·工商·社保·工程<br>多源数据打通</div>
+      </div>
+      <div style="background:rgba(26,92,110,.05);border:1px solid rgba(26,92,110,.12);padding:20px 24px;text-align:center">
+        <div style="font-family:'Noto Serif SC',serif;font-size:40px;font-weight:700;color:var(--teal);line-height:1">13,000+</div>
+        <div style="font-size:15px;color:var(--il);margin-top:6px;line-height:1.6">法规·案例·方法论文档<br>RAG智能检索知识库</div>
+      </div>
+      <div style="background:rgba(10,31,63,.04);border:1px solid rgba(10,31,63,.1);padding:20px 24px;text-align:center">
+        <div style="font-family:'Noto Serif SC',serif;font-size:40px;font-weight:700;color:var(--db);line-height:1">19层</div>
+        <div style="font-size:15px;color:var(--il);margin-top:6px;line-height:1.6">围标串标穿透检测体系<br>19维度纵深分析</div>
+      </div>
+      <div style="background:rgba(197,149,92,.05);border:1px solid rgba(197,149,92,.12);padding:20px 24px;text-align:center">
+        <div style="font-family:'Noto Serif SC',serif;font-size:40px;font-weight:700;color:var(--gold);line-height:1">7 Agent</div>
+        <div style="font-size:15px;color:var(--il);margin-top:6px;line-height:1.6">多Agent协作审计平台<br>12年项目持续训练进化</div>
+      </div>
+    </div>
+    <!-- Bottom bar - taller -->
+    <div style="display:flex;align-items:center;gap:28px;padding:28px 36px;background:var(--wg);border-left:4px solid var(--gold)">
+      <div style="font-family:'Noto Serif SC',serif;font-size:22px;color:var(--db);font-weight:600;white-space:nowrap">我们的护城河：</div>
+      <div style="font-size:17px;color:var(--il);line-height:1.9">
+        不是某一个AI工具，而是<span style="color:var(--gold);font-weight:600">"数据穿透+知识驱动+交叉验证+持续进化"四力合一的证据链系统</span>。每一条结论都有数据来源、计算方法和交叉验证路径，客户拿到的是能解释、能复核、能整改的专业判断。
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

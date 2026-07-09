@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
+<title>财务专项审计</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
+.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em}
+.masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
+.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
+.content{flex:1;display:flex;overflow:hidden}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:16px;letter-spacing:.25em;color:var(--teal);font-weight:500}
+.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
+h1{font-family:'Noto Serif SC',serif;font-weight:700;font-size:52px;color:var(--db);line-height:1.2}h1 .hl{color:var(--gold)}
+.divider{width:48px;height:2px;background:var(--gold)}
+.audit-card{background:#fff;border:1px solid rgba(10,31,63,.06);padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:all .2s}
+.audit-card:hover{border-color:var(--gold)}
+.audit-num{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:700;color:var(--gold);min-width:32px;line-height:1}
+.audit-title{font-size:18px;font-weight:600;color:var(--db);margin-bottom:3px}
+.audit-desc{font-size:14px;color:var(--il);line-height:1.6}
+</style></head>
+<body>
+<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
+<div class="content">
+  <div style="width:45%;background:var(--wg);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+    <div style="position:absolute;right:40px;top:40px;width:150px;height:150px;border:2px solid rgba(197,149,92,.08);border-radius:50%"></div>
+    <div style="position:relative;z-index:1;padding:64px">
+      <div class="kicker" style="margin-bottom:24px">审计咨询 · 03</div>
+      <h1 style="font-size:56px;margin-bottom:16px">财务<span class="hl">专项</span>审计</h1>
+      <div style="font-size:20px;color:var(--il);font-style:italic;font-family:'Noto Serif SC',serif">Special Financial Audit</div>
+      <div class="divider" style="margin:28px 0"></div>
+      <div style="font-size:18px;color:var(--il);line-height:2">
+        主要解决：<span style="color:var(--gold);font-weight:700">钱花没花对</span>
+      </div>
+    </div>
+  </div>
+  <div style="width:55%;padding:48px 56px;display:flex;flex-direction:column;justify-content:center">
+    <p style="font-family:'Noto Serif SC',serif;font-size:20px;color:var(--il);line-height:1.9;margin-bottom:24px">
+      财政资金每花一笔，都有人盯着。预算执行有没有跑偏、专项资金有没有被挪用、账上挂了多少年说不清的钱——<span style="color:var(--db);font-weight:600">这些问题不搞清楚，检查来了就慌</span>。
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:24px">
+      <div class="audit-card"><div class="audit-num">01</div><div><div class="audit-title">收支审计</div><div class="audit-desc">财政收入支出全量合规审查</div></div></div>
+      <div class="audit-card"><div class="audit-num">02</div><div><div class="audit-title">预算执行审计</div><div class="audit-desc">预算编了，执行没跑偏？逐笔核查</div></div></div>
+      <div class="audit-card"><div class="audit-num">03</div><div><div class="audit-title">专项资金审计</div><div class="audit-desc">社保、教育、涉农、涉医等专款，穿透至最终受益人</div></div></div>
+      <div class="audit-card"><div class="audit-num">04</div><div><div class="audit-title">往来款清理</div><div class="audit-desc">挂账资金溯源 + 清理方案</div></div></div>
+      <div class="audit-card"><div class="audit-num">05</div><div><div class="audit-title">资产清查</div><div class="audit-desc">摸清家底，盘实固定资产、无形资产</div></div></div>
+      <div class="audit-card"><div class="audit-num">06</div><div><div class="audit-title">招投标审计</div><div class="audit-desc">19层围标串标检测体系</div></div></div>
+      <div class="audit-card" style="grid-column:1/-1"><div class="audit-num">07</div><div><div class="audit-title">工程竣工财务决算审核</div><div class="audit-desc">工程完工前的最后一道财务关口——资金流×工程量交叉验证</div></div></div>
+    </div>
+    <div style="background:rgba(26,92,110,.06);padding:20px 24px;border-left:4px solid var(--teal);font-size:18px;color:var(--il);line-height:1.8">
+      <span style="color:var(--teal);font-weight:700">融策优势：</span>很多事务所只做单项审计，我们能做到资金流和工程量的交叉验证——钱到底花到钢筋水泥里了，还是不见了？我们有能力说清楚。
+    </div>
+  </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

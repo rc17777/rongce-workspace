@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
+<title>关于我们</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  :root { --deep-blue:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --warm-gray:#F5F2EC; --paper:#FAFAF8; --ink:#1a1a1a; --ink-light:#5a5a5a; --ink-lighter:#8a8a8a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans SC',-apple-system,sans-serif; background:var(--paper); color:var(--ink); width:1920px; height:1080px; overflow:hidden; display:flex; flex-direction:column; }
+  .masthead { height:72px; display:flex; align-items:center; padding:0 56px; gap:16px; border-bottom:1px solid rgba(10,31,63,0.08); font-size:16px; color:var(--ink-lighter); letter-spacing:0.05em; }
+  .masthead .brand { font-weight:600; color:var(--deep-blue); }
+  .masthead .sep { color:var(--gold); }
+  .masthead .spacer { flex:1; }
+  .footer { height:48px; display:flex; align-items:center; padding:0 56px; font-size:14px; color:var(--ink-lighter); border-top:1px solid rgba(10,31,63,0.06); }
+  .content { flex:1; display:flex; overflow:hidden; }
+  .kicker { display:inline-flex; align-items:center; gap:10px; font-size:16px; letter-spacing:0.25em; color:var(--teal); font-weight:500; }
+  .kicker::before { content:''; width:24px; height:1px; background:var(--gold); }
+  h1 { font-family:'Noto Serif SC',serif; font-weight:700; font-size:56px; color:var(--deep-blue); line-height:1.25; }
+  h1 .hl { color:var(--gold); }
+  .divider { width:48px; height:2px; background:var(--gold); }
+</style></head>
+<body>
+<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
+<div class="content">
+  <!-- Left panel -->
+  <div style="width:50%; background:var(--deep-blue); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+    <div style="position:absolute; bottom:-80px; left:-80px; width:300px; height:300px; border:1px solid rgba(197,149,92,0.12); border-radius:50%;"></div>
+    <div style="position:absolute; top:40px; right:40px; width:100px; height:100px; border:1px solid rgba(197,149,92,0.08); border-radius:50%;"></div>
+    <div style="position:relative; z-index:1; text-align:center; padding:48px;">
+      <div style="font-family:'Noto Serif SC',serif; font-size:80px; font-weight:900; color:var(--gold); line-height:1;">融策</div>
+      <div style="font-size:26px; color:rgba(255,255,255,0.4); letter-spacing:0.3em; margin-top:16px;">RONGCE</div>
+      <div class="divider" style="margin:32px auto;"></div>
+      <div style="font-size:20px; color:rgba(255,255,255,0.6); line-height:2;">
+        会计师事务所<br>工程咨询公司
+      </div>
+    </div>
+  </div>
+  <!-- Right panel -->
+  <div style="width:50%; padding:64px 56px; display:flex; flex-direction:column; justify-content:center;">
+    <div class="kicker">关于我们</div>
+    <h1 style="margin-top:16px;">财政资金治理<br><span class="hl">与项目全周期</span>专业服务机构</h1>
+    <div class="divider" style="margin:24px 0;"></div>
+    <p style="font-family:'Noto Serif SC',serif; font-size:24px; color:var(--ink-light); line-height:1.9; margin-bottom:24px;">
+      四川融策成立于成都，是<span style="color:var(--deep-blue); font-weight:600;">会计师事务所+工程咨询公司</span>双牌照协同的政府专业服务机构。我们关注的不只是出具一份报告，而是帮助客户把财政资金、项目建设、绩效结果和整改闭环真正连起来。<br><br>
+      <span style="color:var(--gold); font-weight:600;">我们的不同：</span>市面上多数事务所只做财务审计，多数工程公司只算量核价——<span style="color:var(--deep-blue); font-weight:600;">我们是为数不多能把"钱花到哪儿了"和"工程到底干了多少"放在一起交叉验证的机构</span>。<br><br>
+      以<span style="color:var(--teal); font-weight:600;">数据驱动+AI增强</span>为方法论内核，为省、市、县三级政府部门提供从资金申报到绩效评价、从预算到结算的全链条专业服务。
+    </p>
+    <div style="display:flex; gap:40px; margin-top:16px;">
+      <div>
+        <div style="font-family:'Noto Serif SC',serif; font-size:52px; font-weight:700; color:var(--gold);">12+年</div>
+        <div style="font-size:18px; color:var(--ink-light); margin-top:4px;">政府审计</div>
+      </div>
+      <div>
+        <div style="font-family:'Noto Serif SC',serif; font-size:52px; font-weight:700; color:var(--gold);">2大</div>
+        <div style="font-size:18px; color:var(--ink-light); margin-top:4px;">业务板块</div>
+      </div>
+      <div>
+        <div style="font-family:'Noto Serif SC',serif; font-size:52px; font-weight:700; color:var(--gold);">AI+</div>
+        <div style="font-size:16px; color:var(--ink-light); margin-top:4px; line-height:2.2;">
+          <div>智能审计研判平台</div>
+          <div>审计数据智能引擎</div>
+          <div>多维智能审计分析系统</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

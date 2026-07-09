@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>融策 · 政府审计服务</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  :root {
+    --deep-blue: #0A1F3F;
+    --teal: #1A5C6E;
+    --gold: #C5955C;
+    --warm-gray: #F5F2EC;
+    --ink: #1a1a1a;
+    --ink-light: #5a5a5a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--warm-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--ink);
+  }
+
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    box-shadow: 0 4px 40px rgba(10,31,63,0.12);
+  }
+
+  /* Left Panel - Brand */
+  .brand-panel {
+    background: var(--deep-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .brand-panel::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(197,149,92,0.2);
+    border-radius: 50%;
+  }
+
+  .brand-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: 60px;
+    width: 160px;
+    height: 160px;
+    border: 1px solid rgba(197,149,92,0.15);
+    border-radius: 50%;
+  }
+
+  .brand-category {
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-title .accent {
+    color: var(--gold);
+  }
+
+  .brand-tagline {
+    margin-top: 24px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 32px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-footer {
+    margin-top: auto;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Right Panel - Services */
+  .content-panel {
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--deep-blue);
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .service-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 36px;
+  }
+
+  .service-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--deep-blue);
+    margin-bottom: 4px;
+  }
+
+  .service-info p {
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.6;
+  }
+
+  /* Subtle decorative line */
+  .content-panel::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent, rgba(26,92,110,0.1), transparent);
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <!-- Left: Brand Identity -->
+  <div class="brand-panel">
+    <div class="brand-category">会计师事务所</div>
+    <div class="brand-title">
+      政府<span class="accent">审计</span><br>专业服务
+    </div>
+    <div class="brand-divider"></div>
+    <div class="brand-tagline">
+      十二年政府审计经验<br>
+      深耕财政绩效与合规领域<br>
+      数据驱动 · 专业研判 · 价值导向
+    </div>
+    <div class="brand-footer">四川融策会计师事务所</div>
+  </div>
+
+  <!-- Right: Core Services -->
+  <div class="content-panel">
+    <div class="section-label">核心业务线</div>
+    <div class="section-heading">
+      覆盖政府审计<br>全链条服务体系
+    </div>
+    <div class="service-grid">
+      <div class="service-item">
+        <div class="service-num">01</div>
+        <div class="service-info">
+          <h3>经济责任审计</h3>
+          <p>任中/离任/自然资源资产</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">02</div>
+        <div class="service-info">
+          <h3>预算绩效管理</h3>
+          <p>事前评估·事中监控·事后评价</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
+        <div class="service-info">
+          <h3>专项资金审计</h3>
+          <p>专项债/社保/营养餐等</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">04</div>
+        <div class="service-info">
+          <h3>招投标审计</h3>
+          <p>串标围标检测·采购合规</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">05</div>
+        <div class="service-info">
+          <h3>工程竣工财务审计</h3>
+          <p>决算审计·全过程跟踪</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">06</div>
+        <div class="service-info">
+          <h3>政府补贴审计</h3>
+          <p>补贴合规·穿透核查</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
