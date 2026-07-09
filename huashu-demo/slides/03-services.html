@@ -6,71 +6,59 @@
 :root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
-.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em}
+.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em;background:rgba(250,250,248,.96);z-index:5}
 .masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
 .footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
-.content{flex:1;display:flex;flex-direction:column;padding:40px 64px 30px;overflow:hidden;justify-content:center}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:16px;letter-spacing:.25em;color:var(--teal);font-weight:500}
-.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
-h1{font-family:'Noto Serif SC',serif;font-weight:700;font-size:52px;color:var(--db);line-height:1.2}
-h1 .hl{color:var(--gold)}
-.svc-card{background:#fff;border:1px solid rgba(10,31,63,.06);padding:28px 24px;transition:all .2s;display:flex;align-items:flex-start;gap:16px}
-.svc-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(10,31,63,.06)}
-.svc-card .icon{font-size:30px;min-width:40px;text-align:center;margin-top:2px}
-.svc-card .title{font-size:19px;font-weight:600;color:var(--db);margin-bottom:6px}
-.svc-card .desc{font-size:14px;color:var(--il);line-height:1.7}
-.section-header{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
-.section-title{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;color:var(--db);display:flex;align-items:center;gap:12px;margin-bottom:0}
-.section-title::after{content:'';width:80px;height:2px;background:var(--gold);margin-top:4px}
-.section-subtitle{font-size:17px;color:var(--teal);font-weight:500;margin-bottom:20px;margin-top:4px}
-.bot-tag{border-top:1px solid rgba(10,31,63,.08);margin-top:28px;padding-top:22px;display:flex;align-items:center;gap:16px;font-size:16px;color:var(--il)}
-.bot-tag .pill{background:rgba(197,149,92,.1);color:var(--gold);padding:6px 18px;border-radius:20px;font-weight:600;font-size:15px;white-space:nowrap}
+.content{flex:1;position:relative;overflow:hidden;background:linear-gradient(135deg,#FAFAF8 0%,#F5F2EC 100%)}
+.content::before{content:'';position:absolute;right:-120px;top:-180px;width:620px;height:620px;border:1px solid rgba(197,149,92,.16);border-radius:50%}
+.content::after{content:'';position:absolute;left:-220px;bottom:-260px;width:760px;height:760px;border:1px solid rgba(26,92,110,.12);border-radius:50%}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.25em;color:var(--teal);font-weight:500}.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
+h1{font-family:'Noto Serif SC',serif;font-weight:800;font-size:50px;color:var(--db);line-height:1.18}h1 .hl{color:var(--gold)}
+.hero{position:relative;z-index:1;padding:42px 72px 28px;display:flex;align-items:flex-end;gap:42px}
+.hero-left{flex:1}.hero-right{width:560px;background:var(--db);color:#fff;padding:28px 34px;box-shadow:0 18px 50px rgba(10,31,63,.14);position:relative;overflow:hidden}.hero-right::after{content:'';position:absolute;right:-80px;bottom:-80px;width:220px;height:220px;border:1px solid rgba(197,149,92,.16);border-radius:50%}
+.matrix{position:relative;z-index:1;margin:0 72px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;height:438px}
+.lane{background:#fff;border:1px solid rgba(10,31,63,.08);box-shadow:0 10px 34px rgba(10,31,63,.055);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.lane::before{content:'';position:absolute;top:0;left:0;right:0;height:7px;background:var(--gold)}.lane.teal::before{background:var(--teal)}.lane.db::before{background:var(--db)}
+.lane-head{padding:26px 28px 18px;border-bottom:1px solid rgba(10,31,63,.06)}.lane-no{font-family:'Noto Serif SC',serif;font-size:52px;font-weight:900;color:rgba(10,31,63,.06);position:absolute;right:22px;top:12px}.lane-title{font-family:'Noto Serif SC',serif;font-size:30px;font-weight:800;color:var(--db);margin-bottom:8px}.lane-sub{font-size:16px;color:var(--il);line-height:1.7;max-width:390px}
+.tags{padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}.tag{border:1px solid rgba(10,31,63,.08);background:rgba(245,242,236,.55);padding:13px 14px;min-height:64px;display:flex;flex-direction:column;justify-content:center}.tag b{font-size:17px;color:var(--db);font-weight:700;margin-bottom:4px}.tag span{font-size:13px;color:var(--il);line-height:1.5}.tag.hot{background:rgba(197,149,92,.08);border-color:rgba(197,149,92,.22)}
+.flow{position:relative;z-index:1;margin:28px 72px 0;background:var(--db);color:#fff;display:grid;grid-template-columns:1.1fr repeat(4,1fr);align-items:center;min-height:128px;box-shadow:0 18px 60px rgba(10,31,63,.16)}
+.flow-title{padding:28px 34px;border-right:1px solid rgba(255,255,255,.12)}.flow-title b{font-family:'Noto Serif SC',serif;font-size:30px;color:var(--gold)}.flow-title div{font-size:15px;color:rgba(255,255,255,.62);margin-top:8px;line-height:1.6}
+.step{padding:24px 28px;position:relative}.step:not(:last-child)::after{content:'→';position:absolute;right:-9px;top:44px;color:rgba(197,149,92,.78);font-family:'Noto Serif SC',serif;font-size:28px}.step .n{font-family:'Noto Serif SC',serif;font-size:20px;color:var(--gold);margin-bottom:8px}.step .t{font-size:20px;font-weight:700;margin-bottom:5px}.step .d{font-size:14px;color:rgba(255,255,255,.62);line-height:1.6}
 </style></head>
 <body>
 <div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
 <div class="content">
-  <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px">
-    <div class="kicker">业务架构</div>
-    <h1 style="font-size:42px;margin:0">三类治理问题 · <span class="hl">一套闭环能力</span></h1>
-    <div style="font-size:17px;color:var(--il);margin-left:auto;font-family:'Noto Serif SC',serif;font-style:italic">合规风控 · 绩效治理 · 工程闭环</div>
-  </div>
-  <!-- Audit section -->
-  <div style="margin-bottom:26px">
-    <div class="section-header">
-      <div class="section-title" style="color:var(--gold)">审计咨询</div>
-      <span style="font-size:16px;color:var(--ill);margin-top:4px">毫厘不差</span>
+  <div class="hero">
+    <div class="hero-left">
+      <div class="kicker">业务架构</div>
+      <h1 style="margin-top:14px">三类治理问题<br><span class="hl">一套证据链闭环能力</span></h1>
+      <div style="font-size:20px;color:var(--il);line-height:1.9;margin-top:16px;max-width:970px;font-family:'Noto Serif SC',serif">围绕财政资金治理，把“能不能申报、有没有合规、花得值不值、责任清不清”一次讲透。</div>
     </div>
-    <div class="section-subtitle">围绕财政资金治理，把“能不能申报、有没有合规、花得值不值、责任清不清”一次讲透</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-      <div class="svc-card"><div class="icon">💰</div><div><div class="title">资金申报</div><div class="desc">专项债 · 一案两书<br>财政/发改双库入库 · 项目包装</div></div></div>
-      <div class="svc-card"><div class="icon">📊</div><div><div class="title">预算绩效管理</div><div class="desc">目标设置 · 事前评估<br>事中监控 · 绩效评价</div></div></div>
-      <div class="svc-card"><div class="icon">🔍</div><div><div class="title">财务专项审计</div><div class="desc">收支 · 预算执行 · 专项资金<br>往来款清理 · 资产清查</div></div></div>
-      <div class="svc-card"><div class="icon">👤</div><div><div class="title">经济责任审计</div><div class="desc">任中 · 离任 · 自然资源资产<br>7+1套量化评价体系</div></div></div>
-      <div class="svc-card"><div class="icon">🏢</div><div><div class="title">国有企业审计</div><div class="desc">资产负债损益审计<br>穿透式国资监管</div></div></div>
-      <div class="svc-card"><div class="icon">🛡️</div><div><div class="title">监督检查</div><div class="desc">财政监督检查<br>会计信息质量检查</div></div></div>
-      <div class="svc-card"><div class="icon">🌱</div><div><div class="title">能源审计</div><div class="desc">能耗核查 · 节能诊断<br>双碳合规审查</div></div></div>
-      <div class="svc-card" style="border-color:var(--gold);background:rgba(197,149,92,.04)"><div class="icon">🤝</div><div><div class="title" style="color:var(--gold)">招投标审计</div><div class="desc">围标串标检测<br>19层穿透分析体系</div></div></div>
-      <div class="svc-card"><div class="icon">🏛️</div><div><div class="title">政府补贴审计</div><div class="desc">补贴资金全流程穿透<br>申报→拨付→使用→绩效</div></div></div>
-      <div class="svc-card"><div class="icon">📈</div><div><div class="title">成本效益审计</div><div class="desc">公共项目投入产出分析<br>花得值不值 · 数据说了算</div></div></div>
+    <div class="hero-right">
+      <div style="font-size:15px;color:rgba(255,255,255,.55);letter-spacing:.18em;margin-bottom:12px">RONGCE SERVICE LOGIC</div>
+      <div style="font-family:'Noto Serif SC',serif;font-size:32px;line-height:1.5;color:#fff;position:relative;z-index:1">从业务菜单<br><span style="color:var(--gold)">升级为治理方案</span></div>
     </div>
   </div>
-  <!-- Engineering section -->
-  <div>
-    <div class="section-header">
-      <div class="section-title" style="color:var(--teal)">工程咨询</div>
-      <span style="font-size:16px;color:var(--ill);margin-top:4px">分寸不偏</span>
+  <div class="matrix">
+    <div class="lane">
+      <div class="lane-no">01</div><div class="lane-head"><div class="lane-title">合规风控</div><div class="lane-sub">解决资金有没有按规则走，账、表、项目、责任能不能对得上。</div></div>
+      <div class="tags"><div class="tag hot"><b>财务专项审计</b><span>收支 · 预算执行 · 专项资金</span></div><div class="tag"><b>监督检查</b><span>财会监督 · 会计信息质量</span></div><div class="tag"><b>经济责任审计</b><span>任中 · 离任 · 自然资源</span></div><div class="tag"><b>招投标审计</b><span>19层围标串标穿透体系</span></div></div>
     </div>
-    <div class="section-subtitle">从预算到结算，从图纸到验收，工程量、资金流、项目结果同频核验</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-      <div class="svc-card"><div class="icon">📐</div><div><div class="title">预算编制</div><div class="desc">工程量清单编制<br>招标控制价编制</div></div></div>
-      <div class="svc-card"><div class="icon">📋</div><div><div class="title">财政评审</div><div class="desc">政府投资项目<br>预算合理性评审</div></div></div>
-      <div class="svc-card"><div class="icon">🔗</div><div><div class="title">全过程工程咨询</div><div class="desc">立项→设计→招标→施工→竣工<br>全流程专业管家服务</div></div></div>
-      <div class="svc-card"><div class="icon">✅</div><div><div class="title">竣工结算审核</div><div class="desc">工程结算全面审核<br>该付多少的最后一关</div></div></div>
+    <div class="lane teal">
+      <div class="lane-no">02</div><div class="lane-head"><div class="lane-title">绩效治理</div><div class="lane-sub">解决钱花出去有没有效果，政策有没有落地，投入产出是否值得。</div></div>
+      <div class="tags"><div class="tag hot"><b>预算绩效管理</b><span>目标 · 事前 · 事中 · 评价</span></div><div class="tag"><b>政府补贴审计</b><span>申报 · 拨付 · 使用 · 绩效</span></div><div class="tag"><b>成本效益审计</b><span>单位成本 · 投入产出 · 可持续</span></div><div class="tag"><b>能源审计</b><span>能耗核查 · 节能诊断</span></div></div>
+    </div>
+    <div class="lane db">
+      <div class="lane-no">03</div><div class="lane-head"><div class="lane-title">工程闭环</div><div class="lane-sub">解决工程项目从预算到结算、从图纸到验收是否真实、合理、可追溯。</div></div>
+      <div class="tags"><div class="tag hot"><b>资金申报</b><span>专项债 · 一案两书 · 项目包装</span></div><div class="tag"><b>预算编制</b><span>清单编制 · 控制价编制</span></div><div class="tag"><b>财政评审</b><span>政府投资项目合理性评审</span></div><div class="tag"><b>结算审核</b><span>竣工结算 · 财务决算</span></div></div>
     </div>
   </div>
-  <div class="bot-tag">
-    <span class="pill">双牌照协同</span>
-    <span>客户得到的不是业务菜单，而是一套可追溯的治理闭环：资金来源清楚、执行过程清楚、项目结果清楚、整改责任清楚</span>
+  <div class="flow">
+    <div class="flow-title"><b>客户得到什么</b><div>不是一堆报告，而是一条可解释、可复核、可整改的治理链条</div></div>
+    <div class="step"><div class="n">STEP 1</div><div class="t">资金来源清楚</div><div class="d">申报、预算、拨付依据可追溯</div></div>
+    <div class="step"><div class="n">STEP 2</div><div class="t">执行过程清楚</div><div class="d">财务数据与项目进度交叉核验</div></div>
+    <div class="step"><div class="n">STEP 3</div><div class="t">项目结果清楚</div><div class="d">绩效目标、成本效益、社会效果可评价</div></div>
+    <div class="step"><div class="n">STEP 4</div><div class="t">整改责任清楚</div><div class="d">问题定性、责任边界、后续整改闭环</div></div>
   </div>
 </div>
 <div class="footer"></div>
