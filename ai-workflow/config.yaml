@@ -1,0 +1,113 @@
+# AI自动化工作流配置
+# 连续运行天数: 6 (自2026-07-05)
+version: "1.0"
+started_at: "2026-07-05T00:00:00+08:00"
+status: running
+
+# ========== 学习引擎 ==========
+learner:
+  enabled: true
+  schedule: "daily_at_08:00"
+  sources:
+    - name: "审计署官网"
+      url: "https://www.audit.gov.cn"
+      type: web
+      max_per_run: 5
+    - name: "政府采购网-四川"
+      url: "https://search.ccgp.gov.cn/bxsearch"
+      type: web_fetch
+      keywords: ["审计服务","工程造价咨询","绩效评价","跟踪审计","竣工财务决算","资产清查"]
+      schedule: "mon_wed_fri_09:00"
+    - name: "微信公众号"
+      type: rss
+      enabled: false  # 待实现
+    - name: "B站AI教程"
+      type: video
+      enabled: false  # 待实现
+    - name: "抖音AI知识"
+      type: video
+      enabled: false  # 待实现
+  output:
+    format: markdown
+    directory: knowledge/intel_raw
+    dedup: true
+    min_quality_score: 0.6
+
+# ========== 知识库 ==========
+knowledge:
+  type: hybrid
+  stores:
+    - name: "RAG向量库"
+      path: "C:\\Users\\scrccpa\\.openclaw\\workspace\\knowledge"
+      index_script: "scripts/rag_rebuild.py"
+      auto_rebuild: "daily_at_06:00"
+    - name: "Obsidian笔记"
+      path: "D:\\openclaw-workspace\\obsidian-vault"
+      category_system: PARA
+
+# ========== Agent工位 ==========
+agents:
+  # 信息采集Agent
+  data_scout:
+    label: "数据侦察兵"
+    tool: "scripts/audit_intel_collector.py"
+    schedule: "daily_at_08:00"
+    timeout_minutes: 10
+
+  # 知识管理Agent
+  knowledge_keeper:
+    label: "知识管理员"
+    tasks:
+      - "scripts/prune_knowledge.py"      # 僵尸文件清理
+      - "scripts/rag_bridge.py --sync"    # RAG↔Obsidian同步
+    schedule: "daily_at_14:00"
+    timeout_minutes: 5
+
+  # 招标采集Agent
+  tender_hunter:
+    label: "招标猎手"
+    tool: "HEARTBEAT.md §招标采集"
+    schedule: "mon_wed_fri_09:00"
+    timeout_minutes: 15
+
+  # 模型健康Agent
+  model_doctor:
+    label: "模型医生"
+    tool: "scripts/deepseek_model_check.py"
+    schedule: "daily_at_10:00"
+    alert_on_fail: true
+    timeout_minutes: 5
+
+  # Token追踪Agent
+  token_watcher:
+    label: "Token监察员"
+    tool: "scripts/token_tracker.py today"
+    schedule: "daily_at_20:00"
+    alert_threshold: 50000
+    timeout_minutes: 2
+
+# ========== 监工 ==========
+overseer:
+  label: "工头"
+  checks:
+    - name: "Agent心跳"
+      method: check_agent_heartbeats
+      interval_minutes: 60
+    - name: "任务队列"
+      method: check_pending_tasks
+      interval_minutes: 30
+    - name: "错误日志"
+      method: scan_error_logs
+      interval_minutes: 120
+    - name: "知识库健康"
+      method: check_knowledge_health
+      interval_minutes: 360
+  escalation:
+    max_retries: 3
+    on_permanent_failure: "通知平头哥"
+
+# ========== 静默时间 ==========
+quiet_hours:
+  start: "23:00"
+  end: "08:00"
+  except: ["紧急故障","模型全部离线"]

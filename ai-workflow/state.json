@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "started_at": "2026-07-05T00:00:00+08:00",
+  "agent_states": {
+    "data_scout": {
+      "label": "📡 数据侦察兵",
+      "status": "idle",
+      "last_run": null,
+      "last_success": null,
+      "last_failure": null,
+      "fail_count": 0,
+      "total_runs": 0,
+      "current_task": null
+    },
+    "knowledge_keeper": {
+      "label": "📚 知识管理员",
+      "status": "idle",
+      "last_run": null,
+      "last_success": null,
+      "last_failure": null,
+      "fail_count": 0,
+      "total_runs": 0,
+      "current_task": null
+    },
+    "tender_hunter": {
+      "label": "🎯 招标猎手",
+      "status": "idle",
+      "last_run": null,
+      "last_success": null,
+      "last_failure": null,
+      "fail_count": 0,
+      "total_runs": 0,
+      "current_task": null
+    },
+    "model_doctor": {
+      "label": "🏥 模型医生",
+      "status": "idle",
+      "last_run": null,
+      "last_success": null,
+      "last_failure": null,
+      "fail_count": 0,
+      "total_runs": 0,
+      "current_task": null
+    },
+    "token_watcher": {
+      "label": "💰 Token监察员",
+      "status": "idle",
+      "last_run": null,
+      "last_success": null,
+      "last_failure": null,
+      "fail_count": 0,
+      "total_runs": 0,
+      "current_task": null
+    }
+  },
+  "run_log": [],
+  "escalations": [],
+  "last_overseer_run": "2026-07-11T12:12:30.914988+08:00",
+  "last_engine_run": "2026-07-11T12:12:38.527684+08:00",
+  "consecutive_runs": 3,
+  "total_tasks_completed": 0
+}
