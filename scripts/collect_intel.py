@@ -8,7 +8,8 @@
   python scripts/collect_intel.py --run             # 全量采集（实时）
   python scripts/collect_intel.py --line 经责审计   # 单业务线
 """
-import os, sys, json, hashlib, re, time, requests
+import os, sys, json, hashlib, re, time, math, requests
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
@@ -95,12 +96,96 @@ def assess_quality(item, line_name, keyword):
     return {"status": status, "score": score, "reasons": reasons}
 
 
-def save_candidate(item, line_name, keyword, quality):
-    """B/C档进入审查队列，不污染正式知识库。"""
+def _sim_tokens(text):
+    """中文轻量分词：词块 + 2/3字片段，避免只比较标题。"""
+    text = re.sub(r"[^\\u4e00-\\u9fffA-Za-z0-9]", " ", text.lower())
+    words = set()
+    for part in text.split():
+        if len(part) >= 2:
+            words.add(part[:30])
+            for n in (2, 3):
+                words.update(part[i:i+n] for i in range(len(part)-n+1))
+    return words
+
+
+def build_similarity_index():
+    """读取现有知识库，建立候选入库前的相似检索索引。"""
+    docs = []
+    roots = [WORKSPACE / "knowledge", WORKSPACE / "obsidian-vault"]
+    for root in roots:
+        if not root.exists():
+            continue
+        for path in root.rglob("*.md"):
+            if any(x in path.parts for x in {".git", ".obsidian", "_templates"}):
+                continue
+            # 质量标准和日报不是知识文章，排除；候选队列也不作为正式知识
+            if path.name == "入库质量标准.md" or "intel_summaries" in path.parts:
+                continue
+            try:
+                text = path.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            if len(text) < 100 or len(text) > 200000:
+                continue
+            title = next((x[2:].strip() for x in text.splitlines() if x.startswith("# ")), path.stem)
+            docs.append({"path": str(path.relative_to(WORKSPACE)), "title": title, "text": text[:12000]})
+    
+    # 文档数量较大时只保留每篇的前12000字，避免采集时拖慢
+    df = Counter()
+    token_map = {}
+    for d in docs:
+        tokens = _sim_tokens(d["title"] + " " + d["text"])
+        token_map[d["path"]] = tokens
+        df.update(tokens)
+    n = max(len(docs), 1)
+    vectors = {}
+    norms = {}
+    for d in docs:
+        tokens = token_map[d["path"]]
+        vec = {t: (math.log(n / (df[t] + 1)) + 1) for t in tokens}
+        vectors[d["path"]] = vec
+        norms[d["path"]] = math.sqrt(sum(v*v for v in vec.values()))
+    return {"docs": {d["path"]: d for d in docs}, "vectors": vectors, "norms": norms}
+
+
+def find_similar(item, sim_index, limit=3):
+    """返回相似文章，并给出 duplicate/related/novel 判定。"""
+    if not sim_index or not sim_index["docs"]:
+        return {"decision": "novel", "matches": []}
+    query = _sim_tokens(item.get("title", "") + " " + item.get("snippet", ""))
+    if not query:
+        return {"decision": "related", "matches": []}
+    # 候选查询使用集合TF-IDF，重点是标题、摘要与已有资料主题重合
+    df = Counter()
+    for vec in sim_index["vectors"].values():
+        df.update(vec.keys())
+    n = len(sim_index["docs"])
+    qvec = {t: (math.log(n / (df[t] + 1)) + 1) for t in query}
+    qnorm = math.sqrt(sum(v*v for v in qvec.values())) or 1
+    matches = []
+    for path, vec in sim_index["vectors"].items():
+        common = set(qvec) & set(vec)
+        if len(common) < 3:
+            continue
+        denom = qnorm * (sim_index["norms"].get(path) or 1)
+        score = sum(qvec[t] * vec[t] for t in common) / denom
+        if score >= 0.12:
+            matches.append({"path": path, "title": sim_index["docs"][path]["title"], "score": round(score, 3)})
+    matches.sort(key=lambda x: x["score"], reverse=True)
+    matches = matches[:limit]
+    top = matches[0]["score"] if matches else 0
+    # 阈值保守：相似不是“必然重复”，相关资料必须人工比较
+    decision = "duplicate" if top >= 0.72 else ("related" if top >= 0.38 else "novel")
+    return {"decision": decision, "matches": matches}
+
+
+def save_candidate(item, line_name, keyword, quality, similarity=None):
+    """B/C档及相似资料进入审查队列，不污染正式知识库。"""
     path = WORKSPACE / "knowledge" / "intel_candidates.jsonl"
     path.parent.mkdir(parents=True, exist_ok=True)
     row = {**item, "matched_line": line_name, "matched_keyword": keyword,
-           "quality": quality, "queued_at": datetime.now().isoformat()}
+           "quality": quality, "similarity": similarity or {},
+           "queued_at": datetime.now().isoformat()}
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
@@ -243,13 +328,14 @@ def search_bing(keyword, max_results=10):
         log(f"搜索失败: {e}", "ERROR")
         return []
 
-def collect_line(line_name, keywords, max_per_kw=5):
-    """采集一条业务线"""
+def collect_line(line_name, keywords, max_per_kw=5, sim_index=None):
+    """采集一条业务线：先相似审查，再质量评分，最后才正式入库。"""
     log(f"\n{'─'*50}")
     log(f"📂 {line_name}: {', '.join(keywords)}")
     
     total = 0
     idx = load_index()
+    seen_ids = set(idx.get("items", {}).keys())
     
     for kw in keywords:
         # 不重复加"审计"前缀（关键词已包含）
@@ -264,16 +350,30 @@ def collect_line(line_name, keywords, max_per_kw=5):
         for item in results:
             article_id = make_id(item['url'], item['title'])
             
-            # 先质量评分，再决定去向；B/C 不进入正式索引
+            # 第一层：精确重复（规范化URL/标题ID）
+            if article_id in seen_ids:
+                log(f"    [duplicate/exact] {item['title'][:55]}", "SKIP")
+                continue
+            
+            # 第二层：语义/主题相似，判断是重复还是补充
+            similarity = find_similar(item, sim_index)
+            if similarity["decision"] != "novel":
+                quality = assess_quality(item, line_name, kw)
+                save_candidate(item, line_name, kw, quality, similarity)
+                top = similarity.get("matches", [{}])[0]
+                log(f"    [{similarity['decision']}] {item['title'][:48]} ← {top.get('title', '')[:30]}", "WARN")
+                continue
+            
+            # 第二道门：再质量评分；B/C 不进入正式索引
             quality = assess_quality(item, line_name, kw)
             if quality["status"] != "A":
-                save_candidate(item, line_name, kw, quality)
+                save_candidate(item, line_name, kw, quality, similarity)
                 log(f"    [{quality['status']}/{quality['score']}] {item['title'][:55]}", "WARN")
                 continue
             
-            # 去重
-            if article_id in idx['items']:
-                log(f"    {item['title'][:50]}", "SKIP")
+            # 第三道门：保存前再做一次ID去重，防止同批次重复
+            if article_id in seen_ids:
+                log(f"    [duplicate/exact] {item['title'][:50]}", "SKIP")
                 continue
             
             save_article(
@@ -284,6 +384,7 @@ def collect_line(line_name, keywords, max_per_kw=5):
                 matched_line=line_name,
                 source_domain=item['domain'],
             )
+            seen_ids.add(article_id)
             log(f"    [A/{quality['score']}] {item['title'][:60]}", "OK")
             total += 1
             
@@ -391,8 +492,11 @@ def main():
         return
     
     total = 0
+    log("🔎 建立知识库相似性索引...", "INFO")
+    sim_index = build_similarity_index()
+    log(f"   已加载 {len(sim_index['docs'])} 篇已有资料", "INFO")
     for line_name, keywords in lines:
-        total += collect_line(line_name, keywords, args.max)
+        total += collect_line(line_name, keywords, args.max, sim_index)
     
     log(f"\n{'='*50}")
     log(f"✅ 采集完成: {total} 篇新文章")
