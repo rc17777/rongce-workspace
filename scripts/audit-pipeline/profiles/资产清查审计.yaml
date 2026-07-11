@@ -1,0 +1,84 @@
+# ============================================================
+# 场景：资产清查审计
+# 重点：资产真实性、处置合规性、折旧准确性、盘盈亏
+# ============================================================
+
+name: "资产清查审计"
+description: "针对国有资产真实性、完整性、处置合规性的模型组合"
+audit_type: "asset"
+
+data_requirements:
+  必备:
+    - "固定资产台账（含入账日期、原值、累计折旧、净值、使用部门）"
+    - "资产盘点表"
+    - "资产处置审批文件"
+  建议:
+    - "资产采购合同"
+    - "资产评估报告"
+    - "资产出租/出借协议"
+
+models:
+  - id: "rule_engine"
+    name: "资产规则引擎"
+    enabled: true
+    weight: 1.0
+    rules:
+      - id: "A01"
+        desc: "大额资产采购无附件（>=10万）"
+        level: "高"
+        weight: 30
+        conditions:
+          - {col: "金额", op: "gte", val: 100000}
+          - {col: "f_无附件", op: "eq", val: 1}
+
+      - id: "A02"
+        desc: "年末突击入账资产"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否年末", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 50000}
+
+      - id: "A03"
+        desc: "大额资产现金支付"
+        level: "高"
+        weight: 35
+        conditions:
+          - {col: "f_是否现金", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 30000}
+
+      - id: "A04"
+        desc: "整数大额资产采购（>=10万整千）"
+        level: "中"
+        weight: 20
+        conditions:
+          - {col: "f_是否整千", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 100000}
+
+      - id: "A05"
+        desc: "摘要含退/还/返+大额"
+        level: "高"
+        weight: 25
+        conditions:
+          - {col: "f_摘要含退", op: "eq", val: 1}
+          - {col: "金额", op: "gte", val: 10000}
+
+  - id: "benford"
+    name: "Benford数字分布检测"
+    enabled: true
+    weight: 0.5
+    threshold:
+      p_value: 0.01
+      mad: 0.015
+
+  - id: "statistical"
+    name: "统计异常检测（Z分法）"
+    enabled: true
+    weight: 0.6
+    threshold:
+      z_score: 3.0
+
+risk_mapping:
+  "高": "立即现场核实+调取采购文件+查验实物"
+  "中": "补充盘点+查验权属证明"
+  "低": "正常采样确认"

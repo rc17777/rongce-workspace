@@ -1,0 +1,84 @@
+"""重建融策 RAG 索引（含knowledge + obsidian资料）"""
+import sys, os, json, re
+sys.stdout.reconfigure(encoding='utf-8')
+
+KNOWLEDGE_DIRS = [
+    r'D:\openclaw-workspace\knowledge',
+    r'D:\openclaw-workspace\obsidian-vault',
+]
+INDEX_FILE = r'D:\openclaw-workspace\.rag_index\rag_index.json'
+
+def read_md_files(dirs):
+    files = []
+    for root in dirs:
+        for dirpath, _, filenames in os.walk(root):
+            skip = ['.git', '__pycache__', 'node_modules', '.obsidian']
+            if any(s in dirpath for s in skip):
+                continue
+            for fn in filenames:
+                if fn.endswith('.md') and not fn.startswith('.'):
+                    fp = os.path.join(dirpath, fn)
+                    try:
+                        with open(fp, 'r', encoding='utf-8', errors='replace') as f:
+                            text = f.read()
+                    except:
+                        continue
+                    if len(text) < 100:
+                        continue
+                    rel = os.path.relpath(fp, root)
+                    files.append((rel, text, root if len(dirs) > 1 else ''))
+    return files
+
+def chunk_text(text, rel_path, root_label='', max_chars=500):
+    paragraphs = re.split(r'\n\s*\n', text)
+    chunks = []
+    current = ''
+    for para in paragraphs:
+        para = para.strip()
+        if not para:
+            continue
+        if len(current) + len(para) < max_chars:
+            current = current + '\n\n' + para if current else para
+        else:
+            if current and len(current) > 50:
+                chunks.append({'text': current, 'source': rel_path, 'label': root_label})
+            current = para
+    if current and len(current) > 50:
+        chunks.append({'text': current, 'source': rel_path, 'label': root_label})
+    return chunks
+
+print("Scanning directories...")
+files = read_md_files(KNOWLEDGE_DIRS)
+print(f"Found {len(files)} .md files")
+
+all_chunks = []
+for rel, text, label in files:
+    chunks = chunk_text(text, rel, label)
+    all_chunks.extend(chunks)
+
+print(f"Total chunks: {len(all_chunks)}")
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+texts = [c['text'] for c in all_chunks]
+
+print("Building TF-IDF index...")
+vectorizer = TfidfVectorizer(
+    max_features=15000,
+    ngram_range=(1, 2),
+    analyzer='char_wb',
+    max_df=0.8,
+    min_df=2
+)
+tfidf_matrix = vectorizer.fit_transform(texts)
+print(f"TF-IDF matrix: {tfidf_matrix.shape}")
+
+import pickle
+with open(INDEX_FILE, 'wb') as f:
+    pickle.dump({
+        'vectorizer': vectorizer,
+        'matrix': tfidf_matrix,
+        'chunks': all_chunks,
+        'texts': texts
+    }, f)
+print("Index saved!")
+print(f"\nDone! {len(all_chunks)} chunks indexed")

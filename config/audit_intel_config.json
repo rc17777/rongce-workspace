@@ -1,0 +1,57 @@
+{
+  "version": "1.1",
+  "created": "2026-06-29",
+  "updated": "2026-06-30",
+  "sources": {
+    "gov_primary": [
+      {
+        "name": "审计署-审计要闻",
+        "url": "https://www.audit.gov.cn/n4/n19/index.html",
+        "type": "gov-js",
+        "engine": "browser",
+        "schedule": "weekly",
+        "note": "原政策法规栏目，审计署改版后内容变为审计要闻"
+      },
+      {
+        "name": "审计署-时政要闻",
+        "url": "https://www.audit.gov.cn/n4/n18/index.html",
+        "type": "gov-js",
+        "engine": "browser",
+        "schedule": "weekly",
+        "note": "替代原工作动态(n4/n23 404)"
+      }
+    ],
+    "gov_accessible": [
+      {
+        "name": "中华人民共和国审计法",
+        "url": "http://www.npc.gov.cn/npc/c30834/202110/8e9b467a53b64c5c92adb6b900513091.shtml",
+        "type": "gov-static",
+        "schedule": "quarterly",
+        "note": "原flk.npc.gov.cn为JS渲染，改为NPC直链(8433 chars静态文本)"
+      },
+      {
+        "name": "国家审计准则",
+        "url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDg2MDc2MjM3MTE2YzAxNjI3YzIzMDIxNzA4Yzc",
+        "type": "gov-js",
+        "engine": "browser",
+        "schedule": "quarterly",
+        "note": "需浏览器引擎抓取JS渲染内容；原gov.cn链接404"
+      }
+    ],
+    "aggregator": [
+      {
+        "name": "审计署-媒体视点",
+        "url": "https://www.audit.gov.cn/n4/n1542/index.html",
+        "type": "gov-js",
+        "engine": "browser",
+        "schedule": "weekly",
+        "note": "替代原审计观察(shenjiguancha.com DNS失效)"
+      }
+    ]
+  },
+  "storage": {
+    "policy_dir": "knowledge/policies/",
+    "intel_log": "logs/audit_intel/",
+    "summary_dir": "knowledge/intel_summaries/"
+  }
+}

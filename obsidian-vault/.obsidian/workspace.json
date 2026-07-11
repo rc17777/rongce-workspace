@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "652afd860185d736",
+    "type": "split",
+    "children": [
+      {
+        "id": "9781bc4473478e3a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c431a4d7d17296a",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "未命名.base",
+                "viewName": "表格"
+              },
+              "icon": "lucide-table",
+              "title": "未命名"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fff6f4d853382899",
+    "type": "split",
+    "children": [
+      {
+        "id": "34caa171a9c760b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c73120d8f4ecf174",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "c65e5491245fa1b1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4bc20162f35ddd51",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9f5de01d4f50107b",
+    "type": "split",
+    "children": [
+      {
+        "id": "711f301cc901155e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9181c1390da5a9ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "851a3e0f60dae7bd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "e977037afafe7583",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "3e500bd4fcfc121a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "83fb1b555bb8344c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "c65e5491245fa1b1",
+  "lastOpenFiles": [
+    "未命名.base",
+    "笔记二：招投标100种违规行为清单.md",
+    "笔记四：政府采购法规与实务.md",
+    "笔记五：预算绩效评价体系.md",
+    "笔记一：审计典型案例汇编.md",
+    "政府审计 内部控制 内部控制体系（COSO框架与企业内控）.md.md",
+    "index.md",
+    "笔记四：政府采购法规与实务",
+    "政府审计 内部控制 行政事业单位内控风险清单.md.md",
+    "政府审计  内部控制 内部控制体系（COSO框架与企业内控）.md.md",
+    "笔记五：政府审计 绩效评价 预算绩效评价体系.md.md",
+    "审计典型案例汇编.md",
+    "笔记七：行政事业单位内控风险清单",
+    "笔记六：内部控制体系（COSO框架与企业内控）",
+    "笔记五：预算绩效评价体系",
+    "政府审计 法规准则 政府采购法规与实务.md",
+    "政府审计 法规准则 审计法律法规体系.md",
+    "招投标100种违规行为清单",
+    "政府审计/案例库/审计典型案例汇编.md",
+    "政府审计/案例库"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rongce.audit/finding-schema-v1",
+  "title": "审计发现标准格式",
+  "description": "所有Agent输出发现时必须遵守的统一格式，确保跨Agent碰撞分析可行",
+  "type": "object",
+  "required": ["finding_id", "agent", "timestamp", "type", "severity", "summary"],
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "pattern": "^F-\\d{4}-\\d{3}$",
+      "description": "格式: F-项目年-序号，如 F-2026-001"
+    },
+    "agent": {
+      "type": "string",
+      "enum": ["data_scout", "contract_hound", "bid_hunter", "law_inspector", "workpaper_crafter", "report_writer", "review_sentinel"],
+      "description": "产出Agent标识"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601，如 2026-06-21T16:00:00+08:00"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "财务异常", "合同违规", "围标串标", "资金挪用", "虚增成本",
+        "利益输送", "资产流失", "程序违规", "数据异常", "补贴欺诈",
+        "履职缺失", "治理缺陷", "内控漏洞", "其他"
+      ],
+      "description": "发现类型"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["高", "中", "低"],
+      "description": "风险等级"
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "一句话概括发现"
+    },
+    "entities": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "涉及的实体（供应商名称/合同编号/账户/人名），用于碰撞分析",
+      "examples": ["供应商A", "合同HT-2023-045", "张某"]
+    },
+    "amount": {
+      "type": "number",
+      "description": "涉及金额（元），无可不填"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "证据清单"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "置信度，0-100。≥80=高置信，50-80=需验证，<50=初步线索"
+    },
+    "law_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "参考法规条款"
+    },
+    "related_findings": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "关联的其他finding_id（由Orchestrator碰撞后填充）"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["未确认", "已验证", "已排除", "已合并"],
+      "default": "未确认",
+      "description": "人工复核后的状态"
+    }
+  }
+}

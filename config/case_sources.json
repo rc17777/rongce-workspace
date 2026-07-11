@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "created": "2026-07-03",
+  "schedule": "weekly",
+  "business_lines": [
+    "经济责任审计",
+    "收支审计",
+    "预算执行审计",
+    "专项资金审计",
+    "往来款清理",
+    "招投标审计",
+    "国企审计",
+    "成本效益审计",
+    "能源审计",
+    "工程竣工决算财务审计",
+    "预算绩效管理",
+    "政府补贴审计"
+  ],
+  "sources": {
+    "mof_policies": {
+      "name": "财政部绩效相关政策法规",
+      "enabled": true,
+      "priority": "high",
+      "sites": [
+        {
+          "name": "财政部预算司-绩效管理",
+          "url": "http://yss.mof.gov.cn/zhuantilanmu/jixiaoguanli/",
+          "type": "policy",
+          "note": "预算绩效管理政策文件"
+        },
+        {
+          "name": "财政部会计司",
+          "url": "http://kjs.mof.gov.cn/",
+          "type": "policy",
+          "note": "会计准则、内控规范"
+        },
+        {
+          "name": "财政部监督评价局",
+          "url": "http://jdpjj.mof.gov.cn/",
+          "type": "policy",
+          "note": "财会监督、专项检查"
+        }
+      ]
+    },
+    "provincial_audit": {
+      "name": "省级审计厅案例库",
+      "enabled": true,
+      "priority": "high",
+      "sites": [
+        {
+          "name": "广东省审计厅",
+          "url": "http://audit.gd.gov.cn/sjal/index.html",
+          "type": "case",
+          "note": "审计案例、典型案例"
+        },
+        {
+          "name": "江苏省审计厅",
+          "url": "http://sjt.jiangsu.gov.cn/col/col70208/index.html",
+          "type": "case",
+          "note": "审计结果公告"
+        },
+        {
+          "name": "浙江省审计厅",
+          "url": "http://sjt.zj.gov.cn/col/col1229082563/index.html",
+          "type": "case",
+          "note": "审计动态、案例"
+        },
+        {
+          "name": "山东省审计厅",
+          "url": "http://sjt.shandong.gov.cn/col/col16931/index.html",
+          "type": "case",
+          "note": "审计结果公告"
+        },
+        {
+          "name": "四川省审计厅",
+          "url": "http://sjt.sc.gov.cn/scsjt/c105292/common_list.shtml",
+          "type": "case",
+          "note": "审计结果、典型案例"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "pending_dir": "logs/case_collection/pending/",
+    "archive_dir": "knowledge/cases/",
+    "obsidian_dir": "C:/Users/scrccpa/Documents/Obsidian Vault/审计案例库-OCR/",
+    "catalog_file": "C:/Users/scrccpa/Documents/Obsidian Vault/审计资料清单.json"
+  },
+  "filters": {
+    "min_length": 500,
+    "exclude_keywords": ["通知", "公告", "会议", "领导", "慰问"],
+    "must_contain_any": ["审计", "检查", "评价", "绩效", "财政", "预算"]
+  }
+}

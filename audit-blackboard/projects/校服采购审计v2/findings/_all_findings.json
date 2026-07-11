@@ -1,0 +1,345 @@
+[
+  {
+    "finding_id": "F-2026-007",
+    "agent": "bid_hunter",
+    "timestamp": "2026-06-21T17:10:00+08:00",
+    "type": "围标串标",
+    "severity": "高",
+    "summary": "A服饰与C服装科技投标文件技术部分文本雷同度89%，且A监事张某兼任C财务负责人，构成围标串标强力证据",
+    "entities": [
+      "A服饰有限公司",
+      "C服装科技公司",
+      "张某"
+    ],
+    "evidence": [
+      "TF-IDF文本相似度89%",
+      "天眼查: A监事张某=C财务负责人",
+      "两公司报价均在高位区间(645/695元)"
+    ],
+    "confidence": 95,
+    "law_refs": [
+      "《招标投标法》第32条",
+      "《政府采购法》第25条"
+    ],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-008",
+    "agent": "bid_hunter",
+    "timestamp": "2026-06-21T17:10:00+08:00",
+    "type": "围标串标",
+    "severity": "高",
+    "summary": "A/B/C三家公司投标文件中嵌入的同一张质量体系认证证书扫描件MD5哈希完全一致，涉嫌使用同一来源文件",
+    "entities": [
+      "A服饰有限公司",
+      "B制衣厂",
+      "C服装科技公司"
+    ],
+    "evidence": [
+      "三家投标文件word/media/中认证证书MD5完全一致",
+      "不同独立公司的证书扫描件不可能像素级一致"
+    ],
+    "confidence": 90,
+    "law_refs": [
+      "《招标投标法实施条例》第40条"
+    ],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-009",
+    "agent": "bid_hunter",
+    "timestamp": "2026-06-21T17:10:00+08:00",
+    "type": "围标串标",
+    "severity": "高",
+    "summary": "D校服供应商与E童装制造公司投标文件core.xml中WPS版本GUID完全一致，表明来自同一台电脑编制",
+    "entities": [
+      "D校服供应商",
+      "E童装制造有限公司"
+    ],
+    "evidence": [
+      "core.xml中AppVersion GUID后缀完全相同",
+      "同一安装源部署的特征标识一致"
+    ],
+    "confidence": 85,
+    "law_refs": [
+      "《招标投标法实施条例》第40条"
+    ],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-010",
+    "agent": "bid_hunter",
+    "timestamp": "2026-06-21T17:10:00+08:00",
+    "type": "围标串标",
+    "severity": "中",
+    "summary": "五家报价集中分布在限价的92%以上高位区间，极差仅50元(7.1%)，且A/B/C三家呈近似等差数列分布",
+    "entities": [
+      "A服饰有限公司",
+      "B制衣厂",
+      "C服装科技公司",
+      "D校服供应商",
+      "E童装制造有限公司"
+    ],
+    "evidence": [
+      "开标一览表: 645/685/695/678/660元/套",
+      "极差仅50元(7.1%)远低于正常竞争报价离散度",
+      "均集中在限价700元的92%+高位"
+    ],
+    "confidence": 80,
+    "law_refs": [
+      "《招标投标法实施条例》第40条第4项"
+    ],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-004",
+    "agent": "contract_hound",
+    "type": "合同违规",
+    "entities": [
+      "HT-2023-045",
+      "A服饰有限公司"
+    ],
+    "summary": "供应商A合同（HT-2023-045）缺少验收条款和质量保证条款，付款条件仅模糊约定'甲方通知后付款'，未明确付款节点、比例及前置条件，合同实质性条款严重缺失，无法有效约束供应商履约行为。",
+    "evidence": [
+      "HT-2023-045合同文本（无验收与质保条款）"
+    ],
+    "impact": "可能导致对供应商履约缺乏验收依据，校服质量无合同保障，甲方付款无约束机制。",
+    "severity": "高",
+    "timestamp": "2026-06-21T17:17:26.077640+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-005",
+    "agent": "contract_hound",
+    "type": "程序违规",
+    "entities": [
+      "HT-2023-078",
+      "B制衣厂"
+    ],
+    "summary": "供应商B合同（HT-2023-078）签订日期为2023年9月15日，但首笔付款银行回单显示付款日期为2023年8月18日，先付款后签合同，时间倒挂28天，涉嫌先实施后补程序。",
+    "evidence": [
+      "HT-2023-078合同（签订日期2023-09-15）",
+      "银行付款回单（付款日期2023-08-18）"
+    ],
+    "impact": "严重违反政府采购程序，合同签订流程流于形式，可能存在未经审批擅自采购问题。",
+    "severity": "高",
+    "timestamp": "2026-06-21T17:17:26.077652+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-006",
+    "agent": "contract_hound",
+    "type": "程序违规",
+    "entities": [
+      "HT-2023-045",
+      "HT-2023-046",
+      "HT-2024-089"
+    ],
+    "summary": "5份采购合同中有3份（HT-2023-045、HT-2023-046、HT-2024-089）无法提供三方比价记录或询价文件，占比60%，涉及合同缺乏必要的竞争程序证据。",
+    "evidence": [
+      "项目采购档案（缺失比价文件）"
+    ],
+    "impact": "采购程序不合规，无法证明供应商选择的公允性和竞争性，存在直接指定供应商风险。",
+    "severity": "高",
+    "timestamp": "2026-06-21T17:17:26.077659+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-007",
+    "agent": "contract_hound",
+    "type": "虚增成本",
+    "entities": [
+      "HT-2023-045",
+      "HT-2023-046",
+      "HT-2023-078",
+      "HT-2024-089"
+    ],
+    "summary": "校服采购5份合同总金额1800万元，实际累计支付2300万元，超出合同总金额500万元（超支27.78%），未签订任何补充协议或变更文件对超额支付进行约定。",
+    "evidence": [
+      "5份采购合同（合同总金额1800万）",
+      "财务支付凭证（实际支付2300万）"
+    ],
+    "impact": "超额支付缺乏合同依据，涉嫌虚增采购成本500万元，存在财务监管漏洞及资金挪用风险。",
+    "severity": "高",
+    "timestamp": "2026-06-21T17:17:26.077664+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-008",
+    "agent": "contract_hound",
+    "type": "合同违规",
+    "entities": [
+      "HT-2023-045",
+      "A服饰有限公司"
+    ],
+    "summary": "合同HT-2023-045约定校服含棉量不低于60%，但对应招标文件中明确要求含棉量不低于80%，合同条款实质性降低质量标准20个百分点，严重偏离招标要求。",
+    "evidence": [
+      "HT-2023-045合同（含棉量≥60%）",
+      "对应招标文件（含棉量≥80%）"
+    ],
+    "impact": "合同内容与招标文件实质性要求不符，可能导致交付校服质量低于招标承诺，损害学生权益。",
+    "severity": "高",
+    "timestamp": "2026-06-21T17:17:26.077669+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-009",
+    "agent": "contract_hound",
+    "type": "程序违规",
+    "entities": [
+      "HT-2023-045",
+      "HT-2023-046",
+      "HT-2023-078",
+      "HT-2024-089"
+    ],
+    "summary": "全部校服采购合同的验收单据签字日期均集中在2024年12月28日至29日两天内，涉及多批次、多供应商的校服验收，不符合分期分批验收的正常逻辑，疑似事后集中补签。",
+    "evidence": [
+      "全部验收单（签字日期均为2024-12-28/29）"
+    ],
+    "impact": "验收程序流于形式，无法证明实际验收过程的有效性，校服实际交付时间和质量状况无法确认。",
+    "severity": "中",
+    "timestamp": "2026-06-21T17:17:26.077674+08:00",
+    "confidence": 80,
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认",
+    "amount": null
+  },
+  {
+    "finding_id": "F-2026-001",
+    "agent": "data_scout",
+    "type": "财务异常",
+    "entities": [
+      "个人账户（12个）",
+      "教育局财务账户"
+    ],
+    "amount": 870000,
+    "period": "2023-12",
+    "severity": "高",
+    "summary": "2023年12月集中大额现金支付，摘要栏空白，收款方均为个人账户",
+    "timestamp": "2026-06-21T17:17:26.077895+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-002",
+    "agent": "data_scout",
+    "type": "资金挪用",
+    "entities": [
+      "A服饰有限公司"
+    ],
+    "amount": 850000,
+    "period": "2023-01至2025-12",
+    "severity": "高",
+    "summary": "预付账款-A服饰有限公司挂账24个月未核销，余额85万元",
+    "timestamp": "2026-06-21T17:17:26.077907+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-003",
+    "agent": "data_scout",
+    "type": "财务异常",
+    "entities": [
+      "教育局业务招待费科目"
+    ],
+    "amount": 82000,
+    "period": "2024-03",
+    "severity": "高",
+    "summary": "2024年3月业务招待费异常飙升，与评标月份高度重合",
+    "timestamp": "2026-06-21T17:17:26.077913+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-004",
+    "agent": "data_scout",
+    "type": "资金挪用",
+    "entities": [
+      "B制衣厂"
+    ],
+    "amount": 1800000,
+    "period": "2023-2025",
+    "severity": "高",
+    "summary": "应付账款-B制衣厂超付180万元，超出合同金额近一倍",
+    "timestamp": "2026-06-21T17:17:26.077920+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-005",
+    "agent": "data_scout",
+    "type": "数据异常",
+    "entities": [
+      "教育局序时账"
+    ],
+    "amount": 460000,
+    "period": "2023-01至2023-03",
+    "severity": "高",
+    "summary": "2023年1-3月序时账连续17个凭证号断号，涉及金额约46万元",
+    "timestamp": "2026-06-21T17:17:26.077925+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  },
+  {
+    "finding_id": "F-2026-006",
+    "agent": "data_scout",
+    "type": "财务异常",
+    "entities": [
+      "教育局备用金科目"
+    ],
+    "amount": 500000,
+    "period": "2023-2025",
+    "severity": "中",
+    "summary": "备用金月均余额50万元，持续超银行核定限额",
+    "timestamp": "2026-06-21T17:17:26.077929+08:00",
+    "confidence": 80,
+    "evidence": [],
+    "law_refs": [],
+    "related_findings": [],
+    "status": "未确认"
+  }
+]

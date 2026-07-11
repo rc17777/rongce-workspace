@@ -1,0 +1,578 @@
+﻿[
+    {
+        "name":  "agent-browser-stagehand",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-browser-stagehand",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-browser-stagehand\\SKILL.md",
+        "description":  "Automate web browser interactions using natural language via CLI commands. Use when the user asks to browse websites, navigate web pages, extract data from websites, take screenshots, fill forms, click buttons, or interact with web applications."
+    },
+    {
+        "name":  "agent-data-standard",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-data-standard",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-data-standard\\SKILL.md",
+        "description":  "面向Agent的审计数据标准检查技能。检查审计数据是否\"Agent友好\"（Machine-readable \u0026 Agent-friendly），给出改造建议和友好度评分。核心检查项：合并单元格、无元数据缩写、非标准日期格式、文本型数字、缺失数据字典、API描述不规范等。适用场景：(1) 新拿到的被审计单位数据→预处理检查，(2) 自建数据库/知识库→Agent友好性审计，(3) API接口文档→Agent可读性评估。触发词：数据标准化、Agent友好、Agent-friendly、数据规范检查、数据预处理、数据治理、面向Agent建模。"
+    },
+    {
+        "name":  "agent-memory-1-0-0",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-memory-1-0-0",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\agent-memory-1-0-0\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "aloudata-anomaly-detection",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\aloudata-anomaly-detection",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\aloudata-anomaly-detection\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "analysis-report",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\analysis-report",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\analysis-report\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "apriori-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\apriori-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\apriori-audit\\SKILL.md",
+        "description":  "Apriori association rule algorithm for audit anomaly detection. Finds frequent co-occurrence patterns in transactional data to detect collusion rings (bid-rigging groups, healthcare fraud gangs, etc.) and missing-relationship anomalies (procedures that should co-occur but don\u0027t). Use when audit work involves (1) Finding groups of entities that frequently appear together across transactions, (2) Detecting abnormal co-occurrence patterns in bidding/medical/transaction data, (3) Computing support/confidence/lift metrics for association rules, (4) Identifying missing expected associations (should-be-there-but-isn\u0027t), or (5) Building frequent itemset analysis for any audit domain."
+    },
+    {
+        "name":  "arch-diagrammer",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\arch-diagrammer",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\arch-diagrammer\\SKILL.md",
+        "description":  "Generate production-ready architecture diagrams, flowcharts, timelines, and infographics from structured illustration requirements (JSON from illustration-analysis or direct spec). Outputs SVG and PNG. Triggers: \u0027生成配图\u0027, \u0027画流程图\u0027, \u0027画架构图\u0027, \u0027出图\u0027, \u0027render diagram\u0027, \u0027产出示意图\u0027."
+    },
+    {
+        "name":  "audit-card-generator",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-card-generator",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-card-generator\\SKILL.md",
+        "description":  "\u003e"
+    },
+    {
+        "name":  "audit-data-analysis-methods",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-data-analysis-methods",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-data-analysis-methods\\SKILL.md",
+        "description":  "7大审计数据分析方法 — 从描述性统计到时间序列分析的完整Python工具库。基于群众语言堂公众号《七大核心方法玩转审计数据分析》。Triggers: \u0027数据分析方法\u0027, \u0027描述性统计\u0027, \u0027相关性分析\u0027, \u0027回归分析\u0027, \u0027聚类\u0027, \u0027异常检测\u0027, \u0027关联规则\u0027, \u0027时间序列\u0027."
+    },
+    {
+        "name":  "audit-jingze",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-jingze",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-jingze\\SKILL.md",
+        "description":  "经济责任审计四道关 — 立项/招投标/阴阳合同/控制价，四环节翻车点+核查方法+追责逻辑。基于芮听柠说《经济责任审计，最容易翻车的四个环节》。Triggers: \u0027经济责任审计\u0027, \u0027经责审计\u0027, \u0027离任审计\u0027, \u0027任中审计\u0027, \u0027经责审\u0027, \u0027履职审计\u0027, \u0027领导干部审计\u0027."
+    },
+    {
+        "name":  "audit-knowledge-graph",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-knowledge-graph",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-knowledge-graph\\SKILL.md",
+        "description":  "审计知识图谱构建与分析 — 基于Neo4j图数据库的审计关系网络分析。涵盖关系建模、图数据可视化、知识图谱构建、隐蔽关联发现。适用于围标串标识别、关联交易发现、股权穿透等审计场景。Triggers: \u0027知识图谱\u0027, \u0027Neo4j\u0027, \u0027关系网络\u0027, \u0027图数据库\u0027, \u0027关联分析\u0027, \u0027网络分析\u0027, \u0027股权穿透\u0027, \u0027小团伙\u0027."
+    },
+    {
+        "name":  "audit-meeting-review",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-meeting-review",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-meeting-review\\SKILL.md",
+        "description":  "「望闻问切」阅记法 — 审计会议记录四步诊断法。将中医四诊适配审计场景，系统化审阅会议纪要/党组会记录/招投标评审记录等。Triggers: \u0027审会议记录\u0027, \u0027会议纪要审查\u0027, \u0027党组会记录\u0027, \u0027会议记录审计\u0027, \u0027评审记录\u0027, \u0027望闻问切\u0027, \u0027阅记法\u0027."
+    },
+    {
+        "name":  "audit-project-selection",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-project-selection",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-project-selection\\SKILL.md",
+        "description":  "审计立项精准化 - 机器学习预测 + 风险画像辅助，实现科学选项目、精准配资源"
+    },
+    {
+        "name":  "audit-rectification",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-rectification",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-rectification\\SKILL.md",
+        "description":  "审计整改标准化 - \"3个1\"体系（1张表/1本账/1揽子措施）+ 闭环管理"
+    },
+    {
+        "name":  "audit-report-review",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-report-review",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-report-review\\SKILL.md",
+        "description":  "审计报告AI复核十维度检查法。10套提示词覆盖逻辑一致性/问题定性/整改靶向/证据链/风险推演/目标覆盖/受众适配/摘要可读/跨项目口径/情绪化措辞。Triggers: \u0027复核报告\u0027, \u0027审报告\u0027, \u0027报告审核\u0027, \u0027报告复核\u0027, \u0027质量复核\u0027, \u0027报告质量\u0027, \u0027审计报告审核\u0027, \u0027审核报告\u0027."
+    },
+    {
+        "name":  "audit-risk-portrait",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-risk-portrait",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-risk-portrait\\SKILL.md",
+        "description":  "审计风险画像 - 多维度数据构建被审计主体风险肖像，实现量化评分与动态预警"
+    },
+    {
+        "name":  "audit-text-mining",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-text-mining",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\audit-text-mining\\SKILL.md",
+        "description":  "审计文本挖掘技能。对审计项目中大量非结构化文档（会议纪要、合同、工作报告、政策文件等）进行批量文本挖掘：格式转换(.doc→.docx)、中文分词、词频统计、词云可视化、多关键词批量定位及上下文提取。适用于审计准备阶段的\"看不清审计对象、抓不住审计重点、找不到审计疑点\"三大难题。适用场景：(1) 经济责任审计→会议纪要+工作报告分析，(2) 绩效评价→政策文件+项目档案关键词提取，(3) 专项资金审计→合同+验收报告批量检索，(4) 任何需要从海量文档中快速锁定审计重点的场景。触发词：文本挖掘、文档分析、关键词提取、词云、分词、会议纪要分析、批量搜索、文档关键词、非结构化数据分析。"
+    },
+    {
+        "name":  "bid-document",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\bid-document",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\bid-document\\SKILL.md",
+        "description":  "专业标书撰写技能体系，支持从招标文件解读到文档质量控制的全流程工作。"
+    },
+    {
+        "name":  "bim-engineering-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\bim-engineering-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\bim-engineering-audit\\SKILL.md",
+        "description":  "BIM工程审计智能化 - 基于建筑信息模型的工程量自动提取、图纸比对、变更识别"
+    },
+    {
+        "name":  "brainstorming",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\brainstorming",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\brainstorming\\SKILL.md",
+        "description":  "Structured brainstorming and requirement exploration. Use before any creative or planning work — building features, writing proposals, designing solutions, or defining scope. Explores user intent, constraints, and alternatives before committing to an approach. Triggers: \u0027头脑风暴\u0027, \u0027想方案\u0027, \u0027有什么思路\u0027, \u0027怎么设计\u0027, \u0027brainstorm\u0027, \u0027explore ideas\u0027, \u0027怎么入手\u0027."
+    },
+    {
+        "name":  "browser",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\browser",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\browser\\SKILL.md",
+        "description":  "浏览器自动化工具集。合并自 agent-browser-stagehand + browser-act + browser-act-skill-forge。覆盖网页浏览、交互操作(点击/输入/截图)、Stagehand智能定位、技能录制与回放。触发场景：打开网页、网页操作、页面截图、网页数据采集、浏览器自动化。"
+    },
+    {
+        "name":  "budget-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\budget-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\budget-audit\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "cbwxy-image-2",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\cbwxy-image-2",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\cbwxy-image-2\\SKILL.md",
+        "description":  "Use cbwxy.top image-2 API for text-to-image and image-to-image generation. Supports OpenAI-compatible /v1/images/generations and /v1/images/edits, with a fill-in config file for api_key. Use when users need cbwxy image-2 文生图, 以图生图, 图生图, 图片二创, or Taobao creative image generation without exposing keys."
+    },
+    {
+        "name":  "content-polish",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\content-polish",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\content-polish\\SKILL.md",
+        "description":  "文字润色与内容创作工具集。合并自 humanizer + copy-editing + copywriting + summarizer-pro。覆盖：文本校对润色、AI痕迹去除(人性化)、创意文案写作、长文摘要提炼。触发场景：改稿/润色/写文案/去AI味/摘要。"
+    },
+    {
+        "name":  "copy-editing",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\copy-editing",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\copy-editing\\SKILL.md",
+        "description":  "Polish, proofread, and improve existing text — clarity, grammar, tone, structure, and consistency. Use when asked to \u0027润色\u0027, \u0027校对\u0027, \u0027审稿\u0027, \u0027改一下文字\u0027, \u0027编辑\u0027, \u0027修改\u0027, \u0027review my writing\u0027, \u0027copy feedback\u0027, \u0027proofread\u0027, \u0027neaten up\u0027, \u0027polish this draft\u0027. Works with Chinese and English text."
+    },
+    {
+        "name":  "copywriting",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\copywriting",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\copywriting\\SKILL.md",
+        "description":  "Write persuasive copy for landing pages, emails, proposals, ads, and marketing materials. Use when you need to write headlines, CTAs, product descriptions, proposal text, email sequences, or any text meant to drive action or communicate value. Covers AIDA, PAS, FAB frameworks. Triggers: \u0027写文案\u0027, \u0027起草\u0027, \u0027广告文案\u0027, \u0027抄写\u0027, \u0027slogan\u0027, \u0027copywriting\u0027, \u0027persuasive writing\u0027, \u0027营销文案\u0027."
+    },
+    {
+        "name":  "cot-capture",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\cot-capture",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\cot-capture\\SKILL.md",
+        "description":  "审计思维链（Chain of Thought）沉淀技能。将资深审计专家的隐性判断逻辑（\"老法师\"的经验暗物质）转化为结构化思维链数据集。适用场景：(1) 审计项目复盘/疑点讨论录音→CoT提取，(2) 专家口述排查逻辑→结构化推理链，(3) 审计典型案例→思维链标注，(4) 批量构建审计垂直领域CoT训练数据。触发词：沉淀经验、思维链、CoT、老法师经验、隐性知识显性化、审计推理、专家判断逻辑、经验传承、复盘提取。"
+    },
+    {
+        "name":  "data-analyst-cn",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\data-analyst-cn",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\data-analyst-cn\\SKILL.md",
+        "description":  "通用数据分析专家 - 深度挖掘数据洞察，提供可操作的业务建议。支持趋势分析、异常检测、根因分析、对比分析、关联分析、回归分析、聚类分析等方法论。适配政府审计/工程咨询业务场景。"
+    },
+    {
+        "name":  "deepseek-charting",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\deepseek-charting",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\deepseek-charting\\SKILL.md",
+        "description":  "DeepSeek AI画图表 — 6种零代码方法用DeepSeek生成流程图、数据图表、思维导图。涵盖Mermaid、ECharts、Python、Napkin AI、AI工作流、Markdown+Xmind。适用于审计报告可视化、流程图绘制、数据看板制作。Triggers: \u0027DeepSeek画图\u0027, \u0027AI画图表\u0027, \u0027Mermaid\u0027, \u0027ECharts\u0027, \u0027Napkin\u0027, \u0027思维导图生成\u0027, \u0027图表可视化\u0027, \u0027不用代码画图\u0027."
+    },
+    {
+        "name":  "digital-audit-methodology",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\digital-audit-methodology",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\digital-audit-methodology\\SKILL.md",
+        "description":  "数字化审计方法论 — 融合「数据化审计」公众号85篇核心知识的完整框架。涵盖业务穿透三层次、能力体系、思维转型、冲突管理、模型构建、实施路径。适用于政府审计/内部审计数字化转型。Triggers: \u0027数字化审计\u0027, \u0027审计方法论\u0027, \u0027业务穿透\u0027, \u0027审计转型\u0027, \u0027审计思维\u0027, \u0027审计能力\u0027, \u0027审计冲突管理\u0027."
+    },
+    {
+        "name":  "disk-cleaner",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\disk-cleaner",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\disk-cleaner\\SKILL.md",
+        "description":  "Cross-platform disk space management toolkit with intelligent optimization. REQUIREMENTS: Python 3.7+. UNIVERSAL COMPATIBILITY: Works with ALL AI IDEs (Cursor, Windsurf, Continue, Aider, Claude Code, etc.). PLATFORM-INDEPENDENT: Works at any location - global, project, or user level. SELF-CONTAINED: No pip install needed, includes intelligent bootstrap. KEY FEATURES: (1) PROGRESSIVE SCANNING: Quick sample (1s) + Progressive mode for large disks, (2) INTELLIGENT BOOTSTRAP: Auto-detection of skill location and auto-import of modules, (3) CROSS-PLATFORM ENCODING: Safe emoji/Unicode handling on all platforms, (4) DIAGNOSTIC TOOLS: check_skill.py for quick verification, (5) OPTIMIZED SCANNING: 3-5x faster with os.scandir(), concurrent scanning, intelligent sampling. AGENT WORKFLOW: (1) Check Python, (2) Find skill package (20+ locations auto-detected), (3) Run diagnostics, (4) Use progressive scanning for large disks. The skill package includes all optimization modules - no features are lost!"
+    },
+    {
+        "name":  "doc-formatter",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\doc-formatter",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\doc-formatter\\SKILL.md",
+        "description":  "文档格式转换工具集。合并自 gov-doc-formatting + markdown-converter。覆盖：政府公文规范格式(红头/函件/报告)、Markdown↔Word/PDF转换。触发场景：公文排版/Markdown转Word/格式标准化。"
+    },
+    {
+        "name":  "drawio",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\drawio",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\drawio\\SKILL.md",
+        "description":  "Always use when user asks to create, generate, draw, or design a diagram, flowchart, architecture diagram, ER diagram, sequence diagram, class diagram, network diagram, mockup, wireframe, or UI sketch, or mentions draw.io, drawio, drawoi, .drawio files, or diagram export to PNG/SVG/PDF."
+    },
+    {
+        "name":  "dynamic-audit-alert",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\dynamic-audit-alert",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\dynamic-audit-alert\\SKILL.md",
+        "description":  "动态审计预警 - 基于LLM和实时数据的持续监测、风险识别、自动预警机制"
+    },
+    {
+        "name":  "energy-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\energy-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\energy-audit\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "engineering-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\engineering-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\engineering-audit\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "financial-fraud-detection",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\financial-fraud-detection",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\financial-fraud-detection\\SKILL.md",
+        "description":  "财务造假检测工具 — Benford定律数字分布检验 + 异常交易模式识别。用于国企审计、专项资金审计、政府采购审计中的凭证/流水/发票金额异常检测。Triggers: \u0027财务造假\u0027, \u0027Benford\u0027, \u0027Benford定律\u0027, \u0027本福特定律\u0027, \u0027虚假发票\u0027, \u0027虚列支出\u0027, \u0027人为操纵\u0027."
+    },
+    {
+        "name":  "first-principles-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\first-principles-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\first-principles-audit\\SKILL.md",
+        "description":  "First Principles Thinking for audit platform design and task analysis. Decompose any audit task into atomic elements, classify automation potential (✓ full / △ assisted / ✗ human-only), and generate an automation strategy. Use when designing audit workflows, evaluating which tasks to automate, or planning audit platform features."
+    },
+    {
+        "name":  "forecast-simulation",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\forecast-simulation",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\forecast-simulation\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "github",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\github",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\github\\SKILL.md",
+        "description":  "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries."
+    },
+    {
+        "name":  "gov-audit-methodology",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\gov-audit-methodology",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\gov-audit-methodology\\SKILL.md",
+        "description":  "\u003e"
+    },
+    {
+        "name":  "humanizer",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\humanizer",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\humanizer\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "hv-analysis",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\hv-analysis",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\hv-analysis\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "illustration-analysis",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\illustration-analysis",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\illustration-analysis\\SKILL.md",
+        "description":  "Analyze Chinese audit/finance/project documents (方案/报告/标书) and identify where illustrations, charts, and diagrams are needed. Output a structured illustration requirement list with position, type, and content logic for each figure. Triggers: \u0027方案配图\u0027, \u0027插图需求\u0027, \u0027哪里需要插图\u0027, \u0027图文拆解\u0027, \u0027文本可视化分析\u0027."
+    },
+    {
+        "name":  "image-classifier-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\image-classifier-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\image-classifier-audit\\SKILL.md",
+        "description":  "审计图片离线分类器 — 50万张图片里找\u0027那一类\u0027。基于感知哈希+颜色直方图，无需GPU/深度学习，纯本地运行。Triggers: \u0027图片分类\u0027, \u0027图片筛选\u0027, \u0027离线分类\u0027, \u0027图片归类\u0027, \u0027审计图片\u0027, \u0027凭证分类\u0027, \u0027截图分类\u0027."
+    },
+    {
+        "name":  "khazix-writer",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\khazix-writer",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\khazix-writer\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "kimi-webbridge",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\kimi-webbridge",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\kimi-webbridge\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "magazine-knowledge-bridge",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\magazine-knowledge-bridge",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\magazine-knowledge-bridge\\SKILL.md",
+        "description":  "杂志资料智能检索桥。连接 Obsidian 杂志资料库（447份PDF+1003篇MD），按审计领域/技术方法/应用场景自动检索匹配文章，提取方法论和案例模式。触发：查案例/找审计方法/需要审计逻辑支撑/参考类似案例处理方式。"
+    },
+    {
+        "name":  "markdown-converter",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\markdown-converter",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\markdown-converter\\SKILL.md",
+        "description":  "Convert documents and files to Markdown using markitdown. Use when converting PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx, .xls), HTML, CSV, JSON, XML, images (with EXIF/OCR), audio (with transcription), ZIP archives, YouTube URLs, or EPubs to Markdown format for LLM processing or text analysis."
+    },
+    {
+        "name":  "memory-manager",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\memory-manager",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\memory-manager\\SKILL.md",
+        "description":  "记忆管理工具集。合并自 agent-memory-1-0-0 + memory-setup。覆盖：Agent记忆系统配置、会话记忆持久化。触发场景：设置记忆/记忆管理。"
+    },
+    {
+        "name":  "memory-setup",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\memory-setup",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\memory-setup\\SKILL.md",
+        "description":  "Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing \"goldfish brain,\" or helping users configure memorySearch in their config. Covers MEMORY.md, daily logs, and vector search setup."
+    },
+    {
+        "name":  "nano-banana-pro",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\nano-banana-pro",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\nano-banana-pro\\SKILL.md",
+        "description":  "Generate/edit images with Nano Banana Pro (Gemini 3 Pro Image). Use for image create/modify requests incl. edits. Supports text-to-image + image-to-image; 1K/2K/4K; use --input-image."
+    },
+    {
+        "name":  "news-aggregator",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\news-aggregator",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\news-aggregator\\SKILL.md",
+        "description":  "国内外社会、科技、军事新闻汇总。自动搜索、筛选、整理新闻要点。"
+    },
+    {
+        "name":  "note",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\note",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\note\\SKILL.md",
+        "description":  "Knowledge capture and connection system with automatic organization and retrieval. Use when user mentions taking notes, capturing ideas, recording insights, or finding previous notes. Captures from any context, organizes automatically by topic and project, surfaces relevant notes when needed, and connects related ideas across domains. All data stored locally."
+    },
+    {
+        "name":  "openai-whisper",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openai-whisper",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openai-whisper\\SKILL.md",
+        "description":  "Local speech-to-text with the Whisper CLI (no API key)."
+    },
+    {
+        "name":  "openclaw-find-skills",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openclaw-find-skills",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openclaw-find-skills\\SKILL.md",
+        "description":  "Discover and install skills from the open agent skills ecosystem. Use when: (1) user asks \"how do I do X\" where X might have an existing skill, (2) user says \"find a skill for X\" or \"is there a skill for X\", (3) user asks \"can you do X\" where X is a specialized capability, (4) user wants to extend agent capabilities, (5) user wants to search for tools, templates, or workflows, (6) user mentions they wish they had help with a specific domain (design, testing, deployment, etc.)."
+    },
+    {
+        "name":  "openclaw-skill-vetter",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openclaw-skill-vetter",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\openclaw-skill-vetter\\SKILL.md",
+        "description":  "Security vetting protocol before installing any AI agent skill. Red flag detection for credential theft, obfuscated code, exfiltration. Risk classification LOW/MEDIUM/HIGH/EXTREME. Produces structured vetting reports. Never install untrusted skills without running this first."
+    },
+    {
+        "name":  "patent-disclosure-skill",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\patent-disclosure-skill",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\patent-disclosure-skill\\SKILL.md",
+        "description":  "通用中国专利挖掘发现与交底书生成全流程：扫描项目文档挖掘专利点、讨论融合、基于脱敏模版生成技术交底书、联网查新、生成后自检含逻辑闭环与公式参数一致性。| Patent mining, disclosure drafting, prior-art search, and consistency self-check."
+    },
+    {
+        "name":  "pdf",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\pdf",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\pdf\\SKILL.md",
+        "description":  "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale."
+    },
+    {
+        "name":  "penetrating-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\penetrating-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\penetrating-audit\\SKILL.md",
+        "description":  "穿透式审计方法论 - 资金/项目/供应链全链条追踪，从表象深入到本质的审计方法"
+    },
+    {
+        "name":  "perf-audit-checklist",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\perf-audit-checklist",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\perf-audit-checklist\\SKILL.md",
+        "description":  "\u003e"
+    },
+    {
+        "name":  "posterdesign",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\posterdesign",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\posterdesign\\SKILL.md",
+        "description":  "自动生成设计海报/图片。当用户提出设计需求（如「帮我做个促销海报」「做一张活动通知图」「生成一张小红书封面」）时使用此技能。通过 visual-rag MCP 服务直接生成 PNG 图片，图片实时返回对话，无需管理文件或服务。"
+    },
+    {
+        "name":  "powerpoint-pptx",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\powerpoint-pptx",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\powerpoint-pptx\\SKILL.md",
+        "description":  "Create, inspect, and edit Microsoft PowerPoint presentations and PPTX decks with reliable layouts, templates, placeholders, notes, charts, and visual QA. Use when (1) the task is about PowerPoint or `.pptx`; (2) layouts, placeholders, notes, charts, comments, or template fidelity matter; (3) the deck must render cleanly after edits."
+    },
+    {
+        "name":  "ppt-generator",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\ppt-generator",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\ppt-generator\\SKILL.md",
+        "description":  "演示文稿生成工具集。合并自 html-ppt + paper-slide-deck + rongce-ppt。覆盖：HTML幻灯片、学术论文PPT、内部知识库PPT。触发场景：做PPT/幻灯片/演示文稿。"
+    },
+    {
+        "name":  "ppt-maker",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\ppt-maker",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\ppt-maker\\SKILL.md",
+        "description":  "专业级PPT一键生成。Markdown创建幻灯片，支持自动图表（饼图/柱状图/折线图）、多主题、有序/无序列表、引用块、代码块、表格、感谢页自动识别。"
+    },
+    {
+        "name":  "proactive-agent",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\proactive-agent",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\proactive-agent\\SKILL.md",
+        "description":  "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer for context survival, Compaction Recovery, and battle-tested security patterns. Part of the Hal Stack 🦞"
+    },
+    {
+        "name":  "procurement-audit-models",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\procurement-audit-models",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\procurement-audit-models\\SKILL.md",
+        "description":  "采购审计模型库 — 围标串标识别+供应商关联挖掘。基于群众语言堂公众号《政府采购审计大数据技术超详细操作》及审计一线实战提炼。Triggers: \u0027围标串标\u0027, \u0027采购审计\u0027, \u0027供应商关联\u0027, \u0027投标IP相同\u0027, \u0027报价规律\u0027, \u0027标书比对\u0027, \u0027政府采购\u0027."
+    },
+    {
+        "name":  "prompt-librarian",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\prompt-librarian",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\prompt-librarian\\SKILL.md",
+        "description":  "审计提示词资产管理技能。管理团队AI提示词（Prompt）的全生命周期：入库登记、效果评分、版本管理、智能检索、团队共享。将优质Prompt从个人笔记转化为团队公共资产，支撑\"超级个体\"的学习型组织建设。适用场景：(1) 保存一个效果好用的Prompt，(2) 查找特定审计场景的Prompt，(3) Prompt效果追踪与迭代优化，(4) 团队Prompt资产盘点。触发词：保存提示词、Prompt管理、提示词库、提示词检索、Prompt分享、提示词资产、找Prompt。"
+    },
+    {
+        "name":  "reflection",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\reflection",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\reflection\\SKILL.md",
+        "description":  "Structured self-reflection and review. Learns when to stop and self-critique before delivering work. Also reviews recent work sessions to capture what went well, what went wrong, and what to improve. Triggers: \u0027反思\u0027, \u0027review\u0027, \u0027复盘\u0027, \u0027回顾总结\u0027, \u0027自我检查\u0027, \u0027反省\u0027, \u0027what could I have done better\u0027, \u0027事后复盘\u0027."
+    },
+    {
+        "name":  "regulatory-audit-response",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\regulatory-audit-response",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\regulatory-audit-response\\SKILL.md",
+        "description":  "「接·审·报」三字诀 — 监管指定审计应对指南。当内审接到审计厅/国资委等监管机关指令性专项审计任务时的全流程操作框架。来源：审计实践公众号《监管指定审计不是\u0027命题作文\u0027》。Triggers: \u0027监管指定审计\u0027, \u0027指令性审计\u0027, \u0027审计厅指定\u0027, \u0027配合审计机关\u0027, \u0027迎审\u0027, \u0027外部监管审计\u0027, \u0027接得住审得透报得准\u0027."
+    },
+    {
+        "name":  "rpa-audit-automation",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\rpa-audit-automation",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\rpa-audit-automation\\SKILL.md",
+        "description":  "RPA自动化审计 - 四大机器人工种（数据采集/底稿编制/报告生成/审计分析）实现审计全流程自动化"
+    },
+    {
+        "name":  "scheduled-report",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\scheduled-report",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\scheduled-report\\SKILL.md",
+        "description":  "|"
+    },
+    {
+        "name":  "seedream-image-generation",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\seedream-image-generation",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\seedream-image-generation\\SKILL.md",
+        "description":  "Image generation via Volcengine Seedream API. Use this when you need to perform Text-to-Image (T2I), Image-to-Image (I2I), or general visual creative tasks."
+    },
+    {
+        "name":  "skill-manager",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\skill-manager",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\skill-manager\\SKILL.md",
+        "description":  "技能管理工具集。合并自 openclaw-find-skills + openclaw-skill-vetter + skill-vetter。覆盖：技能搜索发现、技能质量审查评估。触发场景：找技能/审查技能/技能管理。"
+    },
+    {
+        "name":  "skill-vetter",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\skill-vetter",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\skill-vetter\\SKILL.md",
+        "description":  "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns."
+    },
+    {
+        "name":  "spatial-audit-analysis",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\spatial-audit-analysis",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\spatial-audit-analysis\\SKILL.md",
+        "description":  "审计空间分析 — 基于QGIS开源GIS工具的空间维度聚类分析和可视化。适用于审计中需要地理位置分析、空间关系挖掘、轨迹分析的场景。Triggers: \u0027空间分析\u0027, \u0027QGIS\u0027, \u0027地理聚类\u0027, \u0027地址分析\u0027, \u0027空间维度\u0027, \u0027轨迹分析\u0027, \u0027GIS审计\u0027."
+    },
+    {
+        "name":  "special-bond-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\special-bond-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\special-bond-audit\\SKILL.md",
+        "description":  "政府专项债券全周期审计 - 覆盖发行、使用、管理、偿还四环节的审计方法"
+    },
+    {
+        "name":  "special-fund-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\special-fund-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\special-fund-audit\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "sql-dataviz",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-dataviz",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-dataviz\\SKILL.md",
+        "description":  "SQL 数据可视化引擎。将 SQL 查询结果转化为生产级可视化图表，支持对比、趋势、分布、占比、地理、指标监控、AI 智能分析等全场景。集成 24+ 种视觉对象，以 base64 PNG/SVG 输出。触发场景：数据出图、图表生成、可视化展示、Dashboard 看板。"
+    },
+    {
+        "name":  "sql-master",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-master",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-master\\SKILL.md",
+        "description":  "SQL 查询、数据获取智能体。覆盖 SQL 全链路能力：自然语言转生产级 SQL、慢查询诊断与执行计划分析、索引设计与优化、数仓建模、SQL 原理深度科普、查询结果可视化。支持 MySQL / PostgreSQL / Hive / Spark SQL / ClickHouse / BigQuery 多方言。触发场景：(1) 写 SQL / 生成查询，(2) SQL 慢/优化/调优，(3) 执行计划分析 EXPLAIN，(4) 索引设计，(5) 数仓建模 / 分层设计，(6) SQL 原理问题（事务/锁/MVCC/Join算法等），(7) 表结构设计 DDL，(8) SQL 报错诊断，(9) 任何\"帮我写个查询\"、\"这个SQL为什么慢\"、\"怎么建索引\"类请求，(10) 查询结果可视化 / 出图 / 图表 / 数据展示。"
+    },
+    {
+        "name":  "sql-report-generator",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-report-generator",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-report-generator\\SKILL.md",
+        "description":  "生产级报告生成器。将 SQL 分析结果转化为结构化报告，支持表格、矩阵、切片器、交互式组件、分页导出。内置 100+ 行业报告模板，覆盖财务、电商、制造、医疗、金融等。触发场景：生成报告、数据分析报告、Dashboard 报告、自动化报告。"
+    },
+    {
+        "name":  "sql-toolkit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-toolkit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\sql-toolkit\\SKILL.md",
+        "description":  "SQL全链路工具集。合并自 sql-master + sql-dataviz + sql-report-generator。覆盖：自然语言→SQL生成、慢查询诊断与优化、多方言支持(SQLite/MySQL/PostgreSQL/Hive/ClickHouse)、50+可视化图表(PNG+交互式HTML)、生产级报告生成(100+模板)、AI洞察分析。触发场景：写SQL/优化/查数据/出图/做报告。"
+    },
+    {
+        "name":  "subsidy-audit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\subsidy-audit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\subsidy-audit\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "summarize-pro",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\summarize-pro",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\summarize-pro\\SKILL.md",
+        "description":  "When user asks to summarize text, articles, documents, meetings, emails, YouTube transcripts, books, PDFs, reports, conversations, or any long content. Also handles bullet points, key takeaways, action items, TL;DR, ELI5, executive summaries, chapter summaries, comparison summaries, translation summaries, thread summaries, and custom-length summaries. 20-feature AI summarizer with multiple formats, languages, and export options. All processing happens locally — NO external API calls, NO network requests, NO data sent to any server."
+    },
+    {
+        "name":  "systematic-debugging",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\systematic-debugging",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\systematic-debugging\\SKILL.md",
+        "description":  "Four-phase systematic debugging — root cause investigation, pattern analysis, hypothesis testing, and evidence-based fix verification. Use when commands fail, scripts error, data mismatches, tools behave unexpectedly, or automation breaks. Never jump to solutions without understanding root cause. Triggers: \u0027debug\u0027, \u0027报错\u0027, \u0027排查\u0027, \u0027哪里出问题了\u0027, \u0027数据对不上\u0027, \u0027脚本挂掉了\u0027, \u0027error\u0027, \u0027bug\u0027, \u0027修复\u0027."
+    },
+    {
+        "name":  "tavily",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\tavily",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\tavily\\SKILL.md",
+        "description":  "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources."
+    },
+    {
+        "name":  "tender-analyzer-agent",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\tender-analyzer-agent",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\tender-analyzer-agent\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "unstructured-audit-data",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\unstructured-audit-data",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\unstructured-audit-data\\SKILL.md",
+        "description":  "Processing unstructured audit data (PDF scans, Word documents, compressed bid archives, images) for bid-rigging detection, document similarity analysis, and automated data extraction. Use when audit work involves (1) Batch processing compressed bid project files, (2) Scanning Word/PDF documents for restriction keywords, (3) Computing document similarity with Simhash or TF-IDF for collusion detection, (4) Batch OCR of scanned documents, (5) Extracting and analyzing price patterns from bid documents, or (6) Building automated audit data processing pipelines."
+    },
+    {
+        "name":  "video-creator",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-creator",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-creator\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "video-frames",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-frames",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-frames\\SKILL.md",
+        "description":  "Extract frames or short clips from videos using ffmpeg."
+    },
+    {
+        "name":  "video-toolkit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-toolkit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\video-toolkit\\SKILL.md",
+        "description":  "视频处理工具集。合并自 video-creator + video-frames。覆盖：视频创作生成、视频帧提取分析。触发场景：做视频/提取视频帧/视频分析。"
+    },
+    {
+        "name":  "visual-toolkit",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\visual-toolkit",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\visual-toolkit\\SKILL.md",
+        "description":  "可视化工具集。合并自 illustration-analysis + scientific-illustration。覆盖：插图分析识别、顶刊级科学插图生成。触发场景：分析插图/生成科学图/期刊配图。"
+    },
+    {
+        "name":  "wiki-auto-ingest",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\wiki-auto-ingest",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\wiki-auto-ingest\\SKILL.md",
+        "description":  ""
+    },
+    {
+        "name":  "workflow-embedder",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\workflow-embedder",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\workflow-embedder\\SKILL.md",
+        "description":  "审计作业流AI嵌入分析技能。分析现有审计作业流程，识别AI能力可以\"无感嵌入\"的节点，设计嵌入方案（触发条件、Agent调用链、输出形式）。适用于将AI从外挂式工具转变为底层基础设施，实现\"日用而不知\"的极致体验。适用场景：(1) 梳理某类审计项目的标准作业流程并标注AI嵌入点，(2) 新项目启动前的AI能力规划，(3) 审计系统建设的AI集成需求分析。触发词：流程嵌入、AI嵌入、无感嵌入、工作流改造、AI集成、流程优化、嵌入点分析。"
+    },
+    {
+        "name":  "xiucheng-self-improving-agent",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\xiucheng-self-improving-agent",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\xiucheng-self-improving-agent\\SKILL.md",
+        "description":  "Self-improving agent system that analyzes conversation quality, identifies improvement opportunities, and continuously optimizes response strategies."
+    },
+    {
+        "name":  "zhixi-v2-enhanced",
+        "path":  "C:\\Users\\scrccpa\\.openclaw\\skills\\zhixi-v2-enhanced",
+        "skill_md":  "C:\\Users\\scrccpa\\.openclaw\\skills\\zhixi-v2-enhanced\\SKILL.md",
+        "description":  "智析v2.0增强版技能 - 集成RAG知识库、AI报告复核、串标检测扩展等能力"
+    }
+]
