@@ -1,0 +1,96 @@
+{
+  "rule_id": "ECON-EXEC-002",
+  "business_line": "经济责任审计",
+  "rule_name": "三重一大事项程序闭环缺失",
+  "required_fields": [
+    {
+      "name": "decision_id",
+      "type": "string"
+    },
+    {
+      "name": "decision_date",
+      "type": "date"
+    },
+    {
+      "name": "decision_type",
+      "type": "string",
+      "enum": [
+        "重大项目投资",
+        "大额资金使用",
+        "重要人事任免",
+        "重大并购重组",
+        "大额资产处置"
+      ]
+    },
+    {
+      "name": "amount",
+      "type": "number",
+      "unit": "元"
+    },
+    {
+      "name": "meeting_date",
+      "type": "date"
+    },
+    {
+      "name": "meeting_attendance",
+      "type": "number"
+    },
+    {
+      "name": "meeting_total",
+      "type": "number"
+    },
+    {
+      "name": "approval_doc",
+      "type": "string"
+    },
+    {
+      "name": "implementation_report",
+      "type": "string"
+    }
+  ],
+  "logic": "检查每一笔三重一大事项四个环节的完整性：(1)会议记录（出席人数≥应到2/3）(2)决策文件（有正式决议）(3)执行记录（有实施报告）(4)检查评估（有结果反馈）。缺失任一环节或会议人数不足三分之二，标记为\"程序闭环缺失\"。",
+  "threshold": {
+    "会议出席率": "<66.7%视为无效决策",
+    "闭环完成率": "<100%即标记缺失"
+  },
+  "confidence": {
+    "高": {
+      "会议出席<2/3+无正式决议": 0.95
+    },
+    "中": {
+      "仅缺执行记录或检查报告": 0.75
+    }
+  },
+  "false_positive": [
+    "紧急事项走\"先执行后补程序\"通道（需有审批记录）",
+    "部分小事项(金额<50万)经授权简化流程",
+    "会议纪要会后补充但已归档"
+  ],
+  "verification_steps": [
+    "调取所有三重一大事项的会议记录原件",
+    "核验签到表人数与应到人数",
+    "确认议题是否在会议通知中",
+    "检查决议是否正式行文",
+    "追踪执行结果是否有反馈记录"
+  ],
+  "law_refs": [
+    "国有企业领导人员廉洁从业若干规定",
+    "三重一大决策制度实施办法",
+    "经济责任审计规定第十五条"
+  ],
+  "output_fields": [
+    "decision_id",
+    "type",
+    "amount",
+    "meeting_date",
+    "attendance_rate",
+    "approval",
+    "execution",
+    "evaluation",
+    "missing_items",
+    "severity"
+  ],
+  "sample_data": "[{\"id\": \"D001\", \"type\": \"重大项目投资\", \"amount\": 80000000, \"meeting_date\": \"2025-03-15\", \"出席\": 5, \"应到\": 7, \"决议\": \"有\", \"执行\": \"有\", \"检查\": \"有\"}, {\"id\": \"D002\", \"type\": \"大额资产处置\", \"amount\": 15000000, \"meeting_date\": \"2025-05-20\", \"出席\": 4, \"应到\": 7, \"决议\": \"有\", \"执行\": \"无\", \"检查\": \"无\"}]",
+  "expected_output": "D001：完整（出席率71.4%>2/3，闭环完整）；D002：缺失执行记录和检查评估，出席率57.1%<2/3 → 疑似无效决策",
+  "sql_template": "SELECT * FROM three_heavy_decisions WHERE attendance/expected*100<66.7 OR approval IS NULL OR execution IS NULL OR evaluation IS NULL"
+}

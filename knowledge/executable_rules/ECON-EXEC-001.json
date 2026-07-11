@@ -1,0 +1,78 @@
+{
+  "rule_id": "ECON-EXEC-001",
+  "business_line": "经济责任审计",
+  "rule_name": "任期交界点异常支出（前后3个月集中支付）",
+  "required_fields": [
+    {
+      "name": "payment_date",
+      "type": "date"
+    },
+    {
+      "name": "payment_amount",
+      "type": "number",
+      "unit": "元"
+    },
+    {
+      "name": "recipient",
+      "type": "string"
+    },
+    {
+      "name": "payment_description",
+      "type": "string"
+    },
+    {
+      "name": "approver",
+      "type": "string"
+    },
+    {
+      "name": "handover_date",
+      "type": "date"
+    }
+  ],
+  "logic": "以离任交接日期为基准，前后各90天为窗口期。统计窗口期内支付金额、笔数和收款方，与全年月均比较。窗口期月均金额或笔数 > 全年月均*3倍，且收款方集中度>60%，标记为\"交界点异常支出\"。",
+  "threshold": {
+    "金额倍数": ">全年月均*3",
+    "笔数倍数": ">全年月均*3",
+    "收款方集中度": ">60%窗口期总金额"
+  },
+  "confidence": {
+    "高": {
+      "金额倍数>3+收款方集中度>60%+无交接前审批": 0.9
+    },
+    "中": {
+      "仅金额倍数>3": 0.7
+    }
+  },
+  "false_positive": [
+    "季节性集中支付（如年底结算、项目尾款）",
+    "政策要求的集中支付（如疫情期间特别支付）",
+    "上级统一安排的集中采购",
+    "确实正常的工程项目进度款结算"
+  ],
+  "verification_steps": [
+    "逐笔核验窗口期支出的审批手续是否齐全",
+    "对比交接前与交接后的审批人并记录",
+    "检查收款方与领导是否存在关联关系",
+    "访谈财务人员了解集中支付的真实原因",
+    "比对预算和实际支出匹配度"
+  ],
+  "law_refs": [
+    "党政主要领导干部和国有企事业单位主要领导人员经济责任审计规定",
+    "财政违法行为处罚处分条例"
+  ],
+  "output_fields": [
+    "handover_date",
+    "window_start",
+    "window_end",
+    "window_total",
+    "window_monthly_avg",
+    "annual_avg",
+    "ratio",
+    "recipient_concentration",
+    "severity",
+    "confidence"
+  ],
+  "sample_data": "{\"handover_date\": \"2025-06-30\", \"全年月均支出\": 1200000, \"窗口期支出\": [{\"date\": \"2025-04-15\", \"amount\": 5500000, \"recipient\": \"X建设公司\", \"desc\": \"工程款\"}, {\"date\": \"2025-05-20\", \"amount\": 3200000, \"recipient\": \"X建设公司\", \"desc\": \"工程款\"}, {\"date\": \"2025-06-28\", \"amount\": 1800000, \"recipient\": \"Y设备公司\", \"desc\": \"设备采购\"}], \"全年总支出\": 14400000}",
+  "expected_output": "窗口期(2025-04-01至2025-06-30)总支出=1050万, 月均350万, 全年月均120万, 倍数=2.92, 接近阈值; X建设公司集中度82.86% → 需核验审批手续",
+  "sql_template": "SELECT payment_date,amount,recipient,approver FROM payment_journal WHERE payment_date BETWEEN handover_date-90 AND handover_date+90 GROUP BY recipient ORDER BY amount DESC"
+}

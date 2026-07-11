@@ -1,0 +1,67 @@
+{
+  "rule_id": "PROC-EXEC-002",
+  "business_line": "采购招投标审计",
+  "rule_name": "报价异常低价（低于平均值50%）",
+  "required_fields": [
+    {
+      "name": "bidder",
+      "type": "string"
+    },
+    {
+      "name": "bid_price",
+      "type": "number",
+      "unit": "元"
+    },
+    {
+      "name": "budget_control",
+      "type": "number",
+      "unit": "元"
+    },
+    {
+      "name": "other_bidders_prices",
+      "type": "array[number]"
+    }
+  ],
+  "logic": "计算所有有效报价的算术平均值，筛出报价<平均值*0.5的投标人；同时比较次低报价和最高限价阈值。",
+  "threshold": {
+    "低于平均值50%": "触发异常低价审查",
+    "低于次低报价50%": "触发",
+    "低于最高限价45%": "触发"
+  },
+  "confidence": {
+    "高": {
+      "低于平均值50%+低于次低50%": 0.95
+    },
+    "中": {
+      "仅低于平均值50%": 0.75
+    }
+  },
+  "false_positive": [
+    "企业有特殊技术优势或专利",
+    "新产品推广期战略性亏损报价",
+    "清仓或处理库存的特殊情况",
+    "联合体投标内部成本分摊"
+  ],
+  "verification_steps": [
+    "要求投标人7日内提供书面成本构成说明",
+    "逐项核验材料费、人工费、管理费",
+    "对比该企业历史报价与行业均价",
+    "确认是否属于异常低价审查办法规定的四种情形（财库〔2026〕2号）"
+  ],
+  "law_refs": [
+    "财库〔2026〕2号 异常低价审查办法",
+    "招标投标法第四十一条",
+    "政府采购法实施条例第五十条"
+  ],
+  "output_fields": [
+    "bidder",
+    "bid_price",
+    "avg_price",
+    "threshold_50pct",
+    "triggered",
+    "confidence"
+  ],
+  "sample_data": "{\"bidders\": [{\"name\": \"A\", \"price\": 1000000}, {\"name\": \"B\", \"price\": 950000}, {\"name\": \"C\", \"price\": 420000}, {\"name\": \"D\", \"price\": 880000}], \"control_price\": 1200000}",
+  "expected_output": "平均价=812500, 50%阈值=406250, C报价420000>406250, 未触发异常低价, 但接近阈值需关注说明",
+  "sql_template": "SELECT bidder,bid_price,AVG(bid_price)OVER() AS avg_price,bid_price/(AVG(bid_price)OVER()) AS ratio FROM bid_open_table WHERE ratio<0.5"
+}
