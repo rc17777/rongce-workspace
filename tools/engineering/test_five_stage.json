@@ -1,0 +1,35 @@
+{
+  "project_name": "XX市道路改造工程（测试数据）",
+  "items": [
+    {
+      "code": "040101001001",
+      "name": "挖一般土方",
+      "unit": "m³",
+      "estimate": 1200000,
+      "budget_estimate": 1150000,
+      "budget": 1100000,
+      "settlement": 1350000,
+      "final_account": 1380000
+    },
+    {
+      "code": "040103002001",
+      "name": "填方",
+      "unit": "m³",
+      "estimate": 800000,
+      "budget_estimate": 780000,
+      "budget": 760000,
+      "settlement": 820000,
+      "final_account": 830000
+    },
+    {
+      "code": "040203001001",
+      "name": "水泥稳定碎石基层",
+      "unit": "m²",
+      "estimate": 2500000,
+      "budget_estimate": 2450000,
+      "budget": 2400000,
+      "settlement": 2580000,
+      "final_account": 2620000
+    }
+  ]
+}

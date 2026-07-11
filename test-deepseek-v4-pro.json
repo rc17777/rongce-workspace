@@ -1,0 +1,10 @@
+{
+  "model": "deepseek-v4-pro",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello, this is a test from OpenClaw web UI. Reply with 'DeepSeek V4 Pro is working'."
+    }
+  ],
+  "max_tokens": 20
+}

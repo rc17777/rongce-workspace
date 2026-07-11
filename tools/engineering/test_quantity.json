@@ -1,0 +1,15 @@
+{
+  "project_name": "XX市道路改造工程（清单核对测试）",
+  "tender_items": [
+    {"code": "040101001001", "name": "挖一般土方", "unit": "m³", "quantity": 15000, "unit_price": 28.5, "total_price": 427500},
+    {"code": "040103002001", "name": "填方", "unit": "m³", "quantity": 12000, "unit_price": 18.2, "total_price": 218400},
+    {"code": "040203001001", "name": "水泥稳定碎石基层", "unit": "m²", "quantity": 35000, "unit_price": 72.0, "total_price": 2520000},
+    {"code": "040204001001", "name": "沥青混凝土面层", "unit": "m²", "quantity": 32000, "unit_price": 95.0, "total_price": 3040000}
+  ],
+  "settlement_items": [
+    {"code": "040101001001", "name": "挖一般土方", "unit": "m³", "quantity": 16800, "unit_price": 28.5, "total_price": 478800},
+    {"code": "040103002001", "name": "填方", "unit": "m³", "quantity": 12100, "unit_price": 18.2, "total_price": 220220},
+    {"code": "040203001001", "name": "水泥稳定碎石基层", "unit": "m²", "quantity": 37000, "unit_price": 75.0, "total_price": 2775000},
+    {"code": "040205001001", "name": "人行道铺装", "unit": "m²", "quantity": 5000, "unit_price": 120.0, "total_price": 600000}
+  ]
+}

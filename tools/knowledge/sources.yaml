@@ -1,0 +1,130 @@
+# 融策知识Agent — 采集源配置
+# ==================================
+# 域名约定:
+#   domain_1_audit     — 审计法规与准则
+#   domain_2_engineering — 工程法规与标准
+#   domain_3_ai        — AI前沿技术
+#
+# 采集类型 (type):
+#   html_parse    — 通用HTML页面链接提取
+#   rss_alt       — 中国政府网站类RSS（回退到HTML解析）
+#   github_trending — GitHub Trending
+#   arxiv         — arXiv论文
+#
+# 频率 (frequency):
+#   hourly / daily / weekly / monthly
+# ==================================
+
+sources:
+
+  # ========================================
+  # 域1: 审计法规与准则
+  # ========================================
+  domain_1_audit:
+    - name: "财政部-财政新闻"
+      url: "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/"
+      type: html_parse
+      frequency: daily
+      selector: ".newsList a"
+      link_filter: ""
+
+    - name: "审计署-审计动态"
+      url: "https://www.audit.gov.cn/n5/n26/index.html"
+      type: html_parse
+      frequency: daily
+      selector: "a"
+      link_filter: ""
+
+    - name: "中国政府采购报"
+      url: "https://www.cgpnews.cn/"
+      type: html_parse
+      frequency: weekly
+      selector: "a[href*='article']"
+      link_filter: ""
+
+    - name: "国务院政策文件库"
+      url: "https://www.gov.cn/zhengce/zhengcewenjianku/"
+      type: html_parse
+      frequency: weekly
+      selector: "a"
+      link_filter: ""
+
+    - name: "国家发改委-政策"
+      url: "https://www.ndrc.gov.cn/fzggw/jgsj/zcs/sjdt/"
+      type: html_parse
+      frequency: weekly
+      selector: "a"
+      link_filter: ""
+
+  # ========================================
+  # 域2: 工程法规与标准
+  # ========================================
+  domain_2_engineering:
+    - name: "住建部-政策发布"
+      url: "https://www.mohurd.gov.cn/gongkai/zhengce/zhengcefilelib/"
+      type: html_parse
+      frequency: weekly
+      selector: "a"
+      link_filter: ""
+
+    - name: "最高法-司法解释"
+      url: "https://www.court.gov.cn/fabu-gengduo-19.html"
+      type: html_parse
+      frequency: monthly
+      selector: "a"
+      link_filter: ""
+
+    - name: "中国建设工程造价信息网"
+      url: "http://www.cecn.gov.cn/"
+      type: html_parse
+      frequency: monthly
+      selector: "a"
+      link_filter: ""
+
+    - name: "各省财政评审中心"
+      url: "https://www.mof.gov.cn/"
+      type: html_parse
+      frequency: monthly
+      selector: "a"
+      link_filter: "评审"
+
+  # ========================================
+  # 域3: AI前沿技术
+  # ========================================
+  domain_3_ai:
+    - name: "GitHub Trending Python"
+      url: "https://github.com/trending/python?since=daily"
+      type: github_trending
+      frequency: daily
+
+    - name: "arXiv CS.AI 新论文"
+      url: "https://arxiv.org/"
+      type: arxiv
+      frequency: weekly
+      categories:
+        - cs.AI
+        - cs.CL
+        - cs.SE
+
+    - name: "机器之心"
+      url: "https://www.jiqizhixin.com/"
+      type: html_parse
+      frequency: daily
+      selector: "a[href*='/articles/']"
+      link_filter: ""
+
+    - name: "量子位"
+      url: "https://www.qbitai.com/"
+      type: html_parse
+      frequency: daily
+      selector: "a"
+      link_filter: ""
+
+# ========================================
+# 全局配置
+# ========================================
+global:
+  max_articles_per_source: 20
+  request_timeout_seconds: 30
+  user_agent: "RongceBot/1.0"
+  seen_urls_retention_days: 90

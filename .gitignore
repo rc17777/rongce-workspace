@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 环境
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 日志和临时文件
+*.log
+logs/
+*.bak
+
+# 敏感文件
+*secret*
+*api_key*
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 知识流水线去重记录（运行时生成）
+tools/knowledge/logs/scheduler_state.json
+tools/knowledge/logs/seen_urls.json
+
+# 测试输出
+tools/engineering/output_*.json
+tools/engineering/output_*.md

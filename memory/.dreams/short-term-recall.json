@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-03T14:48:46.469Z",
+  "entries": {
+    "memory:memory/2026-06-26.md:1:23": {
+      "key": "memory:memory/2026-06-26.md:1:23",
+      "path": "memory/2026-06-26.md",
+      "startLine": 1,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "# 2026-06-26 ## 今日记录 ### 1. 探索了阿里巴巴开源的 AI 自动剪辑项目 - **FunClip** — 基于语音识别的智能视频剪辑工具（达摩院通义实验室） - **Pixelle-Video** — 全自动视频生成流水线（AIDC-AI） - 输入主题 → AI 写文案 → 生成分镜 → 生成素材 → TTS 配音 → BGM 混音 → 输出成片 - GitHub: https://github.com/AIDC-AI/Pixelle-Video - Windows 一键整合包: https://github.com/AIDC-AI/Pixelle-Video/releases ### 2. 电脑配置分析 - 当前配置: Snapdragon 8cx Gen 3 + 16GB RAM + Qualcomm Adreno 集成显卡 - **结论**: ARM 架构 + 无 NVIDIA GPU，无法本地运行 Pixelle-Video - 需要: x86 架构 + NVIDIA RTX 3060 12GB+ 显存 ### 3. 待办: 购买新电脑后安装 Pixelle-Video - 推荐配置: RTX 3060 12GB 起步，32GB 内存，SSD 100GB+ - 备选方案: 云端 API 工作流（阿里云百炼 + Stable Diffusion API + 剪映 API） ## 其他 - 用户正在了解开源项目，对 AI 工具感兴趣",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.35113663002581263,
+      "maxScore": 0.35113663002581263,
+      "firstRecalledAt": "2026-06-28T02:05:13.111Z",
+      "lastRecalledAt": "2026-06-28T02:05:13.111Z",
+      "queryHashes": [
+        "0f0d75ef2467"
+      ],
+      "recallDays": [
+        "2026-06-28"
+      ],
+      "conceptTags": [
+        "pixelle-video",
+        "aidc-ai",
+        "github.com/aidc-ai/pixelle-video",
+        "今日",
+        "记录",
+        "探索",
+        "阿里巴巴",
+        "自动"
+      ]
+    },
+    "memory:memory/2026-06-25.md:1:29": {
+      "key": "memory:memory/2026-06-25.md:1:29",
+      "path": "memory/2026-06-25.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "## Session: 2026-06-25 Afternoon - 融策审计智析Agent架构设计 ### 核心工作 1. 分析了微信公众号文章《审计系统本体论》对融策构建审计智析Agent的借鉴意义 2. 设计了完整的Agent架构：MCP接口 + 三级复核 + 多模型路由 + AGR知识库 + RAG检索 3. 针对融策实际业务（政府审计+工程咨询）重构了AGR库和Agent能力 4. 生成了7个Excel文件：面试题库、培训计划、职级体系、股权激励、项目跟投、薪酬测算、团队对标 ### 关键决策 - 限定国内大模型：DeepSeek V4 Pro、Qwen、Kimi、智谱GLM - 混合存储：本地MinIO（敏感数据）+ 云OSS（非敏感数据） - 高精度OCR：多引擎融合（百度/腾讯/自研），目标99.5% - 三序列薪酬：技术(P)/专业(A)/工程(E)，差异化激励 ### 生成文件 - 融策面试题库.xlsx（36题） - 融策入职培训计划.xlsx（30天） - 融策技术职级体系.xlsx（P5-P9） - 融策股权激励方案.xlsx - 融策项目跟投操作细则.xlsx - 融策薪酬测算工具.xlsx - 融策现有团队对标方案.xlsx ### 待跟进 - 用户关注薪酬体系和股权激励，需继续深化 - 招聘优先级：CTO > 算法工程师 > 后端/数据工程师 > 产品经理",
+      "recallCount": 6,
+      "dailyCount": 0,
+      "totalScore": 3.009691384144045,
+      "maxScore": 0.5604546634448151,
+      "firstRecalledAt": "2026-06-28T09:19:13.734Z",
+      "lastRecalledAt": "2026-07-03T14:48:46.469Z",
+      "queryHashes": [
+        "88071754115b",
+        "9168de5bd25c",
+        "317b8fc962e9",
+        "3cead97b9ea1",
+        "6e1395c9e464",
+        "c6cdf2b447c6"
+      ],
+      "recallDays": [
+        "2026-06-28",
+        "2026-07-03"
+      ],
+      "conceptTags": [
+        "百度/腾讯/自研",
+        "目标99.5",
+        "融策面试题库.xlsx",
+        "融策入职培训计划.xlsx",
+        "融策技术职级体系.xlsx",
+        "p5-p9",
+        "融策股权激励方案.xlsx",
+        "融策项目跟投操作细则.xlsx"
+      ]
+    },
+    "memory:memory/2026-06-28.md:1:16": {
+      "key": "memory:memory/2026-06-28.md:1:16",
+      "path": "memory/2026-06-28.md",
+      "startLine": 1,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "# 2026-06-28 ## 交易Agent框架调研 - 搜索了交易类AI Agent开源项目 - 重点分析了 TradingAgents 和 AI Hedge Fund 两个头部项目 ## 融策审计智析Agent v2 架构增强 - 将交易Agent的4个核心设计模式迁移到审计场景 - 生成方案文档：`融策审计智析Agent-v2-交易Agent架构借鉴.md` ### 四个借鉴模式 1. 质疑-验证辩论引擎（信任方 vs 质疑方 → 仲裁） 2. 审计准则专家群（5个准则Agent并行推演） 3. 独立质量复核Agent（一票否决权，与前期Agent隔离） 4. LangGraph工作流编排（Checkpoint中断恢复）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5144466602357083,
+      "maxScore": 0.5144466602357083,
+      "firstRecalledAt": "2026-06-28T11:01:14.988Z",
+      "lastRecalledAt": "2026-06-28T11:01:14.988Z",
+      "queryHashes": [
+        "9168de5bd25c"
+      ],
+      "recallDays": [
+        "2026-06-28"
+      ],
+      "conceptTags": [
+        "融策审计智析agent-v2-交易agent架构借鉴.md",
+        "质疑-验证辩论引擎",
+        "交易",
+        "框架",
+        "搜索",
+        "项目",
+        "重点",
+        "分析"
+      ]
+    },
+    "memory:memory/2026-06-28.md:1:27": {
+      "key": "memory:memory/2026-06-28.md:1:27",
+      "path": "memory/2026-06-28.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-06-28 ## 交易Agent框架调研 - 搜索了交易类AI Agent开源项目 - 重点分析了 TradingAgents 和 AI Hedge Fund 两个头部项目 ## 融策审计智析Agent v2 架构增强 - 将交易Agent的4个核心设计模式迁移到审计场景 - 生成方案文档：`融策审计智析Agent-v2-交易Agent架构借鉴.md` ### 四个借鉴模式 1. 质疑-验证辩论引擎（信任方 vs 质疑方 → 仲裁） 2. 审计准则专家群（5个准则Agent并行推演） 3. 独立质量复核Agent（一票否决权，与前期Agent隔离） 4. LangGraph工作流编排（Checkpoint中断恢复） ## 底稿编制指南 → Agent知识库/评分规则/架构合并 - 来源：微信公众号文章《审计底稿编制指南（上）》 - 生成3个交付物： 1. `rag/审计底稿编制指南-知识库.md` — 12个KB条目，RAG检索就绪 2. `审计底稿质量自动评分规则.md` — 4维核心指标+3大扣分项，L1复核用 3. `底稿指南×Agent架构-对照合并.md` — 5项增强方案，含LangGraph增强图 ### 关键发现 - v2三级复核架构与行业标准完全一致 ✅ - 10项概念映射：完全覆盖1/10，部分覆盖4/10，未覆盖5/10 - 5项增强：L1评分引擎、输出结构化、索引子系统、年度对比、知识注入",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "totalScore": 2.0216321058482714,
+      "maxScore": 0.5444319714458723,
+      "firstRecalledAt": "2026-07-03T08:51:38.837Z",
+      "lastRecalledAt": "2026-07-03T14:48:46.469Z",
+      "queryHashes": [
+        "317b8fc962e9",
+        "3cead97b9ea1",
+        "6e1395c9e464",
+        "c6cdf2b447c6"
+      ],
+      "recallDays": [
+        "2026-07-03"
+      ],
+      "conceptTags": [
+        "融策审计智析agent-v2-交易agent架构借鉴.md",
+        "质疑-验证辩论引擎",
+        "agent知识库/评分规则/架构合并",
+        "rag/审计底稿编制指南-知识库.md",
+        "审计底稿质量自动评分规则.md",
+        "agent架构-对照合并.md",
+        "完全覆盖1/10",
+        "部分覆盖4/10"
+      ]
+    },
+    "memory:memory/2026-06-28.md:22:29": {
+      "key": "memory:memory/2026-06-28.md:22:29",
+      "path": "memory/2026-06-28.md",
+      "startLine": 22,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "3. `底稿指南×Agent架构-对照合并.md` — 5项增强方案，含LangGraph增强图 ### 关键发现 - v2三级复核架构与行业标准完全一致 ✅ - 10项概念映射：完全覆盖1/10，部分覆盖4/10，未覆盖5/10 - 5项增强：L1评分引擎、输出结构化、索引子系统、年度对比、知识注入 - P0优先：L1评分引擎(3天)+输出结构化(2天)",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.7835128629396111,
+      "maxScore": 0.4131622685928233,
+      "firstRecalledAt": "2026-07-03T08:51:38.837Z",
+      "lastRecalledAt": "2026-07-03T09:35:09.721Z",
+      "queryHashes": [
+        "317b8fc962e9",
+        "3cead97b9ea1"
+      ],
+      "recallDays": [
+        "2026-07-03"
+      ],
+      "conceptTags": [
+        "agent架构-对照合并.md",
+        "完全覆盖1/10",
+        "部分覆盖4/10",
+        "未覆盖5/10",
+        "底稿",
+        "指南",
+        "架构",
+        "对照"
+      ]
+    }
+  }
+}

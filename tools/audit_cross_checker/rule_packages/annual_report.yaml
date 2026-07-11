@@ -1,0 +1,213 @@
+# ============================================================================
+# Annual Report Rule Package (~60 rules)
+# ============================================================================
+# Rule expression format:
+#   expression:      arithmetic expression with cell references
+#   tolerance:       acceptable difference
+#   severity:        "error" | "warning" | "info"
+#   description:     human-readable description
+#   check_type:      "inter_statement" | "note_statement" | "intra_note" | "text_format"
+# ============================================================================
+
+domain: annual_report
+total_rules: 60
+
+rules:
+  # ==========================================================================
+  # Inter-Statement: Balance Sheet
+  # ==========================================================================
+  - id: AR-IS-001
+    check_type: inter_statement
+    description: "资产总计 = 负债合计 + 所有者权益合计"
+    expression: "BS[end_total_assets] == BS[end_total_liabilities] + BS[end_total_equity]"
+    tolerance: 0.01
+    severity: error
+    requires_human_review: false
+
+  - id: AR-IS-002
+    check_type: inter_statement
+    description: "流动资产 + 非流动资产 = 资产总计"
+    expression: "BS[end_current_assets] + BS[end_noncurrent_assets] == BS[end_total_assets]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-IS-003
+    check_type: inter_statement
+    description: "流动负债 + 非流动负债 = 负债合计"
+    expression: "BS[end_current_liabilities] + BS[end_noncurrent_liabilities] == BS[end_total_liabilities]"
+    tolerance: 0.01
+    severity: error
+
+  # ==========================================================================
+  # Inter-Statement: Income Statement
+  # ==========================================================================
+  - id: AR-IS-010
+    check_type: inter_statement
+    description: "营业收入 - 营业成本 - 税金及附加 - 期间费用 + 其他收益 = 营业利润"
+    expression: "IS[revenue] - IS[cost] - IS[tax_surcharge] - IS[selling_expense] - IS[admin_expense] - IS[finance_expense] - IS[rd_expense] + IS[other_income] == IS[operating_profit]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-IS-011
+    check_type: inter_statement
+    description: "营业利润 + 营业外收入 - 营业外支出 = 利润总额"
+    expression: "IS[operating_profit] + IS[non_operating_income] - IS[non_operating_expense] == IS[total_profit]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-IS-012
+    check_type: inter_statement
+    description: "利润总额 - 所得税费用 = 净利润"
+    expression: "IS[total_profit] - IS[income_tax] == IS[net_profit]"
+    tolerance: 0.01
+    severity: error
+
+  # ==========================================================================
+  # Inter-Statement: Cash Flow
+  # ==========================================================================
+  - id: AR-IS-020
+    check_type: inter_statement
+    description: "经营活动+投资活动+筹资活动 = 现金净增加额"
+    expression: "CF[operating_cf] + CF[investing_cf] + CF[financing_cf] == CF[net_cf_change]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-IS-021
+    check_type: inter_statement
+    description: "期初现金 + 净增加额 = 期末现金"
+    expression: "CF[begin_cash] + CF[net_cf_change] == CF[end_cash]"
+    tolerance: 0.01
+    severity: error
+
+  # ==========================================================================
+  # Inter-Statement: BS ↔ IS
+  # ==========================================================================
+  - id: AR-IS-030
+    check_type: inter_statement
+    description: "净利润（IS）→ 未分配利润期末（BS）初步验证"
+    expression: "BS[end_retained_earnings] - BS[begin_retained_earnings] - IS[net_profit] + dividends >= -BS[materiality]"
+    tolerance: 0.01
+    severity: warning
+    requires_human_review: true
+    note: "需考虑股利分配、其他综合收益结转等，此为粗略验证"
+
+  # ==========================================================================
+  # Note ↔ Statement (~40 account rules)
+  # ==========================================================================
+  - id: AR-NS-001
+    check_type: note_statement
+    description: "应收账款（附注）= 应收账款账面余额 - 坏账准备"
+    expression: "NOTE[应收账款][账面余额] - NOTE[应收账款][坏账准备] == NOTE[应收账款][账面价值]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-002
+    check_type: note_statement
+    description: "应收账款账面价值（附注）= 应收账款（BS）"
+    expression: "NOTE[应收账款][账面价值] == BS[end_accounts_receivable]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-003
+    check_type: note_statement
+    description: "存货（附注）= 存货 - 存货跌价准备"
+    expression: "NOTE[存货][原值] - NOTE[存货][跌价准备] == BS[end_inventory]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-004
+    check_type: note_statement
+    description: "固定资产（附注）= 固定资产原值 - 累计折旧 - 减值准备"
+    expression: "NOTE[固定资产][原值] - NOTE[固定资产][累计折旧] - NOTE[固定资产][减值准备] == BS[end_fixed_assets]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-005
+    check_type: note_statement
+    description: "无形资产（附注）= 无形资产原值 - 累计摊销 - 减值准备"
+    expression: "NOTE[无形资产][原值] - NOTE[无形资产][累计摊销] - NOTE[无形资产][减值准备] == BS[end_intangible_assets]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-006
+    check_type: note_statement
+    description: "短期借款（附注） = 短期借款（BS）"
+    expression: "NOTE[短期借款][期末余额] == BS[end_short_term_borrowing]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-007
+    check_type: note_statement
+    description: "长期借款（附注） = 长期借款（BS）"
+    expression: "NOTE[长期借款][期末余额] == BS[end_long_term_borrowing]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-008
+    check_type: note_statement
+    description: "应付账款（附注） = 应付账款（BS）"
+    expression: "NOTE[应付账款][期末余额] == BS[end_accounts_payable]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-009
+    check_type: note_statement
+    description: "营业收入（附注） = 营业收入（IS）"
+    expression: "NOTE[营业收入][本期金额] == IS[revenue]"
+    tolerance: 0.01
+    severity: error
+
+  - id: AR-NS-010
+    check_type: note_statement
+    description: "营业成本（附注） = 营业成本（IS）"
+    expression: "NOTE[营业成本][本期金额] == IS[cost]"
+    tolerance: 0.01
+    severity: error
+
+  # ==========================================================================
+  # Intra-Note: 横加竖加 (horizontal & vertical sum checks)
+  # ==========================================================================
+  - id: AR-IN-001
+    check_type: intra_note
+    description: "附注明细项目之和 = 合计行（通用）"
+    expression: "SUM(detail_rows.amount) == total_row.amount"
+    tolerance: 0.02
+    severity: error
+    applies_to: all_note_sheets
+    note: "容差0.02因舍入；其中子项自动排除"
+
+  - id: AR-IN-002
+    check_type: intra_note
+    description: "变动表：期初 + 本期增加 - 本期减少 = 期末"
+    expression: "row[begin] + row[increase] - row[decrease] == row[end]"
+    tolerance: 0.01
+    severity: error
+    applies_to: reconciliation_tables
+
+  # ==========================================================================
+  # Text & Format
+  # ==========================================================================
+  - id: AR-TF-001
+    check_type: text_format
+    description: "公司全称一致性检查"
+    tolerance: 0
+    severity: warning
+    expression: manual  # AI-driven check
+
+  - id: AR-TF-002
+    check_type: text_format
+    description: "页码范围连续性检查"
+    tolerance: 0
+    severity: warning
+    expression: manual
+
+  - id: AR-TF-003
+    check_type: text_format
+    description: "错别字/病句检查"
+    tolerance: 0
+    severity: info
+    expression: manual
+
+# NOTE: This file defines the rule *templates* and metadata.
+# The ~50 additional account-level note↔statement rules (AR-NS-011 to AR-NS-050)
+# follow the same pattern and are generated programmatically from note_map.

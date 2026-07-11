@@ -1,0 +1,244 @@
+# ============================================================================
+# Performance Evaluation Rule Package (~45 rules)
+# ============================================================================
+# Performance evaluation is fundamentally different from annual/engineering:
+# It checks INDICATOR SYSTEM mathematical consistency and SCORING correctness,
+# NOT balance sheet equations or quantity-price relationships.
+# ============================================================================
+
+domain: performance
+total_rules: 45
+
+rules:
+  # ==========================================================================
+  # Indicator System: Weight Closure (权重闭合)
+  # ==========================================================================
+  - id: PE-WC-001
+    check_type: weight_closure
+    description: "一级指标权重之和 = 100%"
+    expression: "SUM(level1_weights) == 1.0"
+    tolerance: 0.0001
+    severity: error
+    note: "指标体系设计的数学基础——权重不闭合则整个评分体系无效"
+
+  - id: PE-WC-002
+    check_type: weight_closure
+    description: "每个一级指标下的二级指标权重之和 = 该一级指标权重"
+    expression: "SUM(level2_weights_for_level1_i) == level1_weight_i"
+    tolerance: 0.0001
+    severity: error
+
+  - id: PE-WC-003
+    check_type: weight_closure
+    description: "每个二级指标下的三级指标权重之和 = 该二级指标权重"
+    expression: "SUM(level3_weights_for_level2_j) == level2_weight_j"
+    tolerance: 0.0001
+    severity: error
+
+  - id: PE-WC-004
+    check_type: weight_closure
+    description: "所有三级指标权重之和 = 100%"
+    expression: "SUM(all_level3_weights) == 1.0"
+    tolerance: 0.0001
+    severity: error
+
+  # ==========================================================================
+  # Indicator System: Weighted Recursion (加权递推)
+  # ==========================================================================
+  - id: PE-WR-001
+    check_type: weighted_recursion
+    description: "三级指标加权得分 = 三级得分 × 三级权重"
+    expression: "weighted_score_l3_i == raw_score_l3_i * weight_l3_i"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-WR-002
+    check_type: weighted_recursion
+    description: "二级指标得分 = Σ(所属三级加权得分)"
+    expression: "score_l2_j == SUM(weighted_score_l3_for_j)"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-WR-003
+    check_type: weighted_recursion
+    description: "一级指标得分 = Σ(所属二级加权得分)"
+    expression: "score_l1_k == SUM(weighted_score_l2_for_k)"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-WR-004
+    check_type: weighted_recursion
+    description: "综合绩效得分 = Σ(一级加权得分)"
+    expression: "total_score == SUM(weighted_score_l1)"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-WR-005
+    check_type: weighted_recursion
+    description: "综合绩效得分 = Σ(三级指标 × 累计权重)"
+    expression: "total_score == SUM(raw_score_l3_i * cumulative_weight_i)"
+    tolerance: 0.001
+    severity: error
+    note: "两种计算路径应得出一致结果——验证递推链正确性"
+
+  # ==========================================================================
+  # Self-Score vs Review-Score (自评复评分立)
+  # ==========================================================================
+  - id: PE-SR-001
+    check_type: self_vs_review
+    description: "自评综合分独立计算（用自评原始分 + 权重递推）"
+    expression: "self_total == SUM(self_raw_scores * cumulative_weights)"
+    tolerance: 0.001
+    severity: info
+    note: "验证自评表自身数学一致性——不依赖复评分"
+
+  - id: PE-SR-002
+    check_type: self_vs_review
+    description: "复评综合分独立计算（用复评原始分 + 权重递推）"
+    expression: "review_total == SUM(review_raw_scores * cumulative_weights)"
+    tolerance: 0.001
+    severity: info
+    note: "验证复评表自身数学一致性"
+
+  - id: PE-SR-003
+    check_type: self_vs_review
+    description: "自评综合分 − 复评综合分的绝对值 > 5分 → 标记"
+    expression: "ABS(self_total - review_total) > 5.0"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+    note: "差异超过5分 = 评分尺度不一致，常见舞弊手法"
+
+  - id: PE-SR-004
+    check_type: self_vs_review
+    description: "逐项三级指标：自评 − 复评差异 > 30% → 标记"
+    expression: "ABS(self_l3 - review_l3) / MAX(self_l3, review_l3) > 0.3"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  # ==========================================================================
+  # Fund Efficiency: Three-Rate Cross-Verification (三率互证)
+  # ==========================================================================
+  - id: PE-FE-001
+    check_type: fund_efficiency
+    description: "资金到位率 = 实际到位资金 / 计划到位资金"
+    expression: "arrival_rate == actual_arrival / planned_arrival"
+    tolerance: 0.001
+    severity: error
+    note: "到位率是后续所有分析的基础"
+
+  - id: PE-FE-002
+    check_type: fund_efficiency
+    description: "资金使用率 = 实际支出 / 实际到位"
+    expression: "usage_rate == actual_expense / actual_arrival"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-FE-003
+    check_type: fund_efficiency
+    description: "预算执行率 = 实际支出 / 批复预算"
+    expression: "execution_rate == actual_expense / approved_budget"
+    tolerance: 0.001
+    severity: error
+
+  - id: PE-FE-004
+    check_type: fund_efficiency
+    description: "到位率=100% 且 使用率<50% → 资金沉淀"
+    expression: "arrival_rate >= 1.0 AND usage_rate < 0.5"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  - id: PE-FE-005
+    check_type: fund_efficiency
+    description: "到位率<100% 但 执行率>到位率 → 逻辑矛盾"
+    expression: "arrival_rate < 1.0 AND execution_rate > arrival_rate"
+    tolerance: 0.0
+    severity: error
+    note: "支出数不可能超过到位数——数据必有一方错误"
+
+  - id: PE-FE-006
+    check_type: fund_efficiency
+    description: "到位率=100% 且 执行率=100% → 全部到位全部执行"
+    expression: "arrival_rate >= 1.0 AND execution_rate >= 1.0"
+    tolerance: 0.001
+    severity: info
+    note: "理想状态，但需关注是否突击花钱"
+
+  - id: PE-FE-007
+    check_type: fund_efficiency
+    description: "执行率 < 60% → 重大问题"
+    expression: "execution_rate < 0.6"
+    tolerance: 0.0
+    severity: error
+    requires_human_review: true
+
+  - id: PE-FE-008
+    check_type: fund_efficiency
+    description: "执行率 < 80% → 偏低预警"
+    expression: "execution_rate < 0.8"
+    tolerance: 0.0
+    severity: warning
+
+  # ==========================================================================
+  # Target Completion (目标完成度)
+  # ==========================================================================
+  - id: PE-TC-001
+    check_type: target_completion
+    description: "完成率 = 实际值 / 目标值"
+    expression: "completion_rate == actual_value / target_value"
+    tolerance: 0.001
+    severity: info
+
+  - id: PE-TC-002
+    check_type: target_completion
+    description: "完成率 ≥ 90% → 该指标满分"
+    expression: "completion_rate >= 0.9"
+    tolerance: 0.0
+    severity: info
+    external_threshold: "full_score_threshold"
+
+  - id: PE-TC-003
+    check_type: target_completion
+    description: "差1%扣1分模式：得分 = 满分 − (1 − 完成率) × 100 × 每百分点扣分"
+    expression: "score == full_score - MAX(0, (1.0 - completion_rate) * 100 * per_point_value)"
+    tolerance: 0.01
+    severity: warning
+    external_threshold: "deduction_mode=per_point, per_point_value"
+
+  - id: PE-TC-004
+    check_type: target_completion
+    description: "超目标完成 → 按规则确定是否加分"
+    expression: "completion_rate > 1.0"
+    tolerance: 0.0
+    severity: info
+    note: "需检查绩效方案是否允许超目标加分"
+
+  # ==========================================================================
+  # Multi-Source Verification (多源核验)
+  # ==========================================================================
+  - id: PE-MS-001
+    check_type: multi_source_verification
+    description: "三数（台账/财务账/现场抽查）一致性检查"
+    expression: "ledger_value == financial_value AND financial_value == on_site_value"
+    tolerance: 0.01
+    severity: warning
+    requires_human_review: true
+
+  - id: PE-MS-002
+    check_type: multi_source_verification
+    description: "现场抽查数 < 自报数 → 按现场数重新计分"
+    expression: "on_site_value < self_reported_value"
+    tolerance: 0.0
+    severity: error
+    requires_human_review: true
+    note: "审计保守原则：以核查数低的为准"
+
+  - id: PE-MS-003
+    check_type: multi_source_verification
+    description: "按多源最低值重算综合得分"
+    expression: "adjusted_value = MIN(ledger, financial, on_site)"
+    tolerance: 0.01
+    severity: info
+    external_threshold: "multi_source.rule=min"

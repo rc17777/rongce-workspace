@@ -1,0 +1,89 @@
+# ============================================================================
+# Default Threshold Configuration — 勾稽引擎外部阈值
+# ============================================================================
+# These thresholds are domain-specific and SHOULD NOT be hardcoded in the
+# rule engine. Users can customize per project/department.
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Annual Report (年报审计)
+# ---------------------------------------------------------------------------
+annual_report:
+  tolerance: 0.01              # 算术容差（万元单位实际为1元）
+  materiality: 10000           # 重要性水平（元），低于此的差异标记为轻微
+  inter_statement:
+    bs_identity: true           # 资产 = 负债 + 权益
+    is_derivation: true         # 利润表推导链
+    cf_total: true              # 现金流量表净额合计
+  note_statement:
+    enabled: true
+    max_accounts: 41            # 最大科目数
+  intra_note:
+    subtotal_tolerance: 0.02    # 其中子项容差（稍大，因舍入）
+  text_format:
+    check_company_name: true
+    check_page_continuity: true
+    check_typo: true
+
+# ---------------------------------------------------------------------------
+# Special Audit (专项审计)
+# ---------------------------------------------------------------------------
+special_audit:
+  tolerance: 0.01
+  materiality: 5000
+  budget_vs_actual:
+    overspend_warning: 0.0      # 任何超支都标记
+    overspend_critical: 0.1     # 超支10%为重大问题
+    underspend_low: 0.3         # 执行率低于30%标记
+  term_comparison:
+    significant_change: 0.2     # 变动超过20%需说明
+  fund_balance:
+    verify_balance: true        # 期初+收入-支出=期末
+  problem_summary:
+    verify_amount_total: true   # 问题金额汇总校验
+  rectification:
+    track_incomplete: true      # 追踪未整改项
+
+# ---------------------------------------------------------------------------
+# Engineering (工程咨询)
+# ---------------------------------------------------------------------------
+engineering:
+  tolerance: 0.01
+  materiality: 50000            # 工程金额大，重要性水平更高
+  five_way:
+    verify_chain: true          # 概算≥预算≥合同价≥结算价≥决算价
+    estimate_to_settlement: 0.15 # 概算到结算差异超过15%标记
+    budget_to_settlement: 0.1   # 预算到结算差异超过10%标记
+  boq:
+    verify_qty_total: true      # 清单量合计 = 分部分项之和
+    verify_price_total: true    # 合价 = 工程量 × 综合单价
+  variation:
+    verify_change_sum: true     # 变更增减合计 = 各变更项之和
+    material_change: 0.1        # 单次变更超过原合同10%标记
+  progress_payment:
+    verify_payment: true        # 进度款 = 完成量×单价 - 已付
+    overpayment_check: true     # 超付检查
+  material_adjustment:
+    verify_adjustment: true     # 材料调差计算验证
+
+# ---------------------------------------------------------------------------
+# Performance (绩效评价)
+# ---------------------------------------------------------------------------
+performance:
+  tolerance: 0.0001             # 权重精度要求更高
+  indicator:
+    weight_closure: true        # Σ同级权重 = 100%
+    weighted_recursion: true    # 上级得分 = Σ(下级得分×权重)
+    self_review_split: true     # 自评/复评分立计算
+    self_review_difference: 5.0  # 自评vs复评差异>5分标记
+  fund_efficiency:
+    arrival_ok_threshold: 1.0   # 到位率 ≥ 100% = 正常
+    usage_low_threshold: 0.5    # 使用率 < 50% → 资金沉淀
+    execution_fair_threshold: 0.8  # 执行率 < 80% → 偏低
+    execution_critical_threshold: 0.6  # 执行率 < 60% → 重大问题
+  target_completion:
+    deduction_mode: "per_point" # "per_point" | "per_half_point" | "custom"
+    per_point_value: 1.0        # 差1%扣1分
+    full_score_threshold: 0.9   # 完成90%以上 = 满分
+  multi_source:
+    rule: "min"                 # "min" | "avg" | "manual"

@@ -1,0 +1,54 @@
+{
+  "project_name": "XX市道路改造工程（变更审核测试）",
+  "contract_amount": 8500000,
+  "changes": [
+    {
+      "change_id": "BG-2025-001",
+      "change_date": "2025-04-15",
+      "description": "路基淤泥换填，挖除不良土质后换填砂砾石",
+      "amount": 185000,
+      "approval_chain": ["监理审核", "建设单位审批", "设计单位确认"],
+      "approval_status": "approved",
+      "has_construction_log": true,
+      "construction_log_date": "2025-04-14",
+      "verifier": "李工",
+      "remark": "地质条件与勘察报告不符"
+    },
+    {
+      "change_id": "BG-2025-002",
+      "change_date": "2025-06-20",
+      "description": "新增人行道铺装面积800m²",
+      "amount": 96000,
+      "approval_chain": ["监理审核"],
+      "approval_status": "pending",
+      "has_construction_log": false,
+      "construction_log_date": "",
+      "verifier": "",
+      "remark": "社区要求增加"
+    },
+    {
+      "change_id": "BG-2025-003",
+      "change_date": "2025-07-05",
+      "description": "人行道路缘石材质由混凝土改为花岗岩",
+      "amount": -12000,
+      "approval_chain": ["监理审核", "建设单位审批"],
+      "approval_status": "approved",
+      "has_construction_log": true,
+      "construction_log_date": "2025-07-20",
+      "verifier": "王工",
+      "remark": "提升城市形象"
+    },
+    {
+      "change_id": "BG-2025-004",
+      "change_date": "2025-08-10",
+      "description": "沥青面层厚度由4cm增加至5cm",
+      "amount": 420000,
+      "approval_chain": ["监理审核"],
+      "approval_status": "rejected",
+      "has_construction_log": true,
+      "construction_log_date": "2025-08-09",
+      "verifier": "张工",
+      "remark": "原设计满足规范要求，不予变更"
+    }
+  ]
+}
