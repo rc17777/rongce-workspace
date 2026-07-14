@@ -1,0 +1,75 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- Title -->
+    <mxCell id="title" value="&lt;b&gt;项目组织架构与岗位职责图&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#2C3E50;" vertex="1" parent="1">
+      <mxGeometry x="250" y="10" width="300" height="30" as="geometry"/>
+    </mxCell>
+    
+    <!-- Top level: 项目负责人 -->
+    <mxCell id="top" value="&lt;b&gt;项目负责人&lt;/b&gt;&lt;br&gt;（注册会计师）&lt;br&gt;全面负责项目质量与进度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7F8C8D;strokeColor=#6C7A7D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="60" width="180" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Level 2: 审核组长 + 技术负责人 -->
+    <mxCell id="g1" value="&lt;b&gt;审核组长&lt;/b&gt;&lt;br&gt;（注册会计师）&lt;br&gt;现场审核组织、三级复核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="200" y="160" width="180" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="g2" value="&lt;b&gt;技术负责人&lt;/b&gt;&lt;br&gt;（高级工程师）&lt;br&gt;工程造价技术把关" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="420" y="160" width="180" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Level 3: 专业小组 -->
+    <mxCell id="g3" value="&lt;b&gt;财务审核组&lt;/b&gt;&lt;br&gt;（注册会计师2名）&lt;br&gt;• 账务核对&lt;br&gt;• 支出合规性检查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="280" width="180" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="g4" value="&lt;b&gt;工程审核组&lt;/b&gt;&lt;br&gt;（造价工程师2名）&lt;br&gt;• 工程量核实&lt;br&gt;• 造价审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="280" width="180" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="g5" value="&lt;b&gt;现场核实组&lt;/b&gt;&lt;br&gt;（助理人员2名）&lt;br&gt;• 实地查看&lt;br&gt;• 资产盘点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="500" y="280" width="180" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="g6" value="&lt;b&gt;资料分析组&lt;/b&gt;&lt;br&gt;（数据分析师2名）&lt;br&gt;• 数据交叉比对&lt;br&gt;• 异常识别" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="710" y="280" width="180" height="90" as="geometry"/>
+    </mxCell>
+    
+    <!-- Quality Control bottom -->
+    <mxCell id="qc" value="&lt;b&gt;质量控制部（独立）&lt;/b&gt;&lt;br&gt;三级复核制度&lt;br&gt;• 一级复核：项目组内交叉复核&lt;br&gt;• 二级复核：质控部复核&lt;br&gt;• 三级复核：技术负责人审定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D68910;fontColor=#2C3E50;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="310" y="420" width="240" height="90" as="geometry"/>
+    </mxCell>
+    
+    <!-- Edges -->
+    <mxCell id="et1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7F8C8D;strokeWidth=2;" edge="1" parent="1" source="top" target="g1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="et2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7F8C8D;strokeWidth=2;" edge="1" parent="1" source="top" target="g2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=2;" edge="1" parent="1" source="g1" target="g3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=2;" edge="1" parent="1" source="g1" target="g4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=2;" edge="1" parent="1" source="g1" target="g5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=2;" edge="1" parent="1" source="g1" target="g6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eqc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E67E22;strokeWidth=2;dashed=1;" edge="1" parent="1" source="g3" target="qc">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eqc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E67E22;strokeWidth=2;dashed=1;" edge="1" parent="1" source="g4" target="qc">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eqc3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E67E22;strokeWidth=2;dashed=1;" edge="1" parent="1" source="g5" target="qc">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eqc4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E67E22;strokeWidth=2;dashed=1;" edge="1" parent="1" source="g6" target="qc">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

@@ -1,63 +1,34 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
-<title>资金申报</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
-.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em}
-.masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
-.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
-.content{flex:1;display:flex;overflow:hidden}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:16px;letter-spacing:.25em;color:var(--teal);font-weight:500}
-.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
-h1{font-family:'Noto Serif SC',serif;font-weight:700;font-size:52px;color:var(--db);line-height:1.2}h1 .hl{color:var(--gold)}
-.divider{width:48px;height:2px;background:var(--gold)}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920"><title>资金申报</title><link rel="stylesheet" href="../shared/brochure-theme.css">
+<style>
+.sidebar{width:480px;height:100%;background:linear-gradient(145deg,var(--navy-dark),var(--navy));position:relative;overflow:hidden}
+.sidebar::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(197,149,92,0.06) 0%,transparent 50%);pointer-events:none}
+.sidebar .ring{position:absolute;width:250px;height:250px;border:1px solid rgba(197,149,92,0.04);border-radius:50%;pointer-events:none}
+.sidebar .ring.r1{right:-60px;top:-60px}.sidebar .ring.r2{left:-100px;bottom:-60px;width:350px;height:350px}
 </style></head>
 <body>
-<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
-<div class="content">
-  <div style="width:45%;background:var(--db);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
-    <div style="position:absolute;top:-100px;right:-100px;width:350px;height:350px;border:1px solid rgba(197,149,92,.1);border-radius:50%"></div>
-    <div style="position:absolute;bottom:-80px;left:-80px;width:250px;height:250px;border:1px solid rgba(197,149,92,.06);border-radius:50%"></div>
-    <div style="position:relative;z-index:1;padding:64px;color:#fff">
-      <div class="kicker" style="color:var(--gold);margin-bottom:24px">审计咨询 · 01</div>
-      <h1 style="color:#fff;font-size:64px;margin-bottom:16px">资金<span class="hl">申报</span></h1>
-      <div style="font-size:20px;color:rgba(255,255,255,.5);font-style:italic;font-family:'Noto Serif SC',serif">Special Bond Application</div>
-      <div class="divider" style="margin:28px 0"></div>
-      <div style="font-size:18px;color:rgba(255,255,255,.65);line-height:2">专项债资金申报咨询<br>项目包装咨询</div>
+<div class="nav"><span class="brand">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="fill"></span></div>
+<div class="page">
+  <div class="sidebar">
+    <div class="ring r1"></div><div class="ring r2"></div>
+    <div class="sidebar-inner" style="height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div class="kicker light">SPECIAL FUND</div>
+      <div class="t2 white" style="margin-top:12px;font-size:38px">专项资金<span class="gold">申报</span><br>与<span class="gold">绩效</span>管理</div>
+      <div class="line" style="width:50px;margin:20px 0"></div>
+      <div class="t4 white-dim" style="max-width:360px;font-size:14px">不止帮你把材料做合规，<br>更帮你把项目的"可批性"讲清楚。</div>
     </div>
   </div>
-  <div style="width:55%;padding:60px 64px;display:flex;flex-direction:column;justify-content:center">
-    <div style="margin-bottom:40px">
-      <p style="font-family:'Noto Serif SC',serif;font-size:24px;color:var(--il);line-height:1.9">
-        主要解决：<span style="color:var(--gold);font-weight:700">钱从哪来</span>
-      </p>
-      <p style="font-family:'Noto Serif SC',serif;font-size:20px;color:var(--il);line-height:1.9;margin-top:12px">
-        地方政府要发展、要建设、要民生，离不开资金。专项债是重要的融资渠道，但申报材料复杂、合规要求高、包装不到位就拿不到钱。
-      </p>
-    </div>
-    <div style="margin-bottom:32px;background:rgba(197,149,92,.06);padding:28px 32px;border-left:4px solid var(--gold)">
-      <div style="font-size:20px;font-weight:700;color:var(--db);margin-bottom:8px">融策价值</div>
-      <div style="font-size:18px;color:var(--il);line-height:1.8">不止帮你把材料做合规，更帮你把项目的<span style="color:var(--gold);font-weight:600">"可批性"讲清楚</span>，提高入库成功率。</div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:18px">
-      <div style="display:flex;align-items:flex-start;gap:16px">
-        <div style="min-width:10px;height:10px;background:var(--gold);border-radius:50%;margin-top:8px"></div>
-        <div><div style="font-size:20px;font-weight:600;color:var(--db)">专项债资金申报咨询</div><div style="font-size:16px;color:var(--il);margin-top:4px">项目筛选 · 一案两书编制 · 财政/发改双库入库 · 合规审核</div></div>
+  <div class="main" style="padding:80px 80px 80px 60px">
+    <div class="flex-col" style="height:100%;justify-content:center">
+      <div class="kicker">服务内容</div>
+      <div class="t2" style="margin-top:12px;font-size:32px">专项债<span class="gold">申报</span>与资金<span class="gold">绩效</span>全流程</div>
+      <div class="t4" style="margin-top:16px;max-width:800px">从项目筛选、可研编制、财务评价到绩效目标设定，提供全流程申报服务，确保材料合规、逻辑自洽、数据支撑充分。</div>
+      <div class="flex-col" style="gap:10px;margin-top:24px;max-width:700px">
+        <div class="step"><div class="num">01</div><div><div class="title">项目筛选与诊断</div><div class="desc">评估项目是否符合专项债/中央预算内投资方向，预判申报成功率</div></div></div>
+        <div class="step"><div class="num">02</div><div><div class="title">可研报告与财务评价</div><div class="desc">编制项目可行性研究报告，进行财务效益分析、偿债能力测算</div></div></div>
+        <div class="step"><div class="num">03</div><div><div class="title">绩效目标设定与论证</div><div class="desc">设定科学合理的绩效目标，编制事前绩效评估报告</div></div></div>
+        <div class="step"><div class="num">04</div><div><div class="title">申报材料编制与复核</div><div class="desc">全套申报材料编制、数据复核、逻辑校验</div></div></div>
       </div>
-      <div style="display:flex;align-items:flex-start;gap:16px">
-        <div style="min-width:10px;height:10px;background:var(--teal);border-radius:50%;margin-top:8px"></div>
-        <div><div style="font-size:20px;font-weight:600;color:var(--db)">项目包装咨询</div><div style="font-size:16px;color:var(--il);margin-top:4px">项目收益与融资自求平衡方案 · 可行性论证 · 风险评估</div></div>
-      </div>
-    </div>
-    <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="background:#fff;border:1px solid rgba(10,31,63,.08);padding:18px 22px"><div style="font-size:15px;color:var(--gold);font-weight:700;margin-bottom:6px">交付成果</div><div style="font-size:16px;color:var(--il);line-height:1.7">项目成熟度诊断 · 一案两书 · 入库申报材料 · 合规风险清单</div></div>
-      <div style="background:#fff;border:1px solid rgba(10,31,63,.08);padding:18px 22px"><div style="font-size:15px;color:var(--teal);font-weight:700;margin-bottom:6px">客户收益</div><div style="font-size:16px;color:var(--il);line-height:1.7">把项目从“想争取资金”推进到“具备可批、可讲、可审的条件”</div></div>
     </div>
   </div>
 </div>
-<div class="footer"></div>
-</body>
-</html>
+</body></html>

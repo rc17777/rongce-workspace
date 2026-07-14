@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "created": "2026-05-19",
+    "updated": "2026-05-29",
+    "methodology": "SkillX-inspired three-tier audit skill architecture (ZJU ZJUNLP)",
+    "methodology_ref": "references/skillx-audit-methodology.md",
+    "total_skills": {
+      "planning": 5,
+      "functional": 14,
+      "atomic": 25
+    }
+  },
+  "tiers": {
+    "planning": {
+      "description": "审计项目全流程工作流模板——先做什么、后做什么、关键风险在哪",
+      "path": "planning/",
+      "files": ["audit-planning-skills.json"],
+      "skills": [
+        {"id": "plan-performance-evaluation", "name": "政府绩效评价审计"},
+        {"id": "plan-asset-verification", "name": "行政事业单位资产清查"},
+        {"id": "plan-special-bond-audit", "name": "专项债券资金审计"},
+        {"id": "plan-internal-control-audit", "name": "行政事业单位内控审计"},
+        {"id": "plan-procurement-inspection", "name": "政府采购监督检查"},
+        {"id": "plan-econ-responsibility", "name": "经济责任审计量化评价"}
+      ]
+    },
+    "functional": {
+      "description": "完成一个审计子任务的工具组合序列——用什么程序、按什么顺序、达到什么目的",
+      "path": "functional/",
+      "files": ["policy-skills.json", "fieldwork-skills.json", "analysis-skills.json"],
+      "skills": [
+        {"id": "func-policy-digest", "name": "政策文件深度解读", "category": "政策与方案"},
+        {"id": "func-risk-assessment", "name": "审计风险评估与方案设计", "category": "政策与方案"},
+        {"id": "func-voucher-sampling", "name": "凭证抽样检查", "category": "现场审计"},
+        {"id": "func-physical-verification", "name": "实地核查与资产盘点", "category": "现场审计"},
+        {"id": "func-fund-flow-trace", "name": "资金流向全链路追踪", "category": "现场审计"},
+        {"id": "func-procurement-compliance", "name": "采购全流程合规检查", "category": "现场审计"},
+        {"id": "func-contract-lifecycle", "name": "合同全生命周期检查", "category": "现场审计"},
+        {"id": "func-three-importances-one-big", "name": "三重一大决策程序检查", "category": "现场审计"},
+        {"id": "func-cross-validation", "name": "多源数据交叉验证", "category": "分析与报告"},
+        {"id": "func-depreciation-recalc", "name": "折旧重计算与减值评估", "category": "分析与报告"},
+        {"id": "func-finding-generator", "name": "审计发现问题生成", "category": "分析与报告"},
+        {"id": "func-recommendation", "name": "可落地审计建议生成", "category": "分析与报告"},
+        {"id": "func-report-generation", "name": "审计报告自动生成", "category": "分析与报告"},
+        {"id": "func-econ-responsibility", "name": "经济责任审计量化评价", "category": "分析与报告"}
+      ]
+    },
+    "atomic": {
+      "description": "单个审计程序/工具的使用规范——约束条件、参数模式、常见失败模式、适用条件",
+      "path": "atomic/",
+      "files": ["sampling-skills.json", "data-prep-skills.json", "analysis-skills.json", "procedure-skills.json", "findings-skills.json", "evaluation-skills.json", "responsibility-skills.json"],
+      "skills": [
+        {"id": "atom-stratified-sampling", "name": "分层随机抽样", "tool": "sampling"},
+        {"id": "atom-mus", "name": "货币单位抽样(MUS)", "tool": "sampling"},
+        {"id": "atom-pps-sampling", "name": "概率比例规模抽样(PPS)", "tool": "sampling"},
+        {"id": "atom-data-import", "name": "多格式数据导入", "tool": "data-prep"},
+        {"id": "atom-field-mapping", "name": "字段映射标准化", "tool": "data-prep"},
+        {"id": "atom-quality-check", "name": "数据质量检查", "tool": "data-prep"},
+        {"id": "atom-outlier-detect", "name": "统计异常值检测", "tool": "data-analysis"},
+        {"id": "atom-benford", "name": "Benford定律首数字检验", "tool": "data-analysis"},
+        {"id": "atom-correlation", "name": "相关性分析", "tool": "data-analysis"},
+        {"id": "atom-trend-analysis", "name": "时间序列趋势分析", "tool": "data-analysis"},
+        {"id": "atom-network-analysis", "name": "关联网络分析", "tool": "data-analysis"},
+        {"id": "atom-cluster-analysis", "name": "聚类分析", "tool": "data-analysis"},
+        {"id": "atom-voucher-inspect", "name": "凭证逐笔检查", "tool": "voucher-inspection"},
+        {"id": "atom-bank-reconciliation", "name": "银行流水双向对账", "tool": "bank-reconciliation"},
+        {"id": "atom-entity-linkage", "name": "实体关联关系挖掘", "tool": "bidder-analysis"},
+        {"id": "atom-threshold-filter", "name": "金额门槛自动筛选", "tool": "compliance-check"},
+        {"id": "atom-split-detect", "name": "化整为零检测", "tool": "compliance-check"},
+        {"id": "atom-progress-match", "name": "资金-进度匹配分析", "tool": "progress-analysis"},
+        {"id": "atom-threshold-extract", "name": "制度阈值自动提取", "tool": "policy-digest"},
+        {"id": "atom-redline-identify", "name": "红线问题自动识别", "tool": "policy-digest"},
+        {"id": "atom-version-diff", "name": "制度版本差异分析", "tool": "policy-digest"},
+        {"id": "atom-policy-match", "name": "政策依据自动匹配", "tool": "finding-generator"},
+        {"id": "atom-severity-classify", "name": "问题严重度分级", "tool": "finding-generator"},
+        {"id": "atom-root-cause", "name": "根因分析", "tool": "recommendation-engine"},
+        {"id": "atom-feasibility", "name": "建议可行性评估", "tool": "recommendation-engine"},
+        {"id": "eval-dimension-scorer", "name": "经责审计五维量化评分", "tool": "economic-responsibility-evaluator"},
+        {"id": "resp-classifier", "name": "经责审计责任自动分类", "tool": "economic-responsibility-evaluator"}
+      ]
+    }
+  },
+  "usage": {
+    "retrieval": "按审计类型检索规划技能 → 按阶段检索功能技能 → 按功能技能检索关联原子技能",
+    "injection": "将筛选后的技能内容注入Agent系统提示词，一次性加载",
+    "update": "完成审计项目后，标准化轨迹 → 触发增量技能提炼"
+  }
+}

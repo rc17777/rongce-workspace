@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import sys, io
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 """
 AI自动化工作流 — 核心调度引擎
 ──────────────────────────────
@@ -26,6 +29,23 @@ import os, sys, json, yaml, time, subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
+
+# 模型路由集成（加载时自动注册）
+try:
+    MODEL_ROUTING_PATH = Path(__file__).parent.parent / 'scripts' / 'model_routing.py'
+    if MODEL_ROUTING_PATH.exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('model_routing', MODEL_ROUTING_PATH)
+        if spec:
+            model_routing = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(model_routing)
+            ROUTING_AVAILABLE = True
+        else:
+            ROUTING_AVAILABLE = False
+    else:
+        ROUTING_AVAILABLE = False
+except Exception:
+    ROUTING_AVAILABLE = False
 
 CST = timezone(timedelta(hours=8))
 WORKFLOW_DIR = Path(__file__).parent
@@ -81,6 +101,7 @@ ALL_AGENTS = [
     'tender_hunter',    # 招标采集
     'model_doctor',     # 模型健康检查
     'token_watcher',    # Token追踪
+    'model_router',     # 路由控制器
 ]
 
 AGENT_LABELS = {
@@ -89,6 +110,7 @@ AGENT_LABELS = {
     'tender_hunter': '🎯 招标猎手',
     'model_doctor': '🏥 模型医生',
     'token_watcher': '💰 Token监察员',
+    'model_router': '🔀 路由控制器',
 }
 
 def init_agent_states(state):
@@ -480,9 +502,19 @@ def generate_report(state):
 # Main
 # ================================================================
 
+def trigger_agent(config, state, agent_id):
+    """手动触发指定Agent"""
+    if agent_id not in ALL_AGENTS:
+        print(f'未知Agent: {agent_id}')
+        print(f'可用Agent: {', '.join(ALL_AGENTS)}')
+        return False
+    print(f'[手动触发] {AGENT_LABELS.get(agent_id, agent_id)}')
+    return run_agent(config, state, agent_id)
+
+
 def main():
     if len(sys.argv) < 2:
-        print('用法: python engine.py [run|status|report|overseer|init]')
+        print('用法: python engine.py [run|status|report|overseer|init|trigger <agent_id>]')
         return
 
     config = load_config()
@@ -500,7 +532,31 @@ def main():
         show_status(state)
 
     elif cmd == 'run':
-        run_scheduler(config, state)
+        # 支持 --force 参数强制运行所有Agent
+        force = '--force' in sys.argv
+        if force:
+            print('[强制模式] 跳过时间检查，运行所有Agent')
+            for agent_id in ALL_AGENTS:
+                trigger_agent(config, state, agent_id)
+            # 强制模式也跑监工巡检
+            run_overseer(state)
+            save_state(state)
+        else:
+            run_scheduler(config, state)
+            # 每次调度后也跑监工巡检
+            run_overseer(state)
+            save_state(state)
+
+    elif cmd == 'trigger':
+        if len(sys.argv) < 3:
+            print('用法: python engine.py trigger <agent_id>')
+            print(f'可用Agent: {', '.join(ALL_AGENTS)}')
+            return
+        agent_id = sys.argv[2]
+        success = trigger_agent(config, state, agent_id)
+        save_state(state)
+        if not success:
+            sys.exit(1)
 
     elif cmd == 'status':
         show_status(state)
@@ -515,7 +571,7 @@ def main():
 
     else:
         print(f'未知命令: {cmd}')
-        print('用法: python engine.py [run|status|report|overseer|init]')
+        print('用法: python engine.py [run|status|report|overseer|init|trigger <agent_id>]')
 
 
 if __name__ == '__main__':

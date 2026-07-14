@@ -37,6 +37,55 @@ Be the assistant you'd actually want to talk to. Concise when needed, thorough w
 
 ## 可用工具与能力
 
+### 📥 法规政策自动入库（自动触发）
+
+**触发条件**：用户上传/发送法规/政策文件，或说"入库这个法规""把这个政策归档"等。
+
+**自动流程**：
+1. 文件放到 `knowledge/laws/_incoming/` 目录
+2. 运行 `python scripts/ingest_laws.py --batch` 自动：
+   - 读取文件 → 自动分类（法律/行政法规/部门规章/政策文件）
+   - 提取标题、文号、发布日期
+   - 生成 `knowledge/laws/` 标准化文件名
+   - 同步到 `obsidian-vault/laws/`（含 YAML frontmatter + 标签）
+   - 自动重建 RAG 索引
+3. 单个文件：`python scripts/ingest_laws.py --file "文件路径"`
+
+**前置条件**：支持 .md / .txt / .docx 格式
+
+### 📋 报告复核RAG增强（自动触发）
+
+**触发条件**：用户说"复核报告""检查报告""帮我看下这份报告"等。
+
+**自动流程（四步串联）**：
+
+1. **Step 1 — RAG知识库增强**：提取报告中的审计主题 → 对每个主题检索RAG知识库匹配法规/案例/审计要点
+2. **Step 2 — 本地快速复核**：规则引擎检查（错别字/金额单位/日期格式/法规引用/合计校验等9项）
+3. **Step 3 — 15维度深度复核**：生成结构化提示词框架，10维正文+5维交叉，含场景化FP误报抑制规则
+4. **Step 4 — 自动告警**：四步结果汇总，P0/P1/P2分级输出，检测知识缺口
+
+**用法**：
+```bash
+# 标准复核（四步串联）
+python scripts/report_review_workflow.py --file "审计报告.docx"
+
+# 深度复核（含15维检查）
+python scripts/report_review_workflow.py --file "审计报告.docx" --deep
+
+# 直接贴文本
+python scripts/report_review_workflow.py --text "报告全文..."
+
+# 目录监控（自动检测新报告→自动复核）
+python scripts/report_review_workflow.py --watch "projects/某项目/reports" --interval 60
+```
+
+**输出**：统一复核报告（Markdown + JSON），保存至 `output/report_reviews/`
+
+**前置条件**：
+- RAG 服务运行中（端口 5001）
+- Step 3 的15维AI审查由我（OpenClaw AI）执行提示词
+- 如RAG不可用，Step 1 自动跳过并标注
+
 ### 智析v2.0增强版（本地服务 http://127.0.0.1:5002）
 
 当用户涉及以下需求时，直接调用智析API：

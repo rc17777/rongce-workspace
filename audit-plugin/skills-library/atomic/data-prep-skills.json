@@ -1,0 +1,89 @@
+{
+  "tier": "atomic",
+  "category": "数据准备与清洗",
+  "skills": [
+    {
+      "id": "atom-data-import",
+      "name": "多格式数据导入",
+      "tool": "data-prep",
+      "description": "自动识别并导入Excel/CSV/TXT/SQL等多格式数据，处理编码和格式差异。",
+      "constraints": ["大文件（>100MB）需流式读取", "编码自动检测后需人工确认"],
+      "param_patterns": {
+        "formats": ["xlsx", "xls", "csv", "txt", "sql"],
+        "encoding_detect": ["utf-8", "gbk", "gb2312"],
+        "date_formats": ["yyyy-mm-dd", "yyyy/mm/dd", "yyyymmdd"]
+      },
+      "failure_modes": [
+        "编码识别错误导致中文乱码",
+        "大文件内存溢出",
+        "空行/表头行识别错误"
+      ],
+      "use_conditions": ["数据来源多样", "被审计单位数据管理水平不一"],
+      "evidence_standard": "需记录导入参数和识别出的编码/格式"
+    },
+    {
+      "id": "atom-field-mapping",
+      "name": "字段映射标准化",
+      "tool": "data-prep",
+      "description": "将不同来源的原始字段映射到统一的审计数据模型（科目编码→科目名称、供应商→统一编码等）。",
+      "constraints": ["映射关系需人工确认", "未映射字段需单独标记"],
+      "param_patterns": {
+        "standard_model": {
+          "科目编码": "科目名称",
+          "供应商": "统一社会信用代码",
+          "日期": "ISO 8601格式"
+        }
+      },
+      "failure_modes": [
+        "一对多映射时选择错误",
+        "模糊匹配导致错误映射",
+        "未处理编码不一致"
+      ],
+      "use_conditions": ["多数据源对接", "新旧系统数据迁移"],
+      "evidence_standard": "映射规则表需存档备查"
+    },
+    {
+      "id": "atom-quality-check",
+      "name": "数据质量检查",
+      "tool": "data-prep",
+      "description": "系统性检查数据的完整性、准确性、一致性、及时性，产出量化质量报告。",
+      "constraints": [
+        "检查结果需量化：缺失率/异常率/重复率",
+        "区分系统性问题（结构缺陷）和个案问题"
+      ],
+      "param_patterns": {
+        "checks": ["完整性", "准确性", "一致性", "及时性"],
+        "thresholds": {"missing_pct": 5, "duplicate_pct": 1, "anomaly_pct": 3}
+      },
+      "failure_modes": [
+        "将不适用的空值误判为缺失",
+        "将合法的冲销/红字凭证识别为重复或异常",
+        "未考虑业务特殊性导致阈值不当"
+      ],
+      "use_conditions": ["审计初期数据接收阶段", "怀疑数据完整性存疑时"],
+      "evidence_standard": "需输出各维度的量化统计和具体问题明细"
+    },
+    {
+      "id": "atom-outlier-detect",
+      "name": "统计异常值检测",
+      "tool": "data-analysis",
+      "description": "使用IQR/Z-score/Isolation Forest等方法检测数据中的统计异常值。",
+      "constraints": [
+        "统计异常≠业务异常——须结合业务背景判断",
+        "需区分数据录入错误和真实异常交易"
+      ],
+      "param_patterns": {
+        "methods": ["IQR", "z-score", "Isolation Forest"],
+        "thresholds": {"z-score": 3.0, "IQR": 1.5},
+        "group_by": ["科目", "部门", "月份"]
+      },
+      "failure_modes": [
+        "未分组检测导致季节性业务数据大量误报",
+        "阈值过严导致过度告警、过宽导致漏报",
+        "将正常的大额一次性交易标记为异常"
+      ],
+      "use_conditions": ["大量数值型数据", "需要快速定位异常交易"],
+      "evidence_standard": "每个异常值需标注检测方法、阈值参数、原始数值"
+    }
+  ]
+}

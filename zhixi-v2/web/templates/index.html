@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智析智能体 v2.0 — 审计数据分析平台</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f2f5;color:#333}
+.header{background:linear-gradient(135deg,#1B3A5C,#2E6B9E);color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.header h1{font-size:20px}
+.header .sub{font-size:12px;opacity:.8}
+.nav{display:flex;background:#fff;border-bottom:1px solid #e0e0e0;overflow-x:auto}
+.nav a{display:block;padding:12px 20px;color:#666;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:.2s}
+.nav a:hover,.nav a.active{color:#2E6B9E;border-bottom-color:#2E6B9E}
+.main{max-width:1400px;margin:0 auto;padding:24px}
+.section{display:none}
+.section.active{display:block}
+.card{background:#fff;border-radius:8px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card h2{font-size:16px;color:#1B3A5C;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #D6E4F0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.stat{text-align:center;padding:16px}
+.stat .num{font-size:28px;font-weight:bold;color:#2E6B9E}
+.stat .label{font-size:13px;color:#888;margin-top:4px}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.row>*{flex:1;min-width:300px}
+.btn{display:inline-block;padding:8px 16px;background:#2E6B9E;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:14px;text-decoration:none}
+.btn:hover{background:#1B3A5C}
+.btn-sm{padding:4px 12px;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;margin:2px}
+.tag-green{background:#D5F5E3;color:#27AE60}
+.tag-red{background:#FADBD8;color:#C0392B}
+.tag-blue{background:#D6E4F0;color:#2E6B9E}
+.tag-orange{background:#FFF8E1;color:#E67E22}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1B3A5C;color:#fff;padding:8px 12px;text-align:left}
+td{padding:8px 12px;border-bottom:1px solid #eee}
+tr:nth-child(even){background:#f8f9fa}
+pre{background:#f5f5f5;padding:12px;border-radius:4px;overflow-x:auto;font-size:12px}
+.chart{width:100%;height:400px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>🧠 智析智能体 v2.0</h1>
+    <div class="sub">审计数据分析平台 · 融策会计师事务所</div>
+  </div>
+  <div class="btn" onclick="loadStatus()">🔄 刷新状态</div>
+</div>
+
+<div class="nav">
+  <a href="#" class="active" onclick="showSection('dashboard')">📊 仪表盘</a>
+  <a href="#" onclick="showSection('collector')">📥 数据采集</a>
+  <a href="#" onclick="showSection('validator')">✅ 数据校验</a>
+  <a href="#" onclick="showSection('standardizer')">🔄 标准化</a>
+  <a href="#" onclick="showSection('unstructured')">📄 非结构化</a>
+  <a href="#" onclick="showSection('models')">📐 审计模型</a>
+  <a href="#" onclick="showSection('bigdata')">🔍 大数据分析</a>
+  <a href="#" onclick="showSection('knowledge')">🧩 知识资产</a>
+</div>
+
+<div class="main">
+
+  <!-- 仪表盘 -->
+  <div id="dashboard" class="section active">
+    <div class="grid" id="dashboard-stats"></div>
+    <div class="card"><h2>系统模块状态</h2><div id="module-status"></div></div>
+  </div>
+
+  <!-- 数据采集 -->
+  <div id="collector" class="section">
+    <div class="row">
+      <div class="card">
+        <h2>支持的数据库</h2>
+        <div id="db-list"></div>
+      </div>
+      <div class="card">
+        <h2>财务账套解析</h2>
+        <div id="accounting-list"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>采集任务管理</h2>
+      <div id="collector-tasks"></div>
+    </div>
+  </div>
+
+  <!-- 数据校验 -->
+  <div id="validator" class="section">
+    <div class="card">
+      <h2>校验规则（内置10条）</h2>
+      <div id="validator-rules"></div>
+    </div>
+  </div>
+
+  <!-- 标准化 -->
+  <div id="standardizer" class="section">
+    <div class="row">
+      <div class="card">
+        <h2>审计数据标准域</h2>
+        <div id="std-domains"></div>
+      </div>
+      <div class="card">
+        <h2>财务数据标准字段</h2>
+        <div id="std-fields"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 非结构化 -->
+  <div id="unstructured" class="section">
+    <div class="card">
+      <h2>文档要素提取</h2>
+      <p style="color:#888;margin-bottom:12px">支持：合同 / 招投标文件 / 会议纪要 自动识别</p>
+      <textarea id="doc-input" rows="10" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px" placeholder="粘贴文档文本..."></textarea>
+      <button class="btn" onclick="extractDoc()" style="margin-top:8px">提取关键要素</button>
+      <pre id="doc-result" style="margin-top:12px"></pre>
+    </div>
+  </div>
+
+  <!-- 审计模型 -->
+  <div id="models" class="section">
+    <div class="row">
+      <div class="card">
+        <h2>模型分类</h2>
+        <div id="model-categories"></div>
+      </div>
+      <div class="card">
+        <h2>7大审计分析方法</h2>
+        <div id="analysis-methods"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>模型列表（共31个）</h2>
+      <div style="margin-bottom:12px">
+        <input type="text" id="model-search" placeholder="搜索模型..." style="padding:6px;border:1px solid #ddd;border-radius:4px;width:200px" onkeyup="searchModels()">
+        <button class="btn btn-sm" onclick="loadModels()">显示全部</button>
+      </div>
+      <div id="model-list"></div>
+    </div>
+  </div>
+
+  <!-- 大数据分析 -->
+  <div id="bigdata" class="section">
+    <div class="card">
+      <h2>文本词频分析</h2>
+      <textarea id="text-input" rows="8" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px" placeholder="粘贴文本（每行一篇）..."></textarea>
+      <button class="btn" onclick="analyzeText()" style="margin-top:8px">词频分析</button>
+      <div id="wordcloud-chart" class="chart" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <!-- 知识资产 -->
+  <div id="knowledge" class="section">
+    <div class="row">
+      <div class="card">
+        <h2>审计思维链（6条）</h2>
+        <div id="cot-chains"></div>
+      </div>
+      <div class="card">
+        <h2>提示词库（6个）</h2>
+        <div id="prompt-list"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>数字化审计方法论（10大框架）</h2>
+      <div id="methodology-list"></div>
+    </div>
+    <div class="card">
+      <h2>数据标准就绪度检查（12项）</h2>
+      <div id="dq-checks"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const API = "/api";
+
+function showSection(name) {
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".nav a").forEach(a => a.classList.remove("active"));
+  document.getElementById(name).classList.add("active");
+  event.target.classList.add("active");
+  if (name === "dashboard") loadStatus();
+  if (name === "collector") { loadDatabases(); loadAccounting(); loadTasks(); }
+  if (name === "validator") loadRules();
+  if (name === "standardizer") loadStandardDomains();
+  if (name === "models") { loadModelCategories(); loadModels(); loadAnalysisMethods(); }
+  if (name === "knowledge") { loadCOT(); loadPrompts(); loadMethodology(); loadDQ(); }
+}
+
+async function loadStatus() {
+  const r = await fetch(API + "/status");
+  const d = await r.json();
+  let html = "";
+  for (const [m, info] of Object.entries(d.modules)) {
+    html += `<div class="stat"><div class="num">${info.status === "active" ? "✅" : "⚠️"}</div><div class="label">${m}</div></div>`;
+  }
+  document.getElementById("dashboard-stats").innerHTML = html;
+  document.getElementById("module-status").innerHTML = JSON.stringify(d.modules, null, 2).replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+}
+
+// 数据采集
+async function loadDatabases() {
+  const r = await fetch(API + "/collector/databases");
+  const d = await r.json();
+  document.getElementById("db-list").innerHTML =
+    `<p>主流数据库: ${d.supported.join(", ")}</p>
+     <p style="margin-top:8px">国产数据库: ${d.domestic.join(", ")}</p>`;
+}
+async function loadAccounting() {
+  const r = await fetch(API + "/collector/accounting/software");
+  const d = await r.json();
+  document.getElementById("accounting-list").innerHTML =
+    Object.entries(d).map(([k, v]) => `<span class="tag tag-blue">${k}</span> ${v}<br>`).join("");
+}
+async function loadTasks() {
+  const r = await fetch(API + "/collector/tasks");
+  const d = await r.json();
+  document.getElementById("collector-tasks").innerHTML = d.length ? JSON.stringify(d) : "暂无任务";
+}
+
+// 数据校验
+async function loadRules() {
+  const r = await fetch(API + "/validator/rules");
+  const d = await r.json();
+  document.getElementById("validator-rules").innerHTML = d.map(r =>
+    `<span class="tag ${r.severity==='error'?'tag-red':r.severity==='warning'?'tag-orange':'tag-blue'}">${r.type}</span> ${r.name} [${r.severity}]<br>`
+  ).join("");
+}
+
+// 标准化
+async function loadStandardDomains() {
+  const r = await fetch(API + "/standardizer/domains");
+  const d = await r.json();
+  document.getElementById("std-domains").innerHTML = d.domains.map(x =>
+    `<span class="tag tag-green">${x}</span> `
+  ).join("");
+  if (d.domains.length) loadStandardSchema(d.domains[0]);
+}
+async function loadStandardSchema(domain) {
+  const r = await fetch(API + "/standardizer/schema/" + domain);
+  const d = await r.json();
+  document.getElementById("std-fields").innerHTML =
+    Object.entries(d).map(([k, v]) => `${v.required ? "🔴" : "🟢"} <b>${k}</b> — ${v.name} (${v.type})<br>`).join("");
+}
+
+// 非结构化
+async function extractDoc() {
+  const text = document.getElementById("doc-input").value;
+  const r = await fetch(API + "/unstructured/extract", {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({text})
+  });
+  const d = await r.json();
+  document.getElementById("doc-result").textContent = JSON.stringify(d, null, 2);
+}
+
+// 审计模型
+async function loadModelCategories() {
+  const r = await fetch(API + "/models/categories");
+  const d = await r.json();
+  document.getElementById("model-categories").innerHTML = d.map(c =>
+    `<span class="tag tag-blue" onclick="loadModels('${c}')" style="cursor:pointer">${c}</span> `
+  ).join("");
+}
+async function loadModels(cat) {
+  let url = API + "/models";
+  if (cat) url += "?category=" + encodeURIComponent(cat);
+  const r = await fetch(url);
+  const d = await r.json();
+  document.getElementById("model-list").innerHTML =
+    `<table><tr><th>ID</th><th>名称</th><th>分类</th><th>说明</th></tr>
+     ${d.map(m => `<tr><td>${m.id}</td><td>${m.name}</td><td><span class="tag tag-blue">${m.category}</span></td><td>${m.description}</td></tr>`).join("")}</table>`;
+}
+async function searchModels() {
+  const q = document.getElementById("model-search").value;
+  if (!q) { loadModels(); return; }
+  const r = await fetch(API + "/models/search?q=" + encodeURIComponent(q));
+  const d = await r.json();
+  document.getElementById("model-list").innerHTML =
+    `<table><tr><th>ID</th><th>名称</th><th>分类</th><th>说明</th></tr>
+     ${d.map(m => `<tr><td>${m.id}</td><td>${m.name}</td><td><span class="tag tag-blue">${m.category}</span></td><td>${m.description}</td></tr>`).join("")}</table>`;
+}
+async function loadAnalysisMethods() {
+  const r = await fetch(API + "/models/analysis-methods");
+  const d = await r.json();
+  document.getElementById("analysis-methods").innerHTML =
+    Object.entries(d).map(([k, v]) => `<b>${v.name}</b>: ${v.description}<br>`).join("<br>");
+}
+
+// 大数据
+async function analyzeText() {
+  const text = document.getElementById("text-input").value;
+  const lines = text.split("\n").filter(l => l.trim());
+  const r = await fetch(API + "/bigdata/text/wordcloud", {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({texts: lines})
+  });
+  const d = await r.json();
+  const chart = echarts.init(document.getElementById("wordcloud-chart"));
+  chart.setOption({
+    tooltip: {},
+    series: [{type: "wordCloud", shape: "circle",
+      data: d.map(({word, count}) => ({name: word, value: count})),
+      sizeRange: [14, 60], rotationRange: [-45, 45],
+    }]
+  });
+}
+
+// 知识资产
+async function loadCOT() {
+  const r = await fetch(API + "/knowledge/cot-chains");
+  const d = await r.json();
+  document.getElementById("cot-chains").innerHTML = d.map(c =>
+    `<span class="tag tag-green">${c}</span> `
+  ).join("");
+}
+async function loadPrompts() {
+  const r = await fetch(API + "/knowledge/prompts");
+  const d = await r.json();
+  document.getElementById("prompt-list").innerHTML = d.map(p =>
+    `<b>${p.title}</b> <span class="tag tag-blue">${p.category}</span><br>`
+  ).join("");
+}
+async function loadMethodology() {
+  const r = await fetch(API + "/knowledge/methodology");
+  const d = await r.json();
+  document.getElementById("methodology-list").innerHTML = d.map(m =>
+    `<b>${m.name}</b>: ${m.description}<br>`
+  ).join("<br>");
+}
+async function loadDQ() {
+  document.getElementById("dq-checks").innerHTML = [
+    ["DS01","结构","数据格式标准化"],["DS02","结构","主键唯一性"],["DS03","结构","外键完整性"],
+    ["DS04","结构","字段类型一致性"],["DS05","语义","字段含义明确"],["DS06","语义","编码标准化"],
+    ["DS07","语义","取值范围合法"],["DS08","语义","业务逻辑一致性"],["DS09","接口","数据字典完整"],
+    ["DS10","接口","数据可获取性"],["DS11","接口","数据更新频率"],["DS12","接口","权限与安全"]
+  ].map(([id, dim, check]) => `${id} <span class="tag tag-blue">${dim}</span> ${check}<br>`).join("");
+}
+
+// 初始化
+loadStatus();
+</script>
+</body>
+</html>

@@ -1,0 +1,6755 @@
+{
+  "knowledge\\audit_intel_workflow.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.125
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-06-29.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\references\\法律法规\\国家审计准则（2010）-存根.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-06-30.md",
+      "score": 0.078
+    }
+  ],
+  "knowledge\\everything-claude-code使用指南-硬核科技屋-20260420.md": [
+    {
+      "path": "knowledge\\references\\model-routing.md",
+      "score": 0.092
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.09
+    },
+    {
+      "path": "knowledge\\审计方法\\审计自动化工具选型指南+全场景指令模板包-AI效能Lab-20260608.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.058
+    }
+  ],
+  "knowledge\\INDEX.md": [
+    {
+      "path": "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md",
+      "score": 0.153
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.149
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第一批.md",
+      "score": 0.137
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-06-30.md",
+      "score": 0.135
+    }
+  ],
+  "knowledge\\knowledge-system-report.md": [
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.26
+    },
+    {
+      "path": "knowledge\\references\\Agentic-Analytics-炳叔.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.133
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.108
+    }
+  ],
+  "knowledge\\PARA-INDEX.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.397
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.131
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.079
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.079
+    }
+  ],
+  "knowledge\\progress.md": [
+    {
+      "path": "knowledge\\董事监事履职审计要点-论文综述.md",
+      "score": 0.321
+    }
+  ],
+  "knowledge\\rag-plan.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.11
+    },
+    {
+      "path": "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\场景-案例匹配索引.md": [
+    {
+      "path": "knowledge\\杂志案例-54例业务分类与融策匹配.md",
+      "score": 0.189
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.108
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.093
+    }
+  ],
+  "knowledge\\审计SQL提示词模板.md": [
+    {
+      "path": "knowledge\\audit-sql-templates\\五个场景SQL模板.md",
+      "score": 0.596
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\往来款挂账-描述模型.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\审计案例库-6册OCR成果索引.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.135
+    },
+    {
+      "path": "obsidian-vault\\跨域关联\\Crawl4AI-开源AI爬虫工具.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.082
+    }
+  ],
+  "knowledge\\杂志案例-54例业务分类与融策匹配.md": [
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.559
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.189
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\references\\工程变更签证审计资源汇编.md",
+      "score": 0.084
+    },
+    {
+      "path": "knowledge\\医疗审计\\卫生健康行业内部审计7个指引.md",
+      "score": 0.078
+    }
+  ],
+  "knowledge\\杂志资料-业务技能分类地图.md": [
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\杂志案例-54例业务分类与融策匹配.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.108
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.098
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\董事监事履职审计要点-论文综述.md": [
+    {
+      "path": "knowledge\\progress.md",
+      "score": 0.321
+    },
+    {
+      "path": "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\references\\商业物业管理审计框架.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md": [
+    {
+      "path": "knowledge\\references\\model-routing.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\PARA-INDEX.md",
+      "score": 0.131
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.102
+    }
+  ],
+  "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md": [
+    {
+      "path": "knowledge\\articles\\PPT工具横向对比-5类工具测试.md",
+      "score": 0.137
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.118
+    },
+    {
+      "path": "knowledge\\rag-plan.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\19_如何在不联网的离线环境下安装python库.md",
+      "score": 0.079
+    }
+  ],
+  "knowledge\\articles\\PPT工具横向对比-5类工具测试.md": [
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md",
+      "score": 0.137
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.119
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-看图反推Prompt.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\articles\\审计踩坑合集-质控雷点.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.069
+    },
+    {
+      "path": "knowledge\\审计方法\\审计自动化工具选型指南+全场景指令模板包-AI效能Lab-20260608.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\references\\审计大模型-价值重构技术架构-柳絮李欣潼.md",
+      "score": 0.054
+    }
+  ],
+  "knowledge\\articles\\政府采购资格条件合规审查-2026.md": [
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.144
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.105
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\采购招投标审计\\_index.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.074
+    }
+  ],
+  "knowledge\\articles\\采购审计四阶段穿透法-审计实践2026.md": [
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\references\\社会网络分析政府采购审计-山东财经大学.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\references\\设备利用率审计实操方法论.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.069
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.065
+    }
+  ],
+  "knowledge\\articles\\零基预算改革审计-审计实践2026.md": [
+    {
+      "path": "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md",
+      "score": 0.18
+    },
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\references\\审计小白上手手册-20个审计方法.md",
+      "score": 0.101
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.083
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.082
+    }
+  ],
+  "knowledge\\audit-models\\README.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.066
+    }
+  ],
+  "knowledge\\audit-sql-templates\\五个场景SQL模板.md": [
+    {
+      "path": "knowledge\\审计SQL提示词模板.md",
+      "score": 0.596
+    },
+    {
+      "path": "knowledge\\审计方法\\SQL技术揭示以旧换新套取补贴-SQL数据分析方法-行政审计汇编-20260610.md",
+      "score": 0.073
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.063
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.063
+    }
+  ],
+  "knowledge\\intel_summaries\\20260705_2024年审计整改关键数据.md": [
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.594
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 0.594
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.594
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.594
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.594
+    }
+  ],
+  "knowledge\\intel_summaries\\20260705_地方审计工作经验关键词.md": [
+    {
+      "path": "knowledge\\references\\地方审计工作经验-2026年7月.md",
+      "score": 0.571
+    },
+    {
+      "path": "knowledge\\policies\\20260629_审计署-政策法规.md",
+      "score": 0.234
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.224
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-审计要闻.md",
+      "score": 0.224
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-政策法规.md",
+      "score": 0.223
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-06-29.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-06-30.md",
+      "score": 0.408
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.404
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.395
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.391
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.387
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-06-30.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.531
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.528
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.523
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.522
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.518
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-01.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.656
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.655
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.653
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.653
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-08.md",
+      "score": 0.649
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-05.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.666
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.662
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.655
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.653
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-08.md",
+      "score": 0.646
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-06.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.666
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.662
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.653
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.653
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-08.md",
+      "score": 0.645
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-07.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.662
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.662
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.658
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.656
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-08.md",
+      "score": 0.649
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-08.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-09.md",
+      "score": 0.657
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.649
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.649
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.646
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.645
+    }
+  ],
+  "knowledge\\intel_summaries\\intel_report_2026-07-09.md": [
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-07.md",
+      "score": 0.658
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-08.md",
+      "score": 0.657
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.655
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.655
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-06.md",
+      "score": 0.653
+    }
+  ],
+  "knowledge\\policies\\20260629_审计署-政策法规.md": [
+    {
+      "path": "knowledge\\policies\\20260630_审计署-政策法规.md",
+      "score": 0.972
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-审计要闻.md",
+      "score": 0.968
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.968
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.938
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.938
+    }
+  ],
+  "knowledge\\policies\\20260630_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.956
+    },
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.936
+    },
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.927
+    },
+    {
+      "path": "knowledge\\policies\\20260708_中华人民共和国审计法.md",
+      "score": 0.922
+    },
+    {
+      "path": "knowledge\\policies\\20260709_中华人民共和国审计法.md",
+      "score": 0.918
+    }
+  ],
+  "knowledge\\policies\\20260630_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260630_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-政策法规.md",
+      "score": 0.996
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.972
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.971
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.971
+    }
+  ],
+  "knowledge\\policies\\20260630_审计署-政策法规.md": [
+    {
+      "path": "knowledge\\policies\\20260630_审计署-审计要闻.md",
+      "score": 0.996
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.995
+    },
+    {
+      "path": "knowledge\\policies\\20260629_审计署-政策法规.md",
+      "score": 0.972
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.967
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.967
+    }
+  ],
+  "knowledge\\policies\\20260630_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.921
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.86
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.86
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.812
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.786
+    }
+  ],
+  "knowledge\\policies\\20260701_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260630_中华人民共和国审计法.md",
+      "score": 0.956
+    },
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.943
+    },
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.933
+    },
+    {
+      "path": "knowledge\\policies\\20260708_中华人民共和国审计法.md",
+      "score": 0.926
+    },
+    {
+      "path": "knowledge\\policies\\20260709_中华人民共和国审计法.md",
+      "score": 0.918
+    }
+  ],
+  "knowledge\\policies\\20260701_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260701_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260630_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-政策法规.md",
+      "score": 0.995
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.972
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.972
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.971
+    }
+  ],
+  "knowledge\\policies\\20260701_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.924
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-时政要闻.md",
+      "score": 0.921
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.901
+    }
+  ],
+  "knowledge\\policies\\20260705_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260705_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.972
+    }
+  ],
+  "knowledge\\policies\\20260705_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.977
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-时政要闻.md",
+      "score": 0.925
+    }
+  ],
+  "knowledge\\policies\\20260706_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.983
+    },
+    {
+      "path": "knowledge\\policies\\20260708_中华人民共和国审计法.md",
+      "score": 0.949
+    },
+    {
+      "path": "knowledge\\policies\\20260709_中华人民共和国审计法.md",
+      "score": 0.943
+    },
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.943
+    },
+    {
+      "path": "knowledge\\policies\\20260630_中华人民共和国审计法.md",
+      "score": 0.936
+    }
+  ],
+  "knowledge\\policies\\20260706_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260706_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.972
+    }
+  ],
+  "knowledge\\policies\\20260706_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.977
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-时政要闻.md",
+      "score": 0.925
+    }
+  ],
+  "knowledge\\policies\\20260706_穿透式监管_工程款穿透_AI风控模型.md": [
+    {
+      "path": "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md",
+      "score": 0.072
+    }
+  ],
+  "knowledge\\policies\\20260707_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.983
+    },
+    {
+      "path": "knowledge\\policies\\20260708_中华人民共和国审计法.md",
+      "score": 0.952
+    },
+    {
+      "path": "knowledge\\policies\\20260709_中华人民共和国审计法.md",
+      "score": 0.947
+    },
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.933
+    },
+    {
+      "path": "knowledge\\policies\\20260630_中华人民共和国审计法.md",
+      "score": 0.927
+    }
+  ],
+  "knowledge\\policies\\20260707_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260707_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.971
+    }
+  ],
+  "knowledge\\policies\\20260707_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.985
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.977
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.977
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-时政要闻.md",
+      "score": 0.951
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.924
+    }
+  ],
+  "knowledge\\policies\\20260708_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260709_中华人民共和国审计法.md",
+      "score": 0.962
+    },
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.952
+    },
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.949
+    },
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.926
+    },
+    {
+      "path": "knowledge\\policies\\20260630_中华人民共和国审计法.md",
+      "score": 0.922
+    }
+  ],
+  "knowledge\\policies\\20260708_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260708_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260709_审计署-审计要闻.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.951
+    }
+  ],
+  "knowledge\\policies\\20260708_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.985
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-时政要闻.md",
+      "score": 0.966
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.957
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.901
+    }
+  ],
+  "knowledge\\policies\\20260709_中华人民共和国审计法.md": [
+    {
+      "path": "knowledge\\policies\\20260708_中华人民共和国审计法.md",
+      "score": 0.962
+    },
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.947
+    },
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.943
+    },
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.918
+    },
+    {
+      "path": "knowledge\\policies\\20260630_中华人民共和国审计法.md",
+      "score": 0.918
+    }
+  ],
+  "knowledge\\policies\\20260709_审计署-媒体视点.md": [
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-媒体视点.md",
+      "score": 0.999
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.999
+    }
+  ],
+  "knowledge\\policies\\20260709_审计署-审计要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260708_审计署-审计要闻.md",
+      "score": 1.0
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-审计要闻.md",
+      "score": 0.978
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.95
+    }
+  ],
+  "knowledge\\policies\\20260709_审计署-时政要闻.md": [
+    {
+      "path": "knowledge\\policies\\20260708_审计署-时政要闻.md",
+      "score": 0.966
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-时政要闻.md",
+      "score": 0.951
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-时政要闻.md",
+      "score": 0.925
+    },
+    {
+      "path": "knowledge\\policies\\20260706_审计署-时政要闻.md",
+      "score": 0.925
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.867
+    }
+  ],
+  "knowledge\\policies\\国资委2026-15号文-容诚解读全文.md": [
+    {
+      "path": "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md",
+      "score": 0.355
+    },
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-穿透式监管.md",
+      "score": 0.307
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\references\\模型路由验证测试套件.md",
+      "score": 0.057
+    },
+    {
+      "path": "knowledge\\references\\国企穿透式监管智能化监管-国企改革笔记.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\policies\\国资委2026-15号文-穿透式监管.md": [
+    {
+      "path": "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md",
+      "score": 0.402
+    },
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-容诚解读全文.md",
+      "score": 0.307
+    },
+    {
+      "path": "knowledge\\references\\国企穿透式监管智能化监管-国企改革笔记.md",
+      "score": 0.134
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.07
+    },
+    {
+      "path": "knowledge\\references\\政策解读-十五五内部审计发展规划-融策行动方案.md",
+      "score": 0.06
+    }
+  ],
+  "knowledge\\policies\\财综2026-23号-彩票公益金管理办法.md": [
+    {
+      "path": "knowledge\\scanner\\2026-06-08-财政监管情报.md",
+      "score": 0.082
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.076
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.072
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\审计方法\\四川省数据基础设施省级预算内投资管理办法-企邦帮-20260609.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\prompt-library\\ChatGPT-Image2-8组高级生图提示词.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.072
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.18
+    },
+    {
+      "path": "knowledge\\prompt-library\\ChatGPT-Image2-8组高级生图提示词.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.092
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-景观设计图纸展示.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-景观设计图纸展示.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-考研快题方案生成.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-看图反推Prompt.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策Prompt反推实战指南.md",
+      "score": 0.539
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\references\\审计大模型-价值重构技术架构-柳絮李欣潼.md",
+      "score": 0.058
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.055
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-考研快题方案生成.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.229
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-景观设计图纸展示.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策Prompt反推实战指南.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策Prompt反推实战指南.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-看图反推Prompt.md",
+      "score": 0.539
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.123
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.115
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.1
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.208
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md",
+      "score": 0.186
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.18
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.116
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md",
+      "score": 0.309
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.208
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.205
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.162
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md",
+      "score": 0.128
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.309
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.186
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.151
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-景观设计图纸展示.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.104
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-考研快题方案生成.md",
+      "score": 0.229
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.162
+    },
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策Prompt反推实战指南.md",
+      "score": 0.123
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.205
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md",
+      "score": 0.151
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-角色扮演提示词结构.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策Prompt反推实战指南.md",
+      "score": 0.1
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2-角色扮演提示词结构.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策角色扮演式封面提示词.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md",
+      "score": 0.083
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\prompt-library\\ChatGPT-Image2-8组高级生图提示词.md",
+      "score": 0.07
+    }
+  ],
+  "knowledge\\reference\\GPT-Image2爆款提示词学习与分享.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务适配提示词.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-46个应用场景全梳理.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.084
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-角色扮演提示词结构.md",
+      "score": 0.083
+    },
+    {
+      "path": "knowledge\\prompt-library\\ChatGPT-Image2-8组高级生图提示词.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\references\\2024年审计整改关键数据.md": [
+    {
+      "path": "knowledge\\intel_summaries\\20260705_2024年审计整改关键数据.md",
+      "score": 0.574
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-媒体视点.md",
+      "score": 0.47
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-媒体视点.md",
+      "score": 0.469
+    },
+    {
+      "path": "knowledge\\policies\\20260709_审计署-媒体视点.md",
+      "score": 0.469
+    },
+    {
+      "path": "knowledge\\policies\\20260708_审计署-媒体视点.md",
+      "score": 0.469
+    }
+  ],
+  "knowledge\\references\\60条常见审计问题清单-审计方法定性依据处理意见-高级审计师培训.md": [
+    {
+      "path": "obsidian-vault\\笔记一：审计典型案例汇编.md",
+      "score": 0.285
+    },
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.093
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.081
+    },
+    {
+      "path": "obsidian-vault\\04-法规案例库\\_index.md",
+      "score": 0.079
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.072
+    }
+  ],
+  "knowledge\\references\\Agentic-Analytics-炳叔.md": [
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.204
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.09
+    }
+  ],
+  "knowledge\\references\\AI扫完数据五件事它永远做不了-芮听柠说.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.069
+    }
+  ],
+  "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md": [
+    {
+      "path": "knowledge\\scanner\\2026-06-08-AI数据治理协同进化.md",
+      "score": 0.166
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\数据化审计\\专题_2026人工智能审计五大基石.md",
+      "score": 0.124
+    },
+    {
+      "path": "knowledge\\references\\Agentic-Analytics-炳叔.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.075
+    }
+  ],
+  "knowledge\\references\\Apriori算法审计应用-沭阳县审计局.md": [
+    {
+      "path": "knowledge\\references\\招投标审计-公共资源交易中心-温州市审计局.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\references\\围标历史数据分析-天津市审计局.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\references\\Cocoon-AI架构图设计系统分析.md": [
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.073
+    },
+    {
+      "path": "obsidian-vault\\跨域关联\\Crawl4AI-开源AI爬虫工具.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\references\\model-routing.md": [
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\审计方法\\审计自动化工具选型指南+全场景指令模板包-AI效能Lab-20260608.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\everything-claude-code使用指南-硬核科技屋-20260420.md",
+      "score": 0.092
+    },
+    {
+      "path": "knowledge\\references\\模型路由验证测试套件.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\rag-plan.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\references\\nacos-skill-registry.md": [
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.224
+    },
+    {
+      "path": "knowledge\\articles\\PPT工具横向对比-5类工具测试.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-看图反推Prompt.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md",
+      "score": 0.118
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.103
+    }
+  ],
+  "knowledge\\references\\Skill三层架构-Aloudata.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.26
+    },
+    {
+      "path": "knowledge\\references\\nacos-skill-registry.md",
+      "score": 0.224
+    },
+    {
+      "path": "knowledge\\references\\Agentic-Analytics-炳叔.md",
+      "score": 0.204
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.145
+    },
+    {
+      "path": "knowledge\\articles\\PPT工具横向对比-5类工具测试.md",
+      "score": 0.119
+    }
+  ],
+  "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md": [
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.087
+    },
+    {
+      "path": "knowledge\\references\\图像分析在审计中的应用-北京审计局OpenCV查重.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.071
+    }
+  ],
+  "knowledge\\references\\专项债与政府投资项目审计-招商银行.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.194
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.101
+    },
+    {
+      "path": "knowledge\\审计方法\\两重两新政策现状与对策-审计观察-20260609.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.092
+    },
+    {
+      "path": "knowledge\\审计方法\\四川省数据基础设施省级预算内投资管理办法-企邦帮-20260609.md",
+      "score": 0.086
+    }
+  ],
+  "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-融策整合模板v2.0.md",
+      "score": 0.24
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.194
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\资产质量变化-对比模型.md",
+      "score": 0.107
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.102
+    }
+  ],
+  "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\采购招投标审计\\_index.md",
+      "score": 0.136
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.132
+    },
+    {
+      "path": "knowledge\\references\\国企招投标违纪违法案例警示-企业廉洁合规研究中心.md",
+      "score": 0.119
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.106
+    }
+  ],
+  "knowledge\\references\\公务用车违规报销审计-武胜县审计局.md": [
+    {
+      "path": "knowledge\\references\\医保基金审计128模型-泉州审计局.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\references\\审计生态数智化转型的路径探析.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\references\\内部审计十五五发展预测-幸福的审计人20260530.md": [
+    {
+      "path": "knowledge\\references\\政策解读-十五五内部审计发展规划-融策行动方案.md",
+      "score": 0.35
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\references\\数字化审计技能需求-招聘数据分析.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\83_智能审计工具为数字化审计插上隐形的翅膀.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.078
+    }
+  ],
+  "knowledge\\references\\医保基金审计128模型-泉州审计局.md": [
+    {
+      "path": "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\references\\公务用车违规报销审计-武胜县审计局.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md",
+      "score": 0.074
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.069
+    }
+  ],
+  "knowledge\\references\\商业物业管理审计框架.md": [
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\董事监事履职审计要点-论文综述.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\articles\\零基预算改革审计-审计实践2026.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md": [
+    {
+      "path": "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md",
+      "score": 0.168
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.167
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.155
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.151
+    },
+    {
+      "path": "knowledge\\articles\\政府采购资格条件合规审查-2026.md",
+      "score": 0.144
+    }
+  ],
+  "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md": [
+    {
+      "path": "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md",
+      "score": 0.135
+    },
+    {
+      "path": "knowledge\\审计方法\\SQL技术揭示以旧换新套取补贴-SQL数据分析方法-行政审计汇编-20260610.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\references\\医保基金审计128模型-泉州审计局.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\references\\公务用车违规报销审计-武胜县审计局.md",
+      "score": 0.059
+    }
+  ],
+  "knowledge\\references\\围标历史数据分析-天津市审计局.md": [
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\references\\招投标审计-公共资源交易中心-温州市审计局.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\references\\Apriori算法审计应用-沭阳县审计局.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md",
+      "score": 0.073
+    }
+  ],
+  "knowledge\\references\\国企招投标违纪违法案例警示-企业廉洁合规研究中心.md": [
+    {
+      "path": "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md",
+      "score": 0.119
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.089
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\采购招投标审计\\_index.md",
+      "score": 0.07
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.069
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.069
+    }
+  ],
+  "knowledge\\references\\国企穿透式监管智能化监管-国企改革笔记.md": [
+    {
+      "path": "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md",
+      "score": 0.138
+    },
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-穿透式监管.md",
+      "score": 0.134
+    },
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-容诚解读全文.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\references\\国债护航记-超长期特别国债穿透审计实践-审天审地审空气.md": [
+    {
+      "path": "knowledge\\审计方法\\两重两新政策现状与对策-审计观察-20260609.md",
+      "score": 0.094
+    },
+    {
+      "path": "knowledge\\references\\2024年审计整改关键数据.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\审计方法\\SQL技术揭示以旧换新套取补贴-SQL数据分析方法-行政审计汇编-20260610.md",
+      "score": 0.057
+    },
+    {
+      "path": "knowledge\\references\\模型路由验证测试套件.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\references\\图像分析在审计中的应用-北京审计局OpenCV查重.md": [
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.072
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.056
+    }
+  ],
+  "knowledge\\references\\地方审计工作经验-2026年7月.md": [
+    {
+      "path": "knowledge\\intel_summaries\\20260705_地方审计工作经验关键词.md",
+      "score": 0.571
+    },
+    {
+      "path": "knowledge\\policies\\20260629_审计署-政策法规.md",
+      "score": 0.215
+    },
+    {
+      "path": "knowledge\\policies\\20260705_审计署-审计要闻.md",
+      "score": 0.209
+    },
+    {
+      "path": "knowledge\\policies\\20260707_审计署-审计要闻.md",
+      "score": 0.209
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-审计要闻.md",
+      "score": 0.208
+    }
+  ],
+  "knowledge\\references\\多线程智能拆分审计数据-重庆审计局.md": [
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.05
+    }
+  ],
+  "knowledge\\references\\定价成本审核业务指引-中国价格协会2026.md": [],
+  "knowledge\\references\\审计大模型-价值重构技术架构-柳絮李欣潼.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\references\\审计第一性原理-田川.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\数据化审计\\专题_2026人工智能审计五大基石.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\references\\审计小白上手手册-20个审计方法.md": [
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.139
+    },
+    {
+      "path": "knowledge\\articles\\零基预算改革审计-审计实践2026.md",
+      "score": 0.101
+    },
+    {
+      "path": "knowledge\\references\\模型路由验证测试套件.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md": [
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策快速原型工作流.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\references\\审计小白上手手册-20个审计方法.md",
+      "score": 0.139
+    },
+    {
+      "path": "knowledge\\articles\\零基预算改革审计-审计实践2026.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\references\\60条常见审计问题清单-审计方法定性依据处理意见-高级审计师培训.md",
+      "score": 0.093
+    },
+    {
+      "path": "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\references\\审计案例-2025年第8-10册目录.md": [
+    {
+      "path": "knowledge\\杂志案例-54例业务分类与融策匹配.md",
+      "score": 0.559
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\杂志资料-业务技能分类地图.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.135
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.121
+    }
+  ],
+  "knowledge\\references\\审计生态数智化转型的路径探析.md": [
+    {
+      "path": "knowledge\\references\\研究型审计胜任力模型-苏州审计局.md",
+      "score": 0.1
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\references\\内部审计十五五发展预测-幸福的审计人20260530.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\references\\数字化审计技能需求-招聘数据分析.md",
+      "score": 0.055
+    }
+  ],
+  "knowledge\\references\\审计第一性原理-田川.md": [
+    {
+      "path": "knowledge\\references\\审计大模型-价值重构技术架构-柳絮李欣潼.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\审计方法\\什么是审计思维-审计维基说-20260109.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md": [
+    {
+      "path": "knowledge\\articles\\零基预算改革审计-审计实践2026.md",
+      "score": 0.18
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.13
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.118
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\references\\工程变更签证审计资源汇编.md": [
+    {
+      "path": "knowledge\\杂志案例-54例业务分类与融策匹配.md",
+      "score": 0.084
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.066
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\工程竣工决算审计\\_index.md",
+      "score": 0.058
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.058
+    }
+  ],
+  "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第一批.md": [
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.297
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.283
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.137
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md",
+      "score": 0.125
+    }
+  ],
+  "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md": [
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.29
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第一批.md",
+      "score": 0.283
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.151
+    },
+    {
+      "path": "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md",
+      "score": 0.145
+    }
+  ],
+  "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md": [
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第一批.md",
+      "score": 0.297
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.29
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.155
+    },
+    {
+      "path": "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md",
+      "score": 0.149
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.149
+    }
+  ],
+  "knowledge\\references\\广元市2025年度政府采购违法违规典型案例通报-四川政府采购网-2025.md": [
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.153
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2024.md",
+      "score": 0.149
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第二批.md",
+      "score": 0.145
+    },
+    {
+      "path": "knowledge\\references\\巴中市财政局政府采购违法典型案例通报-2023第一批.md",
+      "score": 0.125
+    }
+  ],
+  "knowledge\\references\\技术方案套话扣分重灾区-捷报招投标管家-20260630.md": [],
+  "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md": [
+    {
+      "path": "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md",
+      "score": 0.25
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.249
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.087
+    }
+  ],
+  "knowledge\\references\\招投标审计-公共资源交易中心-温州市审计局.md": [
+    {
+      "path": "knowledge\\references\\Apriori算法审计应用-沭阳县审计局.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\references\\围标历史数据分析-天津市审计局.md",
+      "score": 0.099
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\references\\提升经责审计质量-取证关键技巧与把控要点-审计家常事.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.078
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.07
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\references\\政策解读-十五五内部审计发展规划-融策行动方案.md": [
+    {
+      "path": "knowledge\\references\\内部审计十五五发展预测-幸福的审计人20260530.md",
+      "score": 0.35
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.1
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.078
+    }
+  ],
+  "knowledge\\references\\数字化审计技能需求-招聘数据分析.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.126
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\references\\内部审计十五五发展预测-幸福的审计人20260530.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\74_提升数字化审计模型实效的思考.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\references\\李论数转-智能体落地之困.md": [],
+  "knowledge\\references\\模型路由验证测试套件.md": [
+    {
+      "path": "knowledge\\references\\审计小白上手手册-20个审计方法.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.089
+    },
+    {
+      "path": "knowledge\\references\\model-routing.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md": [
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.125
+    },
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\数据化审计\\12_用图数据视角理解数据.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.064
+    }
+  ],
+  "knowledge\\references\\研究型审计胜任力模型-苏州审计局.md": [
+    {
+      "path": "knowledge\\references\\审计生态数智化转型的路径探析.md",
+      "score": 0.1
+    }
+  ],
+  "knowledge\\references\\社会网络分析政府采购审计-山东财经大学.md": [
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\articles\\采购审计四阶段穿透法-审计实践2026.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.072
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.065
+    }
+  ],
+  "knowledge\\references\\经济责任审计-技能缺口分析.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.158
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.145
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-融策整合模板v2.0.md",
+      "score": 0.145
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.144
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.133
+    }
+  ],
+  "knowledge\\references\\经济责任审计-自然资源资产离任审计困难与对策.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\经济责任审计\\经济责任审计-盲目决策收购吹填海域背后的“如意算盘”.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-无人机“透视”亿元工程虚报真相.md",
+      "score": 0.089
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.084
+    }
+  ],
+  "knowledge\\references\\经济责任审计-融策整合模板v2.0.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.5
+    },
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.24
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.218
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.145
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.125
+    }
+  ],
+  "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-融策整合模板v2.0.md",
+      "score": 0.218
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.158
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.121
+    },
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-融策整合模板v2.0.md",
+      "score": 0.5
+    },
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.194
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.121
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.092
+    }
+  ],
+  "knowledge\\references\\融策电子招投标审计SOP-v1.0.md": [
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.249
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.2
+    },
+    {
+      "path": "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md",
+      "score": 0.163
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\审计方法\\围标串标识别-十层检测体系.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\references\\设备利用率审计实操方法论.md": [
+    {
+      "path": "knowledge\\articles\\采购审计四阶段穿透法-审计实践2026.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\审计方法\\三宗脑洞案例-审计逻辑归纳-20260621.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md": [
+    {
+      "path": "knowledge\\审计方法\\SQL技术揭示以旧换新套取补贴-SQL数据分析方法-行政审计汇编-20260610.md",
+      "score": 0.143
+    },
+    {
+      "path": "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md",
+      "score": 0.135
+    },
+    {
+      "path": "knowledge\\references\\医保基金审计128模型-泉州审计局.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\references\\公务用车违规报销审计-武胜县审计局.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\references\\审计生态数智化转型的路径探析.md",
+      "score": 0.059
+    }
+  ],
+  "knowledge\\references\\高速公路偷逃费数据审计-河南省审计厅.md": [],
+  "knowledge\\scanner\\2026-06-08-AI数据治理协同进化.md": [
+    {
+      "path": "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md",
+      "score": 0.166
+    },
+    {
+      "path": "knowledge\\数据化审计\\34_前沿科技在数字化审计中的应用案例.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\数据化审计\\专题_2026人工智能审计五大基石.md",
+      "score": 0.058
+    }
+  ],
+  "knowledge\\scanner\\2026-06-08-财政监管情报.md": [
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.106
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\policies\\财综2026-23号-彩票公益金管理办法.md",
+      "score": 0.082
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.065
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.063
+    }
+  ],
+  "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\rag-plan.md",
+      "score": 0.11
+    },
+    {
+      "path": "knowledge\\references\\Agentic-Analytics-炳叔.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\scanner\\2026-06-09-审计三重境界-内审自习室.md": [
+    {
+      "path": "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\数据化审计\\专题_2026人工智能审计五大基石.md",
+      "score": 0.052
+    },
+    {
+      "path": "knowledge\\references\\政策解读-十五五内部审计发展规划-融策行动方案.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\业务管理\\cross-document-auditor-开源项目-20260611.md": [
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\数据化审计\\Python审计准备阶段锁定关键事项.md",
+      "score": 0.058
+    },
+    {
+      "path": "obsidian-vault\\跨域关联\\Crawl4AI-开源AI爬虫工具.md",
+      "score": 0.058
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\医疗审计\\卫生健康行业内部审计7个指引.md": [
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\杂志案例-54例业务分类与融策匹配.md",
+      "score": 0.078
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.075
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.074
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.072
+    }
+  ],
+  "knowledge\\审计方法\\AI审计报告审核-10套提示词-审计实践-20260609.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策叙事型配图框架.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\reference\\GPT-Image2-融策业务场景适配总览.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\审计方法\\AI工具提升审计报告效率-FineReport-20250922.md": [
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\references\\Skill三层架构-Aloudata.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\审计方法\\AI数据分析-零基础核心理论框架.md": [
+    {
+      "path": "knowledge\\audit-models\\README.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计方法\\AI赋能审计-百度开发者中心-20260323.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\审计方法\\SQL技术揭示以旧换新套取补贴-SQL数据分析方法-行政审计汇编-20260610.md": [
+    {
+      "path": "knowledge\\references\\食堂餐费甄别困难学生-莆田审计局.md",
+      "score": 0.143
+    },
+    {
+      "path": "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md",
+      "score": 0.112
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.108
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\audit-sql-templates\\五个场景SQL模板.md",
+      "score": 0.073
+    }
+  ],
+  "knowledge\\审计方法\\三宗脑洞案例-审计逻辑归纳-20260621.md": [
+    {
+      "path": "knowledge\\审计方法\\审计脑洞天花板-GPS轨迹食堂刷卡电表-审计实践-20260621.md",
+      "score": 0.171
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.061
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\审计方法\\围标串标识别-十层检测体系.md",
+      "score": 0.054
+    },
+    {
+      "path": "knowledge\\references\\设备利用率审计实操方法论.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\审计方法\\两重两新政策现状与对策-审计观察-20260609.md": [
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\references\\国债护航记-超长期特别国债穿透审计实践-审天审地审空气.md",
+      "score": 0.094
+    },
+    {
+      "path": "knowledge\\审计方法\\四川省数据基础设施省级预算内投资管理办法-企邦帮-20260609.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\policies\\财综2026-23号-彩票公益金管理办法.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\数据化审计\\59_理解企业经营管理的底子面子和日子.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\审计方法\\什么是审计思维-审计维基说-20260109.md": [
+    {
+      "path": "knowledge\\审计方法\\如何做好审计项目负责人-审计维基说-20260314.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\references\\审计第一性原理-田川.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\references\\提升经责审计质量-取证关键技巧与把控要点-审计家常事.md",
+      "score": 0.054
+    },
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.053
+    },
+    {
+      "path": "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\审计方法\\向领导汇报项目的方法与技巧-老唐纵横谈-20260531.md": [],
+  "knowledge\\审计方法\\四川省数据基础设施省级预算内投资管理办法-企邦帮-20260609.md": [
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\审计方法\\两重两新政策现状与对策-审计观察-20260609.md",
+      "score": 0.075
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.069
+    },
+    {
+      "path": "knowledge\\policies\\财综2026-23号-彩票公益金管理办法.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.225
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.123
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计全套量化评价指标-芮听柠说.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.092
+    }
+  ],
+  "knowledge\\审计方法\\如何做好审计项目负责人-审计维基说-20260314.md": [
+    {
+      "path": "knowledge\\审计方法\\什么是审计思维-审计维基说-20260109.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\references\\法律法规\\国家审计准则（2010）-存根.md",
+      "score": 0.078
+    },
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.07
+    }
+  ],
+  "knowledge\\审计方法\\审计脑洞天花板-GPS轨迹食堂刷卡电表-审计实践-20260621.md": [
+    {
+      "path": "knowledge\\审计方法\\三宗脑洞案例-审计逻辑归纳-20260621.md",
+      "score": 0.171
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计方法\\审计自动化工具选型指南+全场景指令模板包-AI效能Lab-20260608.md": [
+    {
+      "path": "knowledge\\references\\model-routing.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.09
+    },
+    {
+      "path": "knowledge\\everything-claude-code使用指南-硬核科技屋-20260420.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\articles\\审计踩坑合集-质控雷点.md",
+      "score": 0.06
+    }
+  ],
+  "knowledge\\审计方法\\新型腐败审计核查方法-内审人生-20260609.md": [
+    {
+      "path": "knowledge\\references\\审计方法分析-2025年度中央预算执行审计报告.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\articles\\采购审计四阶段穿透法-审计实践2026.md",
+      "score": 0.055
+    }
+  ],
+  "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md": [
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.25
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.181
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.163
+    },
+    {
+      "path": "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md",
+      "score": 0.09
+    },
+    {
+      "path": "knowledge\\references\\招投标审计-公共资源交易中心-温州市审计局.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md": [
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-穿透式监管.md",
+      "score": 0.402
+    },
+    {
+      "path": "knowledge\\policies\\国资委2026-15号文-容诚解读全文.md",
+      "score": 0.355
+    },
+    {
+      "path": "knowledge\\references\\国企穿透式监管智能化监管-国企改革笔记.md",
+      "score": 0.138
+    },
+    {
+      "path": "knowledge\\policies\\20260706_穿透式监管_工程款穿透_AI风控模型.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md": [
+    {
+      "path": "knowledge\\数据化审计\\67_第三道防线在公司治理中的作用.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\董事监事履职审计要点-论文综述.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\数据化审计\\80_审计冲突不可避免关键是如何管理.md",
+      "score": 0.07
+    }
+  ],
+  "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md": [
+    {
+      "path": "knowledge\\数据化审计\\12_用图数据视角理解数据.md",
+      "score": 0.239
+    },
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.232
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.125
+    },
+    {
+      "path": "knowledge\\数据化审计\\13_实战招标数据异常分析.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.097
+    }
+  ],
+  "knowledge\\数据化审计\\12_用图数据视角理解数据.md": [
+    {
+      "path": "knowledge\\数据化审计\\13_实战招标数据异常分析.md",
+      "score": 0.27
+    },
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.239
+    },
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.156
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.067
+    }
+  ],
+  "knowledge\\数据化审计\\13_实战招标数据异常分析.md": [
+    {
+      "path": "knowledge\\数据化审计\\12_用图数据视角理解数据.md",
+      "score": 0.27
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\数据化审计\\55_高效推进整改台账分发.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.123
+    },
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.106
+    }
+  ],
+  "knowledge\\数据化审计\\14_模型风险审计内容和重点思考.md": [
+    {
+      "path": "knowledge\\数据化审计\\18_用心方有大成2020年最受欢迎的原创文章.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\66_互联网普惠金融的主要风险分析.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\数据化审计\\74_提升数字化审计模型实效的思考.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\数据化审计\\15_数据化审计选择什么样的实施模式.md": [
+    {
+      "path": "knowledge\\数据化审计\\16_数据化审计的空间技术决定下限业务决定上限.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\数据化审计\\18_用心方有大成2020年最受欢迎的原创文章.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\21_数字化审计实施的重点工作.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\数据化审计\\16_数据化审计的空间技术决定下限业务决定上限.md": [
+    {
+      "path": "knowledge\\数据化审计\\15_数据化审计选择什么样的实施模式.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.093
+    },
+    {
+      "path": "knowledge\\数据化审计\\18_用心方有大成2020年最受欢迎的原创文章.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\数据化审计\\17_洞若观火数据化审计的两类基本任务.md": [
+    {
+      "path": "knowledge\\数据化审计\\16_数据化审计的空间技术决定下限业务决定上限.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.059
+    }
+  ],
+  "knowledge\\数据化审计\\18_用心方有大成2020年最受欢迎的原创文章.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\数据化审计\\4_刚性的规章制度柔性的内控文化.md",
+      "score": 0.108
+    },
+    {
+      "path": "knowledge\\数据化审计\\16_数据化审计的空间技术决定下限业务决定上限.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.071
+    }
+  ],
+  "knowledge\\数据化审计\\19_如何在不联网的离线环境下安装python库.md": [
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.065
+    }
+  ],
+  "knowledge\\数据化审计\\1_面对风险曲突徙薪为什么这么难.md": [
+    {
+      "path": "knowledge\\数据化审计\\82_如何用数字化思维进行审计问题沟通.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\数据化审计\\20_数字化应用的目的决定了数据的价值.md": [
+    {
+      "path": "knowledge\\数据化审计\\78_外部数据-用信息不对称解决审计信息不对称.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\数据化审计\\21_数字化审计实施的重点工作.md": [
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.163
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.142
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.111
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.11
+    }
+  ],
+  "knowledge\\数据化审计\\22_用对应分析探析不同类别分支机构的偏好.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.06
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.054
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.053
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.052
+    },
+    {
+      "path": "knowledge\\数据化审计\\39_下一页按钮不是想点就能点.md",
+      "score": 0.05
+    }
+  ],
+  "knowledge\\数据化审计\\23_风险管理需要灰度思维.md": [],
+  "knowledge\\数据化审计\\24_费用都去哪儿了.md": [
+    {
+      "path": "knowledge\\数据化审计\\70_空间维度信息的分析和可视化.md",
+      "score": 0.193
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.128
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.11
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.086
+    }
+  ],
+  "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md": [
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\数据化审计\\13_实战招标数据异常分析.md",
+      "score": 0.15
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.138
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.097
+    }
+  ],
+  "knowledge\\数据化审计\\34_前沿科技在数字化审计中的应用案例.md": [
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\数据化审计\\6_如何解析非结构化文档文本中的隐蔽关系一.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-08-AI数据治理协同进化.md",
+      "score": 0.072
+    }
+  ],
+  "knowledge\\数据化审计\\39_下一页按钮不是想点就能点.md": [
+    {
+      "path": "knowledge\\数据化审计\\70_空间维度信息的分析和可视化.md",
+      "score": 0.119
+    },
+    {
+      "path": "knowledge\\数据化审计\\72_用计算机视觉技术进行资产盘点.md",
+      "score": 0.087
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.083
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md": [
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\数据化审计\\24_费用都去哪儿了.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.092
+    }
+  ],
+  "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md": [
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.178
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.175
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.158
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.133
+    },
+    {
+      "path": "knowledge\\数据化审计\\81_数字化审计不等于写代码分析数据审计.md",
+      "score": 0.123
+    }
+  ],
+  "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.213
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.211
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.202
+    },
+    {
+      "path": "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+      "score": 0.158
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.141
+    }
+  ],
+  "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md": [
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.333
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.229
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.223
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.213
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.176
+    }
+  ],
+  "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md": [
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.192
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.149
+    },
+    {
+      "path": "knowledge\\数据化审计\\21_数字化审计实施的重点工作.md",
+      "score": 0.141
+    },
+    {
+      "path": "knowledge\\数据化审计\\81_数字化审计不等于写代码分析数据审计.md",
+      "score": 0.128
+    }
+  ],
+  "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.229
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.194
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.192
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.191
+    },
+    {
+      "path": "knowledge\\数据化审计\\21_数字化审计实施的重点工作.md",
+      "score": 0.163
+    }
+  ],
+  "knowledge\\数据化审计\\49_业务是数字化审计之本.md": [
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\数据化审计\\21_数字化审计实施的重点工作.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.092
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.087
+    }
+  ],
+  "knowledge\\数据化审计\\4_刚性的规章制度柔性的内控文化.md": [
+    {
+      "path": "knowledge\\数据化审计\\18_用心方有大成2020年最受欢迎的原创文章.md",
+      "score": 0.108
+    },
+    {
+      "path": "knowledge\\数据化审计\\5_内控如同治史如何正确穿过历史迷雾掌控未来.md",
+      "score": 0.064
+    }
+  ],
+  "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.203
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.131
+    },
+    {
+      "path": "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.112
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.109
+    }
+  ],
+  "knowledge\\数据化审计\\51_FS-LDM模型快速理解数据的逻辑框架.md": [
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\数据化审计\\52_内控资源承载力带着镣铐跳舞.md": [
+    {
+      "path": "knowledge\\数据化审计\\57_如何提出有价值的审计问题.md",
+      "score": 0.078
+    }
+  ],
+  "knowledge\\数据化审计\\53_做个数字化审计的7个锦囊.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.129
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.075
+    }
+  ],
+  "knowledge\\数据化审计\\54_重大政策措施落实情况跟踪审计理论与实务.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\references\\政策解读-十五五内部审计发展规划-融策行动方案.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\references\\内部审计十五五发展预测-幸福的审计人20260530.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\经济责任审计\\经济责任审计-盲目决策收购吹填海域背后的“如意算盘”.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\数据化审计\\55_高效推进整改台账分发.md": [
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.218
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.188
+    },
+    {
+      "path": "knowledge\\数据化审计\\13_实战招标数据异常分析.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.07
+    }
+  ],
+  "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md": [
+    {
+      "path": "knowledge\\数据化审计\\55_高效推进整改台账分发.md",
+      "score": 0.188
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.185
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\70_空间维度信息的分析和可视化.md",
+      "score": 0.113
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\中华人民共和国财政部.md",
+      "score": 0.112
+    }
+  ],
+  "knowledge\\数据化审计\\57_如何提出有价值的审计问题.md": [
+    {
+      "path": "knowledge\\数据化审计\\52_内控资源承载力带着镣铐跳舞.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\数据化审计\\73_乌合之众-减少审计问题屡查屡犯.md",
+      "score": 0.057
+    },
+    {
+      "path": "knowledge\\数据化审计\\82_如何用数字化思维进行审计问题沟通.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\数据化审计\\60_为什么风控审计类系统容易出道即巅峰.md",
+      "score": 0.054
+    }
+  ],
+  "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.333
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.283
+    },
+    {
+      "path": "knowledge\\数据化审计\\61_审计数字化转型要顺势而为更要主动作为.md",
+      "score": 0.242
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.211
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.194
+    }
+  ],
+  "knowledge\\数据化审计\\59_理解企业经营管理的底子面子和日子.md": [
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.1
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计报告模板-幸福的审计人-20260518.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\资产质量变化-对比模型.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\审计方法\\两重两新政策现状与对策-审计观察-20260609.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\数据化审计\\5_内控如同治史如何正确穿过历史迷雾掌控未来.md": [
+    {
+      "path": "knowledge\\数据化审计\\4_刚性的规章制度柔性的内控文化.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\政策法规\\国资委2026-15号文-容诚解读-中国注册会计师俱乐部20260327.md",
+      "score": 0.054
+    }
+  ],
+  "knowledge\\数据化审计\\60_为什么风控审计类系统容易出道即巅峰.md": [
+    {
+      "path": "knowledge\\数据化审计\\57_如何提出有价值的审计问题.md",
+      "score": 0.054
+    }
+  ],
+  "knowledge\\数据化审计\\61_审计数字化转型要顺势而为更要主动作为.md": [
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.242
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.174
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.166
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+      "score": 0.109
+    }
+  ],
+  "knowledge\\数据化审计\\62_多关键词Excel文件检索.md": [
+    {
+      "path": "knowledge\\数据化审计\\55_高效推进整改台账分发.md",
+      "score": 0.218
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.185
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.138
+    },
+    {
+      "path": "knowledge\\数据化审计\\13_实战招标数据异常分析.md",
+      "score": 0.123
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.105
+    }
+  ],
+  "knowledge\\数据化审计\\63_数字化审计系统的利益相关者.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\数据化审计\\64_乌卡时代呼唤钻石型审计团队.md": [
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\数据化审计\\65_如何培养审计敏感性.md": [
+    {
+      "path": "knowledge\\数据化审计\\49_业务是数字化审计之本.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\数据化审计\\66_互联网普惠金融的主要风险分析.md": [
+    {
+      "path": "knowledge\\数据化审计\\14_模型风险审计内容和重点思考.md",
+      "score": 0.064
+    }
+  ],
+  "knowledge\\数据化审计\\67_第三道防线在公司治理中的作用.md": [
+    {
+      "path": "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md",
+      "score": 0.154
+    },
+    {
+      "path": "knowledge\\数据化审计\\61_审计数字化转型要顺势而为更要主动作为.md",
+      "score": 0.083
+    },
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.055
+    }
+  ],
+  "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md": [
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\数据化审计\\2_如何找出庞大关系网络中的小团伙.md",
+      "score": 0.084
+    }
+  ],
+  "knowledge\\数据化审计\\69_IT审计人眼中的信贷逻辑与常识.md": [
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\数据化审计\\6_如何解析非结构化文档文本中的隐蔽关系一.md": [
+    {
+      "path": "knowledge\\数据化审计\\34_前沿科技在数字化审计中的应用案例.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.056
+    }
+  ],
+  "knowledge\\数据化审计\\70_空间维度信息的分析和可视化.md": [
+    {
+      "path": "knowledge\\数据化审计\\24_费用都去哪儿了.md",
+      "score": 0.193
+    },
+    {
+      "path": "knowledge\\数据化审计\\39_下一页按钮不是想点就能点.md",
+      "score": 0.119
+    },
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\79_用QGIS进行空间维度聚类分析提取疑点清单.md",
+      "score": 0.107
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.094
+    }
+  ],
+  "knowledge\\数据化审计\\71_让数据灵动起来-新人数字化审计悟道历程.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.087
+    },
+    {
+      "path": "knowledge\\数据化审计\\49_业务是数字化审计之本.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\数据化审计\\53_做个数字化审计的7个锦囊.md",
+      "score": 0.071
+    }
+  ],
+  "knowledge\\数据化审计\\72_用计算机视觉技术进行资产盘点.md": [
+    {
+      "path": "knowledge\\数据化审计\\39_下一页按钮不是想点就能点.md",
+      "score": 0.087
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.083
+    },
+    {
+      "path": "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.067
+    }
+  ],
+  "knowledge\\数据化审计\\73_乌合之众-减少审计问题屡查屡犯.md": [
+    {
+      "path": "knowledge\\数据化审计\\57_如何提出有价值的审计问题.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\数据化审计\\74_提升数字化审计模型实效的思考.md": [
+    {
+      "path": "knowledge\\references\\数字化审计技能需求-招聘数据分析.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\数据化审计\\14_模型风险审计内容和重点思考.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\数据化审计\\75_暗知识-机器认知如何颠覆商业和社会.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.056
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md": [
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.283
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.223
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.202
+    },
+    {
+      "path": "knowledge\\数据化审计\\61_审计数字化转型要顺势而为更要主动作为.md",
+      "score": 0.166
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.16
+    }
+  ],
+  "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md": [
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.178
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.131
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.131
+    },
+    {
+      "path": "knowledge\\数据化审计\\53_做个数字化审计的7个锦囊.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.105
+    }
+  ],
+  "knowledge\\数据化审计\\78_外部数据-用信息不对称解决审计信息不对称.md": [
+    {
+      "path": "knowledge\\数据化审计\\20_数字化应用的目的决定了数据的价值.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.091
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.068
+    }
+  ],
+  "knowledge\\数据化审计\\79_用QGIS进行空间维度聚类分析提取疑点清单.md": [
+    {
+      "path": "knowledge\\数据化审计\\70_空间维度信息的分析和可视化.md",
+      "score": 0.107
+    },
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.05
+    }
+  ],
+  "knowledge\\数据化审计\\7_风险管理相信常识不相信奇迹.md": [
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\数据化审计\\80_审计冲突不可避免关键是如何管理.md": [
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md",
+      "score": 0.07
+    },
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.058
+    },
+    {
+      "path": "knowledge\\数据化审计\\16_数据化审计的空间技术决定下限业务决定上限.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\数据化审计\\81_数字化审计不等于写代码分析数据审计.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.163
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.144
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.128
+    }
+  ],
+  "knowledge\\数据化审计\\82_如何用数字化思维进行审计问题沟通.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.121
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\数据化审计\\76_一个场景实例讲清什么是审计数字化转型.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\数据化审计\\41_读书 - 数字化转型：“破山中贼易，破心中贼难”.md",
+      "score": 0.064
+    }
+  ],
+  "knowledge\\数据化审计\\83_智能审计工具为数字化审计插上隐形的翅膀.md": [
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.111
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.108
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\数据化审计\\47_思考 - 数字化审计需要什么样的能力体系？.md",
+      "score": 0.099
+    }
+  ],
+  "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md": [
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.086
+    },
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\数据化审计\\80_审计冲突不可避免关键是如何管理.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md",
+      "score": 0.077
+    },
+    {
+      "path": "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+      "score": 0.075
+    }
+  ],
+  "knowledge\\数据化审计\\85_审计信息化建设需要四种精神.md": [],
+  "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md": [
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\医疗审计\\卫生健康行业内部审计7个指引.md",
+      "score": 0.08
+    },
+    {
+      "path": "knowledge\\数据化审计\\10_不同公司治理结构下的内部审计模式及效果.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.073
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.071
+    }
+  ],
+  "knowledge\\数据化审计\\9_Neo4j善于处理关系所以强大一.md": [
+    {
+      "path": "knowledge\\数据化审计\\11_Neo4j善于处理关系所以强大二部署和应用.md",
+      "score": 0.232
+    },
+    {
+      "path": "knowledge\\数据化审计\\12_用图数据视角理解数据.md",
+      "score": 0.156
+    },
+    {
+      "path": "knowledge\\数据化审计\\34_前沿科技在数字化审计中的应用案例.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\references\\电子招投标串标审计-审计署太原特派办.md",
+      "score": 0.106
+    }
+  ],
+  "knowledge\\数据化审计\\Python审计准备阶段锁定关键事项.md": [
+    {
+      "path": "knowledge\\knowledge-system-report.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.088
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\数据化审计\\数字化专辑65篇目录.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\数据化审计\\专题_2026人工智能审计五大基石.md": [
+    {
+      "path": "knowledge\\references\\AI智能体Agent落地实战-从取数到数据治理全链路自动化指南.md",
+      "score": 0.124
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\references\\审计大模型-价值重构技术架构-柳絮李欣潼.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.073
+    }
+  ],
+  "knowledge\\数据化审计\\数字化专辑65篇目录.md": [
+    {
+      "path": "knowledge\\数据化审计\\50_Orange不用写代码也能做数字化审计.md",
+      "score": 0.203
+    },
+    {
+      "path": "knowledge\\数据化审计\\48_随想 - 谈审计不谈数字化就落伍了？.md",
+      "score": 0.191
+    },
+    {
+      "path": "knowledge\\数据化审计\\77_以行而求知-攀登数字化审计高峰.md",
+      "score": 0.178
+    },
+    {
+      "path": "knowledge\\数据化审计\\58_审计数字化转型要自转更要公转.md",
+      "score": 0.176
+    },
+    {
+      "path": "knowledge\\数据化审计\\42_思考 - 身处动辄千万上亿的DX大潮，内审需要做好三件事.md",
+      "score": 0.176
+    }
+  ],
+  "knowledge\\老唐纵横谈-系列文章\\第009篇-政府投资项目概算管理.md": [
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\老唐纵横谈-系列文章\\第010篇-三重一大集体决策.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md",
+      "score": 0.085
+    }
+  ],
+  "knowledge\\隐性债务专题-老唐纵横谈\\第006篇-核心定义与识别标准.md": [
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第007篇-十种常见伪装形式及新型变种.md",
+      "score": 0.202
+    },
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第008篇-审计署认定标准与典型案例拆解.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\隐性债务专题-老唐纵横谈\\第007篇-十种常见伪装形式及新型变种.md": [
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第006篇-核心定义与识别标准.md",
+      "score": 0.202
+    },
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第008篇-审计署认定标准与典型案例拆解.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.062
+    }
+  ],
+  "knowledge\\隐性债务专题-老唐纵横谈\\第008篇-审计署认定标准与典型案例拆解.md": [
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第007篇-十种常见伪装形式及新型变种.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第006篇-核心定义与识别标准.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\专项资金审计\\财政审计-一场“穿透式”追击起底“顶格补贴”背后的猫腻.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-“全国绿化先进集体”光环下被掩盖的真相.md",
+      "score": 0.238
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.058
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\信息系统审计\\民生审计-垃圾场追赃记大数据审计揭开民生资金利益黑幕.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-揭开中学食堂采购净菜的面纱.md",
+      "score": 0.322
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.068
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-假名单真套取：特困救助资金流向追踪审计.md",
+      "score": 0.053
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-“全国绿化先进集体”光环下被掩盖的真相.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.247
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\专项资金审计\\财政审计-一场“穿透式”追击起底“顶格补贴”背后的猫腻.md",
+      "score": 0.238
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.059
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-“全国绿化先进集体”光环下被掩盖的真相.md",
+      "score": 0.247
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.074
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\国企审计\\企业审计-审计在“电商迷宫”中的勇敢突围.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-青春护绿记：戳破水土保持数宇泡沫.md",
+      "score": 0.191
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.063
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.059
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\国企专项审计\\_index.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.052
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\工程审计\\经济责任审计-斩断民生工程裙带黑手强化审计监督职能.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-假名单真套取：特困救助资金流向追踪审计.md",
+      "score": 0.465
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.325
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-无人机“透视”亿元工程虚报真相.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-“全国绿化先进集体”光环下被掩盖的真相.md",
+      "score": 0.067
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-河道综合治理项目背后的猫腻.md",
+      "score": 0.06
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-无人机“透视”亿元工程虚报真相.md": [
+    {
+      "path": "knowledge\\references\\经济责任审计-自然资源资产离任审计困难与对策.md",
+      "score": 0.089
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-河道综合治理项目背后的猫腻.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-青春护绿记：戳破水土保持数宇泡沫.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.056
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-假名单真套取：特困救助资金流向追踪审计.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\经济责任审计-斩断民生工程裙带黑手强化审计监督职能.md",
+      "score": 0.465
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-揭开中学食堂采购净菜的面纱.md",
+      "score": 0.055
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.054
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\信息系统审计\\民生审计-垃圾场追赃记大数据审计揭开民生资金利益黑幕.md",
+      "score": 0.053
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-审计斩断残疾人就业领域灰色利益链.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-审计斩断残疾人就业领域灰色利益链.md": [
+    {
+      "path": "knowledge\\references\\困难群众救助审计方法-潍坊审计局.md",
+      "score": 0.051
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-假名单真套取：特困救助资金流向追踪审计.md",
+      "score": 0.051
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.05
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-揭开中学食堂采购净菜的面纱.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\信息系统审计\\民生审计-垃圾场追赃记大数据审计揭开民生资金利益黑幕.md",
+      "score": 0.322
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\社保民生审计\\民生审计-假名单真套取：特困救助资金流向追踪审计.md",
+      "score": 0.055
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\经济责任审计\\经济责任审计-盲目决策收购吹填海域背后的“如意算盘”.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.117
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-自然资源资产离任审计困难与对策.md",
+      "score": 0.091
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计- 某市2022年至2024年固体废物污染环境防治情况专项审计调查.md": [
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.06
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-河道综合治理项目背后的猫腻.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-青春护绿记：戳破水土保持数宇泡沫.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-无人机“透视”亿元工程虚报真相.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.062
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.06
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-青春护绿记：戳破水土保持数宇泡沫.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\国企审计\\企业审计-审计在“电商迷宫”中的勇敢突围.md",
+      "score": 0.191
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\资源环境审计\\资源环境审计-河道综合治理项目背后的猫腻.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-无人机“透视”亿元工程虚报真相.md",
+      "score": 0.074
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.061
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\金融审计\\财政审计-“小岗位”挖出“大内盗”.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md",
+      "score": 0.214
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.064
+    },
+    {
+      "path": "knowledge\\references\\审计案例-2025年第8-10册目录.md",
+      "score": 0.059
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\国企审计\\企业审计-审计在“电商迷宫”中的勇敢突围.md",
+      "score": 0.051
+    }
+  ],
+  "knowledge\\审计案例库-OCR\\6册\\金融审计\\金融审计-聚焦关键环节防范私募基金风险.md": [
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\工程审计\\资源环境审计-地力培肥工程项目背后的猫腻.md",
+      "score": 0.325
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\金融审计\\财政审计-“小岗位”挖出“大内盗”.md",
+      "score": 0.214
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-万亩地块背后的资金迷局审计揭开农业社会化服务中的重叠虚影.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\审计案例库-OCR\\6册\\农业农村审计\\农业农村审计-“全国绿化先进集体”光环下被掩盖的真相.md",
+      "score": 0.064
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.063
+    }
+  ],
+  "knowledge\\references\\法律法规\\中华人民共和国审计法（2021修订）-存根.md": [
+    {
+      "path": "knowledge\\references\\法律法规\\国家审计准则（2010）-存根.md",
+      "score": 0.286
+    },
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\policies\\20260706_中华人民共和国审计法.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\policies\\20260707_中华人民共和国审计法.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\policies\\20260701_中华人民共和国审计法.md",
+      "score": 0.105
+    }
+  ],
+  "knowledge\\references\\法律法规\\国家审计准则（2010）-存根.md": [
+    {
+      "path": "knowledge\\references\\法律法规\\中华人民共和国审计法（2021修订）-存根.md",
+      "score": 0.286
+    },
+    {
+      "path": "obsidian-vault\\笔记四：政府采购法规与实务.md",
+      "score": 0.24
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md",
+      "score": 0.135
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-01.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\intel_summaries\\intel_report_2026-07-05.md",
+      "score": 0.101
+    }
+  ],
+  "knowledge\\policies\\医保\\中华人民共和国社会保险法.md": [
+    {
+      "path": "knowledge\\policies\\医保\\审计署2017-1号_医保基金审计结果.md",
+      "score": 0.128
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.121
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.104
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.425
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.376
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.345
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\policies\\医保\\中华人民共和国社会保险法.md",
+      "score": 0.116
+    }
+  ],
+  "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.483
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.425
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md",
+      "score": 0.236
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.211
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国务院办公厅关于推动药品集中带量采购工作（国办发〔2021〕2号）.md",
+      "score": 0.171
+    }
+  ],
+  "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.483
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.345
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.18
+    },
+    {
+      "path": "knowledge\\policies\\医保\\审计署2017-1号_医保基金审计结果.md",
+      "score": 0.118
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md",
+      "score": 0.104
+    }
+  ],
+  "knowledge\\policies\\医保\\国务院办公厅关于推动药品集中带量采购工作（国办发〔2021〕2号）.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.171
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.076
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.057
+    }
+  ],
+  "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.236
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国务院办公厅关于推动药品集中带量采购工作（国办发〔2021〕2号）.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.104
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.087
+    }
+  ],
+  "knowledge\\policies\\医保\\审计署2017-1号_医保基金审计结果.md": [
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.153
+    },
+    {
+      "path": "knowledge\\policies\\医保\\中华人民共和国社会保险法.md",
+      "score": 0.128
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.118
+    },
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\policies\\医保\\法发2024-6号_医保骗保刑事指导意见.md": [
+    {
+      "path": "knowledge\\policies\\医保\\医疗保障基金使用监督管理条例第735号.md",
+      "score": 0.376
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.211
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令3号令.md",
+      "score": 0.18
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国家医疗保障局关于印发DRG48号.md",
+      "score": 0.087
+    },
+    {
+      "path": "knowledge\\policies\\医保\\审计署2017-1号_医保基金审计结果.md",
+      "score": 0.081
+    }
+  ],
+  "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.225
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.109
+    }
+  ],
+  "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.107
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\进度滞后-对比模型.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\收入完整性-回归模型.md",
+      "score": 0.093
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\受益对象覆盖-描述模型.md",
+      "score": 0.089
+    }
+  ],
+  "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.226
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md",
+      "score": 0.225
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.129
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\进度滞后-对比模型.md",
+      "score": 0.114
+    }
+  ],
+  "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md": [
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\资金使用效率-描述模型.md",
+      "score": 0.173
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.129
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.124
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.12
+    }
+  ],
+  "knowledge\\audit-models\\专项债\\进度滞后-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.262
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\资金使用效率-描述模型.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\audit-models\\医保资金\\分解住院-异常检测.md": [
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.19
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.144
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md",
+      "score": 0.076
+    }
+  ],
+  "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md",
+      "score": 0.184
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.14
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.12
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\分解住院-异常检测.md",
+      "score": 0.114
+    },
+    {
+      "path": "knowledge\\policies\\医保\\国 家 医 疗 保 障 局 令2号令.md",
+      "score": 0.108
+    }
+  ],
+  "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\分解住院-异常检测.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.101
+    }
+  ],
+  "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md": [
+    {
+      "path": "knowledge\\audit-models\\医保资金\\分解住院-异常检测.md",
+      "score": 0.19
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md",
+      "score": 0.109
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.101
+    }
+  ],
+  "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md": [
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.148
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\分解住院-异常检测.md",
+      "score": 0.144
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.14
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.109
+    }
+  ],
+  "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.139
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.12
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md",
+      "score": 0.098
+    }
+  ],
+  "knowledge\\audit-models\\收支审计\\往来款挂账-描述模型.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.112
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\往来款清理\\_index.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.095
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.086
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.085
+    }
+  ],
+  "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.226
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md",
+      "score": 0.143
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.14
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\往来款挂账-描述模型.md",
+      "score": 0.112
+    }
+  ],
+  "knowledge\\audit-models\\收支审计\\收入完整性-回归模型.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md",
+      "score": 0.153
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.106
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.096
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.093
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.083
+    }
+  ],
+  "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.14
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.12
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.116
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\药品用量异常-时间序列.md",
+      "score": 0.113
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.107
+    }
+  ],
+  "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\进度滞后-对比模型.md",
+      "score": 0.262
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\资金使用效率-描述模型.md",
+      "score": 0.169
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.124
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.116
+    }
+  ],
+  "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\资产质量变化-对比模型.md",
+      "score": 0.11
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\隐性债务专题-老唐纵横谈\\第006篇-核心定义与识别标准.md",
+      "score": 0.097
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\收入完整性-回归模型.md",
+      "score": 0.096
+    }
+  ],
+  "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md": [
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.184
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\收入完整性-回归模型.md",
+      "score": 0.153
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.098
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.074
+    }
+  ],
+  "knowledge\\audit-models\\经济责任审计\\资产质量变化-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\负债增长异常-时间序列.md",
+      "score": 0.11
+    },
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.107
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\往来款挂账-描述模型.md",
+      "score": 0.081
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\费用增长异常-回归模型.md",
+      "score": 0.074
+    }
+  ],
+  "knowledge\\audit-models\\经济责任审计\\重大决策合规-关联规则.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\支出集中度-异常检测.md",
+      "score": 0.143
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\挪用风险-关联规则.md",
+      "score": 0.136
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\重复报销-关联规则.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\虚列支出-异常检测.md",
+      "score": 0.089
+    },
+    {
+      "path": "knowledge\\老唐纵横谈-系列文章\\第010篇-三重一大集体决策.md",
+      "score": 0.085
+    }
+  ],
+  "knowledge\\audit-models\\绩效评价\\受益对象覆盖-描述模型.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.089
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.079
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.078
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.071
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\收入完整性-回归模型.md",
+      "score": 0.071
+    }
+  ],
+  "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\收支审计\\三公经费-对比模型.md",
+      "score": 0.139
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\满意度异常-聚类模型.md",
+      "score": 0.121
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\资金使用效率-描述模型.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.092
+    }
+  ],
+  "knowledge\\audit-models\\绩效评价\\满意度异常-聚类模型.md": [
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.121
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.094
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\高频就医-异常检测.md",
+      "score": 0.089
+    },
+    {
+      "path": "knowledge\\audit-models\\医保资金\\机构费用异常-聚类模型.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.08
+    }
+  ],
+  "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.107
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.105
+    },
+    {
+      "path": "knowledge\\references\\五类企业经济责任审计定量评价指标-幸福的审计人.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.092
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\业务类型\\绩效评价-通用工作流.md",
+      "score": 0.087
+    }
+  ],
+  "knowledge\\audit-models\\绩效评价\\资金使用效率-描述模型.md": [
+    {
+      "path": "knowledge\\audit-models\\专项债\\资金闲置-时间序列.md",
+      "score": 0.173
+    },
+    {
+      "path": "knowledge\\audit-models\\经济责任审计\\专项资金挪用-对比模型.md",
+      "score": 0.169
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\进度滞后-对比模型.md",
+      "score": 0.168
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\投入产出效率-对比模型.md",
+      "score": 0.102
+    },
+    {
+      "path": "knowledge\\audit-models\\收支审计\\跨年度调节-时间序列.md",
+      "score": 0.101
+    }
+  ],
+  "obsidian-vault\\index.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.361
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.234
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.234
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.23
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.229
+    }
+  ],
+  "obsidian-vault\\政府审计 内部控制 内部控制体系（COSO框架与企业内控）.md.md": [
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.369
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.107
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.069
+    },
+    {
+      "path": "knowledge\\articles\\政府采购资格条件合规审查-2026.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\references\\社会网络分析政府采购审计-山东财经大学.md",
+      "score": 0.064
+    }
+  ],
+  "obsidian-vault\\知识库控制面板.md": [
+    {
+      "path": "knowledge\\PARA-INDEX.md",
+      "score": 0.397
+    },
+    {
+      "path": "knowledge\\rag-plan.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\场景-案例匹配索引.md",
+      "score": 0.17
+    },
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.147
+    },
+    {
+      "path": "knowledge\\scanner\\2026-06-09-RAG2.0落地实战-假装正经的程序员.md",
+      "score": 0.141
+    }
+  ],
+  "obsidian-vault\\笔记一：审计典型案例汇编.md": [
+    {
+      "path": "knowledge\\references\\60条常见审计问题清单-审计方法定性依据处理意见-高级审计师培训.md",
+      "score": 0.285
+    },
+    {
+      "path": "obsidian-vault\\04-法规案例库\\_index.md",
+      "score": 0.125
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.072
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.071
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.069
+    }
+  ],
+  "obsidian-vault\\笔记二：招投标100种违规行为清单.md": [
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.2
+    },
+    {
+      "path": "knowledge\\政策法规\\串通投标罪证据认定-政策荟萃一点通20260603.md",
+      "score": 0.181
+    },
+    {
+      "path": "knowledge\\references\\投标文件元数据自查-避免AI误判串标-老友呢-20260630.md",
+      "score": 0.168
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\审计方法\\围标串标识别-十层检测体系.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.112
+    }
+  ],
+  "obsidian-vault\\笔记五：预算绩效评价体系.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.172
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.171
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.13
+    },
+    {
+      "path": "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md",
+      "score": 0.118
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.105
+    }
+  ],
+  "obsidian-vault\\笔记四：政府采购法规与实务.md": [
+    {
+      "path": "knowledge\\references\\法律法规\\国家审计准则（2010）-存根.md",
+      "score": 0.24
+    },
+    {
+      "path": "knowledge\\references\\法律法规\\中华人民共和国审计法（2021修订）-存根.md",
+      "score": 0.122
+    },
+    {
+      "path": "knowledge\\数据化审计\\84_IIA_GTAG_持续审计中文版及应用思考.md",
+      "score": 0.085
+    },
+    {
+      "path": "knowledge\\数据化审计\\8_浙江民营企业内部审计最佳实践.md",
+      "score": 0.082
+    },
+    {
+      "path": "knowledge\\policies\\20260629_审计署-政策法规.md",
+      "score": 0.075
+    }
+  ],
+  "obsidian-vault\\01-项目对象库\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.278
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.263
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.25
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.247
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.246
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\_index.md": [
+    {
+      "path": "obsidian-vault\\index.md",
+      "score": 0.361
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\工程竣工决算审计\\_index.md",
+      "score": 0.233
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.227
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.224
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.222
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.499
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\取证方法\\_index.md",
+      "score": 0.475
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.473
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.457
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.452
+    }
+  ],
+  "obsidian-vault\\04-法规案例库\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.367
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.348
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.337
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.334
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.332
+    }
+  ],
+  "obsidian-vault\\05-审计整改库\\_index.md": [
+    {
+      "path": "obsidian-vault\\05-审计整改库\\整改措施\\_index.md",
+      "score": 0.535
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\验收标准\\_index.md",
+      "score": 0.437
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\问题分类\\_index.md",
+      "score": 0.396
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.318
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.294
+    }
+  ],
+  "obsidian-vault\\场景\\场景-专项债审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.683
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.669
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.657
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.654
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.654
+    }
+  ],
+  "obsidian-vault\\场景\\场景-国企专项审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.74
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.651
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.641
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.638
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.627
+    }
+  ],
+  "obsidian-vault\\场景\\场景-工程竣工决算审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.679
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.627
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.598
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.595
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.585
+    }
+  ],
+  "obsidian-vault\\场景\\场景-往来款清理.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.668
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.617
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.589
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.586
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.581
+    }
+  ],
+  "obsidian-vault\\场景\\场景-政府补贴审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.705
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.651
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.61
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.608
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.601
+    }
+  ],
+  "obsidian-vault\\场景\\场景-社保资金审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.694
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.641
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.61
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.597
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.595
+    }
+  ],
+  "obsidian-vault\\场景\\场景-经济责任审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.74
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.705
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.694
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.69
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.679
+    }
+  ],
+  "obsidian-vault\\场景\\场景-绩效评价.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.707
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.684
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.683
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.671
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.67
+    }
+  ],
+  "obsidian-vault\\场景\\场景-能源审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.684
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.669
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.669
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.666
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.653
+    }
+  ],
+  "obsidian-vault\\场景\\场景-资产清查.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.707
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.654
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.653
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.64
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.639
+    }
+  ],
+  "obsidian-vault\\场景\\场景-采购招投标审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.69
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.638
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.608
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.597
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.585
+    }
+  ],
+  "obsidian-vault\\场景\\场景-预算执行审计.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.671
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.666
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.655
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.654
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.639
+    }
+  ],
+  "obsidian-vault\\跨域关联\\Crawl4AI-开源AI爬虫工具.md": [
+    {
+      "path": "knowledge\\审计案例库-6册OCR成果索引.md",
+      "score": 0.103
+    },
+    {
+      "path": "knowledge\\AI与工具\\Obsidian11个AI插件-萝卜啊20260526.md",
+      "score": 0.1
+    },
+    {
+      "path": "obsidian-vault\\知识库控制面板.md",
+      "score": 0.084
+    },
+    {
+      "path": "knowledge\\references\\Cocoon-AI架构图设计系统分析.md",
+      "score": 0.066
+    },
+    {
+      "path": "knowledge\\articles\\OpenClaw-6个PPT海报Skill推荐.md",
+      "score": 0.063
+    }
+  ],
+  "obsidian-vault\\政府审计\\业务类型\\绩效评价-通用工作流.md": [
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.131
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.102
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.099
+    },
+    {
+      "path": "knowledge\\audit-models\\绩效评价\\目标完成率-对比模型.md",
+      "score": 0.087
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.086
+    }
+  ],
+  "obsidian-vault\\政府审计\\审计方法\\围标串标识别-十层检测体系.md": [
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.152
+    },
+    {
+      "path": "knowledge\\references\\融策电子招投标审计SOP-v1.0.md",
+      "score": 0.128
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\业务类型\\绩效评价-通用工作流.md",
+      "score": 0.066
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.065
+    },
+    {
+      "path": "knowledge\\references\\TF-IDF查处围标串标-阜新审计局案例.md",
+      "score": 0.06
+    }
+  ],
+  "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.18
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.171
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.133
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\业务类型\\绩效评价-通用工作流.md",
+      "score": 0.131
+    },
+    {
+      "path": "knowledge\\references\\审计署2025年度审计报告-绩效管理问题.md",
+      "score": 0.13
+    }
+  ],
+  "obsidian-vault\\政府审计\\政策法规\\专项债申报-审核要点.md": [
+    {
+      "path": "obsidian-vault\\政府审计\\业务类型\\绩效评价-通用工作流.md",
+      "score": 0.061
+    },
+    {
+      "path": "knowledge\\audit-models\\专项债\\收益不达预期-对比模型.md",
+      "score": 0.058
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.057
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.056
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.056
+    }
+  ],
+  "obsidian-vault\\政府审计\\政策法规\\中华人民共和国财政部.md": [
+    {
+      "path": "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+      "score": 0.112
+    },
+    {
+      "path": "knowledge\\policies\\20260630_审计署-时政要闻.md",
+      "score": 0.087
+    },
+    {
+      "path": "knowledge\\INDEX.md",
+      "score": 0.086
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.084
+    },
+    {
+      "path": "knowledge\\policies\\20260701_审计署-时政要闻.md",
+      "score": 0.082
+    }
+  ],
+  "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md": [
+    {
+      "path": "obsidian-vault\\政府审计 内部控制 内部控制体系（COSO框架与企业内控）.md.md",
+      "score": 0.369
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\采购招投标审计\\_index.md",
+      "score": 0.188
+    },
+    {
+      "path": "knowledge\\references\\四川省财政厅政府采购违法违规典型案例通报-四川政府采购网-2026.md",
+      "score": 0.167
+    },
+    {
+      "path": "knowledge\\references\\住建部工程招投标典型违法案例通报第二批-2026.md",
+      "score": 0.132
+    },
+    {
+      "path": "obsidian-vault\\笔记二：招投标100种违规行为清单.md",
+      "score": 0.107
+    }
+  ],
+  "obsidian-vault\\05-审计整改库\\整改措施\\_index.md": [
+    {
+      "path": "obsidian-vault\\05-审计整改库\\_index.md",
+      "score": 0.535
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\验收标准\\_index.md",
+      "score": 0.247
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\问题分类\\_index.md",
+      "score": 0.243
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.171
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.158
+    }
+  ],
+  "obsidian-vault\\05-审计整改库\\问题分类\\_index.md": [
+    {
+      "path": "obsidian-vault\\05-审计整改库\\_index.md",
+      "score": 0.396
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\验收标准\\_index.md",
+      "score": 0.259
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\整改措施\\_index.md",
+      "score": 0.243
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.16
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.148
+    }
+  ],
+  "obsidian-vault\\05-审计整改库\\验收标准\\_index.md": [
+    {
+      "path": "obsidian-vault\\05-审计整改库\\_index.md",
+      "score": 0.437
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\问题分类\\_index.md",
+      "score": 0.259
+    },
+    {
+      "path": "obsidian-vault\\05-审计整改库\\整改措施\\_index.md",
+      "score": 0.247
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.157
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.156
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\取证方法\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.475
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.337
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.312
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.304
+    },
+    {
+      "path": "obsidian-vault\\场景\\场景-资产清查.md",
+      "score": 0.279
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\审计程序\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.452
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.408
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.369
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\取证方法\\_index.md",
+      "score": 0.337
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.306
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.499
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.379
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.369
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\取证方法\\_index.md",
+      "score": 0.304
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.288
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.457
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.408
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.379
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\取证方法\\_index.md",
+      "score": 0.312
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md",
+      "score": 0.297
+    }
+  ],
+  "obsidian-vault\\03-操作指引库\\数据分析方法\\_index.md": [
+    {
+      "path": "obsidian-vault\\03-操作指引库\\_index.md",
+      "score": 0.423
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\审计程序\\_index.md",
+      "score": 0.306
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\报告撰写\\_index.md",
+      "score": 0.297
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\底稿规范\\_index.md",
+      "score": 0.288
+    },
+    {
+      "path": "obsidian-vault\\03-操作指引库\\取证方法\\_index.md",
+      "score": 0.277
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-专项债审计.md",
+      "score": 0.368
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.203
+    },
+    {
+      "path": "knowledge\\references\\专项债与政府投资项目审计-招商银行.md",
+      "score": 0.194
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.181
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.175
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\国企专项审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-国企专项审计.md",
+      "score": 0.413
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.216
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.161
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\能源审计\\_index.md",
+      "score": 0.151
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.151
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\工程竣工决算审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-工程竣工决算审计.md",
+      "score": 0.503
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.233
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.152
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.145
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.139
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\往来款清理\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-往来款清理.md",
+      "score": 0.427
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.212
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.155
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.149
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\能源审计\\_index.md",
+      "score": 0.147
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-政府补贴审计.md",
+      "score": 0.449
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.227
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.203
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.181
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.167
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-社保资金审计.md",
+      "score": 0.473
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.222
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.184
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.167
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\专项债审计\\_index.md",
+      "score": 0.163
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\经济责任审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-经济责任审计.md",
+      "score": 0.26
+    },
+    {
+      "path": "knowledge\\审计方法\\国企经济责任审计系列干货第1篇-一笔财思-20260609.md",
+      "score": 0.225
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.187
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.149
+    },
+    {
+      "path": "knowledge\\references\\经济责任审计-技能缺口分析.md",
+      "score": 0.144
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-绩效评价.md",
+      "score": 0.296
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.207
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\2026年绩效评价改革方向.md",
+      "score": 0.18
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\能源审计\\_index.md",
+      "score": 0.175
+    },
+    {
+      "path": "obsidian-vault\\笔记五：预算绩效评价体系.md",
+      "score": 0.172
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\能源审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-能源审计.md",
+      "score": 0.415
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.215
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.18
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.175
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.152
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\营养餐审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.198
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\绩效评价\\_index.md",
+      "score": 0.127
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.124
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\能源审计\\_index.md",
+      "score": 0.118
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.116
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\采购招投标审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-采购招投标审计.md",
+      "score": 0.442
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.192
+    },
+    {
+      "path": "obsidian-vault\\政府审计\\政策法规\\政府采购-审计红线.md",
+      "score": 0.188
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md",
+      "score": 0.158
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.137
+    }
+  ],
+  "obsidian-vault\\02-主题数据库\\预算执行审计\\_index.md": [
+    {
+      "path": "obsidian-vault\\场景\\场景-预算执行审计.md",
+      "score": 0.419
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\_index.md",
+      "score": 0.224
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\政府补贴审计\\_index.md",
+      "score": 0.203
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\社保资金审计\\_index.md",
+      "score": 0.184
+    },
+    {
+      "path": "obsidian-vault\\02-主题数据库\\能源审计\\_index.md",
+      "score": 0.18
+    }
+  ]
+}

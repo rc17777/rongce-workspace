@@ -43,6 +43,19 @@
 
 - 直接高效，不废话 | 关注公司管理和业务发展 | 政府审计需求优先
 
+## PPT工具矩阵（2026-07-08起）
+| 工具 | 定位 | 输出 | 场景 | 状态 |
+|:--|:--|:--|:--|:--|
+| guizang-ppt-skill | 瑞士风格HTML幻灯片 | 电子杂志级HTML | 汇报/演示 | ✅ 已装+融策深蓝定制 |
+| ppt-master | 可编辑PPTX管线 | 原生.pptx | 正式交付/客户改稿 | ✅ 已装(缺tools依赖) |
+| huashu-design | 全能设计skill | HTML+PPTX+MP4+原型 | 品牌/标书/动画 | ✅ 已装+品牌资产入库 |
+
+### 融策品牌资产
+- 路径: `~/.openclaw/skills/huashu-design/assets/rongce-brand/`
+- 色板: 深蓝#0A1F3F / 青绿#1A5C6E / 铜金#C5955C / 暖灰#F5F2EC
+- Logo: 融策logo.png（方形标，深蓝底+铜金字）
+- 抬头图: 融策抬头.jpg（深蓝横幅）
+
 ## 核心高频技能（Top 20）
 
 | 技能 | 用途 |
@@ -126,21 +139,27 @@ audit-blackboard/
 
 ## 串标围标检测体系（摘要）
 
-11层检测体系，技术详情见 `memory/archive/bidding-technical-foundation.md`
+23层+9纵深检测体系（v3.6），技术详情见 `skills/procurement-audit-models/TECHNICAL-FOUNDATION.md`
 
-| 层级 | 检测维度 | 数据源 | 无需外部数据 |
+| 层级 | 检测维度 | 数据源 | 爆炸力 |
 |:--|:------|:-------|:--:|
-| L1 | 报价规律 | 开标一览表 | ✅ |
-| L3 | 文本雷同(TF-IDF) | 投标文件.docx | ✅ |
-| L4 | 图片哈希 | .docx解压word/media/ | ✅ |
-| L5 | 元数据交叉 | core.xml/WPS GUID | ✅ |
-| L7 | 打印机型号 | PDF Producer字段 | ✅ |
-| L8 | 工商关联 | 天眼查 | ❌ |
-| L9 | 保证金资金链 | 银行汇款凭证 | ❌ |
-| L2 | 投标IP/MAC | 代理后台日志 | ❌ |
-| L11 | 意思联络证据 | 微信/通话/协议 | ❌（司法专用） |
+| L1 | 报价规律 | 开标一览表 | 🔴铁证 |
+| L2 | 投标IP/MAC | 代理后台日志 | 🔴铁证 |
+| L3 | 文本雷同(TF-IDF) | 投标文件全文 | 🔴铁证 |
+| L4 | 图片/资源哈希 | PDF嵌入图片→感知哈希 | 🔴铁证 |
+| L5 | 元数据交叉 | core.xml/WPS GUID | 🔴铁证 |
+| L7 | 打印机型号 | PDF Producer字段 | 🟡强信号 |
+| L8 | 工商关联穿透 | 天眼查/企查查 | 🔴铁证 |
+| L9 | 保证金资金链 | 银行汇款凭证 | 🔴铁证 |
+| **L10** | **评标打分异常（倾向性照顾）** | **评委逐项打分表** | **🔴铁证** |
+| L11 | 供应商伴随投标(FP-growth) | 3+项目历史数据 | 🔴铁证 |
+| **L15** | **历史中标模式（陪标+中标专业户）** | **3年+招投标台账** | **🔴铁证** |
+| **L18** | **投标设备电子指纹八项** ⭐v3.6 | **IP/MAC/CPU ID/硬盘SN/主板SN/机器码/文件GUID/图片哈希** | **🔴铁证** |
+| L19 | 评标专家违规 | 专家库+社保缴费表 | 🔴铁证 |
 
-**核心策略**: L3+L4+L5三杀即可定案，不依赖代理机构配合。代理不给IP→见取数函Excel Sheet2的7层破解法。
+**核心策略**: L3+L4+L5三杀即可定案，不依赖代理机构配合。
+
+**v3.6更新（2026-07-13）**: L18全面升级为八项投标设备电子指纹检测，新增CPU ID/硬盘SN/主板SN/整机机器码/文件GUID等硬件级指纹，附Windows原生查看命令和投标留痕位置。来源：微信公众号「PaperSkill」《八项投标电子指纹证据》。
 
 ## 经责审计量化评价（摘要）
 
@@ -165,6 +184,8 @@ v2.0整合模板，详见 `knowledge/references/经济责任审计-融策整合�
 
 ## 关键教训
 
+- **报告结论复核铁律**（2026-07-06 平头哥指令）：写完或复核任何报告后，必须逐项重新核算汇总数字和关键结论，并把计算依据写在复核说明里。不得凭心算手动填汇总行。依据格式：每条结论后附（数据来源+计算方法+交叉验证结果），方便平头哥独立判断。
+
 - **spawn 必须带 runTimeoutSeconds**，否则子代理跑完后空转耗token。这次OCR任务跑了78分钟（totalTokens 41k）就是因为没设超时
 
 - .doc格式是元数据盲区（WPS存.doc时SummaryInformation为空）
@@ -173,9 +194,63 @@ v2.0整合模板，详见 `knowledge/references/经济责任审计-融策整合�
 - 元数据清除行为本身即是审计证据
 - Windows GBK编码是Python脚本的常驻坑（需 `sys.stdout.reconfigure(encoding='utf-8')`）
 
----
+## 2026-07-09 大事件：模型路由 v4.0 + 知识库三件套
 
-## 2026-06-24 大事件：审计案例库整理+分类+技能树
+### 模型路由 v3.0→v4.0 重构
+- 路由依据从「任务类型」改为**「错了要付出什么代价」**（错误代价六级）
+- GPT-5.5 从替补升级为表达审查双签人
+- v4.0 混合架构：任务类型快速分类 + 错误代价精准调级
+- 新增 qwen3.7-plus（中文原生·图片输入·公文）
+- 创建测试套件 15 题（`knowledge/references/模型路由验证测试套件.md`）
+- 跑题5验证：qwen 9/9 vs flash 7/9，确认中文路由决策正确
+
+### 知识库三件套升级
+- `scripts/prune_knowledge.py` — 内容清理扫描（343文件全部活跃）
+- `knowledge/PARA-INDEX.md` — PARA四层分类 + 入库门槛 + 5分钟工作流
+- `scripts/build_links.py` — TF-IDF双向链接（338篇/65%有链接/平均2.4关联）
+- `scripts/rag_bridge.py` — RAG↔Obsidian桥接器
+- `obsidian-vault/知识库控制面板.md` — Obsidian集成面板
+- KEY: 文章10要素全部覆盖，知识库从被动存储升级为主动管理
+
+### 其他
+- 审计情报采集（4/5成功）
+- 阿坝发展控股集团审计评估收费测算表（三指标对比版Excel）
+- 宣传册final版（15页/53.5MB PDF）
+
+## 2026-07-10 大事件：API Key 安全迁移 + 模型池扩展 + 路由全验证
+
+### API Key 安全迁移（P0-P2 零成本加固）
+- **P0**: 8 个 API Key 从 openclaw.json 明文 → Windows 环境变量（env://引用）
+  - 映射：OC_KEY_TOP_V1 / GPT55 / CLAUDE / OPUS / FABLE / DOUBAO / IMAGE / QWEN
+- **P1**: RAG Server 绑定 127.0.0.1 ✅（已确认）
+- **P2**: .gitignore 加入 openclaw.json / *.json.bak / *.json.backup
+- 备份：openclaw.json.bak（回滚：Copy-Item *.bak openclaw.json）
+
+### 模型池扩展（8→12个）
+- 新增：gpt-5.6-luna / gpt-5.6-sol / gpt-5.6-terra（均通过 cbwyy.top 代理）
+- 支持 text+image 输入
+- Key 直接迁移到环境变量（OC_KEY_LUNA / SOL / TERRA）
+
+### 路由架构重构
+- **五级→六级**：新增「咨询层」独立路由层
+- fable-5 从高代价层校验员 → 独立顾问层（做决策之前先问）
+- 错误代价升级规则优化：升级条件不变，新增咨询层升级路径
+- fallback 链扩展：`[v4-pro, qwen3.7-plus, fable-5, sonnet-5, gpt-5.5, luna, sol, terra]`
+
+### 全路由验证（12/12模型全部通过）
+| 模型 | 状态 |
+|:--|:--:|
+| v4-flash, qwen3.7-plus, fable-5, v4-pro | ✅
+| sonnet-5, gpt-5.5, gpt-5.6-luna/sol/terra | ✅
+| opus-4-8, doubao | ✅
+
+### TOOLS.md 路由表全面更新
+- 可用模型一览表（12个模型×5字段）
+- 错误代价六级路由图（新增咨询层）
+- 任务路由表（咨询层引用）
+- Fable-5 咨询层说明
+- 模型清单表（API Type/baseUrl/Input）
+- 环境变量 Key 映射表
 
 ### 批量OCR
 - 桌面183个PDF（审计观察+经济责任审计）→ PaddleOCR本地识别
@@ -202,4 +277,74 @@ v2.0整合模板，详见 `knowledge/references/经济责任审计-融策整合�
 - `审计资料清单.json` 需要 `--rebuild` 参数刷新才能反映YAML变更
 - 桌面PDF已被挪走，3个失败文件无法补处理
 
-*最后更新: 2026-06-24 | 详细档案: memory/archive/ | 项目历史: 各项目README*
+## 2026-07-11 大事件：API Key 全明文化 + 调用环境稳定
+
+### 背景
+fable-5 换新 key 时发现 Windows 上 env:// 引用的致命缺陷：
+- `setx` 写注册表 ✅
+- Gateway 进程继承父进程环境块，不重读注册表 ❌
+- SIGUSR1 重启不刷新环境变量 ❌
+- 导致 2026-07-10 的 P0 安全迁移（env://）实际上对 fable-5 无效
+
+### 修复方案（根本解法）
+把所有 11 个 API Key 从 `env://` 引用**全部转回明文**写入 openclaw.json：
+- 备份：`openclaw.json.bak`（回滚用）
+- 安全前提：`.gitignore` 已包含 `openclaw.json` 和 `**/openclaw.json`
+- 验证：11/11 健康检查全部通过
+
+### 教训
+- Windows 上 `env://` 只有在进程完全重启（taskkill + 重新启动）时才生效
+- SIGUSR1 信号重启不刷新环境变量——这是 Windows 进程模型固有行为
+- 文件落盘安全 < 功能稳定可靠时，优先选稳定
+- 11 个注册表 OC_KEY_* 环境变量保留，不影响明文配置，可随时删除
+
+### 总结
+| 时间 | 方案 | 问题 | 结论 |
+|:--|:--|:--|:--|
+| 07-10 | env:// 安全迁移 | fable key 换了，env:// 不生效 | Windows 进程模型不兼容 |
+| 07-11 | 全部明文 + .gitignore 保护 | 已解决 | 稳定压倒一切 |
+
+## 2026-07-13 新增：两个画图技能 + 微信爬取技巧
+
+### 新装技能
+1. **fireworks-tech-graph** — 技术架构图SVG生成器，8种风格（扁平/暗黑/蓝图/Notion/玻璃态/Claude风/OpenAI风/暗黑奢华），支持UML、AI架构模式
+   - 路径：`~/.openclaw/skills/fireworks-tech-graph/`
+   - GitHub：yizhiyanhua-ai/fireworks-tech-graph
+
+2. **architecture-diagram-generator** — 暗黑风架构图HTML生成器，自带Copy/PNG/PDF按钮，语义配色
+   - 路径：`~/.openclaw/skills/architecture-diagram-generator/`
+   - GitHub：cocoon-ai/architecture-diagram-generator
+
+### 微信爬取技巧
+- 微信公众号文章必须用**移动端User-Agent**（Android浏览器+MicroMessenger头）
+- 普通web_fetch只能拿到JS渲染空壳
+- 详见TOOLS.md「微信文章爬取技巧」
+
+## 2026-07-14 大事件：Skill体系三件套治理
+
+基于三篇微信文章启示（Skill管理技巧/Skill-insight平台/Agent异步架构），完成体系升级：
+
+### 产出物
+| 脚本 | 用途 | 来源 |
+|:--|:--|:--|
+| `scripts/skills_audit.py` | 扫描79技能→分类+重复检测+优化建议 | 第3篇 |
+| `scripts/task_trace.py` | 执行追踪：start→step→finish→三维评分 | 第4篇 |
+| `scripts/async_task.py` | 异步任务：慢操作后台化+通知注入 | 第5篇 |
+| `scripts/skill_hub.py` | 统一控制面板 | 整合 |
+| `config/skill_routing.json` | 场景路由配置（13场景×触发词） | 第3篇 |
+
+### 关键发现
+- 79个技能，7.1MB，常驻16个 + 13场景分组
+- 4个超大技能（>500KB）：huashu-design/sql-toolkit/ppt-master/arch-diagram → 按需加载
+- 场景路由实测：输入"绩效评价报告深度复核"→从79→25个（节省72个）
+- wecom-* 15个技能名相似度高（前缀相同），自动去重需优化
+
+### 设计理念（三篇联动）
+1. Article 3（操作层）：按场景拆分目录，全局只留10-15个高频，避免token稀释
+2. Article 4（架构层）：过程级评测（结果+路径+成本三维），靶向归因（Skill缺陷 vs 模型偏差）
+3. Article 5（工程层）：慢操作异步化，模型显式background=true优先+关键词兜底
+
+### 入库文章
+- `knowledge/laws/_incoming/电子招投标串标蛛丝马迹-审计特种兵.md` — 7种电子串标信号+法条辨析
+
+*最后更新: 2026-07-14 | 详细档案: memory/archive/ | 项目历史: 各项目README*

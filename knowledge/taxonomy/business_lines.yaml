@@ -1,0 +1,509 @@
+schema_version: '2.0'
+tree_version: 16
+last_updated: '2026-07-11'
+llm_config:
+  round2_model: deepseek-v4-flash
+  round2_fallback: deepseek-v4-pro
+  round3_model: deepseek-v4-pro
+  round3_fallback: qwen3.7-plus
+  last_verified: '2026-07-11'
+meta_tags:
+- id: MT1
+  name: ESG合规
+  description: 环境/社会/治理相关，横切多条业务线
+  affected_lines:
+  - L1
+  - L7
+  - L9
+  - L11
+- id: MT2
+  name: 数字化转型
+  description: 信息化/数据资产/系统审计，横切多条业务线
+  affected_lines:
+  - L1
+  - L3
+  - L6
+  - L7
+  - L10
+weak_signals:
+- signal_id: WS-2026001
+  proposed_domain: 数据资产审计
+  source_count: 1
+  confidence: 0.72
+  first_seen: '2026-07-01'
+  status: accumulating
+nodes:
+- id: L1
+  name: 经济责任审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《审计法》第二十六条
+  - 2019两办《党政主要领导干部和国有企事业单位主要领导人员经济责任审计规定》
+  sub_types:
+  - 任中审计
+  - 离任审计
+  - 自然资源资产离任审计
+  keywords:
+    primary:
+    - 经济责任审计
+    - 经责审计
+    - 经责
+    - 任中审计
+    - 离任审计
+    - 自然资源资产离任
+    secondary:
+    - 党政领导干部
+    - 国有企事业单位领导人
+    - 任期经济责任
+    - 三重一大
+    - 廉政
+    - 定责
+    - 责任界定
+    - 党政
+    - 领导人员
+    - 任期
+    - 干部监督
+  detection_rules:
+  - pattern: (经济责任|经责).{0,4}审计
+  - pattern: (领导干部|领导人).{0,4}(任期|离任|任中)
+  radiation_signals:
+  - from_policy: 《预算绩效评价管理办法》
+    affected_aspect: 绩效目标完成情况纳入经责评价
+- id: L2
+  name: 收支审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《审计法》第十九条
+  sub_types: []
+  keywords:
+    primary:
+    - 财务收支审计
+    - 收支审计
+    - 收支两条线
+    - 非税收入
+    secondary:
+    - 三公经费
+    - 小金库
+    - 部门预算收支
+    - 财政拨款
+    - 预算单位财务
+    - 罚没收入
+    - 上缴
+  detection_rules:
+  - pattern: (财务收支|收支两条线|非税收入).{0,2}(审计|检查|管理)
+  radiation_signals: []
+- id: L3
+  name: 预算执行审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《预算法》
+  - 《审计法》第十七条
+  sub_types: []
+  keywords:
+    primary:
+    - 预算执行审计
+    - 预算执行
+    - 部门预算
+    - 决算审计
+    - 决算
+    - 预算编制
+    secondary:
+    - 结转结余
+    - 超预算支出
+    - 无预算支出
+    - 预算批复
+    - 预算调整
+    - 预算公开
+    - 零基预算
+    - 过紧日子
+    - 预算一体化
+    - 人大监督
+  detection_rules:
+  - pattern: (预算执行|部门预算|决算).{0,2}(审计|检查)
+  - pattern: 预算.{0,4}(批复|调整|公开|编制)
+  radiation_signals: []
+- id: L4
+  name: 专项资金审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《审计法》第二十三条
+  sub_types:
+  - 社保基金审计
+  - 营养餐资金审计
+  - 乡村振兴资金审计
+  - 教育专项资金审计
+  keywords:
+    primary:
+    - 专项资金
+    - 专款专用
+    - 转移支付
+    - 项目资金
+    - 社保基金
+    - 乡村振兴资金
+    secondary:
+    - 补助资金
+    - 补贴资金
+    - 截留挪用
+    - 套取资金
+    - 滞留资金
+    - 配套资金
+    - 统筹整合
+    - 事权支出
+    - 资金拨付
+    - 乡村振兴
+  detection_rules:
+  - pattern: (专项|转移支付|专款).{0,2}资金
+  - pattern: (社保|营养餐|乡村振兴|教育专项).{0,2}资金
+  radiation_signals: []
+- id: L5
+  name: 往来款清理审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies: []
+  sub_types: []
+  keywords:
+    primary:
+    - 往来款清理
+    - 往来款项
+    - 应收应付
+    - 债权债务
+    - 坏账
+    - 呆账
+    - 应收款
+    - 逾期
+    secondary:
+    - 挂账
+    - 长期未清
+    - 借款清理
+    - 其他应收款
+    - 其他应付款
+    - 账龄分析
+    - 清收
+    - 催收
+    - 预付账款
+    - 坏账核销
+  detection_rules:
+  - pattern: (往来款|应收应付|债权债务|坏账|呆账).{0,2}(清理|审计|核对)
+  - pattern: (其他应收|其他应付|长期挂账).{0,2}
+  radiation_signals: []
+- id: L6
+  name: 招投标审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《招标投标法》
+  - 《政府采购法》
+  sub_types:
+  - 招标文件质疑
+  - 政府采购投诉处理
+  - 招标问询代理
+  - 行政复议与诉讼
+  keywords:
+    primary:
+    - 招投标审计
+    - 围标串标
+    - 政府采购
+    - 评标专家
+    - 招标投标
+    - 招标问询
+    - 质疑投诉
+    - 政府采购质疑
+    secondary:
+    - 招标文件
+    - 投标人
+    - 中标结果
+    - 公开招标
+    - 邀请招标
+    - 竞争性谈判
+    - 询价采购
+    - 单一来源
+    - 陪标
+    - 串通投标
+    - 异议处理
+    - 投诉处理
+    - 行政复议
+    - 行政诉讼
+    - 采购文件澄清
+    - 评审结果质疑
+    - 合同授予争议
+  detection_rules:
+  - pattern: (围标|串标).{0,4}
+  - pattern: (招标投标|政府采购|评标).{0,2}(审计|管理|监督|检查)
+  - pattern: (质疑|投诉|异议|问询|复议|诉讼).{0,2}(招标|采购|投标|评审|中标|成交)
+  radiation_signals: []
+- id: L7
+  name: 国企审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《审计法》第二十二条
+  - 国资委15号文
+  sub_types: []
+  keywords:
+    primary:
+    - 国有企业审计
+    - 国企审计
+    - 国有资产
+    - 国有资本
+    - 国有独资
+    secondary:
+    - 国资委
+    - 混合所有制
+    - 国有控股
+    - 出资人
+    - 保值增值
+    - 公司治理
+    - 改制
+    - 资产盘活
+    - 闲置资产
+    - 资产流失
+    - 出租出借
+  detection_rules:
+  - pattern: (国有企业|国有独资|国有控股|国资国企).{0,2}(审计|监管|管理|改革)
+  - pattern: (国有资产|国有资本).{0,2}(保值增值|流失|监管)
+  radiation_signals: []
+- id: L8
+  name: 成本效益审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies: []
+  sub_types: []
+  keywords:
+    primary:
+    - 成本效益分析
+    - 投入产出
+    - 成本控制
+    - 盈亏平衡
+    - 量本利
+    - 经济性
+    secondary:
+    - 单价核定
+    - 定额标准
+    - 成本核算
+    - 费用控制
+    - 经济评价
+    - 造价分析
+    - 业财融合
+    - 节约
+  detection_rules:
+  - pattern: (成本效益|投入产出|盈亏平衡|量本利).{0,2}(分析|审计|评价)
+  radiation_signals: []
+- id: L9
+  name: 能源审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies: []
+  sub_types:
+  - 碳中和审计
+  keywords:
+    primary:
+    - 能源审计
+    - 碳中和
+    - 碳达峰
+    - 双碳
+    - 碳排放
+    - 能耗
+    secondary:
+    - 节能减排
+    - 能源管理
+    - 可再生能源
+    - 清洁能源
+    - 用能单位
+    - 减排
+    - 排放
+  detection_rules:
+  - pattern: (能源审计|碳中和|碳达峰|双碳).{0,2}
+  - pattern: (碳排放|能耗|节能).{0,2}(审计|核查|监测)
+  radiation_signals: []
+- id: L10
+  name: 工程竣工决算财务审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《基本建设财务规则》
+  sub_types: []
+  keywords:
+    primary:
+    - 竣工决算
+    - 工程财务
+    - 基建财务
+    - 基本建设
+    - 工程结算审计
+    secondary:
+    - 待摊投资
+    - 建安工程费
+    - 征地拆迁
+    - 竣工验收
+    - 建设单位管理费
+    - 勘察设计费
+    - 监理费
+    - 固定资产投资
+    - 工程造价
+    - 工程款
+  detection_rules:
+  - pattern: (竣工|工程|基建).{0,2}(决算|财务)
+  - pattern: (基本建设|建设项目|固定资产投资).{0,2}(财务|审计)
+  radiation_signals: []
+- id: L11
+  name: 预算绩效管理
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies:
+  - 《预算法》第五十七条
+  - 中发〔2018〕34号 全面实施预算绩效管理
+  sub_types:
+  - 绩效目标设置
+  - 事前绩效评估
+  - 事中绩效监控
+  - 绩效评价
+  keywords:
+    primary:
+    - 预算绩效
+    - 绩效评价
+    - 绩效管理
+    - 绩效目标
+    - 事前绩效评估
+    - 事中绩效监控
+    secondary:
+    - 绩效指标体系
+    - 绩效自评
+    - 再评价
+    - 结果应用
+    - 绩效运行监控
+    - 满意度调查
+    - 无效
+    - 挂钩
+    - 全面实施
+  detection_rules:
+  - pattern: (预算绩效|绩效评价|绩效管理|绩效目标|事前评估|事中监控).{0,2}
+  radiation_signals: []
+- id: L12
+  name: 政府补贴审计
+  status: active
+  parent: null
+  created_at: '2025-01-01'
+  source_policies: []
+  sub_types: []
+  keywords:
+    primary:
+    - 政府补贴
+    - 财政补贴
+    - 惠企政策
+    - 奖补资金
+    - 稳岗返还
+    - 就业补贴
+    - 公平竞争审查
+    secondary:
+    - 补贴申报
+    - 虚报冒领
+    - 重复补贴
+    - 补贴公示
+    - 资格审核
+    - 产业扶持资金
+    - 招商引资
+    - 优惠
+    - 兑现
+    - 负面清单
+  detection_rules:
+  - pattern: (政府补贴|财政补贴|惠企|奖补|稳岗|就业补贴).{0,2}(资金|申报|发放|审核)
+  radiation_signals: []
+- id: L13
+  name: 监督检查
+  status: active
+  parent: null
+  created_at: '2026-07-11'
+  source_policies:
+  - 《财政部门监督办法》
+  - 财监〔2021〕4号
+  sub_types:
+  - 财经纪律检查
+  - 会计信息质量检查
+  - 预决算公开检查
+  - 直达资金监控
+  keywords:
+    primary:
+    - 监督检查
+    - 财经纪律
+    - 会计信息质量检查
+    - 预决算公开
+    - 直达资金
+    - 严肃财经纪律
+    secondary:
+    - 财政监督
+    - 会计监督
+    - 专项检查
+    - 整改落实
+    - 问题清单
+    - 违规问题线索
+    - 纪检监察
+    - 整治
+    - 会计法
+    - 财经秩序
+  detection_rules:
+  - pattern: (财经纪律|会计信息质量|预决算公开|直达资金).{0,2}(检查|监督|监控)
+  - pattern: (监督检查|专项检查).{0,2}(财政|财务|会计|资金)
+  radiation_signals: []
+tender_monitoring:
+  enabled: false
+  description: 通过招标公告发现新业务方向 — 仅抓取与经营范围匹配的招标品类
+  scope:
+    procurement_categories:
+    - 审计服务
+    - 工程咨询服务
+    - 会计服务
+    - 资产评估服务
+    - 财务咨询服务
+    - 绩效评价服务
+    - 税务咨询服务
+    - 工程造价咨询服务
+    - 招标代理服务
+    - 法律服务
+    exclude_keywords:
+    - 软件开发
+    - 系统集成
+    - 硬件采购
+    - 物业服务
+    - 保安服务
+    - 保洁服务
+    - 食堂
+    - 印刷
+    - 车辆
+    min_budget_yuan: 50000
+  data_sources:
+  - name: 中国政府采购网
+    url: http://www.ccgp.gov.cn/
+    status: planned
+  - name: 四川省政府采购网
+    url: http://www.ccgp-sichuan.gov.cn/
+    status: planned
+  - name: 成都市公共资源交易中心
+    url: https://www.cdggzy.com/
+    status: planned
+  - name: 中国招标投标公共服务平台
+    url: http://www.cebpubservice.com/
+    status: planned
+  classification:
+    round1: keyword_match
+    round2: 同法规入库
+    signal_weight: high
+    incubation_threshold: 2
+  outputs:
+  - 市场机会追踪（谁在买、多少钱、在哪）
+  - 新业务方向发现（对应现有业务线覆盖不到的服务需求）
+  - 竞品情报（谁中标了、中标价、中标频率）
+  created_at: '2026-07-11'

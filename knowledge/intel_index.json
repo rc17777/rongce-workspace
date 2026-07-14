@@ -1,0 +1,480 @@
+{
+  "items": {
+    "ac1cb875fdf9": {
+      "id": "ac1cb875fdf9",
+      "source": "ncpssd",
+      "title": "习近平新时代中国特色社会主义思想",
+      "url": "https://www.ncpssd.cn/topics/detailsList?id=1103&wfColumn=1&resourceType=0",
+      "authors": [],
+      "keywords": [
+        "经济责任审计"
+      ],
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:34:34.708695"
+    },
+    "e59a7cfe42fb": {
+      "id": "e59a7cfe42fb",
+      "source": "ncpssd",
+      "title": "研究阐释宣传党的二十大和二十届历次全会精神",
+      "url": "https://www.ncpssd.cn/topics/details?id=1107&wfColumn=1&resourceType=203",
+      "authors": [],
+      "keywords": [
+        "经济责任审计"
+      ],
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:34:34.720602"
+    },
+    "87743f7b9fc5": {
+      "id": "87743f7b9fc5",
+      "source": "ncpssd",
+      "title": "习近平对福建泉州晋江市一鞋厂火灾事故作出重要指示",
+      "url": "https://www.ncpssd.cn/message?id=21916",
+      "authors": [],
+      "keywords": [
+        "经济责任审计"
+      ],
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:34:34.734950"
+    },
+    "dff3ca6604ce": {
+      "id": "dff3ca6604ce",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "审计（独立性的经济监督活动）_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%AE%A1%E8%AE%A1/2140835",
+      "snippet": "审计是由专职机构和人员，依法对被审计单位的财政、财务收支及其有关经济活动的真实性、合法性、效益性进行审查，评价经济责任，用以维护财经纪律，改进经营管理，提高经济效益，促进宏观调控的 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:39:52.593967"
+    },
+    "f45e996bf6a6": {
+      "id": "f45e996bf6a6",
+      "source": "bing",
+      "source_domain": "zhuanlan.zhihu.com",
+      "title": "审计是干什么的 主要做哪些工作? - 知乎",
+      "url": "https://zhuanlan.zhihu.com/p/5818918227",
+      "snippet": "2024年11月11日&#0183;结语 审计工作虽然辛苦，但是财务功底练得扎实，未来的职业发展路径广、跳槽选择更多样化。 审计不只是在查账，更是在培养你的职业素养和解决问题的能力！ 关于我 是个爱狗子的 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:39:48.102716"
+    },
+    "7ab2a6be0e46": {
+      "id": "7ab2a6be0e46",
+      "source": "bing",
+      "source_domain": "zhuanlan.zhihu.com",
+      "title": "为什么会有审计？审计到底是做什么的？ - 知乎",
+      "url": "https://zhuanlan.zhihu.com/p/58484808",
+      "snippet": "2019年3月6日&#0183;为了证明这个结论，注册会计师要设计实施相应的审计程序，以此来获取充分、适当的审计证据。 如果没有适当的证据，那么我们的证明题就做不下去了，即审计进行不了，只能放弃。",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:39:48.119919"
+    },
+    "1e6219eb9a2c": {
+      "id": "1e6219eb9a2c",
+      "source": "bing",
+      "source_domain": "www.gov.cn",
+      "title": "中办国办印发《党政主要领导干部和国有企事业单位主要领导 ...",
+      "url": "https://www.gov.cn/zhengce/2019-07/15/content_5409738.htm",
+      "snippet": "2019年7月15日&#0183;近日，中共中央办公厅、国务院办公厅印发了《党政主要领导干部和国有企事业单位主要领导人员经济责任审计规定》（以下简称《规定》），并发出通知，要求各地区各部门认真遵照执 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:40:20.537965"
+    },
+    "8d76b17b07a5": {
+      "id": "8d76b17b07a5",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "经济责任审计（企事单位的法定代表人或经营承包人在任期内 ...",
+      "url": "https://baike.baidu.com/item/%E7%BB%8F%E6%B5%8E%E8%B4%A3%E4%BB%BB%E5%AE%A1%E8%AE%A1/7908233",
+      "snippet": "2026年2月9日&#0183;经济责任审计是指由独立审计机构依据《审计法》及《党政主要领导干部和国有企业领导人员经济责任审计规定》，对党政机关、国有企业及村级组织等领导干部任职期间经济责任履行情况 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:40:20.540965"
+    },
+    "b4c6068d306b": {
+      "id": "b4c6068d306b",
+      "source": "bing",
+      "source_domain": "www.ciia.com.cn",
+      "title": "第3204号内部审计实务指南——经济责任审计 - ciia.com.cn",
+      "url": "https://www.ciia.com.cn/ueditor/jsp/upload/file/20220328/1648434307914058322.pdf",
+      "snippet": "2022年3月28日&#0183;规定,结合内部审计最佳实践, 制定本指南。 本指南所称经济责任, 是指领导干部在本单位任职期间,对其管辖范围内贯彻执行党和国家经济方针政策、 决策部署,推动本单位事业发展, 管理 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:40:20.553070"
+    },
+    "f30ca8aa4478": {
+      "id": "f30ca8aa4478",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "上坡辅助系统 - 百度百科",
+      "url": "https://baike.baidu.com/item/%E4%B8%8A%E5%9D%A1%E8%BE%85%E5%8A%A9%E7%B3%BB%E7%BB%9F/244242",
+      "snippet": "上坡辅助系统（Hill-start Assist Control，HAC）是基于电子稳定程序（ESP）系统开发的汽车功能，旨在通过短暂控制四轮制动防止车辆坡道起步时下滑。 该系统在驾驶员松开制动踏板后继续保持刹车油 …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:40:22.848151"
+    },
+    "bdf59cf3b84d": {
+      "id": "bdf59cf3b84d",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "领导（汉语词语）_百度百科",
+      "url": "https://baike.baidu.com/item/%e9%a2%86%e5%af%bc/32771",
+      "snippet": "领导，汉语词语，拼音为lǐng dǎo，包含带领引导朝一定方向前进、担任管理职责的个人及领导机关三重语义范畴。 该词既可指抽象引导行为（如“领导走向未来”），也可特指具体层级的管理者或机构（ …",
+      "matched_line": "经责审计",
+      "fetched_at": "2026-07-11T10:40:25.083830"
+    },
+    "e5d54f293480": {
+      "id": "e5d54f293480",
+      "source": "bing",
+      "source_domain": "www.audit.gov.cn",
+      "title": "国务院关于2025年度中央预算执行和其他财政收支的审计 ...",
+      "url": "https://www.audit.gov.cn/n5/n26/c10792910/content.html",
+      "snippet": "2026年6月23日&#0183;中华人民共和国审计署，开设“ 审计署报告及解读 ”栏目，及时发布“ 审计署报告及解读 ”相关信息，详情请进入访问。",
+      "matched_line": "收支审计",
+      "fetched_at": "2026-07-11T10:40:27.365263"
+    },
+    "0359a04b591e": {
+      "id": "0359a04b591e",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "财政收支审计_百度百科",
+      "url": "https://baike.baidu.com/item/%E8%B4%A2%E6%94%BF%E6%94%B6%E6%94%AF%E5%AE%A1%E8%AE%A1/1416506",
+      "snippet": "财政收支审计是审计机关依据《宪法》和《审计法》相关规定，对政府预算执行和其他财政收支真实性、合法性及效益性实施的监督活动，涵盖本级预算执行审计、下级政府预算执行和决算审计以及未纳入 …",
+      "matched_line": "收支审计",
+      "fetched_at": "2026-07-11T10:40:27.368394"
+    },
+    "1c010860c25a": {
+      "id": "1c010860c25a",
+      "source": "bing",
+      "source_domain": "www.npc.gov.cn",
+      "title": "国务院关于2025年度中央预算执行和 其他财政收支的审计 ...",
+      "url": "http://www.npc.gov.cn/npc/c2/c30834/202606/t20260625_455726.html",
+      "snippet": "2026年6月23日&#0183;我受国务院委托，向全国人大常委会报告2025年度中央预算执行和其他财政收支的审计情况，请审议。",
+      "matched_line": "收支审计",
+      "fetched_at": "2026-07-11T10:40:27.382076"
+    },
+    "6d11c9fcb0bb": {
+      "id": "6d11c9fcb0bb",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "预算_百度百科",
+      "url": "https://baike.baidu.com/item/%E9%A2%84%E7%AE%97/1051041",
+      "snippet": "1994年3月22日&#0183;现代预算制度起源于英国《大宪章》，中国于清朝宣统年间试办国家预算，1937年颁布《中华苏维埃共和国暂行财政条例》初步形成社会主义预算制度。 2024年全国一般公共预算收入 …",
+      "matched_line": "收支审计",
+      "fetched_at": "2026-07-11T10:40:29.922678"
+    },
+    "a8abf775f6d8": {
+      "id": "a8abf775f6d8",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "决算（预算执行的总结）_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%86%B3%E7%AE%97/6879767",
+      "snippet": "决算，是根据年度预算执行结果编制的会计报告，反映预算收支最终结果，中文拼音为ju&#233; su&#224;n，英文译作final accounts。 财政决算包括财政总决算和部门决算，其中财政总决算由各级政府编制，部门决 …",
+      "matched_line": "收支审计",
+      "fetched_at": "2026-07-11T10:40:32.317892"
+    },
+    "84aaee640f0e": {
+      "id": "84aaee640f0e",
+      "source": "bing",
+      "source_domain": "www.bvclss.cn",
+      "title": "中华人民共和国预算法",
+      "url": "https://www.bvclss.cn/upload/file/20240415/b98b0358f2579345a310b31ad3627f9d.pdf",
+      "snippet": "2024年4月15日&#0183;地方预算由各 省、自治区、直辖市总预算组成。 地方各级总预算由本级预算和汇总的下一级总预算组 成;下一级只有本级预算的,下一级总预算即指下一级的本 级预算。 没有下一级预算的, …",
+      "matched_line": "预算执行",
+      "fetched_at": "2026-07-11T10:40:34.872283"
+    },
+    "f24c09f2b1a8": {
+      "id": "f24c09f2b1a8",
+      "source": "bing",
+      "source_domain": "www.npc.gov.cn",
+      "title": "中华人民共和国预算法_中国人大网",
+      "url": "http://www.npc.gov.cn/c2/c30834/201905/t20190521_296660.html",
+      "snippet": "2019年1月7日&#0183;全国预算由中央预算和地方预算组成。 地方预算由各省、自治区、直辖市总预算组成。 地方各级总预算由本级预算和汇总的下一级总预算组成；下一级只有本级预算的，下一级总预算即指 …",
+      "matched_line": "预算执行",
+      "fetched_at": "2026-07-11T10:40:34.876472"
+    },
+    "43f39a76ed0b": {
+      "id": "43f39a76ed0b",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "部门_百度百科",
+      "url": "https://baike.baidu.com/item/%E9%83%A8%E9%97%A8/1053898",
+      "snippet": "“部门”是汉语常用词语，拼音为b&#249; m&#233;n，指承担特定职能的组织机构。 作为构成整体的分支单位，常见于政府机关、企业组织及学术机构中，如国务院下属部门、企业财务部门或大学院系。",
+      "matched_line": "预算执行",
+      "fetched_at": "2026-07-11T10:40:37.332991"
+    },
+    "9912f6c185a9": {
+      "id": "9912f6c185a9",
+      "source": "bing",
+      "source_domain": "gaokao.chsi.com.cn",
+      "title": "高校专项计划报名系统",
+      "url": "https://gaokao.chsi.com.cn/gxzxbm/",
+      "snippet": "各地和有关高校要严格报考条件，健全教育、公安等多部门联合审核工作机制，严防报考资格弄虚作假，推动专项计划优惠政策精准落实到位。 要进一步优化投档录取程序，积极推进将专项计划纳入普 …",
+      "matched_line": "专项资金",
+      "fetched_at": "2026-07-11T10:40:42.180426"
+    },
+    "e8ea7f1f8c51": {
+      "id": "e8ea7f1f8c51",
+      "source": "bing",
+      "source_domain": "gaokao.chsi.com.cn",
+      "title": "2026年三大专项计划常见问题一览 - 阳光高考",
+      "url": "https://gaokao.chsi.com.cn/gkxx/gkcs/202604/20260423/2293468577.html",
+      "snippet": "2026年4月23日&#0183;9. 报考专项计划需要注意什么？ 答：自2026年起，高校专项计划不再由高校组织报名、资格审核和校测、不单独发布招生简章，报考资格由有关省（市、区）组织审核。 往年被专项计 …",
+      "matched_line": "专项资金",
+      "fetched_at": "2026-07-11T10:40:39.764316"
+    },
+    "799a92580d58": {
+      "id": "799a92580d58",
+      "source": "bing",
+      "source_domain": "www.gk100.com",
+      "title": "2026国家专项计划学校及专业名单：含各省院校（附报考条件）",
+      "url": "https://www.gk100.com/read_1401000669953.htm",
+      "snippet": "2026年7月2日&#0183;全国超300所高校参与国家专项计划招生（含部属高校和地方重点高校），其中含中山大学、北京大学医学部等39所985高校，以及中国矿业大学（北京）、湖南大学等211院校。",
+      "matched_line": "专项资金",
+      "fetched_at": "2026-07-11T10:40:39.779329"
+    },
+    "6ca7d9e842ea": {
+      "id": "6ca7d9e842ea",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "往来（汉语词汇）_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%BE%80%E6%9D%A5/20221402",
+      "snippet": "例如《史记&#183;货殖列传》援引先秦古谚“天下熙熙,皆为利来;天下攘攘,皆为利往”，揭示了人类活动背后经济利益的原始驱动力；刘禹锡《陋室铭》“谈笑有鸿儒,往来无白丁”之句，则将“往来”提炼为社会阶层交 …",
+      "matched_line": "往来款清理",
+      "fetched_at": "2026-07-11T10:40:47.043398"
+    },
+    "2de238f38d52": {
+      "id": "2de238f38d52",
+      "source": "bing",
+      "source_domain": "www.hanyuguoxue.com",
+      "title": "往来的意思_往来的解释-汉语国学",
+      "url": "https://www.hanyuguoxue.com/cidian/ci-935c6a10b",
+      "snippet": "往来 wǎng l&#225;i 1. 去和来。 例如 往来种作。 —— 晋 &#183; 陶渊明 《桃花源记》往来视之。 —— 唐 &#183; 柳宗元 《三戒》往来翕忽。 —— 唐 &#183; 柳宗元《至小丘西小石潭记》往来而 不绝。 —— 宋 &#183; 欧阳修 《醉翁亭 …",
+      "matched_line": "往来款清理",
+      "fetched_at": "2026-07-11T10:40:47.048263"
+    },
+    "87c543571397": {
+      "id": "87c543571397",
+      "source": "bing",
+      "source_domain": "zhidao.baidu.com",
+      "title": "往来什么意思 - 百度知道",
+      "url": "https://zhidao.baidu.com/question/188247574967466684.html",
+      "snippet": "2024年6月16日&#0183;“往来”这个词在不同的历史和文化背景下可能有不同的含义。 在古代汉语中，“往来”可能还包含旅行、交往频繁等含义。 在不同的文化语境中，往来也可能具有特定的文化内涵，例如中 …",
+      "matched_line": "往来款清理",
+      "fetched_at": "2026-07-11T10:40:47.063270"
+    },
+    "097ce603a4d8": {
+      "id": "097ce603a4d8",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "招（汉语文字）_百度百科",
+      "url": "https://baike.baidu.com/item/%E6%8B%9B/9595244",
+      "snippet": "现代释义涵盖邀请、招揽、承认罪行等，方言中发音差异显著：赣语读作dhao6，客家话分读zau1或zeu1，粤语为ziu1。 汉代已有招姓，《后汉书》记载大鸿胪招猛为其代表人物。 该字在东亚文化圈 …",
+      "matched_line": "招投标审计",
+      "fetched_at": "2026-07-11T10:40:54.808021"
+    },
+    "7e61db462488": {
+      "id": "7e61db462488",
+      "source": "bing",
+      "source_domain": "www.hanyuguoxue.com",
+      "title": "招的意思,招的解释,招的拼音,招的部首,招的笔顺-汉语国学",
+      "url": "https://www.hanyuguoxue.com/zidian/zi-25307",
+      "snippet": "招的拼音是zhāo，招字共8画，部首是扌部，本页介绍招字的意思，招的详细解释，招的读音、笔顺，还包括招的翻译、输入法、异体字、造字法、结构、五行、电码、五笔、仓颉等。",
+      "matched_line": "招投标审计",
+      "fetched_at": "2026-07-11T10:40:54.817335"
+    },
+    "704604243a97": {
+      "id": "704604243a97",
+      "source": "bing",
+      "source_domain": "www.hancibao.com",
+      "title": "招_招字的拼音,意思,字典释义 - 《新华字典》 - 汉辞宝",
+      "url": "https://www.hancibao.com/zi/62db",
+      "snippet": "2026年7月2日&#0183;【招】字本义为打手势叫人来。 【招】字造字法为会意。 从手。 召声，呼唤。 【招】字五行属火, 字形结构为左右, 可拆字为“扌 召”。 【招】字拼音为zhāo, 部首为扌, 笔画为8画, 笔顺为“ …",
+      "matched_line": "招投标审计",
+      "fetched_at": "2026-07-11T10:40:54.837950"
+    },
+    "139a3192caa6": {
+      "id": "139a3192caa6",
+      "source": "bing",
+      "source_domain": "www.mofcom.gov.cn",
+      "title": "政府工作报告",
+      "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2025/art_603435844c68492290da26c50b0f3853.html",
+      "snippet": "新华社北京3月12日电 政府工作报告——2025年3月5日在第十四届全国人民代表大会第三次会议上国务院总理 李强各位代表：现在，我代表国务院，向大会报告政府工作，请予审议，并请全国政协委员提 …",
+      "matched_line": "招投标审计",
+      "fetched_at": "2026-07-11T10:40:57.346827"
+    },
+    "66566cce3c2d": {
+      "id": "66566cce3c2d",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "国有企业_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%9B%BD%E6%9C%89%E4%BC%81%E4%B8%9A/3457818",
+      "snippet": "2024年8月27日&#0183;按照国有资产管理权限划分，国有企业分为中央企业（由中央政府监督管理的国有企业）和地方企业（由地方政府监督管理的国有企业）。 截至2025年7月，国务院国资委管理的中央企业 …",
+      "matched_line": "国企审计",
+      "fetched_at": "2026-07-11T10:41:04.627689"
+    },
+    "c51dd6cc53ce": {
+      "id": "c51dd6cc53ce",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "国有全资企业_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%9B%BD%E6%9C%89%E5%85%A8%E8%B5%84%E4%BC%81%E4%B8%9A/68096400",
+      "snippet": "2026年6月21日&#0183;国有全资企业，是指由政府部门、机构、事业单位或国有独资企业直接或间接合计持有100%股权的企业。它是国有企业的一种特殊组织形式，其全部资本由国家或国有单位出资，所有权 …",
+      "matched_line": "国企审计",
+      "fetched_at": "2026-07-11T10:41:02.200734"
+    },
+    "87798d55d393": {
+      "id": "87798d55d393",
+      "source": "bing",
+      "source_domain": "www.sasac.gov.cn",
+      "title": "国务院国有资产监督管理委员会",
+      "url": "http://www.sasac.gov.cn/",
+      "snippet": "2 天之前&#0183;程福波同志任国务院国有资产监督管理委员会党委书记 [06-30] 国务院国资委举办中央企业量子科技人才特训班 [06-25] 国务院国资委党委召开党委（扩大）会议暨学习贯彻习近平党建思想... [06 …",
+      "matched_line": "国企审计",
+      "fetched_at": "2026-07-11T10:41:02.214166"
+    },
+    "5d06232c167a": {
+      "id": "5d06232c167a",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "能源（可以转化为能量的资源）_百度百科",
+      "url": "https://baike.baidu.com/item/%E8%83%BD%E6%BA%90/23358",
+      "snippet": "2026年2月22日&#0183;是指能够直接取得或者通过加工、转换而取得有用能的各种资源，包括煤炭、原油、天然气、 煤层气 、水能、 核能 、风能、太阳能、 地热能 、 生物质能 等 一次能源 和电力、热力、成 …",
+      "matched_line": "能源审计",
+      "fetched_at": "2026-07-11T10:41:17.420216"
+    },
+    "09e9a5fba160": {
+      "id": "09e9a5fba160",
+      "source": "bing",
+      "source_domain": "www.gov.cn",
+      "title": "关于印发《新型能源体系建设“十五五”规划》的通知_国务院 ...",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202606/content_7073322.htm",
+      "snippet": "国家发展改革委 国家能源局 2026年6月13日 附件： 新型能源体系建设“十五五”规划 国家发展改革委 国家能源局关于印发《新型能源体系建设“十五五”规划》的通知 发改能源〔2026〕884号 各省、自治区、 …",
+      "matched_line": "能源审计",
+      "fetched_at": "2026-07-11T10:41:17.427350"
+    },
+    "64fe5608bbcb": {
+      "id": "64fe5608bbcb",
+      "source": "bing",
+      "source_domain": "www.nea.gov.cn",
+      "title": "加快建设新型能源体系---国家能源局",
+      "url": "https://www.nea.gov.cn/20251222/66a44a06b779474684d365aa79e50380/c.html",
+      "snippet": "2025年12月22日&#0183;适度超前开展前沿性、颠覆性技术研究，聚焦可控核聚变、新一代风电光伏、高温超导、长时储能、极地能源等重点方向，建立研发投入增长机制，强化基础理论研究。 聚焦产业创新， …",
+      "matched_line": "能源审计",
+      "fetched_at": "2026-07-11T10:41:17.447523"
+    },
+    "947507257804": {
+      "id": "947507257804",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "资源环境审计（审计监督）_百度百科",
+      "url": "https://baike.baidu.com/item/%E8%B5%84%E6%BA%90%E7%8E%AF%E5%A2%83%E5%AE%A1%E8%AE%A1/7567799",
+      "snippet": "资源环境审计是审计机关依法对与资源环境有关的财政财务收支及相关管理活动的真实性、合法性和效益性进行的审计监督，旨在服务生态文明建设和可持续发展。 它也是环境科学与审计实务交叉形成的 …",
+      "matched_line": "能源审计",
+      "fetched_at": "2026-07-11T10:41:20.127172"
+    },
+    "fbd0eb5d65a0": {
+      "id": "fbd0eb5d65a0",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "碳（化学元素）_百度百科",
+      "url": "https://baike.baidu.com/item/%E7%A2%B3/457137",
+      "snippet": "碳（Carbon）是一种非金属元素，化学符号为C，在常温下具有稳定性，不易反应、极低的对人体的毒性，甚至可以以石墨或活性炭的形式安全地摄取，位于元素周期表的第二周期IVA族。 碳是一种很常见 …",
+      "matched_line": "能源审计",
+      "fetched_at": "2026-07-11T10:41:22.627820"
+    },
+    "04680a05deb7": {
+      "id": "04680a05deb7",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "建设项目竣工决算审计_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%BB%BA%E8%AE%BE%E9%A1%B9%E7%9B%AE%E7%AB%A3%E5%B7%A5%E5%86%B3%E7%AE%97%E5%AE%A1%E8%AE%A1/12752401",
+      "snippet": "建设项目 竣工决算 审计是审计机关在建设项目正式 竣工验收 前，依据《中华人民共和国审计法》等法规对建设项目竣工财务决算的正确性、真实性、合法性和实现的经济效益、社会效益及环境效益进行的 …",
+      "matched_line": "工程决算审计",
+      "fetched_at": "2026-07-11T10:41:25.138069"
+    },
+    "c2af693c93a8": {
+      "id": "c2af693c93a8",
+      "source": "bing",
+      "source_domain": "zhuanlan.zhihu.com",
+      "title": "工程竣工决算审计要点 - 知乎",
+      "url": "https://zhuanlan.zhihu.com/p/1929472080350545656",
+      "snippet": "2025年7月18日&#0183;本文将从审计准备、审计内容、审计方法及常见问题等方面，系统阐述工程竣工决算审计的要点，以期为相关从业人员提供参考。 一、工程竣工决算审计概述. 工程竣工决算审计是指在工 …",
+      "matched_line": "工程决算审计",
+      "fetched_at": "2026-07-11T10:41:25.145410"
+    },
+    "c2079b2ab5d9": {
+      "id": "c2079b2ab5d9",
+      "source": "bing",
+      "source_domain": "www.sohu.com",
+      "title": "项目竣工财务决算审计要求及典型案例分析_基本建设_工程_单位",
+      "url": "https://www.sohu.com/a/921225461_121123781",
+      "snippet": "2025年8月6日&#0183;竣工财务决算审计一般是事后审计（当然审计工作可以提前开展，但大多数建设单位没有意识到），我们接受此类委托时，工程实体已经基本完工，审计工作主要依据建设单位提供的纸质材 …",
+      "matched_line": "工程决算审计",
+      "fetched_at": "2026-07-11T10:41:25.160271"
+    },
+    "b001f5be043e": {
+      "id": "b001f5be043e",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "工程（汉语词语）_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%B7%A5%E7%A8%8B/890231",
+      "snippet": "2023年9月15日&#0183;中国工程建设技术随一带一路走出国门，承建孟加拉国最大铁路项目、印尼雅万高铁等工程，盾构机市场占有率连续8年产销量世界第一。 元代文献已记载该词指代“工作”或“学业规划”， …",
+      "matched_line": "工程决算审计",
+      "fetched_at": "2026-07-11T10:41:27.700549"
+    },
+    "80bd10dc8157": {
+      "id": "80bd10dc8157",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "基本_百度百科",
+      "url": "https://baike.baidu.com/item/%E5%9F%BA%E6%9C%AC/763181",
+      "snippet": "1. 限定事物本质（例：基本矛盾） [1] 2. 强调核心地位（例：基本口粮） 名词性指代事物本源（例：人民是国家的～），该用法在语义扩展中衍生形容词属性 副词性表达近似量化（例：基本合 …",
+      "matched_line": "工程决算审计",
+      "fetched_at": "2026-07-11T10:41:30.288380"
+    },
+    "e3a49b657dd2": {
+      "id": "e3a49b657dd2",
+      "source": "bing",
+      "source_domain": "www.mofcom.gov.cn",
+      "title": "中华人民共和国商务部",
+      "url": "https://www.mofcom.gov.cn/index.html",
+      "snippet": "4 天之前&#0183;《习近平关于基层工作方法论述摘编》出版发行 人民日报评论员：坚定信心、接续奋斗，不断创造无愧于时代和人民的新业绩——论学习贯彻习近平总书记在庆祝中国共产党成立105周年大会上 …",
+      "matched_line": "政府补贴审计",
+      "fetched_at": "2026-07-11T10:41:40.354784"
+    },
+    "90f68e57c92a": {
+      "id": "90f68e57c92a",
+      "source": "bing",
+      "source_domain": "www.qstheory.cn",
+      "title": "政府工作报告 - 求是网",
+      "url": "https://www.qstheory.cn/20260313/8e6a26b937054f7db450349e28e09fc3/c.html",
+      "snippet": "2026年3月13日&#0183;新的形势和任务，对政府工作提出了更高要求。 各级政府及其工作人员要深刻领悟“两个确立”的决定性意义，增强“四个意识”、坚定“四个自信”、做到“两个维护”，自觉在思想上政治上行 …",
+      "matched_line": "政府补贴审计",
+      "fetched_at": "2026-07-11T10:41:40.360276"
+    },
+    "7cb325cf3b48": {
+      "id": "7cb325cf3b48",
+      "source": "bing",
+      "source_domain": "baike.baidu.com",
+      "title": "补助_百度百科",
+      "url": "https://baike.baidu.com/item/%E8%A1%A5%E5%8A%A9/517493",
+      "snippet": "补助，汉语词语，拼音bǔ zh&#249;，意思是指补贴及帮助；政府或集体专向的，使得某方获益的某种行为。 补助的种类繁多，常见有各类网购补助，政府补助，食宿补助，医疗补助等等。",
+      "matched_line": "政府补贴审计",
+      "fetched_at": "2026-07-11T10:41:42.741295"
+    }
+  },
+  "last_run": "2026-07-11T10:41:42.761576",
+  "stats": {
+    "total": 49,
+    "by_source": {
+      "ncpssd": 3,
+      "bing": 46
+    },
+    "by_line": {
+      "经责审计": 13,
+      "收支审计": 5,
+      "预算执行": 3,
+      "专项资金": 4,
+      "往来款清理": 3,
+      "招投标审计": 4,
+      "国企审计": 4,
+      "能源审计": 5,
+      "工程决算审计": 5,
+      "政府补贴审计": 3
+    }
+  }
+}

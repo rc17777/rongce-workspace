@@ -1,54 +1,49 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
-<title>融策证据链方法论</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--db);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
-.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(255,255,255,.08);font-size:16px;color:rgba(255,255,255,.45);letter-spacing:.05em;background:var(--db);z-index:5}.masthead .brand{font-weight:600;color:#fff}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
-.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:rgba(255,255,255,.34);border-top:1px solid rgba(255,255,255,.08);background:var(--db)}
-.content{flex:1;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 12%,rgba(197,149,92,.16),transparent 30%),radial-gradient(circle at 12% 82%,rgba(26,92,110,.28),transparent 34%),var(--db)}
-.content::before{content:'';position:absolute;left:74px;right:74px;top:70px;bottom:54px;border:1px solid rgba(197,149,92,.12);pointer-events:none}.content::after{content:'';position:absolute;right:-220px;top:80px;width:740px;height:740px;border:1px solid rgba(197,149,92,.13);border-radius:50%}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.25em;color:var(--gold);font-weight:500}.kicker::before{content:'';width:28px;height:1px;background:var(--gold)}
-.hero{position:relative;z-index:1;padding:54px 90px 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:end}.title{font-family:'Noto Serif SC',serif;color:#fff;font-weight:800;font-size:64px;line-height:1.18;margin-top:16px}.title span{color:var(--gold)}
-.lead{font-family:'Noto Serif SC',serif;font-size:23px;color:rgba(255,255,255,.66);line-height:2.05}.lead b{color:var(--gold);font-weight:700}.signature{margin-top:26px;font-size:17px;color:rgba(255,255,255,.44);letter-spacing:.1em}
-.chain{position:relative;z-index:1;margin:18px 90px 0;height:258px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:stretch}.node{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:28px 24px;position:relative;overflow:hidden}.node::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:var(--gold)}.node.teal::before{background:var(--teal)}.node .n{font-family:'Noto Serif SC',serif;font-size:46px;color:rgba(197,149,92,.26);font-weight:900;line-height:1}.node .t{font-family:'Noto Serif SC',serif;font-size:25px;color:#fff;font-weight:700;margin:16px 0 10px}.node .d{font-size:15px;color:rgba(255,255,255,.58);line-height:1.72}.node:not(:last-child)::after{content:'→';position:absolute;right:-17px;top:105px;color:rgba(197,149,92,.8);font-size:30px;z-index:2}
-.pillars{position:relative;z-index:1;margin:28px 90px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.pillar{background:#FAFAF8;border:1px solid rgba(255,255,255,.08);padding:24px 24px 22px;min-height:206px;box-shadow:0 18px 50px rgba(0,0,0,.16)}.pillar .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.pillar .name{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:800;color:var(--db)}.pillar .mark{font-family:'Noto Serif SC',serif;font-size:38px;color:var(--gold);font-weight:900}.pillar p{font-size:15px;color:var(--il);line-height:1.75}.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}.tag{font-size:12px;color:var(--teal);background:rgba(26,92,110,.08);padding:5px 9px;border-radius:2px}.tag.gold{color:var(--gold);background:rgba(197,149,92,.1)}
-.evidence{position:relative;z-index:1;margin:24px 90px 0;display:grid;grid-template-columns:1.05fr repeat(4,1fr);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);min-height:116px}.ev-title{padding:24px 30px;border-right:1px solid rgba(255,255,255,.1)}.ev-title b{font-family:'Noto Serif SC',serif;font-size:26px;color:var(--gold)}.ev-title div{font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-top:8px}.ev{padding:22px 24px;border-right:1px solid rgba(255,255,255,.08);text-align:center}.ev:last-child{border-right:0}.ev .num{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:800;color:#fff;line-height:1}.ev .txt{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;margin-top:8px}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920"><title>AI驱动方法论</title><link rel="stylesheet" href="../shared/brochure-theme.css">
+<style>
+body{background:var(--navy-dark)}
+.hero{position:relative;z-index:1;padding:48px 80px 20px}
+.hero .title{font-family:var(--serif);font-size:38px;font-weight:700;color:#fff;line-height:1.2;margin-top:12px}
+.hero .title .hl{color:var(--gold-light)}
+.hero .lead{font-family:var(--serif);font-size:18px;color:rgba(255,255,255,0.5);line-height:1.8;margin-top:12px;max-width:780px}
+.chain{position:relative;z-index:1;margin:24px 80px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.chain .node{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:18px 16px;text-align:center;position:relative}
+.chain .node:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);color:var(--gold);opacity:0.5;font-size:18px}
+.chain .node .n{font-size:12px;color:var(--gold-light);letter-spacing:0.1em;margin-bottom:4px}
+.chain .node .t{font-size:15px;color:#fff;font-weight:600;margin-bottom:3px}
+.chain .node .d{font-size:11px;color:rgba(255,255,255,0.35);line-height:1.4}
+.pillars{position:relative;z-index:1;margin:0 80px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;flex:1}
+.pillars .pillar{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);padding:18px 20px;display:flex;flex-direction:column}
+.pillars .pillar::before{content:'';display:block;width:100%;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));margin-bottom:14px}
+.pillars .pillar .pt{font-size:14px;color:var(--gold-light);font-weight:600;margin-bottom:6px}
+.pillars .pillar .pd{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;flex:1}
+.pillars .pillar .tag{display:inline-block;font-size:10px;padding:2px 6px;background:rgba(197,149,92,0.06);color:var(--gold-light);margin-top:8px;align-self:flex-start}
+.bar{position:relative;z-index:1;margin:12px 80px;display:flex;gap:4px;height:20px}
+.bar .seg{flex:1;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:0.05em}
+.bar .seg.s1{background:rgba(197,149,92,0.08)}.bar .seg.s2{background:rgba(197,149,92,0.06)}.bar .seg.s3{background:rgba(197,149,92,0.04)}.bar .seg.s4{background:rgba(255,255,255,0.03)}.bar .seg.s5{background:rgba(255,255,255,0.02)}
 </style></head>
 <body>
-<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
-<div class="content">
+<div class="nav dark"><span class="brand">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep" style="color:var(--gold-light);opacity:0.3">·</span><span style="color:rgba(255,255,255,0.25)">政府审计专业服务</span><span class="fill"></span></div>
+<div class="page flex-col" style="background:linear-gradient(145deg,var(--navy-dark),var(--navy) 30%,var(--navy-dark))">
   <div class="hero">
-    <div>
-      <div class="kicker">融策方法论</div>
-      <div class="title">把经验型审计<br>升级为<span>证据链审计</span></div>
-      <div class="signature">DATA · KNOWLEDGE · VERIFICATION · JUDGEMENT</div>
-    </div>
-    <div class="lead">政府审计的价值，不是把问题写成文字，而是把<b>资金、项目、责任、整改</b>串成可复核的证据链。AI只是工具，真正的壁垒是融策把数据、法规、案例和项目经验组织成一套可持续进化的方法。</div>
+    <div class="kicker light">AI METHODOLOGY</div>
+    <div class="title">从<span class="hl">数据</span>到<span class="hl">证据</span>，从<span class="hl">证据</span>到<span class="hl">结论</span></div>
+    <div class="lead">融策AI增强审计方法论，以数据驱动、AI辅助、人机协同，实现审计效率与质量的双重提升。</div>
   </div>
   <div class="chain">
-    <div class="node"><div class="n">01</div><div class="t">取数</div><div class="d">财政、财务、项目、工商、社保、工程资料进入统一数据底座。</div></div>
-    <div class="node teal"><div class="n">02</div><div class="t">穿透</div><div class="d">资金流、工程量、受益人、合同和发票跨表追踪。</div></div>
-    <div class="node"><div class="n">03</div><div class="t">比对</div><div class="d">法规、案例、行业基准和历史项目进行多维碰撞。</div></div>
-    <div class="node teal"><div class="n">04</div><div class="t">验证</div><div class="d">问题结论附数据来源、计算方法和交叉验证路径。</div></div>
-    <div class="node"><div class="n">05</div><div class="t">整改</div><div class="d">从发现问题走向责任界定、制度修复和后续跟踪。</div></div>
+    <div class="node"><div class="n">STEP 1</div><div class="t">数据采集</div><div class="d">多源异构数据整合</div></div>
+    <div class="node"><div class="n">STEP 2</div><div class="t">AI分析</div><div class="d">疑点自动识别与挖掘</div></div>
+    <div class="node"><div class="n">STEP 3</div><div class="t">交叉验证</div><div class="d">多Agent协同复核</div></div>
+    <div class="node"><div class="n">STEP 4</div><div class="t">证据链构建</div><div class="d">完整证据链闭环</div></div>
+    <div class="node"><div class="n">STEP 5</div><div class="t">报告生成</div><div class="d">AI辅助报告撰写</div></div>
   </div>
   <div class="pillars">
-    <div class="pillar"><div class="top"><div class="name">数据穿透力</div><div class="mark">Ⅰ</div></div><p>打通财政、税务、工商、社保、工程等数据源，让财政资金的每一段流向都可见。</p><div class="tags"><span class="tag gold">多源融合</span><span class="tag gold">Benford筛查</span><span class="tag gold">Apriori关联</span></div></div>
-    <div class="pillar"><div class="top"><div class="name">知识驱动力</div><div class="mark">Ⅱ</div></div><p>把12年项目经验和法规案例沉淀为可检索、可推理、可复用的知识系统。</p><div class="tags"><span class="tag">RAG知识库</span><span class="tag">法规图谱</span><span class="tag">案例推理</span></div></div>
-    <div class="pillar"><div class="top"><div class="name">交叉验证力</div><div class="mark">Ⅲ</div></div><p>财务审计看资金，工程咨询看实物，双牌照让资金流和工程量天然互证。</p><div class="tags"><span class="tag gold">资金×工程量</span><span class="tag gold">15维复核</span><span class="tag gold">金额追踪</span></div></div>
-    <div class="pillar"><div class="top"><div class="name">持续进化力</div><div class="mark">Ⅳ</div></div><p>每一个项目都会沉淀异常模式、识别规则和底稿模板，持续强化下一次审计。</p><div class="tags"><span class="tag">多Agent协作</span><span class="tag">思维链沉淀</span><span class="tag">规则迭代</span></div></div>
+    <div class="pillar"><div class="pt">📊 数据驱动</div><div class="pd">从结构化数据到非结构化文本，AI自动提取关键信息，识别异常模式</div><span class="tag">TF-IDF · 聚类</span></div>
+    <div class="pillar"><div class="pt">🤖 多Agent协同</div><div class="pd">7个专业Agent各司其职，数据采集/合同审查/投标分析/法规匹配/底稿编制/报告撰写/复核</div><span class="tag">Agent协作</span></div>
+    <div class="pillar"><div class="pt">🔗 证据链闭环</div><div class="pd">从原始数据到审计证据到问题定性，形成完整证据链，可追溯、可验证</div><span class="tag">证据链</span></div>
+    <div class="pillar"><div class="pt">🧠 AI辅助决策</div><div class="pd">AI辅助风险判断、方案推荐、报告复核，提升审计质量与效率</div><span class="tag">辅助决策</span></div>
   </div>
-  <div class="evidence">
-    <div class="ev-title"><b>系统能力，不是工具清单</b><div>每条结论都要能解释、能复核、能整改。</div></div>
-    <div class="ev"><div class="num">5大</div><div class="txt">财政·税务·工商·社保·工程<br>多源数据打通</div></div>
-    <div class="ev"><div class="num">13,000+</div><div class="txt">法规·案例·方法论文档<br>RAG知识库</div></div>
-    <div class="ev"><div class="num">19层</div><div class="txt">围标串标穿透检测体系<br>纵深分析</div></div>
-    <div class="ev"><div class="num">7 Agent</div><div class="txt">多Agent协作审计平台<br>持续训练进化</div></div>
+  <div class="bar">
+    <div class="seg s1">数据采集</div><div class="seg s2">AI分析</div><div class="seg s3">交叉验证</div><div class="seg s4">证据链</div><div class="seg s5">报告输出</div>
   </div>
 </div>
-<div class="footer"></div>
-</body>
-</html>
+</body></html>

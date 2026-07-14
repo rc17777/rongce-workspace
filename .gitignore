@@ -73,8 +73,7 @@ rongce-ocr-agent/
 ocr_policy_text/
 extracted_policy_text/
 
-# ── 知识库（杂志资料OCR 1GB+，不提交；其余核心知识纳入版本管理） ──
-knowledge/杂志资料/
+# ── 知识库（大文件已移至D盘） ──
 
 # ── 知识库资产迁移日志 ──
 asset_*.csv
@@ -89,3 +88,9 @@ archive/
 
 # ── 遗留输出目录 ──
 outputs/
+
+# ── 安全：API Key 配置 ──
+openclaw.json
+**/openclaw.json
+*.json.bak
+*.json.backup

@@ -1,0 +1,147 @@
+{
+  "tier": "atomic",
+  "category": "审计程序",
+  "skills": [
+    {
+      "id": "atom-voucher-inspect",
+      "name": "凭证逐笔检查",
+      "tool": "voucher-inspection",
+      "description": "逐笔检查会计凭证的审批完整性、票据真实性、用途合理性、金额准确性。",
+      "constraints": [
+        "必须覆盖审批链：事前审批→事中执行→事后报销",
+        "大额凭证（5万元以上）建议100%覆盖",
+        "需交叉验证发票真伪（税务系统查询）"
+      ],
+      "param_patterns": {
+        "check_points": ["审批签字完整性", "发票真伪", "用途与预算一致性", "金额计算准确性", "附件完整性"],
+        "large_threshold": 50000,
+        "red_flags": ["无审批", "无发票", "发票与用途不符", "现金大额支付"]
+      },
+      "failure_modes": [
+        "仅检查形式完整性忽略实质性判断",
+        "未发现审批时间晚于业务发生时间的倒签",
+        "未识别连号发票/拆分开票"
+      ],
+      "use_conditions": ["实质性测试阶段", "高风险科目", "大额交易"],
+      "evidence_standard": "逐笔记录检查结果、异常事项及取证材料"
+    },
+    {
+      "id": "atom-bank-reconciliation",
+      "name": "银行流水双向对账",
+      "tool": "bank-reconciliation",
+      "description": "将财务账面收付记录与银行对账单进行双向逐笔比对。",
+      "constraints": [
+        "必须双向比对：财务→银行 AND 银行→财务",
+        "关注未达账项超过合理期限（通常30天）的",
+        "大额整数交易需额外关注"
+      ],
+      "param_patterns": {
+        "match_keys": ["金额", "日期(±3天)", "对方户名"],
+        "tolerance": 0.01,
+        "unreasonable_period": 30
+      },
+      "failure_modes": [
+        "仅比金额不比对方户名——可能匹配错误交易",
+        "未关注时间差超过合理范围的未达账项",
+        "仅单向比对导致遗漏银行有而账面无的交易"
+      ],
+      "use_conditions": ["现金及银行存款审计", "专项资金审计"],
+      "evidence_standard": "对账差异表+未达账项明细+调节表"
+    },
+    {
+      "id": "atom-entity-linkage",
+      "name": "实体关联关系挖掘",
+      "tool": "bidder-analysis",
+      "description": "通过多维度比对发现供应商之间的隐藏关联。关联不等于围标，但为围标检测提供线索。",
+      "constraints": [
+        "仅基于公开可查数据",
+        "关联≠围标——需配合投标行为模式分析"
+      ],
+      "param_patterns": {
+        "linkage_dims": ["法定代表人", "股东", "注册地址", "联系电话", "邮箱", "IP地址", "投标文件元数据"],
+        "match_type": "精确匹配",
+        "attention_threshold": "≥2个维度匹配"
+      },
+      "failure_modes": [
+        "将合法的行业聚集识别为围标信号",
+        "仅看表面关系忽略间接控制链（如家族成员代持）",
+        "数据源不完整导致漏报"
+      ],
+      "use_conditions": ["供应商≥10个", "存在多次投标记录"],
+      "evidence_standard": "每条关联链需展示具体关联证据（字段+值）"
+    },
+    {
+      "id": "atom-threshold-filter",
+      "name": "金额门槛自动筛选",
+      "tool": "compliance-check",
+      "description": "按政策规定的金额门槛自动筛选应纳入特定程序的交易。",
+      "constraints": [
+        "门槛标准以最新有效政策为准",
+        "需注意同品目同年度合并计算（防化整为零）"
+      ],
+      "param_patterns": {
+        "thresholds": {
+          "自行采购": 10000,
+          "公开比选": 50000,
+          "委托代理": 100000,
+          "政府采购货物服务": 500000,
+          "政府采购工程": 1000000,
+          "公开招标货物服务": 4000000,
+          "三重一大资金": 50000
+        }
+      },
+      "failure_modes": [
+        "未将同一品目分散采购合并计算",
+        "使用过期的限额标准",
+        "忽略了特殊情形下的不同门槛"
+      ],
+      "use_conditions": ["采购审计", "三重一大决策检查"],
+      "evidence_standard": "筛选结果+适用的政策条款依据"
+    },
+    {
+      "id": "atom-split-detect",
+      "name": "化整为零检测",
+      "tool": "compliance-check",
+      "description": "检测在同一预算年度内，将同一品目的采购拆分为多个小额合同以规避公开招标的行为。",
+      "constraints": [
+        "检测时间窗口：同一预算年度",
+        "合并标准：同一品目+同一部门（或同一项目）",
+        "拆分金额达标才构成问题"
+      ],
+      "param_patterns": {
+        "time_window": "同一预算年度",
+        "merge_keys": ["品目编码", "采购部门", "预算项目"],
+        "alert_threshold": "合并金额达到上一级采购方式的限额"
+      },
+      "failure_modes": [
+        "将合理的分阶段采购误判为拆分",
+        "不同品目合并导致误报",
+        "跨年度拆分未被检测"
+      ],
+      "use_conditions": ["采购监督检查"],
+      "evidence_standard": "合并计算表+拆分证据+规避金额估算"
+    },
+    {
+      "id": "atom-progress-match",
+      "name": "资金-进度匹配分析",
+      "tool": "progress-analysis",
+      "description": "比对项目资金支出进度与实际工程/项目进度，识别超付或进度滞后。",
+      "constraints": [
+        "进度数据需有客观依据（监理报告/验收记录等）",
+        "允许合理偏差（±10%），但超过15%必须深究"
+      ],
+      "param_patterns": {
+        "tolerance_pct": 10,
+        "alert_threshold_pct": 15,
+        "progress_sources": ["监理月报", "验收记录", "形象进度照片"]
+      },
+      "failure_modes": [
+        "进度数据来源不可靠（被审计单位自报）",
+        "未区分付款节点与实际进度的正常时间差",
+        "将合理预付（如材料预付款）误判为超付"
+      ],
+      "use_conditions": ["专项债审计", "工程审计", "绩效评价"],
+      "evidence_standard": "资金支出曲线vs实际进度曲线+偏差分析"
+    }
+  ]
+}

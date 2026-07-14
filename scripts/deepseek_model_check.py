@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
-DeepSeek 模型健康检查 (v2)
-==========================
-现在DeepSeek直连key已失效，改为检测 cbwxy.top 代理上的模型。
-也检测 DashScope (qwen-vl-max) 等其他provider的健康状态。
+模型健康检查 (v3)
+检查所有 cbwxy.top 代理上模型的 API 连通性。
+
+特性：
+- 自动解析 env:// 引用的 API Key
+- 覆盖全部 11 个 provider
+- 退出码: 0=全部正常, 1=配置未找到, 2=有异常需告警
 
 用法:
   python scripts/deepseek_model_check.py
-  退出码: 0=正常, 1=配置未找到, 2=API异常(需告警)
 """
-import json, sys, os, io
+import json, sys, os, io, re
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -19,51 +21,108 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 WORKSPACE = Path(__file__).parent.parent
 TZ = timezone(timedelta(hours=8))
 
-# 要检查的 provider 清单（key已知有效）
+# 完整 provider 清单（名称 → 期望模型 + 接口风格）
 CHECK_PROVIDERS = {
     "custom-cbwyy-top-v1": {
-        "url": "https://cbwxy.top/v1/models",
+        "url": "https://cbwyy.top/v1/models",
         "expected_models": ["deepseek-v4-flash", "deepseek-v4-pro"],
+        "role": "🔧 免费执行 / 🧠 中代价分析",
     },
-    "dashscope": {
-        "url": "https://dashscope.aliyuncs.com/compatible-mode/v1/models",
-        "expected_models": ["qwen-vl-max"],
+    "custom-cbwyy-gpt55": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["gpt-5.5"],
+        "role": "🎯 高代价表达审查",
+    },
+    "custom-cbwyy-claude": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["claude-sonnet-5"],
+        "role": "🎯 高代价逻辑审查",
+    },
+    "custom-cbwyy-opus": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["claude-opus-4-8"],
+        "role": "🔬 致命代价终审",
+    },
+    "custom-cbwyy-fable": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["claude-fable-5"],
+        "role": "🟡 咨询层独立顾问",
+    },
+    "custom-cbwyy-doubao": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["doubao-seed-2.0-lite"],
+        "role": "📎 合规备选",
+    },
+    "custom-cbwyy-image": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["gpt-image-2"],
+        "role": "🎨 生图专用",
+    },
+    "custom-cbwyy-qwen": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["qwen3.7-plus"],
+        "role": "🔧 低代价中文·图片",
+    },
+    "custom-cbwyy-luna": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["gpt-5.6-luna"],
+        "role": "🎯 高代价审查",
+    },
+    "custom-cbwyy-sol": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["gpt-5.6-sol"],
+        "role": "🎯 高代价审查",
+    },
+    "custom-cbwyy-terra": {
+        "url": "https://cbwyy.top/v1/models",
+        "expected_models": ["gpt-5.6-terra"],
+        "role": "🎯 高代价审查",
     },
 }
 
-def load_models_config():
-    """从工作区 models.json 读取所有 provider 及其 apiKey"""
-    paths = [
-        WORKSPACE / "models.json",
-    ]
-    for p in paths:
-        if p.exists():
-            with open(p, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                return data.get("providers", {})
+
+def resolve_api_key(raw_key: str) -> str:
+    """解析 env://VAR_NAME 引用，返回实际 API Key"""
+    if not raw_key:
+        return ""
+    m = re.match(r'^env://(.+)$', raw_key.strip())
+    if m:
+        return os.environ.get(m.group(1), "")
+    return raw_key
+
+
+def load_providers_config():
+    """从 openclaw.json 读取 providers 配置"""
+    config_path = Path.home() / ".openclaw" / "openclaw.json"
+    if config_path.exists():
+        with open(config_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data.get("models", {}).get("providers", {})
     return None
 
-def check_provider(provider_id: str, config: dict, expected: list) -> dict:
-    """检查单个 provider 的 API 连通性和模型列表"""
-    prov = config.get(provider_id, {})
+
+def check_provider(provider_id: str, providers: dict, expected: list) -> dict:
+    """检查单个 provider"""
+    prov = providers.get(provider_id, {})
     if not prov:
-        return {"status": "NOT_FOUND", "models_found": [], "expected": expected, "error": "provider 配置不存在"}
+        return {"status": "NOT_FOUND", "models_found": [], "expected": expected,
+                "error": "provider not found in config"}
 
-    api_key = prov.get("apiKey", "")
+    raw_key = prov.get("apiKey", "")
+    api_key = resolve_api_key(raw_key)
+    
     if not api_key:
-        return {"status": "NO_KEY", "models_found": [], "expected": expected, "error": "未配置 apiKey"}
+        hint = f"env var not set" if raw_key.startswith("env://") else "missing apiKey"
+        return {"status": "NO_KEY", "models_found": [], "expected": expected, "error": hint}
 
-    base_url = prov.get("baseUrl", "").rstrip("/")
-    url = CHECK_PROVIDERS.get(provider_id, {}).get("url", f"{base_url}/models")
+    url = CHECK_PROVIDERS.get(provider_id, {}).get("url",
+                                                    f"{prov.get('baseUrl', '').rstrip('/')}/models")
 
     try:
         import urllib.request, ssl
         ctx = ssl.create_default_context()
-        req = urllib.request.Request(
-            url,
-            headers={"Authorization": f"Bearer {api_key}"}
-        )
-        with urllib.request.urlopen(req, context=ctx, timeout=10) as resp:
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {api_key}"})
+        with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
             data = json.loads(resp.read().decode())
 
         models_from_api = [m["id"] for m in data.get("data", [])]
@@ -78,160 +137,84 @@ def check_provider(provider_id: str, config: dict, expected: list) -> dict:
             "missing": missing,
         }
     except Exception as e:
-        return {
-            "status": "ERROR",
-            "models_found": [],
-            "expected": expected,
-            "error": str(e),
-        }
+        error_msg = str(e)
+        return {"status": "ERROR", "models_found": [], "expected": expected, "error": error_msg}
+
 
 def main():
-    providers = load_models_config()
+    providers = load_providers_config()
     if not providers:
-        print("❌ 未找到工作区 models.json")
+        print("ERROR: Providers config not found in openclaw.json")
         sys.exit(1)
 
-    print(f"🧪 {datetime.now(TZ).strftime('%Y-%m-%d %H:%M:%S')} 模型健康检查\n")
-    print(f"{'Provider':<25} {'Status':<10} {'发现':<30} {'缺失':<15}")
-    print("-" * 80)
+    print(f"模型健康检查  {datetime.now(TZ).strftime('%Y-%m-%d %H:%M')}")
+    print(f"Provider 总数: {len(CHECK_PROVIDERS)} | 配置文件: {Path.home() / '.openclaw' / 'openclaw.json'}")
+    print()
 
-    has_issue = False
+    # 表头
+    print(f"{'Provider':<28} {'状态':<8} {'期望模型':<22} {'角色'}")
+    print("-" * 95)
+
+    ok_count = 0
+    issues = []
+
     for pid, check_cfg in CHECK_PROVIDERS.items():
         result = check_provider(pid, providers, check_cfg["expected_models"])
-        status_icon = "✅" if result["status"] == "OK" else "⚠️" if result["status"] == "PARTIAL" else "❌"
-        found_str = ",".join(result.get("found", result.get("models_found", [])))[:28]
-        missing_str = ",".join(result.get("missing", []))[:13]
-        print(f"{status_icon} {pid:<23} {result['status']:<10} {found_str:<30} {missing_str:<15}")
-        if result["status"] in ("ERROR", "NOT_FOUND", "NO_KEY", "PARTIAL"):
-            has_issue = True
-            print(f"   ├ 错误: {result.get('error', '部分模型缺失')}")
+        role = check_cfg.get("role", "")
 
-    print("-" * 80)
-    providers_ok = sum(1 for pid in CHECK_PROVIDERS
-                       if check_provider(pid, providers, CHECK_PROVIDERS[pid]["expected_models"]).get("status") == "OK")
-    print(f"\n总计: {len(CHECK_PROVIDERS)} 个 provider, {providers_ok} 个正常")
+        if result["status"] == "OK":
+            icon = "✅"
+            ok_count += 1
+        elif result["status"] == "PARTIAL":
+            icon = "⚠️"
+            issues.append((pid, result))
+        else:
+            icon = "❌"
+            issues.append((pid, result))
 
-    if has_issue:
-        print("⚠️ 存在异常，请关注！")
+        expected_str = ", ".join(result["expected"])[:21]
+        print(f"{icon} {pid:<26} {result['status']:<8} {expected_str:<22} {role}")
+
+        if result["status"] != "OK":
+            print(f"   ↳ {result.get('error', 'unknown')}")
+
+    print("-" * 95)
+    print(f"结果: {ok_count}/{len(CHECK_PROVIDERS)} 正常")
+
+    if issues:
+        print()
+        print("异常明细:")
+        for pid, result in issues:
+            print(f"  [{result['status']}] {pid}")
+            if result.get("error"):
+                print(f"      错误: {result['error']}")
+            if result.get("missing"):
+                print(f"      缺失模型: {', '.join(result['missing'])}")
+        print()
+        print("建议行动:")
+        for pid, result in issues:
+            prov = providers.get(pid, {})
+            raw_key = prov.get("apiKey", "")
+            if result["status"] == "ERROR" and "401" in result.get("error", ""):
+                env_var = ""
+                m = re.match(r'^env://(.+)$', raw_key.strip())
+                if m:
+                    env_var = m.group(1)
+                print(f"  🔑 {pid}: API Key 失效(401) — 需更新环境变量 {env_var}")
+            elif result["status"] == "NO_KEY":
+                print(f"  🔑 {pid}: API Key 未设置 — 检查环境变量或配置文件")
+            elif result["status"] == "PARTIAL":
+                print(f"  🔍 {pid}: 模型列表不完整 — 联系 cbwxy.top 管理员")
+            else:
+                print(f"  ⚡ {pid}: {result.get('error', '未知错误')}")
+
+        print()
+        print("WARNING: issues detected!")
         sys.exit(2)
     else:
         print("✅ 全部正常")
         sys.exit(0)
-=======
-DeepSeek 模型健康检查
-每周对比 DeepSeek API 可用模型列表 vs openclaw.json 配置，发现变化时告警。
-"""
-import json
-import re
-import sys
-import io
-from pathlib import Path
-from datetime import datetime, timezone, timedelta
 
-# Windows GBK 编码兼容
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-
-CONFIG_PATH = Path.home() / ".openclaw" / "openclaw.json"
-TZ = timezone(timedelta(hours=8))
-
-# ── 从 config 中提取 deepseek 模型 ID ──────────────────────────
-def get_configured_models():
-    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        config = json.load(f)
-    prov = config.get("models", {}).get("providers", {}).get("deepseek", {})
-    models = prov.get("models", [])
-    return [m["id"] for m in models], config
-
-# ── 从 API 获取可用模型列表 ─────────────────────────────────────
-def get_api_models(api_key: str):
-    import urllib.request, ssl
-    ctx = ssl.create_default_context()
-    req = urllib.request.Request(
-        "https://api.deepseek.com/v1/models",
-        headers={"Authorization": f"Bearer {api_key}"}
-    )
-    with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
-        data = json.loads(resp.read().decode())
-    return [m["id"] for m in data.get("data", [])]
-
-# ── 对比并生成报告 ──────────────────────────────────────────────
-def check(config_models: list, api_models: list):
-    added = set(api_models) - set(config_models)      # 新增模型
-    removed = set(config_models) - set(api_models)    # 已下线模型
-    prim_id = None
-    fall_ids = []
-
-    # 从 config 提取 primary/fallback
-    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        config = json.load(f)
-    am = config.get("agents", {}).get("defaults", {}).get("model", {})
-    prim_raw = am.get("primary", "")
-    # 提取 provider/model-id → 只取 model-id
-    match = re.search(r"deepseek/(\S+)", prim_raw)
-    if match:
-        prim_id = match.group(1)
-    for fb in am.get("fallbacks", []):
-        m = re.search(r"deepseek/(\S+)", fb)
-        if m:
-            fall_ids.append(m.group(1))
-
-    issues = []
-    if prim_id and prim_id not in api_models:
-        issues.append(f"🔴 主力模型 '{prim_id}' 在 API 中不存在！")
-    for fid in fall_ids:
-        if fid not in api_models:
-            issues.append(f"🟡 备用模型 '{fid}' 在 API 中不存在！")
-
-    now = datetime.now(TZ).strftime("%Y-%m-%d %H:%M")
-    lines = [f"## DeepSeek 模型健康检查 — {now}", ""]
-
-    if issues or added or removed:
-        lines.append("⚠️ 发现问题，需要关注：")
-        lines.append("")
-        for i in issues:
-            lines.append(f"- {i}")
-        if added:
-            lines.append(f"- 🟢 API 新增模型（未配置）: {', '.join(added)}")
-        if removed:
-            lines.append(f"- 🔴 API 已下线模型（仍在配置中）: {', '.join(removed)}")
-        return True, "\n".join(lines)
-
-    lines.append("✅ 所有 DeepSeek 模型正常，配置与 API 一致。")
-    lines.append("")
-    lines.append(f"配置模型: {', '.join(config_models)}")
-    lines.append(f"API 模型:  {', '.join(api_models)}")
-    lines.append(f"主力: {prim_id} | 备胎: {', '.join(fall_ids)}")
-    return False, "\n".join(lines)
-
-# ── main ────────────────────────────────────────────────────────
-def main():
-    try:
-        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-            config = json.load(f)
-    except Exception as e:
-        print(f"❌ 无法读取配置文件: {e}")
-        sys.exit(1)
-
-    api_key = (
-        config.get("models", {})
-        .get("providers", {})
-        .get("deepseek", {})
-        .get("apiKey", "")
-    )
-    if not api_key:
-        print("❌ 配置中未找到 DeepSeek API Key")
-        sys.exit(1)
-
-    config_models, _ = get_configured_models()
-    api_models = get_api_models(api_key)
-    has_issues, report = check(config_models, api_models)
-
-    # 输出报告
-    print(report)
-
-    # 退出码：有问题=2 正常=0
-    sys.exit(2 if has_issues else 0)
->>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140
 
 if __name__ == "__main__":
     main()

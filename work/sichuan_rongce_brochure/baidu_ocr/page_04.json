@@ -1,0 +1,2245 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.8808863759,
+        "min": 0.8808863759,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 81,
+        "left": 110,
+        "width": 25,
+        "height": 29
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9713540077,
+        "min": 0.8549213409,
+        "variance": 0.002737184288
+      },
+      "words": "RONGCE",
+      "location": {
+        "top": 88,
+        "left": 427,
+        "width": 213,
+        "height": 29
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9987220764,
+        "min": 0.9963051081,
+        "variance": 1.361995828e-06
+      },
+      "words": "公开公正用心服务诚信为本服务至上追求卓越",
+      "location": {
+        "top": 89,
+        "left": 1256,
+        "width": 698,
+        "height": 27
+      }
+    },
+    {
+      "probability": {
+        "average": 0.870654583,
+        "min": 0.770434916,
+        "variance": 0.01004398149
+      },
+      "words": "融策",
+      "location": {
+        "top": 118,
+        "left": 111,
+        "width": 22,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999356866,
+        "min": 0.9999061823,
+        "variance": 8.705036691e-10
+      },
+      "words": "审计",
+      "location": {
+        "top": 219,
+        "left": 698,
+        "width": 34,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7576470375,
+        "min": 0.5159101486,
+        "variance": 0.05843672529
+      },
+      "words": "-部",
+      "location": {
+        "top": 238,
+        "left": 711,
+        "width": 22,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999668002,
+        "min": 0.9999521971,
+        "variance": 2.132516386e-10
+      },
+      "words": "质量",
+      "location": {
+        "top": 232,
+        "left": 797,
+        "width": 36,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999324679,
+        "min": 0.9998738766,
+        "variance": 2.674041211e-09
+      },
+      "words": "控制部",
+      "location": {
+        "top": 253,
+        "left": 792,
+        "width": 49,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999765158,
+        "min": 0.99992764,
+        "variance": 8.378044924e-10
+      },
+      "words": "公司介绍",
+      "location": {
+        "top": 261,
+        "left": 127,
+        "width": 304,
+        "height": 85
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998680353,
+        "min": 0.9997864366,
+        "variance": 6.663222862e-09
+      },
+      "words": "审计",
+      "location": {
+        "top": 303,
+        "left": 754,
+        "width": 32,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999750257,
+        "min": 0.9999619722,
+        "variance": 1.703917007e-10
+      },
+      "words": "财务",
+      "location": {
+        "top": 297,
+        "left": 860,
+        "width": 32,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996846318,
+        "min": 0.9991245866,
+        "variance": 1.571032584e-07
+      },
+      "words": "总经理",
+      "location": {
+        "top": 318,
+        "left": 591,
+        "width": 75,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9934144616,
+        "min": 0.9869425297,
+        "variance": 4.188590174e-05
+      },
+      "words": "二部",
+      "location": {
+        "top": 323,
+        "left": 761,
+        "width": 24,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996029735,
+        "min": 0.9996029735,
+        "variance": 0
+      },
+      "words": "部",
+      "location": {
+        "top": 317,
+        "left": 867,
+        "width": 20,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9851097465,
+        "min": 0.8976494074,
+        "variance": 0.001274941838
+      },
+      "words": "COMPANY",
+      "location": {
+        "top": 357,
+        "left": 128,
+        "width": 173,
+        "height": 47
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999982059,
+        "min": 0.9999660254,
+        "variance": 2.570779145e-10
+      },
+      "words": "行政",
+      "location": {
+        "top": 368,
+        "left": 833,
+        "width": 34,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998987317,
+        "min": 0.9998344183,
+        "variance": 4.136214926e-09
+      },
+      "words": "审计",
+      "location": {
+        "top": 379,
+        "left": 732,
+        "width": 34,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996337891,
+        "min": 0.9993219376,
+        "variance": 9.725135897e-08
+      },
+      "words": "三部",
+      "location": {
+        "top": 399,
+        "left": 733,
+        "width": 34,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994317889,
+        "min": 0.9994317889,
+        "variance": 0
+      },
+      "words": "部",
+      "location": {
+        "top": 387,
+        "left": 841,
+        "width": 19,
+        "height": 20
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999142885,
+        "min": 0.9997928739,
+        "variance": 6.893141169e-09
+      },
+      "words": "统一社会信用代码",
+      "location": {
+        "top": 404,
+        "left": 1327,
+        "width": 109,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9404217601,
+        "min": 0.542560637,
+        "variance": 0.01560195349
+      },
+      "words": "INTRODUCTION 融策会计师事所",
+      "location": {
+        "top": 406,
+        "left": 125,
+        "width": 469,
+        "height": 46
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999432683,
+        "min": 0.9984619617,
+        "variance": 1.353124901e-07
+      },
+      "words": "915132007091010525",
+      "location": {
+        "top": 422,
+        "left": 1327,
+        "width": 81,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999487996,
+        "min": 0.9998956919,
+        "variance": 1.75171877e-09
+      },
+      "words": "营业执照",
+      "location": {
+        "top": 390,
+        "left": 1513,
+        "width": 193,
+        "height": 46
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9255048633,
+        "min": 0.5090224147,
+        "variance": 0.02893858962
+      },
+      "words": "扫描二维码登录",
+      "location": {
+        "top": 402,
+        "left": 1834,
+        "width": 44,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9825549126,
+        "min": 0.8911346793,
+        "variance": 0.001395588974
+      },
+      "words": "“国家企业信用",
+      "location": {
+        "top": 411,
+        "left": 1834,
+        "width": 43,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9816845655,
+        "min": 0.8920276165,
+        "variance": 0.001356976107
+      },
+      "words": "信息公示系统”",
+      "location": {
+        "top": 417,
+        "left": 1834,
+        "width": 43,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9194799066,
+        "min": 0.5073251724,
+        "variance": 0.02847651951
+      },
+      "words": "了解更多登记，",
+      "location": {
+        "top": 427,
+        "left": 1833,
+        "width": 43,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999213219,
+        "min": 0.9998645782,
+        "variance": 3.219838618e-09
+      },
+      "words": "业务",
+      "location": {
+        "top": 440,
+        "left": 779,
+        "width": 35,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8742032051,
+        "min": 0.5925353765,
+        "variance": 0.01923265122
+      },
+      "words": "备案、许可、监",
+      "location": {
+        "top": 435,
+        "left": 1833,
+        "width": 44,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995772839,
+        "min": 0.9988829494,
+        "variance": 1.995317689e-07
+      },
+      "words": "(副本)",
+      "location": {
+        "top": 442,
+        "left": 1581,
+        "width": 51,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9909318089,
+        "min": 0.949575305,
+        "variance": 0.0002807909332
+      },
+      "words": "副本编号：1-1",
+      "location": {
+        "top": 444,
+        "left": 1655,
+        "width": 66,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9469752312,
+        "min": 0.8442133069,
+        "variance": 0.005280171055
+      },
+      "words": "管信息",
+      "location": {
+        "top": 446,
+        "left": 1834,
+        "width": 22,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9992870688,
+        "min": 0.9992870688,
+        "variance": 0
+      },
+      "words": "部",
+      "location": {
+        "top": 460,
+        "left": 787,
+        "width": 20,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999930859,
+        "min": 0.9999930859,
+        "variance": 0
+      },
+      "words": "名",
+      "location": {
+        "top": 489,
+        "left": 1328,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999700785,
+        "min": 0.9999700785,
+        "variance": 0
+      },
+      "words": "称",
+      "location": {
+        "top": 489,
+        "left": 1375,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999008775,
+        "min": 0.999219656,
+        "variance": 3.780377611e-08
+      },
+      "words": "四川融策会计师事务所有限公司",
+      "location": {
+        "top": 489,
+        "left": 1389,
+        "width": 133,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998211265,
+        "min": 0.9995935559,
+        "variance": 1.403773631e-08
+      },
+      "words": "注册资本壹佰万元整",
+      "location": {
+        "top": 488,
+        "left": 1656,
+        "width": 114,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999730587,
+        "min": 0.9997753501,
+        "variance": 2.439485725e-09
+      },
+      "words": "四川融策会计师事务所有限公司，成立于2000年2月，是1988年中国",
+      "location": {
+        "top": 516,
+        "left": 174,
+        "width": 695,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999921322,
+        "min": 0.9999864101,
+        "variance": 3.274180926e-11
+      },
+      "words": "类型",
+      "location": {
+        "top": 516,
+        "left": 1329,
+        "width": 60,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994550943,
+        "min": 0.9966596365,
+        "variance": 7.55236556e-07
+      },
+      "words": "有限责任公司（自然人投资或控股）",
+      "location": {
+        "top": 516,
+        "left": 1392,
+        "width": 137,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999972403,
+        "min": 0.9999222755,
+        "variance": 8.574083665e-10
+      },
+      "words": "成立日期",
+      "location": {
+        "top": 516,
+        "left": 1656,
+        "width": 62,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997592568,
+        "min": 0.9993447661,
+        "variance": 5.321788876e-08
+      },
+      "words": "2000年02月03日",
+      "location": {
+        "top": 516,
+        "left": 1725,
+        "width": 61,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9978125691,
+        "min": 0.9872055054,
+        "variance": 1.911488289e-05
+      },
+      "words": "法定代表人缪剑",
+      "location": {
+        "top": 542,
+        "left": 1327,
+        "width": 87,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996685386,
+        "min": 0.9987890124,
+        "variance": 1.251847408e-07
+      },
+      "words": "营业期限2000年02月03日至长期",
+      "location": {
+        "top": 542,
+        "left": 1655,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999812841,
+        "min": 0.9998674393,
+        "variance": 6.878981829e-10
+      },
+      "words": "恢复注册会计师制度后在四川省内成立最早的会计师事务所之一。1999年",
+      "location": {
+        "top": 551,
+        "left": 127,
+        "width": 741,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999328256,
+        "min": 0.999854207,
+        "variance": 2.816282318e-09
+      },
+      "words": "经营范围",
+      "location": {
+        "top": 569,
+        "left": 1328,
+        "width": 64,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9833537936,
+        "min": 0.6193211079,
+        "variance": 0.005121714436
+      },
+      "words": "许可项目：从事会计师事务所业务；代理记账（依法须经批准",
+      "location": {
+        "top": 571,
+        "left": 1397,
+        "width": 243,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998241067,
+        "min": 0.9996587038,
+        "variance": 2.735811577e-08
+      },
+      "words": "住所",
+      "location": {
+        "top": 569,
+        "left": 1655,
+        "width": 61,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995023608,
+        "min": 0.9949036837,
+        "variance": 1.277889055e-06
+      },
+      "words": "成都金牛高新技术产业园区金周路595号3",
+      "location": {
+        "top": 569,
+        "left": 1725,
+        "width": 161,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999960959,
+        "min": 0.9998394251,
+        "variance": 2.089136419e-09
+      },
+      "words": "12月30日经四川省财政厅批准取得了会计师事务所执业证书，批准文号是",
+      "location": {
+        "top": 586,
+        "left": 127,
+        "width": 740,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997150302,
+        "min": 0.9990818501,
+        "variance": 1.244312244e-07
+      },
+      "words": "栋6楼04号",
+      "location": {
+        "top": 582,
+        "left": 1726,
+        "width": 39,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9909569025,
+        "min": 0.8493968844,
+        "variance": 0.0008555772365
+      },
+      "words": "以相关部门批准文件或许可证件为准)一般项目：工程管理服",
+      "location": {
+        "top": 595,
+        "left": 1395,
+        "width": 242,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9758437276,
+        "min": 0.6703941226,
+        "variance": 0.005233317148
+      },
+      "words": "务；企业管理咨询；社会经济咨询服务；税务服务；财务咨",
+      "location": {
+        "top": 610,
+        "left": 1396,
+        "width": 236,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998942614,
+        "min": 0.9995042086,
+        "variance": 2.282138567e-08
+      },
+      "words": "川财注【1999】616号。",
+      "location": {
+        "top": 621,
+        "left": 127,
+        "width": 248,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9647636414,
+        "min": 0.4840333164,
+        "variance": 0.01385550667
+      },
+      "words": "询：业务培训（不含教育培训、职业技能培训等需取得许可的",
+      "location": {
+        "top": 620,
+        "left": 1397,
+        "width": 239,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9776909351,
+        "min": 0.4754372537,
+        "variance": 0.009718735702
+      },
+      "words": "培训)；资产评估（除依法须经批准的项目外，凭营业执照依",
+      "location": {
+        "top": 634,
+        "left": 1397,
+        "width": 240,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9950557947,
+        "min": 0.9534917474,
+        "variance": 0.0001731956727
+      },
+      "words": "法自主开展经营活动)。",
+      "location": {
+        "top": 648,
+        "left": 1396,
+        "width": 94,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999961555,
+        "min": 0.9997010231,
+        "variance": 3.390615566e-09
+      },
+      "words": "公司总部设在成都，注册地址为四川省成都市金牛区高科技产业园区金",
+      "location": {
+        "top": 657,
+        "left": 174,
+        "width": 710,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995934367,
+        "min": 0.9988381267,
+        "variance": 2.159423218e-07
+      },
+      "words": "登记机关",
+      "location": {
+        "top": 657,
+        "left": 1700,
+        "width": 72,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999702573,
+        "min": 0.9998024106,
+        "variance": 1.502920233e-09
+      },
+      "words": "周路595号1栋501号，办公室面积639平方米。公司注册资本100万元人民",
+      "location": {
+        "top": 691,
+        "left": 126,
+        "width": 748,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997782707,
+        "min": 0.9995385408,
+        "variance": 3.806514215e-08
+      },
+      "words": "2021",
+      "location": {
+        "top": 697,
+        "left": 1769,
+        "width": 24,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999864101,
+        "min": 0.9999864101,
+        "variance": 0
+      },
+      "words": "年",
+      "location": {
+        "top": 699,
+        "left": 1804,
+        "width": 17,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998295307,
+        "min": 0.999678731,
+        "variance": 2.274056499e-08
+      },
+      "words": "月7",
+      "location": {
+        "top": 700,
+        "left": 1839,
+        "width": 26,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9953977466,
+        "min": 0.9913114309,
+        "variance": 1.66979753e-05
+      },
+      "words": "币。",
+      "location": {
+        "top": 730,
+        "left": 128,
+        "width": 33,
+        "height": 20
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8871828914,
+        "min": 0.6599841118,
+        "variance": 0.0119129587
+      },
+      "words": "国家企业信用信息公示系统网址：htp/www.gxt.gov.cn",
+      "location": {
+        "top": 751,
+        "left": 1282,
+        "width": 190,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9985780716,
+        "min": 0.9848425388,
+        "variance": 1.033530589e-05
+      },
+      "words": "市场主体应当于每年1月1日至6月30日通过国",
+      "location": {
+        "top": 748,
+        "left": 1602,
+        "width": 146,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9951770306,
+        "min": 0.9606630802,
+        "variance": 8.79366562e-05
+      },
+      "words": "家企业信用信息公示系统报送公示年度报告",
+      "location": {
+        "top": 756,
+        "left": 1600,
+        "width": 147,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999821782,
+        "min": 0.999943614,
+        "variance": 3.275424376e-10
+      },
+      "words": "国家市场监督管理总局监制",
+      "location": {
+        "top": 750,
+        "left": 1824,
+        "width": 98,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999770999,
+        "min": 0.9984018207,
+        "variance": 1.725222631e-07
+      },
+      "words": "公司下设阿坝州办事处、西藏办事处。截止目前公司员工共计50人，",
+      "location": {
+        "top": 762,
+        "left": 174,
+        "width": 679,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999100566,
+        "min": 0.9995591044,
+        "variance": 1.36556455e-08
+      },
+      "words": "注册会计师20名，高级会计师8人，中级职称15人，其他执业资格证拥有者",
+      "location": {
+        "top": 798,
+        "left": 125,
+        "width": 752,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999552369,
+        "min": 0.9997114539,
+        "variance": 4.262016517e-09
+      },
+      "words": "7人。公司拥有完备的各种办公设备，共计有汽车3部，电脑42台，打印机",
+      "location": {
+        "top": 833,
+        "left": 125,
+        "width": 740,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9285182953,
+        "min": 0.6603031754,
+        "variance": 0.01460005064
+      },
+      "words": "序号：D013354",
+      "location": {
+        "top": 855,
+        "left": 1513,
+        "width": 53,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999472499,
+        "min": 0.9998543262,
+        "variance": 2.307311897e-09
+      },
+      "words": "5台，复印机3台，音响及投影仪1套，审计软件36套。",
+      "location": {
+        "top": 868,
+        "left": 126,
+        "width": 533,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993021488,
+        "min": 0.9988296628,
+        "variance": 2.232430347e-07
+      },
+      "words": "说明",
+      "location": {
+        "top": 876,
+        "left": 1503,
+        "width": 20,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7013697624,
+        "min": 0.3047607243,
+        "variance": 0.05593441427
+      },
+      "words": "《会计部事务用社书》是明得有人财",
+      "location": {
+        "top": 899,
+        "left": 1466,
+        "width": 98,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999765158,
+        "min": 0.999845624,
+        "variance": 9.803901024e-10
+      },
+      "words": "经过20年的发展，我们服务的客户有400余家，服务领域涉及工业、教",
+      "location": {
+        "top": 903,
+        "left": 175,
+        "width": 709,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.994910717,
+        "min": 0.9857924581,
+        "variance": 2.437789226e-05
+      },
+      "words": "会计师事务所",
+      "location": {
+        "top": 906,
+        "left": 1289,
+        "width": 60,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994312525,
+        "min": 0.998167038,
+        "variance": 2.755172375e-07
+      },
+      "words": "重合同守信用企业证书",
+      "location": {
+        "top": 905,
+        "left": 1842,
+        "width": 98,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995712042,
+        "min": 0.9991267323,
+        "variance": 1.388900444e-07
+      },
+      "words": "执业证书",
+      "location": {
+        "top": 919,
+        "left": 1288,
+        "width": 59,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9425441623,
+        "min": 0.5208029747,
+        "variance": 0.01875095069
+      },
+      "words": "绩效管理研究专业委员会",
+      "location": {
+        "top": 914,
+        "left": 1655,
+        "width": 89,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8180494905,
+        "min": 0.6556463242,
+        "variance": 0.02294043638
+      },
+      "words": "应向部门申请",
+      "location": {
+        "top": 931,
+        "left": 1468,
+        "width": 50,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8879482746,
+        "min": 0.5587748885,
+        "variance": 0.01639099605
+      },
+      "words": "四川策会计师事所有限公司",
+      "location": {
+        "top": 924,
+        "left": 1857,
+        "width": 67,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999536872,
+        "min": 0.9998314381,
+        "variance": 2.702828183e-09
+      },
+      "words": "育、能源、信息、金融、建筑、房地产等行业。",
+      "location": {
+        "top": 938,
+        "left": 127,
+        "width": 469,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8472014666,
+        "min": 0.372230947,
+        "variance": 0.04187909514
+      },
+      "words": "称；四川融策金计师事务用有限公司",
+      "location": {
+        "top": 945,
+        "left": 1284,
+        "width": 87,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7115799785,
+        "min": 0.3538472056,
+        "variance": 0.04268325865
+      },
+      "words": "《会计用事务用执业证书》不得伪造。，",
+      "location": {
+        "top": 943,
+        "left": 1467,
+        "width": 94,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999175787,
+        "min": 0.9978926778,
+        "variance": 8.312848081e-07
+      },
+      "words": "会员证",
+      "location": {
+        "top": 934,
+        "left": 1661,
+        "width": 80,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8358852267,
+        "min": 0.6222088337,
+        "variance": 0.02210251987
+      },
+      "words": "首席合伙人：",
+      "location": {
+        "top": 959,
+        "left": 1263,
+        "width": 34,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9209942222,
+        "min": 0.5588362813,
+        "variance": 0.01444243733
+      },
+      "words": "川融策会计师事务所有限公司",
+      "location": {
+        "top": 966,
+        "left": 1655,
+        "width": 85,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997409582,
+        "min": 0.999017477,
+        "variance": 1.744980267e-07
+      },
+      "words": "AAA级",
+      "location": {
+        "top": 962,
+        "left": 1864,
+        "width": 64,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9252774119,
+        "min": 0.6621028185,
+        "variance": 0.0127777243
+      },
+      "words": "成都市金中区高新技术产业园区金周路5",
+      "location": {
+        "top": 980,
+        "left": 1298,
+        "width": 93,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9431139827,
+        "min": 0.7575950623,
+        "variance": 0.004744043108
+      },
+      "words": "经批准，您单位为我会会员",
+      "location": {
+        "top": 976,
+        "left": 1658,
+        "width": 83,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7128037214,
+        "min": 0.3358073235,
+        "variance": 0.07473186404
+      },
+      "words": "持额发此证",
+      "location": {
+        "top": 984,
+        "left": 1656,
+        "width": 28,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7784784436,
+        "min": 0.4077044427,
+        "variance": 0.0514389351
+      },
+      "words": "发证机关：四川雀制政",
+      "location": {
+        "top": 1001,
+        "left": 1491,
+        "width": 62,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8794856071,
+        "min": 0.661411345,
+        "variance": 0.0146137327
+      },
+      "words": "组织式：有限责任",
+      "location": {
+        "top": 1010,
+        "left": 1262,
+        "width": 57,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7146636248,
+        "min": 0.5224437118,
+        "variance": 0.02805097587
+      },
+      "words": "-年七月+ell",
+      "location": {
+        "top": 1020,
+        "left": 1507,
+        "width": 57,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9020130634,
+        "min": 0.8393791914,
+        "variance": 0.003923005424
+      },
+      "words": "刘尚",
+      "location": {
+        "top": 1020,
+        "left": 1648,
+        "width": 38,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8553164601,
+        "min": 0.3667230308,
+        "variance": 0.04042183235
+      },
+      "words": "批准业文号：川财注【1999】416号",
+      "location": {
+        "top": 1033,
+        "left": 1263,
+        "width": 82,
+        "height": 7
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8259630799,
+        "min": 0.4259084761,
+        "variance": 0.03504701704
+      },
+      "words": "批准执业日期：1999年13月50月",
+      "location": {
+        "top": 1041,
+        "left": 1261,
+        "width": 77,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9740338922,
+        "min": 0.8771047592,
+        "variance": 0.00175822794
+      },
+      "words": "中华人民共和国财政部制",
+      "location": {
+        "top": 1038,
+        "left": 1506,
+        "width": 58,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9978307486,
+        "min": 0.9926623106,
+        "variance": 6.784835477e-06
+      },
+      "words": "质量管理体系认证证书",
+      "location": {
+        "top": 1150,
+        "left": 1382,
+        "width": 68,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9983651042,
+        "min": 0.9957914352,
+        "variance": 1.757817472e-06
+      },
+      "words": "环境管理体系认证证书",
+      "location": {
+        "top": 1154,
+        "left": 1573,
+        "width": 68,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9949215055,
+        "min": 0.9739756584,
+        "variance": 6.034530452e-05
+      },
+      "words": "职业健康安全管理体系认证证书",
+      "location": {
+        "top": 1154,
+        "left": 1749,
+        "width": 96,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.753500402,
+        "min": 0.3032132387,
+        "variance": 0.07345759124
+      },
+      "words": "川策会计师泰各综有限公司",
+      "location": {
+        "top": 1176,
+        "left": 1388,
+        "width": 58,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.673535347,
+        "min": 0.4332422018,
+        "variance": 0.02934545837
+      },
+      "words": "“.”",
+      "location": {
+        "top": 1172,
+        "left": 1770,
+        "width": 51,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8415040374,
+        "min": 0.3818950653,
+        "variance": 0.03847518191
+      },
+      "words": "四川融策会计师事务所有限公司",
+      "location": {
+        "top": 1178,
+        "left": 1577,
+        "width": 58,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7797577977,
+        "min": 0.3891701996,
+        "variance": 0.04743011668
+      },
+      "words": "川合计何事所有限公",
+      "location": {
+        "top": 1179,
+        "left": 1769,
+        "width": 53,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.5604460239,
+        "min": 0.3351769745,
+        "variance": 0.03411806375
+      },
+      "words": "11-200<501",
+      "location": {
+        "top": 1205,
+        "left": 1389,
+        "width": 51,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.594909966,
+        "min": 0.4029299617,
+        "variance": 0.01521791983
+      },
+      "words": "200-22021",
+      "location": {
+        "top": 1210,
+        "left": 1579,
+        "width": 51,
+        "height": 7
+      }
+    },
+    {
+      "probability": {
+        "average": 0.6609272361,
+        "min": 0.4118160009,
+        "variance": 0.02342941053
+      },
+      "words": "(,,)(服)",
+      "location": {
+        "top": 1223,
+        "left": 1725,
+        "width": 142,
+        "height": 8
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7078767419,
+        "min": 0.4644159973,
+        "variance": 0.0424884744
+      },
+      "words": ":小清",
+      "location": {
+        "top": 1251,
+        "left": 1365,
+        "width": 38,
+        "height": 10
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7484545708,
+        "min": 0.3665956855,
+        "variance": 0.07320960611
+      },
+      "words": ":杨小",
+      "location": {
+        "top": 1257,
+        "left": 1555,
+        "width": 38,
+        "height": 9
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997959733,
+        "min": 0.9995085001,
+        "variance": 4.356843419e-08
+      },
+      "words": "二十年",
+      "location": {
+        "top": 1282,
+        "left": 134,
+        "width": 66,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999347329,
+        "min": 0.9997910857,
+        "variance": 5.19300869e-09
+      },
+      "words": "服务超400余",
+      "location": {
+        "top": 1282,
+        "left": 318,
+        "width": 132,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999941349,
+        "min": 0.9998095632,
+        "variance": 5.912167644e-09
+      },
+      "words": "注册资本",
+      "location": {
+        "top": 1282,
+        "left": 568,
+        "width": 89,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999883771,
+        "min": 0.9999806881,
+        "variance": 4.822098276e-11
+      },
+      "words": "办公用地",
+      "location": {
+        "top": 1283,
+        "left": 784,
+        "width": 90,
+        "height": 24
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9780637026,
+        "min": 0.9780637026,
+        "variance": 0
+      },
+      "words": "男",
+      "location": {
+        "top": 1297,
+        "left": 1740,
+        "width": 15,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999976933,
+        "min": 0.9999651909,
+        "variance": 7.788850814e-11
+      },
+      "words": "发展史",
+      "location": {
+        "top": 1307,
+        "left": 133,
+        "width": 67,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998608232,
+        "min": 0.9998163581,
+        "variance": 1.093797608e-09
+      },
+      "words": "家客户",
+      "location": {
+        "top": 1308,
+        "left": 351,
+        "width": 68,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999927282,
+        "min": 0.9999780655,
+        "variance": 5.905462924e-11
+      },
+      "words": "100万元",
+      "location": {
+        "top": 1310,
+        "left": 571,
+        "width": 85,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999756813,
+        "min": 0.9999005795,
+        "variance": 1.437837183e-09
+      },
+      "words": "639平米",
+      "location": {
+        "top": 1309,
+        "left": 785,
+        "width": 87,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.980222404,
+        "min": 0.8746955991,
+        "variance": 0.001454225276
+      },
+      "words": "PAGE 05/06",
+      "location": {
+        "top": 1356,
+        "left": 1968,
+        "width": 97,
+        "height": 30
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    },
+    {
+      "words_result_idx": [
+        6
+      ]
+    },
+    {
+      "words_result_idx": [
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8
+      ]
+    },
+    {
+      "words_result_idx": [
+        9
+      ]
+    },
+    {
+      "words_result_idx": [
+        10
+      ]
+    },
+    {
+      "words_result_idx": [
+        11
+      ]
+    },
+    {
+      "words_result_idx": [
+        12
+      ]
+    },
+    {
+      "words_result_idx": [
+        13
+      ]
+    },
+    {
+      "words_result_idx": [
+        14
+      ]
+    },
+    {
+      "words_result_idx": [
+        15
+      ]
+    },
+    {
+      "words_result_idx": [
+        16
+      ]
+    },
+    {
+      "words_result_idx": [
+        17
+      ]
+    },
+    {
+      "words_result_idx": [
+        18
+      ]
+    },
+    {
+      "words_result_idx": [
+        19
+      ]
+    },
+    {
+      "words_result_idx": [
+        20
+      ]
+    },
+    {
+      "words_result_idx": [
+        21
+      ]
+    },
+    {
+      "words_result_idx": [
+        22
+      ]
+    },
+    {
+      "words_result_idx": [
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "words_result_idx": [
+        27
+      ]
+    },
+    {
+      "words_result_idx": [
+        28
+      ]
+    },
+    {
+      "words_result_idx": [
+        29
+      ]
+    },
+    {
+      "words_result_idx": [
+        30
+      ]
+    },
+    {
+      "words_result_idx": [
+        31
+      ]
+    },
+    {
+      "words_result_idx": [
+        32
+      ]
+    },
+    {
+      "words_result_idx": [
+        33
+      ]
+    },
+    {
+      "words_result_idx": [
+        34,
+        35
+      ]
+    },
+    {
+      "words_result_idx": [
+        36
+      ]
+    },
+    {
+      "words_result_idx": [
+        37
+      ]
+    },
+    {
+      "words_result_idx": [
+        38,
+        39
+      ]
+    },
+    {
+      "words_result_idx": [
+        40,
+        41
+      ]
+    },
+    {
+      "words_result_idx": [
+        42
+      ]
+    },
+    {
+      "words_result_idx": [
+        43
+      ]
+    },
+    {
+      "words_result_idx": [
+        44
+      ]
+    },
+    {
+      "words_result_idx": [
+        45,
+        46
+      ]
+    },
+    {
+      "words_result_idx": [
+        47,
+        48
+      ]
+    },
+    {
+      "words_result_idx": [
+        49
+      ]
+    },
+    {
+      "words_result_idx": [
+        50
+      ]
+    },
+    {
+      "words_result_idx": [
+        51,
+        52
+      ]
+    },
+    {
+      "words_result_idx": [
+        53
+      ]
+    },
+    {
+      "words_result_idx": [
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "words_result_idx": [
+        57
+      ]
+    },
+    {
+      "words_result_idx": [
+        58
+      ]
+    },
+    {
+      "words_result_idx": [
+        59
+      ]
+    },
+    {
+      "words_result_idx": [
+        60
+      ]
+    },
+    {
+      "words_result_idx": [
+        61
+      ]
+    },
+    {
+      "words_result_idx": [
+        62
+      ]
+    },
+    {
+      "words_result_idx": [
+        63
+      ]
+    },
+    {
+      "words_result_idx": [
+        64
+      ]
+    },
+    {
+      "words_result_idx": [
+        65,
+        66
+      ]
+    },
+    {
+      "words_result_idx": [
+        67
+      ]
+    },
+    {
+      "words_result_idx": [
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "words_result_idx": [
+        71
+      ]
+    },
+    {
+      "words_result_idx": [
+        72
+      ]
+    },
+    {
+      "words_result_idx": [
+        73
+      ]
+    },
+    {
+      "words_result_idx": [
+        74
+      ]
+    },
+    {
+      "words_result_idx": [
+        75
+      ]
+    },
+    {
+      "words_result_idx": [
+        76
+      ]
+    },
+    {
+      "words_result_idx": [
+        77
+      ]
+    },
+    {
+      "words_result_idx": [
+        78
+      ]
+    },
+    {
+      "words_result_idx": [
+        79
+      ]
+    },
+    {
+      "words_result_idx": [
+        80
+      ]
+    },
+    {
+      "words_result_idx": [
+        81
+      ]
+    },
+    {
+      "words_result_idx": [
+        82
+      ]
+    },
+    {
+      "words_result_idx": [
+        83
+      ]
+    },
+    {
+      "words_result_idx": [
+        84
+      ]
+    },
+    {
+      "words_result_idx": [
+        85
+      ]
+    },
+    {
+      "words_result_idx": [
+        86
+      ]
+    },
+    {
+      "words_result_idx": [
+        87
+      ]
+    },
+    {
+      "words_result_idx": [
+        88
+      ]
+    },
+    {
+      "words_result_idx": [
+        89
+      ]
+    },
+    {
+      "words_result_idx": [
+        90,
+        91
+      ]
+    },
+    {
+      "words_result_idx": [
+        92
+      ]
+    },
+    {
+      "words_result_idx": [
+        93
+      ]
+    },
+    {
+      "words_result_idx": [
+        94
+      ]
+    },
+    {
+      "words_result_idx": [
+        95
+      ]
+    },
+    {
+      "words_result_idx": [
+        96,
+        97
+      ]
+    },
+    {
+      "words_result_idx": [
+        98
+      ]
+    },
+    {
+      "words_result_idx": [
+        99
+      ]
+    },
+    {
+      "words_result_idx": [
+        100
+      ]
+    },
+    {
+      "words_result_idx": [
+        101
+      ]
+    },
+    {
+      "words_result_idx": [
+        102
+      ]
+    },
+    {
+      "words_result_idx": [
+        103
+      ]
+    },
+    {
+      "words_result_idx": [
+        104
+      ]
+    },
+    {
+      "words_result_idx": [
+        105
+      ]
+    },
+    {
+      "words_result_idx": [
+        106
+      ]
+    },
+    {
+      "words_result_idx": [
+        107
+      ]
+    },
+    {
+      "words_result_idx": [
+        108
+      ]
+    },
+    {
+      "words_result_idx": [
+        109
+      ]
+    },
+    {
+      "words_result_idx": [
+        110
+      ]
+    },
+    {
+      "words_result_idx": [
+        111
+      ]
+    },
+    {
+      "words_result_idx": [
+        112
+      ]
+    },
+    {
+      "words_result_idx": [
+        113
+      ]
+    },
+    {
+      "words_result_idx": [
+        114
+      ]
+    },
+    {
+      "words_result_idx": [
+        115
+      ]
+    },
+    {
+      "words_result_idx": [
+        116
+      ]
+    },
+    {
+      "words_result_idx": [
+        117
+      ]
+    },
+    {
+      "words_result_idx": [
+        118
+      ]
+    },
+    {
+      "words_result_idx": [
+        119
+      ]
+    },
+    {
+      "words_result_idx": [
+        120
+      ]
+    }
+  ],
+  "paragraphs_result_num": 105,
+  "words_result_num": 121,
+  "direction": 0,
+  "log_id": 2074140632475734908
+}

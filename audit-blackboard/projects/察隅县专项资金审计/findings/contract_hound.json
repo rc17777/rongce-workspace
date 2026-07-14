@@ -1,0 +1,58 @@
+[
+  {
+    "finding_id": "F-2026-004",
+    "agent": "contract_hound",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "合同违规",
+    "severity": "低",
+    "summary": "发言稿文档提及资金使用情况，建议与正式合同文件交叉比对",
+    "entities": [
+      "李县",
+      "发言稿"
+    ],
+    "amount": 0,
+    "confidence": 55,
+    "evidence": [
+      "发言稿=李县.docx"
+    ],
+    "law_refs": [],
+    "status": "未确认",
+    "related_findings": [
+      "F-2026-002",
+      "F-2026-005",
+      "F-2026-001",
+      "F-2026-003",
+      "F-2026-006",
+      "F-2026-007"
+    ]
+  },
+  {
+    "finding_id": "F-2026-005",
+    "agent": "contract_hound",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "程序违规",
+    "severity": "低",
+    "summary": "台账按乡镇分类记录，建议核实各项目合同签订和资金拨付程序是否合规",
+    "entities": [
+      "察隅县"
+    ],
+    "amount": 0,
+    "confidence": 60,
+    "evidence": [
+      "察隅县项目按乡镇分类.xlsx"
+    ],
+    "law_refs": [
+      "政府采购法",
+      "招投标法"
+    ],
+    "status": "未确认",
+    "related_findings": [
+      "F-2026-001",
+      "F-2026-002",
+      "F-2026-003",
+      "F-2026-006",
+      "F-2026-007",
+      "F-2026-004"
+    ]
+  }
+]

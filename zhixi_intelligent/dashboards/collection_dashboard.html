@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据采集进度看板 - 智析智能</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei',-apple-system,sans-serif;background:#f0f2f5;padding:24px;color:#333}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:white;padding:24px 28px;border-radius:12px;margin-bottom:20px}
+.header h1{font-size:22px;margin-bottom:4px}
+.header .sub{font-size:13px;opacity:0.75}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px}
+.card{background:white;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.card .label{font-size:12px;color:#7f8c8d;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px}
+.card .value{font-size:28px;font-weight:700;color:#2c3e50}
+.card .sub{font-size:12px;color:#95a5a6;margin-top:4px}
+.card.green .value{color:#27AE60}
+.card.orange .value{color:#E67E22}
+.card.red .value{color:#E74C3C}
+.card.blue .value{color:#2980B9}
+.progress-section{background:white;border-radius:10px;padding:20px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.progress-section h3{font-size:14px;color:#7f8c8d;margin-bottom:12px}
+.progress-bar{background:#ecf0f1;border-radius:12px;height:28px;overflow:hidden;position:relative}
+.progress-fill{background:linear-gradient(90deg,#27AE60,#2ECC71);height:100%;border-radius:12px;transition:width 0.6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;color:white;font-weight:600;font-size:13px;min-width:60px}
+table{width:100%;background:white;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06);border-collapse:collapse}
+th{background:#2980B9;color:white;padding:12px 14px;text-align:left;font-size:12px;font-weight:600;letter-spacing:0.5px}
+td{padding:11px 14px;border-bottom:1px solid #f0f0f0;font-size:13px}
+tr:last-child td{border-bottom:none}
+tr:hover{background:#f8f9ff}
+.status-badge{display:inline-block;padding:3px 10px;border-radius:12px;color:white;font-size:12px;white-space:nowrap}
+.footer{text-align:center;margin-top:24px;color:#95a5a6;font-size:11px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>📊 四川省审计厅 · 数据采集进度看板</h1>
+<div class="sub">智析智能 · 融策数据采集管理平台 | 报告时间: 2026-06-01T00:15:42</div>
+</div>
+
+<div class="cards">
+<div class="card green">
+    <div class="label">采集进度</div>
+    <div class="value">5/13 (38%)</div>
+    <div class="sub">共13个行业</div>
+</div>
+<div class="card blue">
+    <div class="label">已采集数据量</div>
+    <div class="value">632.1 GB</div>
+    <div class="sub">年度目标40TB | 1.58%</div>
+</div>
+<div class="card">
+    <div class="label">已采集表数</div>
+    <div class="value">181</div>
+    <div class="sub">共15,890,000行数据</div>
+</div>
+<div class="card orange">
+    <div class="label">进行中</div>
+    <div class="value">2</div>
+    <div class="sub">5个已完成 / 6个待采集</div>
+</div>
+</div>
+
+<div class="progress-section">
+<h3>整体进度</h3>
+<div class="progress-bar">
+<div class="progress-fill" style="width:53.8%">54%</div>
+</div>
+</div>
+
+<table>
+<thead>
+<tr>
+    <th style="width:120px">行业</th>
+    <th style="width:180px">数据来源</th>
+    <th style="width:60px;text-align:center">表数</th>
+    <th style="width:100px;text-align:right">总行数</th>
+    <th style="width:80px;text-align:right">数据量</th>
+    <th style="width:80px;text-align:center">状态</th>
+    <th style="width:140px">更新时间</th>
+</tr>
+</thead>
+<tbody>
+            <tr>
+                <td><strong>工商</strong></td>
+                <td>省市场监管局</td>
+                <td style="text-align:center">32</td>
+                <td style="text-align:right">1,200,000</td>
+                <td style="text-align:right">45.5 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#27AE60">已完成</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>财政财务</strong></td>
+                <td>省财政厅</td>
+                <td style="text-align:center">68</td>
+                <td style="text-align:right">8,500,000</td>
+                <td style="text-align:right">320.0 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#27AE60">已完成</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>民生民政</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr>
+            <tr>
+                <td><strong>教科文卫</strong></td>
+                <td>省教育厅</td>
+                <td style="text-align:center">45</td>
+                <td style="text-align:right">3,200,000</td>
+                <td style="text-align:right">156.2 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#27AE60">已完成</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>社保医保</strong></td>
+                <td>省社保局</td>
+                <td style="text-align:center">24</td>
+                <td style="text-align:right">2,100,000</td>
+                <td style="text-align:right">88.3 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#27AE60">已完成</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>公积金</strong></td>
+                <td>省公积金中心</td>
+                <td style="text-align:center">12</td>
+                <td style="text-align:right">890,000</td>
+                <td style="text-align:right">22.1 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#27AE60">已完成</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>企业及金融机构</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr>
+            <tr>
+                <td><strong>重大投资项目</strong></td>
+                <td>省发改委</td>
+                <td style="text-align:center">8</td>
+                <td style="text-align:right">320,000</td>
+                <td style="text-align:right">12.8 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#E67E22">进行中</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>公共资源交易</strong></td>
+                <td>省交易中心</td>
+                <td style="text-align:center">18</td>
+                <td style="text-align:right">650,000</td>
+                <td style="text-align:right">35.7 GB</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#E67E22">进行中</span></td>
+                <td style="font-size:11px;color:#7f8c8d">2026-06-01T00:15</td>
+            </tr>
+            <tr>
+                <td><strong>农业</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr>
+            <tr>
+                <td><strong>高校</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr>
+            <tr>
+                <td><strong>医院</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr>
+            <tr>
+                <td><strong>其他</strong></td>
+                <td>-</td>
+                <td style="text-align:center">0</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:right">-</td>
+                <td style="text-align:center"><span class="status-badge" style="background:#95A5A6">待采集</span></td>
+                <td style="font-size:11px;color:#7f8c8d">-</td>
+            </tr></tbody>
+</table>
+
+<div class="footer">智析智能 v1.0 | 融策会计师事务所 | 数据采集进度管理</div>
+</body>
+</html>

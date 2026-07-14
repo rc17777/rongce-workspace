@@ -1,0 +1,910 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.8737188578,
+        "min": 0.8737188578,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 79,
+        "left": 110,
+        "width": 24,
+        "height": 29
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9985438585,
+        "min": 0.9985438585,
+        "variance": 0
+      },
+      "words": "R",
+      "location": {
+        "top": 87,
+        "left": 426,
+        "width": 20,
+        "height": 27
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9950700998,
+        "min": 0.9950700998,
+        "variance": 0
+      },
+      "words": "G",
+      "location": {
+        "top": 88,
+        "left": 543,
+        "width": 18,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.869571805,
+        "min": 0.8007928133,
+        "variance": 0.004730553832
+      },
+      "words": "融策",
+      "location": {
+        "top": 116,
+        "left": 110,
+        "width": 22,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998159409,
+        "min": 0.9990881681,
+        "variance": 1.071487077e-07
+      },
+      "words": "部分项目分布",
+      "location": {
+        "top": 257,
+        "left": 120,
+        "width": 464,
+        "height": 88
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996660352,
+        "min": 0.9995515943,
+        "variance": 7.433212268e-09
+      },
+      "words": "ITEM",
+      "location": {
+        "top": 355,
+        "left": 123,
+        "width": 92,
+        "height": 48
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995545745,
+        "min": 0.9980388284,
+        "variance": 2.4918333e-07
+      },
+      "words": "DISTRIBUTION",
+      "location": {
+        "top": 402,
+        "left": 122,
+        "width": 271,
+        "height": 50
+      }
+    },
+    {
+      "probability": {
+        "average": 0.99993819,
+        "min": 0.9998601675,
+        "variance": 3.164400963e-09
+      },
+      "words": "黑龙江",
+      "location": {
+        "top": 538,
+        "left": 786,
+        "width": 34,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999557137,
+        "min": 0.9999281168,
+        "variance": 7.615916786e-10
+      },
+      "words": "吉林",
+      "location": {
+        "top": 603,
+        "left": 774,
+        "width": 24,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999657273,
+        "min": 0.9999326468,
+        "variance": 1.094324631e-09
+      },
+      "words": "辽宁",
+      "location": {
+        "top": 653,
+        "left": 748,
+        "width": 24,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999503493,
+        "min": 0.9999171495,
+        "variance": 1.102225866e-09
+      },
+      "words": "新疆",
+      "location": {
+        "top": 670,
+        "left": 249,
+        "width": 23,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997261167,
+        "min": 0.9993258715,
+        "variance": 8.337684676e-08
+      },
+      "words": "内蒙古",
+      "location": {
+        "top": 691,
+        "left": 551,
+        "width": 33,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999920726,
+        "min": 0.9999865294,
+        "variance": 3.072742061e-11
+      },
+      "words": "北京",
+      "location": {
+        "top": 686,
+        "left": 669,
+        "width": 21,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999023676,
+        "min": 0.9998967648,
+        "variance": 3.139177807e-11
+      },
+      "words": "天津",
+      "location": {
+        "top": 710,
+        "left": 692,
+        "width": 25,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999815822,
+        "min": 0.9999656677,
+        "variance": 2.532694054e-10
+      },
+      "words": "河北",
+      "location": {
+        "top": 732,
+        "left": 658,
+        "width": 23,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995876551,
+        "min": 0.9993950129,
+        "variance": 3.709953944e-08
+      },
+      "words": "宁夏",
+      "location": {
+        "top": 753,
+        "left": 533,
+        "width": 25,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999164939,
+        "min": 0.9999120235,
+        "variance": 1.998401444e-11
+      },
+      "words": "山西",
+      "location": {
+        "top": 750,
+        "left": 613,
+        "width": 24,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999920726,
+        "min": 0.9999892712,
+        "variance": 7.847944516e-12
+      },
+      "words": "山东",
+      "location": {
+        "top": 766,
+        "left": 696,
+        "width": 23,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998204708,
+        "min": 0.9997045398,
+        "variance": 1.343309641e-08
+      },
+      "words": "青海",
+      "location": {
+        "top": 785,
+        "left": 386,
+        "width": 23,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998708963,
+        "min": 0.9997493625,
+        "variance": 1.476323952e-08
+      },
+      "words": "甘肃",
+      "location": {
+        "top": 802,
+        "left": 505,
+        "width": 22,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999355078,
+        "min": 0.9999176264,
+        "variance": 3.197442311e-10
+      },
+      "words": "陕西",
+      "location": {
+        "top": 819,
+        "left": 568,
+        "width": 22,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999945879,
+        "min": 0.9999012947,
+        "variance": 1.987757514e-09
+      },
+      "words": "河南",
+      "location": {
+        "top": 827,
+        "left": 628,
+        "width": 23,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999951303,
+        "min": 0.9999262094,
+        "variance": 6.296865251e-10
+      },
+      "words": "江苏",
+      "location": {
+        "top": 826,
+        "left": 735,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999227524,
+        "min": 0.999853611,
+        "variance": 4.780531526e-09
+      },
+      "words": "安徽",
+      "location": {
+        "top": 847,
+        "left": 688,
+        "width": 28,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998282194,
+        "min": 0.9997652173,
+        "variance": 3.965512363e-09
+      },
+      "words": "西藏",
+      "location": {
+        "top": 862,
+        "left": 266,
+        "width": 24,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999642968,
+        "min": 0.9999448061,
+        "variance": 3.79888121e-10
+      },
+      "words": "上海",
+      "location": {
+        "top": 856,
+        "left": 771,
+        "width": 30,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999884367,
+        "min": 0.9999811649,
+        "variance": 5.28785904e-11
+      },
+      "words": "湖北",
+      "location": {
+        "top": 873,
+        "left": 615,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9116439223,
+        "min": 0.7349734902,
+        "variance": 0.01560621336
+      },
+      "words": "9四川",
+      "location": {
+        "top": 886,
+        "left": 470,
+        "width": 32,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9980928302,
+        "min": 0.9962263107,
+        "variance": 3.483894943e-06
+      },
+      "words": "重庆",
+      "location": {
+        "top": 900,
+        "left": 559,
+        "width": 18,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9992618561,
+        "min": 0.9986044765,
+        "variance": 4.321871643e-07
+      },
+      "words": "浙江",
+      "location": {
+        "top": 905,
+        "left": 750,
+        "width": 24,
+        "height": 13
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999346733,
+        "min": 0.9999190569,
+        "variance": 2.438724778e-10
+      },
+      "words": "江西",
+      "location": {
+        "top": 925,
+        "left": 676,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999781251,
+        "min": 0.9999624491,
+        "variance": 2.457376524e-10
+      },
+      "words": "湖南",
+      "location": {
+        "top": 944,
+        "left": 614,
+        "width": 22,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999748468,
+        "min": 0.9999728203,
+        "variance": 4.106937013e-12
+      },
+      "words": "贵州",
+      "location": {
+        "top": 966,
+        "left": 553,
+        "width": 22,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999325275,
+        "min": 0.9998760223,
+        "variance": 3.192837994e-09
+      },
+      "words": "福建",
+      "location": {
+        "top": 988,
+        "left": 721,
+        "width": 24,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999934435,
+        "min": 0.9999902248,
+        "variance": 1.035971309e-11
+      },
+      "words": "云南",
+      "location": {
+        "top": 1004,
+        "left": 456,
+        "width": 23,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999714494,
+        "min": 0.9999549389,
+        "variance": 2.725961679e-10
+      },
+      "words": "台湾",
+      "location": {
+        "top": 1002,
+        "left": 775,
+        "width": 21,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999133348,
+        "min": 0.9998726845,
+        "variance": 1.652452397e-09
+      },
+      "words": "广西",
+      "location": {
+        "top": 1025,
+        "left": 574,
+        "width": 23,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9991884828,
+        "min": 0.9984147549,
+        "variance": 5.986548786e-07
+      },
+      "words": "广东",
+      "location": {
+        "top": 1022,
+        "left": 645,
+        "width": 23,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996759892,
+        "min": 0.9993615746,
+        "variance": 9.883773799e-08
+      },
+      "words": "澳门",
+      "location": {
+        "top": 1058,
+        "left": 642,
+        "width": 24,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998829365,
+        "min": 0.9997956157,
+        "variance": 7.630129417e-09
+      },
+      "words": "香港",
+      "location": {
+        "top": 1051,
+        "left": 680,
+        "width": 21,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9986265898,
+        "min": 0.9977935553,
+        "variance": 6.938968227e-07
+      },
+      "words": "南海",
+      "location": {
+        "top": 1059,
+        "left": 897,
+        "width": 30,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998924732,
+        "min": 0.9997947812,
+        "variance": 9.537908241e-09
+      },
+      "words": "海南",
+      "location": {
+        "top": 1106,
+        "left": 594,
+        "width": 23,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8479764462,
+        "min": 0.8479764462,
+        "variance": 0
+      },
+      "words": "1",
+      "location": {
+        "top": 1102,
+        "left": 863,
+        "width": 9,
+        "height": 12
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9633530378,
+        "min": 0.9288369417,
+        "variance": 0.001126341755
+      },
+      "words": "南海诸岛",
+      "location": {
+        "top": 1131,
+        "left": 916,
+        "width": 35,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999984324,
+        "min": 0.9999203682,
+        "variance": 6.839618316e-10
+      },
+      "words": "四川融策会计师事务所有限公司",
+      "location": {
+        "top": 1214,
+        "left": 276,
+        "width": 292,
+        "height": 26
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998866916,
+        "min": 0.999365747,
+        "variance": 1.992093068e-08
+      },
+      "words": "咨询电话：028-87659276",
+      "location": {
+        "top": 1261,
+        "left": 277,
+        "width": 204,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995867014,
+        "min": 0.9980936646,
+        "variance": 3.157450124e-07
+      },
+      "words": "企业邮箱：scrccpa@163.com",
+      "location": {
+        "top": 1285,
+        "left": 276,
+        "width": 237,
+        "height": 20
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9961345196,
+        "min": 0.9814460874,
+        "variance": 1.916758811e-05
+      },
+      "words": "公司网址：http:\\www.scrccpa.com",
+      "location": {
+        "top": 1309,
+        "left": 276,
+        "width": 289,
+        "height": 21
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    },
+    {
+      "words_result_idx": [
+        6
+      ]
+    },
+    {
+      "words_result_idx": [
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8
+      ]
+    },
+    {
+      "words_result_idx": [
+        9
+      ]
+    },
+    {
+      "words_result_idx": [
+        10
+      ]
+    },
+    {
+      "words_result_idx": [
+        11
+      ]
+    },
+    {
+      "words_result_idx": [
+        12
+      ]
+    },
+    {
+      "words_result_idx": [
+        13
+      ]
+    },
+    {
+      "words_result_idx": [
+        14
+      ]
+    },
+    {
+      "words_result_idx": [
+        15
+      ]
+    },
+    {
+      "words_result_idx": [
+        16
+      ]
+    },
+    {
+      "words_result_idx": [
+        17
+      ]
+    },
+    {
+      "words_result_idx": [
+        18
+      ]
+    },
+    {
+      "words_result_idx": [
+        19
+      ]
+    },
+    {
+      "words_result_idx": [
+        20
+      ]
+    },
+    {
+      "words_result_idx": [
+        21
+      ]
+    },
+    {
+      "words_result_idx": [
+        22
+      ]
+    },
+    {
+      "words_result_idx": [
+        23
+      ]
+    },
+    {
+      "words_result_idx": [
+        24
+      ]
+    },
+    {
+      "words_result_idx": [
+        25
+      ]
+    },
+    {
+      "words_result_idx": [
+        26
+      ]
+    },
+    {
+      "words_result_idx": [
+        27
+      ]
+    },
+    {
+      "words_result_idx": [
+        28
+      ]
+    },
+    {
+      "words_result_idx": [
+        29
+      ]
+    },
+    {
+      "words_result_idx": [
+        30
+      ]
+    },
+    {
+      "words_result_idx": [
+        31
+      ]
+    },
+    {
+      "words_result_idx": [
+        32
+      ]
+    },
+    {
+      "words_result_idx": [
+        33
+      ]
+    },
+    {
+      "words_result_idx": [
+        34
+      ]
+    },
+    {
+      "words_result_idx": [
+        35
+      ]
+    },
+    {
+      "words_result_idx": [
+        36
+      ]
+    },
+    {
+      "words_result_idx": [
+        37
+      ]
+    },
+    {
+      "words_result_idx": [
+        38
+      ]
+    },
+    {
+      "words_result_idx": [
+        39
+      ]
+    },
+    {
+      "words_result_idx": [
+        40
+      ]
+    },
+    {
+      "words_result_idx": [
+        41
+      ]
+    },
+    {
+      "words_result_idx": [
+        42
+      ]
+    },
+    {
+      "words_result_idx": [
+        43
+      ]
+    },
+    {
+      "words_result_idx": [
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  ],
+  "paragraphs_result_num": 45,
+  "words_result_num": 48,
+  "direction": 0,
+  "log_id": 2074140708606330740
+}

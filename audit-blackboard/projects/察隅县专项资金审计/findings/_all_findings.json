@@ -1,0 +1,151 @@
+[
+  {
+    "finding_id": "F-2026-004",
+    "agent": "contract_hound",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "合同违规",
+    "severity": "低",
+    "summary": "发言稿文档提及资金使用情况，建议与正式合同文件交叉比对",
+    "entities": [
+      "李县",
+      "发言稿"
+    ],
+    "amount": 0,
+    "confidence": 55,
+    "evidence": [
+      "发言稿=李县.docx"
+    ],
+    "law_refs": [],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-005",
+    "agent": "contract_hound",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "程序违规",
+    "severity": "低",
+    "summary": "台账按乡镇分类记录，建议核实各项目合同签订和资金拨付程序是否合规",
+    "entities": [
+      "察隅县"
+    ],
+    "amount": 0,
+    "confidence": 60,
+    "evidence": [
+      "察隅县项目按乡镇分类.xlsx"
+    ],
+    "law_refs": [
+      "政府采购法",
+      "招投标法"
+    ],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-001",
+    "agent": "data_scout",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "数据异常",
+    "severity": "中",
+    "summary": "察隅县台账7.10版资金汇总表有多个空金额字段，需核实",
+    "entities": [
+      "察隅县",
+      "7.10察隅台账"
+    ],
+    "amount": 0,
+    "confidence": 70,
+    "evidence": [
+      "7.10察隅台账 - （定）.xlsx"
+    ],
+    "law_refs": [
+      "专项资金管理办法"
+    ],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-002",
+    "agent": "data_scout",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "财务异常",
+    "severity": "中",
+    "summary": "察隅县汇总表资金规模较大，需逐项核实资金拨付与使用进度匹配性",
+    "entities": [
+      "察隅县",
+      "察隅县汇总表"
+    ],
+    "amount": 0,
+    "confidence": 65,
+    "evidence": [
+      "察隅县汇总表.xls"
+    ],
+    "law_refs": [
+      "专项资金管理办法"
+    ],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-003",
+    "agent": "data_scout",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "数据异常",
+    "severity": "低",
+    "summary": "察隅县项目按乡镇分类.xls未能解析，可能与文件格式损坏有关",
+    "entities": [
+      "察隅县"
+    ],
+    "amount": 0,
+    "confidence": 50,
+    "evidence": [
+      "察隅县项目按乡镇分类.xlsx"
+    ],
+    "law_refs": [],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-006",
+    "agent": "law_inspector",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "程序违规",
+    "severity": "低",
+    "summary": "察隅县专项资金项目未发现明确的资金管理办法引用，需确认是否按规定执行",
+    "entities": [
+      "察隅县"
+    ],
+    "amount": 0,
+    "confidence": 50,
+    "evidence": [
+      "7.10察隅台账 - （定）.xlsx"
+    ],
+    "law_refs": [
+      "中央财政专项资金管理办法"
+    ],
+    "status": "未确认",
+    "related_findings": []
+  },
+  {
+    "finding_id": "F-2026-007",
+    "agent": "law_inspector",
+    "timestamp": "2026-07-11T13:28:30.344595+08:00",
+    "type": "内控漏洞",
+    "severity": "低",
+    "summary": "项目数据分散在多个Excel文件中，未统一归档管理，存在内控风险",
+    "entities": [
+      "察隅县"
+    ],
+    "amount": 0,
+    "confidence": 70,
+    "evidence": [
+      "7.10察隅台账 - （定）.xlsx",
+      "察隅县汇总表.xls",
+      "察隅县项目按乡镇分类.xlsx"
+    ],
+    "law_refs": [
+      "会计档案管理办法"
+    ],
+    "status": "未确认",
+    "related_findings": []
+  }
+]

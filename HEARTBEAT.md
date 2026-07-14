@@ -13,13 +13,20 @@ python -X utf8 ai-workflow/engine.py run
 ```
 
 引擎内部自动判断当前时间该运行哪些Agent：
-- 📡 数据侦察兵：每日 08:00-08:30 → 采集审计情报
-- 📚 知识管理员：每日 14:00-14:30 → 清理僵尸文件+同步RAG
+- 📡 数据侦察兵：每日 08:00-08:30 → 采集审计情报（已手动验证 ✅）
+- 📚 知识管理员：每日 14:00-14:30 → 清理僵尸文件+同步RAG+RAG每日精选
 - 🎯 招标猎手：周一三五 09:00-09:30 → 招标信息采集
-- 🏥 模型医生：每日 10:00-10:30 → 12模型健康检查
+- 🏥 模型医生：每日 10:00-10:30 → 12模型健康检查（已手动验证 ✅）
 - 💰 Token监察员：每日 20:00-20:30 → Token日报
+- 🔀 路由控制器：每日 06:00-06:30 → 模型路由配置更新
 
-先跑引擎，看输出决定要不要额外做检查。
+**手动触发指定Agent：**
+```bash
+python -X utf8 ai-workflow/engine.py status          # 查看状态
+python -X utf8 ai-workflow/engine.py report          # 查看日报
+python -X utf8 ai-workflow/engine.py trigger data_scout   # 手动触发数据侦察兵
+python -X utf8 ai-workflow/engine.py trigger model_doctor # 手动触发模型医生
+python -X utf8 ai-workflow/engine.py run --force           # 强制运行所有Agent
 
 ### 第二步：状态面板（每天一次，约09:00）
 

@@ -1,0 +1,30 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="300" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="10" y="10" width="1100" height="260" as="geometry"/>
+    </mxCell>
+    <mxCell id="t1" value="&lt;b&gt;四、审核方法与技术路线 / 五、审核程序与进度安排&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#FFFFFF;" parent="1" vertex="1">
+      <mxGeometry x="10" y="25" width="1100" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line" value="" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;strokeColor=#FADBD8;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="30" y="65" width="1060" height="2" as="geometry"/>
+    </mxCell>
+    <mxCell id="k1" value="🔬 8种审核方法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CB4335;strokeColor=#B03A2E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="30" y="80" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k2" value="📐 组合运用策略" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CB4335;strokeColor=#B03A2E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="260" y="80" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k3" value="📏 造价审核技术" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CB4335;strokeColor=#B03A2E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="490" y="80" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k4" value="📅 三阶段进度安排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CB4335;strokeColor=#B03A2E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="720" y="80" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1" value="• 全面核查、数据分析、现场核实、函证询证、专家咨询、穿行测试、符合性测试、实质性测试&#10;• 按审核事项类型和风险等级组合方法，高→全面核查+实质性，中→符合性测试+穿行&#10;• 定额审核法/清单审核法/指标对比法 + 账户分析/凭证检查/账龄分析/趋势分析&#10;• 准备阶段(7天)→现场实施(25天)→报告阶段(12+5+5天) + 底稿三级复核制度" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=10;fontColor=#FDEDEC;" parent="1" vertex="1">
+      <mxGeometry x="30" y="140" width="1060" height="110" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

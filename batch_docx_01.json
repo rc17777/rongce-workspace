@@ -1,0 +1,8 @@
+[
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"融策AI辅助审计作业技术方案","style":"Heading1","alignment":"center"}},
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"四川融策会计师事务所","style":"Normal","alignment":"center","fontSize":28}},
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"2026年7月","style":"Normal","alignment":"center","fontSize":24}},
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"","style":"Normal"}},
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"","style":"Normal"}},
+  {"command":"add","parent":"/body","type":"paragraph","props":{"text":"","style":"Normal"}}
+]

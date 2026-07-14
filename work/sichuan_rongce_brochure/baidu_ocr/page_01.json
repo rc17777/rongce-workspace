@@ -1,0 +1,124 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.7005851865,
+        "min": 0.7005851865,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 182,
+        "left": 1294,
+        "width": 70,
+        "height": 84
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9983375072,
+        "min": 0.9971023202,
+        "variance": 1.525687026e-06
+      },
+      "words": "融策",
+      "location": {
+        "top": 290,
+        "left": 1296,
+        "width": 61,
+        "height": 32
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9966433644,
+        "min": 0.985933125,
+        "variance": 2.922112435e-05
+      },
+      "words": "谋专业之策",
+      "location": {
+        "top": 663,
+        "left": 414,
+        "width": 240,
+        "height": 57
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9977161288,
+        "min": 0.9955403209,
+        "variance": 2.866520163e-06
+      },
+      "words": "融品质之精",
+      "location": {
+        "top": 729,
+        "left": 414,
+        "width": 240,
+        "height": 57
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997282028,
+        "min": 0.9983935952,
+        "variance": 2.000346768e-07
+      },
+      "words": "四川融策会计师事务所有限公司",
+      "location": {
+        "top": 843,
+        "left": 1258,
+        "width": 699,
+        "height": 52
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9977391958,
+        "min": 0.9229156375,
+        "variance": 0.0001499636128
+      },
+      "words": "Sichuan RONGCE Accounting networks and Associations Co. ， Ltd.",
+      "location": {
+        "top": 895,
+        "left": 1257,
+        "width": 692,
+        "height": 20
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    }
+  ],
+  "paragraphs_result_num": 6,
+  "words_result_num": 6,
+  "direction": 0,
+  "log_id": 2074140591725107185
+}

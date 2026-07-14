@@ -1,0 +1,30 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="300" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="10" y="10" width="1100" height="260" as="geometry"/>
+    </mxCell>
+    <mxCell id="t1" value="&lt;b&gt;十、类似业绩与履约能力 / 十一、服务承诺&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#FFFFFF;" parent="1" vertex="1">
+      <mxGeometry x="10" y="25" width="1100" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line" value="" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;strokeColor=#A9DFBF;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="30" y="65" width="1060" height="2" as="geometry"/>
+    </mxCell>
+    <mxCell id="k1" value="🏆 阿坝州业绩8项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#1A6F3E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="30" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k2" value="🌟 甘孜州业绩4项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#1A6F3E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="300" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k3" value="📚 4个典型案例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#1A6F3E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="570" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k4" value="🤝 6项服务承诺" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#1A6F3E;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="840" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1" value="• 阿坝县/汶川县/金川县/黑水县/理县/九寨沟县/阿坝州文化中心—阿坝州全覆盖&#10;• 巴塘县/色达县/道孚县/石渠县—甘孜州业绩，高原民族地区经验丰富&#10;• 市政道路/医院迁建/湿地保护/农村公路四大案例分析&#10;• 质量承诺/进度承诺/保密承诺/廉洁承诺/后续服务/延伸服务 六大承诺" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=10;fontColor=#D5F5E3;" parent="1" vertex="1">
+      <mxGeometry x="30" y="140" width="1060" height="110" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

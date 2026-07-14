@@ -1,0 +1,129 @@
+[
+  {"command":"add","parent":"/","type":"sheet","props":{"name":"测算汇总"}},
+  {"command":"set","path":"/测算汇总/A1","props":{"value":"长期照护师职业技能等级认定 - 成本测算汇总表","bold":"true","font.size":"14pt","font.name":"等线"}},
+  {"command":"set","path":"/测算汇总/A2","props":{"value":"（基于两班次实际数据平均 + 智慧护理学院耗材标准）","font.size":"10pt","font.name":"等线","font.color":"666666"}},
+
+  {"command":"set","path":"/测算汇总/A4","props":{"value":"一、基础参数","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+  {"command":"set","path":"/测算汇总/A5","props":{"value":"项目","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/B5","props":{"value":"数值","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/C5","props":{"value":"说明","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+
+  {"command":"set","path":"/测算汇总/A6","props":{"value":"每批次认定人数","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B6","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C6","props":{"value":"每次认定考试考生人数","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A7","props":{"value":"考场数量","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B7","props":{"value":"4","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C7","props":{"value":"实操考核考场数","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A9","props":{"value":"二、人工费用计算（人均）","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+
+  {"command":"set","path":"/测算汇总/A10","props":{"value":"数据项","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/B10","props":{"value":"批次1 (2025.11.30)","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/C10","props":{"value":"批次2 (2026.01.09)","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/D10","props":{"value":"平均值","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+
+  {"command":"set","path":"/测算汇总/A11","props":{"value":"认定人数（人）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B11","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C11","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D11","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A12","props":{"value":"人员费用合计（元）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B12","props":{"value":"23670","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C12","props":{"value":"23155","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D12","props":{"formula":"(B12+C12)/2","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A13","props":{"value":"人均人工费用（元/人）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC"}},
+  {"command":"set","path":"/测算汇总/B13","props":{"formula":"ROUND(B12/B11,2)","numFmt":"#,##0.00","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C13","props":{"formula":"ROUND(C12/C11,2)","numFmt":"#,##0.00","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D13","props":{"formula":"ROUND(D12/B11,2)","numFmt":"#,##0.00","bold":"true","font.word":"","font.size":"12pt","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center","font.color":"C00000"}},
+
+  {"command":"set","path":"/测算汇总/A15","props":{"value":"三、SP模特费用计算（人均）","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+  {"command":"set","path":"/测算汇总/A16","props":{"value":"项目","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/B16","props":{"value":"单价","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/C16","props":{"value":"数量/时长","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/D16","props":{"value":"小计","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+
+  {"command":"set","path":"/测算汇总/A17","props":{"value":"老师费用","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B17","props":{"value":"60 元/h","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C17","props":{"value":"1人","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D17","props":{"formula":"60","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A18","props":{"value":"学生费用","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B18","props":{"value":"22 元/h","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C18","props":{"value":"2人 × 6h","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D18","props":{"formula":"22*2*6","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A19","props":{"value":"SP模特总费用","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B19","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/C19","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/D19","props":{"formula":"D17+D18","numFmt":"#,##0.00","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A20","props":{"value":"覆盖人数","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B20","props":{"value":"30 人","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C20","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/D20","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A21","props":{"value":"SP模特人均费用（元/人）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC"}},
+  {"command":"set","path":"/测算汇总/B21","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC"}},
+  {"command":"set","path":"/测算汇总/C21","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC"}},
+  {"command":"set","path":"/测算汇总/D21","props":{"formula":"ROUND(D19/30,2)","numFmt":"#,##0.00","bold":"true","font.size":"12pt","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center","font.color":"C00000"}},
+
+  {"command":"set","path":"/测算汇总/A23","props":{"value":"四、耗材成本（人均）","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+  {"command":"set","path":"/测算汇总/A24","props":{"value":"认定等级","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/B24","props":{"value":"人均耗材费用（元/人）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/C24","props":{"value":"数据来源","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+
+  {"command":"set","path":"/测算汇总/A25","props":{"value":"五级（初级工）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/B25","props":{"value":"93.00","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C25","props":{"value":"智护学院耗材成本表（2026.05.14）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A26","props":{"value":"四级（中级工）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/B26","props":{"value":"158.00","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C26","props":{"value":"智护学院耗材成本表（2026.05.14）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A27","props":{"value":"三级（高级工）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/B27","props":{"value":"190.00","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C27","props":{"value":"智护学院耗材成本表（2026.05.14）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+
+  {"command":"set","path":"/测算汇总/A29","props":{"value":"五、单批次考试成本测算汇总（五级/初级）","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+  {"command":"set","path":"/测算汇总/A30","props":{"value":"费用项目","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/B30","props":{"value":"人均标准（元/人）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/C30","props":{"value":"参考人数（人）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/D30","props":{"value":"小计（元）","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"E2EFDA","alignment.horizontal":"center","alignment.vertical":"center"}},
+
+  {"command":"set","path":"/测算汇总/A31","props":{"value":"人工费用（含SP模特）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B31","props":{"formula":"D13","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C31","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D31","props":{"formula":"B31*C31","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A32","props":{"value":"  - 其中：SP模特费用","font.name":"等线","font.color":"666666","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B32","props":{"formula":"D21","numFmt":"#,##0.00","font.name":"等线","font.color":"666666","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C32","props":{"value":"120","numFmt":"#,##0","font.name":"等线","font.color":"666666","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D32","props":{"formula":"B32*C32","numFmt":"#,##0.00","font.name":"等线","font.color":"666666","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A33","props":{"value":"耗材费用","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B33","props":{"value":"93.00","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C33","props":{"value":"120","numFmt":"#,##0","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D33","props":{"formula":"B33*C33","numFmt":"#,##0.00","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A34","props":{"value":"其他费用（不变）","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin"}},
+  {"command":"set","path":"/测算汇总/B34","props":{"value":"待确认","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/C34","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+  {"command":"set","path":"/测算汇总/D34","props":{"value":"","font.name":"等线","border.left":"thin","border.right":"thin","border.bottom":"thin","alignment.horizontal":"center"}},
+
+  {"command":"set","path":"/测算汇总/A36","props":{"value":"单批次总成本","bold":"true","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center","alignment.vertical":"center"}},
+  {"command":"set","path":"/测算汇总/D36","props":{"formula":"D31+D33","numFmt":"#,##0.00","bold":"true","font.size":"12pt","font.name":"等线","border.left":"thin","border.right":"thin","border.top":"thin","border.bottom":"thin","fill":"FFF2CC","alignment.horizontal":"center","font.color":"C00000"}},
+
+  {"command":"set","path":"/测算汇总/A38","props":{"value":"六、备注","bold":"true","font.size":"12pt","font.name":"等线","fill":"D9E2F3"}},
+  {"command":"set","path":"/测算汇总/A39","props":{"value":"1. 人工费用取2025年11月30日（23,670元/120人）与2026年1月9日（23,155元/120人）两班次人均费用平均值","font.name":"等线","font.size":"10pt"}},
+  {"command":"set","path":"/测算汇总/A40","props":{"value":"2. SP模特费用按1名老师（60元/h）+2名学生（22元/h×6h）÷30人计算","font.name":"等线","font.size":"10pt"}},
+  {"command":"set","path":"/测算汇总/A41","props":{"value":"3. 耗材成本依据《智护学院-长期照护师-耗材成本表-2026.05.14》","font.name":"等线","font.size":"10pt"}},
+  {"command":"set","path":"/测算汇总/A42","props":{"value":"4. 其他费用（场地、设备折旧、命题/阅卷等）维持原有测算标准不变","font.name":"等线","font.size":"10pt"}},
+  {"command":"set","path":"/测算汇总/A43","props":{"value":"5. 编制日期：2026年5月25日","font.name":"等线","font.size":"10pt","font.color":"666666"}},
+
+  {"command":"set","path":"/测算汇总/col[A]","props":{"width":"40"}},
+  {"command":"set","path":"/测算汇总/col[B]","props":{"width":"28"}},
+  {"command":"set","path":"/测算汇总/col[C]","props":{"width":"32"}},
+  {"command":"set","path":"/测算汇总/col[D]","props":{"width":"18"}}
+]

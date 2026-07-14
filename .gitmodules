@@ -1,0 +1,3 @@
+[submodule "projects/data-analysis-agent"]
+	path = projects/data-analysis-agent
+	url = https://github.com/rongce/data-analysis-agent.git

@@ -6,8 +6,10 @@ import sys, os, time, subprocess, hashlib
 sys.stdout.reconfigure(encoding='utf-8')
 
 KNOWLEDGE_DIRS = [
+    r'C:\Users\scrccpa\.openclaw\workspace\knowledge',
     r'D:\openclaw-workspace\knowledge',
     r'D:\openclaw-workspace\obsidian-vault',
+    r'C:\Users\scrccpa\Documents\Obsidian Vault',
 ]
 REBUILD_SCRIPT = r'D:\openclaw-workspace\scripts\rag_rebuild.py'
 
@@ -43,7 +45,7 @@ trigger_count = 0
 last_rebuild_time = 0
 
 while True:
-    time.sleep(15)  # 每15秒检查一次
+    time.sleep(60)  # 每60秒检查一次（数据源扩大后降低扫描频率）
     
     new_hashes = get_file_hashes(KNOWLEDGE_DIRS)
     

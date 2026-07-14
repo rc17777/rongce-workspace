@@ -1,0 +1,1442 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.9282605648,
+        "min": 0.9282605648,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 81,
+        "left": 111,
+        "width": 24,
+        "height": 28
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993394017,
+        "min": 0.9993394017,
+        "variance": 0
+      },
+      "words": "R",
+      "location": {
+        "top": 90,
+        "left": 427,
+        "width": 20,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.996319294,
+        "min": 0.996319294,
+        "variance": 0
+      },
+      "words": "G",
+      "location": {
+        "top": 90,
+        "left": 544,
+        "width": 18,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7499472499,
+        "min": 0.7499472499,
+        "variance": 0
+      },
+      "words": "E",
+      "location": {
+        "top": 90,
+        "left": 625,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998889565,
+        "min": 0.9996564388,
+        "variance": 1.895599766e-08
+      },
+      "words": "公开公正",
+      "location": {
+        "top": 90,
+        "left": 1255,
+        "width": 117,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994335175,
+        "min": 0.9982998967,
+        "variance": 4.442100021e-07
+      },
+      "words": "用心服务",
+      "location": {
+        "top": 90,
+        "left": 1401,
+        "width": 114,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999920845,
+        "min": 0.9997488856,
+        "variance": 1.020670215e-08
+      },
+      "words": "诚信为本",
+      "location": {
+        "top": 90,
+        "left": 1547,
+        "width": 115,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999646544,
+        "min": 0.9999370575,
+        "variance": 6.243219275e-10
+      },
+      "words": "服务至上",
+      "location": {
+        "top": 90,
+        "left": 1693,
+        "width": 116,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996479154,
+        "min": 0.9989280105,
+        "variance": 1.755557264e-07
+      },
+      "words": "追求卓越",
+      "location": {
+        "top": 90,
+        "left": 1837,
+        "width": 116,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8779222965,
+        "min": 0.7766994238,
+        "variance": 0.0102460701
+      },
+      "words": "融策",
+      "location": {
+        "top": 118,
+        "left": 111,
+        "width": 22,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999016523,
+        "min": 0.9996685982,
+        "variance": 1.814886375e-08
+      },
+      "words": "常规业务",
+      "location": {
+        "top": 260,
+        "left": 126,
+        "width": 306,
+        "height": 85
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999705553,
+        "min": 0.9999415874,
+        "variance": 5.507381218e-10
+      },
+      "words": "重点业务",
+      "location": {
+        "top": 261,
+        "left": 1243,
+        "width": 308,
+        "height": 84
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995766282,
+        "min": 0.9985981584,
+        "variance": 1.832941052e-07
+      },
+      "words": "REGULAR",
+      "location": {
+        "top": 357,
+        "left": 127,
+        "width": 170,
+        "height": 47
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995607734,
+        "min": 0.9992014766,
+        "variance": 8.553769248e-08
+      },
+      "words": "KEY",
+      "location": {
+        "top": 360,
+        "left": 1246,
+        "width": 72,
+        "height": 42
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9986246228,
+        "min": 0.995642662,
+        "variance": 2.025316689e-06
+      },
+      "words": "SERVICE",
+      "location": {
+        "top": 405,
+        "left": 127,
+        "width": 151,
+        "height": 46
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994477034,
+        "min": 0.9991475344,
+        "variance": 7.351778208e-08
+      },
+      "words": "BUSINESS",
+      "location": {
+        "top": 405,
+        "left": 1245,
+        "width": 170,
+        "height": 47
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999606609,
+        "min": 0.9998385906,
+        "variance": 3.09567838e-09
+      },
+      "words": "工程造价咨询",
+      "location": {
+        "top": 517,
+        "left": 140,
+        "width": 187,
+        "height": 36
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9922803044,
+        "min": 0.8342463374,
+        "variance": 0.001087036217
+      },
+      "words": " Project cost consulting",
+      "location": {
+        "top": 539,
+        "left": 334,
+        "width": 157,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999217987,
+        "min": 0.9993915558,
+        "variance": 2.836919144e-08
+      },
+      "words": "全过程预算绩效管理链条",
+      "location": {
+        "top": 517,
+        "left": 1259,
+        "width": 343,
+        "height": 36
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9977857471,
+        "min": 0.8942755461,
+        "variance": 0.000218777277
+      },
+      "words": "」Whole process budget performance management chain",
+      "location": {
+        "top": 540,
+        "left": 1600,
+        "width": 371,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998714328,
+        "min": 0.9985772371,
+        "variance": 6.936925701e-08
+      },
+      "words": "建设项目可行性研究经济评价、投资估算、项目后评价报告的编制和审核；建设工程",
+      "location": {
+        "top": 562,
+        "left": 163,
+        "width": 710,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998019934,
+        "min": 0.9955958724,
+        "variance": 4.561752576e-07
+      },
+      "words": "概、预、结算及竣工结（决）算报告的编制和审核；建设工程实施阶段工程招标标底、投标报",
+      "location": {
+        "top": 594,
+        "left": 123,
+        "width": 758,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9991556406,
+        "min": 0.9967521429,
+        "variance": 1.925918241e-06
+      },
+      "words": "事前绩效",
+      "location": {
+        "top": 591,
+        "left": 1272,
+        "width": 53,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9988548756,
+        "min": 0.9954769015,
+        "variance": 3.803692152e-06
+      },
+      "words": "加强绩效",
+      "location": {
+        "top": 591,
+        "left": 1840,
+        "width": 55,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7987744808,
+        "min": 0.6818323731,
+        "variance": 0.01367546432
+      },
+      "words": "Y=",
+      "location": {
+        "top": 598,
+        "left": 1921,
+        "width": 23,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994674921,
+        "min": 0.9992042184,
+        "variance": 6.931304597e-08
+      },
+      "words": "评估",
+      "location": {
+        "top": 611,
+        "left": 1272,
+        "width": 26,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999811649,
+        "min": 0.9999575615,
+        "variance": 1.893667445e-10
+      },
+      "words": "目标管理",
+      "location": {
+        "top": 610,
+        "left": 1841,
+        "width": 52,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998391867,
+        "min": 0.9986678362,
+        "variance": 1.195045627e-07
+      },
+      "words": "价的编制和审核；工程量清单的编制和审核；施工合同价款的变更及索赔费用的计算；提供",
+      "location": {
+        "top": 625,
+        "left": 123,
+        "width": 762,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998437166,
+        "min": 0.9987500906,
+        "variance": 1.002029677e-07
+      },
+      "words": "工程造价经济纠纷的鉴定服务；提供建设工程项目全过程的造价监控与服务；提供工程造价",
+      "location": {
+        "top": 656,
+        "left": 125,
+        "width": 762,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999761939,
+        "min": 0.9985816479,
+        "variance": 2.064017792e-07
+      },
+      "words": "严控绩效质量管理",
+      "location": {
+        "top": 656,
+        "left": 1524,
+        "width": 164,
+        "height": 24
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998915195,
+        "min": 0.9994615912,
+        "variance": 3.711883068e-08
+      },
+      "words": "信息服务等。",
+      "location": {
+        "top": 686,
+        "left": 128,
+        "width": 104,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8009215593,
+        "min": 0.8009215593,
+        "variance": 0
+      },
+      "words": "￥",
+      "location": {
+        "top": 724,
+        "left": 1604,
+        "width": 19,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999496341,
+        "min": 0.999833703,
+        "variance": 4.490534167e-09
+      },
+      "words": "预算单位",
+      "location": {
+        "top": 762,
+        "left": 1435,
+        "width": 53,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998989701,
+        "min": 0.9998218417,
+        "variance": 4.859464831e-09
+      },
+      "words": "主管部门",
+      "location": {
+        "top": 762,
+        "left": 1512,
+        "width": 51,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998995066,
+        "min": 0.9996228218,
+        "variance": 2.551329814e-08
+      },
+      "words": "财政部门",
+      "location": {
+        "top": 762,
+        "left": 1583,
+        "width": 54,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999114275,
+        "min": 0.9997262359,
+        "variance": 8.763328729e-09
+      },
+      "words": "第三方机构",
+      "location": {
+        "top": 762,
+        "left": 1660,
+        "width": 66,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997007847,
+        "min": 0.9989583492,
+        "variance": 1.851504976e-07
+      },
+      "words": "评审专家",
+      "location": {
+        "top": 762,
+        "left": 1743,
+        "width": 53,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999855161,
+        "min": 0.999956727,
+        "variance": 1.860094301e-10
+      },
+      "words": "工程项目管理",
+      "location": {
+        "top": 775,
+        "left": 140,
+        "width": 188,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9989590049,
+        "min": 0.9699184895,
+        "variance": 2.81626817e-05
+      },
+      "words": " Engineering project management",
+      "location": {
+        "top": 795,
+        "left": 334,
+        "width": 226,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997872114,
+        "min": 0.9978851676,
+        "variance": 1.381049799e-07
+      },
+      "words": "从事工程项目管理机构受业主委托，代表业主对工程建设项目的组织实施进行全过程",
+      "location": {
+        "top": 819,
+        "left": 165,
+        "width": 707,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993776679,
+        "min": 0.997662425,
+        "variance": 9.812234794e-07
+      },
+      "words": "绩效评价",
+      "location": {
+        "top": 816,
+        "left": 1272,
+        "width": 52,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996699095,
+        "min": 0.9987529516,
+        "variance": 2.805643931e-07
+      },
+      "words": "绩效运行",
+      "location": {
+        "top": 816,
+        "left": 1841,
+        "width": 51,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999873638,
+        "min": 0.9999636412,
+        "variance": 2.070486005e-10
+      },
+      "words": "结果应用",
+      "location": {
+        "top": 834,
+        "left": 1271,
+        "width": 54,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999075532,
+        "min": 0.999843359,
+        "variance": 4.120895625e-09
+      },
+      "words": "监控",
+      "location": {
+        "top": 835,
+        "left": 1841,
+        "width": 26,
+        "height": 14
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999085665,
+        "min": 0.9992960691,
+        "variance": 1.873840638e-08
+      },
+      "words": "或若干阶段的管理和服务。工程项目管理企业可以协助业主与工程项目的总承包企业或勘",
+      "location": {
+        "top": 850,
+        "left": 124,
+        "width": 749,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994481206,
+        "min": 0.9940154552,
+        "variance": 9.400375234e-07
+      },
+      "words": "察、设计、招标、造价、供货、施工、监理等企业签订合同，并受业主委托监督合同履行。",
+      "location": {
+        "top": 879,
+        "left": 123,
+        "width": 759,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999935627,
+        "min": 0.9995108843,
+        "variance": 2.024247259e-08
+      },
+      "words": "全面预算绩效建设价值",
+      "location": {
+        "top": 910,
+        "left": 1260,
+        "width": 312,
+        "height": 35
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9864296913,
+        "min": 0.6163526177,
+        "variance": 0.004089084454
+      },
+      "words": "」Overall budget performance building value",
+      "location": {
+        "top": 932,
+        "left": 1573,
+        "width": 296,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999597669,
+        "min": 0.9999125004,
+        "variance": 7.811742364e-10
+      },
+      "words": "实现全过程",
+      "location": {
+        "top": 987,
+        "left": 1440,
+        "width": 78,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999693632,
+        "min": 0.9999206066,
+        "variance": 7.34888761e-10
+      },
+      "words": "实现全过程",
+      "location": {
+        "top": 987,
+        "left": 1726,
+        "width": 75,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997048378,
+        "min": 0.9985876083,
+        "variance": 2.517759015e-07
+      },
+      "words": "预算绩效管理",
+      "location": {
+        "top": 1006,
+        "left": 1433,
+        "width": 91,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994161725,
+        "min": 0.9970755577,
+        "variance": 1.108576953e-06
+      },
+      "words": "预算绩效管理",
+      "location": {
+        "top": 1006,
+        "left": 1718,
+        "width": 90,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999287724,
+        "min": 0.9998934269,
+        "variance": 1.249308212e-09
+      },
+      "words": "预算",
+      "location": {
+        "top": 1028,
+        "left": 1600,
+        "width": 40,
+        "height": 20
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9991675615,
+        "min": 0.9983935952,
+        "variance": 5.989777492e-07
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1053,
+        "left": 1601,
+        "width": 41,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999552965,
+        "min": 0.9998965263,
+        "variance": 1.788148296e-09
+      },
+      "words": "公开公正",
+      "location": {
+        "top": 1062,
+        "left": 132,
+        "width": 203,
+        "height": 54
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999963522,
+        "min": 0.9999252558,
+        "variance": 8.029026333e-10
+      },
+      "words": "用心服务",
+      "location": {
+        "top": 1062,
+        "left": 407,
+        "width": 200,
+        "height": 56
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998954535,
+        "min": 0.999625802,
+        "variance": 2.445474934e-08
+      },
+      "words": "诚信为本",
+      "location": {
+        "top": 1061,
+        "left": 674,
+        "width": 203,
+        "height": 58
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999378324,
+        "min": 0.9998691082,
+        "variance": 1.772512137e-09
+      },
+      "words": "实现全过程",
+      "location": {
+        "top": 1077,
+        "left": 1442,
+        "width": 76,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999656677,
+        "min": 0.999928236,
+        "variance": 7.059526297e-10
+      },
+      "words": "实现全过程",
+      "location": {
+        "top": 1077,
+        "left": 1726,
+        "width": 76,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996693134,
+        "min": 0.9984446168,
+        "variance": 3.048028816e-07
+      },
+      "words": "预算绩效管理",
+      "location": {
+        "top": 1095,
+        "left": 1433,
+        "width": 91,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996685982,
+        "min": 0.99829036,
+        "variance": 3.817503114e-07
+      },
+      "words": "预算绩效管理",
+      "location": {
+        "top": 1095,
+        "left": 1718,
+        "width": 90,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999170899,
+        "min": 0.9994149208,
+        "variance": 2.273355015e-08
+      },
+      "words": "构建全方位预算绩效管理格局",
+      "location": {
+        "top": 1170,
+        "left": 1251,
+        "width": 199,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999320507,
+        "min": 0.9994111061,
+        "variance": 2.321259984e-08
+      },
+      "words": "完善全覆盖预算绩效管理体系",
+      "location": {
+        "top": 1170,
+        "left": 1515,
+        "width": 198,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999247789,
+        "min": 0.99935323,
+        "variance": 2.816608813e-08
+      },
+      "words": "建立全过程预算绩效管理链条",
+      "location": {
+        "top": 1170,
+        "left": 1780,
+        "width": 199,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999986887,
+        "min": 0.9999724627,
+        "variance": 9.523404287e-11
+      },
+      "words": "服务至上",
+      "location": {
+        "top": 1192,
+        "left": 132,
+        "width": 202,
+        "height": 55
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998775125,
+        "min": 0.9995692372,
+        "variance": 3.194307041e-08
+      },
+      "words": "追求卓越",
+      "location": {
+        "top": 1190,
+        "left": 405,
+        "width": 206,
+        "height": 57
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993091822,
+        "min": 0.9986604452,
+        "variance": 4.208596351e-07
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1281,
+        "left": 1286,
+        "width": 32,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994856119,
+        "min": 0.999006331,
+        "variance": 2.29738788e-07
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1281,
+        "left": 1439,
+        "width": 33,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9987963438,
+        "min": 0.9977477193,
+        "variance": 1.0995509e-06
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1281,
+        "left": 1591,
+        "width": 33,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994591475,
+        "min": 0.9989880919,
+        "variance": 2.218652071e-07
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1281,
+        "left": 1742,
+        "width": 33,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993432164,
+        "min": 0.9987192154,
+        "variance": 3.893772771e-07
+      },
+      "words": "绩效",
+      "location": {
+        "top": 1280,
+        "left": 1895,
+        "width": 33,
+        "height": 16
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999804497,
+        "min": 0.9999600649,
+        "variance": 1.651194736e-10
+      },
+      "words": "目标管理",
+      "location": {
+        "top": 1298,
+        "left": 1274,
+        "width": 60,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999281168,
+        "min": 0.9998030066,
+        "variance": 5.310778484e-09
+      },
+      "words": "评价任务",
+      "location": {
+        "top": 1298,
+        "left": 1578,
+        "width": 59,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999819994,
+        "min": 0.9999543428,
+        "variance": 2.586304504e-10
+      },
+      "words": "管理过程",
+      "location": {
+        "top": 1297,
+        "left": 1728,
+        "width": 61,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999255538,
+        "min": 0.9997648597,
+        "variance": 8.705998589e-09
+      },
+      "words": "评价方法",
+      "location": {
+        "top": 1298,
+        "left": 1882,
+        "width": 60,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9835392833,
+        "min": 0.9156203866,
+        "variance": 0.0007406891673
+      },
+      "words": "PAGE13/14",
+      "location": {
+        "top": 1356,
+        "left": 1968,
+        "width": 88,
+        "height": 30
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    },
+    {
+      "words_result_idx": [
+        6
+      ]
+    },
+    {
+      "words_result_idx": [
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8
+      ]
+    },
+    {
+      "words_result_idx": [
+        9
+      ]
+    },
+    {
+      "words_result_idx": [
+        10
+      ]
+    },
+    {
+      "words_result_idx": [
+        11
+      ]
+    },
+    {
+      "words_result_idx": [
+        12
+      ]
+    },
+    {
+      "words_result_idx": [
+        13
+      ]
+    },
+    {
+      "words_result_idx": [
+        14
+      ]
+    },
+    {
+      "words_result_idx": [
+        15
+      ]
+    },
+    {
+      "words_result_idx": [
+        16
+      ]
+    },
+    {
+      "words_result_idx": [
+        17
+      ]
+    },
+    {
+      "words_result_idx": [
+        18
+      ]
+    },
+    {
+      "words_result_idx": [
+        19
+      ]
+    },
+    {
+      "words_result_idx": [
+        20,
+        21
+      ]
+    },
+    {
+      "words_result_idx": [
+        22
+      ]
+    },
+    {
+      "words_result_idx": [
+        23
+      ]
+    },
+    {
+      "words_result_idx": [
+        24
+      ]
+    },
+    {
+      "words_result_idx": [
+        25
+      ]
+    },
+    {
+      "words_result_idx": [
+        26
+      ]
+    },
+    {
+      "words_result_idx": [
+        27,
+        28
+      ]
+    },
+    {
+      "words_result_idx": [
+        29
+      ]
+    },
+    {
+      "words_result_idx": [
+        30
+      ]
+    },
+    {
+      "words_result_idx": [
+        31
+      ]
+    },
+    {
+      "words_result_idx": [
+        32
+      ]
+    },
+    {
+      "words_result_idx": [
+        33
+      ]
+    },
+    {
+      "words_result_idx": [
+        34
+      ]
+    },
+    {
+      "words_result_idx": [
+        35
+      ]
+    },
+    {
+      "words_result_idx": [
+        36
+      ]
+    },
+    {
+      "words_result_idx": [
+        37
+      ]
+    },
+    {
+      "words_result_idx": [
+        38
+      ]
+    },
+    {
+      "words_result_idx": [
+        39
+      ]
+    },
+    {
+      "words_result_idx": [
+        40
+      ]
+    },
+    {
+      "words_result_idx": [
+        41
+      ]
+    },
+    {
+      "words_result_idx": [
+        42
+      ]
+    },
+    {
+      "words_result_idx": [
+        43
+      ]
+    },
+    {
+      "words_result_idx": [
+        44,
+        45
+      ]
+    },
+    {
+      "words_result_idx": [
+        46
+      ]
+    },
+    {
+      "words_result_idx": [
+        47
+      ]
+    },
+    {
+      "words_result_idx": [
+        48
+      ]
+    },
+    {
+      "words_result_idx": [
+        49
+      ]
+    },
+    {
+      "words_result_idx": [
+        50
+      ]
+    },
+    {
+      "words_result_idx": [
+        51
+      ]
+    },
+    {
+      "words_result_idx": [
+        52
+      ]
+    },
+    {
+      "words_result_idx": [
+        53
+      ]
+    },
+    {
+      "words_result_idx": [
+        54
+      ]
+    },
+    {
+      "words_result_idx": [
+        55
+      ]
+    },
+    {
+      "words_result_idx": [
+        56
+      ]
+    },
+    {
+      "words_result_idx": [
+        57
+      ]
+    },
+    {
+      "words_result_idx": [
+        58
+      ]
+    },
+    {
+      "words_result_idx": [
+        59
+      ]
+    },
+    {
+      "words_result_idx": [
+        60
+      ]
+    },
+    {
+      "words_result_idx": [
+        61
+      ]
+    },
+    {
+      "words_result_idx": [
+        62
+      ]
+    },
+    {
+      "words_result_idx": [
+        63
+      ]
+    },
+    {
+      "words_result_idx": [
+        64
+      ]
+    },
+    {
+      "words_result_idx": [
+        65
+      ]
+    },
+    {
+      "words_result_idx": [
+        66
+      ]
+    },
+    {
+      "words_result_idx": [
+        67
+      ]
+    },
+    {
+      "words_result_idx": [
+        68
+      ]
+    },
+    {
+      "words_result_idx": [
+        69
+      ]
+    },
+    {
+      "words_result_idx": [
+        70
+      ]
+    },
+    {
+      "words_result_idx": [
+        71
+      ]
+    },
+    {
+      "words_result_idx": [
+        72
+      ]
+    },
+    {
+      "words_result_idx": [
+        73
+      ]
+    },
+    {
+      "words_result_idx": [
+        74
+      ]
+    },
+    {
+      "words_result_idx": [
+        75
+      ]
+    }
+  ],
+  "paragraphs_result_num": 73,
+  "words_result_num": 76,
+  "direction": 0,
+  "log_id": 2074140686076023891
+}

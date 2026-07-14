@@ -1,0 +1,221 @@
+{
+  "version": "1.0.0",
+  "description": "融策审计数据中台 - 数据标准规范",
+  "standards": {
+    "naming_conventions": {
+      "database": "lowercase_with_underscore",
+      "table": "lowercase_with_underscore",
+      "column": "lowercase_with_underscore",
+      "prefix": {
+        "dimension_table": "dim_",
+        "fact_table": "fact_",
+        "aggregate_table": "agg_",
+        "staging_table": "stg_",
+        "temporary_table": "tmp_"
+      }
+    },
+    "data_types": {
+      "primary_key": "BIGINT",
+      "foreign_key": "BIGINT",
+      "monetary": "DECIMAL(18,2)",
+      "quantity": "DECIMAL(18,4)",
+      "percentage": "DECIMAL(5,4)",
+      "date": "DATE",
+      "datetime": "TIMESTAMP",
+      "text_short": "VARCHAR(100)",
+      "text_medium": "VARCHAR(500)",
+      "text_long": "TEXT",
+      "json": "JSONB"
+    },
+    "encoding": {
+      "database": "UTF8",
+      "collation": "zh_CN.UTF8"
+    }
+  },
+  "audit_project": {
+    "description": "审计项目数据模型",
+    "entities": {
+      "project": {
+        "table_name": "dim_project",
+        "description": "审计项目主数据",
+        "columns": {
+          "project_id": {"type": "BIGINT", "primary_key": true, "description": "项目ID"},
+          "project_code": {"type": "VARCHAR(50)", "unique": true, "description": "项目编号"},
+          "project_name": {"type": "VARCHAR(200)", "description": "项目名称"},
+          "project_type": {"type": "VARCHAR(50)", "description": "项目类型(绩效评价/资产清查/专项债/监督检查)"},
+          "client_id": {"type": "BIGINT", "foreign_key": "dim_client.client_id", "description": "客户ID"},
+          "contract_amount": {"type": "DECIMAL(18,2)", "description": "合同金额"},
+          "start_date": {"type": "DATE", "description": "开始日期"},
+          "end_date": {"type": "DATE", "description": "结束日期"},
+          "status": {"type": "VARCHAR(20)", "description": "状态(进行中/已完成/已终止)"},
+          "manager_id": {"type": "BIGINT", "description": "项目经理ID"},
+          "team_members": {"type": "JSONB", "description": "团队成员"},
+          "created_at": {"type": "TIMESTAMP", "description": "创建时间"},
+          "updated_at": {"type": "TIMESTAMP", "description": "更新时间"}
+        }
+      },
+      "project_phase": {
+        "table_name": "fact_project_phase",
+        "description": "项目阶段跟踪",
+        "columns": {
+          "phase_id": {"type": "BIGINT", "primary_key": true, "description": "阶段ID"},
+          "project_id": {"type": "BIGINT", "foreign_key": "dim_project.project_id", "description": "项目ID"},
+          "phase_name": {"type": "VARCHAR(50)", "description": "阶段名称"},
+          "phase_order": {"type": "INTEGER", "description": "阶段顺序"},
+          "planned_start": {"type": "DATE", "description": "计划开始"},
+          "planned_end": {"type": "DATE", "description": "计划结束"},
+          "actual_start": {"type": "DATE", "description": "实际开始"},
+          "actual_end": {"type": "DATE", "description": "实际结束"},
+          "status": {"type": "VARCHAR(20)", "description": "状态"},
+          "progress": {"type": "DECIMAL(5,2)", "description": "进度百分比"}
+        }
+      },
+      "project_document": {
+        "table_name": "fact_project_document",
+        "description": "项目文档",
+        "columns": {
+          "document_id": {"type": "BIGINT", "primary_key": true, "description": "文档ID"},
+          "project_id": {"type": "BIGINT", "foreign_key": "dim_project.project_id", "description": "项目ID"},
+          "document_type": {"type": "VARCHAR(50)", "description": "文档类型"},
+          "document_name": {"type": "VARCHAR(200)", "description": "文档名称"},
+          "file_path": {"type": "VARCHAR(500)", "description": "文件路径"},
+          "file_size": {"type": "BIGINT", "description": "文件大小"},
+          "upload_time": {"type": "TIMESTAMP", "description": "上传时间"},
+          "uploader_id": {"type": "BIGINT", "description": "上传人ID"}
+        }
+      }
+    }
+  },
+  "client_master": {
+    "description": "客户主数据",
+    "entities": {
+      "client": {
+        "table_name": "dim_client",
+        "description": "客户主数据",
+        "columns": {
+          "client_id": {"type": "BIGINT", "primary_key": true, "description": "客户ID"},
+          "client_code": {"type": "VARCHAR(50)", "unique": true, "description": "客户编码"},
+          "client_name": {"type": "VARCHAR(200)", "description": "客户名称"},
+          "client_short_name": {"type": "VARCHAR(50)", "description": "客户简称"},
+          "client_type": {"type": "VARCHAR(50)", "description": "客户类型(政府机关/事业单位/国企/民企)"},
+          "industry": {"type": "VARCHAR(50)", "description": "所属行业"},
+          "region_code": {"type": "VARCHAR(20)", "description": "地区编码"},
+          "region_name": {"type": "VARCHAR(100)", "description": "地区名称"},
+          "address": {"type": "VARCHAR(500)", "description": "地址"},
+          "contact_name": {"type": "VARCHAR(100)", "description": "联系人"},
+          "contact_phone": {"type": "VARCHAR(50)", "description": "联系电话"},
+          "contact_email": {"type": "VARCHAR(100)", "description": "联系邮箱"},
+          "credit_level": {"type": "VARCHAR(20)", "description": "信用等级"},
+          "cooperation_start": {"type": "DATE", "description": "合作开始日期"},
+          "status": {"type": "VARCHAR(20)", "description": "状态"},
+          "created_at": {"type": "TIMESTAMP", "description": "创建时间"},
+          "updated_at": {"type": "TIMESTAMP", "description": "更新时间"}
+        }
+      },
+      "client_contract": {
+        "table_name": "fact_client_contract",
+        "description": "客户合同",
+        "columns": {
+          "contract_id": {"type": "BIGINT", "primary_key": true, "description": "合同ID"},
+          "client_id": {"type": "BIGINT", "foreign_key": "dim_client.client_id", "description": "客户ID"},
+          "contract_code": {"type": "VARCHAR(50)", "description": "合同编号"},
+          "contract_name": {"type": "VARCHAR(200)", "description": "合同名称"},
+          "contract_type": {"type": "VARCHAR(50)", "description": "合同类型"},
+          "contract_amount": {"type": "DECIMAL(18,2)", "description": "合同金额"},
+          "sign_date": {"type": "DATE", "description": "签订日期"},
+          "start_date": {"type": "DATE", "description": "开始日期"},
+          "end_date": {"type": "DATE", "description": "结束日期"},
+          "payment_terms": {"type": "JSONB", "description": "付款条款"},
+          "status": {"type": "VARCHAR(20)", "description": "状态"}
+        }
+      }
+    }
+  },
+  "policy_regulation": {
+    "description": "政策法规数据",
+    "entities": {
+      "policy": {
+        "table_name": "dim_policy",
+        "description": "政策法规",
+        "columns": {
+          "policy_id": {"type": "BIGINT", "primary_key": true, "description": "政策ID"},
+          "policy_code": {"type": "VARCHAR(50)", "description": "政策编号"},
+          "policy_name": {"type": "VARCHAR(500)", "description": "政策名称"},
+          "policy_type": {"type": "VARCHAR(50)", "description": "政策类型(法律/法规/规章/规范性文件)"},
+          "issue_org": {"type": "VARCHAR(200)", "description": "发布机关"},
+          "issue_date": {"type": "DATE", "description": "发布日期"},
+          "effective_date": {"type": "DATE", "description": "生效日期"},
+          "expire_date": {"type": "DATE", "description": "失效日期"},
+          "industry_scope": {"type": "VARCHAR(200)", "description": "适用范围"},
+          "content_abstract": {"type": "TEXT", "description": "内容摘要"},
+          "full_text": {"type": "TEXT", "description": "全文内容"},
+          "keywords": {"type": "JSONB", "description": "关键词"},
+          "status": {"type": "VARCHAR(20)", "description": "状态(有效/已废止/已修订)"},
+          "source_url": {"type": "VARCHAR(500)", "description": "来源链接"},
+          "created_at": {"type": "TIMESTAMP", "description": "创建时间"}
+        }
+      },
+      "policy_category": {
+        "table_name": "dim_policy_category",
+        "description": "政策分类",
+        "columns": {
+          "category_id": {"type": "BIGINT", "primary_key": true, "description": "分类ID"},
+          "category_code": {"type": "VARCHAR(50)", "description": "分类编码"},
+          "category_name": {"type": "VARCHAR(100)", "description": "分类名称"},
+          "parent_id": {"type": "BIGINT", "description": "父分类ID"},
+          "level": {"type": "INTEGER", "description": "层级"},
+          "description": {"type": "VARCHAR(500)", "description": "描述"}
+        }
+      }
+    }
+  },
+  "financial_data": {
+    "description": "财务数据",
+    "entities": {
+      "account_subject": {
+        "table_name": "dim_account_subject",
+        "description": "会计科目",
+        "columns": {
+          "subject_id": {"type": "BIGINT", "primary_key": true, "description": "科目ID"},
+          "subject_code": {"type": "VARCHAR(50)", "description": "科目编码"},
+          "subject_name": {"type": "VARCHAR(200)", "description": "科目名称"},
+          "subject_type": {"type": "VARCHAR(50)", "description": "科目类型(资产/负债/权益/收入/费用)"},
+          "parent_code": {"type": "VARCHAR(50)", "description": "父科目编码"},
+          "level": {"type": "INTEGER", "description": "层级"},
+          "balance_direction": {"type": "VARCHAR(10)", "description": "余额方向(借/贷)"}
+        }
+      },
+      "voucher": {
+        "table_name": "fact_voucher",
+        "description": "会计凭证",
+        "columns": {
+          "voucher_id": {"type": "BIGINT", "primary_key": true, "description": "凭证ID"},
+          "voucher_no": {"type": "VARCHAR(50)", "description": "凭证号"},
+          "voucher_date": {"type": "DATE", "description": "凭证日期"},
+          "accounting_period": {"type": "VARCHAR(20)", "description": "会计期间"},
+          "project_id": {"type": "BIGINT", "description": "项目ID"},
+          "client_id": {"type": "BIGINT", "description": "客户ID"},
+          "total_amount": {"type": "DECIMAL(18,2)", "description": "合计金额"},
+          "preparer": {"type": "VARCHAR(100)", "description": "制单人"},
+          "reviewer": {"type": "VARCHAR(100)", "description": "审核人"},
+          "bookkeeper": {"type": "VARCHAR(100)", "description": "记账人"}
+        }
+      },
+      "voucher_entry": {
+        "table_name": "fact_voucher_entry",
+        "description": "凭证分录",
+        "columns": {
+          "entry_id": {"type": "BIGINT", "primary_key": true, "description": "分录ID"},
+          "voucher_id": {"type": "BIGINT", "foreign_key": "fact_voucher.voucher_id", "description": "凭证ID"},
+          "entry_no": {"type": "INTEGER", "description": "分录序号"},
+          "subject_code": {"type": "VARCHAR(50)", "description": "科目编码"},
+          "subject_name": {"type": "VARCHAR(200)", "description": "科目名称"},
+          "debit_amount": {"type": "DECIMAL(18,2)", "description": "借方金额"},
+          "credit_amount": {"type": "DECIMAL(18,2)", "description": "贷方金额"},
+          "summary": {"type": "VARCHAR(500)", "description": "摘要"},
+          "auxiliary_info": {"type": "JSONB", "description": "辅助核算信息"}
+        }
+      }
+    }
+  }
+}

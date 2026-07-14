@@ -1,0 +1,23 @@
+# 智析智能体 v2.0 - 依赖清单
+Flask>=3.0
+flask-cors>=4.0
+SQLAlchemy>=2.0
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1
+python-docx>=1.0
+PyPDF2>=3.0
+Pillow>=10.0
+pytesseract>=0.3
+paddleocr>=2.7
+networkx>=3.0
+pyvis>=0.3
+jieba>=0.42
+requests>=2.31
+pymysql>=1.1
+pymssql>=2.2
+cx-Oracle>=8.3
+psycopg2-binary>=2.9
+pyodbc>=5.0
+dmPython>=8.0
+sqlparse>=0.5

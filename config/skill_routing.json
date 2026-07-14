@@ -1,0 +1,141 @@
+{
+  "_comment": "融策 Skill 路由配置 v1.0 - 基于三篇文章启示",
+  "_updated": "2026-07-14",
+  "_design": "Article 3: 按场景拆分 / Article 4: 执行追踪+靶向归因 / Article 5: 慢操作异步化",
+
+  "load_strategy": {
+    "mode": "scene_based",
+    "global_always_load": [
+      "healthcheck", "memory-manager", "note", "prompt-librarian", "skill-manager",
+      "openclaw-and-oneclaw-manual", "clawhub", "github", "weather",
+      "perf-audit-checklist", "audit-report-review", "audit-jingze",
+      "procurement-audit-models", "financial-fraud-detection",
+      "audit-data-analysis-methods", "digital-audit-methodology"
+    ],
+    "global_count": 16,
+    "max_global_context_kb": 200
+  },
+
+  "scenes": {
+    "audit_general": {
+      "label": "通用审计",
+      "trigger_keywords": ["审计", "复核", "检查", "报告", "取证"],
+      "skills": [
+        "audit-report-review", "perf-audit-checklist", "audit-jingze",
+        "audit-data-analysis-methods", "digital-audit-methodology",
+        "audit-knowledge-graph", "agent-data-standard", "cot-capture",
+        "workflow-embedder", "unstructured-audit-data", "spatial-audit-analysis",
+        "apriori-audit", "forecast-simulation"
+      ]
+    },
+    "audit_jingze": {
+      "label": "经责审计",
+      "trigger_keywords": ["经责", "经济责任", "离任", "任中"],
+      "skills": ["audit-jingze", "perf-audit-checklist", "budget-audit"]
+    },
+    "audit_procurement": {
+      "label": "采购招投标审计",
+      "trigger_keywords": ["招投标", "采购", "串标", "围标", "投标"],
+      "skills": [
+        "procurement-audit-models", "tender-analyzer-agent",
+        "bidding-writing", "financial-fraud-detection"
+      ]
+    },
+    "audit_fiscal": {
+      "label": "财政监督检查",
+      "trigger_keywords": ["财政监督", "财会监督", "专项资金", "补贴", "专项债"],
+      "skills": [
+        "fiscal-supervision-model", "special-fund-audit", "special-bond-audit",
+        "subsidy-audit", "gov-subsidy-penetration-audit", "gov-audit-methodology"
+      ]
+    },
+    "audit_performance": {
+      "label": "绩效评价",
+      "trigger_keywords": ["绩效", "评价", "事前评估", "事中监控"],
+      "skills": ["perf-audit-checklist", "budget-audit", "forecast-simulation"]
+    },
+    "audit_engineering": {
+      "label": "工程审计",
+      "trigger_keywords": ["工程", "竣工", "决算", "造价", "BIM"],
+      "skills": ["engineering-audit", "bim-engineering-audit", "energy-audit"]
+    },
+    "bidding": {
+      "label": "标书撰写",
+      "trigger_keywords": ["标书", "投标文件", "技术方案", "商务标"],
+      "skills": [
+        "bidding-writing", "doc-formatter", "content-polish",
+        "copy-editing", "copywriting", "huashu-design",
+        "drawio", "arch-diagrammer", "architecture-diagram-generator",
+        "deepseek-charting", "fireworks-tech-graph"
+      ]
+    },
+    "presentation": {
+      "label": "PPT/汇报",
+      "trigger_keywords": ["PPT", "幻灯片", "汇报", "演示", "宣传册"],
+      "skills": ["ppt-master", "huashu-design", "guizang-ppt-skill"]
+    },
+    "data_analysis": {
+      "label": "数据分析",
+      "trigger_keywords": ["分析数据", "SQL", "统计", "建模", "预测"],
+      "skills": ["data-analyst-cn", "sql-master", "sql-toolkit", "forecast-simulation"]
+    },
+    "research": {
+      "label": "研究检索",
+      "trigger_keywords": ["搜索", "查一下", "研究", "调研", "政策"],
+      "skills": ["tavily", "browser", "deep-research-agent", "zhixi-v2-enhanced"]
+    },
+    "media": {
+      "label": "文件处理",
+      "trigger_keywords": ["PDF", "视频", "图片", "OCR", "转文字", "Word"],
+      "skills": ["pdf", "video-toolkit", "visual-toolkit", "openai-whisper",
+                 "officecli-docx", "officecli-pptx", "officecli-xlsx",
+                 "markdown-converter"]
+    },
+    "wecom": {
+      "label": "企业微信",
+      "trigger_keywords": ["企业微信", "会议", "待办", "日程", "通讯录", "智能表"],
+      "skills": [
+        "wecom-meeting-create", "wecom-meeting-manage", "wecom-meeting-query",
+        "wecom-get-todo-list", "wecom-get-todo-detail", "wecom-edit-todo",
+        "wecom-contact-lookup", "wecom-msg", "wecom-preflight",
+        "wecom-schedule", "wecom-send-media", "wecom-send-template-card",
+        "wecom-smartsheet-data", "wecom-smartsheet-schema", "wecom-doc-manager"
+      ]
+    },
+    "reflection": {
+      "label": "反思/优化",
+      "trigger_keywords": ["反思", "回顾", "总结", "复盘", "优化技能"],
+      "skills": ["reflection", "summarize-pro", "humanizer", "prompt-librarian"]
+    }
+  },
+
+  "trace_config": {
+    "enabled": true,
+    "auto_trace_threshold_tokens": 10000,
+    "auto_trace_threshold_steps": 5,
+    "eval_dimensions": ["effectiveness", "efficiency", "cost"],
+    "store_retention_days": 90
+  },
+
+  "async_config": {
+    "enabled": true,
+    "slow_keywords": [
+      "install", "build", "test", "deploy", "compile",
+      "ocr", "pdf", "convert", "analyze", "train",
+      "download", "upload", "backup", "restore"
+    ],
+    "default_timeout_seconds": 600,
+    "stagnation_check_seconds": 45,
+    "max_concurrent_tasks": 5
+  },
+
+  "size_warnings": {
+    "max_skill_kb": 500,
+    "oversized": [
+      {"name": "huashu-design", "size_kb": 1548, "action": "按需加载，不常驻"},
+      {"name": "sql-toolkit", "size_kb": 1532, "action": "按需加载，不常驻"},
+      {"name": "ppt-master", "size_kb": 1448, "action": "按需加载，不常驻"},
+      {"name": "architecture-diagram-generator", "size_kb": 986, "action": "按需加载，不常驻"}
+    ]
+  }
+}

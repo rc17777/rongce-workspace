@@ -1,0 +1,1237 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.8371623755,
+        "min": 0.8371623755,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 82,
+        "left": 109,
+        "width": 26,
+        "height": 28
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9976287484,
+        "min": 0.9976287484,
+        "variance": 0
+      },
+      "words": "R",
+      "location": {
+        "top": 90,
+        "left": 428,
+        "width": 17,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.7075824738,
+        "min": 0.7075824738,
+        "variance": 0
+      },
+      "words": "C",
+      "location": {
+        "top": 90,
+        "left": 587,
+        "width": 17,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.837590158,
+        "min": 0.837590158,
+        "variance": 0
+      },
+      "words": "E",
+      "location": {
+        "top": 90,
+        "left": 622,
+        "width": 20,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999142885,
+        "min": 0.9999142885,
+        "variance": 0
+      },
+      "words": "公",
+      "location": {
+        "top": 93,
+        "left": 1261,
+        "width": 17,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999206066,
+        "min": 0.9999206066,
+        "variance": 0
+      },
+      "words": "开",
+      "location": {
+        "top": 95,
+        "left": 1285,
+        "width": 29,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999763966,
+        "min": 0.9999763966,
+        "variance": 0
+      },
+      "words": "公",
+      "location": {
+        "top": 93,
+        "left": 1319,
+        "width": 22,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998819828,
+        "min": 0.9998819828,
+        "variance": 0
+      },
+      "words": "正",
+      "location": {
+        "top": 93,
+        "left": 1350,
+        "width": 22,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997255206,
+        "min": 0.9997255206,
+        "variance": 0
+      },
+      "words": "用",
+      "location": {
+        "top": 93,
+        "left": 1404,
+        "width": 24,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997869134,
+        "min": 0.9997869134,
+        "variance": 0
+      },
+      "words": "心",
+      "location": {
+        "top": 93,
+        "left": 1437,
+        "width": 22,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994136095,
+        "min": 0.9994136095,
+        "variance": 0
+      },
+      "words": "服",
+      "location": {
+        "top": 93,
+        "left": 1464,
+        "width": 29,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9987357259,
+        "min": 0.9987357259,
+        "variance": 0
+      },
+      "words": "务",
+      "location": {
+        "top": 84,
+        "left": 1484,
+        "width": 39,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999163747,
+        "min": 0.9997568727,
+        "variance": 8.5015186e-09
+      },
+      "words": "诚信为本",
+      "location": {
+        "top": 93,
+        "left": 1549,
+        "width": 114,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998806715,
+        "min": 0.999687314,
+        "variance": 1.263591898e-08
+      },
+      "words": "服务至上",
+      "location": {
+        "top": 93,
+        "left": 1696,
+        "width": 113,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998667836,
+        "min": 0.9997510314,
+        "variance": 7.230481103e-09
+      },
+      "words": "追求卓越",
+      "location": {
+        "top": 93,
+        "left": 1839,
+        "width": 116,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998689294,
+        "min": 0.9995482564,
+        "variance": 3.437190799e-08
+      },
+      "words": "常规业务",
+      "location": {
+        "top": 264,
+        "left": 127,
+        "width": 303,
+        "height": 77
+      }
+    },
+    {
+      "probability": {
+        "average": 0.99998492,
+        "min": 0.9999656677,
+        "variance": 8.954614827e-11
+      },
+      "words": "财政监督检查",
+      "location": {
+        "top": 331,
+        "left": 1236,
+        "width": 185,
+        "height": 28
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9982224703,
+        "min": 0.9802025557,
+        "variance": 1.103381692e-05
+      },
+      "words": "Financial supervision and inspection",
+      "location": {
+        "top": 350,
+        "left": 1433,
+        "width": 243,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9990615249,
+        "min": 0.9970146418,
+        "variance": 8.558405966e-07
+      },
+      "words": "REGULAR",
+      "location": {
+        "top": 361,
+        "left": 129,
+        "width": 167,
+        "height": 38
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9956704378,
+        "min": 0.8604666591,
+        "variance": 0.0004820951144
+      },
+      "words": "财政监督是财政的一项重要职能，包括：(1)事前监督，指在财政收支活动前，如国家",
+      "location": {
+        "top": 376,
+        "left": 1270,
+        "width": 700,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9979478717,
+        "min": 0.9928100109,
+        "variance": 5.50568484e-06
+      },
+      "words": "SERVICE",
+      "location": {
+        "top": 404,
+        "left": 124,
+        "width": 157,
+        "height": 48
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996676445,
+        "min": 0.9981018901,
+        "variance": 1.868368997e-07
+      },
+      "words": "预算、财务计划的编制、审核过程中所进行的监督。(2)日常监督，指在收支活动进行过程",
+      "location": {
+        "top": 404,
+        "left": 1225,
+        "width": 747,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9970491529,
+        "min": 0.9059727192,
+        "variance": 0.0002130953071
+      },
+      "words": "中所进行的监督；如解缴收入是否符合有关法规和政策规定，是否及时足额，支出用途及数",
+      "location": {
+        "top": 435,
+        "left": 1227,
+        "width": 754,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994866252,
+        "min": 0.9964242578,
+        "variance": 5.73289185e-07
+      },
+      "words": "量是否符合计划。(3)事后监督，指在收支活动完成后进行的监督，如审查预算和财务计划",
+      "location": {
+        "top": 463,
+        "left": 1227,
+        "width": 743,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995986819,
+        "min": 0.9974632263,
+        "variance": 3.150892383e-07
+      },
+      "words": "的执行情况，审查决算，检查经济活动及各项事业的进行是否符合国家计划的要求，是否",
+      "location": {
+        "top": 493,
+        "left": 1227,
+        "width": 738,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999169707,
+        "min": 0.9997537732,
+        "variance": 6.708390732e-09
+      },
+      "words": "经济责任审计",
+      "location": {
+        "top": 517,
+        "left": 136,
+        "width": 191,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.950327456,
+        "min": 0.5530884266,
+        "variance": 0.0197248552
+      },
+      "words": "取得应有的效益等。",
+      "location": {
+        "top": 521,
+        "left": 1227,
+        "width": 156,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9883539081,
+        "min": 0.6808516383,
+        "variance": 0.003263436491
+      },
+      "words": " Economic responsibility audit",
+      "location": {
+        "top": 539,
+        "left": 334,
+        "width": 200,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998512268,
+        "min": 0.998685658,
+        "variance": 5.538014136e-08
+      },
+      "words": "经济责任审计是注册会计师接受国资委、企业或其他社会组织的委托，依据国家规定",
+      "location": {
+        "top": 562,
+        "left": 169,
+        "width": 701,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998198152,
+        "min": 0.9990961552,
+        "variance": 5.672330872e-08
+      },
+      "words": "的程序、方法和要求，对企业负责人任职期间其所在企业资产、负债、权益和损益的真实",
+      "location": {
+        "top": 595,
+        "left": 129,
+        "width": 738,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996441603,
+        "min": 0.9962458014,
+        "variance": 4.103667948e-07
+      },
+      "words": "性、合法性和效益性及重大经营决策等有关经济活动，以及执行国家有关法律法规情况进",
+      "location": {
+        "top": 623,
+        "left": 129,
+        "width": 741,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998378158,
+        "min": 0.9993134737,
+        "variance": 5.723408592e-08
+      },
+      "words": "预算绩效管理",
+      "location": {
+        "top": 610,
+        "left": 1236,
+        "width": 189,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9954932928,
+        "min": 0.8665480614,
+        "variance": 0.0005733581493
+      },
+      "words": "」Budget performance management",
+      "location": {
+        "top": 632,
+        "left": 1426,
+        "width": 236,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995494485,
+        "min": 0.9912109971,
+        "variance": 1.970575568e-06
+      },
+      "words": "行的监督和评价的活动。经济责任审计分为任中经济责任审计、离任经济责任审计。",
+      "location": {
+        "top": 653,
+        "left": 131,
+        "width": 687,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997013211,
+        "min": 0.9934453964,
+        "variance": 1.133327601e-06
+      },
+      "words": "预算绩效管理是以“预算”为对象开展的绩效管理，也就是将绩效管理理念和绩效管",
+      "location": {
+        "top": 658,
+        "left": 1267,
+        "width": 700,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996179938,
+        "min": 0.9954822063,
+        "variance": 5.636906621e-07
+      },
+      "words": "我们不仅可为各类企业领导人的任中和离任经济责任提供各类审计服务，在审计过程",
+      "location": {
+        "top": 682,
+        "left": 169,
+        "width": 700,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997244477,
+        "min": 0.9976463914,
+        "variance": 2.344773691e-07
+      },
+      "words": "理方法贯穿于预算编制、执行、监督的全过程，并实现与预算管理有机融合的一种预算管",
+      "location": {
+        "top": 686,
+        "left": 1227,
+        "width": 736,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995871782,
+        "min": 0.993432641,
+        "variance": 1.603431429e-06
+      },
+      "words": "中还可出具有专业价值的管理建议书，为委托人进一步加强企业管理提供参考依据。",
+      "location": {
+        "top": 712,
+        "left": 129,
+        "width": 689,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998599291,
+        "min": 0.9973922968,
+        "variance": 1.64337024e-07
+      },
+      "words": "理模式。它强化政府预算为民服务的理念，强调预算支出的责任和效率，要求在预算编制、",
+      "location": {
+        "top": 718,
+        "left": 1225,
+        "width": 747,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999735117,
+        "min": 0.9978988171,
+        "variance": 1.537040788e-07
+      },
+      "words": "执行、监督的全过程中更加关注预算资金的产出和结果，要求政府部门不断改进服务水平",
+      "location": {
+        "top": 746,
+        "left": 1227,
+        "width": 738,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997093081,
+        "min": 0.9985930324,
+        "variance": 1.239792482e-07
+      },
+      "words": "和质量，花尽量少的资金、办尽量多的实事，向社会公众提供更多、更好的公共产品和公",
+      "location": {
+        "top": 775,
+        "left": 1227,
+        "width": 736,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999508858,
+        "min": 0.9999018908,
+        "variance": 9.78720549e-10
+      },
+      "words": "财务报表审计",
+      "location": {
+        "top": 796,
+        "left": 138,
+        "width": 187,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996594191,
+        "min": 0.997364223,
+        "variance": 2.540772925e-07
+      },
+      "words": "共服务，使政府行为更加务实、高效。服务内容包括事前绩效评估、预算绩效目标审核、",
+      "location": {
+        "top": 805,
+        "left": 1225,
+        "width": 729,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9982270598,
+        "min": 0.9941071272,
+        "variance": 1.861053534e-06
+      },
+      "words": "Audit of financial statement",
+      "location": {
+        "top": 818,
+        "left": 339,
+        "width": 185,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999770999,
+        "min": 0.9980205297,
+        "variance": 1.03303158e-07
+      },
+      "words": "财务报表审计是指注册会计师按照审计准则的要求，对业主单位年度财务报表的合法",
+      "location": {
+        "top": 844,
+        "left": 169,
+        "width": 700,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993265271,
+        "min": 0.9959432483,
+        "variance": 9.22156687e-07
+      },
+      "words": "重点绩效运行监控、事后重点绩效评价等。",
+      "location": {
+        "top": 833,
+        "left": 1227,
+        "width": 348,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998579025,
+        "min": 0.99947685,
+        "variance": 2.012803613e-08
+      },
+      "words": "性和公允性发表审计意见。年度财务报表审计的目的是增加财务报表的使用者（例如股东",
+      "location": {
+        "top": 874,
+        "left": 129,
+        "width": 741,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9987177253,
+        "min": 0.984685421,
+        "variance": 1.053444976e-05
+      },
+      "words": "债权人或潜在的投资者)对财务报表的信赖度。",
+      "location": {
+        "top": 905,
+        "left": 131,
+        "width": 383,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995555282,
+        "min": 0.9965981841,
+        "variance": 5.389577495e-07
+      },
+      "words": "我们根据客户不同行业的特点，坚持风险导向的审计理念针对财务报表的重大错报风",
+      "location": {
+        "top": 933,
+        "left": 169,
+        "width": 700,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999630451,
+        "min": 0.9999302626,
+        "variance": 4.701614098e-10
+      },
+      "words": "财务收支审计",
+      "location": {
+        "top": 920,
+        "left": 1236,
+        "width": 189,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9921072125,
+        "min": 0.6565061212,
+        "variance": 0.002560770605
+      },
+      "words": " Audit of financial revenues and expenditures",
+      "location": {
+        "top": 941,
+        "left": 1433,
+        "width": 299,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996880889,
+        "min": 0.9966948032,
+        "variance": 3.170173386e-07
+      },
+      "words": "险事项实施必要的审计程序，在审计过程中既能够保证对审计准则的遵循程度，又提高了",
+      "location": {
+        "top": 963,
+        "left": 129,
+        "width": 738,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9986854792,
+        "min": 0.9623300433,
+        "variance": 3.682526949e-05
+      },
+      "words": "由独立的审计机构和审计人员，依照国家的有关法规、法令、制度和有关会计理论、",
+      "location": {
+        "top": 967,
+        "left": 1267,
+        "width": 687,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995754957,
+        "min": 0.9984512329,
+        "variance": 1.646114356e-07
+      },
+      "words": "审计效率。同时，我们以独立客观公正的执业态度，使财务报表和附注能够提供更多有价",
+      "location": {
+        "top": 991,
+        "left": 129,
+        "width": 736,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995549321,
+        "min": 0.9958225489,
+        "variance": 6.996371553e-07
+      },
+      "words": "原则，对被审计单位的会计账目、会计报表等会计资料及其已发生的财务收支活动进行审",
+      "location": {
+        "top": 998,
+        "left": 1227,
+        "width": 736,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997977018,
+        "min": 0.9972039461,
+        "variance": 2.456886534e-07
+      },
+      "words": "值的财务信息保证审计质量让报表使用者能够信赖我们的审计报告。",
+      "location": {
+        "top": 1021,
+        "left": 129,
+        "width": 558,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998170137,
+        "min": 0.9979624748,
+        "variance": 1.140147887e-07
+      },
+      "words": "查和评价，以确定是否真实、正确、合规、合法和有效，并作出客观公正的审计结论。其目",
+      "location": {
+        "top": 1028,
+        "left": 1227,
+        "width": 754,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996423721,
+        "min": 0.9975501895,
+        "variance": 2.60977032e-07
+      },
+      "words": "的是为了检查错误，揭发弊端，促使被审计单位遵守国家的法令制度，维护财经纪律，改善",
+      "location": {
+        "top": 1056,
+        "left": 1227,
+        "width": 747,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999207258,
+        "min": 0.9995371103,
+        "variance": 1.904758662e-08
+      },
+      "words": "管理，提高经济效益",
+      "location": {
+        "top": 1086,
+        "left": 1227,
+        "width": 171,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998502731,
+        "min": 0.9995231628,
+        "variance": 2.252315134e-08
+      },
+      "words": "清产核资审计",
+      "location": {
+        "top": 1106,
+        "left": 136,
+        "width": 191,
+        "height": 34
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9914056659,
+        "min": 0.8184142113,
+        "variance": 0.001279849559
+      },
+      "words": " Asset verification audit",
+      "location": {
+        "top": 1128,
+        "left": 334,
+        "width": 158,
+        "height": 15
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998801947,
+        "min": 0.999219656,
+        "variance": 2.573586144e-08
+      },
+      "words": "清产核资审计是注册会计师对各类经济组织根据法规规定或自身管理的需要，专门组",
+      "location": {
+        "top": 1151,
+        "left": 169,
+        "width": 700,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997554421,
+        "min": 0.9990864992,
+        "variance": 7.958427517e-08
+      },
+      "words": "织的为清产核资提供专门审计的业务，其目的是真实全面反映资产价值，核实资产、负债",
+      "location": {
+        "top": 1182,
+        "left": 129,
+        "width": 736,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994654655,
+        "min": 0.9952549934,
+        "variance": 8.53150425e-07
+      },
+      "words": "及权益，摸清家底，加强资产管理，建立适应新形势的资产管理制度。清产核资主要包括",
+      "location": {
+        "top": 1212,
+        "left": 129,
+        "width": 738,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9989764094,
+        "min": 0.9874917269,
+        "variance": 5.909033916e-06
+      },
+      "words": "账务清理、资产清查、价值重估、损益认定、资金核实和完善制度等内容。",
+      "location": {
+        "top": 1240,
+        "left": 129,
+        "width": 613,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9492270947,
+        "min": 0.5770468116,
+        "variance": 0.01255609374
+      },
+      "words": "诚信integrity专业profesion 客观objective 公正equity",
+      "location": {
+        "top": 1204,
+        "left": 1224,
+        "width": 762,
+        "height": 57
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997994304,
+        "min": 0.999062717,
+        "variance": 4.882760152e-08
+      },
+      "words": "我们可以为各类企业和行政事业单位在组织清产核资过程中提供方案设计、组织培",
+      "location": {
+        "top": 1270,
+        "left": 169,
+        "width": 683,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.99911201,
+        "min": 0.9966285825,
+        "variance": 8.196964245e-07
+      },
+      "words": "训，出具专项财务审计报告、有关财产损失的鉴证报告以及清产核资报告。",
+      "location": {
+        "top": 1299,
+        "left": 129,
+        "width": 616,
+        "height": 17
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9529107809,
+        "min": 0.6833763719,
+        "variance": 0.01049523242
+      },
+      "words": "PAGE /12",
+      "location": {
+        "top": 1357,
+        "left": 1968,
+        "width": 87,
+        "height": 28
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2,
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "words_result_idx": [
+        12
+      ]
+    },
+    {
+      "words_result_idx": [
+        13
+      ]
+    },
+    {
+      "words_result_idx": [
+        14
+      ]
+    },
+    {
+      "words_result_idx": [
+        15
+      ]
+    },
+    {
+      "words_result_idx": [
+        16
+      ]
+    },
+    {
+      "words_result_idx": [
+        17
+      ]
+    },
+    {
+      "words_result_idx": [
+        18
+      ]
+    },
+    {
+      "words_result_idx": [
+        19
+      ]
+    },
+    {
+      "words_result_idx": [
+        20
+      ]
+    },
+    {
+      "words_result_idx": [
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "words_result_idx": [
+        25
+      ]
+    },
+    {
+      "words_result_idx": [
+        26
+      ]
+    },
+    {
+      "words_result_idx": [
+        27
+      ]
+    },
+    {
+      "words_result_idx": [
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "words_result_idx": [
+        31
+      ]
+    },
+    {
+      "words_result_idx": [
+        32
+      ]
+    },
+    {
+      "words_result_idx": [
+        33
+      ]
+    },
+    {
+      "words_result_idx": [
+        34
+      ]
+    },
+    {
+      "words_result_idx": [
+        35
+      ]
+    },
+    {
+      "words_result_idx": [
+        36
+      ]
+    },
+    {
+      "words_result_idx": [
+        37
+      ]
+    },
+    {
+      "words_result_idx": [
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "words_result_idx": [
+        41
+      ]
+    },
+    {
+      "words_result_idx": [
+        42
+      ]
+    },
+    {
+      "words_result_idx": [
+        43
+      ]
+    },
+    {
+      "words_result_idx": [
+        44
+      ]
+    },
+    {
+      "words_result_idx": [
+        45
+      ]
+    },
+    {
+      "words_result_idx": [
+        46,
+        47
+      ]
+    },
+    {
+      "words_result_idx": [
+        48
+      ]
+    },
+    {
+      "words_result_idx": [
+        49
+      ]
+    },
+    {
+      "words_result_idx": [
+        50
+      ]
+    },
+    {
+      "words_result_idx": [
+        51
+      ]
+    },
+    {
+      "words_result_idx": [
+        52
+      ]
+    },
+    {
+      "words_result_idx": [
+        53
+      ]
+    },
+    {
+      "words_result_idx": [
+        54
+      ]
+    },
+    {
+      "words_result_idx": [
+        55
+      ]
+    },
+    {
+      "words_result_idx": [
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "words_result_idx": [
+        59
+      ]
+    },
+    {
+      "words_result_idx": [
+        60
+      ]
+    },
+    {
+      "words_result_idx": [
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "words_result_idx": [
+        65
+      ]
+    },
+    {
+      "words_result_idx": [
+        66,
+        67
+      ]
+    },
+    {
+      "words_result_idx": [
+        68
+      ]
+    }
+  ],
+  "paragraphs_result_num": 48,
+  "words_result_num": 69,
+  "direction": 0,
+  "log_id": 2074140674065967240
+}

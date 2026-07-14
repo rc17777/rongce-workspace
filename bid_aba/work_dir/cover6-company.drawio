@@ -1,0 +1,30 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="300" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="10" y="10" width="1100" height="260" as="geometry"/>
+    </mxCell>
+    <mxCell id="t1" value="&lt;b&gt;八、公司概况与服务能力 / 九、项目团队配备&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#FFFFFF;" parent="1" vertex="1">
+      <mxGeometry x="10" y="25" width="1100" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line" value="" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;strokeColor=#85C1E9;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="30" y="65" width="1060" height="2" as="geometry"/>
+    </mxCell>
+    <mxCell id="k1" value="🏢 融策会计师事务所" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2471A3;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="30" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k2" value="🔧 融策工程咨询" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2471A3;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="300" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k3" value="📜 资质与ISO认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2471A3;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="570" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k4" value="👥 团队11人配置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2471A3;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="840" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1" value="• 2000年成立，四川省内资深专业机构，财务审计+工程咨询双轮驱动&#10;• 融策工程咨询：注册造价师10名+，工程全过程服务能力&#10;• 会计师事务所执业证/造价咨询资质/绩效评价备案/ISO认证/省注协TOP50&#10;• 李开(项目负责人/注册会计师/高级会计师)+周贤伟/赖德明/贺珊+谭维等5人" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=10;fontColor=#D4E6F1;" parent="1" vertex="1">
+      <mxGeometry x="30" y="140" width="1060" height="110" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

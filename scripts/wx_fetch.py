@@ -1,60 +1,42 @@
-import requests, re, html, sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+import urllib.request
+import re
+import html as html_mod
+import json
+import sys
 
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('url', nargs='?', default='https://mp.weixin.qq.com/s/HpHh5bpELcpEqmLtDsoQNg')
-args = parser.parse_args()
+sys.stdout.reconfigure(encoding='utf-8')
 
-r = requests.get(args.url, 
-    headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}, timeout=30)
+url = 'https://mp.weixin.qq.com/s/MVXHToWtNVT_b68zxr7fSA'
+req = urllib.request.Request(url, headers={
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+})
+resp = urllib.request.urlopen(req, timeout=15)
+html = resp.read().decode('utf-8')
 
-# Get title - try multiple patterns
-title = None
-for pat in [
-    r'var\s+msg_title\s*=\s*[\'"](.+?)[\'"]',
-    r'property="og:title"\s+content="(.+?)"',
-    r'<title>(.+?)</title>',
-    r'var\s+msg_title\s*=\s*htmlDecode\("(.+?)"\)',
-]:
-    m = re.search(pat, r.text)
+# Extract title
+title_m = re.search(r'<title>(.+?)</title>', html)
+title = title_m.group(1).strip() if title_m else 'No title'
+print(f'Title: {title}')
+
+# Extract msg metadata
+for key in ['msg_title', 'msg_desc', 'msg_cdn_url', 'msg_source_url']:
+    m = re.search(r'var ' + key + r'\s*=\s*"(.+?)"', html)
     if m:
-        title = html.unescape(m.group(1))
-        break
+        print(f'{key}: {m.group(1)}')
 
-print(f'标题: {title}')
-print('='*60)
-
-# Extract js_content - try multiple ending patterns
-content = None
-for end_pat in [
-    r'</div>\s*<script\s+nonce=',
-    r'</div>\s*</div>\s*<script',
-    r'</div>\s*<div\s+id="js_pc_qr_code"',
-    r'</div>\s*<div\s+class="rich_media_area_extra"',
-]:
-    content = re.search(r'id="js_content"[^>]*>(.+?)' + end_pat, r.text, re.DOTALL)
-    if content:
-        break
-
-if content:
-    raw = content.group(1)
-    # Basic cleaning
-    raw = re.sub(r'<br\s*/?>', '\n', raw)
-    raw = re.sub(r'<p[^>]*>', '\n', raw)
-    raw = re.sub(r'</p>', '', raw)
-    raw = re.sub(r'<section[^>]*>', '\n', raw)
-    raw = re.sub(r'</section>', '\n', raw)
-    raw = re.sub(r'<[^>]+>', '', raw)
-    raw = re.sub(r'&nbsp;', ' ', raw)
-    raw = html.unescape(raw)
-    raw = re.sub(r'[ \t]+', ' ', raw)
-    raw = re.sub(r'\n{3,}', '\n\n', raw)
-    raw = raw.strip()
-    print(raw[:30000])
+# Extract article content
+content_m = re.search(r'id="js_content"[^>]*>(.+?)</div>\s*<script', html, re.DOTALL)
+if content_m:
+    text = content_m.group(1)
+    text = re.sub(r'<[^>]+>', '', text)
+    text = re.sub(r'\s+', ' ', text)
+    text = html_mod.unescape(text)
+    text = text.strip()
+    print(f'\n--- ARTICLE ({len(text)} chars) ---')
+    print(text[:6000])
 else:
-    print("未能提取js_content")
-    # Fallback: try to get content from og:description or snippet
-    m = re.search(r'name="description"\s+content="(.+?)"', r.text)
-    if m:
-        print('描述:', m.group(1)[:2000])
+    print('\nFailed to extract content')
+    # Save HTML for debugging
+    with open(r'C:\Users\scrccpa\AppData\Local\Temp\wx_debug.html', 'w', encoding='utf-8') as f:
+        f.write(html[:50000])
+    print('Saved HTML to %TEMP%\\wx_debug.html')

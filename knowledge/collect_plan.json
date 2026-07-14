@@ -1,0 +1,488 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-07-11T10:24:03.308914",
+  "total_commands": 78,
+  "search_commands": [
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 经济责任审计",
+      "count": 3,
+      "label": "经责审计/经济责任审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 经济责任审计",
+      "count": 3,
+      "label": "经责审计/经济责任审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 经济责任审计",
+      "count": 3,
+      "label": "经责审计/经济责任审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 离任审计",
+      "count": 3,
+      "label": "经责审计/离任审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 离任审计",
+      "count": 3,
+      "label": "经责审计/离任审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 离任审计",
+      "count": 3,
+      "label": "经责审计/离任审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 财政收支审计",
+      "count": 3,
+      "label": "收支审计/财政收支审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 财政收支审计",
+      "count": 3,
+      "label": "收支审计/财政收支审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 财政收支审计",
+      "count": 3,
+      "label": "收支审计/财政收支审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 预算收入审计",
+      "count": 3,
+      "label": "收支审计/预算收入审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 预算收入审计",
+      "count": 3,
+      "label": "收支审计/预算收入审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 预算收入审计",
+      "count": 3,
+      "label": "收支审计/预算收入审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 预算执行审计",
+      "count": 3,
+      "label": "预算执行/预算执行审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 预算执行审计",
+      "count": 3,
+      "label": "预算执行/预算执行审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 预算执行审计",
+      "count": 3,
+      "label": "预算执行/预算执行审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 决算审计",
+      "count": 3,
+      "label": "预算执行/决算审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 决算审计",
+      "count": 3,
+      "label": "预算执行/决算审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 决算审计",
+      "count": 3,
+      "label": "预算执行/决算审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 专项资金审计",
+      "count": 3,
+      "label": "专项资金/专项资金审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 专项资金审计",
+      "count": 3,
+      "label": "专项资金/专项资金审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 专项资金审计",
+      "count": 3,
+      "label": "专项资金/专项资金审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 社保资金审计",
+      "count": 3,
+      "label": "专项资金/社保资金审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 社保资金审计",
+      "count": 3,
+      "label": "专项资金/社保资金审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 社保资金审计",
+      "count": 3,
+      "label": "专项资金/社保资金审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 往来款清理",
+      "count": 3,
+      "label": "往来款清理/往来款清理/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 往来款清理",
+      "count": 3,
+      "label": "往来款清理/往来款清理/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 往来款清理",
+      "count": 3,
+      "label": "往来款清理/往来款清理/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 债权债务审计",
+      "count": 3,
+      "label": "往来款清理/债权债务审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 债权债务审计",
+      "count": 3,
+      "label": "往来款清理/债权债务审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 债权债务审计",
+      "count": 3,
+      "label": "往来款清理/债权债务审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 招投标审计",
+      "count": 3,
+      "label": "招投标审计/招投标审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 招投标审计",
+      "count": 3,
+      "label": "招投标审计/招投标审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 招投标审计",
+      "count": 3,
+      "label": "招投标审计/招投标审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 围标串标",
+      "count": 3,
+      "label": "招投标审计/围标串标/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 围标串标",
+      "count": 3,
+      "label": "招投标审计/围标串标/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 围标串标",
+      "count": 3,
+      "label": "招投标审计/围标串标/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 国有企业审计",
+      "count": 3,
+      "label": "国企审计/国有企业审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 国有企业审计",
+      "count": 3,
+      "label": "国企审计/国有企业审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 国有企业审计",
+      "count": 3,
+      "label": "国企审计/国有企业审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 国有资产审计",
+      "count": 3,
+      "label": "国企审计/国有资产审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 国有资产审计",
+      "count": 3,
+      "label": "国企审计/国有资产审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 国有资产审计",
+      "count": 3,
+      "label": "国企审计/国有资产审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 成本效益审计",
+      "count": 3,
+      "label": "成本效益审计/成本效益审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 成本效益审计",
+      "count": 3,
+      "label": "成本效益审计/成本效益审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 成本效益审计",
+      "count": 3,
+      "label": "成本效益审计/成本效益审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 绩效评价",
+      "count": 3,
+      "label": "成本效益审计/绩效评价/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 绩效评价",
+      "count": 3,
+      "label": "成本效益审计/绩效评价/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 绩效评价",
+      "count": 3,
+      "label": "成本效益审计/绩效评价/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 能源审计",
+      "count": 3,
+      "label": "能源审计/能源审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 能源审计",
+      "count": 3,
+      "label": "能源审计/能源审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 能源审计",
+      "count": 3,
+      "label": "能源审计/能源审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 碳中和审计",
+      "count": 3,
+      "label": "能源审计/碳中和审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 碳中和审计",
+      "count": 3,
+      "label": "能源审计/碳中和审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 碳中和审计",
+      "count": 3,
+      "label": "能源审计/碳中和审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 竣工决算审计",
+      "count": 3,
+      "label": "工程决算审计/竣工决算审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 竣工决算审计",
+      "count": 3,
+      "label": "工程决算审计/竣工决算审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 竣工决算审计",
+      "count": 3,
+      "label": "工程决算审计/竣工决算审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 工程造价审计",
+      "count": 3,
+      "label": "工程决算审计/工程造价审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 工程造价审计",
+      "count": 3,
+      "label": "工程决算审计/工程造价审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 工程造价审计",
+      "count": 3,
+      "label": "工程决算审计/工程造价审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 预算绩效管理",
+      "count": 3,
+      "label": "预算绩效管理/预算绩效管理/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 预算绩效管理",
+      "count": 3,
+      "label": "预算绩效管理/预算绩效管理/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 预算绩效管理",
+      "count": 3,
+      "label": "预算绩效管理/预算绩效管理/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 事前绩效评估",
+      "count": 3,
+      "label": "预算绩效管理/事前绩效评估/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 事前绩效评估",
+      "count": 3,
+      "label": "预算绩效管理/事前绩效评估/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 事前绩效评估",
+      "count": 3,
+      "label": "预算绩效管理/事前绩效评估/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 政府补贴审计",
+      "count": 3,
+      "label": "政府补贴审计/政府补贴审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 政府补贴审计",
+      "count": 3,
+      "label": "政府补贴审计/政府补贴审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 政府补贴审计",
+      "count": 3,
+      "label": "政府补贴审计/政府补贴审计/mof"
+    },
+    {
+      "action": "web_search",
+      "query": "site:ncpssd.cn 补助资金审计",
+      "count": 3,
+      "label": "政府补贴审计/补助资金审计/ncpssd"
+    },
+    {
+      "action": "web_search",
+      "query": "site:audit.gov.cn 补助资金审计",
+      "count": 3,
+      "label": "政府补贴审计/补助资金审计/audit"
+    },
+    {
+      "action": "web_search",
+      "query": "site:mof.gov.cn 补助资金审计",
+      "count": 3,
+      "label": "政府补贴审计/补助资金审计/mof"
+    }
+  ],
+  "direct_fetch_commands": [
+    {
+      "action": "web_fetch",
+      "url": "https://www.audit.gov.cn/n5/n25/index.html",
+      "label": "direct/audit_gov/n25",
+      "source_id": "audit_gov"
+    },
+    {
+      "action": "web_fetch",
+      "url": "https://www.audit.gov.cn/n4/n19/index.html",
+      "label": "direct/audit_gov/n19",
+      "source_id": "audit_gov"
+    },
+    {
+      "action": "web_fetch",
+      "url": "https://www.audit.gov.cn/n6/n83/index.html",
+      "label": "direct/audit_gov/n83",
+      "source_id": "audit_gov"
+    },
+    {
+      "action": "web_fetch",
+      "url": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+      "label": "direct/mof_gov/zhengwuxinxi",
+      "source_id": "mof_gov"
+    },
+    {
+      "action": "web_fetch",
+      "url": "https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/",
+      "label": "direct/mof_gov/zhengwuxinxi",
+      "source_id": "mof_gov"
+    },
+    {
+      "action": "web_fetch",
+      "url": "https://www.mof.gov.cn/zhengwuxinxi/caizhengshuju/",
+      "label": "direct/mof_gov/zhengwuxinxi",
+      "source_id": "mof_gov"
+    }
+  ],
+  "processing": {
+    "pipeline": [
+      "1. 按顺序执行 search_commands (web_search)",
+      "2. 从搜索结果中提取 URL，执行 web_fetch",
+      "3. 调用 collect_intel.py --save 保存每篇文章",
+      "4. AI 摘要和分类",
+      "5. 生成日报: python scripts/collect_intel.py --report",
+      "6. 可选: 重建 RAG 索引"
+    ],
+    "save_command": "python scripts/collect_intel.py --save '<json_payload>'"
+  }
+}

@@ -1,0 +1,167 @@
+<mxfile host="Electron" modified="2026-06-25T03:15:00.000Z" agent="Mozilla/5.0" version="21.2.8">
+<diagram id="flowchart" name="工作流程图">
+  <mxGraphModel dx="1200" dy="800" grid="1" guides="1" page="1" pageWidth="210" pageHeight="297" background="#FAFAF8">
+    <root>
+      <mxCell id="0"/>
+      <mxCell id="1" parent="0"/>
+
+      <!-- ===== 标题 ===== -->
+      <mxCell id="title" value="审计工作流程图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0A1F3F;fontStyle=1;fontFamily=微软雅黑;" vertex="1" parent="1">
+        <mxGeometry x="120" y="10" width="160" height="30" as="geometry"/>
+      </mxCell>
+
+      <!-- ===== 阶段1：准备阶段 ===== -->
+      <mxCell id="phase1-bg" value="一、准备阶段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0A1F3F;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=微软雅黑;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxGeometry x="20" y="55" width="360" height="28" as="geometry"/>
+      </mxCell>
+
+      <!-- 步骤1 -->
+      <mxCell id="s1" value="接受委托\n签订业务约定书" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0A1F3F;fontColor=#0A1F3F;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="130" y="100" width="120" height="45" as="geometry"/>
+      </mxCell>
+      <mxCell id="a1" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="130" y="130" as="geometry" relative="1">
+          <mxPoint x="190" y="145" as="sourcePoint"/>
+          <mxPoint x="190" y="165" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <!-- 步骤2 -->
+      <mxCell id="s2" value="成立项目组\n明确职责分工" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0A1F3F;fontColor=#0A1F3F;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="130" y="170" width="120" height="45" as="geometry"/>
+      </mxCell>
+      <mxCell id="a2" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="130" y="200" as="geometry" relative="1">
+          <mxPoint x="190" y="215" as="sourcePoint"/>
+          <mxPoint x="190" y="235" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <!-- 步骤3 -->
+      <mxCell id="s3" value="制定审计方案\n下发资料清单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0A1F3F;fontColor=#0A1F3F;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="130" y="240" width="120" height="45" as="geometry"/>
+      </mxCell>
+
+      <!-- ===== 阶段2：实施阶段 ===== -->
+      <mxCell id="phase2-bg" value="二、实施阶段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=微软雅黑;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxGeometry x="20" y="300" width="360" height="28" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="a3" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="130" y="270" as="geometry" relative="1">
+          <mxPoint x="190" y="285" as="sourcePoint"/>
+          <mxPoint x="190" y="310" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <!-- 步骤4 -->
+      <mxCell id="s4" value="进驻现场\n资料收集与盘点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1A5C6E;fontColor=#1A5C6E;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="40" y="350" width="120" height="45" as="geometry"/>
+      </mxCell>
+      <mxCell id="a4" value="" style="endArrow=classic;html=1;strokeColor=#1A5C6E;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="100" y="380" as="geometry" relative="1">
+          <mxPoint x="100" y="395" as="sourcePoint"/>
+          <mxPoint x="100" y="415" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <!-- 步骤5 -->
+      <mxCell id="s5" value="资金使用\n合规性审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1A5C6E;fontColor=#1A5C6E;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="40" y="420" width="120" height="45" as="geometry"/>
+      </mxCell>
+
+      <!-- 步骤6 -->
+      <mxCell id="a5" value="" style="endArrow=classic;html=1;strokeColor=#1A5C6E;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="100" y="450" as="geometry" relative="1">
+          <mxPoint x="100" y="465" as="sourcePoint"/>
+          <mxPoint x="100" y="485" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <mxCell id="s6" value="二类费用\n计费标准复核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1A5C6E;fontColor=#1A5C6E;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="40" y="490" width="120" height="45" as="geometry"/>
+      </mxCell>
+
+      <!-- ===== 右侧：输出成果 ===== -->
+      <mxCell id="output-title" value="主 要 输 出 成 果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=微软雅黑;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxGeometry x="200" y="370" width="160" height="20" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="o1" value="📋 资料清单\n📊 盘点记录表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0E8;strokeColor=#C5955C;fontColor=#333333;fontSize=9;fontFamily=微软雅黑;align=left;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+        <mxGeometry x="210" y="400" width="140" height="35" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="o2" value="💰 资金流向表\n📐 支付凭证核查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0E8;strokeColor=#C5955C;fontColor=#333333;fontSize=9;fontFamily=微软雅黑;align=left;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+        <mxGeometry x="210" y="445" width="140" height="35" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="o3" value="📐 二类费用复核表\n📈 计费标准对照" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0E8;strokeColor=#C5955C;fontColor=#333333;fontSize=9;fontFamily=微软雅黑;align=left;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+        <mxGeometry x="210" y="490" width="140" height="35" as="geometry"/>
+      </mxCell>
+
+      <!-- 箭头连接 -->
+      <mxCell id="l1" value="" style="endArrow=classic;html=1;strokeColor=#1A5C6E;strokeWidth=1;dashed=1;rounded=0;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" parent="1">
+        <mxGeometry x="160" y="367" as="geometry" relative="1">
+          <mxPoint x="160" y="367" as="sourcePoint"/>
+          <mxPoint x="200" y="367" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+      <mxCell id="l2" value="" style="endArrow=classic;html=1;strokeColor=#1A5C6E;strokeWidth=1;dashed=1;rounded=0;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" parent="1">
+        <mxGeometry x="160" y="437" as="geometry" relative="1">
+          <mxPoint x="160" y="437" as="sourcePoint"/>
+          <mxPoint x="200" y="437" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <!-- ===== 阶段3：报告阶段 ===== -->
+      <mxCell id="a6" value="" style="endArrow=classic;html=1;strokeColor=#1A5C6E;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="100" y="520" as="geometry" relative="1">
+          <mxPoint x="100" y="535" as="sourcePoint"/>
+          <mxPoint x="100" y="555" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <mxCell id="phase3-bg" value="三、报告阶段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=微软雅黑;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxGeometry x="20" y="560" width="360" height="28" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="a7" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="100" y="575" as="geometry" relative="1">
+          <mxPoint x="100" y="588" as="sourcePoint"/>
+          <mxPoint x="130" y="608" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <mxCell id="s7" value="编制审核报告\n三级复核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C5955C;fontColor=#C5955C;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="40" y="610" width="120" height="45" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="a8" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1">
+        <mxGeometry x="100" y="640" as="geometry" relative="1">
+          <mxPoint x="100" y="655" as="sourcePoint"/>
+          <mxPoint x="100" y="675" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+
+      <mxCell id="s8" value="出具正式报告\n交付成果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;strokeColor=#C5955C;fontColor=#FFFFFF;fontSize=10;fontFamily=微软雅黑;align=center;verticalAlign=middle;arcSize=8;" vertex="1" parent="1">
+        <mxGeometry x="40" y="680" width="120" height="45" as="geometry"/>
+      </mxCell>
+
+      <!-- 右侧输出 -->
+      <mxCell id="o4" value="📄 竣工财务决算\n审核报告" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0E8;strokeColor=#C5955C;fontColor=#333333;fontSize=9;fontFamily=微软雅黑;align=left;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+        <mxGeometry x="210" y="620" width="140" height="35" as="geometry"/>
+      </mxCell>
+      <mxCell id="o5" value="📁 审计底稿\n📎 取证记录" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0E8;strokeColor=#C5955C;fontColor=#333333;fontSize=9;fontFamily=微软雅黑;align=left;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+        <mxGeometry x="210" y="665" width="140" height="35" as="geometry"/>
+      </mxCell>
+
+      <mxCell id="l3" value="" style="endArrow=classic;html=1;strokeColor=#C5955C;strokeWidth=1;dashed=1;rounded=0;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" parent="1">
+        <mxGeometry x="160" y="627" as="geometry" relative="1">
+          <mxPoint x="160" y="627" as="sourcePoint"/>
+          <mxPoint x="200" y="627" as="targetPoint"/>
+        </mxGeometry>
+      </mxCell>
+    </root>
+  </mxGraphModel>
+</diagram>
+</mxfile>

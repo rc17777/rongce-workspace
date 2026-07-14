@@ -1,66 +1,63 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
-<title>业务架构</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
-.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em;background:rgba(250,250,248,.96);z-index:5}
-.masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
-.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
-.content{flex:1;position:relative;overflow:hidden;background:linear-gradient(135deg,#FAFAF8 0%,#F5F2EC 100%)}
-.content::before{content:'';position:absolute;right:-120px;top:-180px;width:620px;height:620px;border:1px solid rgba(197,149,92,.16);border-radius:50%}
-.content::after{content:'';position:absolute;left:-220px;bottom:-260px;width:760px;height:760px;border:1px solid rgba(26,92,110,.12);border-radius:50%}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.25em;color:var(--teal);font-weight:500}.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
-h1{font-family:'Noto Serif SC',serif;font-weight:800;font-size:50px;color:var(--db);line-height:1.18}h1 .hl{color:var(--gold)}
-.hero{position:relative;z-index:1;padding:42px 72px 28px;display:flex;align-items:flex-end;gap:42px}
-.hero-left{flex:1}.hero-right{width:560px;background:var(--db);color:#fff;padding:28px 34px;box-shadow:0 18px 50px rgba(10,31,63,.14);position:relative;overflow:hidden}.hero-right::after{content:'';position:absolute;right:-80px;bottom:-80px;width:220px;height:220px;border:1px solid rgba(197,149,92,.16);border-radius:50%}
-.matrix{position:relative;z-index:1;margin:0 72px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;height:438px}
-.lane{background:#fff;border:1px solid rgba(10,31,63,.08);box-shadow:0 10px 34px rgba(10,31,63,.055);display:flex;flex-direction:column;position:relative;overflow:hidden}
-.lane::before{content:'';position:absolute;top:0;left:0;right:0;height:7px;background:var(--gold)}.lane.teal::before{background:var(--teal)}.lane.db::before{background:var(--db)}
-.lane-head{padding:26px 28px 18px;border-bottom:1px solid rgba(10,31,63,.06)}.lane-no{font-family:'Noto Serif SC',serif;font-size:52px;font-weight:900;color:rgba(10,31,63,.06);position:absolute;right:22px;top:12px}.lane-title{font-family:'Noto Serif SC',serif;font-size:30px;font-weight:800;color:var(--db);margin-bottom:8px}.lane-sub{font-size:16px;color:var(--il);line-height:1.7;max-width:390px}
-.tags{padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}.tag{border:1px solid rgba(10,31,63,.08);background:rgba(245,242,236,.55);padding:13px 14px;min-height:64px;display:flex;flex-direction:column;justify-content:center}.tag b{font-size:17px;color:var(--db);font-weight:700;margin-bottom:4px}.tag span{font-size:13px;color:var(--il);line-height:1.5}.tag.hot{background:rgba(197,149,92,.08);border-color:rgba(197,149,92,.22)}
-.flow{position:relative;z-index:1;margin:28px 72px 0;background:var(--db);color:#fff;display:grid;grid-template-columns:1.1fr repeat(4,1fr);align-items:center;min-height:128px;box-shadow:0 18px 60px rgba(10,31,63,.16)}
-.flow-title{padding:28px 34px;border-right:1px solid rgba(255,255,255,.12)}.flow-title b{font-family:'Noto Serif SC',serif;font-size:30px;color:var(--gold)}.flow-title div{font-size:15px;color:rgba(255,255,255,.62);margin-top:8px;line-height:1.6}
-.step{padding:24px 28px;position:relative}.step:not(:last-child)::after{content:'→';position:absolute;right:-9px;top:44px;color:rgba(197,149,92,.78);font-family:'Noto Serif SC',serif;font-size:28px}.step .n{font-family:'Noto Serif SC',serif;font-size:20px;color:var(--gold);margin-bottom:8px}.step .t{font-size:20px;font-weight:700;margin-bottom:5px}.step .d{font-size:14px;color:rgba(255,255,255,.62);line-height:1.6}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920"><title>业务架构</title><link rel="stylesheet" href="../shared/brochure-theme.css">
+<style>
+.page{background:var(--warm)}
+.hero{position:relative;z-index:1;padding:48px 80px 20px;display:flex;align-items:flex-end;gap:36px}
+.hero-left{flex:1}.hero-right{width:520px;background:linear-gradient(145deg,var(--navy-dark),var(--navy));color:#fff;padding:26px 32px;position:relative;overflow:hidden}
+.hero-right::after{content:'';position:absolute;right:-60px;bottom:-60px;width:180px;height:180px;border:1px solid rgba(197,149,92,0.08);border-radius:50%}
+.matrix{position:relative;z-index:1;margin:0 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:1}
+.lane{background:#fff;border:1px solid rgba(10,31,63,0.04);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.lane::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold)}.lane.tl::before{background:var(--navy)}.lane.teal::before{background:var(--navy)}
+.lane-hd{padding:22px 24px 14px;border-bottom:1px solid rgba(10,31,63,0.04)}.lane-no{font-family:var(--serif);font-size:44px;font-weight:900;color:rgba(10,31,63,0.04);position:absolute;right:20px;top:10px}
+.lane-title{font-family:var(--serif);font-size:26px;font-weight:800;color:var(--navy);margin-bottom:4px}.lane-sub{font-size:14px;color:var(--ink-light);line-height:1.6}
+.lane-tags{padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1;align-content:start}
+.lane-tag{background:rgba(245,242,236,.5);padding:10px 12px}.lane-tag b{font-size:15px;color:var(--navy);font-weight:700;display:block;margin-bottom:2px}.lane-tag span{font-size:12px;color:var(--ink-light);line-height:1.4;display:block}
+.lane-tag.hot{background:rgba(197,149,92,0.06);border:1px solid rgba(197,149,92,0.1)}
 </style></head>
 <body>
-<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
-<div class="content">
+<div class="nav"><span class="brand">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="fill"></span></div>
+<div class="page flex-col">
   <div class="hero">
     <div class="hero-left">
       <div class="kicker">业务架构</div>
-      <h1 style="margin-top:14px">三类治理问题<br><span class="hl">一套证据链闭环能力</span></h1>
-      <div style="font-size:20px;color:var(--il);line-height:1.9;margin-top:16px;max-width:970px;font-family:'Noto Serif SC',serif">围绕财政资金治理，把“能不能申报、有没有合规、花得值不值、责任清不清”一次讲透。</div>
+      <div class="t2" style="margin-top:12px">三类治理问题<br>一套<span class="gold">证据链闭环</span>能力</div>
+      <div class="t4" style="margin-top:12px;max-width:880px">围绕财政资金治理，把"能不能申报、有没有合规、花得值不值、责任清不清"一次讲透。</div>
     </div>
     <div class="hero-right">
-      <div style="font-size:15px;color:rgba(255,255,255,.55);letter-spacing:.18em;margin-bottom:12px">RONGCE SERVICE LOGIC</div>
-      <div style="font-family:'Noto Serif SC',serif;font-size:32px;line-height:1.5;color:#fff;position:relative;z-index:1">从业务菜单<br><span style="color:var(--gold)">升级为治理方案</span></div>
+      <div class="t5 white-dim2" style="margin-bottom:10px">RONGCE SERVICE LOGIC</div>
+      <div class="t3 white" style="font-size:28px">从业务菜单<br>升级为<span class="gold">治理方案</span></div>
     </div>
   </div>
   <div class="matrix">
     <div class="lane">
-      <div class="lane-no">01</div><div class="lane-head"><div class="lane-title">合规风控</div><div class="lane-sub">解决资金有没有按规则走，账、表、项目、责任能不能对得上。</div></div>
-      <div class="tags"><div class="tag hot"><b>财务专项审计</b><span>收支 · 预算执行 · 专项资金</span></div><div class="tag"><b>监督检查</b><span>财会监督 · 会计信息质量</span></div><div class="tag"><b>经济责任审计</b><span>任中 · 离任 · 自然资源</span></div><div class="tag"><b>招投标审计</b><span>19层围标串标穿透体系</span></div></div>
+      <div class="lane-no">01</div>
+      <div class="lane-hd"><div class="lane-title">合规风控</div><div class="lane-sub">资金怎么用，是否合规</div></div>
+      <div class="lane-tags">
+        <div class="lane-tag hot"><b>事前</b><span>政策合规性审查、资金来源确认</span></div>
+        <div class="lane-tag"><b>事中</b><span>拨付程序、合同履约、支出凭证</span></div>
+        <div class="lane-tag"><b>事后</b><span>决算审计、整改落实跟踪</span></div>
+        <div class="lane-tag"><b>专项</b><span>采购合规、招标程序、关联交易</span></div>
+      </div>
+    </div>
+    <div class="lane tl">
+      <div class="lane-no">02</div>
+      <div class="lane-hd"><div class="lane-title">绩效治理</div><div class="lane-sub">钱花得值不值，效果如何</div></div>
+      <div class="lane-tags">
+        <div class="lane-tag hot"><b>事前绩效</b><span>目标设定、指标设计、预算匹配</span></div>
+        <div class="lane-tag"><b>事中监控</b><span>执行进度、偏差分析、纠偏建议</span></div>
+        <div class="lane-tag"><b>事后评价</b><span>产出/效果/满意度多维评价</span></div>
+        <div class="lane-tag"><b>成本效益</b><span>投入产出比、经济性/效率性/效果性</span></div>
+      </div>
     </div>
     <div class="lane teal">
-      <div class="lane-no">02</div><div class="lane-head"><div class="lane-title">绩效治理</div><div class="lane-sub">解决钱花出去有没有效果，政策有没有落地，投入产出是否值得。</div></div>
-      <div class="tags"><div class="tag hot"><b>预算绩效管理</b><span>目标 · 事前 · 事中 · 评价</span></div><div class="tag"><b>政府补贴审计</b><span>申报 · 拨付 · 使用 · 绩效</span></div><div class="tag"><b>成本效益审计</b><span>单位成本 · 投入产出 · 可持续</span></div><div class="tag"><b>能源审计</b><span>能耗核查 · 节能诊断</span></div></div>
+      <div class="lane-no">03</div>
+      <div class="lane-hd"><div class="lane-title">工程闭环</div><div class="lane-sub">工程实物与资金流是否一致</div></div>
+      <div class="lane-tags">
+        <div class="lane-tag hot"><b>预算编制</b><span>工程量清单、控制价、财政评审</span></div>
+        <div class="lane-tag"><b>全过程咨询</b><span>跟踪审计、变更签证、进度款</span></div>
+        <div class="lane-tag"><b>结算审核</b><span>竣工结算、财务决算、资产交付</span></div>
+        <div class="lane-tag"><b>专项审计</b><span>征地拆迁、材料价差、工期索赔</span></div>
+      </div>
     </div>
-    <div class="lane db">
-      <div class="lane-no">03</div><div class="lane-head"><div class="lane-title">工程闭环</div><div class="lane-sub">解决工程项目从预算到结算、从图纸到验收是否真实、合理、可追溯。</div></div>
-      <div class="tags"><div class="tag hot"><b>资金申报</b><span>专项债 · 一案两书 · 项目包装</span></div><div class="tag"><b>预算编制</b><span>清单编制 · 控制价编制</span></div><div class="tag"><b>财政评审</b><span>政府投资项目合理性评审</span></div><div class="tag"><b>结算审核</b><span>竣工结算 · 财务决算</span></div></div>
-    </div>
-  </div>
-  <div class="flow">
-    <div class="flow-title"><b>客户得到什么</b><div>不是一堆报告，而是一条可解释、可复核、可整改的治理链条</div></div>
-    <div class="step"><div class="n">STEP 1</div><div class="t">资金来源清楚</div><div class="d">申报、预算、拨付依据可追溯</div></div>
-    <div class="step"><div class="n">STEP 2</div><div class="t">执行过程清楚</div><div class="d">财务数据与项目进度交叉核验</div></div>
-    <div class="step"><div class="n">STEP 3</div><div class="t">项目结果清楚</div><div class="d">绩效目标、成本效益、社会效果可评价</div></div>
-    <div class="step"><div class="n">STEP 4</div><div class="t">整改责任清楚</div><div class="d">问题定性、责任边界、后续整改闭环</div></div>
   </div>
 </div>
-<div class="footer"></div>
-</body>
-</html>
+</body></html>

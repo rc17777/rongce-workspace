@@ -7,10 +7,24 @@
 ```text
 RONGCE_AI_HUB/
 ├── README.md                 # 本文件：统一入口
+├── ROUTING.md                # 调用规则：什么问题用什么来源
 ├── indexes/
 │   ├── skills.json            # 当前已安装技能索引
 │   ├── memory.json            # 长期记忆/日记/记忆库索引
 │   └── knowledge.json         # Obsidian 知识库一级目录索引
+├── business-lines/           # 12大业务线标准文件（2026-07-14建）
+│   ├── 经济责任审计.md
+│   ├── 收支审计.md
+│   ├── 预算执行审计.md
+│   ├── 专项资金审计.md
+│   ├── 往来款清理.md
+│   ├── 招投标审计.md
+│   ├── 国企审计.md
+│   ├── 成本效益审计.md
+│   ├── 能源审计.md
+│   ├── 工程竣工决算财务审计.md
+│   ├── 预算绩效管理.md
+│   └── 政府补贴审计.md
 ├── models/
 │   └── 专项审计报告AI复核模型_v2.0.md  # 融策报告复核标准模型
 ├── rule-library/
@@ -18,7 +32,7 @@ RONGCE_AI_HUB/
 │   ├── rule-template.md       # 单条规则标准模板
 │   ├── first-50-extraction-tasks.md # 首批50条规则抽取任务表
 │   └── case-to-rule-workflow.md     # 从案例到规则的提炼流程
-└── ROUTING.md                 # 调用规则：什么问题用什么来源
+└── ROADMAP.md                # 建设路线图
 ```
 
 ## 三类资产如何“合一”

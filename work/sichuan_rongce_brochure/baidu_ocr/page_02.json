@@ -1,0 +1,82 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.9991455078,
+        "min": 0.9991455078,
+        "variance": 0
+      },
+      "words": "R",
+      "location": {
+        "top": 676,
+        "left": 1377,
+        "width": 81,
+        "height": 99
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994035959,
+        "min": 0.9984977245,
+        "variance": 4.429479645e-07
+      },
+      "words": "谋专业之策",
+      "location": {
+        "top": 669,
+        "left": 1448,
+        "width": 316,
+        "height": 45
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996534586,
+        "min": 0.9991214871,
+        "variance": 1.359113639e-07
+      },
+      "words": "融品质之精",
+      "location": {
+        "top": 737,
+        "left": 1447,
+        "width": 316,
+        "height": 44
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8980486989,
+        "min": 0.8980486989,
+        "variance": 0
+      },
+      "words": "E",
+      "location": {
+        "top": 679,
+        "left": 1769,
+        "width": 67,
+        "height": 95
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0,
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    }
+  ],
+  "paragraphs_result_num": 3,
+  "words_result_num": 4,
+  "direction": 0,
+  "log_id": 2074140601503930451
+}

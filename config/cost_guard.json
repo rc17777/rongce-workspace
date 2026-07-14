@@ -5,11 +5,8 @@
   "max_flash_requests_per_day": 5000,
   "max_v4pro_requests_per_day": 2000,
   "alert_channel": "console",
-<<<<<<< HEAD
-  "webhook_url": ""
-}
-=======
   "webhook_url": "",
-  "enabled": true
+  "enabled": true,
+  "auto_fuse": true,
+  "fuse_recovery_minutes": 60
 }
->>>>>>> c3097c346e456e55f12e02c4d4e7b612d0fc2140

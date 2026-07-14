@@ -1,0 +1,48 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="t" value="&lt;b&gt;建设资金管理审核重点分析图&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#2C3E50;" parent="1" vertex="1">
+      <mxGeometry x="250" y="10" width="300" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="c1" value="&lt;b&gt;资金筹集审核&lt;/b&gt;&lt;br&gt;• 资金是否按计划到位&lt;br&gt;• 中央/省级/地方配套&lt;br&gt;• 债券资金使用合规" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="40" y="70" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c2" value="&lt;b&gt;资金拨付审核&lt;/b&gt;&lt;br&gt;• 拨付程序是否合规&lt;br&gt;• 资金是否及时拨付&lt;br&gt;• 有无截留挪用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="40" y="210" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c3" value="&lt;b&gt;资金使用审核&lt;/b&gt;&lt;br&gt;• 是否按计划用途使用&lt;br&gt;• 有无超范围超标准&lt;br&gt;• 有无虚列支出" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="40" y="350" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c4" value="&lt;b&gt;资金核算审核&lt;/b&gt;&lt;br&gt;• 是否专账核算&lt;br&gt;• 会计科目使用&lt;br&gt;• 往来款项清理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="310" y="70" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c5" value="&lt;b&gt;工程款支付审核&lt;/b&gt;&lt;br&gt;• 支付条件合规性&lt;br&gt;• 支付金额准确性&lt;br&gt;• 票据完备性" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="310" y="210" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c6" value="&lt;b&gt;资金结余审核&lt;/b&gt;&lt;br&gt;• 结余原因分析&lt;br&gt;• 结余处理合规&lt;br&gt;• 应缴财政及时" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="310" y="350" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="cf" value="&lt;b&gt;审核方法&lt;/b&gt;&lt;br&gt;数据分析 | 现场核实 | 函证 | 穿行测试" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#2C3E50;fontFamily=Microsoft YaHei;fontSize=10;" parent="1" vertex="1">
+      <mxGeometry x="560" y="210" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27AE60;strokeWidth=3;" parent="1" source="c1" target="c2" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27AE60;strokeWidth=3;" parent="1" source="c2" target="c3" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=3;" parent="1" source="c4" target="c5" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2980B9;strokeWidth=3;" parent="1" source="c5" target="c6" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ef" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F39C12;strokeWidth=3;dashed=1;" parent="1" source="c2" target="cf" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ef2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F39C12;strokeWidth=3;dashed=1;" parent="1" source="c5" target="cf" edge="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

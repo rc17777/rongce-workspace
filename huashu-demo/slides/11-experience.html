@@ -1,82 +1,50 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=1920">
-<title>项目业绩</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-:root { --db:#0A1F3F; --teal:#1A5C6E; --gold:#C5955C; --wg:#F5F2EC; --pap:#FAFAF8; --ink:#1a1a1a; --il:#5a5a5a; --ill:#8a8a8a }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--pap);color:var(--ink);width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
-.masthead{height:72px;display:flex;align-items:center;padding:0 56px;gap:16px;border-bottom:1px solid rgba(10,31,63,.08);font-size:16px;color:var(--ill);letter-spacing:.05em;background:rgba(250,250,248,.96);z-index:5}.masthead .brand{font-weight:600;color:var(--db)}.masthead .sep{color:var(--gold)}.masthead .spacer{flex:1}
-.footer{height:48px;display:flex;align-items:center;padding:0 56px;font-size:14px;color:var(--ill);border-top:1px solid rgba(10,31,63,.06)}
-.content{flex:1;position:relative;overflow:hidden;background:linear-gradient(180deg,#FAFAF8 0%,#F5F2EC 100%)}.content::before{content:'';position:absolute;right:-180px;top:-140px;width:600px;height:600px;border:1px solid rgba(197,149,92,.16);border-radius:50%}.content::after{content:'';position:absolute;left:-220px;bottom:-280px;width:720px;height:720px;border:1px solid rgba(26,92,110,.12);border-radius:50%}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.25em;color:var(--teal);font-weight:500}.kicker::before{content:'';width:24px;height:1px;background:var(--gold)}
-.header{position:relative;z-index:1;padding:42px 72px 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:end}.title{font-family:'Noto Serif SC',serif;font-size:48px;font-weight:800;color:var(--db);line-height:1.24;margin-top:12px}.title span{color:var(--gold)}.lead{font-family:'Noto Serif SC',serif;font-size:20px;color:var(--il);line-height:1.9}
-.stats{position:relative;z-index:1;margin:0 72px 24px;display:grid;grid-template-columns:repeat(5,1fr);background:var(--db);box-shadow:0 18px 55px rgba(10,31,63,.15)}.stat{padding:24px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.stat:last-child{border-right:0}.num{font-family:'Noto Serif SC',serif;font-size:43px;font-weight:800;color:var(--gold);line-height:1}.lab{font-size:15px;color:rgba(255,255,255,.62);margin-top:8px}
-.grid{position:relative;z-index:1;margin:0 72px;display:grid;grid-template-columns:1.05fr 1.05fr .9fr;gap:22px;height:520px}.panel{background:#fff;border:1px solid rgba(10,31,63,.08);box-shadow:0 10px 32px rgba(10,31,63,.055);display:flex;flex-direction:column;overflow:hidden}.panel-head{padding:22px 26px;border-bottom:1px solid rgba(10,31,63,.07);display:flex;align-items:center;justify-content:space-between}.panel-title{font-family:'Noto Serif SC',serif;font-size:27px;font-weight:800;color:var(--db)}.badge{font-size:13px;color:#fff;background:var(--gold);padding:5px 10px;border-radius:2px}.badge.teal{background:var(--teal)}.badge.db{background:var(--db)}
-.client-list{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;align-content:start}.client{border-bottom:1px solid rgba(10,31,63,.06);padding-bottom:10px}.client b{display:block;font-size:16px;color:var(--db);font-weight:700;margin-bottom:4px}.client span{font-size:13px;color:var(--il);line-height:1.45}.client.hot{background:rgba(197,149,92,.06);border:1px solid rgba(197,149,92,.16);padding:10px 12px}
-.map{position:relative;flex:1;background:linear-gradient(145deg,rgba(26,92,110,.06),rgba(197,149,92,.08));padding:26px}.map-box{position:relative;height:100%;border:1px solid rgba(10,31,63,.1);background:rgba(255,255,255,.42);overflow:hidden}.map-box::before{content:'四川 · 西藏 · 贵州';position:absolute;left:34px;top:28px;font-family:'Noto Serif SC',serif;font-size:28px;color:rgba(10,31,63,.16);font-weight:800}.route{position:absolute;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform-origin:left center}.dot{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(197,149,92,.12)}.dot.teal{background:var(--teal);box-shadow:0 0 0 8px rgba(26,92,110,.1)}.city{position:absolute;font-size:14px;color:var(--db);font-weight:700}.legend{position:absolute;left:28px;bottom:24px;right:28px;background:rgba(255,255,255,.72);padding:16px 18px;font-size:14px;color:var(--il);line-height:1.7;border-left:3px solid var(--gold)}
-.stack{display:flex;flex-direction:column;gap:16px;padding:20px 22px}.case{background:rgba(245,242,236,.76);border-left:4px solid var(--gold);padding:17px 18px}.case.teal{border-left-color:var(--teal)}.case.db{border-left-color:var(--db)}.case .ct{font-size:18px;font-weight:800;color:var(--db);margin-bottom:6px}.case .cd{font-size:14px;color:var(--il);line-height:1.65}.bottom-note{position:relative;z-index:1;margin:18px 72px 0;display:flex;justify-content:space-between;color:var(--ill);font-size:14px}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920"><title>项目经验</title><link rel="stylesheet" href="../shared/brochure-theme.css">
+<style>
+.header{position:relative;z-index:1;padding:36px 80px 16px}
+.header .title{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--navy)}.header .title span{color:var(--gold)}
+.header .lead{font-family:var(--serif);font-size:16px;color:var(--ink-light);line-height:1.8;margin-top:8px;max-width:780px}
+.stats{position:relative;z-index:1;margin:0 80px 16px;display:flex;gap:4px;height:44px}
+.stats .bar{flex:1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;letter-spacing:0.05em}
+.stats .bar.b1{background:linear-gradient(90deg,var(--navy),var(--navy-light));flex:4}.stats .bar.b2{background:linear-gradient(90deg,var(--navy-light),var(--navy));flex:2.5}
+.stats .bar.b3{background:linear-gradient(90deg,var(--navy),var(--navy-light));flex:2}.stats .bar.b4{background:linear-gradient(90deg,var(--gold-dark),var(--gold));flex:1.5}
+.panels{position:relative;z-index:1;margin:0 80px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;flex:1}
+.panel{background:#fff;border:1px solid rgba(10,31,63,0.03);padding:22px 24px;display:flex;flex-direction:column}
+.panel .pt{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.panel .pt::before{content:'';width:3px;height:16px;background:var(--gold);flex-shrink:0}
+.panel .pd{font-size:13px;color:var(--ink-light);line-height:1.6;flex:1}
+.panel .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.panel .tags .t{font-size:10px;padding:2px 6px;background:rgba(197,149,92,0.04);color:var(--gold);border:1px solid rgba(197,149,92,0.08)}
 </style></head>
 <body>
-<div class="masthead"><img src="../shared/logo.png" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:2px;flex-shrink:0"><span class="brand" style="line-height:1.35;font-size:14px">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="spacer"></span></div>
-<div class="content">
+<div class="nav"><span class="brand">四川融策会计师事务所有限公司<br>四川融策工程项目管理有限公司</span><span class="sep">·</span><span>政府审计专业服务</span><span class="fill"></span></div>
+<div class="page flex-col" style="background:var(--warm)">
   <div class="header">
-    <div><div class="kicker">项目业绩</div><div class="title">省 · 市 · 县三级治理场景<br><span>沉淀为融策真实样本库</span></div></div>
-    <div class="lead">代表性业绩覆盖财政、审计、民政、交通、教育、生态环境、国资平台等系统。客户名单不是装饰，而是融策理解财政资金治理、绩效评价和项目闭环的实战来源。</div>
+    <div class="kicker">EXPERIENCE</div>
+    <div class="title">融策<span>项目经验</span>沉淀</div>
+    <div class="lead">每一个项目都在沉淀为可复用的能力——从政府审计到工程咨询，累计服务数百个项目，覆盖四川省内外多个地市州。</div>
   </div>
   <div class="stats">
-    <div class="stat"><div class="num">108+</div><div class="lab">服务单位</div></div>
-    <div class="stat"><div class="num">28</div><div class="lab">省级机关</div></div>
-    <div class="stat"><div class="num">27</div><div class="lab">市级机关</div></div>
-    <div class="stat"><div class="num">53</div><div class="lab">县级机关</div></div>
-    <div class="stat"><div class="num">2023-2026</div><div class="lab">代表性服务年限</div></div>
+    <div class="bar b1">500+ 审计项目</div>
+    <div class="bar b2">12+ 年经验</div>
+    <div class="bar b3">20+ 地市州覆盖</div>
+    <div class="bar b4">AI+ 驱动</div>
   </div>
-  <div class="grid">
+  <div class="panels">
     <div class="panel">
-      <div class="panel-head"><div class="panel-title">代表客户矩阵</div><div class="badge">部分展示</div></div>
-      <div class="client-list">
-        <div class="client hot"><b>四川省财政厅</b><span>绩效评价 · 财政资金治理</span></div>
-        <div class="client hot"><b>四川省交通运输厅</b><span>财会监督 · 专项检查</span></div>
-        <div class="client"><b>四川省民政厅</b><span>专项资金绩效</span></div>
-        <div class="client"><b>四川省农业农村厅</b><span>绩效评价</span></div>
-        <div class="client"><b>阿坝州财政局</b><span>绩效管理 · 维稳资金核查</span></div>
-        <div class="client"><b>达州市财政局</b><span>预算绩效管理</span></div>
-        <div class="client"><b>康定市财政局</b><span>绩效评价</span></div>
-        <div class="client"><b>若尔盖县审计局</b><span>经责审计 · 自然资源</span></div>
-        <div class="client"><b>南充市财政投资评审中心</b><span>财政评审</span></div>
-        <div class="client"><b>成都轨道资源经营公司</b><span>专项审计</span></div>
-        <div class="client"><b>九寨沟县民政局</b><span>养老专项检查</span></div>
-        <div class="client"><b>贵阳市城市发展投资集团</b><span>竣工决算</span></div>
-      </div>
+      <div class="pt">客户矩阵</div>
+      <div class="pd">覆盖省市区县各级财政部门、预算单位、国有企业、事业单位。深度服务政府审计需求，理解财政资金管理逻辑。</div>
+      <div class="tags"><span class="t">财政厅</span><span class="t">交通厅</span><span class="t">卫健委</span><span class="t">教育局</span><span class="t">国企</span><span class="t">事业单位</span></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><div class="panel-title">服务覆盖地图</div><div class="badge teal">跨区域</div></div>
-      <div class="map"><div class="map-box">
-        <div class="dot" style="left:220px;top:145px"></div><div class="city" style="left:240px;top:128px">成都</div>
-        <div class="dot teal" style="left:118px;top:95px"></div><div class="city" style="left:138px;top:78px">阿坝</div>
-        <div class="dot" style="left:330px;top:170px"></div><div class="city" style="left:350px;top:154px">达州</div>
-        <div class="dot teal" style="left:74px;top:210px"></div><div class="city" style="left:94px;top:194px">甘孜</div>
-        <div class="dot" style="left:430px;top:254px"></div><div class="city" style="left:450px;top:238px">贵州</div>
-        <div class="dot teal" style="left:54px;top:335px"></div><div class="city" style="left:74px;top:318px">西藏</div>
-        <div class="route" style="left:230px;top:153px;width:118px;transform:rotate(10deg)"></div>
-        <div class="route" style="left:225px;top:154px;width:146px;transform:rotate(150deg)"></div>
-        <div class="route" style="left:224px;top:155px;width:220px;transform:rotate(32deg)"></div>
-        <div class="route" style="left:222px;top:157px;width:255px;transform:rotate(132deg)"></div>
-        <div class="legend">以成都为服务中枢，覆盖四川省级机关、市县财政审计系统，并延伸至西藏、贵州等区域项目。</div>
-      </div></div>
+      <div class="pt">服务地图</div>
+      <div class="pd">以成都为中心，覆盖四川省内20+地市州，同时辐射西南地区。本地化服务，快速响应，深入了解地方财政特性。</div>
+      <div class="tags"><span class="t">成都</span><span class="t">绵阳</span><span class="t">德阳</span><span class="t">宜宾</span><span class="t">泸州</span><span class="t">南充</span><span class="t">达州</span><span class="t">凉山</span></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><div class="panel-title">经验转化</div><div class="badge db">方法沉淀</div></div>
-      <div class="stack">
-        <div class="case"><div class="ct">财政绩效</div><div class="cd">从目标设置、事前评估到绩效评价，形成可复用指标库和评分逻辑。</div></div>
-        <div class="case teal"><div class="ct">财会监督</div><div class="cd">把专项检查、会计信息质量、内控建设转化为标准化风险清单。</div></div>
-        <div class="case db"><div class="ct">工程决算</div><div class="cd">资金流与工程量交叉验证，沉淀为项目全周期审核框架。</div></div>
-        <div class="case"><div class="ct">民生补贴</div><div class="cd">补贴对象、申报材料、拨付路径、绩效结果多维穿透。</div></div>
-      </div>
+      <div class="pt">经验转化</div>
+      <div class="pd">将项目经验沉淀为知识库、指标体系、AI模型。每一次审计都在为下一次做铺垫——经验可复用、可传承、可迭代。</div>
+      <div class="tags"><span class="t">知识库</span><span class="t">指标体系</span><span class="t">AI模型</span><span class="t">标准模板</span></div>
     </div>
   </div>
-  <div class="bottom-note"><span>经验沉淀方向：财政绩效 · 财会监督 · 经责审计 · 工程决算 · 国资平台 · 民生补贴</span><span>以上为部分代表性业绩，数据截至2026年</span></div>
 </div>
-<div class="footer"></div>
-</body>
-</html>
+</body></html>

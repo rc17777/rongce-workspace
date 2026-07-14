@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}融策审计驾驶舱{% endblock %}</title>
+<link rel="stylesheet" href="/static/css/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">🛡️</span>
+    <span class="brand-text">融策审计驾驶舱</span>
+  </div>
+  <div class="nav-project">
+    <span class="project-code">{{ project.code }}</span>
+    <span class="project-name">{{ project.name }}</span>
+    <span class="project-status status-{{ 'done' if project.status == '已完成' else 'active' }}">{{ project.status }}</span>
+  </div>
+  <div class="nav-links">
+    <a href="/" class="{% if request.path == '/' %}active{% endif %}">📊 总览</a>
+    <a href="/financial" class="{% if request.path == '/financial' %}active{% endif %}">💰 财务</a>
+    <a href="/evidence" class="{% if request.path == '/evidence' %}active{% endif %}">🔗 证据链</a>
+    <a href="/workpapers" class="{% if request.path == '/workpapers' %}active{% endif %}">📋 底稿</a>
+    <a href="/ai-assistant" class="{% if request.path == '/ai-assistant' %}active{% endif %}">🤖 AI助手</a>
+    <a href="/data/data" class="{% if request.path.startswith('/data') %}active{% endif %}">📂 数据</a>
+  </div>
+</nav>
+<main class="main-content">
+{% block content %}{% endblock %}
+</main>
+<script src="/static/js/app.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -7,9 +7,9 @@ import sys, os, json, pickle, re
 sys.stdout.reconfigure(encoding='utf-8')
 
 INDEX_FILE = r'D:\openclaw-workspace\.rag_index\rag_index.json'
-ZHIPU_API = '6fd63d70ad8944e597ab5c2d3609fbf1.U41vqcRuzi8V8EBH'
-ZHIPU_URL = 'https://open.bigmodel.cn/api/paas/v4/chat/completions'
-ZHIPU_MODEL = 'glm-4-plus'
+DS_API_KEY = os.environ.get('DEEPSEEK_API_KEY', '')
+DS_API_URL = 'https://api.deepseek.com/v1/chat/completions'
+DS_MODEL = 'deepseek-chat'
 
 print("Loading index...")
 with open(INDEX_FILE, 'rb') as f:
@@ -18,12 +18,32 @@ vectorizer = data['vectorizer']
 tfidf_matrix = data['matrix']
 texts = data['texts']
 all_chunks = data['chunks']
+_index_mtime = os.path.getmtime(INDEX_FILE)
 print(f"Loaded {len(all_chunks)} chunks")
 
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
 
+def ensure_fresh_index():
+    """索引文件重建后自动重载，避免内存里的旧索引继续答题 (2026-07-15)"""
+    global vectorizer, tfidf_matrix, texts, all_chunks, _index_mtime
+    try:
+        m = os.path.getmtime(INDEX_FILE)
+        if m != _index_mtime:
+            print(f"[reload] index changed, reloading...")
+            with open(INDEX_FILE, 'rb') as f:
+                d = pickle.load(f)
+            vectorizer = d['vectorizer']
+            tfidf_matrix = d['matrix']
+            texts = d['texts']
+            all_chunks = d['chunks']
+            _index_mtime = m
+            print(f"[reload] done, {len(all_chunks)} chunks")
+    except Exception as e:
+        print(f"[reload] failed: {e}")
+
 def search(query, top_k=5):
+    ensure_fresh_index()
     q_vec = vectorizer.transform([query])
     scores = cosine_similarity(q_vec, tfidf_matrix)[0]
     top_idx = scores.argsort()[::-1][:top_k]
@@ -56,10 +76,10 @@ def ask(query):
     
     try:
         resp = requests.post(
-            ZHIPU_URL,
-            headers={'Authorization': f'Bearer {ZHIPU_API}', 'Content-Type': 'application/json'},
+            DS_API_URL,
+            headers={'Authorization': f'Bearer {DS_API_KEY}', 'Content-Type': 'application/json'},
             json={
-                'model': ZHIPU_MODEL,
+                'model': DS_MODEL,
                 'messages': [
                     {'role': 'system', 'content': '你是一名中国审计专家，精通政府审计、工程审计、财务审计。回答专业简洁。'},
                     {'role': 'user', 'content': prompt}
@@ -209,6 +229,6 @@ def api_ask():
 if __name__ == '__main__':
     print("\n" + "="*50)
     print(" 融策AI审计知识库已启动!")
-    print(" 浏览器访问: http://localhost:5000")
+    print(" 浏览器访问: http://localhost:5001")
     print("="*50 + "\n")
-    app.run(host='127.0.0.1', port=5000, debug=False, threaded=True)
+    app.run(host='127.0.0.1', port=5001, debug=False, threaded=True)

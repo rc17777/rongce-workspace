@@ -1,0 +1,30 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="300" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#17A589;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="10" y="10" width="1100" height="260" as="geometry"/>
+    </mxCell>
+    <mxCell id="t1" value="&lt;b&gt;三、审核范围与审核内容&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#FFFFFF;" parent="1" vertex="1">
+      <mxGeometry x="10" y="25" width="1100" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line" value="" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;strokeColor=#A3E4D7;fontFamily=Microsoft YaHei;fontSize=12;" parent="1" vertex="1">
+      <mxGeometry x="30" y="65" width="1060" height="2" as="geometry"/>
+    </mxCell>
+    <mxCell id="k1" value="💰 工程造价审核（6项）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16A085;strokeColor=#138D75;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="30" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k2" value="📊 财务收支审核（6项）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16A085;strokeColor=#138D75;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="300" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k3" value="🏗 建设管理规范性审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16A085;strokeColor=#138D75;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="570" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="k4" value="📦 资产管理完整性审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16A085;strokeColor=#138D75;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="840" y="80" width="240" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1" value="• 工程量/综合单价/材料价格/措施费/变更签证/规费税金&#10;• 资金来源合规/资金使用合规/建设成本核算/资产转固/资金结余/基建收入&#10;• 基本建设程序/招投标/合同管理/工程监理/竣工验收审查&#10;• 资产清单/移交手续/无形资产处理  •  概算执行/结算审核/决算报表/会计基础" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=10;fontColor=#E8F8F5;" parent="1" vertex="1">
+      <mxGeometry x="30" y="140" width="1060" height="110" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

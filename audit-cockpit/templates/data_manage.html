@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+{% block title %}数据管理 - {{ project.name }}{% endblock %}
+{% block content %}
+<div class="data-page">
+  <div class="page-header">
+    <h2>📂 数据管理</h2>
+    <p class="subtitle">上传合同·招投标文件·财务报表，AI自动识别并结构化</p>
+  </div>
+
+  <div class="grid-2col">
+    <!-- 左：上传区 -->
+    <div class="panel">
+      <div class="panel-header">📤 上传文件</div>
+      <div class="panel-body">
+        <!-- 项目选择 -->
+        <div class="form-group">
+          <label>所属项目</label>
+          <select id="uploadProject" class="form-select" onchange="loadFiles()">
+            <option value="default">当前项目：{{ project.name }}</option>
+          </select>
+        </div>
+
+        <!-- 文件类型 -->
+        <div class="form-group">
+          <label>文件类型</label>
+          <div class="category-btns">
+            <button class="cat-btn active" data-cat="contract" onclick="selectCat('contract', this)">📄 合同</button>
+            <button class="cat-btn" data-cat="bidding" onclick="selectCat('bidding', this)">🎯 招投标</button>
+            <button class="cat-btn" data-cat="financial" onclick="selectCat('financial', this)">💰 财务数据</button>
+            <button class="cat-btn" data-cat="other" onclick="selectCat('other', this)">📎 其他</button>
+          </div>
+        </div>
+
+        <!-- 拖拽上传区 -->
+        <div class="upload-zone" id="uploadZone"
+             ondragover="this.classList.add('dragover')"
+             ondragleave="this.classList.remove('dragover')"
+             ondrop="handleDrop(event)">
+          <div class="upload-icon">📁</div>
+          <div class="upload-text">拖拽文件到此处，或点击选择</div>
+          <div class="upload-hint">支持 PDF · Word · Excel · CSV · 图片 · ZIP</div>
+          <input type="file" id="fileInput" multiple hidden accept=".pdf,.docx,.xlsx,.xls,.csv,.jpg,.png,.zip"
+                 onchange="uploadFiles(this.files)">
+          <button class="btn-primary" onclick="document.getElementById('fileInput').click()">选择文件</button>
+        </div>
+
+        <!-- 上传进度 -->
+        <div id="uploadStatus" class="upload-status"></div>
+
+        <!-- 快捷：对接已有项目 -->
+        <div class="quick-link">
+          <h4>🔗 对接现有审计项目</h4>
+          <p>如果已有 audit-blackboard 项目数据，直接接入：</p>
+          <button class="btn-sm" onclick="loadBlackboardProjects()">扫描已有项目</button>
+          <div id="bbProjects" class="bb-project-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右：文件列表 -->
+    <div class="panel">
+      <div class="panel-header">
+        📋 已上传文件
+        <span style="float:right;font-size:12px;">
+          <select id="filterCat" onchange="loadFiles()" style="background:var(--bg-card);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:2px 8px;">
+            <option value="">全部类型</option>
+            <option value="contract">合同</option>
+            <option value="bidding">招投标</option>
+            <option value="financial">财务数据</option>
+            <option value="other">其他</option>
+          </select>
+        </span>
+      </div>
+      <div class="panel-body">
+        <div id="fileList" class="file-list">
+          <div class="file-empty">暂无文件，请上传合同、招投标或财务数据</div>
+        </div>
+
+        <!-- Excel导入 -->
+        <div class="excel-import-section">
+          <h4>📊 Excel快速导入</h4>
+          <p>上传Excel财务报表，自动识别科目表/余额表/序时账</p>
+          <input type="file" id="excelInput" hidden accept=".xlsx,.xls"
+                 onchange="importExcel(this.files[0])">
+          <button class="btn-primary" onclick="document.getElementById('excelInput').click()">导入Excel → 结构化数据</button>
+          <div id="excelResult" class="excel-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部：Excel预览 -->
+  <div class="panel" id="excelPreviewPanel" style="display:none;margin-top:16px;">
+    <div class="panel-header">📊 Excel数据预览 <button class="btn-sm" style="float:right" onclick="document.getElementById('excelPreviewPanel').style.display='none'">✕ 关闭</button></div>
+    <div class="panel-body">
+      <div class="excel-tabs" id="excelTabs"></div>
+      <div class="excel-table-wrap" id="excelTableWrap"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentCategory = 'contract';
+
+function selectCat(cat, btn) {
+  currentCategory = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+async function handleDrop(e) {
+  e.preventDefault();
+  e.target.classList.remove('dragover');
+  const files = e.dataTransfer.files;
+  await uploadFiles(files);
+}
+
+async function uploadFiles(files) {
+  if (!files || files.length === 0) return;
+  const form = new FormData();
+  for (let f of files) form.append('file', f);
+  form.append('category', currentCategory);
+  form.append('project', 'default');
+
+  const status = document.getElementById('uploadStatus');
+  status.innerHTML = '⏳ 上传中...';
+  
+  try {
+    const resp = await fetch('/data/api/upload', { method: 'POST', body: form });
+    const data = await resp.json();
+    if (data.success) {
+      let html = '<div>✅ 上传成功：</div>';
+      for (let f of data.files) {
+        html += `<div class="upload-result-item">
+          📄 ${f.original} (${(f.size/1024).toFixed(1)}KB)
+          ${f.preview ? `<div class="preview-box">${f.preview.substring(0, 200)}...</div>` : ''}
+        </div>`;
+      }
+      status.innerHTML = html;
+      loadFiles();
+    } else {
+      status.innerHTML = '❌ 上传失败';
+    }
+  } catch(e) {
+    status.innerHTML = '❌ 网络错误';
+  }
+}
+
+async function loadFiles() {
+  const cat = document.getElementById('filterCat').value;
+  const resp = await fetch(`/data/api/files?category=${cat}`);
+  const data = await resp.json();
+  const el = document.getElementById('fileList');
+  
+  if (data.files.length === 0) {
+    el.innerHTML = '<div class="file-empty">暂无文件</div>';
+    return;
+  }
+  
+  el.innerHTML = data.files.map(f => `
+    <div class="file-item">
+      <div class="file-icon">${getFileIcon(f.name)}</div>
+      <div class="file-info">
+        <div class="file-name">${f.name}</div>
+        <div class="file-meta">
+          <span class="file-cat cat-${f.category}">${f.category}</span>
+          <span>${(f.size/1024).toFixed(1)}KB</span>
+          <span>${f.modified}</span>
+        </div>
+      </div>
+      <button class="btn-sm" onclick="deleteFile('${f.category}','${f.name}')">🗑️</button>
+    </div>
+  `).join('');
+}
+
+function getFileIcon(name) {
+  if (name.endsWith('.pdf')) return '📕';
+  if (name.endsWith('.docx')) return '📘';
+  if (name.endsWith('.xlsx') || name.endsWith('.xls')) return '📗';
+  if (name.endsWith('.csv')) return '📄';
+  if (name.endsWith('.jpg') || name.endsWith('.png')) return '🖼️';
+  if (name.endsWith('.zip')) return '📦';
+  return '📎';
+}
+
+async function deleteFile(cat, name) {
+  if (!confirm(`删除 ${name}？`)) return;
+  await fetch('/data/api/files/delete', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({project: 'default', category: cat, filename: name})
+  });
+  loadFiles();
+}
+
+async function importExcel(file) {
+  if (!file) return;
+  const form = new FormData();
+  form.append('file', file);
+  
+  const el = document.getElementById('excelResult');
+  el.innerHTML = '⏳ 解析中...';
+  
+  try {
+    const resp = await fetch('/data/api/import/excel', { method: 'POST', body: form });
+    const data = await resp.json();
+    if (data.success) {
+      el.innerHTML = `<div class="excel-success">✅ ${data.filename} 解析成功</div>
+        ${data.recommendation.map(r => `<div class="excel-reco">${r}</div>`).join('')}
+        <button class="btn-sm" onclick="previewExcel()" style="margin-top:8px;">📊 预览数据</button>`;
+      window._excelData = data;
+    } else {
+      el.innerHTML = `<div class="excel-error">❌ ${data.error}</div>`;
+    }
+  } catch(e) {
+    el.innerHTML = '❌ 解析失败';
+  }
+}
+
+function previewExcel() {
+  const data = window._excelData;
+  if (!data) return;
+  
+  const panel = document.getElementById('excelPreviewPanel');
+  const tabs = document.getElementById('excelTabs');
+  const wrap = document.getElementById('excelTableWrap');
+  
+  panel.style.display = 'block';
+  tabs.innerHTML = Object.keys(data.sheets).map((s, i) =>
+    `<button class="sheet-tab ${i===0?'active':''}" onclick="showSheet('${s}')">${s}</button>`
+  ).join('');
+  
+  showSheet(Object.keys(data.sheets)[0]);
+}
+
+function showSheet(name) {
+  const data = window._excelData;
+  const sheet = data.sheets[name];
+  const wrap = document.getElementById('excelTableWrap');
+  
+  document.querySelectorAll('.sheet-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  let html = '<table class="data-table"><thead><tr>';
+  for (let h of sheet.headers) html += `<th>${h}</th>`;
+  html += '</tr></thead><tbody>';
+  for (let row of sheet.rows.slice(0, 50)) {
+    html += '<tr>';
+    for (let cell of row) html += `<td>${cell}</td>`;
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  if (sheet.total_rows > 50) html += `<div style="padding:8px;color:var(--text-dim);">仅显示前50行，共${sheet.total_rows}行</div>`;
+  wrap.innerHTML = html;
+}
+
+async function loadBlackboardProjects() {
+  const resp = await fetch('/data/api/projects/blackboard');
+  const data = await resp.json();
+  const el = document.getElementById('bbProjects');
+  if (data.projects.length === 0) {
+    el.innerHTML = '<div class="bb-empty">未找到已有项目</div>';
+    return;
+  }
+  el.innerHTML = data.projects.map(p => `
+    <div class="bb-project-item">
+      <div>📁 ${p.name}</div>
+      <div style="font-size:11px;color:var(--text-dim);">${p.file_count}个文件</div>
+    </div>
+  `).join('');
+}
+
+// 初始加载
+loadFiles();
+loadBlackboardProjects();
+</script>
+{% endblock %}

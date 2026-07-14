@@ -60,8 +60,16 @@ agents:
     tasks:
       - "scripts/prune_knowledge.py"      # 僵尸文件清理
       - "scripts/rag_bridge.py --sync"    # RAG↔Obsidian同步
+      - "scripts/rag_auto_query.py daily"  # RAG每日精选推送
     schedule: "daily_at_14:00"
-    timeout_minutes: 5
+    timeout_minutes: 10
+
+  # 模型路由Agent（引擎内部使用）
+  model_router:
+    label: "路由控制器"
+    tool: "scripts/model_routing.py"
+    schedule: "daily_at_06:00"
+    timeout_minutes: 2
 
   # 招标采集Agent
   tender_hunter:

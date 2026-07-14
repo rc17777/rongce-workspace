@@ -11,17 +11,19 @@ const outputDir = 'C:\\Users\\scrccpa\\.openclaw\\workspace\\huashu-demo\\output
 // 
 // BUT our design is 1920×1358. We scale it UP with CSS transform.
 const DESIGN_W = 1920;
-const DESIGN_H = 1358;
+const DESIGN_H = 1080;
 const VP_W = 1122;  // Exact A4 CSS pixels at 96 DPI
-const VP_H = 794;
+const VP_H = 631;   // Keep 16:9 ratio within A4 width
 const SCALE_FACTOR = VP_W / DESIGN_W;  // Fit design into A4 viewport
 
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
 const slides = [
   '01-cover.html', '02-about.html', '03-services.html',
+  '03a-transition.html',
   '04-jingze.html', '05-performance.html', '06-special-fund.html',
-  '07-procurement.html', '08-engineering.html', '09-subsidy.html',
+  '07-procurement.html', '08b-subsidy.html', '08c-costbenefit.html',
+  '08-engineering.html', '09-subsidy.html', '09a-transition.html',
   '10-methodology.html', '11d-party.html', '11-experience.html', '12-contact.html'
 ];
 
@@ -34,9 +36,8 @@ const slides = [
 
   for (const slide of slides) {
     const page = await context.newPage();
-    await page.goto('file://' + path.join(slidesDir, slide), { waitUntil: 'networkidle', timeout: 30000 });
-    await page.waitForFunction(() => document.fonts.ready, { timeout: 8000 }).catch(() => {});
-    await page.waitForTimeout(1500);
+    await page.goto('file://' + path.join(slidesDir, slide), { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.waitForTimeout(3000);
 
     // Scale 1920×1358 design to fit within 1122×794 viewport
     // Also adjust body to use viewport dimensions for proper scaling
@@ -55,7 +56,7 @@ const slides = [
     // Text stays vector in PDF
     const pdfBuffer = await page.pdf({
       width: '297mm',
-      height: '210mm',
+      height: '167mm',
       printBackground: true,
     });
 

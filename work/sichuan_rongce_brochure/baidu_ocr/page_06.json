@@ -1,0 +1,842 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.7205207944,
+        "min": 0.7205207944,
+        "variance": 0
+      },
+      "words": "高",
+      "location": {
+        "top": 80,
+        "left": 110,
+        "width": 23,
+        "height": 28
+      }
+    },
+    {
+      "probability": {
+        "average": 0.8836227655,
+        "min": 0.5483442545,
+        "variance": 0.02907115407
+      },
+      "words": "RONG CE",
+      "location": {
+        "top": 89,
+        "left": 426,
+        "width": 215,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999142468,
+        "min": 0.9973115921,
+        "variance": 7.649585996e-07
+      },
+      "words": "公开公正用心服务诚信为本服务至上追求卓越",
+      "location": {
+        "top": 90,
+        "left": 1252,
+        "width": 703,
+        "height": 24
+      }
+    },
+    {
+      "probability": {
+        "average": 0.6744874716,
+        "min": 0.4356286526,
+        "variance": 0.05705353618
+      },
+      "words": "融策",
+      "location": {
+        "top": 117,
+        "left": 111,
+        "width": 21,
+        "height": 11
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996850491,
+        "min": 0.9961243272,
+        "variance": 4.542156375e-07
+      },
+      "words": "公司一贯坚持“客观公正，实事求是”的执业精神，我们的工作受到工商、财政、审计等",
+      "location": {
+        "top": 256,
+        "left": 1279,
+        "width": 669,
+        "height": 19
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999489188,
+        "min": 0.9998977184,
+        "variance": 1.329954813e-09
+      },
+      "words": "经营范围",
+      "location": {
+        "top": 265,
+        "left": 124,
+        "width": 303,
+        "height": 74
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997789264,
+        "min": 0.9976122379,
+        "variance": 2.063104318e-07
+      },
+      "words": "行政部门及行业协会的一致评。面对成绩，我们将再接再厉，以更加严谨的态度、创新的",
+      "location": {
+        "top": 282,
+        "left": 1278,
+        "width": 670,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993466735,
+        "min": 0.9867385626,
+        "variance": 4.504446224e-06
+      },
+      "words": "思维和高度的责任心为客户提供全面周到的服务，与客户一道共同发展，共步卓越！",
+      "location": {
+        "top": 307,
+        "left": 1279,
+        "width": 626,
+        "height": 18
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9990671277,
+        "min": 0.9982588887,
+        "variance": 1.531676332e-07
+      },
+      "words": "BUSINESS",
+      "location": {
+        "top": 359,
+        "left": 126,
+        "width": 169,
+        "height": 41
+      }
+    },
+    {
+      "probability": {
+        "average": 0.989104867,
+        "min": 0.9483744502,
+        "variance": 0.0004148307198
+      },
+      "words": "SCOPE",
+      "location": {
+        "top": 407,
+        "left": 126,
+        "width": 116,
+        "height": 41
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999802113,
+        "min": 0.9999718666,
+        "variance": 5.932321301e-11
+      },
+      "words": "基本建设",
+      "location": {
+        "top": 430,
+        "left": 1477,
+        "width": 90,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999167919,
+        "min": 0.9996483326,
+        "variance": 1.498433555e-08
+      },
+      "words": "工程决算审核",
+      "location": {
+        "top": 464,
+        "left": 1477,
+        "width": 138,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999575019,
+        "min": 0.9999260902,
+        "variance": 3.372981894e-10
+      },
+      "words": "经济责任审计",
+      "location": {
+        "top": 464,
+        "left": 1820,
+        "width": 136,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998270869,
+        "min": 0.9990677238,
+        "variance": 8.066979262e-08
+      },
+      "words": "全过程预算绩效管理",
+      "location": {
+        "top": 517,
+        "left": 157,
+        "width": 206,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999747276,
+        "min": 0.9999549389,
+        "variance": 2.368546748e-10
+      },
+      "words": "财务报表审计",
+      "location": {
+        "top": 522,
+        "left": 535,
+        "width": 137,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999149442,
+        "min": 0.9997287393,
+        "variance": 5.66151126e-09
+      },
+      "words": "合并、分立、清算审计",
+      "location": {
+        "top": 538,
+        "left": 1194,
+        "width": 224,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996896982,
+        "min": 0.9995692372,
+        "variance": 1.451084941e-08
+      },
+      "words": "验资",
+      "location": {
+        "top": 553,
+        "left": 767,
+        "width": 44,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998194575,
+        "min": 0.9997010231,
+        "variance": 8.418220787e-09
+      },
+      "words": "资产清查",
+      "location": {
+        "top": 539,
+        "left": 1974,
+        "width": 90,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999569058,
+        "min": 0.9999219179,
+        "variance": 6.16200424e-10
+      },
+      "words": "内部控制审计",
+      "location": {
+        "top": 573,
+        "left": 347,
+        "width": 135,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999725819,
+        "min": 0.999956131,
+        "variance": 2.204790378e-10
+      },
+      "words": "财务收支审计",
+      "location": {
+        "top": 581,
+        "left": 1601,
+        "width": 136,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998979568,
+        "min": 0.9997704625,
+        "variance": 6.935625407e-09
+      },
+      "words": "(清产核资)",
+      "location": {
+        "top": 573,
+        "left": 1965,
+        "width": 107,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9996034503,
+        "min": 0.9988728166,
+        "variance": 1.846850637e-07
+      },
+      "words": "资产评估",
+      "location": {
+        "top": 643,
+        "left": 1776,
+        "width": 90,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9994565248,
+        "min": 0.9982402325,
+        "variance": 5.110578059e-07
+      },
+      "words": "房产评估",
+      "location": {
+        "top": 676,
+        "left": 1776,
+        "width": 91,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999815822,
+        "min": 0.9999536276,
+        "variance": 1.909832292e-10
+      },
+      "words": "财政监督检查",
+      "location": {
+        "top": 695,
+        "left": 787,
+        "width": 137,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9902079105,
+        "min": 0.9615906477,
+        "variance": 0.00027298645
+      },
+      "words": "债券申报",
+      "location": {
+        "top": 727,
+        "left": 569,
+        "width": 89,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999503493,
+        "min": 0.9998407364,
+        "variance": 2.547597688e-09
+      },
+      "words": "专项资金审计",
+      "location": {
+        "top": 750,
+        "left": 235,
+        "width": 135,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997327924,
+        "min": 0.9986159801,
+        "variance": 2.508810439e-07
+      },
+      "words": "审核工程预算",
+      "location": {
+        "top": 784,
+        "left": 1187,
+        "width": 138,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999945581,
+        "min": 0.9997343421,
+        "variance": 9.01496211e-09
+      },
+      "words": "工程预算服务",
+      "location": {
+        "top": 831,
+        "left": 1407,
+        "width": 135,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.99995929,
+        "min": 0.999858737,
+        "variance": 1.826260809e-09
+      },
+      "words": "全过程工程咨询",
+      "location": {
+        "top": 824,
+        "left": 1718,
+        "width": 160,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999337196,
+        "min": 0.999751389,
+        "variance": 7.426666837e-09
+      },
+      "words": "财务咨询服务",
+      "location": {
+        "top": 893,
+        "left": 1924,
+        "width": 134,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995479584,
+        "min": 0.9994014502,
+        "variance": 2.69481113e-08
+      },
+      "words": "跟踪审计",
+      "location": {
+        "top": 926,
+        "left": 850,
+        "width": 91,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999136925,
+        "min": 0.9997890592,
+        "variance": 5.967565109e-09
+      },
+      "words": "工程清单",
+      "location": {
+        "top": 950,
+        "left": 323,
+        "width": 87,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998637438,
+        "min": 0.9994550347,
+        "variance": 3.013714434e-08
+      },
+      "words": "及招标控制价编制",
+      "location": {
+        "top": 984,
+        "left": 321,
+        "width": 184,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9998428822,
+        "min": 0.9995304346,
+        "variance": 3.331694742e-08
+      },
+      "words": "项目咨询",
+      "location": {
+        "top": 975,
+        "left": 702,
+        "width": 89,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999262691,
+        "min": 0.9997505546,
+        "variance": 7.007247671e-09
+      },
+      "words": "工程结算审核",
+      "location": {
+        "top": 1009,
+        "left": 141,
+        "width": 138,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999768138,
+        "min": 0.9999326468,
+        "variance": 5.480830789e-10
+      },
+      "words": "企业管理咨询",
+      "location": {
+        "top": 1023,
+        "left": 1235,
+        "width": 136,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999189377,
+        "min": 0.99970752,
+        "variance": 8.729622358e-09
+      },
+      "words": "房地产营销策划",
+      "location": {
+        "top": 1015,
+        "left": 1511,
+        "width": 157,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997839928,
+        "min": 0.9993848801,
+        "variance": 5.602933939e-08
+      },
+      "words": "规划咨询",
+      "location": {
+        "top": 1041,
+        "left": 517,
+        "width": 89,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999670982,
+        "min": 0.9998806715,
+        "variance": 1.684343887e-09
+      },
+      "words": "商务信息咨询",
+      "location": {
+        "top": 1069,
+        "left": 1844,
+        "width": 136,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997919798,
+        "min": 0.9990502,
+        "variance": 9.882899832e-08
+      },
+      "words": "社会稳定性评估",
+      "location": {
+        "top": 1118,
+        "left": 1631,
+        "width": 162,
+        "height": 22
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999287724,
+        "min": 0.9996474981,
+        "variance": 9.227392184e-09
+      },
+      "words": "与财政绩效行业先行者合作",
+      "location": {
+        "top": 1278,
+        "left": 123,
+        "width": 492,
+        "height": 41
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9999064207,
+        "min": 0.9991264939,
+        "variance": 6.77131311e-08
+      },
+      "words": "上海闻政管理咨询公司",
+      "location": {
+        "top": 1340,
+        "left": 126,
+        "width": 229,
+        "height": 24
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9997608066,
+        "min": 0.9971904159,
+        "variance": 4.517852972e-07
+      },
+      "words": "中国财政学会绩效管理研究专业委员会",
+      "location": {
+        "top": 1375,
+        "left": 124,
+        "width": 392,
+        "height": 23
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9553228021,
+        "min": 0.8019739389,
+        "variance": 0.004671196453
+      },
+      "words": "PAGE 9/10",
+      "location": {
+        "top": 1358,
+        "left": 1968,
+        "width": 81,
+        "height": 28
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    },
+    {
+      "words_result_idx": [
+        6,
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8
+      ]
+    },
+    {
+      "words_result_idx": [
+        9
+      ]
+    },
+    {
+      "words_result_idx": [
+        10
+      ]
+    },
+    {
+      "words_result_idx": [
+        11
+      ]
+    },
+    {
+      "words_result_idx": [
+        12
+      ]
+    },
+    {
+      "words_result_idx": [
+        13
+      ]
+    },
+    {
+      "words_result_idx": [
+        14
+      ]
+    },
+    {
+      "words_result_idx": [
+        15
+      ]
+    },
+    {
+      "words_result_idx": [
+        16
+      ]
+    },
+    {
+      "words_result_idx": [
+        17
+      ]
+    },
+    {
+      "words_result_idx": [
+        18
+      ]
+    },
+    {
+      "words_result_idx": [
+        19
+      ]
+    },
+    {
+      "words_result_idx": [
+        20
+      ]
+    },
+    {
+      "words_result_idx": [
+        21
+      ]
+    },
+    {
+      "words_result_idx": [
+        22
+      ]
+    },
+    {
+      "words_result_idx": [
+        23
+      ]
+    },
+    {
+      "words_result_idx": [
+        24
+      ]
+    },
+    {
+      "words_result_idx": [
+        25
+      ]
+    },
+    {
+      "words_result_idx": [
+        26
+      ]
+    },
+    {
+      "words_result_idx": [
+        27
+      ]
+    },
+    {
+      "words_result_idx": [
+        28
+      ]
+    },
+    {
+      "words_result_idx": [
+        29
+      ]
+    },
+    {
+      "words_result_idx": [
+        30
+      ]
+    },
+    {
+      "words_result_idx": [
+        31
+      ]
+    },
+    {
+      "words_result_idx": [
+        32
+      ]
+    },
+    {
+      "words_result_idx": [
+        33
+      ]
+    },
+    {
+      "words_result_idx": [
+        34
+      ]
+    },
+    {
+      "words_result_idx": [
+        35
+      ]
+    },
+    {
+      "words_result_idx": [
+        36
+      ]
+    },
+    {
+      "words_result_idx": [
+        37
+      ]
+    },
+    {
+      "words_result_idx": [
+        38
+      ]
+    },
+    {
+      "words_result_idx": [
+        39
+      ]
+    },
+    {
+      "words_result_idx": [
+        40
+      ]
+    },
+    {
+      "words_result_idx": [
+        41
+      ]
+    },
+    {
+      "words_result_idx": [
+        42
+      ]
+    },
+    {
+      "words_result_idx": [
+        43
+      ]
+    }
+  ],
+  "paragraphs_result_num": 43,
+  "words_result_num": 44,
+  "direction": 0,
+  "log_id": 2074140664443721821
+}

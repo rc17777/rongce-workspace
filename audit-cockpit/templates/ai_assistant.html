@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block title %}AI审计助手 - {{ project.name }}{% endblock %}
+{% block content %}
+<div class="ai-page">
+  <div class="page-header">
+    <h2>🤖 AI审计助手</h2>
+    <p class="subtitle">7个AI Agent协同作业 — 在任何审计环节向AI提问，回答追溯到证据</p>
+  </div>
+
+  <div class="grid-2col">
+    <!-- 左侧：Agent面板 -->
+    <div class="panel">
+      <div class="panel-header">🧩 审计Agent团队</div>
+      <div class="panel-body">
+        <div class="agent-list">
+          <div class="agent-card">
+            <div class="agent-icon">🔍</div>
+            <div class="agent-info">
+              <div class="agent-name">数据侦察Agent</div>
+              <div class="agent-desc">余额表·序时账·银行流水自动采集与异常标记</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">📄</div>
+            <div class="agent-info">
+              <div class="agent-name">合同猎犬Agent</div>
+              <div class="agent-desc">合同条款提取·履约追踪·违约检测</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">🎯</div>
+            <div class="agent-info">
+              <div class="agent-name">投标猎手Agent</div>
+              <div class="agent-desc">11层围标检测·元数据交叉·报价分析</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">⚖️</div>
+            <div class="agent-info">
+              <div class="agent-name">法规审查Agent</div>
+              <div class="agent-desc">准则对照·政策比对·合规风险扫描</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">📝</div>
+            <div class="agent-info">
+              <div class="agent-name">底稿工匠Agent</div>
+              <div class="agent-desc">底稿自动生成·数据填充·勾稽检查</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">📊</div>
+            <div class="agent-info">
+              <div class="agent-name">报告写手Agent</div>
+              <div class="agent-desc">审计报告段落生成·数据图表嵌入</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-icon">🛡️</div>
+            <div class="agent-info">
+              <div class="agent-name">复核哨兵Agent</div>
+              <div class="agent-desc">15维报告复核·全链路勾稽·证据链检查</div>
+            </div>
+            <div class="agent-status active">活跃</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧：对话 -->
+    <div class="panel chat-panel">
+      <div class="panel-header">💬 审计对话 <span id="ragStatus" style="float:right;font-size:11px;font-weight:400;">检查中...</span></div>
+      <div class="panel-body">
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-msg ai">
+            <div class="msg-sender">🤖 融策AI审计助手</div>
+            <div class="msg-text">欢迎来到{{ project.name }}审计驾驶舱！我是7个AI Agent的统一对话入口。你可以直接提问，我会自动路由到对应的Agent处理，所有回答都会追溯到原始证据。</div>
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" class="ai-input"
+                 placeholder="@数据侦察 应收账款的账龄结构是怎样的？"
+                 onkeydown="if(event.key==='Enter')sendChat()">
+          <button class="btn-primary" onclick="sendChat()">发送</button>
+        </div>
+        <div class="quick-prompts">
+          <span>快捷提问：</span>
+          <button class="btn-sm prompt-btn" onclick="quickAsk('停车场收费异常的原因是什么？')">🚗 停车场收费</button>
+          <button class="btn-sm prompt-btn" onclick="quickAsk('商户租金拖欠情况汇总')">🏪 租金拖欠</button>
+          <button class="btn-sm prompt-btn" onclick="quickAsk('检查差旅费审批合规性')">✈️ 差旅合规</button>
+          <button class="btn-sm prompt-btn" onclick="quickAsk('合同到期未续的风险评估')">📋 合同风险</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// RAG状态检查
+fetch('/api/rag/status').then(r=>r.json()).then(d=>{
+  const el = document.getElementById('ragStatus');
+  if (d.rag) { el.innerHTML='🟢 RAG在线'; el.style.color='#10B981'; }
+  else { el.innerHTML='🔴 RAG离线'; el.style.color='#EF4444'; }
+});
+
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const q = input.value.trim();
+  if (!q) return;
+  const msgs = document.getElementById('chatMessages');
+  msgs.innerHTML += `<div class="chat-msg user"><div class="msg-sender">👤 你</div><div class="msg-text">${q}</div></div>`;
+  input.value = '';
+  msgs.innerHTML += '<div class="chat-msg ai"><div class="msg-sender">🤖 融策AI</div><div class="msg-text">思考中...</div></div>';
+  msgs.scrollTop = msgs.scrollHeight;
+  try {
+    const resp = await fetch('/api/ask', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, context: '{{ project.name }}'})
+    });
+    const data = await resp.json();
+    const last = msgs.lastElementChild;
+    last.querySelector('.msg-text').innerHTML = data.answer.replace(/\n/g, '<br>');
+  } catch(e) {
+    const last = msgs.lastElementChild;
+    last.querySelector('.msg-text').textContent = '抱歉，查询失败，请重试。';
+  }
+}
+function quickAsk(q) {
+  document.getElementById('chatInput').value = q;
+  sendChat();
+}
+</script>
+{% endblock %}

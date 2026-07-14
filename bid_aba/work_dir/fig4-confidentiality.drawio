@@ -1,0 +1,61 @@
+<mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <mxCell id="title" value="&lt;b&gt;保密管理体系架构图&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#2C3E50;" vertex="1" parent="1">
+      <mxGeometry x="250" y="10" width="300" height="30" as="geometry"/>
+    </mxCell>
+    
+    <!-- 保密承诺 -->
+    <mxCell id="c1" value="&lt;b&gt;保密承诺书签署&lt;/b&gt;&lt;br&gt;全部项目参与人员签署&lt;br&gt;项目启动前完成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="50" y="80" width="200" height="70" as="geometry"/>
+    </mxCell>
+    <!-- 资料保密 -->
+    <mxCell id="c2" value="&lt;b&gt;资料保密管理&lt;/b&gt;&lt;br&gt;• 专人登记保管&lt;br&gt;• 借阅登记制度&lt;br&gt;• 严禁拍照外传" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="50" y="190" width="200" height="100" as="geometry"/>
+    </mxCell>
+    <!-- 数据保密 -->
+    <mxCell id="c3" value="&lt;b&gt;数据安全保密&lt;/b&gt;&lt;br&gt;• 涉密数据脱敏处理&lt;br&gt;• 专用加密存储设备&lt;br&gt;• 禁止云盘传输" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1F618D;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="50" y="330" width="200" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- 第二列 -->
+    <mxCell id="c4" value="&lt;b&gt;过程保密&lt;/b&gt;&lt;br&gt;• 审核过程不向无关人员透露&lt;br&gt;• 讨论在专用会议室进行&lt;br&gt;• 工作底稿严格保管" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="320" y="80" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c5" value="&lt;b&gt;结果保密&lt;/b&gt;&lt;br&gt;• 审核报告专人送达&lt;br&gt;• 电子版加密传输&lt;br&gt;• 未经委托方同意不得对外" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="320" y="220" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c6" value="&lt;b&gt;离职保密&lt;/b&gt;&lt;br&gt;• 人员离职签订保密交接书&lt;br&gt;• 清退所有涉密资料&lt;br&gt;• 保密义务持续有效" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="320" y="360" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- 第三列 -->
+    <mxCell id="c7" value="&lt;b&gt;信息技术保密&lt;/b&gt;&lt;br&gt;• 局域网加密办公&lt;br&gt;• 涉密设备不与互联网连接&lt;br&gt;• USB接口管控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="600" y="80" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c8" value="&lt;b&gt;法律约束&lt;/b&gt;&lt;br&gt;• 保密条款写入服务合同&lt;br&gt;• 违反保密承担法律责任&lt;br&gt;• 保密协议独立存续" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="600" y="220" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="c9" value="&lt;b&gt;监督考核&lt;/b&gt;&lt;br&gt;• 保密检查月度开展&lt;br&gt;• 泄密行为一票否决&lt;br&gt;• 保密考核纳入绩效" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="600" y="360" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Center hub -->
+    <mxCell id="hub" value="&lt;b&gt;保密工作领导小组&lt;/b&gt;&lt;br&gt;组长：项目负责人&lt;br&gt;副组长：保密员" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#FFFFFF;fontFamily=Microsoft YaHei;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="330" y="510" width="180" height="80" as="geometry"/>
+    </mxCell>
+    
+    <!-- Edges to hub -->
+    <mxCell id="h1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E74C3C;strokeWidth=2;" edge="1" parent="1" source="c3" target="hub">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="h2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E74C3C;strokeWidth=2;" edge="1" parent="1" source="c6" target="hub">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="h3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E74C3C;strokeWidth=2;" edge="1" parent="1" source="c9" target="hub">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

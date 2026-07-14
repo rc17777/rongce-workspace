@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}证据链追溯 - {{ project.name }}{% endblock %}
+{% block content %}
+<div class="evidence-page">
+  <div class="page-header">
+    <h2>🔗 证据链追溯</h2>
+    <p class="subtitle">AI每一条结论都可追溯到原始凭证、合同、底稿——"可追溯地生成"</p>
+  </div>
+
+  {% for chain in project.evidence_chain %}
+  <div class="panel evidence-chain-panel">
+    <div class="panel-header">
+      <span class="finding-icon">⚠️</span>
+      <span>{{ chain.finding }}</span>
+    </div>
+    <div class="panel-body">
+      <!-- 证据链 -->
+      <div class="chain-steps">
+        {% for node in chain.trace %}
+        <div class="chain-step">
+          <div class="step-number">{{ loop.index }}</div>
+          <div class="step-content">
+            <div class="step-text">{{ node.step }}</div>
+            <div class="step-meta">
+              <span class="step-doc">📄 {{ node.doc }}</span>
+              {% if node.page %}
+              <span class="step-page">📍 {{ node.page }}</span>
+              {% endif %}
+            </div>
+          </div>
+          {% if not loop.last %}
+          <div class="step-connector"></div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- 结论 -->
+      <div class="chain-conclusion">
+        <div class="conclusion-header">✅ 审计结论</div>
+        <div class="conclusion-text">{{ chain.conclusion }}</div>
+        <div class="conclusion-actions">
+          <button class="btn-sm">📋 关联底稿</button>
+          <button class="btn-sm">📝 生成审计说明</button>
+          <button class="btn-sm">📎 导出证据包</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- 证据完整度 -->
+  <div class="panel">
+    <div class="panel-header">📊 证据完整度检查</div>
+    <div class="panel-body">
+      <div class="integrity-grid">
+        <div class="integrity-item ok">
+          <div class="integrity-label">余额表↔报表勾稽</div>
+          <div class="integrity-status">✅ 通过</div>
+          <div class="integrity-detail">资产负债表科目与报表一致</div>
+        </div>
+        <div class="integrity-item warn">
+          <div class="integrity-label">应收账款↔合同</div>
+          <div class="integrity-status">⚠️ 部分缺失</div>
+          <div class="integrity-detail">6户欠租商户缺催缴记录</div>
+        </div>
+        <div class="integrity-item ok">
+          <div class="integrity-label">收入↔银行流水</div>
+          <div class="integrity-status">✅ 通过</div>
+          <div class="integrity-detail">大额收入与银行回单一致</div>
+        </div>
+        <div class="integrity-item warn">
+          <div class="integrity-label">停车场收费↔系统记录</div>
+          <div class="integrity-status">⚠️ 不可追溯</div>
+          <div class="integrity-detail">351次手动放行无系统记录</div>
+        </div>
+        <div class="integrity-item ok">
+          <div class="integrity-label">固定资产↔盘点表</div>
+          <div class="integrity-status">✅ 通过</div>
+          <div class="integrity-detail">盘点结果与账面一致</div>
+        </div>
+        <div class="integrity-item fail">
+          <div class="integrity-label">差旅费↔审批记录</div>
+          <div class="integrity-status">❌ 关联缺失</div>
+          <div class="integrity-detail">\"1带多\"差旅缺原始审批</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

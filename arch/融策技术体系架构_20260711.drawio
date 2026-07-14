@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="draw.io" modified="2026-07-11T05:00:00Z" agent="Mozilla/5.0">
+  <diagram id="arch-diagram" name="融策技术体系架构">
+    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- 标题 -->
+        <mxCell id="title" value="融策技术体系架构图 — 2026-07-11" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#C5955C;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;rounded=1;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="320" y="10" width="560" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== 分层 ===== -->
+
+        <!-- 用户入口层 -->
+        <mxCell id="layer_top" value="用户入口层" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="70" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 微信/Web/Chat入口 -->
+        <mxCell id="chat_msg" value="融策右护卫&#10;(AI助手)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="110" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="wechat" value="企业微信 / 微信" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="240" y="110" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="webchat" value="WebChat 界面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="410" y="110" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="cli" value="CLI/心跳/Powershell" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="580" y="110" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="cron" value="Cron定时任务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="770" y="110" width="130" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 编排层 -->
+        <mxCell id="layer_mid" value="编排层（Orchestration）" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="190" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 三个调度系统 -->
+        <mxCell id="heartbeat" value="💓 HEARTBEAT.md&#10;(心跳调度)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="230" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ai_workflow" value="🏭 ai-workflow/&#10;(AI自动化引擎)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="280" y="230" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="blackboard" value="🔲 audit-blackboard/&#10;(多Agent审计平台)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="500" y="230" width="190" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="hub" value="🧠 RONGCE_AI_HUB&#10;(AI统一中枢)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="730" y="230" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent层 -->
+        <mxCell id="layer_agent" value="Agent / 技能层" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="320" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 5 Agent -->
+        <mxCell id="scout" value="📡 数据侦察兵" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="360" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="knowledge" value="📚 知识管理员" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="210" y="360" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="hunter" value="🎯 招标猎手" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="360" y="360" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="doctor" value="🏥 模型医生" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="510" y="360" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="watcher" value="💰 Token监察员" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="660" y="360" width="130" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- 7审计Agent -->
+        <mxCell id="agents7" value="7 Audit Agents:&#10;data_scout / contract_hound / bid_hunter&#10;law_inspector / workpaper_crafter&#10;/ report_writer / review_sentinel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="820" y="360" width="190" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- 57个技能 -->
+        <mxCell id="skills" value="57 个技能 (SKILL.md)&#10;(30核心+27扩展)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="420" width="730" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 模型层 -->
+        <mxCell id="layer_model" value="模型层（11大模型路由）" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="480" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 路由 -->
+        <mxCell id="router" value="🔀 model_routing.py&#10;(错误代价六级路由)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5955C;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="520" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 模型列表 -->
+        <mxCell id="flash" value="🔧 v4-flash&#10;(免费执行)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="280" y="520" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qwen" value="🔧 qwen3.7-plus&#10;(中文/图片)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="420" y="520" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="fable" value="🟡 fable-5&#10;(咨询层)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="560" y="520" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pro" value="🧠 v4-pro&#10;(推理分析)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="700" y="520" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="sonnet" value="🎯 sonnet-5&#10;(审查/合规)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="840" y="520" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gpt" value="🎯 gpt-5.5/5.6&#10;(表达/审查)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="990" y="520" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="opus" value="🔬 opus-4-8&#10;(致命终审)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F2EC;fontColor=#0A1F3F;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="280" y="575" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- 数据层 -->
+        <mxCell id="layer_data" value="数据/知识层" style="text;html=1;strokeColor=none;fillColor=#0A1F3F;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="640" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rag" value="📚 RAG知识库&#10;(13500 chunks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="obsidian" value="📓 Obsidian笔记&#10;(944篇分类)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="240" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="memory" value="🧠 MEMORY.md&#10;(长期记忆)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="420" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="projects" value="📋 projects/&#10;(项目数据)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="600" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="config" value="🔧 config/&#10;(配置+守卫)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="780" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="brand" value="🎨 Brand Assets&#10;(品牌资产)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A5C6E;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="960" y="680" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 安全层 -->
+        <mxCell id="layer_security" value="安全守护层" style="text;html=1;strokeColor=none;fillColor=#8B0000;fontColor=#F5F2EC;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="760" width="1140" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cost_guard" value="💰 cost_guard.py&#10;(费用守卫/自动熔断)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="60" y="800" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="token" value="📊 token_tracker.py&#10;(Token追踪)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="270" y="800" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="api_guard" value="🛡️ api_guard.py&#10;(API限流/熔断)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="480" y="800" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="spawn_guard" value="🔒 spawn_guard.py&#10;(子代理安全)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="690" y="800" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="budget" value="📋 workflow_budget.py&#10;(预算估算)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;fontColor=#F5F2EC;strokeColor=#0A1F3F;" parent="1" vertex="1">
+          <mxGeometry x="900" y="800" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== 箭头连接（简化版） ===== -->
+        <!-- 入口→编排层 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="heartbeat" target="ai_workflow">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="ai_workflow" target="blackboard">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="ai_workflow" target="hub">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 编排→Agent -->
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="ai_workflow" target="scout">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="scout" target="doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent→模型 -->
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="skills" target="router">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="router" target="flash">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 模型→数据 -->
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0A1F3F;" parent="1" edge="1" source="opus" target="rag">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 数据→安全 -->
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B0000;" parent="1" edge="1" source="config" target="cost_guard">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 状态标注 -->
+        <mxCell id="legend" value="图例:&#10;🟢 已运行    🟡 已部署未运行    🔴 待修复" style="text;html=1;strokeColor=none;fillColor=#F5F2EC;fontColor=#0A1F3F;fontSize=11;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="860" width="160" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

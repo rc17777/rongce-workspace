@@ -1,0 +1,200 @@
+{
+  "words_result": [
+    {
+      "probability": {
+        "average": 0.724991858,
+        "min": 0.724991858,
+        "variance": 0
+      },
+      "words": "融",
+      "location": {
+        "top": 78,
+        "left": 109,
+        "width": 28,
+        "height": 32
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9540804029,
+        "min": 0.7780519724,
+        "variance": 0.006368998438
+      },
+      "words": "RONGCE",
+      "location": {
+        "top": 88,
+        "left": 426,
+        "width": 217,
+        "height": 28
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9963321686,
+        "min": 0.9786826372,
+        "variance": 2.274303188e-05
+      },
+      "words": "公开公正用心服务诚信为本服务至上追求卓越",
+      "location": {
+        "top": 90,
+        "left": 1256,
+        "width": 698,
+        "height": 25
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9993234873,
+        "min": 0.9924888611,
+        "variance": 3.676165989e-06
+      },
+      "words": "四川融策会计师事务所有限公司",
+      "location": {
+        "top": 359,
+        "left": 402,
+        "width": 248,
+        "height": 20
+      }
+    },
+    {
+      "probability": {
+        "average": 0.998919785,
+        "min": 0.9945360422,
+        "variance": 2.779986971e-06
+      },
+      "words": "四川融策工程项目管理有限公司",
+      "location": {
+        "top": 385,
+        "left": 401,
+        "width": 247,
+        "height": 21
+      }
+    },
+    {
+      "probability": {
+        "average": 0.999984324,
+        "min": 0.999961853,
+        "variance": 2.467679394e-10
+      },
+      "words": "公司环境",
+      "location": {
+        "top": 1069,
+        "left": 128,
+        "width": 305,
+        "height": 76
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9974768162,
+        "min": 0.982185185,
+        "variance": 2.983088052e-05
+      },
+      "words": "CORPORATE",
+      "location": {
+        "top": 1163,
+        "left": 128,
+        "width": 222,
+        "height": 43
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9995757937,
+        "min": 0.9992805123,
+        "variance": 5.689207683e-08
+      },
+      "words": "ENVIRONMENT",
+      "location": {
+        "top": 1210,
+        "left": 127,
+        "width": 260,
+        "height": 43
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9415075183,
+        "min": 0.6495591402,
+        "variance": 0.009995951317
+      },
+      "words": "CORPORAIE ENVIRONMENI",
+      "location": {
+        "top": 1269,
+        "left": 1204,
+        "width": 801,
+        "height": 60
+      }
+    },
+    {
+      "probability": {
+        "average": 0.9847251177,
+        "min": 0.9130377173,
+        "variance": 0.0006858350243
+      },
+      "words": "PAGE 07/8",
+      "location": {
+        "top": 1356,
+        "left": 1968,
+        "width": 87,
+        "height": 28
+      }
+    }
+  ],
+  "paragraphs_result": [
+    {
+      "words_result_idx": [
+        0
+      ]
+    },
+    {
+      "words_result_idx": [
+        1
+      ]
+    },
+    {
+      "words_result_idx": [
+        2
+      ]
+    },
+    {
+      "words_result_idx": [
+        3
+      ]
+    },
+    {
+      "words_result_idx": [
+        4
+      ]
+    },
+    {
+      "words_result_idx": [
+        5
+      ]
+    },
+    {
+      "words_result_idx": [
+        6
+      ]
+    },
+    {
+      "words_result_idx": [
+        7
+      ]
+    },
+    {
+      "words_result_idx": [
+        8
+      ]
+    },
+    {
+      "words_result_idx": [
+        9
+      ]
+    }
+  ],
+  "paragraphs_result_num": 10,
+  "words_result_num": 10,
+  "direction": 0,
+  "log_id": 2074140649063995466
+}

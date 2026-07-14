@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net" modified="2026-06-23T12:39:00.000Z" agent="OpenClaw" version="24.7.17" etag="gantt" type="device">
+  <diagram name="进度甘特图" id="gantt">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="&lt;b&gt;项目审核进度计划（甘特图）&lt;/b&gt;&#xa;一般项目：45个工作日 | 复杂项目：60个工作日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#1F4E79;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="670" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 表头：周次 -->
+        <mxCell id="h-task" value="&lt;b&gt;任务/周次&lt;/b&gt;" style="text;html=1;strokeColor=#1F4E79;fillColor=#1F4E79;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w1" value="W1" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w2" value="W2" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="290" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w3" value="W3" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w4" value="W4" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="410" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w5" value="W5" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w6" value="W6" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w7" value="W7" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w8" value="W8" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w9" value="W9" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="710" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w10" value="W10" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="770" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h-w11" value="W11+" style="text;html=1;strokeColor=#1F4E79;fillColor=#DAE8FC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 准备阶段 -->
+        <mxCell id="r1-task" value="准备阶段" style="text;html=1;strokeColor=#6C8EBF;fillColor=#E1F0FF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6C8EBF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="125" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r1-label" value="5日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="260" y="125" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 资料收集 -->
+        <mxCell id="r2-task" value="  └ 资料收集" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A8D0F0;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="153" width="60" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 组建团队 -->
+        <mxCell id="r3-task" value="  └ 组建团队" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="175" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A8D0F0;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="178" width="60" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 实施阶段 -->
+        <mxCell id="r4-task" value="实施阶段" style="text;html=1;strokeColor=#D6B656;fillColor=#FFF8E1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="205" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6B656;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="210" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r4-label" value="30-45日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="210" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 成本审核 -->
+        <mxCell id="r5-task" value="  └ 建设成本审核" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="235" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5DEB3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="238" width="180" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 票据审核 -->
+        <mxCell id="r6-task" value="  └ 票据合规审核" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="260" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r6-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5DEB3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="263" width="120" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 现场核实 -->
+        <mxCell id="r7-task" value="  └ 现场核实" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="285" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r7-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5DEB3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="530" y="288" width="120" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 报告阶段 -->
+        <mxCell id="r8-task" value="报告阶段" style="text;html=1;strokeColor=#82B366;fillColor=#E8F5E9;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="315" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r8-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#82B366;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="320" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r8-label" value="10日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="740" y="320" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 报告撰写 -->
+        <mxCell id="r9-task" value="  └ 报告撰写" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="345" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r9-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="348" width="60" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 复核出具 -->
+        <mxCell id="r10-task" value="  └ 复核出具" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="370" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r10-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="770" y="373" width="60" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- 里程碑 -->
+        <mxCell id="m1" value="★ 方案审批" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="290" y="400" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="★ 中期检查" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="530" y="400" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="★ 报告交付" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="830" y="400" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 底部说明 -->
+        <mxCell id="note" value="&lt;b&gt;进度保障：&lt;/b&gt;提前介入沟通 | 分组并行作业 | 节点检查 | 提前预警 | 资源应急调配&#xa;&lt;b&gt;弹性机制：&lt;/b&gt;因建设单位原因可协商延期 | 复杂项目最长不超过60个工作日" style="text;html=1;strokeColor=none;fillColor=#F2F2F2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="840" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
