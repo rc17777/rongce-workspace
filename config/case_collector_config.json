@@ -1,0 +1,77 @@
+{
+  "_comment": "政府/国企审计案例采集配置",
+  "updated": "2026-07-15",
+
+  "sources": [
+    {
+      "name": "审计署_典型案例",
+      "url": "https://www.audit.gov.cn/",
+      "type": "web_fetch",
+      "enabled": true,
+      "schedule": "weekly",
+      "max_per_run": 20
+    },
+    {
+      "name": "审计署_审计结果公告",
+      "url": "https://www.audit.gov.cn/n5/n25/index.html",
+      "type": "web_fetch",
+      "enabled": true,
+      "schedule": "weekly",
+      "max_per_run": 10
+    },
+    {
+      "name": "国资委_违规追责",
+      "url": "http://www.sasac.gov.cn/",
+      "type": "web_fetch",
+      "enabled": true,
+      "schedule": "weekly",
+      "max_per_run": 10
+    },
+    {
+      "name": "财政部_财会监督",
+      "url": "https://www.mof.gov.cn/",
+      "type": "web_fetch",
+      "enabled": true,
+      "schedule": "weekly",
+      "max_per_run": 10
+    },
+    {
+      "name": "中国裁判文书网",
+      "url": "https://wenshu.court.gov.cn/",
+      "type": "manual",
+      "enabled": false,
+      "note": "反爬严格，需人工介入或通过OpenClaw web_fetch"
+    }
+  ],
+
+  "case_types": [
+    "审计署典型案例通报",
+    "审计结果公告",
+    "国资委违规追责案例",
+    "财会监督典型案例",
+    "司法裁判案例（审计相关）",
+    "地方审计局创新案例",
+    "审计实务经验总结"
+  ],
+
+  "case_tags": [
+    "绩效审计", "经济责任审计", "财政审计", "专项资金审计",
+    "工程审计", "国企审计", "金融审计", "社保审计",
+    "自然资源审计", "采购审计", "信息化审计", "大数据审计",
+    "串标围标", "违规收费", "虚报冒领", "挪用资金",
+    "资产流失", "账外账", "小金库", "违规担保",
+    "审计整改", "移送司法", "问责追责", "制度完善"
+  ],
+
+  "storage": {
+    "output_dir": "knowledge/cases",
+    "raw_dir": "knowledge/cases/_raw",
+    "index_file": "knowledge/cases/案例库索引.md"
+  },
+
+  "cross_reference": {
+    "policy_base": "knowledge/policies",
+    "law_base": "knowledge/laws",
+    "auto_link": true
+  }
+}

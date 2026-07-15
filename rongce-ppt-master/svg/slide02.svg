@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#20203A"/><stop offset="50%" stop-color="#1A1A2E"/><stop offset="100%" stop-color="#12121F"/>
+</linearGradient>
+<linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#EED98C"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0.07"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<circle cx="1830" cy="60" r="230" fill="none" stroke="#D4AF37" stroke-opacity="0.06" stroke-width="1.5"/>
+<circle cx="1830" cy="60" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.09" stroke-width="1"/>
+<ellipse cx="1330" cy="560" rx="620" ry="420" fill="url(#glow)"/>
+<text x="140" y="106" font-family="Microsoft YaHei" font-size="17" letter-spacing="5" fill="#D4AF37" fill-opacity="0.75">RONGCE · COMPANY PROFILE</text>
+<text x="1780" y="106" text-anchor="end" font-family="Microsoft YaHei" font-size="17" letter-spacing="2" fill="#6A6F80">02 / 10</text>
+<rect x="140" y="162" width="6" height="48" fill="url(#goldText)"/>
+<text x="172" y="202" font-family="Microsoft YaHei" font-size="46" font-weight="700" fill="#F5F2EC">公司概览</text>
+<text x="174" y="240" font-family="Microsoft YaHei" font-size="16" letter-spacing="5" fill="#8A90A3">COMPANY OVERVIEW</text>
+<rect x="140" y="316" width="4" height="150" fill="#D4AF37" fill-opacity="0.55"/>
+<text font-family="Microsoft YaHei" font-size="25" fill="#D8DCE6" font-weight="700">
+<tspan x="176" y="352">深耕政府审计与工程咨询领域的</tspan>
+<tspan x="176" y="404">专业服务机构，双牌照协同运作，</tspan>
+<tspan x="176" y="456">提供一体化专业解决方案。</tspan>
+</text>
+<text font-family="Microsoft YaHei" font-size="19" fill="#9DA3B6">
+<tspan x="140" y="548">事务所主营绩效评价、资产清查、专项债申报、监督检查等</tspan>
+<tspan x="140" y="590">财政职能相关业务，服务各级财政、审计及主管部门；</tspan>
+<tspan x="140" y="652">工程咨询公司提供预算编制、财政评审、全过程工程咨询与</tspan>
+<tspan x="140" y="694">工程结算全链条服务，覆盖工程建设全生命周期。</tspan>
+</text>
+<g transform="translate(140,790)">
+<rect width="220" height="64" rx="32" fill="none" stroke="#D4AF37" stroke-opacity="0.45"/>
+<text x="110" y="40" text-anchor="middle" font-family="Microsoft YaHei" font-size="20" fill="#D4AF37">政府审计服务</text>
+</g>
+<g transform="translate(390,790)">
+<rect width="220" height="64" rx="32" fill="none" stroke="#D4AF37" stroke-opacity="0.45"/>
+<text x="110" y="40" text-anchor="middle" font-family="Microsoft YaHei" font-size="20" fill="#D4AF37">工程咨询服务</text>
+</g>
+<g>
+<rect x="980" y="300" width="380" height="220" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1020" y="398" font-family="Microsoft YaHei" font-size="54" font-weight="700" fill="url(#goldText)">双牌照</text>
+<text x="1020" y="448" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">资质协同</text>
+<text x="1020" y="482" font-family="Microsoft YaHei" font-size="15" fill="#8A90A3">会计师事务所 + 工程咨询公司</text>
+</g>
+<g>
+<rect x="1400" y="300" width="380" height="220" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1440" y="398" font-family="Microsoft YaHei" font-size="54" font-weight="700" fill="url(#goldText)">12 年</text>
+<text x="1440" y="448" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">行业深耕</text>
+<text x="1440" y="482" font-family="Microsoft YaHei" font-size="15" fill="#8A90A3">持续服务经验积累</text>
+</g>
+<g>
+<rect x="980" y="560" width="380" height="220" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1020" y="658" font-family="Microsoft YaHei" font-size="54" font-weight="700" fill="url(#goldText)">50+</text>
+<text x="1020" y="708" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">专业团队</text>
+<text x="1020" y="742" font-family="Microsoft YaHei" font-size="15" fill="#8A90A3">注册会计师 + 注册工程师</text>
+</g>
+<g>
+<rect x="1400" y="560" width="380" height="220" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1440" y="658" font-family="Microsoft YaHei" font-size="54" font-weight="700" fill="url(#goldText)">全链条</text>
+<text x="1440" y="708" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">一体化服务</text>
+<text x="1440" y="742" font-family="Microsoft YaHei" font-size="15" fill="#8A90A3">审计咨询全流程覆盖</text>
+</g>
+<line x1="140" y1="1008" x2="1780" y2="1008" stroke="#D4AF37" stroke-opacity="0.15"/>
+<text x="140" y="1042" font-family="Microsoft YaHei" font-size="15" fill="#6A6F80">四川融策会计师事务所 · 四川融策工程咨询有限公司</text>
+<text x="1780" y="1042" text-anchor="end" font-family="Microsoft YaHei" font-size="15" letter-spacing="3" fill="#D4AF37" fill-opacity="0.7">SICHUAN RONGCE</text>
+</svg>

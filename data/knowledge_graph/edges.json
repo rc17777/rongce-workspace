@@ -1,0 +1,656 @@
+[
+  {
+    "source": "Company:21a7d585",
+    "target": "Agency:6c4cb016",
+    "type": "works_for",
+    "evidence": "四川融策会计师事务所承接了成都市交通局2024年预算绩效评价项目",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756332"
+  },
+  {
+    "source": "Company:21a7d585",
+    "target": "Project:22f77878",
+    "type": "bid_on",
+    "evidence": "四川融策会计师事务所承接了成都市交通局2024年预算绩效评价项目",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756345"
+  },
+  {
+    "source": "Company:21a7d585",
+    "target": "Project:ca7a1ef4",
+    "type": "bid_on",
+    "evidence": "事务所还做过郫都区经责审计项目",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756375"
+  },
+  {
+    "source": "Company:21a7d585",
+    "target": "Organization:a3f3a649",
+    "type": "related_to",
+    "evidence": "融策公司与西南财经大学有产学研合作关系",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756384"
+  },
+  {
+    "source": "Project:22f77878",
+    "target": "Amount:79ed7442",
+    "type": "involves",
+    "evidence": "项目金额85万元",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756357"
+  },
+  {
+    "source": "Person:d76b3ddf",
+    "target": "Project:22f77878",
+    "type": "works_at",
+    "evidence": "项目负责人是张三",
+    "sources": [
+      "test"
+    ],
+    "first_seen": "2026-07-15T20:38:31.756367"
+  },
+  {
+    "source": "Agency:9974ae20",
+    "target": "Document:cb45af8f",
+    "type": "signed",
+    "evidence": "审计署2026年1号公告·招投标审计六类违规检查清单",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Document:cb45af8f",
+    "target": "Document:a6b7d640",
+    "type": "referenced",
+    "evidence": "依据：审计署2026年第1号公告《39个中央部门招投标成重灾区》",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Document:cb45af8f",
+    "target": "Regulation:07c0c17c",
+    "type": "referenced",
+    "evidence": "15年追溯期应对指南",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:6b5e8283",
+    "target": "Project:89647b43",
+    "type": "involves",
+    "evidence": "公安部本级10个项目、所属道路交通安全研究中心多个项目，涉及金额超4000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:6b5e8283",
+    "target": "Project:10edafc5",
+    "type": "involves",
+    "evidence": "公安部本级10个项目、所属道路交通安全研究中心多个项目，涉及金额超4000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:6b5e8283",
+    "target": "Amount:d509ac38",
+    "type": "involves",
+    "evidence": "涉及金额超4000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:44fd36b8",
+    "target": "Project:ce27edc4",
+    "type": "involves",
+    "evidence": "公安部所属单位2个医疗设备采购项目，未按规定组织专业评审专家评标，涉及合同金额近900万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:44fd36b8",
+    "target": "Amount:62cda17e",
+    "type": "involves",
+    "evidence": "涉及合同金额近900万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:8988298b",
+    "target": "Project:e8da5ef5",
+    "type": "involves",
+    "evidence": "北京昌平消防支队6427万元项目违规设置排斥中小企业条款。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:8988298b",
+    "target": "Amount:25541357",
+    "type": "involves",
+    "evidence": "北京昌平消防支队6427万元项目违规设置排斥中小企业条款。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:40a8f131",
+    "target": "Project:22e067ff",
+    "type": "involves",
+    "evidence": "自然资源部所属单位、国资委大连高级经理学院、国家卫健委能力建设和继续教育中心，涉及金额超7000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:40a8f131",
+    "target": "Project:9dfd38da",
+    "type": "involves",
+    "evidence": "自然资源部所属单位、国资委大连高级经理学院、国家卫健委能力建设和继续教育中心，涉及金额超7000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:40a8f131",
+    "target": "Project:d30ec2ca",
+    "type": "involves",
+    "evidence": "自然资源部所属单位、国资委大连高级经理学院、国家卫健委能力建设和继续教育中心，涉及金额超7000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:40a8f131",
+    "target": "Amount:1f27c60c",
+    "type": "involves",
+    "evidence": "涉及金额超7000万元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:d2875d48",
+    "target": "Project:ba87e3c4",
+    "type": "involves",
+    "evidence": "公安部5家所属单位、国家消防救援局本级及15个总队（支队），仅消防救援系统涉及金额达1.75亿元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:d2875d48",
+    "target": "Project:323da4f8",
+    "type": "involves",
+    "evidence": "公安部5家所属单位、国家消防救援局本级及15个总队（支队），仅消防救援系统涉及金额达1.75亿元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:d2875d48",
+    "target": "Amount:dfd0e04e",
+    "type": "involves",
+    "evidence": "仅消防救援系统涉及金额达1.75亿元。",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Regulation:07c0c17c",
+    "target": "Regulation:205753c7",
+    "type": "applies_to",
+    "evidence": "不同采购方式法定比例不同，需区分政府采购/工程招标",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Regulation:07c0c17c",
+    "target": "Regulation:e72c8065",
+    "type": "applies_to",
+    "evidence": "不同采购方式法定比例不同，需区分政府采购/工程招标",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:ee1e1ec8",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "对接L1-L18串标检测模型，对历史项目逐项扫描",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:3761c215",
+    "target": "Method:6b5e8283",
+    "type": "related_to",
+    "evidence": "比对合同签订日期 vs 中标通知书日期 vs 采购审批日期",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:b7d0d26c",
+    "target": "Method:6b5e8283",
+    "type": "related_to",
+    "evidence": "比对首笔付款日期 vs 合同签订日期",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:7bcd3bb4",
+    "target": "Method:7dd21093",
+    "type": "related_to",
+    "evidence": "按年度+采购单位聚合，查同一供应商同年度合同总额",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:7bcd3bb4",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "历史中标模式（陪标+中标专业户）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:dd237b88",
+    "target": "Method:44fd36b8",
+    "type": "related_to",
+    "evidence": "查评审专家与投标单位关系",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:b020830b",
+    "target": "Method:8988298b",
+    "type": "related_to",
+    "evidence": "查询市场上能满足所有要求的供应商数量",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:566b0299",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "报价规律异常（等差数列/阶梯分布）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:32e3556f",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "投标IP/MAC相同",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:9c943515",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "技术标文本雷同（TF-IDF≥90%）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:587e6fe1",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "投标人名称模糊匹配",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:f7abfe1a",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "嵌入图片哈希比对",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:831556d0",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "嵌入图片哈希比对",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:6afb21b7",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "PDF元数据交叉（Author/Creator/Producer）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:deadc8ba",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "文档结构比对（字体/布局/样式）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:6017351d",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "供应商伴随投标（FP-growth）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Script:bf594fca",
+    "target": "Method:40a8f131",
+    "type": "related_to",
+    "evidence": "节资率+支持度/置信度",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:c70628e0",
+    "target": "Method:8988298b",
+    "type": "related_to",
+    "evidence": "查询市场上能满足所有要求的供应商数量",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:b5a28247",
+    "target": "Method:8988298b",
+    "type": "related_to",
+    "evidence": "查询市场上能满足所有要求的供应商数量",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:31f344ee",
+    "target": "Method:8988298b",
+    "type": "related_to",
+    "evidence": "提取招标文件中的资质/业绩/技术参数要求",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:d73bc1d7",
+    "target": "Method:7dd21093",
+    "type": "related_to",
+    "evidence": "查同期同类采购项目，合并同类合同金额",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:596d0514",
+    "target": "Method:7dd21093",
+    "type": "related_to",
+    "evidence": "比对同类项目合同签订时间间隔（<30天为高风险）",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:cbf4ef42",
+    "target": "Method:d2875d48",
+    "type": "related_to",
+    "evidence": "查保证金收取金额 vs 法定比例",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:8caa88e0",
+    "target": "Method:d2875d48",
+    "type": "related_to",
+    "evidence": "查保证金返还日期 vs 法定时限",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Method:0c511cff",
+    "target": "Method:d2875d48",
+    "type": "related_to",
+    "evidence": "查保证金账户资金流水 vs 对公账户",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Tool:a4301c3f",
+    "target": "Method:d2875d48",
+    "type": "related_to",
+    "evidence": "查保证金账户余额是否≥应收保证金总额",
+    "sources": [
+      "knowledge/references/审计署2026年1号公告-招投标六类违规检查清单.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Date:e7129386",
+    "type": "related_to",
+    "evidence": "整合日期：2026-05-30",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Person:bc9fe613",
+    "type": "related_to",
+    "evidence": "整合人：融策右护卫",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Person:1f6ba61f",
+    "type": "related_to",
+    "evidence": "数据源：1. 「芮听柠说」《经济责任审计全套量化评价指标》（2026-05-23）",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Person:34f76e55",
+    "type": "related_to",
+    "evidence": "数据源：2. 「幸福的审计人」《经济责任审计报告》（2026-05-18）",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "KnowledgeDomain:cffb61f5",
+    "type": "related_to",
+    "evidence": "数据源：4. 融策已有体系 — 五维工程模型 + audit-plugin v1.1 + 技能缺口分析",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Method:4f31a6af",
+    "type": "part_of",
+    "evidence": "Layer 1: 通用报告框架（七段式，所有经责项目共用）",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Document:3f701083",
+    "target": "Method:27c69de4",
+    "type": "part_of",
+    "evidence": "Layer 2: 可插拔指标体系（按被审计对象类型切换）",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Person:a63fe83b",
+    "type": "involves",
+    "evidence": "工程负责人(原版)",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Organization:85a3ba12",
+    "type": "involves",
+    "evidence": "行政事业单位",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Company:eec2073b",
+    "type": "involves",
+    "evidence": "商业竞争企业",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Company:139d24f5",
+    "type": "involves",
+    "evidence": "公益功能企业",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Company:a02dfb9a",
+    "type": "involves",
+    "evidence": "特定功能企业",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:27c69de4",
+    "target": "Company:49c2d5e3",
+    "type": "involves",
+    "evidence": "金融/科创企业",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Person:3be51137",
+    "target": "Method:56912b43",
+    "type": "related_to",
+    "evidence": "类型A：工程项目负责人（工程导向版）",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Document:ab1dc0e2",
+    "type": "signed",
+    "evidence": "来源：芮听柠说（2026-05-23）+ 融策优化",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Method:061d05e1",
+    "type": "related_to",
+    "evidence": "来源：芮听柠说（2026-05-23）+ 融策优化",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Skill:a239552b",
+    "type": "involves",
+    "evidence": "A. 重大经济决策履职 30%",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Skill:f967dd1d",
+    "type": "involves",
+    "evidence": "B. 工程管控履职 25%",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Skill:3672caf8",
+    "type": "involves",
+    "evidence": "C. 资金资产绩效 25%",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Skill:15856746",
+    "type": "involves",
+    "evidence": "D. 合规风控及整改 12%",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  },
+  {
+    "source": "Method:56912b43",
+    "target": "Skill:56013132",
+    "type": "involves",
+    "evidence": "E. 廉洁自律履职",
+    "sources": [
+      "knowledge/references/经济责任审计-融策整合模板v2.0.md"
+    ]
+  }
+]

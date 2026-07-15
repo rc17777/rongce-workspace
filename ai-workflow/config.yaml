@@ -54,6 +54,14 @@ agents:
     schedule: "daily_at_08:00"
     timeout_minutes: 10
 
+  # 文献采集Agent（新增 2026-07-15）
+  literature_collector:
+    label: "📖 文献采集员"
+    tool: "scripts/literature_collector.py"
+    schedule: "daily_at_08:00"
+    timeout_minutes: 5
+    alert_on_fail: false
+
   # 知识管理Agent
   knowledge_keeper:
     label: "知识管理员"

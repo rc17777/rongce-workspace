@@ -1,0 +1,46 @@
+{
+  "_comment": "文献自动采集配置",
+  "updated": "2026-07-15",
+
+  "openalex_mailto": "",
+  "_mailto_note": "填你的邮箱即可，OpenAlex 优先处理有mailto的请求（推荐但非必须）",
+
+  "keywords": [
+    "政府审计",
+    "绩效审计",
+    "财政审计",
+    "专项资金审计",
+    "政府会计",
+    "公共资金监督",
+    "government audit",
+    "public sector audit",
+    "performance audit",
+    "government accountability",
+    "audit quality",
+    "supreme audit institution"
+  ],
+
+  "filters": {
+    "from_year": 2022,
+    "per_keyword": 20,
+    "max_total": 200,
+    "language": "",
+    "_language_note": "留空=全部语言，en=仅英文，zh=仅中文（OpenAlex不保证精细）"
+  },
+
+  "storage": {
+    "output_dir": "knowledge/literature",
+    "digest_dir": "knowledge/literature/digests"
+  },
+
+  "rag_pipeline": {
+    "auto_ingest": true,
+    "rag_server_url": "http://127.0.0.1:5001",
+    "_rag_note": "true=自动写入knowledge/literature/，false=只存不下发到RAG"
+  },
+
+  "sources": [
+    {"name": "OpenAlex", "enabled": true, "priority": 1},
+    {"name": "SemanticScholar", "enabled": false, "priority": 2}
+  ]
+}

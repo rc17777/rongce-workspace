@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#20203A"/><stop offset="50%" stop-color="#1A1A2E"/><stop offset="100%" stop-color="#12121F"/>
+</linearGradient>
+<linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#EED98C"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+<linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/><stop offset="50%" stop-color="#E8CD7F"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0.08"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<ellipse cx="960" cy="560" rx="820" ry="420" fill="url(#glow)"/>
+<text x="140" y="106" font-family="Microsoft YaHei" font-size="17" letter-spacing="5" fill="#D4AF37" fill-opacity="0.75">RONGCE · KEY FIGURES</text>
+<text x="1780" y="106" text-anchor="end" font-family="Microsoft YaHei" font-size="17" letter-spacing="2" fill="#6A6F80">06 / 10</text>
+<rect x="140" y="162" width="6" height="48" fill="url(#goldText)"/>
+<text x="172" y="202" font-family="Microsoft YaHei" font-size="46" font-weight="700" fill="#F5F2EC">关键数据</text>
+<text x="174" y="240" font-family="Microsoft YaHei" font-size="16" letter-spacing="5" fill="#8A90A3">KEY FIGURES</text>
+<g>
+<circle cx="480" cy="520" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.30" stroke-width="1.5"/>
+<circle cx="480" cy="520" r="165" fill="none" stroke="#D4AF37" stroke-opacity="0.10" stroke-width="1"/>
+<text x="480" y="510" text-anchor="middle" font-family="Microsoft YaHei" font-size="66" font-weight="700" fill="url(#goldText)">300+</text>
+<text x="480" y="566" text-anchor="middle" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">服务客户</text>
+<text x="480" y="740" text-anchor="middle" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">政府部门 · 企事业单位</text>
+</g>
+<g>
+<circle cx="960" cy="520" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.30" stroke-width="1.5"/>
+<circle cx="960" cy="520" r="165" fill="none" stroke="#D4AF37" stroke-opacity="0.10" stroke-width="1"/>
+<text x="960" y="510" text-anchor="middle" font-family="Microsoft YaHei" font-size="66" font-weight="700" fill="url(#goldText)">800+</text>
+<text x="960" y="566" text-anchor="middle" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">完成项目</text>
+<text x="960" y="740" text-anchor="middle" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">审计 · 评价 · 咨询全类别</text>
+</g>
+<g>
+<circle cx="1440" cy="520" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.30" stroke-width="1.5"/>
+<circle cx="1440" cy="520" r="165" fill="none" stroke="#D4AF37" stroke-opacity="0.10" stroke-width="1"/>
+<text x="1440" y="510" text-anchor="middle" font-family="Microsoft YaHei" font-size="66" font-weight="700" fill="url(#goldText)">98%</text>
+<text x="1440" y="566" text-anchor="middle" font-family="Microsoft YaHei" font-size="22" fill="#F5F2EC">客户满意度</text>
+<text x="1440" y="740" text-anchor="middle" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">持续合作 · 口碑复购</text>
+</g>
+<g transform="translate(960,850)">
+<rect x="-560" y="-0.6" width="1120" height="1.2" fill="url(#goldLine)"/>
+<rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" fill="#D4AF37"/>
+</g>
+<text x="960" y="920" text-anchor="middle" font-family="Microsoft YaHei" font-size="21" letter-spacing="5" fill="#B4B9C9">50+ 专业团队 · 12 年行业经验 · 13,000+ 条审计法规知识库支撑</text>
+<line x1="140" y1="1008" x2="1780" y2="1008" stroke="#D4AF37" stroke-opacity="0.15"/>
+<text x="140" y="1042" font-family="Microsoft YaHei" font-size="15" fill="#6A6F80">四川融策会计师事务所 · 四川融策工程咨询有限公司</text>
+<text x="1780" y="1042" text-anchor="end" font-family="Microsoft YaHei" font-size="15" letter-spacing="3" fill="#D4AF37" fill-opacity="0.7">SICHUAN RONGCE</text>
+</svg>

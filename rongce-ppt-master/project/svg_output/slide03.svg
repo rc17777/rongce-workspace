@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#20203A"/><stop offset="50%" stop-color="#1A1A2E"/><stop offset="100%" stop-color="#12121F"/>
+</linearGradient>
+<linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#EED98C"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+<linearGradient id="goldCard" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#E8CD7F"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<circle cx="1830" cy="60" r="230" fill="none" stroke="#D4AF37" stroke-opacity="0.06" stroke-width="1.5"/>
+<circle cx="1830" cy="60" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.09" stroke-width="1"/>
+<text x="140" y="106" font-family="Microsoft YaHei" font-size="17" letter-spacing="5" fill="#D4AF37" fill-opacity="0.75">RONGCE · CORE BUSINESS</text>
+<text x="1780" y="106" text-anchor="end" font-family="Microsoft YaHei" font-size="17" letter-spacing="2" fill="#6A6F80">03 / 10</text>
+<rect x="140" y="162" width="6" height="48" fill="url(#goldText)"/>
+<text x="172" y="202" font-family="Microsoft YaHei" font-size="46" font-weight="700" fill="#F5F2EC">核心业务体系</text>
+<text x="174" y="240" font-family="Microsoft YaHei" font-size="16" letter-spacing="5" fill="#8A90A3">CORE BUSINESS SYSTEM</text>
+<g>
+<rect x="140" y="310" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="176" y="386" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">01</text>
+<line x1="176" y1="404" x2="230" y2="404" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="176" y="456" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">经济责任审计</text>
+<text x="176" y="496" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">任中 · 离任 · 自然资源</text>
+</g>
+<g>
+<rect x="556" y="310" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="592" y="386" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">02</text>
+<line x1="592" y1="404" x2="646" y2="404" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="592" y="456" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">专项资金审计</text>
+<text x="592" y="496" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">社保 · 营养餐等民生资金</text>
+</g>
+<g>
+<rect x="972" y="310" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1008" y="386" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">03</text>
+<line x1="1008" y1="404" x2="1062" y2="404" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="1008" y="456" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">预算执行审计</text>
+<text x="1008" y="496" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">部门预算 · 财政收支</text>
+</g>
+<g>
+<rect x="1388" y="310" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1424" y="386" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">04</text>
+<line x1="1424" y1="404" x2="1478" y2="404" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="1424" y="456" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">招投标审计</text>
+<text x="1424" y="496" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">串标围标数字化检测</text>
+</g>
+<g>
+<rect x="140" y="590" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="176" y="666" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">05</text>
+<line x1="176" y1="684" x2="230" y2="684" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="176" y="736" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">预算绩效管理</text>
+<text x="176" y="776" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">目标 · 监控 · 评价全周期</text>
+</g>
+<g>
+<rect x="556" y="590" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="592" y="666" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">06</text>
+<line x1="592" y1="684" x2="646" y2="684" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="592" y="736" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">全过程工程咨询</text>
+<text x="592" y="776" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">预算 · 评审 · 跟踪审计</text>
+</g>
+<g>
+<rect x="972" y="590" width="392" height="250" rx="16" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<text x="1008" y="666" font-family="Microsoft YaHei" font-size="38" font-weight="700" fill="#D4AF37" fill-opacity="0.9">07</text>
+<line x1="1008" y1="684" x2="1062" y2="684" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="2"/>
+<text x="1008" y="736" font-family="Microsoft YaHei" font-size="26" font-weight="700" fill="#F5F2EC">财政评审与结算</text>
+<text x="1008" y="776" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">投资评审 · 竣工决算</text>
+</g>
+<g>
+<rect x="1388" y="590" width="392" height="250" rx="16" fill="url(#goldCard)"/>
+<text x="1424" y="682" font-family="Microsoft YaHei" font-size="52" font-weight="700" fill="#1A1A2E">12 大</text>
+<text x="1424" y="736" font-family="Microsoft YaHei" font-size="24" font-weight="700" fill="#1A1A2E">业务线全域覆盖</text>
+<text x="1424" y="774" font-family="Microsoft YaHei" font-size="14" letter-spacing="3" fill="#1A1A2E" fill-opacity="0.7">FULL-SPECTRUM SERVICES</text>
+</g>
+<line x1="140" y1="1008" x2="1780" y2="1008" stroke="#D4AF37" stroke-opacity="0.15"/>
+<text x="140" y="1042" font-family="Microsoft YaHei" font-size="15" fill="#6A6F80">四川融策会计师事务所 · 四川融策工程咨询有限公司</text>
+<text x="1780" y="1042" text-anchor="end" font-family="Microsoft YaHei" font-size="15" letter-spacing="3" fill="#D4AF37" fill-opacity="0.7">SICHUAN RONGCE</text>
+</svg>

@@ -43,12 +43,24 @@
 
 - 直接高效，不废话 | 关注公司管理和业务发展 | 政府审计需求优先
 
-## PPT工具矩阵（2026-07-08起）
+## PPT工具矩阵（2026-07-08起，07-15新增dashi-ppt）
 | 工具 | 定位 | 输出 | 场景 | 状态 |
 |:--|:--|:--|:--|:--|
 | guizang-ppt-skill | 瑞士风格HTML幻灯片 | 电子杂志级HTML | 汇报/演示 | ✅ 已装+融策深蓝定制 |
 | ppt-master | 可编辑PPTX管线 | 原生.pptx | 正式交付/客户改稿 | ✅ 已装(缺tools依赖) |
 | huashu-design | 全能设计skill | HTML+PPTX+MP4+原型 | 品牌/标书/动画 | ✅ 已装+品牌资产入库 |
+| **dashi-ppt** | 模板编排器·每页带编辑控制台 | HTML(可浏览器逐页调)+可编辑PPTX+PDF | 行研/融资复盘/竞品/汇报/路演 | ✅ 已装v0.4.0 |
+
+### dashi-ppt 使用要点（2026-07-15装）
+- 路径：`~/.openclaw/skills/dashi-ppt/`（npx 默认还装了一份到 `~/.claude/skills/dashi-ppt/`）
+- 装法：`npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest`（旧名dashiai-ppt已废弃）
+- 12套主题、1020版式、8576控件；生成HTML后浏览器逐页拖调，再导可编辑PPTX
+- ✅ 运行时依赖已装(npm install)，引擎实测可用；Edge已装可导出PPTX/PDF
+- ⚠️ 成本：10页PPT≈10万token（贵，成本敏感场景慎用）
+- ⚠️ 导出引擎html-deck-to-pptx闭源；自定义被有意收窄
+- ⚠️ 本机无bash/git，官方`render_goal_deck.sh`跑不了——需按SKILL.md用npm脚本直接驱动(props:safe→validate→render:goal→preview:start)
+- ⚠️ 每次完成后运行 `node <skill>/scripts/check_latest_version.mjs` 检查更新
+- 端口段：预览默认5200-5999(避开4178/4300/4400用户保留端口)
 
 ### 融策品牌资产
 - 路径: `~/.openclaw/skills/huashu-design/assets/rongce-brand/`
@@ -319,6 +331,22 @@ fable-5 换新 key 时发现 Windows 上 env:// 引用的致命缺陷：
 - 微信公众号文章必须用**移动端User-Agent**（Android浏览器+MicroMessenger头）
 - 普通web_fetch只能拿到JS渲染空壳
 - 详见TOOLS.md「微信文章爬取技巧」
+
+## 2026-07-15 大事件：文献自动采集管道搭建 + 14模型路由体系全面建立
+
+### Part 1: 文献采集管道
+产出物见 `scripts/literature_collector.py`, 220篇文献入库。
+
+### Part 2: 14模型路由体系（重大）
+- 新增 gemini-3.1-pro-preview → deepseek-direct 直连逃生
+- 路由 v4.0→v4.2: 错误代价+上下文窗口双重路由，经14模型联合评审全票通过
+- 模型池 12→14个（含1直连逃生+1生图专用）
+- 容灾架构 L1-L4: 重试→降级→直连→人工
+- 健康检查脚本: scripts/model_health_check.py
+- 14模型评审结论: 路由逻辑✅ 代理单点故障🔴 数据合规⚠️
+- 待办（已决策）: opus/sonnet走代理 ✅ | 数据合规:海外为主,敏感项目限国内模型 ✅
+
+*最后更新: 2026-07-15 | 详细档案: memory/archive/ | 项目历史: 各项目README*
 
 ## 2026-07-14 大事件：Skill体系三件套治理
 

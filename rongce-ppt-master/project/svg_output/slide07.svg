@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#20203A"/><stop offset="50%" stop-color="#1A1A2E"/><stop offset="100%" stop-color="#12121F"/>
+</linearGradient>
+<linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#EED98C"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<circle cx="1830" cy="60" r="230" fill="none" stroke="#D4AF37" stroke-opacity="0.06" stroke-width="1.5"/>
+<circle cx="1830" cy="60" r="150" fill="none" stroke="#D4AF37" stroke-opacity="0.09" stroke-width="1"/>
+<text x="140" y="106" font-family="Microsoft YaHei" font-size="17" letter-spacing="5" fill="#D4AF37" fill-opacity="0.75">RONGCE · QUALITY ASSURANCE</text>
+<text x="1780" y="106" text-anchor="end" font-family="Microsoft YaHei" font-size="17" letter-spacing="2" fill="#6A6F80">07 / 10</text>
+<rect x="140" y="162" width="6" height="48" fill="url(#goldText)"/>
+<text x="172" y="202" font-family="Microsoft YaHei" font-size="46" font-weight="700" fill="#F5F2EC">质量保障体系</text>
+<text x="174" y="240" font-family="Microsoft YaHei" font-size="16" letter-spacing="5" fill="#8A90A3">QUALITY ASSURANCE SYSTEM</text>
+<g>
+<rect x="140" y="330" width="800" height="250" rx="18" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<rect x="140" y="330" width="8" height="250" rx="4" fill="url(#goldText)"/>
+<text x="200" y="418" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#F5F2EC">三级复核制度</text>
+<text x="200" y="462" font-family="Microsoft YaHei" font-size="17" fill="#9DA3B6">项目组自查 → 部门经理复核 → 质控部终审</text>
+<text x="200" y="530" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">每份报告三道关口层层把守，签字负责，责任到人</text>
+<text x="856" y="430" text-anchor="middle" font-family="Microsoft YaHei" font-size="70" font-weight="700" fill="none" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="1.5">3</text>
+</g>
+<g>
+<rect x="980" y="330" width="800" height="250" rx="18" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<rect x="980" y="330" width="8" height="250" rx="4" fill="url(#goldText)"/>
+<text x="1040" y="418" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#F5F2EC">AI 智能复核</text>
+<text x="1040" y="462" font-family="Microsoft YaHei" font-size="17" fill="#9DA3B6">15 维度智能检查 · 金额全链路追踪 · 法规引用核验</text>
+<text x="1040" y="530" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">数字化质控工具，把人工经验沉淀为可复用的检查规则</text>
+<text x="1696" y="430" text-anchor="middle" font-family="Microsoft YaHei" font-size="70" font-weight="700" fill="none" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="1.5">15</text>
+</g>
+<g>
+<rect x="140" y="620" width="800" height="250" rx="18" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<rect x="140" y="620" width="8" height="250" rx="4" fill="url(#goldText)"/>
+<text x="200" y="708" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#F5F2EC">法规知识库</text>
+<text x="200" y="752" font-family="Microsoft YaHei" font-size="17" fill="#9DA3B6">13,000+ 条审计法规 · 政策文件实时更新</text>
+<text x="200" y="820" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">RAG 检索增强，定性引用有据可查，杜绝过时法条</text>
+<text x="856" y="720" text-anchor="middle" font-family="Microsoft YaHei" font-size="52" font-weight="700" fill="none" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="1.5">13K</text>
+</g>
+<g>
+<rect x="980" y="620" width="800" height="250" rx="18" fill="#FFFFFF" fill-opacity="0.03" stroke="#D4AF37" stroke-opacity="0.25"/>
+<rect x="980" y="620" width="8" height="250" rx="4" fill="url(#goldText)"/>
+<text x="1040" y="708" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#F5F2EC">持续满意服务</text>
+<text x="1040" y="752" font-family="Microsoft YaHei" font-size="17" fill="#9DA3B6">98% 客户好评率 · 12 年持续服务经验</text>
+<text x="1040" y="820" font-family="Microsoft YaHei" font-size="16" fill="#8A90A3">以复购和转介绍验证专业口碑，长期陪伴式服务</text>
+<text x="1696" y="720" text-anchor="middle" font-family="Microsoft YaHei" font-size="52" font-weight="700" fill="none" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="1.5">98%</text>
+</g>
+<line x1="140" y1="1008" x2="1780" y2="1008" stroke="#D4AF37" stroke-opacity="0.15"/>
+<text x="140" y="1042" font-family="Microsoft YaHei" font-size="15" fill="#6A6F80">四川融策会计师事务所 · 四川融策工程咨询有限公司</text>
+<text x="1780" y="1042" text-anchor="end" font-family="Microsoft YaHei" font-size="15" letter-spacing="3" fill="#D4AF37" fill-opacity="0.7">SICHUAN RONGCE</text>
+</svg>

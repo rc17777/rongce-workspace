@@ -1,183 +1,222 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""Test all 11 model providers with a minimal API call."""
-import os, sys, io, json, time, requests
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+#!/usr/bin/env python3
+"""
+模型健康检查脚本 v1.0
+用法: python scripts/model_health_check.py [--json] [--alert]
+- 每日运行一次，13模型逐一 ping
+- 支持 JSON 输出供监控系统读取
+- 支持 --alert 模式：仅输出异常
+"""
 
-# Provider configs (matching openclaw.json)
-PROVIDERS = {
-    "custom-cbwyy-top-v1": {
-        "env_key": "OC_KEY_TOP_V1",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["deepseek-v4-flash", "deepseek-v4-pro"]
+import json
+import sys
+import time
+from datetime import datetime
+import urllib.request
+import urllib.error
+
+# 绕过系统代理——OpenClaw Gateway 自身不经过 Python 代理
+PROXY_HANDLER = urllib.request.ProxyHandler({})
+OPENER = urllib.request.build_opener(PROXY_HANDLER)
+
+# 13模型配置
+MODELS = {
+    "deepseek-v4-flash": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-Bq4EalSwLmehZ3xXa55b7TzRX4HIlbTppgdKQ0ElOab09AZa",
+        "api": "openai",
+        "category": "free"
     },
-    "custom-cbwyy-qwen": {
-        "env_key": "OC_KEY_QWEN",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["qwen3.7-plus"]
+    "deepseek-v4-pro": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-Bq4EalSwLmehZ3xXa55b7TzRX4HIlbTppgdKQ0ElOab09AZa",
+        "api": "openai",
+        "category": "low"
     },
-    "custom-cbwyy-gpt55": {
-        "env_key": "OC_KEY_GPT55",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["gpt-5.5"]
+    "qwen3.7-plus": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-9Jwqw4U5ahchjaLgVqzvfJQvm3itJEv2GHTV8KAofagQrf77",
+        "api": "openai",
+        "category": "low"
     },
-    "custom-cbwyy-luna": {
-        "env_key": "OC_KEY_LUNA",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["gpt-5.6-luna"]
+    "claude-fable-5": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-V3KPfTqMi3x13gtbftyVH94pAA9YOLQXYAVElYV9WRabYDzh",
+        "api": "openai",
+        "category": "low"
     },
-    "custom-cbwyy-sol": {
-        "env_key": "OC_KEY_SOL",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["gpt-5.6-sol"]
+    "claude-sonnet-5": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-R0ndBzSRNP6GWAW82HspfjwKxJvPwBeoHPrkznz8rjCNL3SH",
+        "api": "openai",
+        "category": "medium"
     },
-    "custom-cbwyy-terra": {
-        "env_key": "OC_KEY_TERRA",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["gpt-5.6-terra"]
+    "claude-opus-4-8": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-1rL8MpWIH16CZ64xZLV6buNHS7dlmIdBk5HGOYs5hV0nOHcJ",
+        "api": "openai",
+        "category": "high"
     },
-    "custom-cbwyy-claude": {
-        "env_key": "OC_KEY_CLAUDE",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["claude-sonnet-5"]
+    "gpt-5.5": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-bs4fgPtIHhh4kKTKIRh33HISbvxMJDcQQx2kRnlmWv4faesU",
+        "api": "openai",
+        "category": "medium"
     },
-    "custom-cbwyy-fable": {
-        "env_key": "OC_KEY_FABLE",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["claude-fable-5"]
+    "gpt-5.6-luna": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-p3ynqetGeLU5T5TpzXFAFimCaTrvIT6kpqGkbP2SrpqvpbrJ",
+        "api": "openai",
+        "category": "medium"
     },
-    "custom-cbwyy-opus": {
-        "env_key": "OC_KEY_OPUS",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["claude-opus-4-8"]
+    "gpt-5.6-sol": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-eulyTfe7nRmr5ruwQH85kIfHkc8PPd88EoYGX0yadzlrkEpv",
+        "api": "openai",
+        "category": "medium"
     },
-    "custom-cbwyy-doubao": {
-        "env_key": "OC_KEY_DOUBAO",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["doubao-seed-2.0-lite"]
+    "gpt-5.6-terra": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-9qOvtLFgtvohPegNNGiwPr7fye1SgSCIW1C2viiKFp1b8lzh",
+        "api": "openai",
+        "category": "medium"
     },
-    "custom-cbwyy-image": {
-        "env_key": "OC_KEY_IMAGE",
-        "base_url": "https://cbwyy.top/v1",
-        "api_type": "openai",
-        "test_models": ["gpt-image-2"]
+    "gemini-3.1-pro-preview": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-dxNjrEh4rXIinsnHVLAKE17e1yqf6XFhtWZuPrnyzg5lfISw",
+        "api": "openai",
+        "category": "preview"
     },
+    "gpt-image-2": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-KVp2E6u9FnnRA3BQxSNvbWKW6zd2JsDQa8YlmR4ZxGtVsXIQ",
+        "api": "openai",
+        "category": "special"
+    },
+    "doubao-seed-2.0-lite": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-8Up5r8WtFOQrckhQCxOxaRYES5KAWQqgKMdrJng1l0DJ9gix",
+        "api": "openai",
+        "category": "low"
+    }
 }
 
-TEST_PROMPT = "Reply with exactly one word: OK"
+CHECK_MSG = [{"role": "user", "content": "reply OK"}]
+ANTHROPIC_MSG = {"model": "claude-fable-5", "messages": CHECK_MSG, "max_tokens": 5}
 
-def test_openai(api_key, base_url, model):
-    """Test OpenAI-compatible API."""
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": TEST_PROMPT}],
-        "max_tokens": 10
-    }
+
+def check_openai(model_id: str, cfg: dict) -> dict:
+    payload = {"model": model_id, "messages": CHECK_MSG, "max_tokens": 5}
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(cfg["url"], data=data,
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {cfg['key']}"})
     try:
-        r = requests.post(f"{base_url}/chat/completions", headers=headers, json=payload, timeout=30)
-        if r.status_code == 200:
-            data = r.json()
-            content = data["choices"][0]["message"]["content"]
-            usage = data.get("usage", {})
-            return True, f"OK [{content.strip()[:30]}] (in:{usage.get('prompt_tokens','?')} out:{usage.get('completion_tokens','?')})"
-        else:
-            msg = r.text[:200]
-            return False, f"HTTP {r.status_code}: {msg}"
-    except requests.Timeout:
-        return False, "TIMEOUT (30s)"
+        with OPENER.open(req, timeout=20) as resp:
+            body = json.loads(resp.read().decode())
+            ok = "choices" in body and len(body["choices"]) > 0
+            return {"status": "ok" if ok else "error", "code": resp.status, "msg": body.get("choices", [{}])[0].get("message", {}).get("content", "")[:20]}
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")[:200]
+        return {"status": "error", "code": e.code, "msg": body}
     except Exception as e:
-        return False, f"ERROR: {str(e)[:100]}"
+        return {"status": "error", "code": 0, "msg": str(e)[:200]}
 
-def test_anthropic(api_key, base_url, model):
-    """Test Anthropic Messages API."""
+
+def check_anthropic(model_id: str, cfg: dict) -> dict:
+    """Anthropic API uses different endpoint format"""
+    payload = {"model": model_id, "messages": CHECK_MSG, "max_tokens": 5}
+    data = json.dumps(payload).encode("utf-8")
     headers = {
-        "x-api-key": api_key,
         "Content-Type": "application/json",
+        "x-api-key": cfg["key"],
         "anthropic-version": "2023-06-01"
     }
-    payload = {
-        "model": model,
-        "max_tokens": 10,
-        "messages": [{"role": "user", "content": TEST_PROMPT}]
-    }
-    # Try /v1/messages first, then /messages
-    urls = [f"{base_url}/v1/messages", f"{base_url}/messages"]
-    last_error = None
-    for url in urls:
-        try:
-            r = requests.post(url, headers=headers, json=payload, timeout=30)
-            if r.status_code == 200:
-                data = r.json()
-                content = data["content"][0]["text"]
-                usage = data.get("usage", {})
-                return True, f"OK [{content.strip()[:30]}] (in:{usage.get('input_tokens','?')} out:{usage.get('output_tokens','?')})"
-            else:
-                last_error = f"HTTP {r.status_code}: {r.text[:200]}"
-        except requests.Timeout:
-            last_error = "TIMEOUT (30s)"
-        except Exception as e:
-            last_error = f"ERROR({url}): {str(e)[:100]}"
-    return False, last_error or "All endpoints failed"
+    req = urllib.request.Request(cfg["url"], data=data, headers=headers)
+    try:
+        with OPENER.open(req, timeout=20) as resp:
+            body = json.loads(resp.read().decode())
+            ok = "content" in body and len(body.get("content", [])) > 0
+            return {"status": "ok" if ok else "error", "code": resp.status, "msg": str(body.get("content", [{}])[0].get("text", ""))[:20]}
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")[:200]
+        return {"status": "error", "code": e.code, "msg": body}
+    except Exception as e:
+        return {"status": "error", "code": 0, "msg": str(e)[:200]}
 
-print("=" * 70)
-print("MODEL CONNECTIVITY TEST")
-print("=" * 70)
 
-results = []
-for prov_name, prov_cfg in PROVIDERS.items():
-    env_key = prov_cfg["env_key"]
-    api_key = os.environ.get(env_key, "")
-    
-    if not api_key:
-        print(f"\n  {prov_name}")
-        print(f"    ❌ API KEY NOT SET (env var {env_key})")
-        for model in prov_cfg["test_models"]:
-            results.append((f"{prov_name}/{model}", "❌", "API Key not configured"))
-        continue
-    
-    key_preview = api_key[:12] + "..."
-    
-    for model in prov_cfg["test_models"]:
-        label = f"{prov_name}/{model}"
-        sys.stdout.write(f"\n  Testing {label}... ")
-        sys.stdout.flush()
-        
-        if prov_cfg["api_type"] == "openai":
-            ok, detail = test_openai(api_key, prov_cfg["base_url"], model)
+def main():
+    json_mode = "--json" in sys.argv
+    alert_mode = "--alert" in sys.argv
+
+    results = []
+    ok_count = 0
+    error_count = 0
+    fatal_alerts = []
+
+    if not json_mode:
+        print(f"🔍 模型健康检查 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print("=" * 60)
+
+    for model_id, cfg in MODELS.items():
+        start = time.time()
+        if cfg["api"] == "anthropic":
+            result = check_anthropic(model_id, cfg)
         else:
-            ok, detail = test_anthropic(api_key, prov_cfg["base_url"], model)
-        
-        status = "✅" if ok else "❌"
-        print(f"{status} {detail}")
-        results.append((label, status, detail))
-        
-        time.sleep(0.5)  # Brief pause between calls
+            result = check_openai(model_id, cfg)
+        elapsed = time.time() - start
 
-print(f"\n{'='*70}")
-print("SUMMARY")
-print(f"{'='*70}")
-pass_count = sum(1 for _, s, _ in results if s == "✅")
-fail_count = sum(1 for _, s, _ in results if s == "❌")
-print(f"  Total: {len(results)} models tested")
-print(f"  Pass:  {pass_count} ✅")
-print(f"  Fail:  {fail_count} ❌")
+        result["model"] = model_id
+        result["category"] = cfg["category"]
+        result["elapsed"] = round(elapsed, 2)
 
-if fail_count > 0:
-    print(f"\n  Failed models:")
-    for label, status, detail in results:
-        if status == "❌":
-            print(f"    {label}: {detail}")
+        if result["status"] == "ok":
+            ok_count += 1
+        else:
+            error_count += 1
+            if cfg["category"] in ("high", "medium"):
+                fatal_alerts.append(model_id)
+
+        results.append(result)
+        status_icon = "✅" if result["status"] == "ok" else "❌"
+
+        if not json_mode:
+            print(f"  {status_icon} {model_id:30s} {result['code']:>4}  {elapsed:.2f}s  [{cfg['category']}]")
+
+    # 代理故障检测
+    all_errors = error_count > 0
+    proxy_down = error_count >= 10  # 几乎所有模型都失败 = 代理挂了
+    only_gemini_down = error_count == 1 and "gemini-3.1-pro-preview" in [r["model"] for r in results if r["status"] != "ok"]
+
+    if not json_mode:
+        print("=" * 60)
+        print(f"  ✅ {ok_count} | ❌ {error_count} | 总计 {len(results)}")
+        if proxy_down:
+            print("🔴 致命：疑似 cbwyy.top 代理全面故障！所有模型不可用！")
+        elif all_errors:
+            print(f"🟡 部分故障：{error_count} 个模型异常")
+        if only_gemini_down:
+            print("🟡 gemini 预览版不可用，长文档层降级到 sonnet 分段读")
+        print("=" * 60)
+
+    if json_mode:
+        output = {
+            "timestamp": datetime.now().isoformat(),
+            "ok": ok_count,
+            "error": error_count,
+            "total": len(results),
+            "proxy_down": proxy_down,
+            "fatal_alerts": fatal_alerts,
+            "results": results
+        }
+        print(json.dumps(output, ensure_ascii=False))
+
+    if alert_mode:
+        if proxy_down:
+            print("ALERT:PROXY_DOWN", end="")
+        elif error_count > 0:
+            print(f"ALERT:{error_count}_MODELS_DOWN:{','.join(fatal_alerts)}", end="")
+
+    sys.exit(2 if proxy_down else (1 if error_count > 0 else 0))
+
+
+if __name__ == "__main__":
+    main()

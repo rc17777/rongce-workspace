@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#20203A"/><stop offset="50%" stop-color="#1A1A2E"/><stop offset="100%" stop-color="#12121F"/>
+</linearGradient>
+<linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/><stop offset="50%" stop-color="#E8CD7F"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#EED98C"/><stop offset="100%" stop-color="#B8912E"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0.12"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<ellipse cx="960" cy="540" rx="900" ry="500" fill="url(#glow)"/>
+<circle cx="960" cy="540" r="400" fill="none" stroke="#D4AF37" stroke-opacity="0.08" stroke-width="1.5"/>
+<circle cx="960" cy="540" r="330" fill="none" stroke="#D4AF37" stroke-opacity="0.12" stroke-width="1"/>
+<circle cx="960" cy="540" r="470" fill="none" stroke="#D4AF37" stroke-opacity="0.05" stroke-width="1"/>
+<path d="M 70 120 L 70 70 L 120 70" stroke="#D4AF37" stroke-opacity="0.45" fill="none" stroke-width="2"/>
+<path d="M 1800 70 L 1850 70 L 1850 120" stroke="#D4AF37" stroke-opacity="0.45" fill="none" stroke-width="2"/>
+<path d="M 70 960 L 70 1010 L 120 1010" stroke="#D4AF37" stroke-opacity="0.45" fill="none" stroke-width="2"/>
+<path d="M 1850 960 L 1850 1010 L 1800 1010" stroke="#D4AF37" stroke-opacity="0.45" fill="none" stroke-width="2"/>
+<text x="1780" y="106" text-anchor="end" font-family="Microsoft YaHei" font-size="17" letter-spacing="2" fill="#6A6F80">08 / 10</text>
+<g transform="translate(960,330)">
+<rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#D4AF37"/>
+<rect x="-200" y="-0.6" width="172" height="1.2" fill="url(#goldLine)"/>
+<rect x="28" y="-0.6" width="172" height="1.2" fill="url(#goldLine)"/>
+</g>
+<text x="960" y="404" text-anchor="middle" font-family="Microsoft YaHei" font-size="19" letter-spacing="9" fill="#D4AF37" fill-opacity="0.8">OUR MISSION</text>
+<text x="960" y="560" text-anchor="middle" font-family="Microsoft YaHei" font-size="62" font-weight="700" letter-spacing="6" fill="#F5F2EC">以专业审计服务</text>
+<text x="960" y="660" text-anchor="middle" font-family="Microsoft YaHei" font-size="62" font-weight="700" letter-spacing="6" fill="url(#goldText)">助力政府治理现代化</text>
+<g transform="translate(960,750)">
+<rect x="-300" y="-0.75" width="600" height="1.5" fill="url(#goldLine)"/>
+</g>
+<text x="960" y="816" text-anchor="middle" font-family="Microsoft YaHei" font-size="21" letter-spacing="5" fill="#9DA3B6">独立 · 客观 · 公正 —— 让每一分财政资金花得明白、用得高效</text>
+<line x1="140" y1="1008" x2="1780" y2="1008" stroke="#D4AF37" stroke-opacity="0.15"/>
+<text x="140" y="1042" font-family="Microsoft YaHei" font-size="15" fill="#6A6F80">四川融策会计师事务所 · 四川融策工程咨询有限公司</text>
+<text x="1780" y="1042" text-anchor="end" font-family="Microsoft YaHei" font-size="15" letter-spacing="3" fill="#D4AF37" fill-opacity="0.7">SICHUAN RONGCE</text>
+</svg>

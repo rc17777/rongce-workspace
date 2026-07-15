@@ -96,16 +96,18 @@ def save_state(state):
 # ================================================================
 
 ALL_AGENTS = [
-    'data_scout',       # 信息采集
-    'knowledge_keeper', # 知识管理
-    'tender_hunter',    # 招标采集
-    'model_doctor',     # 模型健康检查
-    'token_watcher',    # Token追踪
-    'model_router',     # 路由控制器
+    'data_scout',          # 信息采集（08:00）
+    'literature_collector', # 文献采集（08:00）
+    'knowledge_keeper',    # 知识管理（14:00）
+    'tender_hunter',       # 招标采集（09:00 一三五）
+    'model_doctor',        # 模型健康检查（10:00）
+    'token_watcher',       # Token追踪（20:00）
+    'model_router',        # 路由控制器（06:00）
 ]
 
 AGENT_LABELS = {
     'data_scout': '📡 数据侦察兵',
+    'literature_collector': '📖 文献采集员',
     'knowledge_keeper': '📚 知识管理员',
     'tender_hunter': '🎯 招标猎手',
     'model_doctor': '🏥 模型医生',
