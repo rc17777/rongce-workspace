@@ -1,8 +1,12 @@
 # HEARTBEAT.md - AI自动化工作流 + 定期检查
 
-> ⚠️ **吞金兽警报**：心跳必须用 `custom-cbwyy-top-v1/deepseek-v4-flash`（免费/低成本）！
+> ⚠️ **吞金兽警报**：心跳必须用低成本模型！
 > 禁止用 GPT-5.5、V4 Pro、Claude 等高成本模型做心跳任务！
-> 心跳前先检查当前模型；如果不是 `custom-cbwyy-top-v1/deepseek-v4-flash`，必须先切回来。
+>
+> 🚧 **临时切换（2026-07-16 起）**：`deepseek-v4-flash` 的 key 持续 403 故障，
+> 心跳模型临时改用 **`deepseek-direct/deepseek-chat`**（直连，低成本）。
+> 心跳前先检查当前模型；如果不是 `deepseek-direct/deepseek-chat`，必须先切回来。
+> ✅ 待 v4-flash 换 key 恢复后（`python scripts/model_health_check.py` 显示 200），改回 `custom-cbwyy-top-v1/deepseek-v4-flash` 并删除本临时段。
 
 ## 🤖 AI自动化工作流（每次心跳执行）
 

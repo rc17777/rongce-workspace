@@ -164,8 +164,8 @@
     }
   ],
   "escalations": [],
-  "last_overseer_run": "2026-07-15T20:02:49.737325+08:00",
-  "last_engine_run": "2026-07-15T20:02:49.737356+08:00",
-  "consecutive_runs": 129,
+  "last_overseer_run": "2026-07-16T01:22:47.991378+08:00",
+  "last_engine_run": "2026-07-16T01:22:47.991449+08:00",
+  "consecutive_runs": 150,
   "total_tasks_completed": 15
 }

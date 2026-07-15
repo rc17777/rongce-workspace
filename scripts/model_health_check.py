@@ -82,7 +82,7 @@ MODELS = {
     },
     "gemini-3.1-pro-preview": {
         "url": "https://cbwyy.top/v1/chat/completions",
-        "key": "sk-dxNjrEh4rXIinsnHVLAKE17e1yqf6XFhtWZuPrnyzg5lfISw",
+        "key": "sk-pahwf6G0Onp4eOBI8GtBOBnRiyZQeJNa3fMsEZo9zRRRbr1I",
         "api": "openai",
         "category": "preview"
     },
