@@ -196,6 +196,8 @@ v2.0整合模板，详见 `knowledge/references/经济责任审计-融策整合�
 
 ## 关键教训
 
+- **⚠️ npm prefix 陷阱**（2026-07-16）：本机 npm 全局 prefix 被设为 `C:\Users\scrccpa\AppData\Local\Programs\OneClaw`（非默认）。任何 `npm install -g` 都装进 OneClaw 目录，与桌面版自带 gateway.asar 版本打架 → protocol mismatch → 频繁掉线。**禁止 npm/update.run 更新 openclaw**，版本跟 OneClaw App 走；装其他全局包前先 `npm config get prefix` 确认
+
 - **报告结论复核铁律**（2026-07-06 平头哥指令）：写完或复核任何报告后，必须逐项重新核算汇总数字和关键结论，并把计算依据写在复核说明里。不得凭心算手动填汇总行。依据格式：每条结论后附（数据来源+计算方法+交叉验证结果），方便平头哥独立判断。
 
 - **spawn 必须带 runTimeoutSeconds**，否则子代理跑完后空转耗token。这次OCR任务跑了78分钟（totalTokens 41k）就是因为没设超时
