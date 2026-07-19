@@ -7,68 +7,69 @@
 <link rel="stylesheet" href="../shared/brochure-theme.css">
 <style>
   body { background: var(--navy-dark); }
-  .cover-bg { position:absolute; inset:0; background:
-    radial-gradient(ellipse at 82% 42%, rgba(197,149,92,.18) 0%, rgba(197,149,92,.04) 26%, transparent 54%),
-    radial-gradient(ellipse at 10% 85%, rgba(197,149,92,.11) 0%, transparent 46%),
-    linear-gradient(132deg, #06142A 0%, #0A1F3F 45%, #071832 100%); }
-  .grid { position:absolute; inset:0; opacity:.32; background-image:
-    linear-gradient(rgba(232,200,122,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232,200,122,.035) 1px, transparent 1px); background-size:80px 80px; mask-image: radial-gradient(ellipse at 66% 46%, #000 0%, transparent 72%); }
-  .frame { position:absolute; left:116px; right:116px; top:112px; bottom:112px; border:1px solid rgba(232,200,122,.11); }
-  .frame:before,.frame:after { content:''; position:absolute; width:120px; height:1px; background:linear-gradient(90deg, transparent, var(--gold-light), transparent); top:-1px; }
-  .frame:before { left:80px; } .frame:after { right:80px; }
-  .hero { position:relative; z-index:2; height:100%; display:grid; grid-template-columns: 1.05fr .95fr; align-items:center; padding:0 150px 0 170px; gap:30px; }
-  .eyebrow { font-size:13px; letter-spacing:.45em; color:rgba(255,255,255,.32); margin-bottom:26px; }
-  .title { font-family:var(--serif); font-size:108px; font-weight:900; line-height:1.02; color:#fff; letter-spacing:.06em; }
-  .title .gold { background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-  .subtitle { margin-top:18px; font-family:var(--serif); font-size:25px; letter-spacing:.2em; color:rgba(255,255,255,.62); }
-  .tagline { margin-top:38px; width:760px; font-family:var(--serif); font-size:20px; line-height:1.95; color:rgba(255,255,255,.58); letter-spacing:.06em; }
-  .tagline em { font-style:normal; color:var(--gold-light); }
-  .badges { display:flex; gap:18px; margin-top:48px; }
-  .badge { width:180px; min-height:98px; border-left:2px solid var(--gold); background:rgba(255,255,255,.035); padding:18px 18px 14px; }
-  .badge .num { font-family:var(--serif); font-size:34px; font-weight:800; color:var(--gold-light); line-height:1; }
-  .badge .txt { margin-top:9px; font-size:12px; line-height:1.42; color:rgba(255,255,255,.42); }
-  .shield-stage { position:relative; height:720px; }
-  .shield { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:520px; height:620px; }
-  .shield-outline { position:absolute; inset:30px 44px 28px; border:1px solid rgba(232,200,122,.28); border-radius:250px 250px 130px 130px / 220px 220px 180px 180px; clip-path: polygon(50% 0, 90% 14%, 88% 58%, 50% 100%, 12% 58%, 10% 14%); background:linear-gradient(160deg, rgba(197,149,92,.13), rgba(255,255,255,.015) 42%, rgba(10,31,63,.08)); box-shadow:0 0 80px rgba(197,149,92,.08) inset; }
-  .shield-outline:before { content:''; position:absolute; inset:42px; border:1px solid rgba(232,200,122,.16); clip-path:inherit; }
-  .shield-core { position:absolute; left:50%; top:47%; transform:translate(-50%,-50%); width:226px; height:226px; border-radius:50%; border:1px solid rgba(232,200,122,.22); display:flex; align-items:center; justify-content:center; font-family:var(--serif); color:#fff; font-size:48px; font-weight:800; letter-spacing:.12em; background:radial-gradient(circle, rgba(197,149,92,.16), rgba(10,31,63,.06) 58%, transparent); }
-  .shield-core:before,.shield-core:after { content:''; position:absolute; background:rgba(232,200,122,.14); }
-  .shield-core:before { width:330px; height:1px; } .shield-core:after { width:1px; height:330px; }
-  .orbit { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:610px; height:610px; border:1px solid rgba(232,200,122,.08); border-radius:50%; }
-  .orbit.o2 { width:460px; height:460px; opacity:.75; }
-  .node { position:absolute; width:124px; padding:10px 12px; border:1px solid rgba(232,200,122,.16); background:rgba(6,20,42,.62); backdrop-filter: blur(2px); color:rgba(255,255,255,.6); font-size:12px; line-height:1.35; text-align:center; }
-  .node b { display:block; color:var(--gold-light); font-size:13px; margin-bottom:3px; }
-  .n1 { left:32px; top:160px; } .n2 { right:22px; top:186px; } .n3 { left:64px; bottom:154px; } .n4 { right:58px; bottom:124px; }
-  .chain-line { position:absolute; left:82px; right:58px; bottom:78px; height:1px; background:linear-gradient(90deg, transparent, rgba(232,200,122,.38), transparent); }
-  .chain-label { position:absolute; left:50%; bottom:48px; transform:translateX(-50%); color:rgba(255,255,255,.25); font-size:12px; letter-spacing:.22em; white-space:nowrap; }
-  .bottom { position:absolute; z-index:2; left:0; right:0; bottom:34px; display:flex; justify-content:center; font-size:12px; letter-spacing:.16em; color:rgba(255,255,255,.16); }
+  .cover-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #071B36 0%, #0A1F3F 28%, #14345F 52%, #0A1F3F 78%, #071B36 100%);
+  }
+  .cover-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 82% 18%, rgba(197,149,92,0.08) 0%, transparent 42%),
+      radial-gradient(ellipse at 18% 84%, rgba(197,149,92,0.10) 0%, transparent 44%),
+      radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.025) 0%, transparent 58%);
+  }
+  .geo-line { position: absolute; pointer-events: none; }
+  .geo-line.h1 { left: 120px; top: 120px; right: 120px; height: 1px; background: linear-gradient(90deg, transparent, rgba(197,149,92,0.18), transparent); }
+  .geo-line.h2 { left: 120px; bottom: 120px; right: 120px; height: 1px; background: linear-gradient(90deg, transparent, rgba(197,149,92,0.10), transparent); }
+  .geo-line.v1 { left: 120px; top: 120px; bottom: 120px; width: 1px; background: linear-gradient(180deg, transparent, rgba(197,149,92,0.11), transparent); }
+  .geo-line.v2 { right: 120px; top: 120px; bottom: 120px; width: 1px; background: linear-gradient(180deg, transparent, rgba(197,149,92,0.11), transparent); }
+  .ring { position: absolute; border-radius: 50%; border: 1px solid rgba(197,149,92,0.05); pointer-events: none; }
+  .ring.r1 { width: 500px; height: 500px; right: -100px; top: -200px; }
+  .ring.r2 { width: 380px; height: 380px; left: -80px; bottom: -120px; }
+  .ring.r3 { width: 220px; height: 220px; right: 300px; bottom: 80px; border-color: rgba(197,149,92,0.04); }
+  .brand-symbol { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 440px; height: 440px; pointer-events: none; z-index: 0; opacity:.9; }
+  .brand-symbol .outer { position: absolute; inset: 0; border: 1px solid rgba(197,149,92,0.055); border-radius: 50%; }
+  .brand-symbol .mid { position: absolute; left: 62px; right: 62px; top: 62px; bottom: 62px; border: 1px solid rgba(197,149,92,0.07); border-radius: 50%; }
+  .brand-symbol .inner { position: absolute; left: 132px; right: 132px; top: 132px; bottom: 132px; border: 1px solid rgba(197,149,92,0.09); border-radius: 50%; }
+  .brand-symbol .cross-h { position: absolute; left: 62px; right: 62px; top: 50%; height: 1px; background: rgba(197,149,92,0.045); }
+  .brand-symbol .cross-v { position: absolute; top: 62px; bottom: 62px; left: 50%; width: 1px; background: rgba(197,149,92,0.045); }
+  .grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(197,149,92,0.012) 1px, transparent 1px), linear-gradient(90deg, rgba(197,149,92,0.012) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none; }
+  .hero { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .hero-sup { font-size: 13px; letter-spacing: 0.45em; color: rgba(255,255,255,0.34); font-weight: 300; margin-bottom: 26px; }
+  .hero-title { font-family: var(--serif); font-size: 92px; font-weight: 900; color: #fff; line-height: 1.08; text-align: center; margin-bottom: 18px; letter-spacing: 0.08em; }
+  .hero-title .gold { background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-sub { font-family: var(--serif); font-size: 26px; color: rgba(255,255,255,0.60); letter-spacing: 0.18em; margin-bottom: 30px; }
+  .hero-sub .dot { color: var(--gold-light); margin: 0 16px; opacity: 0.85; }
+  .hero-gold-line { width: 92px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-light), transparent); margin: 0 auto 30px; }
+  .hero-tagline { font-family: var(--serif); font-size: 19px; color: rgba(255,255,255,0.52); line-height: 1.85; letter-spacing: 0.06em; margin-bottom: 42px; max-width: 920px; text-align: center; }
+  .hero-stats { display: flex; gap: 58px; justify-content: center; }
+  .hero-stat { text-align: center; min-width: 150px; }
+  .hero-stat .num { font-family: var(--serif); font-size: 38px; font-weight: 800; line-height: 1; color: var(--gold-light); }
+  .hero-stat .label { font-size: 13px; color: rgba(255,255,255,0.42); margin-top: 8px; letter-spacing: 0.05em; line-height:1.35; }
+  .hero-stat .sep { width: 18px; height: 1px; background: rgba(197,149,92,0.24); margin: 10px auto 0; }
+  .bottom-tag { position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 36px; font-size: 12px; letter-spacing: 0.15em; color: rgba(255,255,255,0.20); white-space:nowrap; }
 </style>
 </head>
 <body>
-<div class="cover-bg"></div><div class="grid"></div><div class="frame"></div>
+<div class="cover-bg"></div>
+<div class="grid-overlay"></div>
+<div class="brand-symbol"><div class="outer"></div><div class="mid"></div><div class="inner"></div><div class="cross-h"></div><div class="cross-v"></div></div>
+<div class="geo-line h1"></div><div class="geo-line h2"></div><div class="geo-line v1"></div><div class="geo-line v2"></div>
+<div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+
 <div class="hero">
-  <section>
-    <div class="eyebrow">SICHUAN RONGCE · AUDITSHIELD</div>
-    <div class="title">融策<span class="gold">·</span>审盾</div>
-    <div class="subtitle">政府审计 · 工程咨询</div>
-    <div class="tagline">以<em>证据链质控</em>与<em>项目穿透能力</em>，服务财政资金治理现代化；让每一次判断更有依据，让每一份报告更经得起追问。</div>
-    <div class="badges">
-      <div class="badge"><div class="num">20+年</div><div class="txt">政府审计与财政资金治理经验</div></div>
-      <div class="badge"><div class="num">2大板块</div><div class="txt">会计师事务所 × 工程咨询公司</div></div>
-      <div class="badge"><div class="num">1+4+N</div><div class="txt">智析平台 · 四库 · 多场景实验室</div></div>
-    </div>
-  </section>
-  <section class="shield-stage">
-    <div class="orbit"></div><div class="orbit o2"></div>
-    <div class="shield"><div class="shield-outline"></div><div class="shield-core">审盾</div></div>
-    <div class="node n1"><b>政策法规</b>依据可查</div>
-    <div class="node n2"><b>项目经验</b>规则可复用</div>
-    <div class="node n3"><b>问题整改</b>闭环可追踪</div>
-    <div class="node n4"><b>前沿技术</b>方法可进化</div>
-    <div class="chain-line"></div><div class="chain-label">资金 · 项目 · 绩效 · 整改 · 责任</div>
-  </section>
+  <div class="hero-sup">SICHUAN RONGCE · AUDITSHIELD</div>
+  <div class="hero-title">融策<span class="gold">·</span>审盾</div>
+  <div class="hero-sub">政府审计<span class="dot">·</span>工程咨询</div>
+  <div class="hero-gold-line"></div>
+  <div class="hero-tagline">以证据链质控与项目穿透能力，服务财政资金治理现代化</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">20+年</div><div class="label">政府审计与财政资金治理经验</div><div class="sep"></div></div>
+    <div class="hero-stat"><div class="num">2大板块</div><div class="label">会计师事务所 × 工程咨询公司</div><div class="sep"></div></div>
+    <div class="hero-stat"><div class="num">1+4+N</div><div class="label">智析平台 · 四库 · 多场景实验室</div><div class="sep"></div></div>
+  </div>
 </div>
-<div class="bottom">四川融策会计师事务所有限公司 · 四川融策工程项目管理有限公司</div>
+
+<div class="bottom-tag">四川融策会计师事务所有限公司 · 四川融策工程项目管理有限公司</div>
 </body>
 </html>
