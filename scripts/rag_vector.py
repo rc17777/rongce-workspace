@@ -299,7 +299,6 @@ def hybrid_search(query, top_k=10, model=None, year_filter=None):
             'text': doc['text'][:200] + ('...' if len(doc['text']) > 200 else ''),
             'full_text': doc['text'],
             'char_count': doc.get('char_count', 0),
-            '_idx': idx,
         })
     
     return {
