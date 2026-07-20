@@ -1,0 +1,68 @@
+---
+title: "GPT-Image2-融策业务场景适配总览"
+type: "project"
+source: "C:\Users\scrccpa\.openclaw\workspace\obsidian-vault\wiki\GPT-Image2-融策业务场景适配总览.md"
+source_doc_id: "911c19046602"
+source_type: "original"
+content_hash: "3fbb1eaf339d64bb9ecd89216b9e37bc"
+compiled_at: "2026-07-19T00:27:13.988490"
+version: 1
+status: "draft"
+entities: [用于制作公司, 生成一张四川融策会计师事务所, 工程咨询公司, 类似四大会计师事务所, 环形中心]
+---
+
+# GPT-Image2-融策业务场景适配总览
+
+<!-- AUTO:start -->
+## 项目概况
+
+## 立项批复 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 资金来源
+
+## 预算金额 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 结算金额 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 参与单位
+
+## 关键节点 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 招标情况
+
+## 审计发现
+
+## 整改情况
+
+## 关联法规
+
+## 来源证据
+
+## 🔗 关联实体
+
+- [[用于制作公司]]
+- [[生成一张四川融策会计师事务所]]
+- [[工程咨询公司]]
+- [[类似四大会计师事务所]]
+- [[环形中心]]
+
+## 📎 来源证据
+
+- 源文档: C:\Users\scrccpa\.openclaw\workspace\obsidian-vault\wiki\GPT-Image2-融策业务场景适配总览.md
+- 文档ID: `911c19046602`
+- 内容哈希: `3fbb1eaf339d64bb9ecd89216b9e37bc`
+- 编译时间: 2026-07-19T00:27:13.988490
+- 来源类型: `original`
+
+<!-- AUTO:end -->
+<!-- HUMAN:start -->
+<!-- 在此区域手动编辑，不会被自动编译覆盖 -->
+<!-- HUMAN:end -->

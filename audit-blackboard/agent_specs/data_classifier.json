@@ -1,0 +1,107 @@
+{
+  "agent_id": "data_classifier",
+  "name": "数据分类员",
+  "version": "1.0",
+  "created": "2026-07-17",
+  "description": "自动扫描客户提供的原始资料，按12大业务线和资料类型分类打标签，同步到Obsidian知识库对应目录，增量更新RAG索引。",
+  "trigger_phase": "classify (Phase ①)",
+  "input": {
+    "source": "projects/<项目>/raw_data/ 下所有文件",
+    "formats": [".xlsx", ".xls", ".csv", ".docx", ".doc", ".pdf", ".txt", ".jpg", ".png", ".zip"],
+    "min_files": 1
+  },
+  "output": {
+    "files": [
+      "projects/<项目>/raw_data/.meta.json",
+      "projects/<项目>/status.json (更新 files_count.classified)"
+    ],
+    "obsidian_sync": "obsidian-vault/<业务线>/<项目>/ (按分类复制)"
+  },
+  "classification_rules": {
+    "by_filename_keyword": {
+      "财务": ["序时账", "科目余额", "辅助账", "报表", "凭证", "日记账", "总账", "明细账", "余额表"],
+      "合同": ["合同", "协议", "采购合同", "供应商", "台账", "框架协议"],
+      "招投标": ["招标", "投标", "开标", "评标", "中标", "标书", "招标文件", "投标文件", "报价"],
+      "制度": ["制度", "办法", "规定", "细则", "流程", "权限", "审批", "管理办法", "规程"],
+      "工商": ["工商", "股权", "章程", "营业执照", "统一社会信用代码", "企业信息"],
+      "项目": ["立项", "可研", "批复", "概算", "预算书", "初设", "施工图", "立项批复"],
+      "绩效": ["绩效", "目标", "自评", "指标", "佐证", "绩效评价"],
+      "资产": ["资产", "盘点", "台账", "折旧", "处置", "固定资产"],
+      "往来": ["往来", "应收", "应付", "函证", "账龄", "坏账", "预付"],
+      "工程": ["结算", "变更", "签证", "竣工", "决算", "工程量清单", "计价", "施工"]
+    },
+    "by_content_deep_scan": {
+      "description": "对PDF/DOCX内容做关键词扫描，覆盖文件名未命中的情况",
+      "model": "dashscope/qwen3.7-plus",
+      "method": "提取前3页文本→关键词匹配→二级分类确认"
+    },
+    "by_excel_sheet_analysis": {
+      "description": "Excel文件检查列名，判断具体类型",
+      "rules": {
+        "序时账": ["日期", "凭证号", "摘要", "科目编码", "借方金额", "贷方金额"],
+        "科目余额表": ["科目编码", "科目名称", "期初余额", "本期发生额", "期末余额"],
+        "合同台账": ["合同编号", "合同名称", "供应商", "签订日期", "合同金额"],
+        "资产台账": ["资产编号", "资产名称", "原值", "累计折旧", "净值"],
+        "往来明细": ["客户名称", "年初余额", "借方发生额", "贷方发生额", "年末余额"]
+      }
+    }
+  },
+  "actions": [
+    {
+      "step": 1,
+      "name": "文件扫描",
+      "action": "遍历raw_data所有文件，记录路径/大小/类型/编码",
+      "output": "file_inventory.json"
+    },
+    {
+      "step": 2,
+      "name": "快速分类",
+      "action": "基于文件名关键词+扩展名的第一轮分类",
+      "output": ".meta.json (初始分类)"
+    },
+    {
+      "step": 3,
+      "name": "深度分类",
+      "action": "对未分类文件(其他/)做内容扫描，PDF提取文本，Excel检查列名",
+      "output": ".meta.json (更新)"
+    },
+    {
+      "step": 4,
+      "name": "Obsidian同步",
+      "action": "按分类复制文件到obsidian-vault/<业务线>/<项目>/，保留原始raw_data不变",
+      "output": "同步报告"
+    },
+    {
+      "step": 5,
+      "name": "RAG索引更新",
+      "action": "调用 scripts/rag_rebuild.py --incremental",
+      "output": "索引更新日志"
+    },
+    {
+      "step": 6,
+      "name": "分类报告",
+      "action": "生成分类摘要，标注哪些资料已提供、哪些缺失（对照DATA_SPEC取数清单）",
+      "output": "分类报告.md"
+    }
+  ],
+  "sync_to_obsidian_structure": {
+    "财务": "obsidian-vault/<业务线>/<项目>/01-财务数据/",
+    "合同": "obsidian-vault/<业务线>/<项目>/02-合同文件/",
+    "招投标": "obsidian-vault/<业务线>/<项目>/03-招投标/",
+    "制度": "obsidian-vault/<业务线>/<项目>/04-制度文件/",
+    "工商": "obsidian-vault/<业务线>/<项目>/05-工商信息/",
+    "项目": "obsidian-vault/<业务线>/<项目>/06-项目资料/",
+    "绩效": "obsidian-vault/<业务线>/<项目>/07-绩效资料/",
+    "资产": "obsidian-vault/<业务线>/<项目>/08-资产资料/",
+    "往来": "obsidian-vault/<业务线>/<项目>/09-往来资料/",
+    "工程": "obsidian-vault/<业务线>/<项目>/10-工程资料/"
+  },
+  "model_routing": {
+    "filename_classification": "local_rule_engine",
+    "content_deep_scan": "dashscope/qwen3.7-plus",
+    "excel_analysis": "custom-cbwyy-top-v1/deepseek-v4-flash",
+    "summary_report": "custom-cbwyy-top-v1/deepseek-v4-flash"
+  },
+  "run_timeout_seconds": 300,
+  "next_phase": "plan (Phase ② - 实施方案与资料清单)"
+}

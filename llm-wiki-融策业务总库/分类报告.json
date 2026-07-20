@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-07-19T09:45:50.046025",
+  "total_files": 1589,
+  "classified_by_business": {
+    "招投标": 949,
+    "全过程咨询": 27,
+    "经责": 100,
+    "预算": 34,
+    "工程结算": 17,
+    "绩效": 34,
+    "往来款": 12,
+    "收支": 17,
+    "能源": 11,
+    "国企": 48,
+    "补贴": 13,
+    "成本": 1,
+    "专项": 46,
+    "财政评审": 6,
+    "工程决算": 8
+  },
+  "classified_generic": {
+    "审计法规": 45,
+    "AI技术": 59,
+    "审计方法": 53,
+    "公司管理": 2
+  },
+  "unclassified_count": 107,
+  "unclassified_examples": [
+    "knowledge\\references\\定价成本审核业务指引-中国价格协会2026.md",
+    "knowledge\\业务管理\\cross-document-auditor-开源项目-20260611.md",
+    "knowledge\\数据化审计\\23_风险管理需要灰度思维.md",
+    "knowledge\\数据化审计\\24_费用都去哪儿了.md",
+    "knowledge\\数据化审计\\39_下一页按钮不是想点就能点.md",
+    "knowledge\\数据化审计\\3_精通office却拿不出一个汇报图表.md",
+    "knowledge\\数据化审计\\40_撷英 - 数字经济时代的数字风险管理.md",
+    "knowledge\\数据化审计\\4_刚性的规章制度柔性的内控文化.md",
+    "knowledge\\数据化审计\\52_内控资源承载力带着镣铐跳舞.md",
+    "knowledge\\数据化审计\\55_高效推进整改台账分发.md",
+    "knowledge\\数据化审计\\56_分机构批量发送邮件通知和整改台账.md",
+    "knowledge\\数据化审计\\5_内控如同治史如何正确穿过历史迷雾掌控未来.md",
+    "knowledge\\数据化审计\\62_多关键词Excel文件检索.md",
+    "knowledge\\数据化审计\\64_乌卡时代呼唤钻石型审计团队.md",
+    "knowledge\\数据化审计\\68_孤立点分析在审计疑点发现中的应用.md",
+    "knowledge\\数据化审计\\73_乌合之众-减少审计问题屡查屡犯.md",
+    "knowledge\\数据化审计\\80_审计冲突不可避免关键是如何管理.md",
+    "knowledge\\taxonomy\\reviews\\deepseek-v4-pro.md",
+    "obsidian-vault\\05-审计整改库\\_index.md",
+    "obsidian-vault\\wiki\\15_数据化审计选择什么样的实施模式.md"
+  ],
+  "english_literature": {
+    "total": 868,
+    "classified": {
+      "corporate_governance": 34,
+      "ai_audit": 94,
+      "internal_audit": 193,
+      "audit_quality": 132,
+      "environmental_audit": 127,
+      "fraud_detection": 42,
+      "audit_methodology": 25,
+      "government_audit": 73,
+      "risk_management": 54,
+      "accounting_standards": 26
+    },
+    "unmatched": 68
+  },
+  "timestamp_updated": "2026-07-19T09:47:15.034080"
+}

@@ -1,219 +1,115 @@
 {
+  "数据分类员": {
+    "file": "data_classifier.json",
+    "shortcuts": ["数据分类员", "数据分类", "分类", "classifier", "资料分类", "归档"],
+    "desc": "Phase ①c：基于OCR文本+文件名+列名→按12业务线+资料类型深度分类→同步Obsidian→增量更新RAG",
+    "applicable_biz": ["全12业务线"],
+    "workflow_phase": "classify"
+  },
+  "OCR预处理员": {
+    "file": "ocr_processor.json",
+    "shortcuts": ["OCR预处理员", "OCR", "ocr", "文字识别", "扫描件", "发票识别", "合同提取"],
+    "desc": "Phase ①b：扫描件/图片→PaddleOCR→分五类文档结构化提取（发票/合同/招投标/银行/通用）",
+    "applicable_biz": ["全12业务线"],
+    "workflow_phase": "ocr"
+  },
+  "方案撰写师": {
+    "file": "plan_writer.json",
+    "shortcuts": ["方案撰写师", "方案撰写", "实施方案", "plan_writer", "资料清单", "重难点"],
+    "desc": "Phase ②：基于资料分类→RAG检索同类模板→生成实施方案(含重难点)+差异化资料清单→复核",
+    "applicable_biz": ["全12业务线"],
+    "workflow_phase": "plan"
+  },
+  "会议纪要分析师": {
+    "file": "meeting_minutes_analyzer.json",
+    "shortcuts": ["会议纪要分析师", "会议纪要", "纪要", "党委会", "办公会", "三重一大"],
+    "desc": "Phase ③：经责审计核心Agent——分析会议纪要、追踪三重一大决策链条、与合同/付款全链条比对",
+    "applicable_biz": ["经济责任审计", "国企审计", "专项资金审计", "招投标审计"],
+    "workflow_phase": "analyze"
+  },
+  "调整分录生成师": {
+    "file": "adjustment_scribe.json",
+    "shortcuts": ["调整分录生成师", "调整分录", "adjustment", "错账更正", "重分类"],
+    "desc": "Phase ③/④：发现财务问题→自动生成标准化审计调整分录（错账更正/重分类/补记/冲销）",
+    "applicable_biz": ["全12业务线"],
+    "workflow_phase": "analyze"
+  },
   "招投标猎手": {
     "file": "bid_hunter.json",
-    "shortcuts": [
-      "招投标猎手",
-      "招投标猎",
-      "招投标",
-      "投标",
-      "bid",
-      "串标",
-      "围标",
-      "猎手"
-    ],
-    "desc": "融策SOP v1.0六阶段招投标审计检测：硬件指纹/元数据残余/文本雷同/图片哈希/网络指纹/行为模式，集成AI评标时代攻防双视角",
-    "applicable_biz": [
-      "招投标审计",
-      "专项资金审计",
-      "国企审计",
-      "工程审计",
-      "政府采购监督检查"
-    ]
+    "shortcuts": ["招投标猎手", "招投标猎", "招投标", "投标", "bid", "串标", "围标", "猎手"],
+    "desc": "融策SOP v1.0六阶段招投标审计检测：硬件指纹/元数据残余/文本雷同/图片哈希/网络指纹/行为模式",
+    "applicable_biz": ["招投标审计", "专项资金审计", "国企审计", "工程审计", "政府采购监督检查"]
   },
   "预算工程师": {
     "file": "budget_estimator.json",
-    "shortcuts": [
-      "预算工程师",
-      "预算工程",
-      "预算",
-      "estimator",
-      "造价",
-      "定额"
-    ],
+    "shortcuts": ["预算工程师", "预算工程", "预算", "estimator", "造价", "定额"],
     "desc": "工程预算编制审核：工程量清单核对、定额套用合理性检查、材料价格比对、取费标准验证",
-    "applicable_biz": [
-      "工程预算编制",
-      "财政评审",
-      "全过程工程咨询",
-      "工程结算"
-    ]
+    "applicable_biz": ["工程预算编制", "财政评审", "全过程工程咨询", "工程结算"]
   },
   "合同猎犬": {
     "file": "contract_hound.json",
-    "shortcuts": [
-      "合同猎犬",
-      "合同猎",
-      "合同",
-      "猎犬",
-      "hound",
-      "contract"
-    ],
+    "shortcuts": ["合同猎犬", "合同猎", "合同", "猎犬", "hound", "contract"],
     "desc": "扫描全量合同→提取关键条款→比对标书/验收单→发现违规",
-    "applicable_biz": [
-      "经济责任审计",
-      "专项资金审计",
-      "招投标审计",
-      "国企审计",
-      "工程审计",
-      "政府补贴审计",
-      "成本效益审计"
-    ]
+    "applicable_biz": ["经济责任审计", "专项资金审计", "招投标审计", "国企审计", "工程审计", "政府补贴审计", "成本效益审计"]
   },
   "数据脱敏": {
     "file": "data_desensitizer.json",
-    "shortcuts": [
-      "数据脱敏"
-    ],
+    "shortcuts": ["数据脱敏"],
     "desc": "审计数据脱敏Agent。自动识别敏感字段，执行分级脱敏，确保数据安全后方可上传AI/共享。",
     "applicable_biz": []
   },
   "数据侦察兵": {
     "file": "data_scout.json",
-    "shortcuts": [
-      "数据侦察兵",
-      "数据侦察",
-      "数据",
-      "侦察",
-      "scout",
-      "data"
-    ],
+    "shortcuts": ["数据侦察兵", "数据侦察", "数据", "侦察", "scout", "data"],
     "desc": "序时账/科目余额表清洗、余额波动分析、大额异常检测、Benford定律检测",
-    "applicable_biz": [
-      "经济责任审计",
-      "收支审计",
-      "预算执行审计",
-      "专项资金审计",
-      "往来款清理",
-      "招投标审计",
-      "国企审计",
-      "工程审计",
-      "绩效评价",
-      "政府补贴审计",
-      "能源审计",
-      "成本效益审计"
-    ]
+    "applicable_biz": ["经济责任审计", "收支审计", "预算执行审计", "专项资金审计", "往来款清理", "招投标审计", "国企审计", "工程审计", "绩效评价", "政府补贴审计", "能源审计", "成本效益审计"]
   },
   "评标偏离度检测": {
     "file": "expert_bias_detector.json",
-    "shortcuts": [
-      "评标偏离度检测",
-      "偏离",
-      "偏倚",
-      "bias",
-      "expert",
-      "评标偏差"
-    ],
+    "shortcuts": ["评标偏离度检测", "偏离", "偏倚", "bias", "expert", "评标偏差"],
     "desc": "评标专家偏离度检测Agent。加载评标打分表，执行6种统计检测方法，输出偏离度分析报告。",
     "applicable_biz": []
   },
   "财政评审员": {
     "file": "fiscal_reviewer.json",
-    "shortcuts": [
-      "财政评审员",
-      "财政评审",
-      "财政",
-      "fiscal",
-      "财评",
-      "概算",
-      "评审"
-    ],
+    "shortcuts": ["财政评审员", "财政评审", "财政", "fiscal", "财评", "概算", "评审"],
     "desc": "财政投资评审：概算批复合规性、预算编制规范性、招标控制价合理性、结算超概分析",
-    "applicable_biz": [
-      "财政评审",
-      "预算执行审计",
-      "专项资金审计",
-      "工程竣工决算财务审计"
-    ]
+    "applicable_biz": ["财政评审", "预算执行审计", "专项资金审计", "工程竣工决算财务审计"]
   },
   "法规检察官": {
     "file": "law_inspector.json",
-    "shortcuts": [
-      "法规检察官"
-    ],
+    "shortcuts": ["法规检察官"],
     "desc": "接收前序Agent发现→对照政策法规库→逐条定性和处罚依据",
-    "applicable_biz": [
-      "全12业务线"
-    ]
+    "applicable_biz": ["全12业务线"]
   },
   "绩效评价师": {
     "file": "performance_evaluator.json",
-    "shortcuts": [
-      "绩效评价师",
-      "绩效评价",
-      "绩效",
-      "performance",
-      "evaluator",
-      "评价"
-    ],
+    "shortcuts": ["绩效评价师", "绩效评价", "绩效", "performance", "evaluator", "评价"],
     "desc": "预算绩效管理全流程：绩效目标审核、事前评估、事中监控、事后评价、指标打分",
-    "applicable_biz": [
-      "绩效评价",
-      "预算执行审计",
-      "专项资金审计",
-      "政府补贴审计"
-    ]
+    "applicable_biz": ["绩效评价", "预算执行审计", "专项资金审计", "政府补贴审计"]
   },
   "报告笔杆子": {
     "file": "report_writer.json",
-    "shortcuts": [
-      "报告笔杆子",
-      "报告",
-      "笔杆子",
-      "report",
-      "writer"
-    ],
+    "shortcuts": ["报告笔杆子", "报告", "笔杆子", "report", "writer"],
     "desc": "汇总底稿→15维度自检→生成审计报告初稿",
-    "applicable_biz": [
-      "全12业务线"
-    ]
+    "applicable_biz": ["全12业务线"]
   },
   "复核哨兵": {
     "file": "review_sentinel.json",
-    "shortcuts": [
-      "复核哨兵",
-      "复核哨",
-      "复核",
-      "哨兵",
-      "review",
-      "sentinel",
-      "检查"
-    ],
+    "shortcuts": ["复核哨兵", "复核哨", "复核", "哨兵", "review", "sentinel", "检查"],
     "desc": "独立于前6个Agent→报告↔底稿↔取证单三方交叉比对→15维度复核",
-    "applicable_biz": [
-      "全12业务线"
-    ]
+    "applicable_biz": ["全12业务线"]
   },
   "结算审计师": {
     "file": "settlement_auditor.json",
-    "shortcuts": [
-      "结算审计师",
-      "结算审计",
-      "结算",
-      "settlement",
-      "auditor",
-      "竣工"
-    ],
-    "desc": "工程结算审计：变更签证核验、工程量重算、材料价差调整、索赔合理性审查、竣工图vs现场核对",
-    "applicable_biz": [
-      "工程结算",
-      "全过程工程咨询",
-      "财政评审",
-      "工程竣工决算财务审计"
-    ]
+    "shortcuts": ["结算审计师", "结算审计", "结算", "settlement", "auditor", "竣工"],
+    "desc": "工程结算审计：变更签证核验、工程量重算、材料价差调整、索赔合理性审查",
+    "applicable_biz": ["工程结算", "全过程工程咨询", "财政评审", "工程竣工决算财务审计"]
   },
   "底稿工匠": {
     "file": "workpaper_crafter.json",
-    "shortcuts": [
-      "底稿工匠",
-      "底稿工",
-      "底稿",
-      "工匠",
-      "craft",
-      "workpaper"
-    ],
+    "shortcuts": ["底稿工匠", "底稿工", "底稿", "工匠", "craft", "workpaper"],
     "desc": "接收前4个Agent发现→生成标准化取证单+审计工作底稿",
-    "applicable_biz": [
-      "全12业务线"
-    ]
+    "applicable_biz": ["全12业务线"]
   }
 }

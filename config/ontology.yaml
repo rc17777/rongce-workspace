@@ -1,0 +1,241 @@
+# ============================================================
+# 审计领域知识本体 (Audit Domain Ontology)
+# 融策 wiki 知识库 - L1 抽取层配置
+# 版本: 1.0 | 生成: 2026-07-19
+# ============================================================
+
+version: "1.0"
+domain: "政府审计 & 工程咨询"
+
+# ---- 实体类型 ----
+entity_types:
+  regulation:
+    label: "法规制度"
+    patterns:
+      - name: "法规文号"
+        regex: '(财政部|国务院|发改委|审计署|四川省|成都市|[^\s]{2,6}(?:省|市|自治区|州|县))(?:令|发|办|字|函|规)\s*(?:〔\d{4}〕|\d{4}[\s-]?)\s*\d+\s*号'
+        priority: 90
+      - name: "法律简称"
+        patterns:
+          - "《.{2,60}》"
+          - "中华人民共和国.{2,40}(?:法|条例|办法|规定|细则|规则)"
+        priority: 85
+    fields: [title, document_number, issuing_authority, publish_date, effective_date, repeal_date, status, level, superseded_by, amended_by]
+
+  project:
+    label: "项目/工程"
+    patterns:
+      - name: "项目编号"
+        regex: '(?:项目|工程|标段)(?:编号|代码|批号)[：:]\s*[\w\-〔〕()（）]+'
+        priority: 85
+      - name: "项目名称关键词"
+        keywords: ["建设项目", "改造工程", "新建工程", "扩建项目", "维修工程", "治理工程", "整治项目", "配套工程", "专项工程"]
+        priority: 70
+    fields: [name, code, type, location, budget_amount, settlement_amount, start_date, end_date, owner_unit]
+
+  organization:
+    label: "单位/机构"
+    patterns:
+      - name: "机构名称"
+        regex: '[\u4e00-\u9fff]{2,20}(?:财政局|审计局|住建局|交通局|水利局|教育局|卫健委|发改委|财政局|人民政府|街道办事处|镇政府|委员会|办公室|中心|公司|事务所|集团)'
+        priority: 80
+      - name: "政府部门简称"
+        keywords: ["省财政厅", "市财政局", "县财政局", "区财政局", "审计署", "财政部", "省审计厅"]
+        priority: 75
+    fields: [name, type, parent_org, address, legal_representative]
+
+  fund:
+    label: "资金/经费"
+    patterns:
+      - name: "资金名称"
+        keywords: ["专项资金", "补助资金", "配套资金", "中央资金", "省级资金", "市级资金", "县级资金", "债券资金", "预算内资金", "财政拨款", "转移支付"]
+        priority: 75
+      - name: "金额"
+        regex: '(?:金额|资金|预算|结算|决算|投资|补助|拨付|支出|收入|结余|节余)[：:]*\s*[\d,.]+\s*(?:万[元圆]?|亿[元圆]?|[元圆])'
+        priority: 90
+        normalize: true
+    fields: [name, amount, source, purpose, fiscal_year, appropriation_date]
+
+  indicator:
+    label: "绩效指标"
+    patterns:
+      - regex: '(?:绩效|评价|考核)\s*(?:指标|目标|标准)'
+        priority: 70
+      - keywords: ["产出指标", "效益指标", "满意度指标", "时效指标", "质量指标", "数量指标", "成本指标", "预算执行率", "资金使用率"]
+        priority: 80
+    fields: [name, target_value, actual_value, unit, deviation, qualified]
+
+  audit_finding:
+    label: "审计问题/发现"
+    patterns:
+      - keywords: ["违规", "挪用", "截留", "虚列", "套取", "浪费", "闲置", "超标准", "超预算", "未按规定", "不符合", "管理不规范", "账实不符", "挤占", "滞留", "未及时"]
+      - regex: '(?:发现|存在|查出|查出)\s*(?:以下|主要|突出)?\s*(?:问题|情况|违规)'
+    fields: [issue_type, severity, amount_involved, regulation_violated, responsible_unit, rectification_status]
+
+  audit_procedure:
+    label: "审计程序"
+    keywords: ["审计取证", "审计抽样", "实质性程序", "分析性复核", "函证", "盘点", "询问", "观察", "检查", "重新计算", "重新执行", "穿行测试", "控制测试", "细节测试", "截止性测试"]
+    fields: [name, description, applicable_scenario, evidence_type]
+
+  rectification:
+    label: "整改措施"
+    keywords: ["整改", "纠正", "追回", "上缴", "退还", "调整账务", "完善制度", "加强管理", "追究责任", "处分", "通报批评", "约谈"]
+    fields: [measure, target_issue_id, deadline, responsible_unit, completion_status]
+
+  person:
+    label: "人员/角色"
+    patterns:
+      - regex: '(?:负责人|法定代表人|项目负责人|财务负责人|经办人|签字人|审批人|监理|项目经理)[：:]*\s*[\u4e00-\u9fff]{2,4}'
+        priority: 60
+    fields: [name, role, organization, responsibility_period]
+
+
+# ---- 关系类型 ----
+relation_types:
+  regulates:
+    label: "法规约束"
+    from: regulation
+    to: [audit_finding, project, fund, audit_procedure]
+    directed: true
+    requires_evidence: true
+
+  supersedes:
+    label: "废止/替代"
+    from: regulation
+    to: regulation
+    directed: true
+    symmetric: false
+    properties: [effective_date]
+    requires_evidence: true
+
+  references:
+    label: "引用依据"
+    from: [audit_finding, audit_procedure, wiki_page]
+    to: regulation
+    directed: true
+    requires_evidence: true
+
+  belongs_to:
+    label: "隶属/归属"
+    from: [project, fund, audit_finding]
+    to: organization
+    directed: true
+    requires_evidence: true
+
+  uses:
+    label: "资金使用"
+    from: project
+    to: fund
+    directed: true
+    properties: [amount, fiscal_year]
+    requires_evidence: true
+
+  involves:
+    label: "涉及主体"
+    from: [audit_finding, project, fund]
+    to: [organization, person, regulation]
+    directed: true
+    requires_evidence: true
+
+  violates:
+    label: "违反法规"
+    from: audit_finding
+    to: regulation
+    directed: true
+    requires_evidence: true
+    severity: high
+
+  rectifies:
+    label: "整改对应"
+    from: rectification
+    to: audit_finding
+    directed: true
+    requires_evidence: true
+
+  measured_by:
+    label: "指标衡量"
+    from: [project, fund, audit_finding]
+    to: indicator
+    directed: true
+    requires_evidence: true
+
+  related_to:
+    label: "一般关联"
+    from: "*"
+    to: "*"
+    directed: false
+    requires_evidence: false
+    note: "仅作为候选边，不自动入库正式图谱"
+
+
+# ---- 抽取器仲裁规则 ----
+extractor_priority:
+  - "词典精确匹配"
+  - "正则匹配"
+  - "UIE 模型抽取"
+  # UIE 置信度 < 0.7 → 人工确认队列
+
+# ---- 金额/日期归一化 ----
+normalization:
+  amount:
+    # 目标: 统一为 "万元" (浮点数)
+    patterns:
+      - pattern: '([\d,.]+)\s*万[元圆]?'
+        unit: "万元"
+        factor: 1.0
+      - pattern: '([\d,.]+)\s*亿[元圆]?'
+        unit: "万元"
+        factor: 10000.0
+      - pattern: '([\d,.]+)\s*[元圆](?![\d])'
+        unit: "万元"
+        factor: 0.0001
+    normalize_to: "万元"
+  date:
+    format: "YYYY-MM-DD"
+    patterns:
+      - '\d{4}[-/年]\d{1,2}[-/月]\d{1,2}[日]?'
+      - '\d{4}\.\d{1,2}\.\d{1,2}'
+
+
+# ---- 法规时效规则 ----
+regulation_aging:
+  status_values: ["现行有效", "已修订", "已废止", "部分废止", "征求意见稿", "草案", "未知"]
+  lint_rules:
+    - name: "引用已废止法规"
+      severity: P1
+      check: "wiki页面引用 regulation 且 regulation.status == '已废止'"
+    - name: "法规发布日期晚于审计期间"
+      severity: P2
+      check: "regulation.effective_date > document.audit_period_end"
+    - name: "引用征求意见稿作为正式依据"
+      severity: P1
+      check: "wiki页面引用 regulation 且 regulation.status == '征求意见稿'"
+
+
+# ---- 四类 Wiki 页面模板 ----
+page_templates:
+  regulation:
+    sections: [效力状态, 文号, 发布日期, 实施日期, 废止日期, 发布机关, 适用范围, 关键条款, 替代关系, 关联项目, 关联审计问题, 原文摘要, 来源证据]
+    locked_fields: [效力状态, 文号, 发布日期, 实施日期]
+
+  project:
+    sections: [项目概况, 立项批复, 资金来源, 预算金额, 结算金额, 参与单位, 关键节点, 招标情况, 审计发现, 整改情况, 关联法规, 来源证据]
+    locked_fields: [预算金额, 结算金额, 立项批复, 关键节点]
+
+  organization:
+    sections: [基本信息, 别名, 隶属关系, 涉及项目, 涉及资金, 审计发现, 关联法规, 来源证据]
+    locked_fields: [基本信息, 别名]
+
+  audit_finding:
+    sections: [问题类型, 严重程度, 涉及金额, 违反法规, 责任单位, 证据摘要, 整改要求, 整改状态, 关联项目, 关联问题, 来源证据]
+    locked_fields: [涉及金额, 违反法规, 责任单位, 证据摘要]
+
+
+# ---- 溯源标记规范 ----
+provenance:
+  required_for: [entity, relation, claim, summary]
+  fields: [source_doc_id, source_chunk_id, char_offset, extractor_version, extraction_date]
+  source_types:
+    original: "原始文档chunk"
+    generated: "模型自动生成"  # 回灌RAG降权
+    human: "人工编辑"  # 最高权重

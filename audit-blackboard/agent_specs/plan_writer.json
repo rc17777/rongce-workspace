@@ -1,0 +1,167 @@
+{
+  "agent_id": "plan_writer",
+  "name": "方案撰写师",
+  "version": "1.0",
+  "created": "2026-07-17",
+  "description": "基于资料分类结果和业务线取数规范，自动生成审计实施方案（含重难点分析）和差异化资料清单。调用RAG检索同类项目模板和历史重难点。",
+  "trigger_phase": "plan (Phase ②)",
+  "input": {
+    "classified_files": "Phase ① 输出的 .meta.json 分类结果",
+    "biz_type": "业务线类型（如 economic_responsibility）",
+    "biz_name": "业务线中文名",
+    "project_name": "项目名称",
+    "data_spec": "DATA_SPEC.md 中该业务线的取数清单"
+  },
+  "output": {
+    "files": [
+      "projects/<项目>/outputs/实施方案/实施方案_<项目>_v1.docx",
+      "projects/<项目>/outputs/实施方案/资料清单_<项目>.xlsx",
+      "projects/<项目>/outputs/实施方案/重难点分析.md"
+    ]
+  },
+  "plan_template": {
+    "sections": [
+      {
+        "section": "一、审计目标",
+        "content": "基于业务类型和项目特点，明确审计总体目标和具体目标",
+        "source": "RAG同类项目模板 + 业务线标准文件(RONGCE_AI_HUB/business-lines/)"
+      },
+      {
+        "section": "二、审计范围",
+        "content": "时间范围（会计期间）、空间范围（单位/部门）、内容范围",
+        "source": "客户资料中的时间跨度推断 + DATA_SPEC时间范围要求"
+      },
+      {
+        "section": "三、审计重点与难点",
+        "content": "标注高风险领域，每项含：风险描述、历史案例引用、关注要点",
+        "source": "RAG案例库高频问题 + SCENARIO-SKILL-MAP推荐技能 + rule-library已沉淀规则"
+      },
+      {
+        "section": "四、审计方法与程序",
+        "content": "针对每个重难点，列出具体审计方法和程序步骤",
+        "source": "SCENARIO-SKILL-MAP中的技能推荐 + audit-data-analysis-methods 7大方法"
+      },
+      {
+        "section": "五、人员安排与时间计划",
+        "content": "项目组成员分工 + 时间甘特图",
+        "source": "按Agent分工映射到人员角色"
+      },
+      {
+        "section": "六、预期成果",
+        "content": "问题清单、取证单、底稿、审计报告的预期数量和类型",
+        "source": "同类项目历史数据"
+      }
+    ]
+  },
+  "checklist_template": {
+    "levels": [
+      {
+        "level": "已提供资料",
+        "desc": "Phase ① 分类结果中已有的资料",
+        "auto_fill": true
+      },
+      {
+        "level": "待补充资料",
+        "desc": "DATA_SPEC要求但尚未提供的资料",
+        "auto_fill": true
+      },
+      {
+        "level": "建议索取资料",
+        "desc": "基于重难点分析，额外建议索取的资料",
+        "source": "RAG案例库中同类项目的补充资料需求"
+      }
+    ],
+    "columns": ["序号", "资料名称", "提供状态", "用途说明", "紧急程度", "备注"]
+  },
+  "actions": [
+    {
+      "step": 1,
+      "name": "RAG检索同类方案",
+      "action": "检索RAG知识库中同类项目的实施方案模板和历史重难点",
+      "method": "zhixi-v2 POST /api/rag/query",
+      "query": "「{biz_name}」实施方案 审计重难点 资料清单"
+    },
+    {
+      "step": 2,
+      "name": "分析已提供资料",
+      "action": "读取 .meta.json，分析哪些资料已提供、哪些缺失",
+      "output": "资料缺口分析"
+    },
+    {
+      "step": 3,
+      "name": "重难点识别",
+      "action": "基于业务线+资料情况+历史案例，识别审计重难点",
+      "method": "对照 rule-library 中已沉淀的A级规则，匹配高风险条款",
+      "source": ["RAG案例库高频问题", "SCENARIO-SKILL-MAP推荐技能", "rule-library"]
+    },
+    {
+      "step": 4,
+      "name": "实施方案撰写",
+      "action": "按6节模板撰写实施方案",
+      "model": "custom-cbwyy-top-v1/deepseek-v4-pro",
+      "output": "实施方案_<项目>_v1.docx"
+    },
+    {
+      "step": 5,
+      "name": "资料清单生成",
+      "action": "生成三级资料清单（已提供/待补充/建议索取）",
+      "output": "资料清单_<项目>.xlsx"
+    },
+    {
+      "step": 6,
+      "name": "方案复核",
+      "action": "调用 review_sentinel 检查方案完整性",
+      "checks": [
+        "重难点是否覆盖DATA_SPEC要求的所有领域",
+        "资料清单是否遗漏关键取数项",
+        "审计程序是否对应每个重难点",
+        "时间计划是否合理"
+      ]
+    }
+  ],
+  "heavy_points_library": {
+    "economic_responsibility": [
+      "重大经济决策程序的合规性",
+      "国有资产保值增值情况",
+      "内部控制制度的健全性和有效性",
+      "领导干部个人廉洁自律情况",
+      "政府投资项目的决策和基建程序"
+    ],
+    "bidding": [
+      "招标方式的合规性（公开/邀请/单一来源）",
+      "投标人关联关系（L8工商穿透）",
+      "评标过程的公正性（L10评委打分偏差）",
+      "合同签订与招标文件的一致性",
+      "串标围标嫌疑（L1-L19多层次检测）"
+    ],
+    "performance": [
+      "绩效目标的科学性和合理性",
+      "资金使用效率",
+      "项目产出和效果的真实性",
+      "绩效自评的客观性",
+      "长效机制的建立"
+    ],
+    "special_fund": [
+      "专项资金专款专用情况",
+      "资金拨付的及时性",
+      "项目实施进度与资金使用的匹配",
+      "挪用、截留、虚列支出"
+    ],
+    "engineering": [
+      "概算执行情况",
+      "招投标合规性",
+      "合同履约情况",
+      "工程变更和签证的合理性",
+      "竣工决算的真实性和完整性"
+    ]
+  },
+  "model_routing": {
+    "rag_retrieval": "local_zhixi_api",
+    "plan_writing": "custom-cbwyy-top-v1/deepseek-v4-pro",
+    "heavy_point_analysis": "claude-sonnet-5-20250915",
+    "checklist_generation": "custom-cbwyy-top-v1/deepseek-v4-flash",
+    "plan_review": "claude-sonnet-5-20250915"
+  },
+  "run_timeout_seconds": 600,
+  "next_phase": "analyze (Phase ③ - 多Agent分析)"
+}

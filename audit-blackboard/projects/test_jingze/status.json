@@ -1,0 +1,27 @@
+{
+  "project_id": "test_jingze",
+  "project_name": "XX集团经责审计",
+  "biz_type": "经济责任",
+  "created_at": "2026-07-17T13:36:07.872655+08:00",
+  "phase": "penetrated",
+  "logs": [
+    "[13:36] v3.0穿透: 5坐标系→5个Agent并行"
+  ],
+  "penetration": {
+    "coordinates": [
+      "时空",
+      "物理",
+      "社会关系",
+      "行为",
+      "时间序列"
+    ],
+    "agents": [
+      "law_inspector",
+      "contract_hound",
+      "report_writer",
+      "data_scout",
+      "bid_hunter"
+    ],
+    "parallel": true
+  }
+}

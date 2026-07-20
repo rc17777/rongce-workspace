@@ -92,6 +92,7 @@ Token 存储：`logs/token_usage.jsonl`（JSONL 格式）
 - **长文档(>128K)**：gemini-3.1-pro-preview
 - **压舱石终审**：opus-4-8（≤2次/项目）
 - **国产备胎**：doubao-seed-2.0-lite
+- **国产推理**：kimi-k3（月之暗面，带 reasoning，支持 text+image）
 - **生图**：gpt-image-2
 - **咨询层**：fable-5（做决策前先问）
 

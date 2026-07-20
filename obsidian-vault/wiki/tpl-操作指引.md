@@ -1,0 +1,63 @@
+---
+title: "tpl-操作指引"
+type: "regulation"
+source: "C:\Users\scrccpa\.openclaw\workspace\obsidian-vault\_templates\tpl-操作指引.md"
+source_doc_id: "12f9bf54f070"
+source_type: "original"
+content_hash: "02b8da36cc1c8a71441550a15f3fade0"
+compiled_at: "2026-07-19T00:27:19.188077"
+version: 1
+status: "draft"
+entities: []
+---
+
+# tpl-操作指引
+
+<!-- AUTO:start -->
+## 效力状态 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 文号 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 发布日期 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 实施日期 🔒
+
+> ⚠️ 此字段为锁定字段，自动编译不会覆盖。
+
+## 废止日期
+
+## 发布机关
+
+## 适用范围
+
+## 关键条款
+
+## 替代关系
+
+## 关联项目
+
+## 关联审计问题
+
+## 原文摘要
+
+## 来源证据
+
+
+## 📎 来源证据
+
+- 源文档: C:\Users\scrccpa\.openclaw\workspace\obsidian-vault\_templates\tpl-操作指引.md
+- 文档ID: `12f9bf54f070`
+- 内容哈希: `02b8da36cc1c8a71441550a15f3fade0`
+- 编译时间: 2026-07-19T00:27:19.188077
+- 来源类型: `original`
+
+<!-- AUTO:end -->
+<!-- HUMAN:start -->
+<!-- 在此区域手动编辑，不会被自动编译覆盖 -->
+<!-- HUMAN:end -->

@@ -43,7 +43,7 @@
     },
     "audit_fiscal": {
       "label": "财政监督检查",
-      "trigger_keywords": ["财政监督", "财会监督", "专项资金", "补贴", "专项债"],
+      "trigger_keywords": ["财政监督", "财会监督", "专项资金", "补贴", "专项债", "一案两书", "专项债申报", "专项债包装", "收益覆盖倍数"],
       "skills": [
         "fiscal-supervision-model", "special-fund-audit", "special-bond-audit",
         "subsidy-audit", "gov-subsidy-penetration-audit", "gov-audit-methodology"

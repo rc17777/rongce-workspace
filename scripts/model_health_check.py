@@ -97,6 +97,12 @@ MODELS = {
         "key": "sk-8Up5r8WtFOQrckhQCxOxaRYES5KAWQqgKMdrJng1l0DJ9gix",
         "api": "openai",
         "category": "low"
+    },
+    "kimi-k3": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-PvqkSJ7p0AKyh2k6WXaO5YIYEAQFlnwgeetxdBmEleGhk38m",
+        "api": "openai",
+        "category": "low"
     }
 }
 

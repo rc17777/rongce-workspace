@@ -1,0 +1,124 @@
+{
+  "version": "3.0",
+  "project": "XX局2026年度预算执行审计（演示）",
+  "biz_type": "预算执行",
+  "coordinates": [
+    "时空",
+    "物理",
+    "社会关系",
+    "行为",
+    "时间序列"
+  ],
+  "parallel_tasks": [
+    {
+      "coordinate": "时空",
+      "agent_id": "bid_hunter",
+      "index": 1,
+      "method_description": "将声称的时间地点与独立时空数据（门禁/GPS/卫星/街景）交叉比对，验证\"人在哪、事在哪\"的真实性。",
+      "applicable_rules": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "E08b"
+      ],
+      "available_tools": [
+        "e01_door_access_vs_travel",
+        "e05_bid_metadata_homology",
+        "e08_satellite_vs_schedule"
+      ],
+      "rag_reference": "Loaded index: 16512 chunks, matrix (16512, 15000) Q: 时空交叉验证 审计方法 卫星影像 门禁打卡 --top 3 📚 检索到 5 条相关文档：",
+      "spawn_task": "你是融策审计黑板的bid_hunterAgent，负责**时空坐标系**的深度穿透审计。\n\n## 你的坐标系\n\n**时空** — 将声称的时间地点与独立时空数据（门禁/GPS/卫星/街景）交叉比对，验证\"人在哪、事在哪\"的真实性。\n\n## 项目背景\n- 项目: XX局2026年度预算执行审计（演示）\n- 审计类型: 预算执行\n\n## 适用筛查规则\n- E01\n- E02\n- E03\n- E04\n- E05\n- E06\n- E07\n- E08\n- E08b\n\n## 可用工具脚本\n- e01_door_access_vs_travel\n- e05_bid_metadata_homology\n- e08_satellite_vs_schedule\n\n## RAG知识库参考\nLoaded index: 16512 chunks, matrix (16512, 15000) Q: 时空交叉验证 审计方法 卫星影像 门禁打卡 --top 3 📚 检索到 5 条相关文档：\n\n## 你的任务\n1. 从项目数据中提取时空维度的异常信号\n2. 对每个异常信号执行深度验证（不要只停在表面）\n3. 输出标准格式的审计发现\n\n## 输出要求\n- 文件: audit-blackboard/projects/demo_预算执行审计/findings/bid_hunter_时空.json\n- 格式: JSON数组，每条遵守finding_schema.json\n- 每个发现标注coordinate: \"时空\"\n- finding_id格式: F-2026-时空-{序号}\n",
+      "output_file": "findings/bid_hunter_时空.json"
+    },
+    {
+      "coordinate": "物理",
+      "agent_id": "contract_hound",
+      "index": 2,
+      "method_description": "用物理守恒定律验证——声称的产出必然消耗对应物质，用独立供货记录反推真实工程量/销售量。",
+      "applicable_rules": [
+        "E09",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14"
+      ],
+      "available_tools": [
+        "e13_purchase_sales_inventory",
+        "e10_material_vs_area",
+        "e12_concrete_vs_quantity"
+      ],
+      "rag_reference": "Loaded index: 16512 chunks, matrix (16512, 15000) Q: 物理消耗反推 工程量审计 进销存比对 耗材验证 --top 3 📚 检索到 5 条相关文档：",
+      "spawn_task": "你是融策审计黑板的contract_houndAgent，负责**物理坐标系**的深度穿透审计。\n\n## 你的坐标系\n\n**物理** — 用物理守恒定律验证——声称的产出必然消耗对应物质，用独立供货记录反推真实工程量/销售量。\n\n## 项目背景\n- 项目: XX局2026年度预算执行审计（演示）\n- 审计类型: 预算执行\n\n## 适用筛查规则\n- E09\n- E10\n- E11\n- E12\n- E13\n- E14\n\n## 可用工具脚本\n- e13_purchase_sales_inventory\n- e10_material_vs_area\n- e12_concrete_vs_quantity\n\n## RAG知识库参考\nLoaded index: 16512 chunks, matrix (16512, 15000) Q: 物理消耗反推 工程量审计 进销存比对 耗材验证 --top 3 📚 检索到 5 条相关文档：\n\n## 你的任务\n1. 从项目数据中提取物理维度的异常信号\n2. 对每个异常信号执行深度验证（不要只停在表面）\n3. 输出标准格式的审计发现\n\n## 输出要求\n- 文件: audit-blackboard/projects/demo_预算执行审计/findings/contract_hound_物理.json\n- 格式: JSON数组，每条遵守finding_schema.json\n- 每个发现标注coordinate: \"物理\"\n- finding_id格式: F-2026-物理-{序号}\n",
+      "output_file": "findings/contract_hound_物理.json"
+    },
+    {
+      "coordinate": "社会关系",
+      "agent_id": "law_inspector",
+      "index": 3,
+      "method_description": "穿透工商股权、亲属关系、任职历史构建关联图谱，识别未披露的利益输送通道。",
+      "applicable_rules": [
+        "E15",
+        "E16",
+        "E17",
+        "E18"
+      ],
+      "available_tools": [
+        "e15_handler_payee",
+        "e16_shareholder_penetration",
+        "e17_family_business"
+      ],
+      "rag_reference": "Loaded index: 16512 chunks, matrix (16512, 15000) Q: 工商关联穿透 亲属经商 利益输送 交叉任职 审计 --top 3 📚 检索到 5 条相关文档：",
+      "spawn_task": "你是融策审计黑板的law_inspectorAgent，负责**社会关系坐标系**的深度穿透审计。\n\n## 你的坐标系\n\n**社会关系** — 穿透工商股权、亲属关系、任职历史构建关联图谱，识别未披露的利益输送通道。\n\n## 项目背景\n- 项目: XX局2026年度预算执行审计（演示）\n- 审计类型: 预算执行\n\n## 适用筛查规则\n- E15\n- E16\n- E17\n- E18\n\n## 可用工具脚本\n- e15_handler_payee\n- e16_shareholder_penetration\n- e17_family_business\n\n## RAG知识库参考\nLoaded index: 16512 chunks, matrix (16512, 15000) Q: 工商关联穿透 亲属经商 利益输送 交叉任职 审计 --top 3 📚 检索到 5 条相关文档：\n\n## 你的任务\n1. 从项目数据中提取社会关系维度的异常信号\n2. 对每个异常信号执行深度验证（不要只停在表面）\n3. 输出标准格式的审计发现\n\n## 输出要求\n- 文件: audit-blackboard/projects/demo_预算执行审计/findings/law_inspector_社会关系.json\n- 格式: JSON数组，每条遵守finding_schema.json\n- 每个发现标注coordinate: \"社会关系\"\n- finding_id格式: F-2026-社会-{序号}\n",
+      "output_file": "findings/law_inspector_社会关系.json"
+    },
+    {
+      "coordinate": "行为",
+      "agent_id": "data_scout",
+      "index": 4,
+      "method_description": "分析审批节奏、报价规律、签字习惯中隐藏的非随机模式——人会口头说谎，但行为模式难以伪造。",
+      "applicable_rules": [
+        "E19",
+        "E19b",
+        "E20",
+        "E21"
+      ],
+      "available_tools": [
+        "e19_approval_pattern",
+        "e20_bid_price_pattern",
+        "e21_rotation_pattern"
+      ],
+      "rag_reference": "Loaded index: 16512 chunks, matrix (16512, 15000) Q: 行为模式分析 审批异常 报价规律 围标检测 审计 --top 3 📚 检索到 5 条相关文档：",
+      "spawn_task": "你是融策审计黑板的data_scoutAgent，负责**行为坐标系**的深度穿透审计。\n\n## 你的坐标系\n\n**行为** — 分析审批节奏、报价规律、签字习惯中隐藏的非随机模式——人会口头说谎，但行为模式难以伪造。\n\n## 项目背景\n- 项目: XX局2026年度预算执行审计（演示）\n- 审计类型: 预算执行\n\n## 适用筛查规则\n- E19\n- E19b\n- E20\n- E21\n\n## 可用工具脚本\n- e19_approval_pattern\n- e20_bid_price_pattern\n- e21_rotation_pattern\n\n## RAG知识库参考\nLoaded index: 16512 chunks, matrix (16512, 15000) Q: 行为模式分析 审批异常 报价规律 围标检测 审计 --top 3 📚 检索到 5 条相关文档：\n\n## 你的任务\n1. 从项目数据中提取行为维度的异常信号\n2. 对每个异常信号执行深度验证（不要只停在表面）\n3. 输出标准格式的审计发现\n\n## 输出要求\n- 文件: audit-blackboard/projects/demo_预算执行审计/findings/data_scout_行为.json\n- 格式: JSON数组，每条遵守finding_schema.json\n- 每个发现标注coordinate: \"行为\"\n- finding_id格式: F-2026-行为-{序号}\n",
+      "output_file": "findings/data_scout_行为.json"
+    },
+    {
+      "coordinate": "时间序列",
+      "agent_id": "report_writer",
+      "index": 5,
+      "method_description": "绘制全年/全任期的时间序列曲线，检测Q4突击、截止前冲量、离任前突变等异常节奏——时间轴不会撒谎。",
+      "applicable_rules": [
+        "E22",
+        "E23",
+        "E24",
+        "E24b",
+        "E24c"
+      ],
+      "available_tools": [
+        "e23_year_end_spending",
+        "e24_pre_post_comparison"
+      ],
+      "rag_reference": "Loaded index: 16512 chunks, matrix (16512, 15000) Q: 时间序列分析 年末突击 支出节奏 任期对比 审计 --top 3 📚 检索到 5 条相关文档：",
+      "spawn_task": "你是融策审计黑板的report_writerAgent，负责**时间序列坐标系**的深度穿透审计。\n\n## 你的坐标系\n\n**时间序列** — 绘制全年/全任期的时间序列曲线，检测Q4突击、截止前冲量、离任前突变等异常节奏——时间轴不会撒谎。\n\n## 项目背景\n- 项目: XX局2026年度预算执行审计（演示）\n- 审计类型: 预算执行\n\n## 适用筛查规则\n- E22\n- E23\n- E24\n- E24b\n- E24c\n\n## 可用工具脚本\n- e23_year_end_spending\n- e24_pre_post_comparison\n\n## RAG知识库参考\nLoaded index: 16512 chunks, matrix (16512, 15000) Q: 时间序列分析 年末突击 支出节奏 任期对比 审计 --top 3 📚 检索到 5 条相关文档：\n\n## 你的任务\n1. 从项目数据中提取时间序列维度的异常信号\n2. 对每个异常信号执行深度验证（不要只停在表面）\n3. 输出标准格式的审计发现\n\n## 输出要求\n- 文件: audit-blackboard/projects/demo_预算执行审计/findings/report_writer_时间序列.json\n- 格式: JSON数组，每条遵守finding_schema.json\n- 每个发现标注coordinate: \"时间序列\"\n- finding_id格式: F-2026-时间-{序号}\n",
+      "output_file": "findings/report_writer_时间序列.json"
+    }
+  ],
+  "total_agents": 5,
+  "generated_at": "2026-07-17T13:35:36.147670+08:00",
+  "note": "所有Agent任务互不依赖，可完全并行执行。每个Agent负责不同的坐标系。"
+}

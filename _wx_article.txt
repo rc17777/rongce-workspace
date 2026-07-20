@@ -1,0 +1,189 @@
+传统 RAG 一锤子买卖，Agentic RAG 会自己判断“这结果不对，我重查一遍”
+全网爆火趋势解读 + 完整 LangGraph 实战代码
+前言：传统 RAG 的“死穴”，比你想象的更严重
+前面的系列教程，我们搞定了文档解析、混合检索、向量量化，一个完整的 RAG 系统已经能跑起来了。
+但你有没有遇到过这种情况：
+用户问“怎么微调 LLM 效果最好”，知识库里明明有一篇《大语言模型的参数高效训练方法》，但检索器拉回来的却是模型架构相关的内容——虽然沾边，但答非所问。更糟糕的是，LLM 压根意识不到上下文是错的，照样面不改色地输出一段貌似专业实则离题万里的回答。
+这就是传统 RAG 的“死穴”：一锤子买卖，没有质量把关环节。
+事实上，这个问题比想象中更严重。有研究发现，在医学临床文本生成中，传统 RAG 技术反而让大模型幻觉率从基线状态的 5.0% 飙升至 43.6%。原因就是，它只是找到了“看起来相关”的资料，而不是循证的证据。
+Agentic RAG 的解法截然不同：它不急着从检索结果里硬挤答案，而是先判断拿回来的东西到底有没有用。没用？重写查询再来一轮。这套机制实际上构建了一条具备自我修复能力的检索链路。
+读完这篇，你将得到：
+成果
+说明
+✅ 搞懂 Agentic RAG 是什么
+一句话：RAG + AI Agent = 自主纠错的检索系统
+✅ 理解核心工作流程
+智能体 → 检索 → 评分 → 生成/重写，闭环控制
+✅ 掌握 LangGraph 实现
+从零到一，完整可运行代码
+✅ 知道三种 RAG 怎么选
+传统 RAG vs Graph RAG vs Agentic RAG
+第一部分：RAG 的“三代进化”——从一锤子买卖到自我修复
+第一代：传统 Vector RAG（向量检索增强生成）
+这是最基础的 RAG 形态。用户提问 → 向量检索 → 拼接上下文 → LLM 生成答案。整个过程是单向的，没有任何质量把关环节。
+核心问题：检索到的文档一旦与用户意图对不上号，模型照样能面不改色地输出一堆看似合理的胡话，既没有反馈机制也谈不上什么纠错能力。
+适合场景：简单 FAQ、单文档问答、对准确性要求不高的场景。
+第二代：Graph RAG（知识图谱增强生成）
+以微软 GraphRAG 为代表的方案，算是对传统 RAG 局限的一次重要修正。
+它会把文档中的实体（公司、人物、项目等）以及它们之间的关系抽出来，做成一张知识图谱，再沿着“谁和谁有关”、“哪些事件属于同一个主题”去组织答案。
+核心优势：传统 RAG 可以迅速找到几段“看起来最像”的文本，但未必拧得清它们之间是啥关系。GraphRAG 让 RAG 从简单的向量相似度匹配，向结构化关系推理迈出了一大步。
+核心挑战：构建和维护知识图谱的成本极高——抽三元组、合并实体、归一关系、建全局图、做社区摘要……每一步都很贵，每一步都可能出错。而且世界总在变，今天项目负责人换了，明天客户需求变了，预制的图谱总不能每天推倒重建吧。
+适合场景：需要跨文档推理、理解实体关系的复杂问答。
+第三代：Agentic RAG（智能体驱动的自主检索）
+Agentic RAG 在流程中插入了几个检查点：智能体先判断要不要检索；检索完了有评分环节确认相关性；不相关就重写查询再试；如此循环直到拿到合格的上下文，或者把重试次数耗尽为止。
+核心突破：标准 RAG 把检索当黑盒，查询丢进去、文档出来，至于相不相关全凭运气。Agentic RAG 打开这个黑盒，在关键位置加了质量控制。
+适合场景：复杂查询、多知识源、高准确率要求、生产级企业应用。
+三者的互补关系
+一个真实的行业动向：2026 年 Q1，企业采用混合检索的意向从 10.3% 飙升至 33.3%，单向量数据库架构正在被重新审视。但 GraphRAG 并未被抛弃——研究显示，在 Agentic Search 系统中，GraphRAG 在复杂的多跳推理场景下仍有不可替代的优势，当离线成本被摊薄时，其行为更稳定、推理路径更清晰。
+第二部分：Agentic RAG 的核心机制（一张图看懂）
+
+三个核心组件拆解
+1. 智能体节点——决策入口
+智能体接收用户问题，判断：这个问题需要外部知识还是直接能答？需要查就调检索器，不需要就直出答案。
+2. 评分节点——质量关卡
+检索完成后，评分器会逐个审视返回的文档：这东西跟用户问的相关不相关？能不能帮上忙？评定相关就走生成流程，不相关就触发查询改写。这是整个系统里最关键的质量关卡。
+3. 重写节点——修正机制
+当评分节点判定检索结果不相关时，重写节点上场。它把原始问题改写成更适合检索的形式——用户表述太口语化、缺少关键词，这些问题都在这里修正。改写后的查询再交回智能体重新发起检索。
+第三部分：LangGraph 实战——从零搭建 Agentic RAG
+环境准备
+bash
+
+pip install langgraph langchain langchain-openai redis redis-py
+
+项目结构
+text
+
+src/├── config/│   ├── settings.py      # 环境变量│   └── openai.py        # 模型名称和 API 客户端├── retriever.py         # 文档摄取和 Redis 向量存储├── agents/│   ├── nodes.py         # 智能体、重写和生成函数│   ├── edges.py         # 文档评分逻辑│   └── graph.py         # LangGraph 状态机└── main.py              # 入口点
+
+职责划分很清晰：配置归 config/，智能体相关的都在 agents/，向量存储操作全在 retriever.py。这种结构调试起来方便，单测也好写。
+核心代码实现
+1. 配置模块（config/settings.py）
+python
+
+import osfrom dotenv import load_dotenv
+load_dotenv()
+class Settings:    REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")    OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")    MAX_RETRIES = int(os.getenv("MAX_RETRIES", "3"))
+
+2. 检索器模块（retriever.py）
+python
+
+from langchain_community.document_loaders import WebBaseLoaderfrom langchain_text_splitters import RecursiveCharacterTextSplitterfrom langchain_openai import OpenAIEmbeddingsfrom langchain_community.vectorstores import Redis
+def build_retriever():    # 1. 加载文档    loader = WebBaseLoader("https://lilianweng.github.io/posts/2023-06-23-agent/")    docs = loader.load()
+    # 2. 切分    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)    chunks = splitter.split_documents(docs)
+    # 3. 向量化 + 存入 Redis    embeddings = OpenAIEmbeddings()    vectorstore = Redis.from_documents(        chunks,        embeddings,        redis_url="redis://localhost:6379",        index_name="agentic_rag_demo"    )
+    return vectorstore.as_retriever()
+
+3. 智能体节点（agents/nodes.py）
+python
+
+def agent_node(state: AgentState) -> dict:    """    智能体节点：判断需要检索还是直接回答    """    question = state["question"]    chat_history = state.get("chat_history", [])
+    # 让 LLM 判断是否需要检索    decision = llm.invoke(        f"问题：{question}\n"        f"历史对话：{chat_history}\n"        "判断：这个问题需要查资料还是能直接回答？"        "回复 'retrieve' 或 'generate'"    )
+    if decision == "retrieve":        return {"next_step": "retrieve", "query": question}    else:        return {"next_step": "generate", "answer": llm.invoke(question)}
+
+4. 评分节点（agents/edges.py）——最关键的质量关卡
+python
+
+def grade_documents_node(state: AgentState) -> dict:    """    评分节点：判断检索到的文档是否相关    这是 Agentic RAG 最核心的质量把关环节    """    question = state["question"]    documents = state["documents"]
+    relevant_docs = []    for doc in documents:        # 一次 LLM 调用，判断文档相关性        score = llm.invoke(            f"问题：{question}\n"            f"文档：{doc.page_content}\n"            "判断：这个文档跟问题相关吗？回复 'yes' 或 'no'"        )        if score == "yes":            relevant_docs.append(doc)
+    if len(relevant_docs) > 0:        return {"next_step": "generate", "documents": relevant_docs}    else:        return {"next_step": "rewrite", "retry_count": state.get("retry_count", 0) + 1}
+
+5. 重写节点
+python
+
+def rewrite_node(state: AgentState) -> dict:    """    重写节点：把查询改写成更适合检索的形式    """    question = state["question"]    documents = state.get("documents", [])
+    rewritten = llm.invoke(        f"原始问题：{question}\n"        f"检索到的文档（不相关）：{documents}\n"        "请把问题改写成更精确的检索查询，突出关键词："    )
+    return {"next_step": "retrieve", "rewritten_query": rewritten}
+
+6. 状态机编排（agents/graph.py）——LangGraph 的核心价值
+python
+
+from langgraph.graph import StateGraph, END
+def build_graph():    workflow = StateGraph(AgentState)
+    # 添加节点    workflow.add_node("agent", agent_node)    workflow.add_node("retrieve", retrieve_node)    workflow.add_node("grade", grade_documents_node)    workflow.add_node("rewrite", rewrite_node)    workflow.add_node("generate", generate_node)
+    workflow.set_entry_point("agent")
+    # 条件边：从 agent 出发    workflow.add_conditional_edges(        "agent",        lambda state: state["next_step"],        {"retrieve": "retrieve", "generate": "generate"}    )
+    # 🔑 关键：从 grade 出发的条件路由    workflow.add_conditional_edges(        "grade",        lambda state: state["next_step"],        {"generate": "generate", "rewrite": "rewrite"}    )
+    # 🔁 反馈回路：rewrite → agent    workflow.add_edge("rewrite", "agent")    workflow.add_edge("retrieve", "grade")    workflow.add_edge("generate", END)
+    return workflow.compile()
+
+运行时流程说明
+查询先到 智能体节点
+
+智能体决定调检索器 → 流程到 检索节点
+
+检索完进 评分节点
+
+评分过了走生成节点，没过走重写节点
+
+重写后的查询回到智能体重新来过
+
+生成节点执行完流程结束
+
+关键在 rewrite → agent 这条反馈路径——系统不会因为一次检索失败就直接放弃，它会调整策略重新尝试。
+第四部分：GraphRAG 与 Agentic RAG 的协同
+前沿趋势：QA-GraphRAG
+北京大学团队发表在 VLDB 2026 上的 QA-GraphRAG 提出了一个关键洞察：现有的图 RAG 框架在面对多样化的查询需求时，往往受限于固定的检索策略，导致简单查询（需要精确事实）和多跳推理查询互相拖累。
+例如，在 2WikiMultiHopQA 这类传统知识图谱问答数据集中，局部查询（只需简单事实）占比高达 82%。对这些查询，复杂的图 RAG 检索反而可能引入冗余噪声，表现甚至不如简单的 BM25 关键词检索。
+QA-GraphRAG 的解法：一个轻量级的 MLP 路由器，根据查询特征自适应选择最优的检索层级。集成后，原本在局部查询上表现不佳的 GraphRAG，性能提升了 3-5 个百分点。
+三者协同关系
+RAG 类型
+核心能力
+适合场景
+当前趋势
+Vector RAG
+语义相似度匹配
+简单事实问答
+混合检索是标配
+Graph RAG
+多跳关系推理
+跨文档、实体关系
+QA-GraphRAG 等自适应方案涌现
+Agentic RAG
+自主决策、自我修正
+复杂多步推理、生产级应用
+与 GraphRAG 结合是趋势
+第五部分：什么时候该上 Agentic RAG？
+你的场景
+建议
+理由
+FAQ 问答、文档简单
+传统 RAG 够用
+Agentic 增加延迟和成本
+查询复杂、需要多步推理
+Agentic RAG能拆解问题、分步检索
+跨多个知识源查询
+Agentic RAG能选择不同工具和数据源
+需要高准确率、不能胡答
+Agentic RAG有评分把关和重试机制
+生产级企业应用
+Agentic RAG容错能力和决策透明
+复杂多跳关系推理
+GraphRAG + AgenticGraphRAG 负责结构推理，Agentic 负责动态控制
+成本与收益权衡
+Agentic RAG 不是免费的：
+维度
+影响
+延迟每次重试增加响应时间
+Token 消耗评分、重写、多轮检索都是额外调用
+复杂度状态机设计、调试难度增加
+但考虑到它能避免“一本正经胡说八道”，这笔成本在很多场景下是值得的。
+总结
+核心要点回顾
+问题
+答案
+传统 RAG 的致命缺陷？
+检索质量差，LLM 也能硬编答案
+Agentic RAG 怎么解决？
+插入评分 + 重写 + 重试的闭环控制
+和 GraphRAG 什么关系？
+互补——GraphRAG 管多跳推理结构，Agentic 管动态控制
+核心组件有哪些？
+智能体（决策）+ 评分器（把关）+ 重写器（修正）
+关键代码机制是什么？
+LangGraph 的 feedback loop：rewrite → agent → retrieve → grade
+什么时候用？
+查询复杂、多知识源、高准确率要求
+2026 年趋势？
+混合检索 + Agentic + GraphRAG 融合，自适应路由兴起
+一句话记住
+传统 RAG 把检索当黑盒，Agentic RAG 打开黑盒在关键位置加了质量控制——检索质量差能发现并修复，不会闷头输出一个基于垃圾上下文的错误答案然后假装没事发生。

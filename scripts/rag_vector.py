@@ -18,16 +18,12 @@ sys.stdout.reconfigure(encoding='utf-8')
 WORKSPACE = r'C:\Users\scrccpa\.openclaw\workspace'
 INDEX_DIR = os.path.join(WORKSPACE, '.rag_vector_index')
 os.makedirs(INDEX_DIR, exist_ok=True)
-EMBEDDING_MODEL = 'shibing624/text2vec-base-chinese'  # 中文语义模型，可从 modelscope 下载
+EMBEDDING_MODEL = r'C:\Users\scrccpa\.openclaw\workspace\models\text2vec-base-chinese'  # 中文语义模型
 CHUNK_SIZE = 512
 
-# 模型下载源（优先级: local > modelscope > hf-mirror）
-MODEL_SOURCES = [
-    'shibing624/text2vec-base-chinese',  # 本地缓存的模型名
-]
-
-os.environ.setdefault('HF_ENDPOINT', 'https://hf-mirror.com')
-# Try modelscope if HF fails
+# 模型下载源（优先级: local > HF直连 > hf-mirror）
+# 清除可能残留的 HF_ENDPOINT，让 sentence-transformers 直连 huggingface.co
+os.environ.pop('HF_ENDPOINT', None)
 os.environ.setdefault('MODELSCOPE_CACHE', os.path.join(os.path.expanduser('~'), '.cache', 'modelscope'))
 
 # ========== 构建向量索引 ==========

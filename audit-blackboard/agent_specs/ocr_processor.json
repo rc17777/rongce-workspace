@@ -1,0 +1,86 @@
+{
+  "agent_id": "ocr_processor",
+  "name": "OCR预处理员",
+  "version": "1.0",
+  "created": "2026-07-17",
+  "description": "对扫描件/图片/OFD等不可直接读取的文件执行OCR识别，并按文档类型做结构化提取。五类文档差异化处理：发票→发票号+金额+购销方；合同→合同号+金额+甲乙方+条款；招投标→报价+得分+投标人；银行→交易日期+金额+对方户名；通用→保留全文。",
+  "trigger_phase": "ocr (Phase ①b)",
+  "input": {
+    "source": "projects/<项目>/raw_data/ 中的扫描PDF、图片、OFD文件",
+    "formats": [".pdf", ".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".ofd"],
+    "exclude": [".docx", ".xlsx", ".csv", ".txt"]
+  },
+  "output": {
+    "cache": "raw_data/.ocr_cache/",
+    "files": [
+      "raw_data/.ocr_cache/发票/invoices.csv",
+      "raw_data/.ocr_cache/合同/contracts.csv",
+      "raw_data/.ocr_cache/招投标/bids.csv",
+      "raw_data/.ocr_cache/银行/bank_transactions.csv",
+      "raw_data/.ocr_cache/通用/*.md",
+      "raw_data/.ocr_cache/ocr_report.json"
+    ]
+  },
+  "pipeline": {
+    "step1_detect": {
+      "name": "文件类型检测",
+      "action": "遍历raw_data，pdfplumber检测PDF文本层，按扩展名分类",
+      "output": "ocr_queue.json（需OCR文件清单+类型推断）"
+    },
+    "step2_ocr": {
+      "name": "批量OCR",
+      "action": "PaddleOCR 2.7+ 本地批量识别",
+      "method": "scripts/paddleocr_audit_batch.py --input <dir> --output .ocr_cache/",
+      "note": "PDF无文本层 → pdf2image → PaddleOCR；图片 → 直接PaddleOCR；OFD → ofdparser"
+    },
+    "step3_invoice_extract": {
+      "name": "发票结构化提取",
+      "action": "OCR文本 → qwen-vl-max 识别发票字段",
+      "fields": ["发票代码", "发票号码", "开票日期", "销售方名称", "购买方名称", "不含税金额", "税额", "价税合计", "货物名称"],
+      "output": "invoices.csv"
+    },
+    "step4_contract_extract": {
+      "name": "合同关键字段提取",
+      "action": "OCR全文 → qwen3.7-plus 提取关键字段",
+      "fields": ["合同编号", "甲方", "乙方", "签订日期", "合同金额", "付款方式", "履约期限", "违约责任条款"],
+      "output": "contracts.csv"
+    },
+    "step5_bid_extract": {
+      "name": "招投标数据提取",
+      "action": "OCR全文 → qwen3.7-plus 提取结构化数据",
+      "fields": ["项目名称", "招标方式", "各投标人报价", "技术得分", "商务得分", "中标候选人"],
+      "output": "bids.csv"
+    },
+    "step6_bank_extract": {
+      "name": "银行单据提取",
+      "action": "OCR文本 → 正则+LLM提取交易信息",
+      "fields": ["交易日期", "交易金额", "对方户名", "对方账号", "摘要"],
+      "output": "bank_transactions.csv"
+    },
+    "step7_general": {
+      "name": "通用文档",
+      "action": "OCR全文保留为.md",
+      "output": "通用/*.md"
+    }
+  },
+  "model_routing": {
+    "local_ocr": "PaddleOCR (本地, 免费)",
+    "invoice_recognition": "dashscope/qwen-vl-max (图片直接识别发票)",
+    "contract_extraction": "dashscope/qwen3.7-plus (中文合同条款理解)",
+    "bid_extraction": "custom-cbwyy-top-v1/deepseek-v4-pro (报价+得分提取)",
+    "bank_extraction": "custom-cbwyy-top-v1/deepseek-v4-pro (金额+户名提取)"
+  },
+  "cost_estimate": {
+    "small_project_50p": {"paddleocr": "免费", "llm_tokens": "~3K"},
+    "medium_project_200p": {"paddleocr": "免费", "llm_tokens": "~8K"},
+    "large_project_500p": {"paddleocr": "免费", "llm_tokens": "~20K"}
+  },
+  "existing_scripts": [
+    "scripts/paddleocr_audit_batch.py",
+    "scripts/contract_ocr_v5.py",
+    "scripts/ocr_intelligent_audit_v3.py",
+    "scripts/invoice_ocr.py"
+  ],
+  "run_timeout_seconds": 600,
+  "next_phase": "classify (Phase ①c - 基于OCR文本的深度分类)"
+}

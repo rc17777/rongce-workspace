@@ -1,0 +1,63 @@
+{
+  "agent_id": "meeting_minutes_analyzer",
+  "name": "会议纪要分析师",
+  "version": "1.0",
+  "created": "2026-07-17",
+  "description": "经责审计核心Agent：分析党委会/办公会/董事会会议纪要，提取重大决策事项，追踪'三重一大'决策流程，与合同/付款做全链条比对。",
+  "trigger_phase": "analyze (Phase ③)",
+  "applicable_biz": ["economic_responsibility", "soe", "special_fund", "bidding"],
+  "input": {
+    "source": "raw_data/制度/ 中的会议纪要文件（.pdf/.docx/.md）",
+    "formats": [".pdf", ".docx", ".md", ".txt"],
+    "required_fields": ["会议名称", "会议日期", "参会人员", "议题", "决议"]
+  },
+  "output": {
+    "files": [
+      "findings/meeting_minutes_analyzer.json",
+      "会议纪要分析报告.md"
+    ]
+  },
+  "analysis_capabilities": {
+    "decision_extraction": {
+      "description": "从纪要中提取所有重大决策事项",
+      "fields": ["决策事项", "提议人", "表决结果", "预算金额", "实施单位"],
+      "method": "LLM few-shot提取 + 关键词匹配（同意/通过/批准/原则同意）"
+    },
+    "sandayi_tracking": {
+      "description": "三重一大决策→执行全链条追踪",
+      "chain": "会议决策 → 正式批复文件 → 合同签订 → 付款凭证 → 验收报告",
+      "checks": [
+        "是否存在'先干后批'（合同日期早于决策日期）",
+        "是否存在'超额执行'（实际金额超出决策预算）",
+        "是否存在'规避决策'（拆分合同使单个合同不达上会标准）",
+        "是否存在'无决策执行'（有合同/付款但找不到对应会议决策）"
+      ]
+    },
+    "attendee_analysis": {
+      "description": "参会人员分析",
+      "checks": ["应到vs实到", "表决回避情况", "关键人员缺席时作出的重大决策"]
+    },
+    "topic_classification": {
+      "description": "议题自动分类",
+      "categories": ["人事任免", "重大项目", "大额资金", "重大决策", "制度建设", "其他"],
+      "method": "LLM分类"
+    }
+  },
+  "integration": {
+    "cross_agent_hooks": {
+      "contract_hound": "决策事项ID → 查找关联合同 → 比对金额/日期/乙方",
+      "data_scout": "决策金额 → 查找对应的付款凭证 → 比对实际支出",
+      "bid_hunter": "决策中的项目 → 查找对应的招投标记录 → 比对采购方式"
+    }
+  },
+  "model_routing": {
+    "primary": "dashscope/qwen3.7-plus",
+    "fallback": "custom-cbwyy-top-v1/deepseek-v4-pro",
+    "reason": "会议纪要中文文本理解，需国内模型"
+  },
+  "workflow_integration": {
+    "related_skill": "audit-meeting-review",
+    "skill_description": "望闻问切阅记法：会议记录四步诊断"
+  },
+  "run_timeout_seconds": 600
+}

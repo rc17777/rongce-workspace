@@ -1,84 +1,49 @@
-"""微信公众号文章抓取 + 入库"""
-import urllib.request, re, html as html_mod, json, sys, hashlib
-from datetime import datetime
-from pathlib import Path
-
+"""
+微信文章抓取 + 溯源查询
+"""
+import sys, re, requests
 sys.stdout.reconfigure(encoding='utf-8')
 
-WORKSPACE = Path(r"C:\Users\scrccpa\.openclaw\workspace")
+url = 'https://mp.weixin.qq.com/s/zY45HqTpqys2FprA-S0mjg'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-S9080) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.230 Mobile Safari/537.36 MicroMessenger/8.0.47',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+}
+r = requests.get(url, headers=headers, timeout=15)
+html = r.text
 
-def fetch_wx_article(url, save_to_kb=True):
-    req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    })
-    resp = urllib.request.urlopen(req, timeout=15)
-    raw = resp.read().decode('utf-8')
+# 标题
+title = ''
+m = re.search(r'var msg_title\s*=\s*[\'"]?(.+?)[\'"]?\s*;', html)
+if m: title = m.group(1).strip('\'" ')
+print(f'标题: {title}')
 
-    title_m = re.search(r'<title>(.+?)</title>', raw)
-    title = title_m.group(1).strip() if title_m else '无标题'
-    
-    # 微信富文本内容
-    content_m = re.search(r'id="js_content"[^>]*>(.+?)</div>\s*<script', raw, re.DOTALL)
-    if not content_m:
-        content_m = re.search(r'id="js_content"[^>]*>(.+?)</div>\s*</div>', raw, re.DOTALL)
-    
-    text = ""
-    if content_m:
-        text = content_m.group(1)
-        text = re.sub(r'<[^>]+>', '', text)
-        text = re.sub(r'\s+', ' ', text)
-        text = html_mod.unescape(text).strip()
-    
-    # 提取公众号名称
-    author_m = re.search(r'var nickname\s*=\s*["\']([^"\']+)', raw)
-    author = author_m.group(1) if author_m else ''
-    
-    # 提取描述
-    desc_m = re.search(r'var msg_desc\s*=\s*["\']([^"\']+)', raw)
-    desc = desc_m.group(1) if desc_m else ''
-    
-    print(f"标题: {title}")
-    print(f"公众号: {author}")
-    print(f"摘要: {desc[:100]}")
-    print(f"正文长度: {len(text)} 字")
-    
-    if save_to_kb and text:
-        today = datetime.now().strftime("%Y%m%d")
-        article_id = hashlib.md5(url.encode()).hexdigest()[:12]
-        
-        # 保存到知识库
-        out_dir = WORKSPACE / "knowledge" / "intel_raw" / "wechat"
-        out_dir.mkdir(parents=True, exist_ok=True)
-        out_path = out_dir / f"{today}_{article_id}.md"
-        
-        content = f"""---
-source: wechat
-source_name: {author}
-source_url: {url}
-title: {title}
-fetched_at: {datetime.now().isoformat()}
-content_length: {len(text)}
----
+# 公众号
+nickname = ''
+m = re.search(r'var nickname\s*=\s*[\'"]?(.+?)[\'"]?\s*;', html)
+if m: nickname = m.group(1).strip('\'" ')
+print(f'公众号: {nickname}')
 
-# {title}
+# 发布时间
+ct = ''
+m = re.search(r'var ct\s*=\s*[\'"]?(\d+)[\'"]?\s*;', html)
+if m: ct = m.group(1)
+print(f'发布时间戳: {ct}')
 
-> 来源: [{author}]({url})
-> 采集时间: {today}
+# 正文
+content = ''
+m = re.search(r'id="js_content"[^>]*>(.*?)</div>\s*<script', html, re.DOTALL)
+if m:
+    content = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+    content = re.sub(r'\s+', ' ', content)
+    print(f'正文长度: {len(content)} 字')
+    print(f'正文前300字: {content[:300]}')
+else:
+    print('正文提取失败')
 
-## 摘要
-
-{desc}
-
-## 正文
-
-{text[:10000]}
-"""
-        out_path.write_text(content, encoding='utf-8')
-        print(f"\n✅ 已保存: {out_path}")
-        return out_path
-    
-    return text
-
-if __name__ == "__main__":
-    url = sys.argv[1] if len(sys.argv) > 1 else input("输入微信文章URL: ")
-    fetch_wx_article(url.strip())
+# 搜索原始出处关键词
+print()
+print('='*50)
+print('搜索原始出处...')
+print('='*50)

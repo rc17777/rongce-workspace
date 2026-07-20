@@ -1,7 +1,22 @@
 # SCENARIO-SKILL-MAP.md — 审计场景→技能→资料速查
 
 > 每次会话启动时读取。触发规则：用户提到场景关键词 → 自动匹配对应技能+资料。
-> 最后更新: 2026-06-21
+> 最后更新: 2026-07-17 | 新增：6阶段工作流集成
+
+---
+
+## 🆕 工作流集成（v1.0）
+
+所有审计项目均按6阶段工作流执行。详见 `RONGCE_AI_HUB/workflow/README.md`
+
+| 阶段 | 触发语 | 引擎命令 |
+|:--|------|------|
+| ① 资料导入分类 | "开始XX项目"、"导入资料" | `python workflow_engine.py init --name "XX" --type "XX"` |
+| ② 实施方案 | "生成实施方案"、"写资料清单" | `python workflow_engine.py plan --project "XX"` |
+| ③ 多Agent分析 | "开始分析"、"spawn Agent" | `python launch.py "XX" --type "XX"` |
+| ④ 取证底稿 | "生成取证单"、"写底稿" | `python workflow_engine.py evidence --project "XX"` |
+| ⑤ 报告撰写 | "写报告初稿"、"征求意见稿" | `python workflow_engine.py report --project "XX"` |
+| ⑥ 归档沉淀 | "归档"、"入库"、"沉淀" | `python workflow_engine.py archive --project "XX"` |
 
 ---
 
@@ -12,6 +27,7 @@
 3. 读取对应资料的 INDEX 条目 → 命中后读取原文
 4. 如用户说"查杂志"/"查案例" → 额外激活 `magazine-knowledge-bridge`
 5. 告知用户"我调用了 X 技能，引用了 Y 资料 + Z 杂志案例"
+6. **新：如果是完整项目流程，先走6阶段工作流，再按场景匹配技能**
 
 ---
 
@@ -116,6 +132,8 @@
 - `knowledge/references/TF-IDF查处围标串标-数据化审计局实操.md`
 - `knowledge/references/招投标审计-政府采购围标串标-审计太原法规科.md`
 - `knowledge/references/政府采购投诉违法违规典型案例-企业反舞弊合规研究院.md`
+- `knowledge/references/融策电子招投标审计SOP-v1.0.md`
+- 🆕 `knowledge/references/投标电子指纹八项-查证操作手册.md` ← Windows原生命令 + 留痕位置
 
 ---
 
@@ -232,6 +250,8 @@
 | 文档雷同检测 | `unstructured-audit-data`（TF-IDF/Simhash） | — |
 | 元数据提取 | `unstructured-audit-data`（docx/PDF元数据） | — |
 | 预测推演 | `forecast-simulation` | — |
+| 🆕 大数据巡察/监督模型 | — | `knowledge/references/大数据赋能巡察-四类模型实战手册.md` |
+| 🆕 数据思维检查框架 | — | `knowledge/references/数据思维六维框架-审计应用.md` |
 | 会议记录审查 | `audit-meeting-review`（望闻问切） | — |
 | 监管指定应对 | `regulatory-audit-response`（接审报） | — |
 | 经责四道关 | `audit-jingze` | — |
@@ -271,6 +291,8 @@
 | 资料归档Wiki | `wiki-auto-ingest`（LLM Wiki方法论） | — |
 | 记笔记 | `note` | — |
 | 知识库索引 | `knowledge/INDEX.md` | — |
+| 🆕 知识体系方法论 | — | `knowledge/PARA-INDEX.md` ← DIKW/CODE/Zettelkasten/五步启动法 |
+| 🆕 项目代码知识图谱 | — | `knowledge/references/graphify-项目知识图谱工具.md` |
 
 ### 📋 方案编制 & 报告写作（杂志案例即时调取）
 

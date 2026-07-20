@@ -1,0 +1,103 @@
+{
+  "agent_id": "adjustment_scribe",
+  "name": "调整分录生成师",
+  "version": "1.0",
+  "created": "2026-07-17",
+  "description": "从审计发现的问题→自动生成标准化审计调整分录。包括错账更正、重分类调整、补记、冲销等。每个分录含借贷科目、金额、摘要、依据。",
+  "trigger_phase": "analyze (Phase ③) 或 evidence (Phase ④)",
+  "applicable_biz": ["全部12业务线（涉及财务数据的）"],
+  "input": {
+    "source": "findings/*.json 中涉及金额和科目的问题",
+    "required_fields": ["问题描述", "涉及科目", "涉及金额", "正确做法", "法规依据"]
+  },
+  "output": {
+    "files": [
+      "findings/adjustment_scribe.json",
+      "审计调整汇总表.xlsx",
+      "审计调整分录_详细说明.md"
+    ]
+  },
+  "adjustment_types": {
+    "error_correction": {
+      "name": "错账更正",
+      "description": "被审计单位记账错误，需更正原分录",
+      "template": "借/贷：原错误科目（红字冲销）\n借/贷：正确科目",
+      "examples": [
+        "将管理费用误计入固定资产",
+        "收入确认期间错误",
+        "折旧计算错误"
+      ]
+    },
+    "reclassification": {
+      "name": "重分类调整",
+      "description": "科目分类不当，需调整列报",
+      "template": "借：正确科目\n  贷：原错列科目",
+      "examples": [
+        "一年内到期的长期借款重分类至流动负债",
+        "预付款项中属于费用的部分重分类"
+      ]
+    },
+    "accrual": {
+      "name": "补记/应计",
+      "description": "应当记录但未记录的账项",
+      "template": "借：相关科目\n  贷：相关科目",
+      "examples": [
+        "未入账的收入",
+        "应计未计的费用",
+        "未计提的坏账准备"
+      ]
+    },
+    "reversal": {
+      "name": "冲销",
+      "description": "不应确认的账项需冲销",
+      "template": "借：原贷方科目\n  贷：原借方科目",
+      "examples": [
+        "虚增收入冲销",
+        "重复记账冲销",
+        "不合规支出冲销"
+      ]
+    }
+  },
+  "output_format": {
+    "per_entry": {
+      "fields": [
+        "序号",
+        "调整类型（错账更正/重分类/补记/冲销）",
+        "原账务处理",
+        "正确账务处理",
+        "调整分录（借贷）",
+        "调整金额",
+        "涉及科目",
+        "调整原因",
+        "法规依据",
+        "证据索引（取证单编号）",
+        "对报表影响（资产/负债/损益）",
+        "建议调整期间"
+      ]
+    },
+    "summary_fields": [
+      "调整总笔数",
+      "调整总金额",
+      "对资产总额影响",
+      "对负债总额影响",
+      "对净利润影响",
+      "调整类型分布"
+    ]
+  },
+  "model_routing": {
+    "primary": "custom-cbwyy-top-v1/deepseek-v4-pro",
+    "fallback": "dashscope/qwen3.7-plus",
+    "reason": "会计分录生成需要精确的科目对应关系，v4-pro的逻辑推理更适合"
+  },
+  "standards_reference": {
+    "accounting_standards": "《政府会计制度——行政事业单位会计科目和报表》",
+    "audit_standards": "《中国注册会计师审计准则第1251号——评价审计过程中识别出的错报》",
+    "government_rules": "《财政总预算会计制度》《行政单位财务规则》"
+  },
+  "integration": {
+    "upstream": "data_scout (财务异常发现) → adjustment_scribe (生成分录)",
+    "downstream": "workpaper_crafter (分录写入底稿) → report_writer (分录汇总写入报告)",
+    "review": "review_sentinel (复核分录的科目对应关系是否正确)"
+  },
+  "run_timeout_seconds": 300
+}
