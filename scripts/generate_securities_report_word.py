@@ -22,6 +22,9 @@ from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parents[1]
 CHART_DIR = ROOT / 'output' / 'charts_pro'
+BRAND_DIR = Path(r'E:\2026\宣传册\融策logo')
+LOGO_PATH = BRAND_DIR / '融策logo.png'
+LETTERHEAD_PATH = BRAND_DIR / '融策抬头.jpg'
 
 NAVY = RGBColor(6, 26, 51)
 NAVY2 = RGBColor(10, 42, 74)
@@ -169,6 +172,10 @@ def add_header_footer(doc):
         header = section.header
         hp = header.paragraphs[0]
         hp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        if LOGO_PATH.exists():
+            run = hp.add_run()
+            run.add_picture(str(LOGO_PATH), width=Cm(0.55))
+            add_run(hp, '  ', 8, MUTED)
         add_run(hp, '融策·审盾研究 | 券商风研报母版', 8, MUTED)
 
         footer = section.footer
@@ -178,6 +185,10 @@ def add_header_footer(doc):
 
 
 def add_cover(doc):
+    if LOGO_PATH.exists():
+        p_logo = doc.add_paragraph()
+        p_logo.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        p_logo.add_run().add_picture(str(LOGO_PATH), width=Cm(2.0))
     table = doc.add_table(rows=1, cols=2)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
@@ -286,6 +297,11 @@ def add_chart(doc, filename, title, source):
 
 
 def add_body_pages(doc):
+    if LETTERHEAD_PATH.exists():
+        p_head = doc.add_paragraph()
+        p_head.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_head.add_run().add_picture(str(LETTERHEAD_PATH), width=Cm(16.2))
+        p_head.paragraph_format.space_after = Pt(10)
     doc.add_heading('一、行业痛点：传统审计报告为何不够像研报', level=1)
     add_para(doc, '传统审计报告的问题并非没有内容，而是信息组织方式过于“底稿化”：先堆事实，再列问题，最后给建议。券商研报的强项在于先给判断，再组织证据，让读者在第一页就知道结论，在正文中逐步建立信任。', 10.5)
     add_para(doc, '对融策而言，研报化不是包装，而是把复杂审计发现转译成客户能快速理解和决策的表达方式。', 10.5, NAVY, True)
