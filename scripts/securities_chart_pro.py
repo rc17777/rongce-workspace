@@ -16,6 +16,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 import argparse
+import textwrap
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -98,6 +99,14 @@ def add_kpis(fig, kpis):
                  fontsize=15, color=item.get('color', COLORS['navy']), fontweight='bold')
 
 
+def wrap_zh(text, width=24):
+    """Matplotlib 的 wrap 对中文框宽不稳定，这里先按字符数切行。"""
+    chunks = []
+    for paragraph in str(text).split('\n'):
+        chunks.extend(textwrap.wrap(paragraph, width=width, break_long_words=True, replace_whitespace=False))
+    return chunks or ['']
+
+
 def add_note_panel(fig, notes, title='核心判断'):
     if not notes:
         return
@@ -111,12 +120,20 @@ def add_note_panel(fig, notes, title='核心判断'):
     fig.text(x + 0.018, y + h - 0.022, title, ha='left', va='center', fontsize=10,
              color='white', fontweight='bold')
     yy = y + h - 0.085
+    line_height = 0.026
+    gap = 0.022
+    bottom = y + 0.025
     for i, note in enumerate(notes, 1):
-        fig.text(x + 0.018, yy, f'{i}.', ha='left', va='top', fontsize=9,
+        lines = wrap_zh(note, width=24)
+        required = max(1, len(lines)) * line_height + gap
+        if yy - required < bottom:
+            break
+        fig.text(x + 0.018, yy, f'{i}.', ha='left', va='top', fontsize=8.5,
                  color=COLORS['gold'], fontweight='bold')
-        fig.text(x + 0.045, yy, note, ha='left', va='top', fontsize=9,
-                 color=COLORS['ink'], linespacing=1.45, wrap=True)
-        yy -= 0.105
+        for j, line in enumerate(lines):
+            fig.text(x + 0.045, yy - j * line_height, line, ha='left', va='top', fontsize=8.2,
+                     color=COLORS['ink'])
+        yy -= required
 
 
 def style_axis(ax):
