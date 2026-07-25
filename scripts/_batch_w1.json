@@ -1,0 +1,417 @@
+[
+  {
+    "op": "set",
+    "path": "/第1周计划/A1",
+    "props": {
+      "value": "审盾一期·第1周行动计划（2026年7月22日-28日）",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A1:D1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A2",
+    "props": {
+      "value": "总耗时：约8小时 | 总预算：¥0 | 不需要新硬件/新人员",
+      "font_size": 10,
+      "font_color": "666666"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A3",
+    "props": {
+      "value": "每日硬性规则：早8点发\"审盾 Day X，今天做____\"，晚8点发\"审盾 Day X，完成了____\"",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A5",
+    "props": {
+      "value": "星期",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B5",
+    "props": {
+      "value": "日期",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C5",
+    "props": {
+      "value": "任务",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D5",
+    "props": {
+      "value": "产出物",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E5",
+    "props": {
+      "value": "耗时",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A6",
+    "props": {
+      "value": "周二",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B6",
+    "props": {
+      "value": "7/22",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C6",
+    "props": {
+      "value": "①收集校园餐+医保全部原始资料 ②合规三问调研",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D6",
+    "props": {
+      "value": "📁原始资料包+📝合规调研笔记",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E6",
+    "props": {
+      "value": "1.5h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A7",
+    "props": {
+      "value": "周三",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B7",
+    "props": {
+      "value": "7/23",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C7",
+    "props": {
+      "value": "手工标注第1份校园餐报告：记录人工检查点",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D7",
+    "props": {
+      "value": "📝人工复核Checklist v1.0",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E7",
+    "props": {
+      "value": "1h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A8",
+    "props": {
+      "value": "周四",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B8",
+    "props": {
+      "value": "7/24",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C8",
+    "props": {
+      "value": "OpenClaw跑AI复核 vs 人工对比，统计采纳率",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D8",
+    "props": {
+      "value": "🔀人机对比表#1",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E8",
+    "props": {
+      "value": "1h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A9",
+    "props": {
+      "value": "周五",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B9",
+    "props": {
+      "value": "7/25",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C9",
+    "props": {
+      "value": "换医保资金报告→人机对比#2",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D9",
+    "props": {
+      "value": "🔀人机对比表#2",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E9",
+    "props": {
+      "value": "1h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A10",
+    "props": {
+      "value": "周六",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B10",
+    "props": {
+      "value": "7/26",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C10",
+    "props": {
+      "value": "第3份不同来源/年份报告→人机对比#3",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D10",
+    "props": {
+      "value": "🔀人机对比表#3",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E10",
+    "props": {
+      "value": "1h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A11",
+    "props": {
+      "value": "周日",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B11",
+    "props": {
+      "value": "7/27",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C11",
+    "props": {
+      "value": "整理周报：采纳率+失效模式+脏数据清单",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D11",
+    "props": {
+      "value": "📄第1周验证周报",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E11",
+    "props": {
+      "value": "1.5h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A12",
+    "props": {
+      "value": "周一",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B12",
+    "props": {
+      "value": "7/28",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C12",
+    "props": {
+      "value": "定稿量化通过标准+白皮书大纲",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D12",
+    "props": {
+      "value": "✅标准文档+📘白皮书大纲",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E12",
+    "props": {
+      "value": "1h",
+      "font_size": 10,
+      "font_color": "1A5C6E",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/A1:A1",
+    "props": {
+      "width": 8
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/B1:B1",
+    "props": {
+      "width": 8
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/C1:C1",
+    "props": {
+      "width": 42
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/D1:D1",
+    "props": {
+      "width": 30
+    }
+  },
+  {
+    "op": "set",
+    "path": "/第1周计划/E1:E1",
+    "props": {
+      "width": 8
+    }
+  }
+]

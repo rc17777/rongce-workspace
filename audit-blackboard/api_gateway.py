@@ -18,19 +18,82 @@ WORKSPACE = r'C:\Users\scrccpa\.openclaw\workspace'
 LOG_DIR = os.path.join(WORKSPACE, 'logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 
-# ====== 模型路由配置 ======
-# 从 openclaw.json 读取模型配置
-MODEL_ROUTES = {
-    # 错误代价六级路由
-    'cost_0_free': ['custom-cbwyy-top-v1/deepseek-v4-flash'],          # 免费/日常
-    'cost_1_low': ['custom-cbwyy-top-v1/deepseek-v4-pro'],              # 一般分析
-    'cost_2_medium': ['dashscope/qwen3.7-plus'],                        # 中文公文/图片
-    'cost_3_high': ['claude-sonnet-5'],                                 # 合规审查/逻辑
-    'cost_4_critical': ['gpt-5.5'],                                     # 双签审查
-    'cost_5_max': ['gpt-5.6-luna'],                                     # 创意/AI推理
-    'cost_consulting': ['fable-5'],                                     # 咨询层
-    'fallback_chain': ['deepseek-direct/deepseek-chat'],                # 终极逃生
+# ====== 模型路由配置 v5.0 ======
+# 双层路由：Agent路由 > 场景路由 > 全局默认
+# 参考：config/model_routing_v5.py
+
+# Agent级路由（22个Agent各自偏好）
+AGENT_MODEL_MAP = {
+    # 核心审计
+    'data_scout':       {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',     'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-flash']},
+    'contract_hound':   {'primary': 'custom-cbwyy-claude/claude-sonnet-5',     'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro', 'custom-cbwyy-qwen/qwen3.7-plus']},
+    'bid_hunter':       {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',     'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-flash', 'custom-cbwyy-kimi/kimi-k3']},
+    'law_inspector':    {'primary': 'custom-cbwyy-claude/claude-sonnet-5',     'fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus', 'custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'workpaper_crafter':{'primary': 'custom-cbwyy-qwen/qwen3.7-plus',          'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro', 'custom-cbwyy-gpt55/gpt-5.5']},
+    'report_writer':    {'primary': 'custom-cbwyy-qwen/qwen3.7-plus',          'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5', 'custom-cbwyy-gpt55/gpt-5.5']},
+    'review_sentinel':  {'primary': 'custom-cbwyy-claude/claude-sonnet-5',     'fallbacks': ['custom-cbwyy-opus/claude-opus-4-8', 'custom-cbwyy-qwen/qwen3.7-plus']},
+    # 工程咨询
+    'budget_estimator': {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',     'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-flash']},
+    'settlement_auditor':{'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',    'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5']},
+    'fiscal_reviewer':  {'primary': 'custom-cbwyy-claude/claude-sonnet-5',     'fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus', 'custom-cbwyy-top-v1/deepseek-v4-pro']},
+    # 绩效评价
+    'performance_evaluator': {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro','fallbacks': ['custom-cbwyy-claude/claude-sonnet-5']},
+    # 专项检测
+    'expert_bias_detector': {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro', 'fallbacks': ['custom-cbwyy-kimi/kimi-k3', 'custom-cbwyy-glm/glm-5.2']},
+    'meeting_minutes_analyzer': {'primary': 'custom-cbwyy-qwen/qwen3.7-plus',  'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro']},
+    # 数据运维
+    'ocr_processor':    {'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash',   'fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus']},
+    'data_classifier':  {'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash',   'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'data_desensitizer':{'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash',   'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'adjustment_scribe':{'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',     'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5']},
+    # 方案撰写
+    'plan_writer':      {'primary': 'custom-cbwyy-qwen/qwen3.7-plus',          'fallbacks': ['custom-cbwyy-gpt55/gpt-5.5', 'custom-cbwyy-claude/claude-sonnet-5']},
 }
+
+# 场景路由（按任务类型）
+MODEL_ROUTES = {
+    'daily_chat':       {'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash', 'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'heartbeat_task':   {'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash', 'fallbacks': []},
+    'data_check':       {'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',   'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-flash', 'custom-cbwyy-kimi/kimi-k3']},
+    'financial_analysis':{'primary': 'custom-cbwyy-top-v1/deepseek-v4-pro',  'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5', 'custom-cbwyy-kimi/kimi-k3']},
+    'compliance_check': {'primary': 'custom-cbwyy-claude/claude-sonnet-5',   'fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus', 'custom-cbwyy-opus/claude-opus-4-8']},
+    'law_interpretation':{'primary': 'custom-cbwyy-claude/claude-sonnet-5',  'fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus', 'custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'gov_document':     {'primary': 'custom-cbwyy-qwen/qwen3.7-plus',        'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5', 'custom-cbwyy-gemini/gemini-3.1-pro-preview']},
+    'report_writing':   {'primary': 'custom-cbwyy-qwen/qwen3.7-plus',        'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5', 'custom-cbwyy-gpt55/gpt-5.5']},
+    'creative':         {'primary': 'custom-cbwyy-luna/gpt-5.6-luna',        'fallbacks': ['custom-cbwyy-sol/gpt-5.6-sol', 'custom-cbwyy-terra/gpt-5.6-terra']},
+    'long_document':    {'primary': 'custom-cbwyy-gemini/gemini-3.1-pro-preview','fallbacks': ['custom-cbwyy-qwen/qwen3.7-plus', 'custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'english':          {'primary': 'custom-cbwyy-gpt55/gpt-5.5',            'fallbacks': ['custom-cbwyy-claude/claude-sonnet-5']},
+    'final_review':     {'primary': 'custom-cbwyy-claude/claude-sonnet-5',   'fallbacks': ['custom-cbwyy-opus/claude-opus-4-8']},
+    'china_reasoning':  {'primary': 'custom-cbwyy-kimi/kimi-k3',             'fallbacks': ['custom-cbwyy-glm/glm-5.2', 'custom-cbwyy-top-v1/deepseek-v4-pro']},
+    'lightweight':      {'primary': 'custom-cbwyy-top-v1/deepseek-v4-flash', 'fallbacks': ['custom-cbwyy-top-v1/deepseek-v4-pro']},
+}
+
+# 全局默认（终极兜底）
+GLOBAL_FALLBACKS = [
+    'custom-cbwyy-top-v1/deepseek-v4-pro',
+    'custom-cbwyy-gemini/gemini-3.1-pro-preview',
+    'custom-cbwyy-qwen/qwen3.7-plus',
+    'custom-cbwyy-fable/claude-fable-5',
+    'custom-cbwyy-claude/claude-sonnet-5',
+    'custom-cbwyy-gpt55/gpt-5.5',
+    'custom-cbwyy-luna/gpt-5.6-luna',
+    'custom-cbwyy-sol/gpt-5.6-sol',
+    'custom-cbwyy-terra/gpt-5.6-terra',
+    'custom-cbwyy-kimi/kimi-k3',
+    'custom-cbwyy-glm/glm-5.2',
+    'custom-cbwyy-doubao/doubao-seed-2.0-lite',
+    'deepseek-direct/deepseek-chat',
+]
+
+def resolve_model(agent_name=None, scenario=None):
+    """双层路由：Agent优先，场景兜底，全局保底"""
+    if agent_name:
+        for key in AGENT_MODEL_MAP:
+            if key in agent_name.lower() or agent_name.lower() in key:
+                return AGENT_MODEL_MAP[key]
+    if scenario and scenario in MODEL_ROUTES:
+        return MODEL_ROUTES[scenario]
+    return {'primary': None, 'fallbacks': GLOBAL_FALLBACKS}
 
 # 预算控制
 DAILY_BUDGET = 100  # ¥/天

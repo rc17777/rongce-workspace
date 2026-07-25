@@ -1,0 +1,17 @@
+{
+  "project": "XX局预算执行审计",
+  "timestamp": "2026-07-23T00:18:15.782044+08:00",
+  "diagnosis": {
+    "root_causes": [],
+    "confidence": "medium"
+  },
+  "evidence": [],
+  "fix_plan": [],
+  "trace": [
+    {
+      "step": 1,
+      "action": "global_trace_read",
+      "findings": []
+    }
+  ]
+}

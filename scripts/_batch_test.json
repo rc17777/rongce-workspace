@@ -1,0 +1,10 @@
+[
+  {"op": "set", "path": "/总览/A1", "props": {"value": "融策·审盾 三位一体AI审计中台建设方案 v2.0", "bold": true, "font.size": 16, "font.color": "0A1F3F"}},
+  {"op": "merge", "path": "/总览/A1:H1"},
+  {"op": "set", "path": "/总览/A2", "props": {"value": "修订：2026-07-21 | 四模型联合评审+苏格拉底追问后修订 | 负责人：融策平头哥", "font.size": 10}},
+  {"op": "merge", "path": "/总览/A2:H2"},
+  {"op": "set", "path": "/总览/A4", "props": {"value": "核心定位", "bold": true, "font.size": 12, "font.color": "1A5C6E"}},
+  {"op": "set", "path": "/总览/A5", "props": {"value": "融策·审盾 —— 用AI武装的政府财政资金安全与绩效智能守门人", "font.size": 11}},
+  {"op": "set", "path": "/总览/A6", "props": {"value": "一期用户：审计项目经理（报告复核） | 实战：若尔盖审计局·校园餐+医保资金", "font.size": 10}},
+  {"op": "set", "path": "/总览/A8", "props": {"value": "v1.0 → v2.0 关键变更（四模型评审驱动）", "bold": true, "font.size": 12, "font.color": "1A5C6E"}}
+]

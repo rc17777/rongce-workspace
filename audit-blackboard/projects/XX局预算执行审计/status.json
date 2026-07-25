@@ -1,0 +1,18 @@
+{
+  "handover_chain": [
+    {
+      "handover_id": "H-data_scout-20260723001953",
+      "source_agent": "data_scout",
+      "timestamp": "2026-07-23T00:19:53.585194+08:00",
+      "findings_count": 0
+    },
+    {
+      "handover_id": "H-data_scout-20260723002010",
+      "source_agent": "data_scout",
+      "timestamp": "2026-07-23T00:20:10.569811+08:00",
+      "findings_count": 0
+    }
+  ],
+  "last_handover": "2026-07-23T00:20:10.569811+08:00",
+  "last_agent": "data_scout"
+}

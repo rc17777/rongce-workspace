@@ -77,28 +77,67 @@ Token 存储：`logs/token_usage.jsonl`（JSONL 格式）
 - 核心引用：`references/data-standard.md`、`references/rule-library-v1.md`、`references/output-spec.md`
 - 触发："调用财政监督检查模型"、"用财会监督模型跑疑点"等
 
-## 模型路由方案（精简入口）
+## 模型路由方案 v5.0（双层路由）
 
-> 完整路由表 v4.2 → **`knowledge/references/模型路由方案_v4.2.md`**
+> 完整配置 → **`config/model_routing_v5.py`**
+> 路由优先级：**Agent路由 > 场景路由 > 全局默认**
 
-**速查表**：
-- **默认模型**：deepseek-v4-flash（免费/快/日常）
-- **心跳/定时任务**：必须用 v4-flash
-- **中文公文/图片**：qwen3.7-plus
-- **数据核查**：v4-pro
-- **合规审查/逻辑**：sonnet-5
-- **英文润色**：gpt-5.5
-- **创意**：gpt-5.6-luna
-- **长文档(>128K)**：gemini-3.1-pro-preview
-- **压舱石终审**：opus-4-8（≤2次/项目）
-- **国产备胎**：doubao-seed-2.0-lite
-- **国产推理**：kimi-k3（月之暗面，带 reasoning，支持 text+image）
-- **生图**：gpt-image-2
-- **咨询层**：fable-5（做决策前先问）
+### 第一层：场景速查
 
-**Fallback链**：flash → v4-pro → gemini → qwen → fable → sonnet → gpt-5.5 → luna → sol → terra → deepseek-direct
+| 场景 | 主模型 | Fallback |
+|:----|:------|:--------|
+| 日常对话/查询 | v4-flash | v4-pro |
+| 心跳/定时任务 | v4-flash | — |
+| 数据核查/统计 | v4-pro | flash, kimi-k3 |
+| 财务分析/异常 | v4-pro | sonnet-5, kimi-k3 |
+| 合规审查 | **sonnet-5** | qwen, opus |
+| 法律条文解读 | **sonnet-5** | qwen, v4-pro |
+| 政府公文/方案 | **qwen3.7-plus** | sonnet, gemini |
+| 审计报告撰写 | **qwen3.7-plus** | sonnet, gpt-5.5 |
+| 创意/头脑风暴 | **luna** | sol, terra |
+| 长文档(>128K) | **gemini** | qwen, v4-pro |
+| 英文/国际 | **gpt-5.5** | sonnet |
+| 终审/零容错 | **sonnet-5** | opus-4-8 |
+| 国产推理 | **kimi-k3** | glm-5.2, v4-pro |
+| 咨询顾问 | **fable-5** | sonnet, luna |
+| 轻量任务 | v4-flash | v4-pro |
 
-**核心原则**：路由依据不是"做什么"，而是"错了要付出什么代价"。
+### 第二层：22 Agent分工路由
+
+| Agent | 主模型 | 场景 | 原因 |
+|:------|:------|:----|:----|
+| 数据侦察兵 | v4-pro | 财务分析 | 数值精确优先 |
+| 合同猎犬 | **sonnet-5** | 合规审查 | 条文严谨 |
+| 招投标猎手 | v4-pro | 数据核查 | 模式检测 |
+| 法规检察官 | **sonnet-5** | 法规解读 | 法律条文 |
+| 底稿工匠 | **qwen3.7-plus** | 公文 | 中文公文 |
+| 报告笔杆子 | **qwen3.7-plus** | 报告 | 中文公文 |
+| 复核哨兵 | **sonnet-5** | 终审 | 零容错 |
+| 预算工程师 | v4-pro | 数据核查 | 精确计算 |
+| 结算审计师 | v4-pro | 财务分析 | 计算+合规 |
+| 财政评审员 | **sonnet-5** | 合规审查 | 政策合规 |
+| 绩效评价师 | v4-pro | 财务分析 | 指标打分 |
+| 评标偏离度 | v4-pro | 数据核查 | 统计检测 |
+| 会议纪要分析 | **qwen3.7-plus** | 公文 | 中文理解 |
+| OCR预处理 | v4-flash | 轻量 | 低成本 |
+| 数据分类员 | v4-flash | 轻量 | 低成本 |
+| 数据脱敏 | v4-flash | 轻量 | 低成本 |
+| 调整分录师 | v4-pro | 财务分析 | 财务精确 |
+| 方案撰写师 | **qwen3.7-plus** | 公文 | 公文格式 |
+
+### 第三层：全局Fallback
+
+```
+flash → v4-pro → gemini → qwen → fable → sonnet → gpt-5.5
+→ luna → sol → terra → kimi-k3 → glm-5.2 → doubao → deepseek-direct
+```
+
+**核心原则**：不同Agent用最匹配的模型，不是所有任务都用同一把刀。
+- 中文公文→qwen 3.7（原生中文，不翻译腔）
+- 条文逻辑→sonnet-5（严谨，不幻觉）
+- 数据计算→v4-pro（精确且免费）
+- 轻量任务→v4-flash（快速低成本）
+- 只有复核哨兵能触发opus（≤2次/项目）
 
 ## 环境注意事项
 

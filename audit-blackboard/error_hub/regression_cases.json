@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "id": "REG-0001",
+      "error_id": "ERR-0001",
+      "type": "R301_handover_info_loss",
+      "description": "交接包 H-data_scout-20260723001953 缺少关键字段: confirmed_facts",
+      "expected_severity": "P0",
+      "agent": "data_scout",
+      "check": "检查交接包关键字段是否完整",
+      "status": "active",
+      "created_at": "2026-07-23T00:20:10.623308+08:00"
+    },
+    {
+      "id": "REG-0002",
+      "error_id": "ERR-0002",
+      "type": "R301_handover_info_loss",
+      "description": "交接包 H-data_scout-20260723002010 缺少关键字段: confirmed_facts",
+      "expected_severity": "P0",
+      "agent": "data_scout",
+      "check": "检查交接包关键字段是否完整",
+      "status": "active",
+      "created_at": "2026-07-23T00:20:10.623319+08:00"
+    }
+  ]
+}

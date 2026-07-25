@@ -1,0 +1,803 @@
+[
+  {
+    "op": "set",
+    "path": "/风险清单/A1",
+    "props": {
+      "value": "Top 10 风险清单（概率×影响排序）",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A1:H1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A3",
+    "props": {
+      "value": "#",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B3",
+    "props": {
+      "value": "风险",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C3",
+    "props": {
+      "value": "概率",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D3",
+    "props": {
+      "value": "影响",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E3",
+    "props": {
+      "value": "等级",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F3",
+    "props": {
+      "value": "最小验证实验(7天)",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G3",
+    "props": {
+      "value": "通过标准",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H3",
+    "props": {
+      "value": "所需资源",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A4",
+    "props": {
+      "value": "1",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B4",
+    "props": {
+      "value": "你自己放弃——旺季挤压+多线作战",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C4",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D4",
+    "props": {
+      "value": "毁灭",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E4",
+    "props": {
+      "value": "🔴🔴🔴",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F4",
+    "props": {
+      "value": "连续7天每天30min打卡",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G4",
+    "props": {
+      "value": "7天不间断",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H4",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A5",
+    "props": {
+      "value": "2",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B5",
+    "props": {
+      "value": "AI结果不被项目经理接受(采纳率<30%)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C5",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D5",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E5",
+    "props": {
+      "value": "🔴🔴🔴",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F5",
+    "props": {
+      "value": "1份报告AI复核→逐条标注接受/不接受",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G5",
+    "props": {
+      "value": "≥10条AI发现+失效分类",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H5",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A6",
+    "props": {
+      "value": "3",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B6",
+    "props": {
+      "value": "被格式多样性打垮(换客户就崩)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C6",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D6",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E6",
+    "props": {
+      "value": "🔴🔴🔴",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F6",
+    "props": {
+      "value": "≥3个不同来源报告各跑一遍",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G6",
+    "props": {
+      "value": "记录每种格式失效模式",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H6",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A7",
+    "props": {
+      "value": "4",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B7",
+    "props": {
+      "value": "无量化基线即推进",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C7",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D7",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E7",
+    "props": {
+      "value": "🔴🔴",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F7",
+    "props": {
+      "value": "定下通过标准并书面确认",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G7",
+    "props": {
+      "value": "标准已写在方案里",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H7",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A8",
+    "props": {
+      "value": "5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B8",
+    "props": {
+      "value": "合规信息黑洞(客户问等保一问三不知)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C8",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D8",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E8",
+    "props": {
+      "value": "🔴🔴",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F8",
+    "props": {
+      "value": "查等保费用/周期+数据出本地要求+云合规方案",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G8",
+    "props": {
+      "value": "拿到3个明确答案",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H8",
+    "props": {
+      "value": "30分钟",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A9",
+    "props": {
+      "value": "6",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B9",
+    "props": {
+      "value": "原始数据质量极差(AI无法处理)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C9",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D9",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E9",
+    "props": {
+      "value": "🟡",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F9",
+    "props": {
+      "value": "列10个数据质量问题",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G9",
+    "props": {
+      "value": "10条具体脏数据清单",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H9",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A10",
+    "props": {
+      "value": "7",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B10",
+    "props": {
+      "value": "Prompt调优陷入死循环",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C10",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D10",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E10",
+    "props": {
+      "value": "🟡",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F10",
+    "props": {
+      "value": "每次改prompt记录预期vs实际",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G10",
+    "props": {
+      "value": "≥2轮有记录的对比",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H10",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A11",
+    "props": {
+      "value": "8",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B11",
+    "props": {
+      "value": "范围蔓延(做到一半又想加功能)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C11",
+    "props": {
+      "value": "低",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D11",
+    "props": {
+      "value": "高",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E11",
+    "props": {
+      "value": "🟡",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F11",
+    "props": {
+      "value": "写下\"审盾一期不做X\"贴在显眼处",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G11",
+    "props": {
+      "value": "一句话已完成",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H11",
+    "props": {
+      "value": "0元",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A12",
+    "props": {
+      "value": "9",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B12",
+    "props": {
+      "value": "DeepSeek API宕机",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C12",
+    "props": {
+      "value": "低",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D12",
+    "props": {
+      "value": "中",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E12",
+    "props": {
+      "value": "🟡",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F12",
+    "props": {
+      "value": "确认备援模型可正常返回复核结果",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G12",
+    "props": {
+      "value": "备用API已就绪",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H12",
+    "props": {
+      "value": "已有key",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A13",
+    "props": {
+      "value": "10",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B13",
+    "props": {
+      "value": "客户知道AI参与后要求降价",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C13",
+    "props": {
+      "value": "低",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D13",
+    "props": {
+      "value": "低(一年内)",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E13",
+    "props": {
+      "value": "🟢",
+      "font_size": 14
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F13",
+    "props": {
+      "value": "暂不验证，标记为观察项",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G13",
+    "props": {
+      "value": "—",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H13",
+    "props": {
+      "value": "—",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/A1:A1",
+    "props": {
+      "width": 4
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/B1:B1",
+    "props": {
+      "width": 28
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/C1:C1",
+    "props": {
+      "width": 6
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/D1:D1",
+    "props": {
+      "width": 6
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/E1:E1",
+    "props": {
+      "width": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/F1:F1",
+    "props": {
+      "width": 30
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/G1:G1",
+    "props": {
+      "width": 22
+    }
+  },
+  {
+    "op": "set",
+    "path": "/风险清单/H1:H1",
+    "props": {
+      "width": 12
+    }
+  }
+]

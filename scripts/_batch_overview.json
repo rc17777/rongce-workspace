@@ -1,0 +1,795 @@
+[
+  {
+    "op": "set",
+    "path": "/总览/A1",
+    "props": {
+      "value": "融策·审盾 三位一体AI审计中台建设方案 v2.0",
+      "bold": true,
+      "font_size": 16,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A1:H1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A2",
+    "props": {
+      "value": "修订：2026-07-21 | 四模型联合评审+苏格拉底追问后修订 | 负责人：融策平头哥",
+      "font_size": 10,
+      "font_color": "666666"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A2:H2",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A4",
+    "props": {
+      "value": "▎核心定位",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A5",
+    "props": {
+      "value": "融策·审盾 —— 用AI武装的政府财政资金安全与绩效智能守门人",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A6",
+    "props": {
+      "value": "一期唯一用户：审计项目经理（报告复核） | 实战场景：若尔盖审计局 校园餐+医保资金审计",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A8",
+    "props": {
+      "value": "▎v1.0 → v2.0 关键变更（四模型联合评审驱动）",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A9",
+    "props": {
+      "value": "修正点",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B9",
+    "props": {
+      "value": "v1.0",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C9",
+    "props": {
+      "value": "v2.0",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D9",
+    "props": {
+      "value": "触发来源",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A10",
+    "props": {
+      "value": "目标用户",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B10",
+    "props": {
+      "value": "模糊（三类人）",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C10",
+    "props": {
+      "value": "单一用户：审计项目经理",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D10",
+    "props": {
+      "value": "苏格拉底Q3",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A11",
+    "props": {
+      "value": "技术路线",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B11",
+    "props": {
+      "value": "微调13B-32B模型",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C11",
+    "props": {
+      "value": "RAG+Agentic Workflow为主",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D11",
+    "props": {
+      "value": "Gemini+GPT-5.5力挺",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A12",
+    "props": {
+      "value": "硬件路线",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B12",
+    "props": {
+      "value": "RTX 5090×1(Day1)",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C12",
+    "props": {
+      "value": "现有工作站+API，GPU推迟至Day90",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D12",
+    "props": {
+      "value": "Luna+GPT-5.5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A13",
+    "props": {
+      "value": "验证数据",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B13",
+    "props": {
+      "value": "融策内部报告",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C13",
+    "props": {
+      "value": "10份不同客户/年份/格式",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D13",
+    "props": {
+      "value": "苏格拉底Q9",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A14",
+    "props": {
+      "value": "验证节奏",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B14",
+    "props": {
+      "value": "30天出盲测",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C14",
+    "props": {
+      "value": "30天规则引擎+60天语义复核",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D14",
+    "props": {
+      "value": "Claude+GPT-5.5+Luna",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A15",
+    "props": {
+      "value": "量化标准",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B15",
+    "props": {
+      "value": "无",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C15",
+    "props": {
+      "value": "检出率≥80% 误报率≤20% 采纳率≥40%",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D15",
+    "props": {
+      "value": "Claude+GPT-5.5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A16",
+    "props": {
+      "value": "止损机制",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B16",
+    "props": {
+      "value": "无",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C16",
+    "props": {
+      "value": "Day180不达标→不进入Phase2",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D16",
+    "props": {
+      "value": "Claude+GPT-5.5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A17",
+    "props": {
+      "value": "SaaS化",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B17",
+    "props": {
+      "value": "多租户SaaS",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C17",
+    "props": {
+      "value": "三级路径：溢价→联合体→私有化部署",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D17",
+    "props": {
+      "value": "Claude+GPT-5.5+Luna",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A18",
+    "props": {
+      "value": "数据飞轮",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B18",
+    "props": {
+      "value": "Phase2才建标注平台",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C18",
+    "props": {
+      "value": "Day1启动Label Studio",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D18",
+    "props": {
+      "value": "四模型全票",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A19",
+    "props": {
+      "value": "团队",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B19",
+    "props": {
+      "value": "Phase1即招1人AI工程师",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C19",
+    "props": {
+      "value": "Day1-90平头哥亲自+OpenClaw",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D19",
+    "props": {
+      "value": "苏格拉底Q5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A20",
+    "props": {
+      "value": "业务线扩展",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B20",
+    "props": {
+      "value": "Phase2做5条线",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C20",
+    "props": {
+      "value": "Phase2深度打磨3条线",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D20",
+    "props": {
+      "value": "Luna+GPT-5.5",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A21",
+    "props": {
+      "value": "三年总投入",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B21",
+    "props": {
+      "value": "¥720万",
+      "font_size": 10,
+      "font_color": "888888"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C21",
+    "props": {
+      "value": "¥325-431万（↓40-55%）",
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D21",
+    "props": {
+      "value": "Gemini+Claude",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A23",
+    "props": {
+      "value": "▎三年投入速查",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A24",
+    "props": {
+      "value": "阶段",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B24",
+    "props": {
+      "value": "时间",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C24",
+    "props": {
+      "value": "一次性投入",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D24",
+    "props": {
+      "value": "年运营成本",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E24",
+    "props": {
+      "value": "累计投入",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A25",
+    "props": {
+      "value": "第一阶段·验证闭环",
+      "bold": false,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B25",
+    "props": {
+      "value": "月1-6",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C25",
+    "props": {
+      "value": "¥0-3万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D25",
+    "props": {
+      "value": "¥15-18万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E25",
+    "props": {
+      "value": "¥15-21万",
+      "bold": false,
+      "font_color": null,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A26",
+    "props": {
+      "value": "第二阶段·规模化打磨",
+      "bold": false,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B26",
+    "props": {
+      "value": "月7-18",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C26",
+    "props": {
+      "value": "¥15-25万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D26",
+    "props": {
+      "value": "¥105-115万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E26",
+    "props": {
+      "value": "¥120-140万",
+      "bold": false,
+      "font_color": null,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A27",
+    "props": {
+      "value": "第三阶段·行业壁垒",
+      "bold": false,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B27",
+    "props": {
+      "value": "月19-36",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C27",
+    "props": {
+      "value": "¥40-75万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D27",
+    "props": {
+      "value": "¥150-195万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E27",
+    "props": {
+      "value": "¥190-270万",
+      "bold": false,
+      "font_color": null,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A28",
+    "props": {
+      "value": "三年合计",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B28",
+    "props": {
+      "value": "36个月",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C28",
+    "props": {
+      "value": "¥55-103万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D28",
+    "props": {
+      "value": "¥270-328万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E28",
+    "props": {
+      "value": "¥325-431万",
+      "bold": true,
+      "font_color": "C5955C",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/A1:A1",
+    "props": {
+      "width": 20
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/B1:B1",
+    "props": {
+      "width": 20
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/C1:C1",
+    "props": {
+      "width": 35
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/D1:D1",
+    "props": {
+      "width": 25
+    }
+  },
+  {
+    "op": "set",
+    "path": "/总览/E1:E1",
+    "props": {
+      "width": 15
+    }
+  }
+]

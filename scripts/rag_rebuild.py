@@ -8,7 +8,6 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # 数据源（顺序=去重优先级，排前面的先入库，重复内容保留先见者）
 KNOWLEDGE_DIRS = [
-    (r'C:\Users\scrccpa\.openclaw\workspace\knowledge', 'knowledge-C'),
     (r'D:\openclaw-workspace\knowledge', 'knowledge-D'),
     (r'D:\openclaw-workspace\obsidian-vault', 'obsidian-D'),
     (r'C:\Users\scrccpa\Documents\Obsidian Vault', 'obsidian-vault'),
@@ -24,6 +23,7 @@ SKIP_SEGMENTS = [
     os.sep + 'skills' + os.sep,          # SKILL.md是Agent指令，不是审计知识
     '融策工作区' + os.sep + 'memory',     # 私人记忆文件
     '融策工作区' + os.sep + 'output',
+    '融策工作区' + os.sep + 'knowledge',  # KB副本（D盘已有，避免RAG重复索引）
 ]
 
 FRONTMATTER_RE = re.compile(r'^---\s*\n.*?\n---\s*\n', re.DOTALL)

@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-22",
+  "tiers": {
+    "A": {
+      "name": "直接影响审计结论",
+      "color": "red",
+      "gate_required": ["Gate1", "Gate2", "Gate3"],
+      "explainability_min": 4.0,
+      "review_required": "逐条核实",
+      "reviewer": "项目经理+质控部门",
+      "algorithms": [
+        {
+          "id": "bid_collusion_l3",
+          "name": "投标文件文本雷同检测",
+          "method": "TF-IDF + Cosine Similarity",
+          "category": "NLP"
+        },
+        {
+          "id": "bid_collusion_l4",
+          "name": "投标图片哈希检测",
+          "method": "pHash",
+          "category": "NLP"
+        },
+        {
+          "id": "bid_collusion_l8",
+          "name": "工商关联穿透分析",
+          "method": "PageRank + 社区发现",
+          "category": "图分析"
+        },
+        {
+          "id": "fund_flow_anomaly",
+          "name": "资金流向异常检测",
+          "method": "图环路检测 + 时序异常",
+          "category": "图分析"
+        }
+      ]
+    },
+    "B": {
+      "name": "辅助审计判断",
+      "color": "yellow",
+      "gate_required": ["Gate1", "Gate3"],
+      "explainability_min": 3.0,
+      "review_required": "抽样核实",
+      "reviewer": "项目组长",
+      "algorithms": [
+        {
+          "id": "benford",
+          "name": "Benford定律检测",
+          "method": "Benford's Law",
+          "category": "统计"
+        },
+        {
+          "id": "zscore_anomaly",
+          "name": "Z-score离群点检测",
+          "method": "Z-score",
+          "category": "统计"
+        },
+        {
+          "id": "dbscan_cluster",
+          "name": "文本聚类发现",
+          "method": "HDBSCAN + Sentence-BERT",
+          "category": "NLP"
+        },
+        {
+          "id": "contract_compare",
+          "name": "合同条款对比分析",
+          "method": "Sentence-BERT + Cosine Similarity",
+          "category": "NLP"
+        },
+        {
+          "id": "ner_extract",
+          "name": "关键实体提取",
+          "method": "NER",
+          "category": "NLP"
+        },
+        {
+          "id": "apriori_assoc",
+          "name": "供应商伴随投标检测",
+          "method": "Apriori / FP-Growth",
+          "category": "关联规则"
+        }
+      ]
+    },
+    "C": {
+      "name": "提供参考信息",
+      "color": "green",
+      "gate_required": ["Gate1"],
+      "explainability_min": 2.0,
+      "review_required": "不强制核实",
+      "reviewer": "使用人自行判断",
+      "algorithms": [
+        {
+          "id": "mann_kendall",
+          "name": "趋势显著性检验",
+          "method": "Mann-Kendall",
+          "category": "统计"
+        },
+        {
+          "id": "data_classify",
+          "name": "资料自动分类",
+          "method": "关键词匹配 + LLM分类",
+          "category": "NLP"
+        },
+        {
+          "id": "keyword_extract",
+          "name": "关键词提取",
+          "method": "TF-IDF",
+          "category": "NLP"
+        },
+        {
+          "id": "trend_analysis",
+          "name": "费用趋势分析",
+          "method": "STL分解 + Prophet",
+          "category": "时序分析"
+        }
+      ]
+    }
+  },
+  "emergency_channel": {
+    "max_per_quarter": 2,
+    "allowed_tiers": ["B", "C"],
+    "required_signoff": "项目经理 + 质控负责人",
+    "post_exit_requirement": "7天内补跑Gate2+Gate3",
+    "record_archive": true
+  }
+}

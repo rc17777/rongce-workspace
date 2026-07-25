@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pipeline.report_name }} - 审盾{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <a href="{{ url_for('dashboard') }}" class="text-blue-600 hover:text-blue-800">← 返回看板</a>
+</div>
+
+<div class="bg-white rounded-lg shadow mb-6">
+    <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800">{{ pipeline.report_name }}</h2>
+        <div class="text-sm text-gray-500 mt-1">管道ID: {{ pipeline.pipeline_id }}</div>
+    </div>
+    
+    <div class="p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div>
+            <div class="text-sm text-gray-500">状态</div>
+            <div class="font-bold {% if pipeline.status == '已归档' %}text-green-600{% else %}text-yellow-600{% endif %}">
+                {{ pipeline.status }}
+            </div>
+        </div>
+        <div>
+            <div class="text-sm text-gray-500">创建时间</div>
+            <div class="font-bold">{{ pipeline.created_at[:16] }}</div>
+        </div>
+        <div>
+            <div class="text-sm text-gray-500">总发现数</div>
+            <div class="font-bold">{{ findings|length }}</div>
+        </div>
+        <div>
+            <div class="text-sm text-gray-500">导出</div>
+            <div class="flex space-x-2">
+                <a href="{{ url_for('export_pipeline', pipeline_id=pipeline.pipeline_id, format='md') }}" 
+                   class="text-sm text-blue-600 hover:text-blue-800">Markdown</a>
+                <a href="{{ url_for('export_pipeline', pipeline_id=pipeline.pipeline_id, format='json') }}" 
+                   class="text-sm text-blue-600 hover:text-blue-800">JSON</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if findings|length > 0 %}
+<div class="bg-white rounded-lg shadow">
+    <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+        <h3 class="font-bold text-gray-700">📋 发现明细（含推理链）</h3>
+        
+        <!-- 批量操作 -->
+        <form method="POST" action="{{ url_for('batch_action') }}" class="flex items-center space-x-2">
+            <input type="hidden" name="pipeline_id" value="{{ pipeline.pipeline_id }}">
+            <select name="severity" class="text-sm border border-gray-300 rounded px-2 py-1">
+                <option value="">全部</option>
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+            </select>
+            <button type="submit" name="action" value="accept" 
+                    class="text-sm bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
+                批量确认
+            </button>
+            <button type="submit" name="action" value="reject" 
+                    class="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                批量驳回
+            </button>
+        </form>
+    </div>
+    
+    <div class="divide-y divide-gray-200">
+        {% for finding in findings %}
+        <div class="p-6 hover:bg-gray-50">
+            <div class="flex items-start justify-between mb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="px-2 py-1 text-xs font-bold rounded border severity-{{ finding.severity }}">
+                        {{ finding.severity }}
+                    </span>
+                    <span class="font-mono text-sm text-gray-500">{{ finding.finding_id }}</span>
+                    <span class="font-bold text-gray-800">{{ finding.dimension }}</span>
+                </div>
+                <span class="px-2 py-1 text-xs rounded status-{{ finding.qc_status | lower }}">
+                    {{ finding.qc_status }}
+                </span>
+            </div>
+            
+            <div class="mb-3">
+                <div class="text-gray-700">{{ finding.message }}</div>
+                {% if finding.location %}
+                <div class="text-sm text-gray-500 mt-1">📍 {{ finding.location }}</div>
+                {% endif %}
+            </div>
+            
+            <!-- 推理链摘要 -->
+            <div class="bg-gray-50 rounded p-3 mb-3">
+                <div class="flex items-center justify-between">
+                    <div class="text-sm text-gray-600">
+                        <span class="font-bold">推理链:</span> 
+                        {{ finding.trail.step_count }}步 | 
+                        置信度 {{ finding.trail.overall_confidence or 'N/A' }} |
+                        数据源 {{ finding.trail.data_sources|length }}个 |
+                        规则 {{ finding.trail.rules_applied|length }}条
+                    </div>
+                    <a href="{{ url_for('finding_trail', pipeline_id=pipeline.pipeline_id, finding_id=finding.finding_id) }}" 
+                       class="text-sm text-blue-600 hover:text-blue-800">
+                        查看完整推理链 →
+                    </a>
+                </div>
+                
+                <!-- 推理步骤预览 -->
+                {% if finding.trail.steps %}
+                <div class="mt-2 text-xs text-gray-500">
+                    {% for step in finding.trail.steps[:3] %}
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-400">{{ loop.index }}.</span>
+                        <span class="font-mono">[{{ step.step_type }}]</span>
+                        <span>{{ step.description[:50] }}{% if step.description|length > 50 %}...{% endif %}</span>
+                    </div>
+                    {% endfor %}
+                    {% if finding.trail.steps|length > 3 %}
+                    <div class="text-gray-400 mt-1">...还有 {{ finding.trail.steps|length - 3 }} 步</div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            
+            <!-- 审核操作 -->
+            {% if finding.qc_status == '待审核' or finding.qc_status == '审核中' %}
+            <form method="POST" action="{{ url_for('review_action') }}" class="flex items-center space-x-2">
+                <input type="hidden" name="pipeline_id" value="{{ pipeline.pipeline_id }}">
+                <input type="hidden" name="finding_id" value="{{ finding.finding_id }}">
+                <input type="text" name="comment" placeholder="审核意见（可选）" 
+                       class="flex-1 text-sm border border-gray-300 rounded px-3 py-1">
+                <button type="submit" name="action" value="accept" 
+                        class="text-sm bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700">
+                    ✅ 确认
+                </button>
+                <button type="submit" name="action" value="reject" 
+                        class="text-sm bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700">
+                    ❌ 驳回
+                </button>
+                <button type="submit" name="action" value="modify" 
+                        class="text-sm bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">
+                    ✏️ 修改
+                </button>
+            </form>
+            {% elif finding.qc_comment %}
+            <div class="text-sm text-gray-600 mt-2">
+                <span class="font-bold">审核意见:</span> {{ finding.qc_comment }}
+                {% if finding.qc_reviewer %}
+                <span class="text-gray-400 ml-2">— {{ finding.qc_reviewer }}</span>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="bg-white rounded-lg shadow p-8 text-center">
+    <p class="text-gray-600">该管道没有发现</p>
+</div>
+{% endif %}
+{% endblock %}

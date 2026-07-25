@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}质控看板 - 审盾{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">📊 质控看板</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="text-gray-500 text-sm">待审核管道</div>
+            <div class="text-3xl font-bold text-blue-600">{{ dash.total_in_queue }}</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="text-gray-500 text-sm">已归档</div>
+            <div class="text-3xl font-bold text-green-600">{{ dash.total_archived }}</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="text-gray-500 text-sm">总发现数</div>
+            <div class="text-3xl font-bold text-gray-800">{{ dash.pending_items | sum(attribute='total_findings') }}</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="text-gray-500 text-sm">待审核发现</div>
+            <div class="text-3xl font-bold text-yellow-600">{{ dash.pending_items | sum(attribute='pending_count') }}</div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="font-bold text-gray-700 mb-3">🔴 P0 (致命)</h3>
+            <div class="text-2xl font-bold text-red-600">{{ dash.severity_breakdown.P0 }}</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="font-bold text-gray-700 mb-3">🟡 P1 (重要)</h3>
+            <div class="text-2xl font-bold text-yellow-600">{{ dash.severity_breakdown.P1 }}</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="font-bold text-gray-700 mb-3">🟢 P2 (基础)</h3>
+            <div class="text-2xl font-bold text-green-600">{{ dash.severity_breakdown.P2 }}</div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6 mb-8">
+        <h3 class="font-bold text-gray-700 mb-4">质控状态分布</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {% for status, count in dash.qc_status_breakdown.items() %}
+                <div class="text-center">
+                    <div class="text-2xl font-bold {% if status == '已确认' %}text-green-600{% elif status == '已驳回' %}text-red-600{% elif status == '待审核' %}text-gray-600{% else %}text-blue-600{% endif %}">
+                        {{ count }}
+                    </div>
+                    <div class="text-sm text-gray-500">{{ status }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% if dash.pending_items %}
+<div class="bg-white rounded-lg shadow">
+    <div class="px-6 py-4 border-b border-gray-200">
+        <h3 class="font-bold text-gray-700">📋 待审核队列</h3>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">管道ID</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">报告名称</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">发现数</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">待审核</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">创建时间</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">操作</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                {% for item in dash.pending_items %}
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 text-sm text-gray-900 font-mono">{{ item.pipeline_id }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-900">{{ item.report_name }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-900">{{ item.total_findings }}</td>
+                    <td class="px-6 py-4 text-sm text-yellow-600 font-bold">{{ item.pending_count }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-500">{{ item.created_at[:16] }}</td>
+                    <td class="px-6 py-4 text-sm">
+                        <a href="{{ url_for('pipeline_detail', pipeline_id=item.pipeline_id) }}" 
+                           class="text-blue-600 hover:text-blue-800">查看详情 →</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="bg-white rounded-lg shadow p-8 text-center">
+    <div class="text-4xl mb-4">✅</div>
+    <p class="text-gray-600">队列为空，所有管道已审核完毕</p>
+</div>
+{% endif %}
+{% endblock %}

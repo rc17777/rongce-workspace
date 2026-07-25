@@ -1,0 +1,1382 @@
+[
+  {
+    "op": "set",
+    "path": "/预算对比/A1",
+    "props": {
+      "value": "三阶段预算对比：v1.0 vs v2.0",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A1:F1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A2",
+    "props": {
+      "value": "v2.0省钱核心逻辑：砍GPU集群→用API、砍微调→走RAG、砍SaaS→私有化部署、砍5线→3线",
+      "font_size": 10,
+      "font_color": "666666"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A4",
+    "props": {
+      "value": "项目",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B4",
+    "props": {
+      "value": "v1.0预算",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C4",
+    "props": {
+      "value": "v2.0修正",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D4",
+    "props": {
+      "value": "变化",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E4",
+    "props": {
+      "value": "修正原因",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A5",
+    "props": {
+      "value": "【第一阶段】",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B5",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C5",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D5",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E5",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A6",
+    "props": {
+      "value": "GPU工作站",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B6",
+    "props": {
+      "value": "¥8-10万",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C6",
+    "props": {
+      "value": "¥0（推迟至Day90）",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D6",
+    "props": {
+      "value": "↓100%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E6",
+    "props": {
+      "value": "Luna：验证期API够用；GPT-5.5：5090未上市",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A7",
+    "props": {
+      "value": "AI工程师(前3月)",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B7",
+    "props": {
+      "value": "¥12-18万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C7",
+    "props": {
+      "value": "¥0（平头哥亲自+OpenClaw）",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D7",
+    "props": {
+      "value": "↓100%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E7",
+    "props": {
+      "value": "苏格拉底Q5：那个人就是我",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A8",
+    "props": {
+      "value": "AI工程师(后3月)",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B8",
+    "props": {
+      "value": "—",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C8",
+    "props": {
+      "value": "¥6-8万(Day90起)",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D8",
+    "props": {
+      "value": "新增",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E8",
+    "props": {
+      "value": "月薪¥1.8-2.4万含社保",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A9",
+    "props": {
+      "value": "数据平台",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B9",
+    "props": {
+      "value": "¥3万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C9",
+    "props": {
+      "value": "¥3万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D9",
+    "props": {
+      "value": "不变",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E9",
+    "props": {
+      "value": "Qdrant+PG免费，天眼查¥2-4万",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A10",
+    "props": {
+      "value": "API费用",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B10",
+    "props": {
+      "value": "¥3-5万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C10",
+    "props": {
+      "value": "¥5-8万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D10",
+    "props": {
+      "value": "↑60%",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E10",
+    "props": {
+      "value": "GPT-5.5+Gemini：单次复核token消耗大",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A11",
+    "props": {
+      "value": "合规+法律顾问",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B11",
+    "props": {
+      "value": "¥0",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C11",
+    "props": {
+      "value": "¥1-2万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D11",
+    "props": {
+      "value": "新增",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E11",
+    "props": {
+      "value": "Gemini：合规框架Day1建立",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A12",
+    "props": {
+      "value": "一阶段小计",
+      "bold": true,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B12",
+    "props": {
+      "value": "¥40万",
+      "font_size": 10,
+      "font_color": null,
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C12",
+    "props": {
+      "value": "¥15-21万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D12",
+    "props": {
+      "value": "↓50%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E12",
+    "props": {
+      "value": "风险后移，先验证后投入",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A13",
+    "props": {
+      "value": "",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B13",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C13",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D13",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E13",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A14",
+    "props": {
+      "value": "【第二阶段】",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B14",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C14",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D14",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E14",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A15",
+    "props": {
+      "value": "GPU服务器",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B15",
+    "props": {
+      "value": "¥20-25万",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C15",
+    "props": {
+      "value": "¥5-7万(1台4090工作站)",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D15",
+    "props": {
+      "value": "↓75%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E15",
+    "props": {
+      "value": "不做微调，无需A6000",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A16",
+    "props": {
+      "value": "NAS+网络",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B16",
+    "props": {
+      "value": "含上述",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C16",
+    "props": {
+      "value": "¥1-2万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D16",
+    "props": {
+      "value": "拆分明细",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E16",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A17",
+    "props": {
+      "value": "数据平台+标注",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B17",
+    "props": {
+      "value": "¥13-20万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C17",
+    "props": {
+      "value": "¥10-15万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D17",
+    "props": {
+      "value": "↓25%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E17",
+    "props": {
+      "value": "开源工具为主",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A18",
+    "props": {
+      "value": "应用开发",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B18",
+    "props": {
+      "value": "¥23-37万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C18",
+    "props": {
+      "value": "¥20-28万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D18",
+    "props": {
+      "value": "↓25%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E18",
+    "props": {
+      "value": "3条线而非5条",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A19",
+    "props": {
+      "value": "人力",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B19",
+    "props": {
+      "value": "¥60-80万/年",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C19",
+    "props": {
+      "value": "¥78万/年",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D19",
+    "props": {
+      "value": "持平",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E19",
+    "props": {
+      "value": "1全栈+1数据+3兼职专家",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A20",
+    "props": {
+      "value": "品牌+输出",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B20",
+    "props": {
+      "value": "¥0",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C20",
+    "props": {
+      "value": "¥5-8万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D20",
+    "props": {
+      "value": "新增",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E20",
+    "props": {
+      "value": "白皮书+行业会议+私测试点",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A21",
+    "props": {
+      "value": "二阶段小计",
+      "bold": true,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B21",
+    "props": {
+      "value": "¥180万",
+      "font_size": 10,
+      "font_color": null,
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C21",
+    "props": {
+      "value": "¥120-140万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D21",
+    "props": {
+      "value": "↓25%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E21",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A22",
+    "props": {
+      "value": "",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B22",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C22",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D22",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E22",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A23",
+    "props": {
+      "value": "【第三阶段】",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B23",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C23",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D23",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E23",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A24",
+    "props": {
+      "value": "算力集群",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B24",
+    "props": {
+      "value": "¥100万+",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C24",
+    "props": {
+      "value": "¥8-15万(单卡或云GPU)",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D24",
+    "props": {
+      "value": "↓90%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E24",
+    "props": {
+      "value": "不做集群，不跑K8s",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A25",
+    "props": {
+      "value": "数据平台+多模态",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B25",
+    "props": {
+      "value": "含上述",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C25",
+    "props": {
+      "value": "¥31-50万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D25",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E25",
+    "props": {
+      "value": "标注数据建设为核心",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A26",
+    "props": {
+      "value": "应用开发",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B26",
+    "props": {
+      "value": "含上述",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C26",
+    "props": {
+      "value": "¥16-25万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D26",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E26",
+    "props": {
+      "value": "RAG+微调混合架构",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A27",
+    "props": {
+      "value": "SaaS/输出",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B27",
+    "props": {
+      "value": "含上述",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C27",
+    "props": {
+      "value": "¥12-20万(私有化部署)",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D27",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E27",
+    "props": {
+      "value": "不做SaaS多租户",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A28",
+    "props": {
+      "value": "人力(5-6人)",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B28",
+    "props": {
+      "value": "含上述",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C28",
+    "props": {
+      "value": "¥120-160万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D28",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E28",
+    "props": {
+      "value": "AI团队+产品经理+业务专家",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A29",
+    "props": {
+      "value": "三阶段小计",
+      "bold": true,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B29",
+    "props": {
+      "value": "¥500万+",
+      "font_size": 10,
+      "font_color": null,
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C29",
+    "props": {
+      "value": "¥190-270万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D29",
+    "props": {
+      "value": "↓50%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E29",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A30",
+    "props": {
+      "value": "",
+      "bold": false,
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B30",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "888888",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C30",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": false
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D30",
+    "props": {
+      "value": "",
+      "font_size": 10,
+      "font_color": null
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E30",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A31",
+    "props": {
+      "value": "【三年总计】",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B31",
+    "props": {
+      "value": "¥720万",
+      "font_size": 10,
+      "font_color": null,
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C31",
+    "props": {
+      "value": "¥325-431万",
+      "font_size": 10,
+      "font_color": "C5955C",
+      "bold": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D31",
+    "props": {
+      "value": "↓40-55%",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E31",
+    "props": {
+      "value": "",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/A1:A1",
+    "props": {
+      "width": 22
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/B1:B1",
+    "props": {
+      "width": 18
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/C1:C1",
+    "props": {
+      "width": 22
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/D1:D1",
+    "props": {
+      "width": 12
+    }
+  },
+  {
+    "op": "set",
+    "path": "/预算对比/E1:E1",
+    "props": {
+      "width": 35
+    }
+  }
+]

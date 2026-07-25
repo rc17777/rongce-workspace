@@ -1,0 +1,451 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2026-07-24",
+    "description": "融策22 Agent的Goal+Eval正规化定义。每个Agent必须定义Goal(Done Criteria)和Eval(自动评估规则)",
+    "principle": "Goal定义'做什么、何时算完'，Eval定义'怎么判断做得好不好'。两者共同构成Loop Engineering的终止条件和质量闸门"
+  },
+
+  "agents": {
+
+    "数据侦察兵": {
+      "goal": {
+        "outcome": "完成财务数据的清洗、波动分析和异常检测，输出标记风险等级的可疑记录清单",
+        "done_criteria": [
+          {"id": "DC1", "condition": "数据清洗完成率>99%", "check": "统计清洗前后行数差异"},
+          {"id": "DC2", "condition": "至少产出1份波动分析报告（月度/科目维度）", "check": "检查输出文件存在且非空"},
+          {"id": "DC3", "condition": "异常检测覆盖率100%（所有科目均已扫描）", "check": "遍历科目列表验证"},
+          {"id": "DC4", "condition": "高风险记录≤20条（控制误报）", "check": "统计combined_score>0.7的记录数"}
+        ],
+        "non_goals": ["不替代人工定性判断", "不自动生成最终审计结论", "不修改原始数据"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "数据完整性", "type": "count_check", "spec": "input_rows - output_rows < input_rows * 0.01", "weight": 0.3, "auto_block": true},
+          {"name": "异常检出率", "type": "ratio_check", "spec": "0.01 <= flagged_ratio <= 0.15", "weight": 0.2},
+          {"name": "报告可读性", "type": "format_check", "spec": "output contains markdown_table or json", "weight": 0.15},
+          {"name": "金额一致性", "type": "consistency_check", "spec": "sum(科目余额) ≈ 来源合计数", "weight": 0.25, "auto_block": true},
+          {"name": "Benford符合度", "type": "threshold_check", "spec": "benford_p_value reported and valid", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "合同猎犬": {
+      "goal": {
+        "outcome": "扫描全量合同，提取关键条款，比对标书/验收单，输出违规项清单",
+        "done_criteria": [
+          {"id": "DC1", "condition": "合同扫描覆盖率100%", "check": "scanned_count == total_count"},
+          {"id": "DC2", "condition": "每份合同提取≥5个关键字段", "check": "检查提取字段数"},
+          {"id": "DC3", "condition": "违规项标注了证据来源", "check": "每条finding含evidence字段"},
+          {"id": "DC4", "condition": "金额≥1000万的合同100%深度审查", "check": "大额合同专项标记"}
+        ],
+        "non_goals": ["不替代律师判断", "不处理非中文合同（标记跳过）"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "覆盖率", "type": "count_check", "spec": "scanned / total >= 1.0", "weight": 0.3, "auto_block": true},
+          {"name": "关键字段完整", "type": "completeness_check", "spec": "avg(fields_per_contract) >= 5", "weight": 0.2},
+          {"name": "Finding有据", "type": "format_check", "spec": "all_findings.have('evidence')", "weight": 0.25, "auto_block": true},
+          {"name": "大额覆盖", "type": "completeness_check", "spec": "large_contracts.scanned == large_contracts.total", "weight": 0.15},
+          {"name": "条款引用准确", "type": "hallucination_check", "spec": "cited_clause_exists_in_source", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "招投标猎手": {
+      "goal": {
+        "outcome": "执行六阶段检测（硬件指纹/元数据/文本雷同/图片哈希/网络指纹/行为模式），输出串标疑点报告",
+        "done_criteria": [
+          {"id": "DC1", "condition": "六阶段检测全部执行", "check": "检查output含6个section"},
+          {"id": "DC2", "condition": "每阶段检出疑点标注了检测方法和置信度", "check": "每条finding含method+confidence"},
+          {"id": "DC3", "condition": "L3(文本)+L4(图片)+L5(元数据)三杀同时触发可定案", "check": "三杀逻辑检查"},
+          {"id": "DC4", "condition": "输出包含投标人关联网络图", "check": "检查graph输出"}
+        ],
+        "non_goals": ["不替代公安立案", "不自动判定违法"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "阶段完整性", "type": "completeness_check", "spec": "stages_executed == 6", "weight": 0.25, "auto_block": true},
+          {"name": "检测方法标注", "type": "format_check", "spec": "all_findings.have('method', 'confidence')", "weight": 0.2},
+          {"name": "三杀逻辑", "type": "consistency_check", "spec": "triple_kill_findings.marked_as_conclusive", "weight": 0.2},
+          {"name": "误报控制", "type": "ratio_check", "spec": "high_confidence_findings <= 20", "weight": 0.15},
+          {"name": "证据可追溯", "type": "format_check", "spec": "each_finding.has_source_file_reference", "weight": 0.2, "auto_block": true}
+        ],
+        "auto_pass_threshold": 0.75,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "法规检察官": {
+      "goal": {
+        "outcome": "接收前序Agent发现→逐条对照法规库→输出定性结论和处罚依据",
+        "done_criteria": [
+          {"id": "DC1", "condition": "每个发现都有法规引用", "check": "finding_count == law_citation_count"},
+          {"id": "DC2", "condition": "法规引用率>95%（至少能找到相关条款）", "check": "cited_laws_with_match / total_cited"},
+          {"id": "DC3", "condition": "每条引用含文号+生效日期+具体条款", "check": "字段完整性"},
+          {"id": "DC4", "condition": "无法匹配的标注'暂无适用条款'", "check": "null_handling正确"}
+        ],
+        "non_goals": ["不替代法律顾问", "不判断处罚裁量幅度"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "法规覆盖率", "type": "ratio_check", "spec": "cited / findings >= 0.95", "weight": 0.3, "auto_block": true},
+          {"name": "字段完整", "type": "completeness_check", "spec": "citation.has('文号','生效日期','条款')", "weight": 0.25},
+          {"name": "法规有效性", "type": "hallucination_check", "spec": "cited_law.in(法规库)", "weight": 0.3, "auto_block": true},
+          {"name": "未匹配处理", "type": "completeness_check", "spec": "unmatched.marked_as('暂无适用条款')", "weight": 0.15}
+        ],
+        "auto_pass_threshold": 0.85,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "底稿工匠": {
+      "goal": {
+        "outcome": "接收前序发现→生成标准化审计工作底稿+取证单",
+        "done_criteria": [
+          {"id": "DC1", "condition": "每条发现生成1份底稿", "check": "底稿数 == finding数"},
+          {"id": "DC2", "condition": "底稿包含8要素", "check": "审计项目/被审计单位/审计事项/审计过程/审计发现/法规依据/审计结论/审计人员"},
+          {"id": "DC3", "condition": "取证单含被审计单位确认栏", "check": "格式检查"},
+          {"id": "DC4", "condition": "交叉索引完整（发现↔底稿↔法规）", "check": "交叉引用链闭环"}
+        ],
+        "non_goals": ["不自动代签字", "不修改审计发现定性"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "底稿完整性", "type": "count_check", "spec": "wp_count == finding_count", "weight": 0.3, "auto_block": true},
+          {"name": "八要素齐全", "type": "completeness_check", "spec": "all_wp.have_8_elements", "weight": 0.25},
+          {"name": "交叉索引", "type": "consistency_check", "spec": "finding↔wp↔law_chain_closed", "weight": 0.25},
+          {"name": "格式规范", "type": "format_check", "spec": "符合审计底稿模板", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "报告笔杆子": {
+      "goal": {
+        "outcome": "汇总底稿→15维度自检→生成审计报告初稿",
+        "done_criteria": [
+          {"id": "DC1", "condition": "15维度自检全部执行", "check": "checklist 15项"},
+          {"id": "DC2", "condition": "报告含标准章节结构", "check": "基本情况/审计发现问题/审计评价/审计建议"},
+          {"id": "DC3", "condition": "金额结论标注来源+计算方法", "check": "每个金额含source字段"},
+          {"id": "DC4", "condition": "P0问题必须写入报告", "check": "P0 findings ⊂ report_items"}
+        ],
+        "non_goals": ["不替代项目经理终审", "不修改底稿数据"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "15维完整性", "type": "count_check", "spec": "self_check_dims == 15", "weight": 0.25},
+          {"name": "章节结构", "type": "format_check", "spec": "报告含标准四段式", "weight": 0.15},
+          {"name": "金额可追溯", "type": "consistency_check", "spec": "all_amounts.have_source", "weight": 0.25, "auto_block": true},
+          {"name": "P0全覆盖", "type": "completeness_check", "spec": "P0_findings.all_in_report", "weight": 0.25, "auto_block": true},
+          {"name": "用语规范", "type": "format_check", "spec": "无主观情绪化表述", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "复核哨兵": {
+      "goal": {
+        "outcome": "独立复核报告↔底稿↔取证单三方交叉比对，输出复核意见",
+        "done_criteria": [
+          {"id": "DC1", "condition": "三方交叉比对完成", "check": "report↔wp↔evidence对比矩阵"},
+          {"id": "DC2", "condition": "金额全链路追踪", "check": "每个金额从取证单→底稿→报告可追溯"},
+          {"id": "DC3", "condition": "P0/P1/P2分级输出", "check": "每条意见含severity"},
+          {"id": "DC4", "condition": "法规引用双重验证", "check": "法规条款可查证"}
+        ],
+        "non_goals": ["不替代项目经理签字", "不修改报告正文"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "三方比对", "type": "cross_validation", "spec": "report↔wp↔evidence_matrix.complete", "weight": 0.3, "auto_block": true},
+          {"name": "金额链路", "type": "consistency_check", "spec": "amount_traceable from evidence to report", "weight": 0.3, "auto_block": true},
+          {"name": "分级准确", "type": "format_check", "spec": "all_opinions.have_severity", "weight": 0.2},
+          {"name": "法规可查", "type": "hallucination_check", "spec": "cited_laws_verifiable", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.85,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "预算工程师": {
+      "goal": {
+        "outcome": "核对工程量清单、检查定额套用、比对材料价格、验证取费标准",
+        "done_criteria": [
+          {"id": "DC1", "condition": "工程量清单100%核对", "check": "items_checked == items_total"},
+          {"id": "DC2", "condition": "定额套用差异标注原因", "check": "差异项含reason字段"},
+          {"id": "DC3", "condition": "材料价格偏差>10%的标注", "check": "threshold标记"},
+          {"id": "DC4", "condition": "取费标准逐项验证", "check": "fee_items全部检查"}
+        ],
+        "non_goals": ["不替代注册造价师签字", "不修改定额库"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "清单全覆盖", "type": "count_check", "spec": "checked / total == 1.0", "weight": 0.25, "auto_block": true},
+          {"name": "定额合理性", "type": "ratio_check", "spec": "anomaly_ratio < 0.1", "weight": 0.2},
+          {"name": "材价偏差", "type": "threshold_check", "spec": "deviations_marked for >10%", "weight": 0.25},
+          {"name": "取费完整", "type": "completeness_check", "spec": "fee_items.all_verified", "weight": 0.2},
+          {"name": "金额校验", "type": "consistency_check", "spec": "sum(items) ≈ total_price", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "结算审计师": {
+      "goal": {
+        "outcome": "变更签证核验、工程量重算、材料价差调整审核、索赔合理性审查",
+        "done_criteria": [
+          {"id": "DC1", "condition": "变更签证100%核验", "check": "changes_verified == changes_total"},
+          {"id": "DC2", "condition": "工程量重算偏差标注", "check": "重算差异±3%以上标记"},
+          {"id": "DC3", "condition": "价差调整依据可查", "check": "每条调整附依据"},
+          {"id": "DC4", "condition": "索赔合理性逐条分析", "check": "claims全部审查"}
+        ],
+        "non_goals": ["不替代造价咨询报告", "不作出最终结算金额裁决"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "变更全覆盖", "type": "count_check", "spec": "verified / total == 1.0", "weight": 0.25, "auto_block": true},
+          {"name": "重算差异", "type": "threshold_check", "spec": "differences_marked for >3%", "weight": 0.25},
+          {"name": "价调依据", "type": "completeness_check", "spec": "all_adjustments.has_basis", "weight": 0.25, "auto_block": true},
+          {"name": "索赔分析", "type": "completeness_check", "spec": "claims.all_analyzed", "weight": 0.25}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "财政评审员": {
+      "goal": {
+        "outcome": "概算批复合规性检查、预算编制规范性审核、招标控制价合理性分析、结算超概分析",
+        "done_criteria": [
+          {"id": "DC1", "condition": "概算批复逐条对照", "check": "approval_items全部比对"},
+          {"id": "DC2", "condition": "预算编制偏差定量分析", "check": "偏差率计算+原因"},
+          {"id": "DC3", "condition": "控制价与市场价对比", "check": "价差率≤10%或合理解释"},
+          {"id": "DC4", "condition": "超概项目逐项分析原因", "check": "over_budget全部分析"}
+        ],
+        "non_goals": ["不替代财政部门审批", "不下达预算调整决定"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "概算全覆盖", "type": "count_check", "spec": "checked / total == 1.0", "weight": 0.25, "auto_block": true},
+          {"name": "编制规范性", "type": "format_check", "spec": "符合财政预算编制要求", "weight": 0.2},
+          {"name": "控制价合理", "type": "threshold_check", "spec": "price_gap <= 0.1 or has_explanation", "weight": 0.3},
+          {"name": "超概分析", "type": "completeness_check", "spec": "over_budget.all_analyzed", "weight": 0.25}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "绩效评价师": {
+      "goal": {
+        "outcome": "绩效目标审核、指标设置合理性评估、完成值偏离度检测、综合评分",
+        "done_criteria": [
+          {"id": "DC1", "condition": "所有绩效指标完成率计算", "check": "completion_rate全覆盖"},
+          {"id": "DC2", "condition": "偏离度≥15%的指标深入分析", "check": "deviated_items全部标注原因"},
+          {"id": "DC3", "condition": "指标间逻辑一致性检查", "check": "前因后果逻辑链验证"},
+          {"id": "DC4", "condition": "综合评分含评分依据", "check": "score有明细"}
+        ],
+        "non_goals": ["不替代财政绩效评价结论", "不修改原始填报数据"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "指标全覆盖", "type": "count_check", "spec": "evaluated / total == 1.0", "weight": 0.2},
+          {"name": "偏离度标注", "type": "threshold_check", "spec": "deviation > 15% → has_cause", "weight": 0.25},
+          {"name": "逻辑一致性", "type": "consistency_check", "spec": "indicator_chain.logical", "weight": 0.25},
+          {"name": "评分可追溯", "type": "completeness_check", "spec": "each_score.has_basis", "weight": 0.2, "auto_block": true},
+          {"name": "说话有据", "type": "format_check", "spec": "评价结论含数据支撑", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.75,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "评标偏离度检测": {
+      "goal": {
+        "outcome": "加载评标打分表→6种统计检测→输出评委偏离度分析报告",
+        "done_criteria": [
+          {"id": "DC1", "condition": "6种检测方法全部执行", "check": "methods清单"},
+          {"id": "DC2", "condition": "每评委评分模式分析", "check": "per_expert_analysis"},
+          {"id": "DC3", "condition": "异常偏离标注统计显著性", "check": "p_value标注"},
+          {"id": "DC4", "condition": "群体偏差模式检测", "check": "cluster_pattern"}
+        ],
+        "non_goals": ["不直接定性为违规", "不替代纪检调查"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "方法全覆盖", "type": "count_check", "spec": "methods == 6", "weight": 0.25, "auto_block": true},
+          {"name": "个体分析", "type": "completeness_check", "spec": "per_expert_coverage == 1.0", "weight": 0.25},
+          {"name": "统计有效性", "type": "threshold_check", "spec": "p_value.multiple_comparison_corrected", "weight": 0.25},
+          {"name": "误报控制", "type": "threshold_check", "spec": "fdr_alpha == 0.05", "weight": 0.25}
+        ],
+        "auto_pass_threshold": 0.75,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "会议纪要分析师": {
+      "goal": {
+        "outcome": "分析会议纪要→追踪三重一大决策链→与合同/付款全链路比对",
+        "done_criteria": [
+          {"id": "DC1", "condition": "会议纪要全部解析", "check": "meeting_count == parsed_count"},
+          {"id": "DC2", "condition": "三重一大事项识别+决策链追踪", "check": "三重一大标记"},
+          {"id": "DC3", "condition": "决策→合同→付款链路断裂点标注", "check": "断点分析"},
+          {"id": "DC4", "condition": "时间线可视化", "check": "timeline输出"}
+        ],
+        "non_goals": ["不评价领导决策质量", "不超出会议纪要范围推测"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "纪要全覆盖", "type": "count_check", "spec": "parsed / total == 1.0", "weight": 0.25, "auto_block": true},
+          {"name": "三重一大识别", "type": "completeness_check", "spec": "三重大事项检出率", "weight": 0.25},
+          {"name": "链路完整", "type": "consistency_check", "spec": "决策→合同→付款可追溯", "weight": 0.3},
+          {"name": "断点标记", "type": "completeness_check", "spec": "断裂点全部标注", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.75,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "方案撰写师": {
+      "goal": {
+        "outcome": "基于资料分类→RAG检索同类模板→生成实施方案(含重难点)+差异化资料清单",
+        "done_criteria": [
+          {"id": "DC1", "condition": "含7要素：背景/目标/范围/方法/时间/人员/资料清单", "check": "7要素齐全"},
+          {"id": "DC2", "condition": "重难点分析≥3条，每条含应对策略", "check": "difficulty_items >= 3"},
+          {"id": "DC3", "condition": "资料清单差异化（非通用模板）", "check": "差异化检查"},
+          {"id": "DC4", "condition": "RAG检索了同类项目模板", "check": "rag_citation"}
+        ],
+        "non_goals": ["不替代项目经理审批方案", "不自动确定审计重点（需人工确认）"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "7要素完整", "type": "completeness_check", "spec": "elements == 7", "weight": 0.3, "auto_block": true},
+          {"name": "重难点质量", "type": "count_check", "spec": "difficulty_items >= 3 and each.has_strategy", "weight": 0.25},
+          {"name": "差异化", "type": "format_check", "spec": "资料清单非通用模板", "weight": 0.2},
+          {"name": "RAG引用", "type": "completeness_check", "spec": "has_rag_references", "weight": 0.15},
+          {"name": "格式规范", "type": "format_check", "spec": "公文格式GB/T9704", "weight": 0.1}
+        ],
+        "auto_pass_threshold": 0.75,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "OCR预处理员": {
+      "goal": {
+        "outcome": "扫描件→结构化文本提取，分五类文档处理",
+        "done_criteria": [
+          {"id": "DC1", "condition": "全部文件已处理", "check": "processed == total"},
+          {"id": "DC2", "condition": "识别置信度均值>85%", "check": "confidence平均"},
+          {"id": "DC3", "condition": "低置信度(<70%)文件标记人工复核", "check": "low_conf标记"},
+          {"id": "DC4", "condition": "输出结构化JSON+Markdown", "check": "格式检查"}
+        ],
+        "non_goals": ["不处理手写体（标记跳过）", "不修改原始文件"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "处理覆盖", "type": "count_check", "spec": "processed / total == 1.0", "weight": 0.3, "auto_block": true},
+          {"name": "识别质量", "type": "threshold_check", "spec": "avg_confidence > 0.85", "weight": 0.25},
+          {"name": "低置信标记", "type": "completeness_check", "spec": "low_conf_files.all_marked", "weight": 0.25},
+          {"name": "格式规范", "type": "format_check", "spec": "output.is_json_or_md", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "数据分类员": {
+      "goal": {
+        "outcome": "按12业务线+资料类型深度分类→同步Obsidian→增量更新RAG",
+        "done_criteria": [
+          {"id": "DC1", "condition": "100%资料已分类", "check": "classified == total"},
+          {"id": "DC2", "condition": "分类标签完整性", "check": "业务线+资料类型双标签"},
+          {"id": "DC3", "condition": "Obsidian同步成功", "check": "sync确认"},
+          {"id": "DC4", "condition": "RAG索引已更新", "check": "index_timestamp变化"}
+        ],
+        "non_goals": ["不删除原始文件", "不自动修改分类体系"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "全覆盖", "type": "count_check", "spec": "classified / total == 1.0", "weight": 0.3, "auto_block": true},
+          {"name": "标签完整", "type": "completeness_check", "spec": "双标签齐全", "weight": 0.25},
+          {"name": "同步确认", "type": "consistency_check", "spec": "obsidian.synced == true", "weight": 0.25},
+          {"name": "RAG更新", "type": "consistency_check", "spec": "rag.index_updated == true", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    },
+
+    "数据脱敏": {
+      "goal": {
+        "outcome": "自动识别敏感字段→分级脱敏→安全认证通过",
+        "done_criteria": [
+          {"id": "DC1", "condition": "P0字段100%脱敏（金额/身份证/银行账号/手机号）", "check": "P0脱敏率"},
+          {"id": "DC2", "condition": "脱敏后数据可用性≥90%", "check": "可用性测试"},
+          {"id": "DC3", "condition": "脱敏日志完整", "check": "log含敏感字段类型+脱敏方法"},
+          {"id": "DC4", "condition": "未识别字段标记供人工审核", "check": "unknown标记"}
+        ],
+        "non_goals": ["不删除原始敏感数据", "不替代等保测评"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "P0全覆盖", "type": "count_check", "spec": "P0_fields.desensitized == 1.0", "weight": 0.35, "auto_block": true},
+          {"name": "可用性", "type": "ratio_check", "spec": "usable_rate > 0.9", "weight": 0.25},
+          {"name": "日志完整", "type": "completeness_check", "spec": "log.has_all_required_fields", "weight": 0.2},
+          {"name": "未识别标记", "type": "completeness_check", "spec": "unknown_fields.all_flagged", "weight": 0.2}
+        ],
+        "auto_pass_threshold": 0.85,
+        "auto_fail_threshold": 0.5
+      }
+    },
+
+    "调整分录生成师": {
+      "goal": {
+        "outcome": "发现财务问题→自动生成标准化审计调整分录",
+        "done_criteria": [
+          {"id": "DC1", "condition": "每条发现生成对应调整分录", "check": "finding_count == adjustment_count"},
+          {"id": "DC2", "condition": "分录类型正确（错账更正/重分类/补记/冲销）", "check": "type分类检查"},
+          {"id": "DC3", "condition": "借贷平衡", "check": "借方合计==贷方合计"},
+          {"id": "DC4", "condition": "含调整原因说明", "check": "每条adjustment有reason"}
+        ],
+        "non_goals": ["不替代注册会计师调整", "不自动修改被审计单位账套"]
+      },
+      "eval": {
+        "checks": [
+          {"name": "分录完整", "type": "count_check", "spec": "adjustments == findings", "weight": 0.25},
+          {"name": "借贷平衡", "type": "consistency_check", "spec": "sum(debit) == sum(credit)", "weight": 0.3, "auto_block": true},
+          {"name": "类型正确", "type": "format_check", "spec": "type in [错账更正,重分类,补记,冲销]", "weight": 0.2},
+          {"name": "原因标注", "type": "completeness_check", "spec": "each.has_reason", "weight": 0.25}
+        ],
+        "auto_pass_threshold": 0.8,
+        "auto_fail_threshold": 0.4
+      }
+    }
+
+  },
+
+  "_eval_types_reference": {
+    "count_check": "计数检查：确保数量匹配（如底稿数==发现数）",
+    "ratio_check": "比率检查：确保比例在合理范围（如异常率1%-15%）",
+    "format_check": "格式检查：输出符合指定格式（JSON/表格/章节结构）",
+    "consistency_check": "一致性检查：数据与来源一致（金额/借贷/引用）",
+    "completeness_check": "完整性检查：必填字段是否存在",
+    "cross_validation": "交叉验证：不同来源间是否一致",
+    "hallucination_check": "幻觉检查：引用的法规/数据是否真实存在",
+    "threshold_check": "阈值检查：数值是否在合理阈值内"
+  },
+
+  "_workflow_integration": {
+    "orchestrate_v3": "在Agent完成后自动调用 goal_evaluator.evaluate(agent_name, output)",
+    "handover": "H-packet 新增 goal_status 字段：{passed: bool, score: float, failed_checks: [...]}",
+    "human_escalation": "auto_fail → 立即升级人工 | auto_pass → 自动进入下一Agent",
+    "dashboard": "每个Agent的Goal/Eval状态展示在status.json中"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-22",
+  "algorithms": [
+    {
+      "id": "benford",
+      "name": "Benford定律检测",
+      "category": "统计",
+      "risk_tier": "B",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-06-24",
+          "author": "融策AI",
+          "changes": "初始版本：单位数Benford检验，p<0.01为异常阈值",
+          "test_results": {"pass_rate": 0.95, "test_cases": 500},
+          "status": "active",
+          "config": {"alpha": 0.01, "n_digits": 1}
+        }
+      ]
+    },
+    {
+      "id": "zscore",
+      "name": "Z-score离群点检测",
+      "category": "统计",
+      "risk_tier": "B",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-06-24",
+          "author": "融策AI",
+          "changes": "初始版本：3σ阈值",
+          "test_results": {"pass_rate": 0.92, "test_cases": 300},
+          "status": "active",
+          "config": {"threshold": 3.0}
+        }
+      ]
+    },
+    {
+      "id": "bid_collusion_l3",
+      "name": "投标文件文本雷同检测",
+      "category": "NLP",
+      "risk_tier": "A",
+      "versions": [
+        {
+          "version": "3.6.0",
+          "date": "2026-07-13",
+          "author": "融策AI",
+          "changes": "v3.6: 新增八项电子指纹检测（CPU ID/硬盘SN/主板SN/机器码/文件GUID/图片哈希）",
+          "test_results": {"pass_rate": 0.97, "test_cases": 200},
+          "status": "active",
+          "config": {"tfidf_threshold": 0.85, "phash_threshold": 8}
+        }
+      ]
+    },
+    {
+      "id": "fdr_correction",
+      "name": "多重比较FDR校正",
+      "category": "统计",
+      "risk_tier": "A",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-22",
+          "author": "融策AI（六模型评审实施）",
+          "changes": "Benjamini-Hochberg FDR控制，α=0.05，解决26.5%误报概率",
+          "test_results": {"verified": true, "method": "Monte Carlo simulation, 10000 iterations"},
+          "status": "active",
+          "config": {"alpha": 0.05, "method": "bh"}
+        }
+      ]
+    },
+    {
+      "id": "data_guard",
+      "name": "第零道门数据安全守卫",
+      "category": "合规",
+      "risk_tier": "A",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-22",
+          "author": "融策AI（六模型评审实施）",
+          "changes": "四级数据分级+8条脱敏规则+涉密项目禁公有API",
+          "test_results": {"verified": true, "desensitize_rules": 8},
+          "status": "active",
+          "config": {"secret_projects": ["经济责任审计","专项资金审计","政府补贴审计","国企审计","招投标审计"]}
+        }
+      ]
+    },
+    {
+      "id": "hallucination_probes",
+      "name": "国产LLM幻觉探针",
+      "category": "质量",
+      "risk_tier": "A",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-22",
+          "author": "融策AI（六模型评审实施）",
+          "changes": "法规文号探针+金额精度探针+长上下文串台探针（Kimi专项）",
+          "test_results": {"verified": true, "probes": 3},
+          "status": "active",
+          "config": {"models": ["deepseek","kimi","glm"]}
+        }
+      ]
+    },
+    {
+      "id": "eval_metrics",
+      "name": "审计评估指标体系",
+      "category": "质量",
+      "risk_tier": "A",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-22",
+          "author": "融策AI（六模型评审实施）",
+          "changes": "AUC-PR（主）+Precision@K+Recall@Budget+Expected Cost+Cohen's Kappa",
+          "test_results": {"verified": true, "metrics": 5},
+          "status": "active",
+          "config": {"cost_fp": 500, "cost_fn": 50000}
+        }
+      ]
+    }
+  ],
+  "deprecated": [],
+  "retired": []
+}

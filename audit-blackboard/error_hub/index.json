@@ -1,0 +1,67 @@
+{
+  "errors": [
+    {
+      "id": "ERR-0001",
+      "fingerprint": "3a5a8ffb4ce1",
+      "type": "R301_handover_info_loss",
+      "severity": "P0",
+      "description": "交接包 H-data_scout-20260723001953 缺少关键字段: confirmed_facts",
+      "agent": "data_scout",
+      "project": "XX局预算执行审计",
+      "projects": [
+        "XX局预算执行审计"
+      ],
+      "root_cause": "",
+      "fix_applied": "",
+      "source_file": "rules_XX局预算执行审计_20260723_001953.json",
+      "created_at": "[日期]T00:19:53.615479+08:00",
+      "last_seen": "2026-07-23T00:20:10.622331+08:00",
+      "occurrences": 2,
+      "status": "open",
+      "tags": [
+        "format",
+        "handover",
+        "severity"
+      ]
+    },
+    {
+      "id": "ERR-0002",
+      "fingerprint": "1f3d7d1ec4dd",
+      "type": "R301_handover_info_loss",
+      "severity": "P0",
+      "description": "交接包 H-data_scout-20260723002010 缺少关键字段: confirmed_facts",
+      "agent": "data_scout",
+      "project": "XX局预算执行审计",
+      "projects": [
+        "XX局预算执行审计"
+      ],
+      "root_cause": "",
+      "fix_applied": "",
+      "source_file": "rules_XX局预算执行审计_20260723_002010.json",
+      "created_at": "[日期]T00:20:10.605493+08:00",
+      "last_seen": "2026-07-23T00:20:10.622439+08:00",
+      "occurrences": 1,
+      "status": "open",
+      "tags": [
+        "format",
+        "handover",
+        "severity"
+      ]
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "by_type": {
+      "R301_handover_info_loss": 2
+    },
+    "by_agent": {
+      "data_scout": 2
+    },
+    "by_project": {
+      "XX局预算执行审计": 2
+    },
+    "by_severity": {
+      "P0": 2
+    }
+  }
+}

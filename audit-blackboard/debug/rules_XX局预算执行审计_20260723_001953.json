@@ -1,0 +1,26 @@
+{
+  "tool": "agent_debug_rules",
+  "project": "XX局预算执行审计",
+  "agent": "data_scout",
+  "timestamp": "2026-07-23T00:19:53.615509+08:00",
+  "stats": {
+    "total_checks": 5,
+    "issues_found": 1,
+    "by_severity": {
+      "P0": 1,
+      "P1": 0,
+      "P2": 0
+    }
+  },
+  "issues": [
+    {
+      "rule_id": "R301_handover_info_loss",
+      "desc": "交接包 H-data_scout-20260723001953 缺少关键字段: confirmed_facts",
+      "severity": "P0",
+      "detail": "data_scout",
+      "source": "",
+      "agent": "data_scout",
+      "timestamp": "2026-07-23T00:19:53.615479+08:00"
+    }
+  ]
+}

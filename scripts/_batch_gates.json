@@ -1,0 +1,371 @@
+[
+  {
+    "op": "set",
+    "path": "/决策门/A1",
+    "props": {
+      "value": "审盾一期·决策门（Go/No-Go Gates）",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A1:E1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A2",
+    "props": {
+      "value": "没有止损线=没有真正的验证。每次决策门不达标，必须执行对应的降级动作。",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A4",
+    "props": {
+      "value": "节点",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B4",
+    "props": {
+      "value": "检查标准",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C4",
+    "props": {
+      "value": "达标动作",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D4",
+    "props": {
+      "value": "不达标动作",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E4",
+    "props": {
+      "value": "责任人",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A5",
+    "props": {
+      "value": "Day 14\n(M0)",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B5",
+    "props": {
+      "value": "≥5份报告人机对比完成\n量化标准已书面确认\n合规三问有答案",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C5",
+    "props": {
+      "value": "进入阶段1B（规则引擎验证）",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D5",
+    "props": {
+      "value": "延长1周补做，暂不进入1B",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E5",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A6",
+    "props": {
+      "value": "Day 60\n(M1)",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B6",
+    "props": {
+      "value": "规则引擎准确率≥95%\n误报率≤10%\n≥200条标注数据",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C6",
+    "props": {
+      "value": "进入阶段1C（语义复核验证）",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D6",
+    "props": {
+      "value": "延长至Day90重测\n不招人",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E6",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A7",
+    "props": {
+      "value": "Day 90\n(M2)",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B7",
+    "props": {
+      "value": "三指标同时达标：\n检出率≥80%+误报率≤20%+采纳率≥40%",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C7",
+    "props": {
+      "value": "招第1个AI工程师\n进入阶段1D",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D7",
+    "props": {
+      "value": "部分达标→延长30天\n严重不达标→降级为AI辅助建议模式\n不招人、不买GPU",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E7",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A8",
+    "props": {
+      "value": "Day 180\n(M3)",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B8",
+    "props": {
+      "value": "3条线AI效率≥30%\n≥10人每周使用≥3次\n工程师可独立维护",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C8",
+    "props": {
+      "value": "进入第二阶段\n追加GPU+扩团队",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D8",
+    "props": {
+      "value": "不进入Phase 2\n维持1人+API\n作为AI辅助工具集\n低成本运作",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E8",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A9",
+    "props": {
+      "value": "Phase 2\n第3月",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B9",
+    "props": {
+      "value": "每条线采纳率趋势上升\n核心用户留存>80%",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C9",
+    "props": {
+      "value": "继续推广",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D9",
+    "props": {
+      "value": "缩减为2条线\n砍掉效果最差的那条",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E9",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A10",
+    "props": {
+      "value": "Phase 2\n第12月",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B10",
+    "props": {
+      "value": "≥3条线采纳率≥50%\n核心用户≥20人\n私测合作方反馈正向\n标注数据集≥5000条",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C10",
+    "props": {
+      "value": "进入第三阶段",
+      "font_size": 10,
+      "font_color": "228B22"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D10",
+    "props": {
+      "value": "不进入Phase 3\n仅内部使用\n放弃对外输出",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E10",
+    "props": {
+      "value": "平头哥",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/A1:A1",
+    "props": {
+      "width": 12
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/B1:B1",
+    "props": {
+      "width": 35
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/C1:C1",
+    "props": {
+      "width": 22
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/D1:D1",
+    "props": {
+      "width": 25
+    }
+  },
+  {
+    "op": "set",
+    "path": "/决策门/E1:E1",
+    "props": {
+      "width": 10
+    }
+  }
+]

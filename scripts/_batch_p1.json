@@ -1,0 +1,733 @@
+[
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A1",
+    "props": {
+      "value": "第一阶段：验证闭环（2026年7月-12月）",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "0A1F3F"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A1:F1",
+    "props": {
+      "merge": true
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A2",
+    "props": {
+      "value": "唯一目标：证明AI复核在政府审计报告场景中的可行性与业务价值",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A4",
+    "props": {
+      "value": "本阶段不做（写死在墙上）",
+      "bold": true,
+      "font_size": 11,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A5",
+    "props": {
+      "value": "❌ 不做投标方案生成",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A6",
+    "props": {
+      "value": "❌ 不做质控汇总平台",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A7",
+    "props": {
+      "value": "❌ 不做其他业务线Agent",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A8",
+    "props": {
+      "value": "❌ 不做SaaS/多租户",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A9",
+    "props": {
+      "value": "❌ 不做模型微调",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A10",
+    "props": {
+      "value": "❌ 不买新GPU硬件（Day90决策）",
+      "font_size": 10,
+      "font_color": "CC0000"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A12",
+    "props": {
+      "value": "阶段1A：零阶段·准备工作（Day 1-14）¥0投入",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A13",
+    "props": {
+      "value": "天数",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B13",
+    "props": {
+      "value": "任务",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C13",
+    "props": {
+      "value": "产出物",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A14",
+    "props": {
+      "value": "Day 1-2",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B14",
+    "props": {
+      "value": "收集校园餐+医保全部原始资料；合规三问调研",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C14",
+    "props": {
+      "value": "原始资料包 + 合规调研笔记",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A15",
+    "props": {
+      "value": "Day 3-4",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B15",
+    "props": {
+      "value": "手工标注第1份校园餐报告",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C15",
+    "props": {
+      "value": "人工复核Checklist v1.0",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A16",
+    "props": {
+      "value": "Day 5-6",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B16",
+    "props": {
+      "value": "OpenClaw跑AI复核 vs 人工对比",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C16",
+    "props": {
+      "value": "第1份人机对比表",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A17",
+    "props": {
+      "value": "Day 7-8",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B17",
+    "props": {
+      "value": "换医保资金报告，重复对比",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C17",
+    "props": {
+      "value": "第2份人机对比表",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A18",
+    "props": {
+      "value": "Day 9-10",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B18",
+    "props": {
+      "value": "第3-5份不同来源/年份报告",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C18",
+    "props": {
+      "value": "5份原始AI复核结果",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A19",
+    "props": {
+      "value": "Day 11-12",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B19",
+    "props": {
+      "value": "整理首周发现",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C19",
+    "props": {
+      "value": "第1周验证周报",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A20",
+    "props": {
+      "value": "Day 13",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B20",
+    "props": {
+      "value": "定稿量化通过标准",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C20",
+    "props": {
+      "value": "标准文档",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A21",
+    "props": {
+      "value": "Day 14",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B21",
+    "props": {
+      "value": "输出《政府审计AI辅助能力白皮书》初稿",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C21",
+    "props": {
+      "value": "白皮书v1.0",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A23",
+    "props": {
+      "value": "阶段1B：规则引擎验证（Day 15-60）¥0-1万（API费）",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A24",
+    "props": {
+      "value": "维度",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B24",
+    "props": {
+      "value": "内容",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C24",
+    "props": {
+      "value": "说明",
+      "bold": true,
+      "fill": "0A1F3F",
+      "font_color": "FFFFFF"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A25",
+    "props": {
+      "value": "验证范围",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B25",
+    "props": {
+      "value": "格式检查+合计校验+法规引用完整性+附表交叉比对",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C25",
+    "props": {
+      "value": "只做规则层面，不碰语义判断",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A26",
+    "props": {
+      "value": "测试报告",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B26",
+    "props": {
+      "value": "10份（5份校园餐+5份医保），≥3个不同客户来源",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C26",
+    "props": {
+      "value": "必须不同年份、不同格式",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A27",
+    "props": {
+      "value": "通过标准",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B27",
+    "props": {
+      "value": "规则引擎准确率≥95%，误报率≤10%",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C27",
+    "props": {
+      "value": "未达标→延长至Day90重测",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A28",
+    "props": {
+      "value": "数据积累",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B28",
+    "props": {
+      "value": "每条人工修正diff存入Label Studio",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C28",
+    "props": {
+      "value": "每天至少攒10条",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A29",
+    "props": {
+      "value": "Prompt管理",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B29",
+    "props": {
+      "value": "建立评估表：每次改prompt记录预期vs实际",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C29",
+    "props": {
+      "value": "防止调参死循环",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A31",
+    "props": {
+      "value": "阶段1C：语义复核验证（Day 61-90）¥1-3万（API增加+Qwen备援）",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A32",
+    "props": {
+      "value": "验证范围",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B32",
+    "props": {
+      "value": "语义层面：结论与证据链一致性+法规适用准确性+指标合理性+文字专业性",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A33",
+    "props": {
+      "value": "方法",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B33",
+    "props": {
+      "value": "RAG增强：每条AI意见附引用源chunk（溯源链=审计师信任基础）",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A34",
+    "props": {
+      "value": "通过标准（三指标）",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B34",
+    "props": {
+      "value": "①关键错误检出率≥人工80% ②误报率≤20% ③采纳率≥40%  三指标须同时达标",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A35",
+    "props": {
+      "value": "盲测设计",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B35",
+    "props": {
+      "value": "3份未训练报告，AI vs 平头哥独立复核，盲测对比（防止看答案出题）",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A36",
+    "props": {
+      "value": "API容灾",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B36",
+    "props": {
+      "value": "确认Qwen/豆包API可用，完成同一报告跨模型对比",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A37",
+    "props": {
+      "value": "Day90决策门",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B37",
+    "props": {
+      "value": "达标→招第1个AI工程师 | 部分达标→延长30天 | 严重不达标→降级为辅助模式",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A39",
+    "props": {
+      "value": "阶段1D：工程师入场+实战交付（Day 91-180）¥10-15万",
+      "bold": true,
+      "font_size": 12,
+      "font_color": "1A5C6E"
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A40",
+    "props": {
+      "value": "招人画像",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B40",
+    "props": {
+      "value": "Python+LangChain+向量数据库+FastAPI，月薪1.5-2万(成都)，不要求微调/K8s/前端",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A41",
+    "props": {
+      "value": "固化为Web界面",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B41",
+    "props": {
+      "value": "审计师可自行上传报告→收到AI复核结果（简陋版，能用就行）",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A42",
+    "props": {
+      "value": "扩至3条业务线",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B42",
+    "props": {
+      "value": "校园餐+医保资金+绩效评价",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A43",
+    "props": {
+      "value": "标注数据≥1000条",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B43",
+    "props": {
+      "value": "为未来微调打底",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A44",
+    "props": {
+      "value": "若尔盖项目AI辅助交付",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B44",
+    "props": {
+      "value": "审计师自愿使用，不强推——内部口碑种子",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A45",
+    "props": {
+      "value": "Day180决策门",
+      "bold": true,
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B45",
+    "props": {
+      "value": "达标(3线效率+30%,≥10人周用≥3次)→进入Phase2 | 不达标→维持1人+API低成本运作",
+      "font_size": 10
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/A1:A1",
+    "props": {
+      "width": 22
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/B1:B1",
+    "props": {
+      "width": 45
+    }
+  },
+  {
+    "op": "set",
+    "path": "/一阶段-验证闭环/C1:C1",
+    "props": {
+      "width": 30
+    }
+  }
+]

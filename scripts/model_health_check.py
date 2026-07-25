@@ -2,7 +2,7 @@
 """
 模型健康检查脚本 v1.0
 用法: python scripts/model_health_check.py [--json] [--alert]
-- 每日运行一次，13模型逐一 ping
+- 每日运行一次，16模型逐一 ping
 - 支持 JSON 输出供监控系统读取
 - 支持 --alert 模式：仅输出异常
 """
@@ -56,6 +56,12 @@ MODELS = {
         "api": "openai",
         "category": "high"
     },
+    "claude-opus-5": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-P1qcCbhIKYR9HdsFbHDgSda8mXoGpWJTay4dtHp1mqM75jdV",
+        "api": "openai",
+        "category": "high"
+    },
     "gpt-5.5": {
         "url": "https://cbwyy.top/v1/chat/completions",
         "key": "sk-bs4fgPtIHhh4kKTKIRh33HISbvxMJDcQQx2kRnlmWv4faesU",
@@ -101,6 +107,12 @@ MODELS = {
     "kimi-k3": {
         "url": "https://cbwyy.top/v1/chat/completions",
         "key": "sk-PvqkSJ7p0AKyh2k6WXaO5YIYEAQFlnwgeetxdBmEleGhk38m",
+        "api": "openai",
+        "category": "low"
+    },
+    "glm-5.2": {
+        "url": "https://cbwyy.top/v1/chat/completions",
+        "key": "sk-KthgLLlTBL0g0aYT7gEa33l6wdN88JYY91Wcmpc7P4D54UoD",
         "api": "openai",
         "category": "low"
     }

@@ -28,6 +28,57 @@
 
 工程咨询：预算编制 / 财政评审 / 全过程工程咨询 / 工程结算
 
+## 🏛️ 总书记审计语录（随时引用）
+
+> 写报告/方案/投标/宣传册时，按场景摘取。完整手册见 `knowledge/references/总书记审计工作重要指示批示-引用手册.md`
+
+### 定位（报告开篇/公司介绍）
+- "审计是党和国家监督体系的重要组成部分。"（2018.5，中央审计委一次会议）
+- "构建**集中统一、全面覆盖、权威高效**的审计监督体系。"（2018.5 / 2025.1 重申）
+- "以高质量审计监督护航经济社会高质量发展。"（2025.1，最新指示）
+
+### 三个立（质量承诺/团队）
+- "以**审计精神立身**，以**创新规范立业**，以**自身建设立信**。"（2018.5）
+
+### 三个如（方案总论）
+- "**如臂使指**——指哪儿打哪儿，打哪儿成哪儿。"
+- "**如影随形**——让审计对象感到审计像影子一样时时在身边。"
+- "**如雷贯耳**——让审计监督顺畅实施、审计成果高效运用。"（2023.5，《求是》2023/21）
+
+### 六个聚焦（审计重点）
+1. 高质量发展·重大项目重大战略重大举措
+2. 稳增长稳就业稳物价·财政资金
+3. 实体经济·金融支持/助企纾困
+4. 兜牢民生底线·群众最关心利益
+5. **统筹发展和安全·地方债/金融/房地产/粮食/能源** ← 专项债审计引用
+6. **权力规范运行·反腐治乱** ← 经责审计引用
+
+### 科技强审（技术方案/AI审计）
+- "要坚持**科技强审**，加强审计信息化建设。"（2018.5）
+- "深化改革创新……不断提高审计监督质效。"（2025.1）
+
+### 审计整改（报告建议段）
+- "审计整改'**下半篇文章**'与审计揭示问题'上半篇文章'同样重要，必须一体推进。"（2023.5）
+
+### 队伍建设（宣传册/投标）
+- "打造经济监督的'**特种部队**'。"（2023.5）
+- "**有问题没发现是失职、发现问题不报告是渎职**"（2023.5）
+- "审计的'尚方宝剑'是党中央授予的。"（2023.5）
+
+### 常用组合拳
+| 场景 | 推荐引用 |
+|:--|:--|
+| 报告开篇 | 审计监督体系 + 三个如 |
+| 审计重点 | 六个聚焦（选1-2条对口的）|
+| 方案总论 | 三个如 + 科技强审 |
+| 整改建议 | 上下半篇文章 |
+| 技术方案 | 科技强审 + 研究型审计 |
+| 公司介绍 | 三个立 + 特种部队 + 护航 |
+| 质量承诺 | 失职/渎职 + 三个立 |
+| 经责审计 | 聚焦权力规范运行 |
+| 专项债 | 聚焦统筹发展和安全 |
+| 绩效评价 | 聚焦兜牢民生底线 |
+
 ## 工作区配置
 
 - **模型**: DeepSeek V4 Flash（默认免费）/ V4 Pro（复杂分析手动切）
@@ -120,13 +171,21 @@
 | `scripts/rag_server.py` | Flask Web服务（localhost:5000） |
 | `scripts/rag_watcher.py` | 文件监控自动重建 |
 
-## 多Agent审计平台（2026-06-21建立）
+## 多Agent审计平台 v3.0（2026-06-21建立，2026-07-21更新至v3.0）
 
+### 架构
 ```
 audit-blackboard/
-├── orchestrate.py       ← 调度中枢（create/prepare/collect/report）
+├── orchestrate_v3.py    ← v3.0调度中枢：create→penetrate→spawn(并行)→collect→report
 ├── launch.py            ← 一键启动（python launch.py "项目名" --type 简称）
-├── agent_specs/         ← 7个Agent规格（含取数规范）
+├── agent_router.py      ← 22 Agent路由调度：意图→Agent匹配（关键词+业务线+快捷词三层）
+├── agent_registry.json  ← 22 Agent统一注册表
+├── api_gateway.py       ← 统一API网关：14模型路由+预算监控+工作流编排
+├── auto_trigger.py      ← 文件监控守护：raw_data/有新文件→自动触发Agent链
+├── issue_fusion.py      ← 疑点融合中枢：accept→cluster→dedup→resolve→track→chain
+├── handover_protocol.py ← ★新增 状态交接协议：标准化Agent间接力（H-packet）
+├── handover_hook.py     ← 交接钩子：编排引擎集成
+├── agent_specs/         ← 22个Agent规格
 ├── schemas/             ← finding_schema.json统一格式
 ├── playbooks/           ← 按业务线的取数深度指南
 ├── DATA_SPEC.md         ← 12业务线取数规范
@@ -134,13 +193,53 @@ audit-blackboard/
     └── <项目名>/
         ├── raw_data/    ← 原始数据放这里
         ├── findings/    ← 各Agent发现JSON
+        ├── handovers/   ← ★ v1.0 交接包（H-packet）
         ├── collision/   ← 交叉碰撞结果
         └── status.json  ← 进度看板
 ```
 
-**7 Agent**: data_scout / contract_hound / bid_hunter / law_inspector / workpaper_crafter / report_writer / review_sentinel
+### 22 Agent阵容
 
-**用法**: 你跑 `python launch.py "项目名" --type 简称` → 对我说"开始审计XX" → 我spawn Agent → 你跑 `python orchestrate.py collect` → `python orchestrate.py report`
+**核心审计（7）**: data_scout / contract_hound / bid_hunter / law_inspector / workpaper_crafter / report_writer / review_sentinel
+
+**工程咨询（3）**: budget_estimator / settlement_auditor / fiscal_reviewer
+
+**绩效评价（1）**: performance_evaluator
+
+**专项检测（2）**: expert_bias_detector / 会议纪要分析师
+
+**数据运维（4）**: OCR预处理员 / 数据分类员 / 数据脱敏 / 调整分录生成师
+
+**方案撰写（1）**: 方案撰写师
+
+**v3.0核心升级**:
+- 5坐标系并行穿透引擎：时空×物理×社会关系×行为×时间序列 → 自动映射Agent
+- 疑点融合中枢：三模型联合评审→cluster→dedup→冲突消解→证据链追踪
+- ★状态交接协议 v1.0：Agent间标准化H-packet传递（Goal+事实+警告+产出）
+- 14模型智能路由+预算监控+自动触发守护
+
+**用法**: `python launch.py "项目名" --type 简称` → 我对你说"开始审计XX" → spawn Agent(并行) → `python handover_hook.py --project "XX" --agent "xxx"` → `python orchestrate_v3.py report`
+
+### AgentDebugX 调试工具箱 v1.0（2026-07-23新增）
+
+灵感来源：AgentDebugX 论文（UIUC/Stanford/Google/UofT, 2026.07）
+
+| 模块 | 对标 | 功能 | 命令 |
+|:-----|:-----|:-----|:-----|
+| agent_debug_rules.py | Detect | 4类20条确定性规则检测（格式/逻辑/审计/交接异常），不调LLM | `python agent_debug_rules.py --project "XX" --agent "xxx"` |
+| agent_deep_debug.py | Attribute | 三步DeepDebug根因定位（全局轨迹→结构探查→交叉验证），含8种已知根因模式 | `python agent_deep_debug.py --project "XX" --mode deepdebug` |
+| agent_error_hub.py | Recover+Rerun | 错误共享库（脱敏→去重→标签→回归测试），跨项目对比 | `python agent_error_hub.py --action store --project "XX"` |
+| agent_debug.py | 统一入口 | 一键四步闭环 | `python agent_debug.py run "XX项目"` |
+| handover_hook.py v1.1 | 集成 | 交接后自动触发规则检测，`--debug` 参数启用 | `python handover_hook.py --project "XX" --agent "xxx" --debug` |
+
+**核心设计**：
+- 20条确定性规则分4个包：格式协议(R0xx)、逻辑一致性(R1xx)、审计专项(R2xx)、多Agent交接(R3xx)
+- 8种根因模式：交接上下文丢失/发现丢失/坐标系错误/过早终止/数据格式混乱/模型幻觉/工具调用错误/严重程度误判
+- Error Hub 自动脱敏（金额→[金额]、企业→[企业]、日期→[日期]），指纹去重，自动标签
+- 回归测试用例从错误库自动生成，支持 `--project` 对比最新检测结果
+- handover_hook v1.1 已集成，`--debug` 参数交接后自动触检测→入库→回归
+
+**已入库文章**：`knowledge/references/AgentDebugX-LLM-Agent调试框架.md`
 
 ## 场景-技能-资料三层调用体系
 
@@ -230,6 +329,9 @@ v2.0整合模板，详见 `knowledge/references/经济责任审计-融策整合�
 ### 其他
 - 审计情报采集（4/5成功）
 - 阿坝发展控股集团审计评估收费测算表（三指标对比版Excel）
+- **07-22 更新**：控制价专项审核报告已出（征求意见稿07-14 + 正式版07-16）
+  - 存放路径：`E:\2026\审计报告\审计、评估费用测算\意见征求稿=7.15\`
+  - 含：预算控制价专项审核报告.docx / 征求意见稿.docx / 收费测算表=7.9二改.xlsx
 - 宣传册final版（15页/53.5MB PDF）
 
 ## 2026-07-10 大事件：API Key 安全迁移 + 模型池扩展 + 路由全验证
@@ -363,14 +465,62 @@ fable-5 换新 key 时发现 Windows 上 env:// 引用的致命缺陷：
 ### Part 2: 14模型路由体系（重大）
 - 新增 gemini-3.1-pro-preview → deepseek-direct 直连逃生
 - 路由 v4.0→v4.2: 错误代价+上下文窗口双重路由，经14模型联合评审全票通过
-- 模型池 12→14个（含1直连逃生+1生图专用）
-- 2026-07-19 更新：模型池 14→15个（新增 kimi-k3 国产推理模型）
+- 模型池演变：12→14个(07-15)→15个(07-19)→16个(07-21新增glm-5.2)
 - 容灾架构 L1-L4: 重试→降级→直连→人工
-- 健康检查脚本: scripts/model_health_check.py
+- 健康检查脚本: scripts/model_health_check.py（覆盖16模型）
 - 14模型评审结论: 路由逻辑✅ 代理单点故障🔴 数据合规⚠️
 - 待办（已决策）: opus/sonnet走代理 ✅ | 数据合规:海外为主,敏感项目限国内模型 ✅
 
-*最后更新: 2026-07-15 | 详细档案: memory/archive/ | 项目历史: 各项目README*
+*最后更新: 2026-07-23 | 详细档案: memory/archive/ | 项目历史: 各项目README*
+
+## 2026-07-21 大事件：GLM-5.2接入 + 状态交接协议落地 + 知识库5篇入库
+
+### GLM-5.2（第16个模型）
+- 模型ID：`custom-cbwyy-glm/glm-5.2`
+- 服务器：`https://cbwyy.top/v1`（OpenAI 兼容接口）
+- 特征：带 reasoning 的国产大模型（智谱AI），支持 text 输入
+- 上下文窗口：128K，最大输出：8192 tokens
+- Fallback链位置：第11位（kimi-k3之后，doubao之前）
+- 验证：HTTP 200，返回 reasoning_content 字段
+- 模型池：15→16个（含1直连逃生+1生图专用）
+- 完整 fallback 链（14层）：flash → v4-pro → gemini → qwen → fable → sonnet → gpt-5.5 → luna → sol → terra → kimi-k3 → glm-5.2 → doubao → deepseek-direct
+- 健康检查脚本已同步更新（16模型）
+
+### 状态交接协议v1.0（Handover Protocol）
+- 新文件：`audit-blackboard/handover_protocol.py`（H-packet 标准）
+- 新文件：`audit-blackboard/handover_hook.py`（编排集成钩子）
+- 背景：A2A多智能体通信协议三层架构分析后，发现融策v3.0在状态交接层最薄弱
+- 核心功能：
+  - `emit`：Agent完成后自动生成标准化交接包（Goal+事实+警告+发现摘要+产出文件清单）
+  - `read`：下游Agent快速读取上下文，无需重读所有文件
+  - `chain`：追溯完整交接链
+  - `context`：下游Agent获取精简上下文摘要
+- H-packet结构：handover_id / goal / confirmed_facts / excluded_items / completed_checks / pending_checks / findings_summary / context_snapshot / warnings / parent_handover
+- 集成方式：collect阶段最后调用 `python handover_hook.py --project "XX" --agent "xxx"`
+
+### A2A协议对比分析
+- 对融策v3.0做了完整的三层对比分析（服务发现/能力对齐/状态交接）
+- 结论：融策走黑板模式（适合审计溯源性）vs A2A走消息总线（适合高吞吐）
+- 独特优势：5坐标系穿透引擎、三模型共识机制、证据链追溯、12业务线映射
+- 改进路线图：P0状态交接标准化→P1健康检查→P2事前Schema校验→P3语义路由
+
+### 知识库连续入库5篇文章
+| # | 文章 | 来源 | 清单 |
+|:--|:----|:----|:-----|
+| 1 | 常态化帮扶资金审计重点更新 | 审天审地审空气 | 24条要点速查清单 |
+| 2 | AI采购审计关联锁定与价格异常 | 审天审地审空气 | 8大能力+融策23层对照 |
+| 3 | 三方合谋串通造假五招破局 | 审天审地审空气 | 五招核查步骤+约谈策略 |
+| 4 | 无人机航测三维建模审计水利工程 | 审计案例2026年第6册 | 四步流程+设备参考 |
+| 5 | A2A多智能体通信协议三层架构 | 审天审地审空气(转技术文) | 三层架构+融策启示 |
+- RAG索引：17,436→17,933 chunks（+497）
+- 新增脚本：`scripts/fetch_wechat.py`（微信文章移动端UA抓取）
+- 公众号"审天审地审空气"确认为高质量可信源，后续可自动抓取入库
+
+### 多Agent平台v3.0全面更新
+- 平台从v1.0（7 Agent）→v3.0（22 Agent）的重大升级已在MEMORY.md完整记录
+- 新增核心组件：agent_router.py / agent_registry.json / api_gateway.py / auto_trigger.py / issue_fusion.py
+- 新增5坐标系并行穿透引擎（orchestrate_v3.py）
+- MEMORY.md 已同步至当前状态
 
 ## 2026-07-14 大事件：Skill体系三件套治理
 
@@ -429,3 +579,53 @@ fable-5 换新 key 时发现 Windows 上 env:// 引用的致命缺陷：
 必要制度：AI输出留痕、人工确认、知识入库质控、项目闭环沉淀。人工必须确认问题定性、法规适用、金额结论、整改建议、责任归因、重大风险提示、对外报告表述。
 
 后续所有公司AI改革、投标包装、团队转型、客户宣传和产品立项，均以此为基准方向。详细备忘录：`knowledge/strategy/融策AI审计中台改革方向-20260719.md`。
+
+## 2026-07-21 十五五规划深度分析（公司改革风向标）
+
+### 背景
+财政部发布《注册会计师行业发展"十五五"规划（征求意见稿）》及起草说明，由Opus-4-8完成五维深度战略分析（定位/审盾重估/业务组合/品牌/三年路线图）。
+
+### 核心判断
+十五五规划对融策是"量身定做"：第一次把"数智化"提到与"规范化"并列，第一次明确支持"专精特新中小型事务所"，第一次提出"加强对西部地区人才培养"。融策政府审计业务=三者交集。
+
+### 五化战略排序
+🥇数智化（核心杠杆）→ 🥈品牌化（护城河）→ 🥉规范化（入场券）→ 标准化（基建）→ 国际化（放弃）
+
+### 审盾定位升维
+三层嵌套：内部质控工具 → 品牌信任锚点 → 行业基础设施。时间窗口18-24个月。
+
+### 业务组合 & 三年路线图
+- 重仓：预算绩效/专项资金/政府补贴/工程竣工决算
+- 新方向储备：ESG审计/数据资产审计
+- 2026基础建设年 → 2027影响力爆发年 → 2028生态位锁定年
+
+### 立即执行（2026年7-9月）
+1. 7月底前审盾一期白皮书 | 2. 8月中旬前省注协汇报 | 3. 9月底前审盾二期启动
+
+### 详细文档
+`knowledge/strategy/融策十五五战略分析-20260721.md`
+
+### 规划原文
+桌面：`注册会计师行业发展"十五五"规划.pdf`（16页）+ 起草说明.pdf（5页）
+
+## 2026-07-22 重大立项：12业务线标准化指引手册
+
+### 起因
+- 省注协2026计划搞"全国首创"三项指引（经责报告模板/社会组织换届审计/司法会计鉴定）
+- 平头哥决定：融策自己做12条线的标准化指引手册，对标并超越省注协
+
+### 三模型评审
+- Sonnet-5/Qwen 3.7+/Fable-5 三模型联合评审八章架构
+- 结论：方向正确，但原架构需大改（P0级5项、P1级多项）
+- 最终确定**v3.0架构**：前置通用卷 + 12分册业务卷 + 附录卷
+- 新增：职业道德/业务承接/定性定责/访谈标准/典型案例分析独立成章
+- AI嵌入每章而非独立成章；报告模板按12线×多委托方拆分
+
+### 启动计划
+- 第一批：经责审计 + 绩效评价 + 招投标审计
+- 平头哥确认：业务手册作为后续重点工作
+- 素材收集：每线需2-3个真实案例+1-2份报告+底稿+踩坑清单
+
+### 关键文件
+- `knowledge/strategy/四川注协2026三大指引-融策应对分析-20260722.md`
+- 详细架构见 `memory/2026-07-22.md`

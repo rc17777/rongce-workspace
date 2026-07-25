@@ -28,6 +28,20 @@ from typing import Dict, List, Optional, Tuple
 from collections import defaultdict
 from dataclasses import dataclass, field
 
+# 确保工作区根目录在 sys.path 中（闭环层导入需要）
+_WORKSPACE_ROOT = str(Path(__file__).resolve().parent.parent)
+if _WORKSPACE_ROOT not in sys.path:
+    sys.path.insert(0, _WORKSPACE_ROOT)
+
+# 闭环层集成（可选）
+QC_AVAILABLE = False
+try:
+    from scripts.review_closure.reasoning_trail import build_full_pipeline
+    from scripts.review_closure.qc_pipeline import submit_to_qc
+    QC_AVAILABLE = True
+except ImportError:
+    pass
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = Path(__file__).parent.parent
@@ -658,7 +672,8 @@ def generate_unified_report(step1: Dict, step2: Dict, step3: Dict,
 # 主工作流
 # ============================================================
 def run_full_workflow(file_path: str = None, text: str = None, 
-                      deep: bool = False, output_json: bool = False) -> Dict:
+                      deep: bool = False, output_json: bool = False,
+                      submit_qc: bool = True) -> Dict:
     """运行完整的四步串联复核"""
     
     report_name = Path(file_path).stem if file_path else "在线报告"
@@ -749,6 +764,38 @@ def run_full_workflow(file_path: str = None, text: str = None,
     if output_json:
         print(json.dumps({k: v for k, v in full_result.items() if k != 'unified_report'}, 
                         ensure_ascii=False, indent=2))
+    
+    # ════ 闭环层：自动提交到质控队列 ════
+    if submit_qc and QC_AVAILABLE:
+        # 即使RAG不可用，仍提交可用的发现到质控
+        try:
+            # 确保step1不会因为RAG错误而阻塞
+            if step1.get('error'):
+                print(f"  ⚠️ RAG服务不可用，仍提交快速复核+深度复核发现到质控")
+            
+            # 构建质控管道
+            pipeline = build_full_pipeline(
+                report_name=report_name,
+                step2_result=step2,
+                step3_framework=step3,
+                step1_result=step1,
+                report_text=text,
+                report_path=file_path,
+            )
+            # 提交到队列
+            qc_path = submit_to_qc(pipeline)
+            print(f"  🚀 已提交到质控队列: {pipeline.pipeline_id}")
+            print(f"     推理链报告: output/qc_pipelines/reports/{pipeline.pipeline_id}_推理链.md")
+            print(f"     查看: python -m scripts.review_closure.cli show --pipeline_id {pipeline.pipeline_id}")
+            result['qc_pipeline_id'] = pipeline.pipeline_id
+            result['qc_submitted'] = True
+        except Exception as e:
+            print(f"  ⚠️ 质控提交失败: {e}")
+            result['qc_submitted'] = False
+            result['qc_error'] = str(e)
+    elif submit_qc and not QC_AVAILABLE:
+        # 闭环层未安装
+        result['qc_submitted'] = False
     
     return result
 
@@ -869,6 +916,7 @@ if __name__ == '__main__':
     parser.add_argument('--json', action='store_true', help='JSON输出')
     parser.add_argument('--watch', '-w', help='目录监控模式，自动检测新报告')
     parser.add_argument('--interval', type=int, default=60, help='监控间隔(秒)')
+    parser.add_argument('--no-qc', action='store_true', help='跳过质控闭环提交')
     
     args = parser.parse_args()
     
@@ -880,6 +928,7 @@ if __name__ == '__main__':
             text=args.text,
             deep=args.deep,
             output_json=args.json,
+            submit_qc=not args.no_qc,
         )
     else:
         parser.print_help()

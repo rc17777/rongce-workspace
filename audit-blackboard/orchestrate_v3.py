@@ -27,6 +27,34 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 CST = timezone(timedelta(hours=8))
 
+# ★ v3.1: 上下文压缩守卫 + 约束记忆注入
+_CTX_GUARD_LOADED = False
+_CONSTRAINTS_LOADED = False
+_context_guard = None
+_rongce_constraints = None
+
+def _lazy_load_guard():
+    global _CTX_GUARD_LOADED, _context_guard
+    if not _CTX_GUARD_LOADED:
+        try:
+            import context_guard as cg
+            _context_guard = cg
+            _CTX_GUARD_LOADED = True
+        except ImportError:
+            _context_guard = None
+            _CTX_GUARD_LOADED = True
+
+def _lazy_load_constraints():
+    global _CONSTRAINTS_LOADED, _rongce_constraints
+    if not _CONSTRAINTS_LOADED:
+        try:
+            import rongce_constraints
+            _rongce_constraints = rongce_constraints
+            _CONSTRAINTS_LOADED = True
+        except ImportError:
+            _rongce_constraints = None
+            _CONSTRAINTS_LOADED = True
+
 # === 配置 ===
 BLACKBOARD = Path(__file__).parent
 PROJECTS = BLACKBOARD / 'projects'
@@ -199,16 +227,17 @@ def penetrate(project_name, biz_type=None, project_dir=None):
         rag_summary = ' '.join(rag_lines[:3])[:300] if rag_lines else '(RAG未检索到)'
         print(f'  RAG: {rag_summary[:100]}...')
 
-        # 生成Agent专属任务
-        task = {
-            'coordinate': coord,
-            'agent_id': agent,
-            'index': i + 1,
-            'method_description': coord_cfg['method'],
-            'applicable_rules': coord_cfg['rules'],
-            'available_tools': coord_cfg['tools'],
-            'rag_reference': rag_summary,
-            'spawn_task': f"""你是融策审计黑板的{agent}Agent，负责**{coord}坐标系**的深度穿透审计。
+        # ★ v3.1: 加载约束记忆（L0+L1+L2+L3）
+        _lazy_load_constraints()
+        constraints_text = ''
+        if _rongce_constraints:
+            biz_key = _rongce_constraints.get_biz_type_for_constraints(biz)
+            constraints_text = _rongce_constraints.get_constraints_for_agent(
+                agent_name=agent, biz_type=biz_key, include_lessons=True
+            )
+
+        # ★ v3.1: 生成基础 spawn task
+        base_task = f"""你是融策审计黑板的{agent}Agent，负责**{coord}坐标系**的深度穿透审计。
 
 ## 你的坐标系
 
@@ -217,6 +246,8 @@ def penetrate(project_name, biz_type=None, project_dir=None):
 ## 项目背景
 - 项目: {project_name}
 - 审计类型: {biz}
+- 项目目录: audit-blackboard/projects/{proj_dir.name}/
+- 你的临时工作目录: audit-blackboard/projects/{proj_dir.name}/_tmp/{agent}/
 
 ## 适用筛查规则
 {chr(10).join(f'- {r}' for r in coord_cfg['rules'])}
@@ -237,7 +268,35 @@ def penetrate(project_name, biz_type=None, project_dir=None):
 - 格式: JSON数组，每条遵守finding_schema.json
 - 每个发现标注coordinate: "{coord}"
 - finding_id格式: F-{datetime.now().year}-{coord[:2]}-{{序号}}
-""",
+- 完成后生成文件清单: audit-blackboard/projects/{proj_dir.name}/_tmp/{agent}/_file_manifest.json
+"""
+
+        # ★ v3.1: 注入约束记忆（放在系统prompt最前面）
+        if constraints_text:
+            base_task = constraints_text + '\n\n' + base_task
+
+        # ★ v3.1: 注入上下文压缩规则
+        _lazy_load_guard()
+        if _context_guard:
+            injected = _context_guard.inject_compression_to_task(
+                base_task, agent,
+                file_count=0,  # 未知文件数，启用默认压缩规则
+                model_name=None
+            )
+            spawn_text = injected['augmented_task']
+        else:
+            spawn_text = base_task
+
+        task = {
+            'coordinate': coord,
+            'agent_id': agent,
+            'index': i + 1,
+            'method_description': coord_cfg['method'],
+            'applicable_rules': coord_cfg['rules'],
+            'available_tools': coord_cfg['tools'],
+            'rag_reference': rag_summary,
+            'v3_1_features': ['context_compression', 'constraint_injection', 'file_manifest'],
+            'spawn_task': spawn_text,
             'output_file': f'findings/{agent}_{coord}.json',
         }
         parallel_tasks.append(task)
@@ -336,17 +395,43 @@ if __name__ == '__main__':
     sub = parser.add_subparsers(dest='command')
 
     # 兼容v2.0的create/collect/status/report（转发给v2脚本）
-    p_pen = sub.add_parser('penetrate', help='v3.0 生成5坐标系并行穿透任务')
+    p_pen = sub.add_parser('penetrate', help='v3.1 生成5坐标系并行穿透任务（含token预算+约束注入）')
     p_pen.add_argument('name', help='项目名称')
     p_pen.add_argument('--type', default=None, help='审计类型')
     p_pen.add_argument('--dir', default=None, help='项目目录（覆盖默认路径）')
+    p_pen.add_argument('--files', default=None, help='文件数预估，格式: agent:数量（如 contract_hound:500）')
+    p_pen.add_argument('--quiet', action='store_true', help='静默模式（仅输出JSON）')
 
     p_demo = sub.add_parser('demo', help='演示v3.0并行穿透流程')
 
     args = parser.parse_args()
 
     if args.command == 'penetrate':
-        penetrate(args.name, args.type, args.dir)
+        plan = penetrate(args.name, args.type, args.dir)
+        # ★ v3.1: Token预算警告
+        if plan and not args.quiet:
+            if args.files:
+                file_counts = {}
+                for pair in args.files.split(','):
+                    k, v = pair.split(':')
+                    file_counts[k.strip()] = int(v.strip())
+                _lazy_load_guard()
+                if _context_guard:
+                    print()
+                    print('═══ Token预算检查 ═══')
+                    has_critical = False
+                    for agent_name, count in file_counts.items():
+                        est = _context_guard.estimate_task_tokens(
+                            f'处理{count}份数据', file_count=count, agent_name=agent_name
+                        )
+                        icon = '✅' if est['risk_level'] == 'safe' else ('⚠️' if est['risk_level'] == 'warning' else '🚨')
+                        print(f'{icon} {agent_name}: {count}文件 → {est["estimated_total"]:,} token [{est["risk_level"]}]')
+                        print(f'   {est["batch_recommendation"]}')
+                        if est['risk_level'] == 'critical':
+                            has_critical = True
+                    if has_critical:
+                        print()
+                        print('🚨 存在严重超量任务，建议分批 spawn 或在 spawn task 中已启用三级压缩')
 
     elif args.command == 'demo':
         # 演示：创建项目 → 穿透 → 展示并行计划
