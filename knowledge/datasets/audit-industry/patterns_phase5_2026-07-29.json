@@ -1,0 +1,212 @@
+[
+  {
+    "id": "FP-AUDIT-0001",
+    "type": "finding_pattern",
+    "name": "三率背离",
+    "signal_description": "预算执行率正常+资金支付率正常但项目完成率异常低→资金被挪用或虚列支出",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "三率背离"
+    ],
+    "business_line": "预算执行"
+  },
+  {
+    "id": "FP-AUDIT-0002",
+    "type": "finding_pattern",
+    "name": "采购价畸高",
+    "signal_description": "同类商品同期采购价高于市场均价50%+供应商单一来源→利益输送嫌疑",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "采购价畸高"
+    ],
+    "business_line": "招投标审计"
+  },
+  {
+    "id": "FP-AUDIT-0003",
+    "type": "finding_pattern",
+    "name": "人员经费异常",
+    "signal_description": "临聘人员数量×人均工资远超核定数→虚列人员套取资金",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "人员经费异常"
+    ],
+    "business_line": "专项资金"
+  },
+  {
+    "id": "FP-AUDIT-0004",
+    "type": "finding_pattern",
+    "name": "工程变更超限",
+    "signal_description": "工程变更金额超合同价15%且未履行审批→规避招标或利益输送",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "工程变更超限"
+    ],
+    "business_line": "工程审计"
+  },
+  {
+    "id": "FP-AUDIT-0005",
+    "type": "finding_pattern",
+    "name": "现金支付异常",
+    "signal_description": "大额支出频繁使用现金+无审批→资金去向不明",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "现金支付异常"
+    ],
+    "business_line": "经责审计"
+  },
+  {
+    "id": "FP-AUDIT-0006",
+    "type": "finding_pattern",
+    "name": "账外资产",
+    "signal_description": "固定资产台账与实物盘点不符+新增资产无采购记录→账外资产或虚假采购",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "账外资产"
+    ],
+    "business_line": "国企审计"
+  },
+  {
+    "id": "FP-AUDIT-0007",
+    "type": "finding_pattern",
+    "name": "往来款长期挂账",
+    "signal_description": "三年以上无变动的应收/应付款→虚列往来款或资金被长期占用",
+    "inference_chain": [],
+    "confidence": "强信号",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P1",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "往来款长期挂账"
+    ],
+    "business_line": "往来款清理"
+  },
+  {
+    "id": "FP-AUDIT-0008",
+    "type": "finding_pattern",
+    "name": "补贴对象异常",
+    "signal_description": "同一地址/电话/账户领取多份补贴→虚假申报骗取补贴",
+    "inference_chain": [],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "补贴对象异常"
+    ],
+    "business_line": "补贴审计"
+  },
+  {
+    "id": "FP-AUDIT-0009",
+    "type": "finding_pattern",
+    "name": "能耗数据异常",
+    "signal_description": "产量下降但能耗上升+能耗与产量相关性断裂→数据造假或设备异常",
+    "inference_chain": [],
+    "confidence": "强信号",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P1",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "能耗数据异常"
+    ],
+    "business_line": "能源审计"
+  },
+  {
+    "id": "FP-AUDIT-0010",
+    "type": "finding_pattern",
+    "name": "绩效目标虚设",
+    "signal_description": "绩效目标全是'提升''加强''完善'无量化指标→项目根本不可评价",
+    "inference_chain": [],
+    "confidence": "强信号",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [],
+    "related_methods": [],
+    "related_patterns": [],
+    "severity_when_confirmed": "P1",
+    "provenance": {
+      "source": "融策审计方法论+15维复核经验",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "绩效目标虚设"
+    ],
+    "business_line": "绩效评价"
+  }
+]

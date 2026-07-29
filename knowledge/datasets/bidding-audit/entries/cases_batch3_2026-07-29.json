@@ -1,0 +1,418 @@
+[
+  {
+    "id": "CASE-BID-0026",
+    "type": "case",
+    "title": "重庆酉阳项目暗标废标——第72页'台320'三字为彩色文字",
+    "summary": "重庆酉阳某工程暗标评审中，投标人技术标第72页中'台320'三个字为彩色文字（非纯黑RGB），AI清标系统逐像素扫描时检测到颜色异常，直接判定废标。三个字导致整份投标文件无效——暗标废标已从'不小心写了公司名'升级到'有一个字的颜色不对'就废标。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "其他",
+    "violation_subcategory": "暗标格式违规—字体颜色非纯黑",
+    "detection_method": [
+      "DM-BID-0101"
+    ],
+    "data_sources": [
+      "投标文件PDF",
+      "AI清标系统检测记录",
+      "重庆市公共资源交易中心通报"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P2-一般问题",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "重庆",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "不涉及腐败，纯技术性失误→废标→重新招标增加采购成本",
+      "制度博弈": "AI评标不判断故意与否，只判断违规与否→一个像素级的颜色偏差即可废标",
+      "决策还原": "编制人员从其他文档复制'台320'时带入了原文档的颜色格式",
+      "宏观坐标": "全国平均废标率22.1%，其中26.3%因编制类问题，71%可避免",
+      "根因": "投标文件编制缺少格式清洗SOP，未全选统一设置为RGB(0,0,0)"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "laws/_incoming/暗标技术标AI评标隐形记号废标指南-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": false,
+      "verified_by": 1,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "暗标",
+      "废标",
+      "AI清标",
+      "字体颜色",
+      "RGB",
+      "重庆",
+      "技术标"
+    ]
+  },
+  {
+    "id": "CASE-BID-0027",
+    "type": "case",
+    "title": "某水利工程暗标废标——页脚横线和'第X页共Y页'标签未彻底清除",
+    "summary": "某水利工程项目暗标评审中，投标人删除了页脚的显式文字，但页脚区域的横线和'第X页 共Y页'的Word自动页码标签未彻底清除。AI清标系统扫描页眉页脚区域时检测到残留格式标签，判定为页码/页眉页脚违规→废标。投标人以为'删掉文字就行了'，不知道横线和空白区域也会被识别。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "其他",
+    "violation_subcategory": "暗标格式违规—页眉页脚残留",
+    "detection_method": [
+      "DM-BID-0005"
+    ],
+    "data_sources": [
+      "投标文件DOCX/PDF",
+      "AI清标系统页眉页脚扫描记录"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P2-一般问题",
+    "entity_type": "政府部门",
+    "industry": "水利工程",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "废标→重新招标→增加采购时间和成本",
+      "制度博弈": "清除格式痕迹需要特殊操作（双击页眉→Ctrl+A全删→格式→边框→无），普通用户不知道",
+      "决策还原": "投标人用Delete键删除文字→以为删干净了→其实横线和标签还在",
+      "宏观坐标": "AI清标系统对页眉页脚的检测是结构化的→不仅检测文字，还检测区域属性",
+      "根因": "Word的页眉/页脚/页码是独立的结构化区域→仅删除文字≠清除所有格式元素"
+    },
+    "related_cases": [
+      "CASE-BID-0026"
+    ],
+    "provenance": {
+      "source_file": "laws/_incoming/暗标技术标AI评标隐形记号废标指南-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 1,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "页眉页脚",
+      "页码残留",
+      "暗标",
+      "废标",
+      "格式标签",
+      "水利工程"
+    ]
+  },
+  {
+    "id": "CASE-BID-0028",
+    "type": "case",
+    "title": "长春市暗标废标率数据揭示——外地机构废标率40.3% vs 头部机构2%以内",
+    "summary": "长春市公共资源交易中心2023-2026年统计：外地投标机构暗标废标率高达40.3%，而头部机构（熟悉暗标规则的本地大企业）控制在2%以内。38个百分点的差距说明暗标废标不是'运气问题'，而是'是否建立了系统化自查流程'的问题。外地机构往往不知道AI清标系统检测的10个维度，每次都是'交了才知道哪里被废'。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "其他",
+    "violation_subcategory": "暗标废标率统计分析",
+    "detection_method": [],
+    "data_sources": [
+      "长春市公共资源交易中心2023-2026年废标统计数据"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P3-管理建议",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "长春",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "废标→重新招标→外地企业不敢投标→市场竞争减少→本地企业垄断",
+      "制度博弈": "AI清标规则是公开的，但中小机构缺乏系统性培训→信息不对称造成废标率差异",
+      "决策还原": "外地机构照着招标文件格式要求做→但不知道AI还检测10个'隐形'维度",
+      "宏观坐标": "国家发改委2026年一季度报告：全国平均废标率22.1%，长春外地机构40.3%远超平均",
+      "根因": "中小事务所/外地投标人缺乏暗标AI检测维度的系统性知识→25项自查清单未普及"
+    },
+    "related_cases": [
+      "CASE-BID-0026"
+    ],
+    "provenance": {
+      "source_file": "laws/_incoming/暗标技术标AI评标隐形记号废标指南-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": false,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "废标率",
+      "长春",
+      "外地机构",
+      "头部机构",
+      "暗标",
+      "统计分析",
+      "信息不对称"
+    ]
+  },
+  {
+    "id": "CASE-BID-0029",
+    "type": "case",
+    "title": "湖南某采购项目——6份检测报告2份单位/产品不一致4份扫码无结果",
+    "summary": "湖南某政府采购项目中，供应商提交了6份产品检测报告作为投标资质。评审专家通过扫描检测报告二维码+检测机构官网查询：2份报告中检测单位名称与产品型号与招标要求不匹配，4份报告扫码查无结果。经财政部门认定构成'提供虚假材料谋取中标'，依据《政府采购法》第77条处以罚款并列入不良记录。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "资质造假",
+    "violation_subcategory": "虚假检测报告",
+    "detection_method": [],
+    "data_sources": [
+      "检测报告原件/扫描件",
+      "检测报告二维码扫描结果",
+      "检测机构官网查询记录",
+      "全国认证认可信息公共服务平台核验"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0004"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "货物采购",
+    "region": "湖南",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "虚假资质→中标→实际产品不符合标准→公共安全风险",
+      "制度博弈": "检测报告二维码+检测机构官网双渠道验证→虚假报告在交叉核验下暴露",
+      "决策还原": "供应商伪造检测报告→未料到评审专家会逐份扫码核实",
+      "宏观坐标": "2025年度某市12起处罚中7起虚假材料占58.3%——虚假材料是招投标行政处罚的第一大类型",
+      "根因": "检测报告真伪核验未写入招标文件评审标准→部分专家不主动核实"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "laws/_incoming/供应商虚假材料识别-检测报告认证证书合同业绩-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 1,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "虚假检测报告",
+      "二维码核验",
+      "湖南",
+      "政府采购",
+      "第77条",
+      "不良记录"
+    ]
+  },
+  {
+    "id": "CASE-BID-0030",
+    "type": "case",
+    "title": "A公司认证证书造假——发证机构已被民政部列入涉嫌非法社会组织",
+    "summary": "A公司投标时提交'食品安全管理体系认证'证书，评审专家在全国认证认可信息公共服务平台（cx.cnca.cn）查询发现该证书不存在。进一步核实发现该证书的发证机构已被民政部列入涉嫌非法社会组织名单。A公司不仅证书无效，且伪造了根本不存在的认证机构→构成'提供虚假材料谋取中标'。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "资质造假",
+    "violation_subcategory": "虚假认证证书—发证机构非法",
+    "detection_method": [],
+    "data_sources": [
+      "认证证书扫描件",
+      "全国认证认可信息公共服务平台查询记录",
+      "民政部非法社会组织名单"
+    ],
+    "amount_range": "50-100万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0004"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "食品/餐饮",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "虚假证书→骗取中标→实际无认证资质→食品安全风险",
+      "制度博弈": "认证证书的唯一权威核验渠道是cx.cnca.cn→不在该平台的证书一律无效",
+      "决策还原": "供应商花钱从非法机构'买'证书→不知该机构已被取缔→核验暴露",
+      "宏观坐标": "全国认证认可信息公共服务平台是认监委官方平台→免费开放→但使用率低",
+      "根因": "评审专家未养成'先查平台再看证书'的习惯→给了虚假证书可乘之机"
+    },
+    "related_cases": [
+      "CASE-BID-0029"
+    ],
+    "provenance": {
+      "source_file": "laws/_incoming/供应商虚假材料识别-检测报告认证证书合同业绩-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 1,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "虚假认证",
+      "非法社会组织",
+      "认证证书",
+      "cx.cnca.cn",
+      "认监委",
+      "资质造假"
+    ]
+  },
+  {
+    "id": "CASE-BID-0031",
+    "type": "case",
+    "title": "某市2025年度虚假材料行政处罚占比58.3%——供应商造假成招投标'头号杀手'",
+    "summary": "某市财政局2025年度共做出12起政府采购行政处罚，其中7起为供应商提供虚假材料谋取中标，占全部处罚的58.3%。虚假材料类型包括：伪造检测报告、假冒认证证书、篡改他人合同业绩主体名称。财政部、公安部、市场监管总局已连续三年将此类问题列为专项整治重点。",
+    "audit_type": "招投标审计",
+    "sub_type": "通用",
+    "violation_category": "资质造假",
+    "violation_subcategory": "虚假材料系统性统计分析",
+    "detection_method": [],
+    "data_sources": [
+      "某市财政局2025年度行政处罚决定书（7份）",
+      "行政处罚统计汇总"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0004"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "虚假材料→骗取中标→财政资金损失→行政处罚→1-3年禁入",
+      "制度博弈": "造假成本低（PS一份报告的成本）vs 中标收益高→博弈失衡",
+      "决策还原": "供应商在'做了可能被抓'和'不做肯定中不了'之间选择了前者",
+      "宏观坐标": "三部委连续三年专项整治→问题未根治→说明单靠事后处罚不够",
+      "根因": "评审阶段的实时核验机制缺失→供应商有'先提交再说'的侥幸心理"
+    },
+    "related_cases": [
+      "CASE-BID-0029"
+    ],
+    "provenance": {
+      "source_file": "laws/_incoming/供应商虚假材料识别-检测报告认证证书合同业绩-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 1,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "虚假材料",
+      "行政处罚",
+      "58.3%",
+      "专项整治",
+      "三部委",
+      "造假成本"
+    ]
+  },
+  {
+    "id": "CASE-BID-0032",
+    "type": "case",
+    "title": "供应商篡改他人合同业绩——修改合同主体名称加盖己方公章",
+    "summary": "供应商为满足招标文件对'同类项目业绩'的要求，获取他人的合同扫描件后，通过PS修改合同主体单位名称为己方公司名称，加盖己方公章后作为'业绩证明'提交。评审专家在四库一平台（jzsc.mohurd.gov.cn）查询该业绩时发现工程实际承建单位为另一家公司，且该业绩在平台上的数据等级为A级（经省级住建部门审核），具有法律效力。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "资质造假",
+    "violation_subcategory": "篡改合同业绩+虚假业绩证明",
+    "detection_method": [],
+    "data_sources": [
+      "合同扫描件（被篡改）",
+      "四库一平台业绩查询记录",
+      "原合同主体单位确认函"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0004"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "零业绩→篡改他人业绩→骗取中标→承接无经验工程→质量风险",
+      "制度博弈": "四库一平台记录工程业绩但评审专家很少逐条查→供应商认为篡改不会被发现",
+      "决策还原": "PS修改合同→假公章→提交→赌评审专家不核实",
+      "宏观坐标": "四库一平台数据分级（A/B/C/D），A级经省级审核→法律效力最高→与供应商说法矛盾时平台数据优先",
+      "根因": "合同业绩核验机制未嵌入评审流程→四库一平台有数据但没人查"
+    },
+    "related_cases": [
+      "CASE-BID-0029",
+      "CASE-BID-0031"
+    ],
+    "provenance": {
+      "source_file": "laws/_incoming/供应商虚假材料识别-检测报告认证证书合同业绩-20260729.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "合同业绩",
+      "篡改",
+      "四库一平台",
+      "PS伪造",
+      "业绩造假",
+      "虚假材料"
+    ]
+  },
+  {
+    "id": "CASE-BID-0033",
+    "type": "case",
+    "title": "暗标五重格式指纹同源——元数据+颜色+页设置+编号+EXIF全匹配",
+    "summary": "在新疆某暗标评审项目中，AI清标系统发现三份技术标的五重格式完全一致：Word元数据作者字段残留同一英文用户名、非纯黑文字RGB为(26,26,26)、页边距毫厘不差、自动编号列表嵌套层级相同、图片EXIF软件均为Snipaste 2.8。虽然暗标本身不判定串标，但五重格式指纹同时匹配→暗示三份标书由同一台设备同一软件同一人编制→触发人工复核流程→最终确认围标。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "围标",
+    "violation_subcategory": "暗标格式指纹五重同源",
+    "detection_method": [
+      "DM-BID-0005",
+      "DM-BID-0004",
+      "DM-BID-0101"
+    ],
+    "data_sources": [
+      "AI清标系统多文档交叉验证记录",
+      "投标文件元数据",
+      "图片EXIF"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001",
+      "REG-BID-0010"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "新疆",
+    "finding_pattern": "FP-BID-0003",
+    "penetration_chain": {
+      "利益流向": "同一人编制三份标书→两份陪标一份中标→围标利益分成",
+      "制度博弈": "暗标本意是防止身份泄露→但格式指纹反向暴露了同源制作→AI暗标+串标检测双线交叉",
+      "决策还原": "同一人制作→为同伙投标→以为暗标屏蔽公司名就安全了→不知格式指纹暴露了同源",
+      "宏观坐标": "云南2026年7月1日起全省房建市政推行AI暗标+AI串标联动检测",
+      "根因": "暗标评审屏蔽了企业身份信息，但未屏蔽制作人和制作工具的身份信息"
+    },
+    "related_cases": [
+      "CASE-BID-0020",
+      "CASE-BID-0026"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·AI评标十维反转+暗标指南",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "暗标",
+      "五重指纹",
+      "AI清标",
+      "格式同源",
+      "新疆",
+      "围标"
+    ]
+  }
+]

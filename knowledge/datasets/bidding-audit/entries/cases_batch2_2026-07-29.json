@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "CASE-BID-0003",
+    "type": "case",
+    "title": "A公司通过13家空壳公司虚构原材料采购虚增成本4.98亿元",
+    "summary": "纳斯达克上市公司A公司2019年通过13家商贸公司虚构原材料采购业务，金额合计4.98亿元。13家公司由员工及亲友注册，银行U盾统一由资金部副总监掌管，采购款经多层转账后回流A公司。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "串标",
+    "violation_subcategory": "空壳公司虚假采购+资金循环回流",
+    "detection_method": [
+      "DM-BID-0008"
+    ],
+    "data_sources": [
+      "银行流水（全部账户逐笔筛查）",
+      "工商登记信息",
+      "第三方物流仓库收发存数据",
+      "OA审批记录"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": 497820000,
+    "regulation": [
+      "REG-BID-0001",
+      "REG-BID-0005"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "上市公司（境外上市）",
+    "industry": "消费品",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "采购款→13家空壳公司→经3-6层转账→回流A公司/北京分公司→虚构销售收入资金来源",
+      "制度博弈": "公司管理层要求'照办就是'，内控形同虚设",
+      "决策还原": "创始人/管理层有组织有预谋地系统造假",
+      "宏观坐标": "美国纳斯达克上市，资本市场业绩压力驱动",
+      "根因": "管理层凌驾于内控之上+银行U盾未职责分离+虚拟账号绕过审批流程"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年3期/004_虚构采购业务虚增营业成本.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "空壳公司",
+      "虚构采购",
+      "资金循环",
+      "银行U盾",
+      "虚增成本",
+      "穿透式检查",
+      "IPO造假"
+    ]
+  },
+  {
+    "id": "CASE-BID-0004",
+    "type": "case",
+    "title": "利用虚拟员工账号'lynn liang'发起虚假采购付款绕过内控审批",
+    "summary": "A公司创建虚拟员工账号'lynn liang'专门发起虚假采购及付款申请，该账号绕过了公司正常的内控创建流程，直接由采购部副总监要求HR创建。由该账号发起的付款申请无需验证单据真实性，相关审批人直接审批通过。全年通过该账号完成虚假采购4.98亿元。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "利益输送",
+    "violation_subcategory": "虚拟账号绕过内控审批",
+    "detection_method": [
+      "DM-BID-0008"
+    ],
+    "data_sources": [
+      "OA系统账号创建记录",
+      "HR入职档案",
+      "采购付款审批记录",
+      "员工访谈笔录"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": 497820000,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "上市公司",
+    "industry": "消费品",
+    "region": "",
+    "finding_pattern": "FP-BID-0004",
+    "penetration_chain": {
+      "利益流向": "虚拟账号→审批绕过→虚假付款→资金回流",
+      "制度博弈": "账号创建不走HR流程，审批流被架空",
+      "决策还原": "采购部副总监陈某直接授意HR创建虚拟账号",
+      "宏观坐标": "公司内审监察部门缺失，无举报途径",
+      "根因": "IT系统账号创建权限未纳入内控审批体系，管理层可随时绕过"
+    },
+    "related_cases": [
+      "CASE-BID-0003"
+    ],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年3期/004_虚构采购业务虚增营业成本.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "虚拟账号",
+      "内控绕过",
+      "审批漏洞",
+      "OA系统",
+      "付款申请",
+      "虚假采购"
+    ]
+  },
+  {
+    "id": "CASE-BID-0005",
+    "type": "case",
+    "title": "ZZ贸易公司真真假假采购——混入真实交易中虚增采购5.58亿元",
+    "summary": "A公司通过关联方注册的ZZ贸易公司，利用真实的咖啡机和辅料采购业务混入虚假的咖啡豆等原材料采购，虚增采购额5.58亿元。ZZ公司由A公司员工经手设立，银行账户由A公司关联企业出纳管理，无在编职工。A公司还以预付设备采购款名义一次性支付1.4亿元作为造假启动资金。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "串标",
+    "violation_subcategory": "关联公司混入虚假交易+预付款异常",
+    "detection_method": [
+      "DM-BID-0008",
+      "DM-BID-0001"
+    ],
+    "data_sources": [
+      "工商登记（ZZ公司股权穿透）",
+      "银行流水（1.4亿元预付）",
+      "采购合同与实际交付对比",
+      "ZZ公司员工信息"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": 557540000,
+    "regulation": [
+      "REG-BID-0001",
+      "REG-BID-0002"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "上市公司",
+    "industry": "消费品",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "1.4亿预付款→ZZ公司→多家公司→回流A公司→收入造假资金源",
+      "制度博弈": "一次性全额预付1.4亿显然不符商业惯例",
+      "决策还原": "董事会主席陆某某侄女管理ZZ公司银行账户",
+      "宏观坐标": "ZZ公司注册资本1亿但无人出资，完全空心化",
+      "根因": "关联方设立壳公司+真采购混入假采购增加隐蔽性+大额预付破坏资金监管"
+    },
+    "related_cases": [
+      "CASE-BID-0003"
+    ],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年3期/004_虚构采购业务虚增营业成本.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "关联公司",
+      "真假混杂",
+      "预付款异常",
+      "壳公司",
+      "资金循环",
+      "转贷"
+    ]
+  },
+  {
+    "id": "CASE-BID-0006",
+    "type": "case",
+    "title": "审计穿透式检查方法——沿银行流水逐笔追查资金全链路",
+    "summary": "财政部检查组对A公司造假事件采用穿透式检查方法：要求财务人员导出全部银行账户流水→逐笔筛查流出A公司的可疑资金→商请人民银行和各地监管局调取其他企业流水→通过人民银行查询7家公司9个账户+5个监管局调取11家外地企业→理清造假资金循环链条上每一笔资金的金额和最终去向→绘制资金流向图。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "其他",
+    "violation_subcategory": "穿透式检查方法论",
+    "detection_method": [],
+    "data_sources": [
+      "全部银行账户流水",
+      "人民银行协助查询的第三方账户流水",
+      "各地监管局调取的外地企业流水"
+    ],
+    "amount_range": ">1亿",
+    "amount_exact": 796410000,
+    "regulation": [],
+    "severity": "P3-管理建议",
+    "entity_type": "上市公司",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "逐笔追踪→绘制资金流向图→闭环验证",
+      "制度博弈": "商请人民银行+监管局协作→跨地区跨机构联合检查",
+      "决策还原": "检查组不依赖内部数据（已篡改）→直接从第三方获取",
+      "宏观坐标": "内部数据不可信→外部第三方数据为唯一可靠来源",
+      "根因": "穿透式检查是应对管理层系统性造假的必要方法论"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年3期/004_虚构采购业务虚增营业成本.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "穿透式检查",
+      "银行流水",
+      "资金追踪",
+      "跨机构协作",
+      "人民银行",
+      "资金流向图"
+    ]
+  },
+  {
+    "id": "CASE-BID-0007",
+    "type": "case",
+    "title": "政府采购'先付后验'——资金支付与验收环节脱节的典型舞弊",
+    "summary": "政府采购中常见'先付后验'或'只付不验'问题：采购需求、履约验收与资金支付三个不相容岗位未分离，验收报告缺失仍完成付款。使用RPA技术自动核对合同条款与支付凭证一致性后，发现多笔付款无对应验收报告。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "利益输送",
+    "violation_subcategory": "验收环节失控-先付后验",
+    "detection_method": [],
+    "data_sources": [
+      "合同付款条款",
+      "银行支付凭证",
+      "验收报告（缺失）",
+      "采购审批记录"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P1-严重违规",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "资金支付→无验收→供应商可能未履约或劣质履约",
+      "制度博弈": "采、管、验、付岗位未分离→权力集中",
+      "决策还原": "采购负责人可同时控制需求、验收、付款三个环节",
+      "宏观坐标": "政府采购普遍存在验收环节薄弱",
+      "根因": "内控制度设计缺陷：验收报告非支付必要条件"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/四川注册会计师/四川注册会计师2026年2期/009_政府采购中的财务风险防控与审计监督.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "先付后验",
+      "验收舞弊",
+      "岗位未分离",
+      "RPA核对",
+      "支付控制"
+    ]
+  },
+  {
+    "id": "CASE-BID-0008",
+    "type": "case",
+    "title": "KMeans聚类识别政府采购围串标团伙——投标-评审模式异常",
+    "summary": "运用数据挖掘KMeans聚类算法对供应商、投标价格、评审专家打分进行多维度聚类分析，智能识别出潜在围串标团伙。发现某组供应商在多个项目中反复以固定组合出现，且投标报价围绕某一中心点对称分布，评审专家打分呈现高度一致的偏好模式。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "围标",
+    "violation_subcategory": "供应商固定组合+报价协同+评审偏好一致",
+    "detection_method": [
+      "DM-BID-0001",
+      "DM-BID-0015"
+    ],
+    "data_sources": [
+      "历年政府采购数据",
+      "投标报价记录",
+      "评审专家打分表",
+      "供应商参与记录"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "FP-BID-0002",
+    "penetration_chain": {
+      "利益流向": "固定供应商组合→轮流中标→利益分成",
+      "制度博弈": "传统抽样审计无法发现多项目的模式关联",
+      "决策还原": "大数据多维聚类→揭示隐藏的关联网络",
+      "宏观坐标": "数智化审计技术实现从抽样到全量的跨越",
+      "根因": "单个项目合规但多个项目串联后的异常模式暴露了系统性围标"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/四川注册会计师/四川注册会计师2026年2期/009_政府采购中的财务风险防控与审计监督.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "KMeans",
+      "聚类",
+      "围串标",
+      "评审异常",
+      "数据挖掘",
+      "全量分析"
+    ]
+  },
+  {
+    "id": "CASE-BID-0009",
+    "type": "case",
+    "title": "信息化建设项目异常低价中标——低于最高限价45%的审查困境",
+    "summary": "某信息化建设项目预算500万元，中标供应商报价仅220万元（低于最高限价45%），触发财政部2026年异常低价审查新规。评审委员会启动审查后，供应商无法提供合理的成本测算和证明材料，最终被判定为无效投标。但实践中，部分评审委员会未严格执行审查程序，导致异常低价中标后交付质量严重不达标。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "价格操纵",
+    "violation_subcategory": "异常低价竞争+评审审查不作为",
+    "detection_method": [
+      "DM-BID-0001"
+    ],
+    "data_sources": [
+      "投标报价记录",
+      "最高限价文件",
+      "供应商成本测算材料",
+      "评审委员会审查记录"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P1-严重违规",
+    "entity_type": "政府部门",
+    "industry": "信息技术",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "异常低价中标→后期通过变更/追加/耗材收费弥补→'钓鱼工程'",
+      "制度博弈": "财政部2026年新规明确四类启动审查的条件，但执行依赖评审委员会",
+      "决策还原": "要么评审委员会不启动审查→要么供应商无法提供合理说明→要么启动后仍判定有效",
+      "宏观坐标": "财政部2026年1月专门发文整治'内卷式'竞争",
+      "根因": "评审委员会审查标准主观性强+供应商全生命周期成本信息不对称"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/四川注册会计师/四川注册会计师2026年2期/004_关于推动解决政府采购异常低价问题的通知.md",
+      "source_type": "公开报道",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "异常低价",
+      "成本测算",
+      "审查程序",
+      "最高限价",
+      "钓鱼工程",
+      "财政部新规"
+    ]
+  },
+  {
+    "id": "CASE-BID-0010",
+    "type": "case",
+    "title": "框架协议采购下审计服务'价格优先法'导致劣质低价竞标",
+    "summary": "根据《政府采购框架协议采购方式管理暂行办法》，审计服务适用价格优先法确定入围供应商。但由于审计服务质量难以标准化，不同的会计师事务所提供的服务不具可比性，采用价格优先法导致部分事务所以不合理的低报价入围，入围后实际服务质量严重不达标，形成'低价入围→劣质服务'的恶性循环。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "框架协议评审规则不适合服务类采购",
+    "detection_method": [],
+    "data_sources": [
+      "框架协议采购文件",
+      "评审记录",
+      "审计服务履约验收报告",
+      "入围供应商报价"
+    ],
+    "amount_range": "50-100万",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P2-一般问题",
+    "entity_type": "政府部门",
+    "industry": "专业服务",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "低价入围→缩减服务成本→审计质量下降→财政资金浪费",
+      "制度博弈": "暂行办法第25条对质量优先法适用条件严格限制→大多数服务被迫采用价格优先法",
+      "决策还原": "服务需求标准化不足→价格优先法失当",
+      "宏观坐标": "国办发〔2021〕30号明确提出建设以质量为导向的会计师事务所选聘机制",
+      "根因": "法规层面未区分货物/服务的评审规则适用条件，服务采购缺乏全国统一的需求标准"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年7期/002_论政府采购框架协议采购监督机制的完善.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "框架协议",
+      "价格优先法",
+      "审计服务",
+      "劣质低价",
+      "需求标准",
+      "评审规则"
+    ]
+  },
+  {
+    "id": "CASE-BID-0011",
+    "type": "case",
+    "title": "电子卖场供应商入围模式缺乏法律依据——'鲶鱼效应'制度失效",
+    "summary": "部分政府采购电子卖场采用供应商入围模式，但缺乏法律法规依据。入围供应商上架商品价格远高于市场价格，而《暂行办法》第37条的'鲶鱼效应'制度（采购人可向非入围供应商以更低价格采购）因交易成本过高而几乎无人使用：采购人需向全部入围供应商逐一确认价格，且须承担日后审计中被追责的风险。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "其他",
+    "violation_subcategory": "电子卖场合规问题",
+    "detection_method": [],
+    "data_sources": [
+      "电子卖场商品价格",
+      "同款商品市场价格",
+      "采购人向非入围供应商采购记录（极少）"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P2-一般问题",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "入围供应商→垄断采购渠道→高价供货→财政资金损失",
+      "制度博弈": "鲶鱼效应制度设计有激励机制缺失：采购人费时费力无回报",
+      "决策还原": "采购人缺乏激励+担心审计追责→宁愿继续向入围供应商高价采购",
+      "宏观坐标": "全国已投入大量资金建设电子卖场，但合规性问题未解决",
+      "根因": "制度设计只给条件不给激励→权责不对等→好制度空转"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年7期/002_论政府采购框架协议采购监督机制的完善.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "电子卖场",
+      "入围模式",
+      "鲶鱼效应",
+      "激励机制",
+      "合规",
+      "高价"
+    ]
+  },
+  {
+    "id": "CASE-BID-0012",
+    "type": "case",
+    "title": "路侧停车运营项目——智能化改造后仍配置77名运维人员导致成本畸高",
+    "summary": "某区交通局通过公开招标确定某企业负责1500个停车位运营管理，年均运营费450万元。车位智能化收费改造后，仍配置77名运维人员（车位人员比不到20:1），人员配置明显偏多，且存在部分费用未发生却申报、辅助设备设施成本摊销不合理等问题。2020年应缴收入310万元、2021年405万元，实缴分别仅225万元、275万元，远低于450万的合同运维费，项目显著不经济。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "采购需求不合理+成本控制失效",
+    "detection_method": [],
+    "data_sources": [
+      "招投标文件",
+      "运维合同",
+      "人员编制与工资表",
+      "停车费收入数据",
+      "车位占用率统计"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": 4500000,
+    "regulation": [],
+    "severity": "P1-严重违规",
+    "entity_type": "政府部门",
+    "industry": "交通/市政",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "运维费450万/年→实际收入仅275万→净亏损175万/年→财政资金流失",
+      "制度博弈": "采购需求未根据智能化改造后重新评估→仍按改造前标准配置大量人工",
+      "决策还原": "缺少采购前的成本效益分析→人工配置凭经验而非数据",
+      "宏观坐标": "全国路侧停车智能化改造普遍存在'技术改进了，人工没减'的现象",
+      "根因": "采购需求编制未与技术条件变化联动更新→智能化替代了人工却不减人"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/015_服务类政府采购项目绩效评价研究.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "路侧停车",
+      "人员冗余",
+      "成本畸高",
+      "投入产出失衡",
+      "智能化改造",
+      "绩效评价"
+    ]
+  },
+  {
+    "id": "CASE-BID-0013",
+    "type": "case",
+    "title": "政府采购服务类项目'双评价体系'——项目整体+供应商履约双层评估",
+    "summary": "某区路侧停车运营绩效评价采用'项目整体+履约服务'双评价体系。项目整体得分74分（绩效一般），核心问题是运维成本显著偏高；服务供应商履约得分84分（良好），基本按合同完成运维。二者差距说明：供应商无过错，问题出在采购需求本身——招标时就按过高人员标准设置了需求，而非供应商履约不力。这揭示了服务类政府采购的根本矛盾：评价供应商和评价采购决策是两个不同的维度。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "采购需求设计缺陷",
+    "detection_method": [],
+    "data_sources": [
+      "绩效评价报告",
+      "采购需求文件",
+      "供应商履约记录",
+      "项目成本数据"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": 4500000,
+    "regulation": [],
+    "severity": "P3-管理建议",
+    "entity_type": "政府部门",
+    "industry": "交通/市政",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "不涉及腐败，纯管理问题——需求设计失误导致资金浪费",
+      "制度博弈": "现有绩效评价偏重于'过程合规'而非'需求合理性'",
+      "决策还原": "需求部门按'最大配置'申报→采购部门按需求执行→无人质疑需求本身",
+      "宏观坐标": "服务类政府采购全国约1万亿元/年，类似需求设计问题普遍存在",
+      "根因": "缺乏采购需求独立审核机制：谁提需求谁说了算，无人做成本效益反向验证"
+    },
+    "related_cases": [
+      "CASE-BID-0012"
+    ],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/015_服务类政府采购项目绩效评价研究.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "双评价体系",
+      "需求vs履约",
+      "采购决策",
+      "服务类",
+      "绩效评价"
+    ]
+  },
+  {
+    "id": "CASE-BID-0014",
+    "type": "case",
+    "title": "G市公立医院高价医疗设备采购后闲置——需求论证形式化的典型",
+    "summary": "G市公立医院使用财政专项资金采购医疗设备支出占比普遍在6成以上。采购程序基本规范，但论证多为主观经验判断，缺乏客观数据分析。采购的高价医疗设备（特别是用于开展'新技术'的高精尖设备）普遍存在使用率低甚至闲置现象：设备开机率远低于运转能力，采购成本难以收回。某医院采购的CT设备年实际检查人次不到预期的40%。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "其他",
+    "violation_subcategory": "采购需求论证虚化+设备闲置浪费",
+    "detection_method": [],
+    "data_sources": [
+      "设备采购论证报告",
+      "设备开机率/使用记录",
+      "预期vs实际诊疗人次",
+      "设备采购成本与运维成本"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P1-严重违规",
+    "entity_type": "事业单位",
+    "industry": "医疗",
+    "region": "广东",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "财政资金→高价设备→低使用率→资源闲置→其他急需设备无法采购",
+      "制度博弈": "论证通过率极高（形式>实质），缺乏客观量化数据支撑",
+      "决策还原": "科室主任以'开展新技术'名义申报→论证会走形式→没人追问'你治得了那么多病人吗'",
+      "宏观坐标": "全国公立医院普遍存在设备闲置，与所在地区医疗水平不匹配",
+      "根因": "需求论证依据主观经验而非客观数据（历史诊疗量/地区病源/同类设备饱和率）"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/016_财政资金采购医疗设备绩效管理探讨.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "医疗设备",
+      "闲置",
+      "需求论证",
+      "形式化",
+      "开机率",
+      "资源浪费"
+    ]
+  },
+  {
+    "id": "CASE-BID-0015",
+    "type": "case",
+    "title": "医疗设备价格论证仅询价熟悉供应商——市场代表性严重不足",
+    "summary": "G市公立医院医疗设备价格论证多通过向熟悉的、常合作的供应商询价，或官网发布信息后仍仅有这几家响应。大量潜在供应商未能获取信息并参与报价，导致价格调研的市场代表性不高，采购价格偏离真实市场水平。某医院1台MRI设备通过3家常合作供应商询价后以1,800万元中标，事后发现同期其他省份同级医院同型号设备采购价仅1,350-1,500万元。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "价格操纵",
+    "violation_subcategory": "价格论证不充分+供应商范围过窄",
+    "detection_method": [
+      "DM-BID-0001"
+    ],
+    "data_sources": [
+      "询价记录（供应商名单+报价）",
+      "同型号设备其他省份中标价",
+      "市场公开报价"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0004"
+    ],
+    "severity": "P1-严重违规",
+    "entity_type": "事业单位",
+    "industry": "医疗",
+    "region": "广东",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "熟悉的供应商→有限竞争→高价中标→供应商利润偏高→财政资金多付",
+      "制度博弈": "询价机制不要求公开征集→采购人可以选择性地邀请供应商",
+      "决策还原": "采购人员习惯于合作多年的供应商→路径依赖→缺乏扩大询价范围的动力",
+      "宏观坐标": "各省医疗设备采购价格差异大→缺乏全国价格共享平台",
+      "根因": "价格论证缺乏强制性的公开征集机制和跨区域价格比对机制"
+    },
+    "related_cases": [
+      "CASE-BID-0014"
+    ],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/016_财政资金采购医疗设备绩效管理探讨.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "价格论证",
+      "供应商询价",
+      "市场代表性",
+      "高价采购",
+      "跨区域比价"
+    ]
+  },
+  {
+    "id": "CASE-BID-0016",
+    "type": "case",
+    "title": "医疗设备配套条件论证缺失——设备到场半年无法安装使用",
+    "summary": "G市某医院采购一台高精尖MRI设备，论证时仅关注设备本身的技术参数和价格，忽略了安装场地（需改造加固楼层承重）、配套水电设施（需专用电源和冷却系统）和操作人员资质（需具备MRI上岗证的专业技师）。设备到货后因场地未改造、电力不达标、操作人员尚未招聘培训，闲置6个月后才正式投入使用。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "其他",
+    "violation_subcategory": "配套条件论证缺失",
+    "detection_method": [],
+    "data_sources": [
+      "采购论证报告（无配套条件说明）",
+      "设备到货验收记录",
+      "场地改造记录",
+      "人员招聘记录",
+      "设备正式投入使用日期"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P1-严重违规",
+    "entity_type": "事业单位",
+    "industry": "医疗",
+    "region": "广东",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "近千万设备闲置半年→折旧+资金占用成本→零效益",
+      "制度博弈": "采购论证模板未将配套条件设为必填项→论证不完整",
+      "决策还原": "科室只管提需求→设备科只管买→基建科不参与论证→三个部门信息不互通",
+      "宏观坐标": "类似问题在科研设备采购中更常见",
+      "根因": "采购论证缺乏跨部门联合评审机制，配套条件未被纳入采购决策必要条件"
+    },
+    "related_cases": [
+      "CASE-BID-0014"
+    ],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/016_财政资金采购医疗设备绩效管理探讨.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "配套条件",
+      "设备闲置",
+      "跨部门",
+      "论证缺失",
+      "场地改造",
+      "安装滞后"
+    ]
+  },
+  {
+    "id": "CASE-BID-0017",
+    "type": "case",
+    "title": "闵行区政府采购规模10年增长5倍——从18.72亿到97.90亿的绩效管理升级",
+    "summary": "上海市闵行区政府采购规模从2014年的18.72亿元增加到2023年的97.90亿元，年均增长率42.3%。闵行区创新推出'三位一体'再评价机制（财政再复合+专家再评审+项目再评价），形成'预算决策有评估→预算编制有目标→预算执行有监控→预算完成有评价→评价结果有应用'的闭环。但实践中存在'两套系统'问题：预算管理与政府采购使用不同的信息系统，导致绩效管理数据无法实时互通。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "信息系统不互通+绩效管理闭环断裂",
+    "detection_method": [],
+    "data_sources": [
+      "政府采购台账（2014-2023）",
+      "预算管理一体化系统",
+      "绩效评价报告"
+    ],
+    "amount_range": ">1亿",
+    "amount_exact": 9790000000,
+    "regulation": [],
+    "severity": "P3-管理建议",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "上海",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "不涉及资金损失，纯管理效率问题",
+      "制度博弈": "两套系统→信息割裂→绩效数据源头不一致",
+      "决策还原": "预算系统归财政局预算科管→采购系统归采购办管→数据不共享",
+      "宏观坐标": "全国普遍存在预算与采购系统不互通的问题",
+      "根因": "部门间数据壁垒：预算系统和采购系统由不同处室建设运维，缺乏跨系统整合机制"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/014_政府采购预算绩效管理实践及建议.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": false,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "闵行区",
+      "采购规模",
+      "三位一体",
+      "绩效闭环",
+      "系统不互通",
+      "预算管理"
+    ]
+  },
+  {
+    "id": "CASE-BID-0018",
+    "type": "case",
+    "title": "绩效评价报告'假大空'——第三方机构沿用审计思维导致评价深度不足",
+    "summary": "部分第三方机构（会计师事务所/咨询公司）参与政府采购绩效评价时，沿用审计思维，将绩效评价视为财政监督检查的延伸。反馈问题千篇一律：'项目管理制度健全性不足''资金使用不够规范'。评价建议停留于'提升资金使用效益''健全制度体系'等空洞套路，缺少具有指导意义且能落地实施的优化措施。评价工作未站在创新性、实用性角度对政策顶层设计提出建设性意见。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "绩效评价第三方服务质量不达标",
+    "detection_method": [],
+    "data_sources": [
+      "第三方绩效评价报告",
+      "评价指标体系",
+      "被评价项目整改报告"
+    ],
+    "amount_range": "不适用",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P2-一般问题",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "财政支付评价费用→评价报告无实际价值→评价费变成'合规成本'而非价值创造",
+      "制度博弈": "事务所用审计方法做绩效评价→路径依赖→不理解绩效评价的方法论差异",
+      "决策还原": "评价机构低价竞标→压缩工作时长→套模板快速出报告",
+      "宏观坐标": "全国政府采购绩效评价市场规模可观，但质量参差不齐",
+      "根因": "评价市场低价竞争+缺绩效评价专业标准+采购人对评价质量把关不严"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/012_探索采购与绩效融合全过程推动预算绩效管理工作脱虚向实.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "绩效评价",
+      "第三方机构",
+      "审计思维",
+      "报告空洞",
+      "低价竞争",
+      "专业标准"
+    ]
+  },
+  {
+    "id": "CASE-BID-0019",
+    "type": "case",
+    "title": "绩效目标与采购需求'两张皮'——财务不懂业务,业务不懂绩效",
+    "summary": "行政事业单位普遍存在'业财分离'：财务人员懂绩效管理概念但不了解项目实际，业务人员了解项目执行却缺乏预算绩效管理理论知识。导致编报的绩效目标不科学、不合理、不全面，与采购需求脱节。1000万以上的重点项目采购需求仅'只言片语',绩效目标却写满一页——两个文档看起来毫无关联。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "其他",
+    "violation_subcategory": "业财分离导致绩效管理形式化",
+    "detection_method": [],
+    "data_sources": [
+      "采购需求文件",
+      "绩效目标申报表",
+      "项目预算文件"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": null,
+    "regulation": [],
+    "severity": "P3-管理建议",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "不涉及资金损失，但导致全过程绩效管理失效",
+      "制度博弈": "预算绩效管理体系建立在二级项目之上→未下沉到具体采购项目",
+      "决策还原": "财务填绩效表（上位概念）、业务写采购需求（下位具象）→两张皮",
+      "宏观坐标": "全国各级政府都存在'业财两张皮'",
+      "根因": "绩效管理颗粒度不够细→未覆盖到每个采购子项目→目标与执行脱节"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2024年9期/012_探索采购与绩效融合全过程推动预算绩效管理工作脱虚向实.md",
+      "source_type": "学术文献",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "业财分离",
+      "两张皮",
+      "绩效目标",
+      "采购需求",
+      "颗粒度",
+      "形式化"
+    ]
+  },
+  {
+    "id": "CASE-BID-0020",
+    "type": "case",
+    "title": "投标文件格式指纹五维同源——页边距+RGB+行距+表格+页码完全一致",
+    "summary": "对某工程招标三份投标文件做格式指纹提取：四边页边距（左2.54cm右2.54cm上2.0cm下2.0cm）三份完全相同，正文字体RGB值均为(26,26,26)非纯黑，行距精确到1.5倍三份一致，表格边框粗细0.75pt+底纹颜色#F2F2F2三份相同，页码格式'第X页共Y页'（宋体小五居中）完全一致。五维同时命中→同模板同源。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "串标",
+    "violation_subcategory": "格式指纹五维同源",
+    "detection_method": [
+      "DM-BID-0005",
+      "DM-BID-0101"
+    ],
+    "data_sources": [
+      "投标文件PDF/DOCX",
+      "PDF span属性",
+      "page setting元数据"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "国有企业",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "FP-BID-0003",
+    "penetration_chain": {
+      "利益流向": "同一人/同一团队制作三份标书→中标人支付陪标费",
+      "制度博弈": "招标文件只规定格式框架（如宋体四号）→不会规定到像素/毫米级",
+      "决策还原": "同一台电脑/WPS同一版本→默认值完全相同→不可伪造的物理证据",
+      "宏观坐标": "AI评标系统（广联达清标等）已具备格式指纹检测能力",
+      "根因": "投标人委托同一人制作多份标书时未注意格式指纹残留"
+    },
+    "related_cases": [
+      "CASE-BID-0002"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·AI评标十维反转",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "格式指纹",
+      "五维同源",
+      "页边距",
+      "RGB",
+      "行距",
+      "表格样式",
+      "同模板"
+    ]
+  },
+  {
+    "id": "CASE-BID-0021",
+    "type": "case",
+    "title": "图片EXIF四重匹配——同相机+同GPS+同软件+同时间段锁定串标",
+    "summary": "三家投标人的技术标中嵌入的施工照片EXIF揭示：相机均为iPhone 15 Pro、GPS坐标均指向同一栋写字楼（精确到经纬度秒级）、软件均为Snipaste 2.8截图工具、拍摄时间集中在投标截止前2天内。四重信息同时跨文件匹配，证明同一人在同一地点用同一设备为三家公司制作标书。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "串标",
+    "violation_subcategory": "图片EXIF设备溯源",
+    "detection_method": [
+      "DM-BID-0004"
+    ],
+    "data_sources": [
+      "投标文件中嵌入图片",
+      "PIL EXIF字段：Make/Model/GPSInfo/Software/DateTimeOriginal"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "国有企业",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "FP-BID-0003",
+    "penetration_chain": {
+      "利益流向": "同人同地同设备→三份标书→至少两家是陪标",
+      "制度博弈": "EXIF是相机自动写入的→投标人不知道有这些数据→比人工痕迹更难清除",
+      "决策还原": "截图工具版本号+设备型号+GPS→锁定到个人",
+      "宏观坐标": "手机拍照默认写EXIF→大部分人不知道→信息泄露的审计价值",
+      "根因": "投标人缺乏电子取证意识→用同一设备截图制作多份标书"
+    },
+    "related_cases": [
+      "CASE-BID-0002",
+      "CASE-BID-0020"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·AI评标十维反转",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "EXIF",
+      "GPS",
+      "相机型号",
+      "设备溯源",
+      "Snipaste",
+      "铁证",
+      "四重匹配"
+    ]
+  },
+  {
+    "id": "CASE-BID-0022",
+    "type": "case",
+    "title": "共同错别字暴露同一撰写人——'截至'写成'截止'三家都错",
+    "summary": "三份投标文件技术方案中出现相同的多处笔误：'截至'全部写成'截止'，'安装'全部写成'按装'，'混凝土'全部缩写为'砼'且在同一页面位置出现。排除招标文件模板套话（模板不会写错别字）后，三份文件共同的非模板化笔误词汇达到7个。人的语言习惯无法伪造——同一个人的肌肉记忆暴露了同源事实。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "串标",
+    "violation_subcategory": "共同笔误指纹",
+    "detection_method": [
+      "DM-BID-0003"
+    ],
+    "data_sources": [
+      "投标文件技术方案全文",
+      "jieba分词+自定义笔误词库"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "国有企业",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "FP-BID-0001",
+    "penetration_chain": {
+      "利益流向": "同一人撰写→三家公司→围标陪标",
+      "制度博弈": "TF-IDF可能被模板词冲淡→共同错别字是独立强信号",
+      "决策还原": "输入法词库+打字习惯→个人特征无法伪装",
+      "宏观坐标": "AI评标系统维度9（敏感词库/NLP）可自动检测",
+      "根因": "同一撰写人未意识到错别字/用语习惯会暴露身份"
+    },
+    "related_cases": [
+      "CASE-BID-0002"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·AI评标十维反转",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "错别字",
+      "笔误",
+      "语言习惯",
+      "同人撰写",
+      "肌肉记忆",
+      "NLP"
+    ]
+  },
+  {
+    "id": "CASE-BID-0023",
+    "type": "case",
+    "title": "评委Z-score系统性偏高——对特定投标人持续打出超常高分",
+    "summary": "某项目7个评委对5家投标人评分。评委李某对A公司在技术方案(+2.3σ)、项目管理(+2.8σ)、企业业绩(+2.1σ)三个评分项上的Z-score全部超过2.0，而其他4位评委对A公司的Z-score均在±0.5以内。天眼查显示李某曾任职于A公司的母公司，离职时间距评标仅6个月。李某对A公司的系统性高分与利益关联构成完整的'评委被买通'证据链。",
+    "audit_type": "招投标审计",
+    "sub_type": "服务采购",
+    "violation_category": "评标不公",
+    "violation_subcategory": "评委系统性偏差+利益关联",
+    "detection_method": [
+      "DM-BID-0010",
+      "DM-BID-0008"
+    ],
+    "data_sources": [
+      "评委逐项打分表",
+      "评委履历/工作单位",
+      "天眼查关联关系"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0003"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "FP-BID-0004",
+    "penetration_chain": {
+      "利益流向": "评委李某→偏袒A公司→A公司中标→李某曾任职于A公司母公司",
+      "制度博弈": "评委回避制度不完善→6个月内离职未纳入利害关系时间窗口",
+      "决策还原": "其他评委对A无偏差→排除A技术方案确实更好的可能→偏差来自评委个人",
+      "宏观坐标": "全国评标专家库回避制度执行标准不统一",
+      "根因": "评委回避机制未能覆盖历史任职关系→Z-score异常检测可作为自动化监控手段"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "融策内部方法库·23层检测体系",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "Z-score",
+      "系统性偏差",
+      "评委回避",
+      "利益关联",
+      "评标异常",
+      "倾向性照顾"
+    ]
+  },
+  {
+    "id": "CASE-BID-0024",
+    "type": "case",
+    "title": "L1+L8双杀：报价等差排列+实际控制人相同——围标被逐层穿透",
+    "summary": "某道路工程招标，4家投标人报价分别为980万、990万、1000万、1010万——精确等差10万元。天眼查穿透发现B、C、D三家公司的实际控制人均指向同一个人张某。L1报价等差数列+L8工商关联双杀→4家公司中实际只有2个独立利益方→围标铁证。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "围标",
+    "violation_subcategory": "报价等差+相同实际控制人",
+    "detection_method": [
+      "DM-BID-0001",
+      "DM-BID-0008"
+    ],
+    "data_sources": [
+      "开标一览表",
+      "天眼查股权穿透",
+      "工商登记信息"
+    ],
+    "amount_range": "500-1000万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001",
+      "REG-BID-0002"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "FP-BID-0002",
+    "penetration_chain": {
+      "利益流向": "张某控制B/C/D三家→名义上4家竞标实际只有2家→张某确保其中一家中标",
+      "制度博弈": "工商登记不显示实际控制人→只有穿透股权才能发现",
+      "决策还原": "张某通过层层代持分散股权→常规工商查询看不出异常",
+      "宏观坐标": "相同控制人的多家企业同时投标违反《招标投标法实施条例》第34条",
+      "根因": "投标人资格审查不深入→仅查表面公司信息→未做实际控制人穿透"
+    },
+    "related_cases": [
+      "CASE-BID-0002"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·23层检测体系",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "等差报价",
+      "实际控制人",
+      "双杀",
+      "股权穿透",
+      "围标",
+      "L1+L8"
+    ]
+  },
+  {
+    "id": "CASE-BID-0025",
+    "type": "case",
+    "title": "历史中标模式分析——'中标专业户'与'陪标专业户'组合识别",
+    "summary": "对某县近3年52个工程项目进行FP-growth频繁模式挖掘（min_support=3），识别出供应商组合{A,B,C}在11个项目中反复同时出现，其中A中标9次（中标率82%）为'中标专业户'，B和C始终参与但从未中标（参与11次、0中标）为'陪标专业户'。这个三人组在52个项目中锁定了一个围标产业链。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "围标",
+    "violation_subcategory": "中标专业户+陪标专业户固定组合",
+    "detection_method": [
+      "DM-BID-0015"
+    ],
+    "data_sources": [
+      "3年招投标台账（52个项目）",
+      "中标结果",
+      "投标人参与记录"
+    ],
+    "amount_range": ">1亿",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "",
+    "finding_pattern": "FP-BID-0002",
+    "penetration_chain": {
+      "利益流向": "A中标→支付B+C陪标费→三人组垄断该县小型工程市场",
+      "制度博弈": "52个项目的台账→单个项目看不出异常→跨项目统计暴露模式",
+      "决策还原": "三人组提前协商好由A中标、B+C陪标→轮流安排以确保不引起怀疑",
+      "宏观坐标": "FP-growth频繁模式挖掘在零售业常见，引入审计后成为围标检测利器",
+      "根因": "跨项目数据未共享→单个项目管理合规→纵向累积后模式暴露"
+    },
+    "related_cases": [
+      "CASE-BID-0024"
+    ],
+    "provenance": {
+      "source_file": "融策内部方法库·23层检测体系",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "FP-growth",
+      "中标专业户",
+      "陪标",
+      "频繁模式",
+      "纵向分析",
+      "历史台账"
+    ]
+  }
+]

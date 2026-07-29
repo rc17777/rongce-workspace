@@ -1,89 +1,249 @@
-一份刚被退回的审计报告摊在桌上，领导的批注只有寥寥几行字：“问题描述太长，结论太模糊，建议太空泛。你到底想让我知道什么？我又该做什么？”你盯着这行字，心里满是挫败。明明在审计现场熬了无数个夜，明明把问题查得清清楚楚，为什么写出来却变得如此苍白无力？
-这不是文笔的问题，这是审计写作最扎心的真相：审计写作的本质，不是“写清楚”，而是“翻译准”——把审计专业语言翻译成管理层决策语言，把风险信号翻译成业务影响，把碎片化问题翻译成系统性建议。
-审计行业的写作能力正在被重新定义。随着大模型可以批量生成审计报告初稿，“写出来”不再是核心竞争力，“写出价值”才是。今天，我们不谈公文格式，只聚焦审计人如何通过四个维度的修炼，将一份合规的报告升级为一份让管理层无法忽视的决策参考。
-一、破除“审计腔”：用决策者的语言写报告
-审计报告的第一读者不是审计同行，而是管理层。他们关心的是这件事对我的经营目标有什么影响，我需要为此做什么决定，不做的后果是什么。而太多的报告都在写“我们做了什么程序，发现了什么问题”，唯独没有回答这三个问题。
-某央企审计部在一次采购审计中，初稿写的是“发现部分采购未严格执行三家比价制度”。修改后变成：“我们发现，过去一年约有X%的采购未进行充分比价，保守估计导致采购成本多支出了Y万元。如果不立即收紧制度，按全年采购规模推算，明年可能继续损失Z万元。我们建议在两周内完成采购制度的修订，预计可以立即节省成本。”同样的发现，改写法后管理层立刻坐直了。
-破除“审计腔”有一个简单的“电梯测验”：如果你只有30秒向CEO汇报这个审计发现，你会说什么？这个答案就是你报告的第一句话。每一条审计发现，都先想清楚“对经营目标的影响是什么”“不整改的后果是什么”，再动笔写“问题是什么”。
-二、重建报告结构：金字塔原理让结论先行
-很多审计报告沿袭了公文写作习惯：背景、过程、发现、结论。但决策层读者需要的顺序恰恰相反——先看结论，再决定要不要往下看细节。把最重要的判断放在第一页，不是摘要，是判断。
-采用“结论先行、层层支撑”的金字塔结构。第一层，核心结论，用一两句话概括审计整体判断。第二层，关键发现，列出最重要的几个风险及影响。第三层，支撑细节，每一项发现的具体证据和分析过程。
-某金融集团审计部在向审计委员会汇报时，第一页PPT永远是“本次审计最重要的三个发现及建议”，每个发现不超过三行字。委员们如果需要深入了解，再翻到后面的详细分析。这套方法让他们审计建议的采纳率大幅提升。
-三、让问题自己说话：用事实和数据的威力替代形容词
-“管理混乱”“存在漏洞”“执行不力”，这些审计报告里最常见的措辞，恰恰是最无力的表达。“混乱”是结论不是事实，“漏洞”是定性不是证据。
-某国企审计部在报告中描述采购问题时，没有写“采购管理不规范”，而是写“在抽查的50笔采购中，有12笔缺少比价记录，涉及金额多少万元；6笔合同的签订日期晚于货物实际交付日期，其中3笔倒签超过30天”。这段文字没有用一个形容词，但所有读到它的人都清楚问题的严重性。
-把每一个形容词或程度副词“显著”“明显”“较为”替换成具体数据。不知道具体数据，说明事实还没查清楚；查清楚了，数据自然会替你说话。
-四、从“要做什么”到“怎么做”：建议的颗粒度决定落地的速度
-很多审计建议的终点是“建议加强管理”，被审计单位的整改回复是“已加强管理”。问题在于，你根本没告诉他“怎么加强”，他也不知道“什么叫加强”。建议的颗粒度，直接决定了整改的落地率。
-一份高质量的审计建议，必须具备三个要素：责任主体是谁、完成时限是什么、验证标准是什么。比如，把“建议完善合同管理”升级为“建议法务部在6月30日前完成标准合同模板的修订，新模板增加XX条款；此后所有新签合同必须使用新模板，审计部将在第三季度抽查验证”。
-最后，一个简单实用的“五分钟写作法则”可以帮你快速提升报告质量。用一分钟先说结论，用三分钟写清楚最核心的风险是什么、不整改的后果是什么，用一分钟给出谁来做、什么时候做完、怎么验证做完。
-审计写作力的本质，不是文字的堆砌，而是思想的呈现。当你把审计专业术语翻译成管理层关心的价值语言，把碎片化的问题提炼成系统性的风险洞察，把泛泛的建议拆解成可执行的动作，你的审计报告就不再是躺在档案柜里的合规文件，而是管理层决策桌上不可或缺的参考。
-写作不是为了展示你多会写，而是为了让你的发现被看见、你的判断被重视、你的建议被采纳。你笔下的每一个字，都是为你的审计价值在投票。从今天开始，用这四个维度重新审视你的每一份报告，你会发现，审计写作的困局从来不是文笔的问题，而是思维的问题。思维一转，天地自宽。
+&nbsp;
+字数 2591，阅读大约需 13 分钟
+我硬盘里躺着大概四五十本技术书PDF，买的时候雄心壮志，三个月后连第七章讲什么都说不上来，极大的浪费。
+有个开源项目&nbsp;
+book-to-skill
+，GitHub 5.3k star。它干了一件事：
+把技术书PDF丢进去，吐出来一个结构化的 Claude Code Skill。
+&nbsp;写代码时打&nbsp;
+/your-book-slug replication
+，Claude Code 从书里找出对应章节回答你。
+book-to-skill到底干了什么
+它不是一个PDF阅读器，也不是一个笔记工具。它是一个编译管线：把一本书（或一堆文档）吃进去，吐出来一个完整的 Agent Skill。
+book-to-skill 把技术书、文档文件夹，甚至一堆资料，转换成 Claude Code 的 Skill。生成后放在&nbsp;
+~/.claude/skills/&lt;slug&gt;/
+&nbsp;下面，里面不只是全文摘录，而是拆成&nbsp;
+SKILL.md
+、章节摘要、术语表、patterns、cheatsheet 这些文件，用到哪章，加载哪章。
+book-to-skill 跑完之后，我们的 skills 目录里会多出这些东西：
+•&nbsp;
+SKILL.md
+：核心心智模型 + 章节索引，约4000 token
+•&nbsp;
+chapters/
+：每章一个文件，每个约800-1200 token，按需加载
+•&nbsp;
+glossary.md
+：所有关键术语，按字母排好，标了章节出处
+•&nbsp;
+patterns.md
+：书里所有的技术模式、算法、设计模式
+•&nbsp;
+cheatsheet.md
+：决策表和速查规则
+这套结构的精妙之处在哪？章节文件是按需加载的，你不问第五章，第五章的文件就躺在硬盘上不占token。只有你&nbsp;
+/book-slug ch05
+&nbsp;的时候，Claude Code 才去读那一个文件。
+对比一下常规操作：把一本400页的PDF直接扔进Claude上下文窗口，200K token一次性烧完，每个问题、每一轮对话都重复烧。book-to-skill 只在第一次处理时烧token，之后每次查询只加载4K核心 + 1K目标章节。
+功能详情
+book-to-skill功能总览
+1. 支持绝大部分格式
+PDF、EPUB、DOCX、TXT、Markdown、reStructuredText、AsciiDoc、HTML、RTF、MOBI/AZW/AZW3。
+我在自己机器上试了，一本PDF格式的《Designing Data-Intensive Applications》，一本EPUB格式的《Clean Code》，都跑通了。纯文本格式（txt、md、rst）不需要额外依赖，PDF和EPUB需要装对应的提取工具。
+2. 智能选提取器，不傻跑
+这是我觉得做得最聪明的地方。book-to-skill 处理PDF之前会先问：这本书是技术书还是纯文本？
+技术书（有代码、表格、公式）走 Docling 这条线，约1.5秒一页，但能保留markdown表格和代码块。
+纯文本走 pdftotext，秒出。pdftotext 没装？自动fallback到 PyPDF2，再不行用 pdfminer.six。
+我在一台Mac上跑了一本103页的技术书做基准测试，结果长这样：
+方法
+时间
+Token数
+表格
+代码块
+pdftotext
+0.1s
+27K
+Docling
+164s
+27K (+1.2%)
+Docling慢很多，但表格和代码块全保住了。pdftotext快但丢掉了所有结构化内容，选哪个取决于你的书长什么样。
+这个"先问再跑"的设计比那些无脑一个方案走到底的工具聪明多了。
+3. 输出不是摘要，是结构
+book-to-skill 不在那给你总结"这本书讲了分布式系统的设计原则"这种废话。它提取的是作者花几年时间搭建的框架：命名的模式、精确的表述、反模式清单。
+作者定了七条质量原则，我挑几条最说明问题的：
+•&nbsp;
+密度优先于完整
+：一份1000 token的摘要比一份10000 token的摘录强
+•&nbsp;
+实践者口吻
+：输出是"用X当Y"，不是"本书解释了X"
+•&nbsp;
+永远不复制原文
+：始终合成、总结、从源头提取信号
+翻译成人话：book-to-skill 产出的东西像你认真读过这本书之后做的笔记，不是把书拆碎了重新排列。
+架构图
+4. 用途不止是书
+名字叫 book-to-skill，但输入可以是任何结构化文字。把整个&nbsp;
+docs/
+&nbsp;文件夹揉成一个skill，写代码的时候直接问，你的架构决策记录、运维手册、新人指南就从一个"偶尔翻翻"的文件夹变成了你工作流里随时能调用的东西。
+品牌书也能转，视觉规范、文案语调、组件原则变成一个团队共享的skill，比翻60页PDF快多了。论文集群加自己的笔记合并成一个skill，新论文来了还能往里加。RFC、API合约、合规文档这些你反复引用但永远记不住的东西，同样适合。
+只要你反复打开同一个文档、每次都想"要是记住就好了"，这东西就适合做成skill。
+5. 增量更新，不是一次性
+生成的skill不是死的。你买了新版的PDF、读了一篇新论文、写了新笔记，可以直接fold进去：
+/book-to-skill ~/articles/new-paper.pdf ~/.claude/skills/project-knowledge
+指向已有的skill目录，它会识别出来，把新内容合并进去。这个设计让skill变成了一个活的、随时间增长的知识库，而不是一次性快照。
+工作流程：一次编译，到处查询
+book-to-skill 的管线分成10步，我把它简化成几个关键阶段说清楚：
+提取阶段
+：你敲&nbsp;
+/book-to-skill your-book.pdf
+，它先问你技术书还是纯文本，然后选提取器。PDF用Docling/pdftotext，EPUB用ebooklib，DOCX用python-docx，以此类推。提取出来的纯文本写到一个临时文件里，同时生成metadata。
+分析阶段
+：Claude读这个文本，识别书名、作者、章节结构、核心主题。如果章节标题是标准格式（"Chapter N" / "第N章"），自动分段。如果不是，也能处理，只是章节索引需要手动指定。
+生成阶段
+：这步是核心。它对每一章做深度分析，生成800-1200 token的章节摘要，包括代码示例和参考表格（技术书的话）。同时生成glossary（所有术语）、patterns（设计模式/算法）、cheatsheet（速查表）。最后生成一个约4000 token的SKILL.md主文件，里面是核心心智模型加上章节索引。
+交付阶段
+：整个skill写到你Agent的skills目录。Claude Code是&nbsp;
+~/.claude/skills/&lt;slug&gt;/
+，Copilot CLI是&nbsp;
+~/.copilot/skills/&lt;slug&gt;/
+，Amp和跨Agent的在&nbsp;
+~/.agents/skills/&lt;slug&gt;/
+，临时文件清理掉。
+贴一组真实数据，作者跑了几本书的转换，用的是Claude Sonnet 4.5：
+格式
+页数
+Token
+章节
+约花费
+Think Python 2
+PDF
+119K
+$0.88
+Working Backwards
+PDF
+175K
+$0.96
+Pro Git
+PDF
+229K
+自动检测失败
+$1.23
+Moby-Dick
+EPUB
+未知
+301K
+自动检测失败
+$1.42
+一本技术书转换成本大概5-10块钱，一次性的，之后每次调用只花极少的token。
+跟RAG和直接灌PDF比，这种东西到底好在哪
+这个问题作者在FAQ里回答的很明白，我直接引他的逻辑：
+跟直接灌PDF比
+：你把一本400页的PDF扔进Claude上下文，约200K token。每个问题、每一轮对话，这200K都要重复处理。book-to-skill处理一次花5元左右，之后每次查询只加载5K。一个500页的Pro Git，token占用差51倍。
+而且LLM在接近满的上下文里检索具体事实会丢精度，这个现象叫"
+lost in the middle
+"。1K精炼过的章节 vs 200K原始文本，哪个回答更准，不需要测试也能猜出来。
+跟RAG比
+：RAG在查询时工作：切块、嵌入、找相似向量、塞进prompt。它擅长"找到提到X的那一段"。
+book-to-skill在编译时工作：一次深度分析提取作者的框架、命名、使用条件、反模式。它回答的是"这个作者构建的12个框架是什么，什么时候用哪个"。
+选哪个取决于场景：几十本书、浅层搜索，RAG合适。一两本书、深度应用，skill合适。它们是互补关系。
+作者还做了一个 "
+Discovery Loop Tax
+" 的基准测试，测量回答一个具体问题token被烧了多少。直接灌PDF（
+Context-dump
+）和Agent自己翻PDF（
+Discovery loop
+） vs book-to-skill：
+Discovery Loop Tax对比
+三本书的测试结果很一致：book-to-skill 比直接灌PDF省24到51倍token，比Agent自己翻书省2.4到15.6倍，章节越大，优势越明显。
+安装和使用
+安装不需要pip，不需要npm，直接git clone。我用Claude Code：
+git clone https://github.com/virgiliojr94/book-to-skill.git ~/.claude/skills/book-to-skill
+或者更简单，直接在Claude Code会话里敲：
+Install book-to-skill: https://raw.githubusercontent.com/virgiliojr94/book-to-skill/master/SKILL.md
+GitHub Copilot CLI用户：
+git clone https://github.com/virgiliojr94/book-to-skill.git ~/.copilot/skills/book-to-skill
+# 然后在copilot会话里：
+/skills reload
+/skills info book-to-skill
+依赖方面，它不强制装任何东西。跑之前可以用&nbsp;
+python3 scripts/extract.py --check
+&nbsp;看哪些提取器已装好、哪些需要补。纯文本格式零依赖。PDF需要pdftotext或docling，EPUB需要ebooklib。缺什么它会告诉你具体装哪个命令。
+使用更简单：
+# 处理一本书，slug自动从文件名生成
+/book-to-skill ~/Downloads/designing-data-intensive-applications.pdf
+# 指定slug
+/book-to-skill ~/books/clean-code.epub clean-code
+# 把多个文件揉成一个skill
+/book-to-skill ~/papers/paper1.pdf ~/notes/export.txt unified-research
+# 整个文件夹一起处理
+/book-to-skill ~/workspace/project-docs/ project-knowledge
+# 增量更新已有skill
+/book-to-skill ~/articles/new-paper.pdf ~/.claude/skills/project-knowledge
+处理完之后直接用：
+/designing-data-intensive-apps
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # 加载核心心智模型
+/designing-data-intensive-apps replication
+&nbsp; &nbsp; &nbsp; &nbsp; # 查具体主题
+/designing-data-intensive-apps ch05
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# 深入第五章
+/designing-data-intensive-apps
+&nbsp;"what chapters do you have?"
+Copilot CLI用户注意：创建完skill后要跑&nbsp;
+/skills reload
+&nbsp;刷新一下。Claude Code和Amp下次启动自动识别。
+一些实际限制需要讲清楚：
+章节自动检测依赖标准格式（"Chapter N" / "Capítulo N"），如果你的书用罗马数字或者纯标题分段，自动检测会失败。书还是能处理，但你需要自己手动指定章节。Pro Git和Moby-Dick就是这种情况，都转换成功了，只是章节索引需要手动操作。
+写在最后
+book-to-skill 解决的是一个真实问题：技术知识读了用不上。它不搞花活，不卖概念，就是把一本书编译成一个Agent Skill，然后你写代码的时候随时能问。
+我装了一个礼拜，把一本技术书和两份使用手册都转成了skill。每次在Claude Code里敲&nbsp;
+/ddia ch05
+&nbsp;的时候，确实觉得这东西补齐了"读书"和"用书"之间那个缺口。
+大家有这方面的需求的话，也可以研究一下这个开源项目。
+GitHub地址：
+https://github.com/virgiliojr94/book-to-skill
+&nbsp;
+点击下方卡片，关注极客之家
+这个公众号曾分享过许多有趣的开源项目。如果你不想逐篇翻阅历史文章，也可以直接关注微信公众号“极客之家”，通过后台留言与我们互动交流
 ',
-                          create_time: '2026-07-29 00:00',
-                          cdn_url: 'https://mmbiz.qpic.cn/sz_mmbiz_jpg/dGaUEDkJRfPP9aMIoE8UWFV69nT4NnzqV7X5UCt1ua7BXmR939LzwQuJ6xmyxxbqJk7vUTGMcNuYFcCFzxtWicGnLCyxYejyF2sL784yia9kk/0?wx_fmt=jpeg',
-                          link: 'https://mp.weixin.qq.com/s/Epmp6XwXQIKaGmHeq9y5Og?nwr_flag=1',
+                          create_time: '2026-06-14 12:05',
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_jpg/38IO1MnhnawDx98kgdF6QVGJwqawPvsSMP1HxHrsg7cEzWjSuibicOOqC2ZLaUibMFPgaaqCsnyRgncsAclacwzmKVDYJq3r8ibqwjneSeHbKwQ/0?wx_fmt=jpeg',
+                          link: 'https://mp.weixin.qq.com/s/6haAPXdwN38rOWx5mnsbIg?nwr_flag=1',
                           source_url: '',
                           can_share: '0' * 1,
-                          alias: 'love_free_thinking',
+                          alias: 'it_coders',
                                   type: '9' * 1,
-                          author: '海石补支刀',
+                          author: '丛林',
                           is_limit_user: '0' * 1,
                                   show_cover_pic: '0' * 1,
                         advertisement_info: [
                   ],
-                                  ori_create_time: '1785254400' * 1,
+                                  ori_create_time: '1781409900' * 1,
                           user_uin: '0',
-                                  total_item_num: '5' * 1,
+                                  total_item_num: '1' * 1,
                                           is_async: '1' * 1,
-                          comment_id: '4624697113988399105',
+                          comment_id: '4559439889293164547',
                                   img_format: 'jpeg',
-                          svr_time: '1785302276' * 1,
+                          svr_time: '1785320854' * 1,
                           copyright_info: {
-                           copyright_stat: '2' * 1,
-                                      platform: '审计实践',
-                                      reprint_url: 'http://mp.weixin.qq.com/s?__biz=MzI3MTA1NTEwNg%3D%3D&amp;mid=2651723791&amp;idx=1&amp;sn=b82ec570491c55e59b048736b9beaf86',
-                                      source_username: 'gh_3e1eaac97857',
-                                      source_headimg: 'https://wx.qlogo.cn/mmhead/Q3auHgzwzM6SovUHwVUTxSDIy8UfibAJ0r0GpALVBWXD5VWhCOFkDBA/0',
-                                      card_pos: '0' * 1,
-                                      reprint_ticket: 'l2wpwFlYQ0hv5XyKOp9jUXNFYNTxbL5lW520Mn0FpjWPuIwDuJhnCwrIzynFU8LE',
-                                      source_mid: '2651723791' * 1,
-                                      source_idx: '1' * 1,
-                                      source_biz: '3271055106' * 1,
-                                                  hide_source: '0' * 1,
-                                                  source_encode_biz: 'MzI3MTA1NTEwNg==',
-                                      guide_words: '',
-                                      reprint_style: '0' * 1,
-                                      reprint_type: '3' * 1,
-                                                                                                                                                  reprint_recommend_title: '',
-                                      reprint_recommend_content_noencode: '',
-                                      profile_description: '实践是检验真理的唯一标准。在实践中总结经验，在经验中提炼技术，在技术中探索方法，在方法中归纳思想。欢迎大家投稿、留言或转发，一起分享审计实践中的经验、技术、方法和思想。交流与合作能够创造和提升审计价值。审计世界，有你更精彩！',
-                                      is_cartoon_copyright: '0' * 1,
+                           copyright_stat: '1' * 1,
+                                                                                                                                                                          ori_article_type: '',
+                                                                                                                                                                                                                                      is_cartoon_copyright: '0' * 1,
                                   },
                           can_reward: '0' * 1,
-                          signature: '无论是财务人员还是审计人员，还是要有点思想的，至少还要想想......',
+                          signature: '关注AI前沿技术，打开技术视野',
                                                                                           in_mm: '1' * 1,
-                          app_id: 'wx7a8a0204861734b9',
+                          app_id: 'wxd6ed0dbfa80ae463',
                                                   show_comment: '0' * 1,
                           can_use_page: '0' * 1,
-                                                  hd_head_img: 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM5WCcW8gicUXy7CljR92g4SibHkGRdrGW6oJNLMicuDSea0w/0',
+                                                  hd_head_img: 'http://wx.qlogo.cn/mmhead/bofA1vl6EUY1ckaHnpJHWTiaEPzYnEzGvEb0FZAb75uTmrNrqFibvQ4WmIErcR0qMlib9P1BaFC618/0',
                           del_reason_id: '0' * 1,
                                                           srcid: '',
                           is_wxg_stuff_uin: '0' * 1,
                                           need_report_cost: '0' * 1,
-                                  bizuin: 'MzI0OTA4MTY1Ng==',
-                          mid: '2651062192' * 1,
+                                  bizuin: 'MzU2MTI4MjI0MQ==',
+                          mid: '2247543961' * 1,
                           idx: '1' * 1,
-                          sn: '9b7d53336b0c0ac49d587cc226af6002',
+                          sn: 'e2238985b9346c2b8529f2f292259431',
                                           use_tx_video_player: '0' * 1,
                                           is_only_read: '1' * 1,
-                                  req_id: '2913A5UlilXGTJ7Iofmo4lt5',
+                                  req_id: '2918HUqNhnKAtL1tXNHaXzEZ',
                                   use_outer_link: '0' * 1,
                           ban_scene: '0' * 1,
-                          csp_nonce_str: '840095636' * 1,
+                          csp_nonce_str: '1211837160' * 1,
                                   msg_daily_idx: '1' * 1,
-                          ori_head_img_url: 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM5WCcW8gicUXy7CljR92g4SibHkGRdrGW6oJNLMicuDSea0w/132',
-                                  filter_time: '1785245673' * 1,
+                          ori_head_img_url: 'http://wx.qlogo.cn/mmhead/bofA1vl6EUY1ckaHnpJHWTiaEPzYnEzGvEb0FZAb75uTmrNrqFibvQ4WmIErcR0qMlib9P1BaFC618/132',
+                                  filter_time: '1781356043' * 1,
                           appmsg_fe_filter: 'contenteditable',
                                                           is_login: '0' * 1,
                                                                           item_show_type: '0' * 1,
@@ -99,6 +259,195 @@
                                                                                   },
                                   malicious_title_reason_id: '0' * 1,
                                 picture_page_info_list: [
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnaxRZhDFDXCM3qmLaFIQLN35jSjs7fbgLYtJtRO9NCic42oZgtNGIQXiafoqh8DQQeUhRdIOsl5n4D1ALpq6a9HCAIdyP47GoCjCs/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '627' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.70418227' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnawnqwFO7F7ic3HpNV3r4ktTw4OQWtz9ACjOWB8f1DTcficS98A2KxIiaVAw67J3zibbaACQKribdZZlXK6EWnXlevPxNELnksZBZcqI/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnaygZo1Xh1QV1SQlsoEMe4NouCHOuZf2AkY6GbgC3FJoVgxWvhwYdfzgV1Bo4Mjaa8bibpSl1HgQSACXJjezXRasm1s4RGCqVGWQ/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '2158' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.89757174' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/sz_mmbiz_png/38IO1Mnhnax8QQ5mAqdz59fsKibTtqdGL8jvRrntFib3Ax7TCv4lmlW0GvlGZBFrcBoNnMZD6ibWmk1Za4h8rvuM8QibicRAw84Hx1ibbdQ06ia54I/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/sz_mmbiz_png/38IO1MnhnaymlKAbjGEtticavQ81Wob4lEshwjt0s1iaFGeYeEjBAFnN4MjWdb8Niazh1xx5GklzW664A5FusHDbl4a30S4icribyQhRLlDicTUNo/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '575' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.90566969' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnaxQIec62s7tKtWTiadUvibbhhGzcgyOgDC3ycaHDjRUun1YEtsMzGcWdesfKyJMRYgJicyv1pkibZHL4Egz8QK29Y9F64QRiaibVCsg0/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnayLJe7Xxghy4bjHcbwHcdu34ibpcepd7jjxyJOy0IkcI20KX6LPGoTOTPKrbSL3oBFEyt5cwJriatqTEtaWUgBVhKtnI3vicKgA5I/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '3234' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '1' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/sz_mmbiz_png/38IO1MnhnazQcxc93MDMspibGr3jc6w2gHCVZxU0tN4Ielv5aIbCSGAtbsV8HYU14m1b7hAt7dcc65WKNnNl86uh6ssPRibMiaLoTSR20EEUwk/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnaxlbA6ZZptNqbzTWw5SXg9AicAqSfQrRq0jv6vDYWSiaSUNKTkaebAoYye9GrIOiaPMnOoKWq8OYk0ibrphMRRTy5HYc8tFRj9pyU4/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '562' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.87688172' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnazvWlFiaEcT2ZRCicFf50bIwCJicvQGulXBnLs4IX8AHjdn8RyYSetnKZdd3wdMo9XRffGDwKAVRHVt2Ria2ibkkqfOI5Sj6YRPaHek/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnawoLPMUYrWTzqskmGPQOyibdRMnicaVAyJH64hQ0PpTfzNY9BibXzwH5wbvo3T7IicPfhy8jvbr7wtAt3kytqkzScHhWzwyWWCS65Y/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '563' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.98534065' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/sz_mmbiz_png/38IO1MnhnaxEQHEFng7RmKomZA1YCryCDE0qt7L7qb8RuTZNPeC9HU86y2tGwuMo6d2J5wSTtwSkRT6oqWbHXfyuFpmZTia6PBPH6PhGDlfQ/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnawFr5rH9JeWOa9SfPXwQLkBJpqXM1rsAWHibRWiaicfua3hp5z2SxxiaqxiaacTe7tztDHE7hh7SgB5nx5jkwyhp4u2UZB4eyPeNcEo/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '573' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.93748885' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnawRibKuKdMtrMeJJSx3Oq77YiabZEpAwvtK8ziafO7aCoibWJsCQ2J2Y79cP6SAxtMq0PgWfiacCOxqGBia1SL14FdJ7ffKbyunmpicVk/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/sz_mmbiz_png/38IO1MnhnayjjnTZACBV5uH1XmJkSriaYOsbbLOsODC6viciavicZSF8xLXdGCIAvyfO3NaqicuIaEnW0Pziceo67Kxc7xKHW5ADaRP23zS4XQzko/640?wx_fmt=png&amp;amp;from=appmsg',
+                                      width: '1080' * 1,
+                                      height: '340' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.97124583' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_png/38IO1MnhnaybXSniaEPIFPSIRYwWT369Exic3HenWric53pMaNaZb8577Uiarm1UhMF2o2XHVokjicNiaPBwmbU3OmpYyPEo4pOOVVPzQvWD1Qaib0/0?wx_fmt=png',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
+                    {
+                          cdn_url: 'https://mmbiz.qpic.cn/sz_mmbiz_jpg/38IO1MnhnaxQPf7Vkjd2PbjuERnnTJQaib0LlTbNtXfzqibP8G7pQIBuCwnlpic7iaN1j80eUnH2kyIGGIrIvXiaG0w246PknvxJ6VJZB7icr8uiaM/640?wx_fmt=jpeg&amp;amp;from=appmsg&amp;amp;watermark=1&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&amp;amp;tp=webp#imgIndex=6',
+                                      width: '1080' * 1,
+                                      height: '2403' * 1,
+                                                poi_info: [
+                          ],
+            wxa_info: [
+                          ],
+                                    bind_ad_info: [
+                          ],
+            cps_ad_info: [
+                          ],
+                                      show_watermark: true,
+                                      bottom_right_brightness: '0.79431796' * 1,
+                                      watermark_info: {
+                                   cdn_url: 'http://mmbiz.qpic.cn/mmbiz_jpg/38IO1Mnhnaxs3H2k7AX7V3SXO6TW5WuicdiaCjXZocQJ5wrRrTLlZO1jb7VEOgyo9ITicO0vicc1eWCLaEQfN8TBQ3sFkNrZwdcPqPSicR17oNkU/0?wx_fmt=jpeg',
+                                                  is_uploader: true,
+                              },
+                        spot_product_info: [
+                          ],
+                                  },
                   ],
                                                   show_msg_voice: '0' * 1,
                                                         locationlist: [
@@ -112,11 +461,11 @@
                 video_ids: [
                   ],
                   isprofileblock: '0' * 1,
-                          cdn_url_235_1: 'https://mmbiz.qpic.cn/sz_mmbiz_jpg/dGaUEDkJRfPP9aMIoE8UWFV69nT4NnzqV7X5UCt1ua7BXmR939LzwQuJ6xmyxxbqJk7vUTGMcNuYFcCFzxtWicGnLCyxYejyF2sL784yia9kk/0?wx_fmt=jpeg',
-                          cdn_url_1_1: 'https://mmbiz.qpic.cn/sz_mmbiz_jpg/dGaUEDkJRfOn4FsplrmnLhFXZbTvIHA1frZJfediacF7XBicNatah1YUb5YtXcS9psj6yIdR68r31GNUBhw0YxibNdEWVfKRD4K0h72OenErYE/0?wx_fmt=jpeg',
+                          cdn_url_235_1: 'https://mmbiz.qpic.cn/mmbiz_jpg/38IO1MnhnawDx98kgdF6QVGJwqawPvsSMP1HxHrsg7cEzWjSuibicOOqC2ZLaUibMFPgaaqCsnyRgncsAclacwzmKVDYJq3r8ibqwjneSeHbKwQ/0?wx_fmt=jpeg',
+                          cdn_url_1_1: 'https://mmbiz.qpic.cn/sz_mmbiz_jpg/38IO1MnhnaxPhaZBCYyKw2bpIC34QIibD0G4RZ07MNicW2QQktmKDtY5SzDO8gUeP6xaSJalPiaPGFlakxZDANibNMVkHLSzIcZaicFu3xnwiahU4/0?wx_fmt=jpeg',
                           more_read_type: '0' * 1,
                           appmsg_like_type: '2' * 1,
-                          ori_send_time: '1785254400' * 1,
+                          ori_send_time: '1781409900' * 1,
                                   show_top_bar: '0' * 1,
                 related_tag: [
                   ],
@@ -138,55 +487,92 @@
                                       search_keyword: {
                  item_list: [
                                     {
-                                          keyword: '金字塔原理',
+                                          keyword: 'Claude Code Skill',
                                         idx_range_list: [
                                             {
-                                                  begin_idx: '9' * 1,
-                                                                          end_idx: '13' * 1,
-                                                                          section_idx: '7' * 1,
+                                                  begin_idx: '66' * 1,
+                                                                          end_idx: '82' * 1,
+                                                                          section_idx: '3' * 1,
                                                                                               },
                                           ],
-                                          s1s_stat_info: '%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%2C%22docid%22%3A%227313630724005144045%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%22%2C%22section_idx%22%3A7%2C%22begin_idx%22%3A9%2C%22end_idx%22%3A13%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E8%81%8C%E5%9C%BA_%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C%3A0.852697%22%2C%22reqId%22%3A15110890709093277703%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2215110890709093277703%22%2C%22orgReqId%22%3A%229775116109051711825%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
-                                                              s1s_context_info: '%7B%22keyword%22%3A%22%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%229775116109051711825%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A7313630724005144576%2C%22publish_time%22%3A1785254400%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A7%2C%22begin_idx%22%3A9%2C%22end_idx%22%3A13%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
+                                          s1s_stat_info: '%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%2C%22docid%22%3A%225723080112438745521%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22Claude%20Code%20Skill%22%2C%22section_idx%22%3A3%2C%22begin_idx%22%3A66%2C%22end_idx%22%3A82%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E7%A7%91%E6%8A%80_%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%3A0.973630%22%2C%22reqId%22%3A14902188961817860202%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2214902188961817860202%22%2C%22orgReqId%22%3A%2214902188961817860202%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
+                                                              s1s_context_info: '%7B%22keyword%22%3A%22claude%20code%20skill%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%2214902188961817860202%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A5723080112438745088%2C%22publish_time%22%3A1781409900%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A3%2C%22begin_idx%22%3A66%2C%22end_idx%22%3A82%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
                                                               s1s_jsapi_name: 'openWXSearchHalfPage',
-                                                              s1s_jsapi_paras: '{"query":"金字塔原理","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
+                                                              s1s_jsapi_paras: '{"query":"Claude Code Skill","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
                                         tags: [
                                           ],
                                       },
                                     {
-                                          keyword: '金字塔结构',
+                                          keyword: '《Clean Code》',
                                         idx_range_list: [
                                             {
-                                                  begin_idx: '14' * 1,
-                                                                          end_idx: '18' * 1,
-                                                                          section_idx: '9' * 1,
+                                                  begin_idx: '67' * 1,
+                                                                          end_idx: '78' * 1,
+                                                                          section_idx: '20' * 1,
                                                                                               },
                                           ],
-                                          s1s_stat_info: '%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%2C%22docid%22%3A%227313630724005144045%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22%E9%87%91%E5%AD%97%E5%A1%94%E7%BB%93%E6%9E%84%22%2C%22section_idx%22%3A9%2C%22begin_idx%22%3A14%2C%22end_idx%22%3A18%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E8%81%8C%E5%9C%BA_%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C%3A0.852697%22%2C%22reqId%22%3A15110890709093277703%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2215110890709093277703%22%2C%22orgReqId%22%3A%229775116109051711825%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
-                                                              s1s_context_info: '%7B%22keyword%22%3A%22%E9%87%91%E5%AD%97%E5%A1%94%E7%BB%93%E6%9E%84%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%229775116109051711825%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A7313630724005144576%2C%22publish_time%22%3A1785254400%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A9%2C%22begin_idx%22%3A14%2C%22end_idx%22%3A18%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
+                                          s1s_stat_info: '%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%2C%22docid%22%3A%225723080112438745521%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22%E3%80%8AClean%20Code%E3%80%8B%22%2C%22section_idx%22%3A20%2C%22begin_idx%22%3A67%2C%22end_idx%22%3A78%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E7%A7%91%E6%8A%80_%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%3A0.973630%22%2C%22reqId%22%3A14902188961817860202%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2214902188961817860202%22%2C%22orgReqId%22%3A%2214902188961817860202%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
+                                                              s1s_context_info: '%7B%22keyword%22%3A%22%E3%80%8Aclean%20code%E3%80%8B%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%2214902188961817860202%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A5723080112438745088%2C%22publish_time%22%3A1781409900%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A20%2C%22begin_idx%22%3A67%2C%22end_idx%22%3A78%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
                                                               s1s_jsapi_name: 'openWXSearchHalfPage',
-                                                              s1s_jsapi_paras: '{"query":"金字塔结构","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
+                                                              s1s_jsapi_paras: '{"query":"《Clean Code》","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
                                         tags: [
                                           ],
                                       },
                                     {
-                                          keyword: '审计价值',
+                                          keyword: 'PyPDF2',
                                         idx_range_list: [
                                             {
-                                                  begin_idx: '56' * 1,
-                                                                          end_idx: '59' * 1,
-                                                                          section_idx: '21' * 1,
+                                                  begin_idx: '43' * 1,
+                                                                          end_idx: '48' * 1,
+                                                                          section_idx: '25' * 1,
                                                                                               },
                                           ],
-                                          s1s_stat_info: '%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%2C%22docid%22%3A%227313630724005144045%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22%E5%AE%A1%E8%AE%A1%E4%BB%B7%E5%80%BC%22%2C%22section_idx%22%3A21%2C%22begin_idx%22%3A56%2C%22end_idx%22%3A59%2C%22type%22%3A64%2C%22baike_docid%22%3A%2214595973250815549769%22%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E8%81%8C%E5%9C%BA_%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C%3A0.852697%22%2C%22reqId%22%3A15110890709093277703%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2215110890709093277703%22%2C%22orgReqId%22%3A%229775116109051711825%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
-                                                              s1s_context_info: '%7B%22keyword%22%3A%22%E5%AE%A1%E8%AE%A1%E4%BB%B7%E5%80%BC%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%229775116109051711825%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3249081656%2C%22msgid%22%3A2651062192%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A7313630724005144576%2C%22publish_time%22%3A1785254400%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A21%2C%22begin_idx%22%3A56%2C%22end_idx%22%3A59%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A64%2C%22needPreRender%22%3Afalse%7D',
+                                          s1s_stat_info: '%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%2C%22docid%22%3A%225723080112438745521%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22PyPDF2%22%2C%22section_idx%22%3A25%2C%22begin_idx%22%3A43%2C%22end_idx%22%3A48%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E7%A7%91%E6%8A%80_%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%3A0.973630%22%2C%22reqId%22%3A14902188961817860202%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2214902188961817860202%22%2C%22orgReqId%22%3A%2214902188961817860202%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
+                                                              s1s_context_info: '%7B%22keyword%22%3A%22pypdf2%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%2214902188961817860202%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A5723080112438745088%2C%22publish_time%22%3A1781409900%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A25%2C%22begin_idx%22%3A43%2C%22end_idx%22%3A48%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
                                                               s1s_jsapi_name: 'openWXSearchHalfPage',
-                                                              s1s_jsapi_paras: '{"query":"审计价值","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
+                                                              s1s_jsapi_paras: '{"query":"PyPDF2","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
+                                        tags: [
+                                          ],
+                                      },
+                                    {
+                                          keyword: 'RFC',
+                                        idx_range_list: [
+                                            {
+                                                  begin_idx: '80' * 1,
+                                                                          end_idx: '82' * 1,
+                                                                          section_idx: '40' * 1,
+                                                                                              },
+                                          ],
+                                          s1s_stat_info: '%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%2C%22docid%22%3A%225723080112438745521%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22RFC%22%2C%22section_idx%22%3A40%2C%22begin_idx%22%3A80%2C%22end_idx%22%3A82%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E7%A7%91%E6%8A%80_%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%3A0.973630%22%2C%22reqId%22%3A14902188961817860202%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2214902188961817860202%22%2C%22orgReqId%22%3A%2214902188961817860202%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
+                                                              s1s_context_info: '%7B%22keyword%22%3A%22rfc%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%2214902188961817860202%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A5723080112438745088%2C%22publish_time%22%3A1781409900%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A40%2C%22begin_idx%22%3A80%2C%22end_idx%22%3A82%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
+                                                              s1s_jsapi_name: 'openWXSearchHalfPage',
+                                                              s1s_jsapi_paras: '{"query":"RFC","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
+                                        tags: [
+                                          ],
+                                      },
+                                    {
+                                          keyword: 'ebooklib',
+                                        idx_range_list: [
+                                            {
+                                                  begin_idx: '84' * 1,
+                                                                          end_idx: '91' * 1,
+                                                                          section_idx: '49' * 1,
+                                                                                              },
+                                            {
+                                                  begin_idx: '111' * 1,
+                                                                          end_idx: '118' * 1,
+                                                                          section_idx: '75' * 1,
+                                                                                              },
+                                          ],
+                                          s1s_stat_info: '%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%2C%22docid%22%3A%225723080112438745521%22%2C%22keywordItem%22%3A%7B%22keyword%22%3A%22ebooklib%22%2C%22section_idx%22%3A49%2C%22begin_idx%22%3A84%2C%22end_idx%22%3A91%2C%22type%22%3A1024%2C%22lemma_id%22%3A%22%22%7D%2C%22category%22%3A%22%E7%A7%91%E6%8A%80_%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%3A0.973630%22%2C%22reqId%22%3A14902188961817860202%2C%22S1SPageType%22%3A1%2C%22strReqId%22%3A%2214902188961817860202%22%2C%22orgReqId%22%3A%2214902188961817860202%22%2C%22item_show_type%22%3A0%2C%22common_value_expt%22%3A0%2C%22highlight_preload%22%3A0%7D',
+                                                              s1s_context_info: '%7B%22keyword%22%3A%22ebooklib%22%2C%22isNeedUpdateGPTInfo%22%3Afalse%2C%22S1SPageType%22%3A1%2C%22search_id%22%3A%2214902188961817860202%22%2C%22doc_info%22%3A%7B%22triple%22%3A%7B%22bizuin%22%3A3561282241%2C%22msgid%22%3A2247543961%2C%22msgidx%22%3A1%7D%2C%22docid%22%3A5723080112438745088%2C%22publish_time%22%3A1781409900%7D%2C%22idx_range%22%3A%7B%22section_idx%22%3A49%2C%22begin_idx%22%3A84%2C%22end_idx%22%3A91%7D%2C%22expt_value%22%3A4294967295%2C%22source%22%3A1024%2C%22needPreRender%22%3Afalse%7D',
+                                                              s1s_jsapi_name: 'openWXSearchHalfPage',
+                                                              s1s_jsapi_paras: '{"query":"ebooklib","scene":139,"hiddenSearchHeader":0,"webviewHeightRatio":0.699999988,"kvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"firstSearchRequest","uintValue":1},{"key":"MPHalfSearchAIBox","uintValue":3}],"sessionKvItems":[{"key":"mpEndHalfPageResultTab","textValue":"0"},{"key":"MPHalfSearchAIBox","uintValue":3}],"parentType":135,"isAutoShowUnitInHalfScreen":1}',
                                         tags: [
                                           ],
                                       },
                                   ],
-                                  exp_info: 'CLiapI0MELD/j/AJGAEiEzczMTM2MzA3MjQwMDUxNDQwNDUo0aLnsfeJjNSHAQ==',
+                                  exp_info: 'CMG1k6INEJmZ268IGAEiEzU3MjMwODAxMTI0Mzg3NDU1MjEo6rCap/28zefOAQ==',
                                                   need_baike_preload: true,
                                                   show_ad_keyword: false,
                                 ad_item_list: [
@@ -274,6 +660,27 @@
                                   },
                 video_in_article: [
                   ],
+                  appmsgalbuminfo: {
+                           album_id: '4467953767321321478',
+                                      title: '拥抱AI',
+                                      link: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2MTI4MjI0MQ==&amp;action=getalbum&amp;album_id=4467953767321321478#wechat_redirect',
+                                      isupdating: '1' * 1,
+                                      content_size: '97' * 1,
+                                      fee: '0' * 1,
+                                      album_needpay: '0' * 1,
+                                      appmsg_needpay: '0' * 1,
+                                                  type: '0' * 1,
+                                      continous_read_on: '1' * 1,
+                                                                        article_titles: [
+                          ],
+                                                  pre_article_link: 'http://mp.weixin.qq.com/s?__biz=MzU2MTI4MjI0MQ==&amp;mid=2247543925&amp;idx=1&amp;sn=c267a59eb964d64942ad61fd4b951363&amp;chksm=fc7941dbcb0ec8cda914d2f86571e4f7cc4c58a4f9ac8575c87cc2a9d0fee105fb5f6cdc4b6c#wechat_redirect',
+                                      next_article_link: 'http://mp.weixin.qq.com/s?__biz=MzU2MTI4MjI0MQ==&amp;mid=2247543979&amp;idx=1&amp;sn=f40341585320c8f0bce1ac298ddfe36b&amp;chksm=fc794105cb0ec813c4aaa48095cfc9aa9210a2e429c8b61e75c0992162278c28f21a78de1e91#wechat_redirect',
+                                      pre_article_title: 'GitHub 2.2万 Star！阿里这个开源项目，输入一句话就能全自动出视频',
+                                      next_article_title: '挖到一个顶级Skill：一个 API Key，打通亚马逊135个运营场景！',
+                                      album_id_str: '4467953767321321478',
+                                      is_wxa_novel: false,
+                                                                                                                          category_playlist_info_base64: 'ChttcGFsYnVtLTQ0Njc5NTM3NjczMjEzMjE0NzgQEBgCIgblkIjpm4ZIAg==',
+                                  },
                           is_area_shield: '0' * 1,
                 shield_areaids: [
                   ],
@@ -283,11 +690,54 @@
                         anchor_tree: [
                   ],
                   voice_in_appmsg_list_json: '{"voice_in_appmsg":[]}',
-                                                        live_info: [
+                                  public_tag_info: {
+             tags: [
+                            {
+                                                  tag_name: '拥抱AI',
+                                                  tag_link: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2MTI4MjI0MQ==&amp;action=getalbum&amp;album_id=4467953767321321478#wechat_redirect',
+                                                  tag_content_num: '97' * 1,
+                                                  album_id: '4467953767321321478',
+                                                  album_info: {
+                                           album_id: '4467953767321321478',
+                                                              title: '拥抱AI',
+                                                              link: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2MTI4MjI0MQ==&amp;action=getalbum&amp;album_id=4467953767321321478#wechat_redirect',
+                                                              isupdating: '1' * 1,
+                                                              content_size: '97' * 1,
+                                                              fee: '0' * 1,
+                                                              album_needpay: '0' * 1,
+                                                              appmsg_needpay: '0' * 1,
+                                                                                  type: '0' * 1,
+                                                              continous_read_on: '1' * 1,
+                                                                                                                        article_titles: [
+                                          ],
+                                                                                                                                                                  album_id_str: '4467953767321321478',
+                                                                                                                                                                                  },
+                              },
+                          ],
+                      },
+                                        live_info: [
                   ],
                   lang: 'zh_CN',
                                                   cdn_url_16_9: '',
-                                                  real_item_show_type: '0' * 1,
+                                  biz_card: {
+             list: [
+                            {
+                                  fakeid: 'MzU2MTI4MjI0MQ==',
+                                                  nickname: '极客之家',
+                                                  alias: 'it_coders',
+                                                  round_head_img: 'http://mmbiz.qpic.cn/sz_mmbiz_png/JfTPiahTHJhp1RSMPS78byA7SUsUZ2aXgB4Re6DxTibld0ia5swXTdML4fsOnibESawcvVqTffDEQFTQibTxSejxzNg/0?wx_fmt=png',
+                                                  service_type: '0' * 1,
+                                                  signature: '关注AI前沿技术，打开技术视野',
+                                                  orignal_num: '422' * 1,
+                                                  is_biz_ban: '0' * 1,
+                                                  username: 'gh_b21c83335f93',
+                                                  biz_account_status: '0' * 1,
+                                                  verify_status: '0' * 1,
+                              },
+                          ],
+                          total: '1' * 1,
+                      },
+                                  real_item_show_type: '0' * 1,
                           url_item_show_type: '0' * 1,
                 video_page_infos: [
                   ],
@@ -296,41 +746,43 @@
                                           front_end_additional_fields: {
                            is_auto_type_setting: '3' * 1,
                                                   save_type: '0' * 1,
-                                      template_version: '39619005',
+                                      template_version: '69631589',
                       },
                           open_fansmsg: '0' * 1,
                           is_cooling_appmsg: '0' * 1,
                           ip_wording: {
                            country_name: '中国',
                                       country_id: '156',
-                                      province_name: '北京',
+                                      province_name: '山西',
                                                           },
                           show_ip_wording: '1' * 1,
                           is_acct_area_shield: '0' * 1,
                 shield_acct_areaids: [
                   ],
-                          origin_type_setting: '3' * 1,
-                          reprint_editable: '1' * 1,
-                          origin_style_type: '3' * 1,
-                          style_type: '3' * 1,
+                                                  style_type: '3' * 1,
                 shield_areas_info: [
                   ],
-                                          create_timestamp: '1785254400' * 1,
+                                          create_timestamp: '1781409900' * 1,
                                                         picture_list_in_pictext: [
                   ],
                   servicetype: '0' * 1,
-                          segment_comment_id: '4624697132829212672',
+                          segment_comment_id: '4559439902127734785',
                                                           ad_mark_status: '0' * 1,
                           hide_ad_mark_on_cps: '0' * 1,
                           finder_audio_card: '{"list":[]}',
                                   claim_source: {
                                                                            is_user_no_claim_source: '1' * 1,
                                               },
-                                                  extra_comment_id: '4624697132242010116',
+                                          at_biz_list: {
+             list: [
+                          ],
+                          total: '0' * 1,
+                      },
+                          extra_comment_id: '4559439901540532224',
                 last_text: [
                   ],
                   wash_status: '0' * 1,
-                                                  enterid: '1785302276' * 1,
+                                                  enterid: '1785320854' * 1,
                         zhuge_qa_id_list: [
                   ],
                                   sec_control_info: {
@@ -361,9 +813,9 @@
                           verify_status: '0' * 1,
                           is_phacct_verify: '0' * 1,
          
-                          watermark_setting: '3' * 1,
+                          watermark_setting: '2' * 1,
                                           title_gen_type: '0' * 1,
-                                  appmsg_listen_id: '150446888251952917',
+                                  appmsg_listen_id: '150442951494283068',
                           trans_appmsg_info: {
                                    },
                           location: {
@@ -374,7 +826,7 @@
                   ],
                   footer_product_card: {
                                    },
-                          desc_empty: false,
+                          desc_empty: true,
                                   hashtags: {
              hashtag: [
                           ],
@@ -1139,36 +1591,211 @@ var write_sceen_time = (+new Date());
  
   var interaction_url = '';
   var underline_url= '';
-审计报告被批“没深度”、“难落地”？你缺的不是文笔，而是“价值翻译”的思维
-财审思想
+夯爆了！这个开源神器把任意书籍转成 Skill，轻松打造专业的随身顾问
+原创
+丛林
+丛林
+极客之家
 在小说阅读器读本章
 去阅读
 在小说阅读器中沉浸阅读
-以下文章来源于审计实践
-，作者海石补支刀
-审计实践
-实践是检验真理的唯一标准。在实践中总结经验，在经验中提炼技术，在技术中探索方法，在方法中归纳思想。欢迎大家投稿、留言或转发，一起分享审计实践中的经验、技术、方法和思想。交流与合作能够创造和提升审计价值。审计世界，有你更精彩！
-一份刚被退回的审计报告摊在桌上，领导的批注只有寥寥几行字：“问题描述太长，结论太模糊，建议太空泛。你到底想让我知道什么？我又该做什么？”你盯着这行字，心里满是挫败。明明在审计现场熬了无数个夜，明明把问题查得清清楚楚，为什么写出来却变得如此苍白无力？
-这不是文笔的问题，这是审计写作最扎心的真相：审计写作的本质，不是“写清楚”，而是“翻译准”——把审计专业语言翻译成管理层决策语言，把风险信号翻译成业务影响，把碎片化问题翻译成系统性建议。
-审计行业的写作能力正在被重新定义。随着大模型可以批量生成审计报告初稿，“写出来”不再是核心竞争力，“写出价值”才是。今天，我们不谈公文格式，只聚焦审计人如何通过四个维度的修炼，将一份合规的报告升级为一份让管理层无法忽视的决策参考。
-一、破除“审计腔”：用决策者的语言写报告
-审计报告的第一读者不是审计同行，而是管理层。他们关心的是这件事对我的经营目标有什么影响，我需要为此做什么决定，不做的后果是什么。而太多的报告都在写“我们做了什么程序，发现了什么问题”，唯独没有回答这三个问题。
-某央企审计部在一次采购审计中，初稿写的是“发现部分采购未严格执行三家比价制度”。修改后变成：“我们发现，过去一年约有X%的采购未进行充分比价，保守估计导致采购成本多支出了Y万元。如果不立即收紧制度，按全年采购规模推算，明年可能继续损失Z万元。我们建议在两周内完成采购制度的修订，预计可以立即节省成本。”同样的发现，改写法后管理层立刻坐直了。
-破除“审计腔”有一个简单的“电梯测验”：如果你只有30秒向CEO汇报这个审计发现，你会说什么？这个答案就是你报告的第一句话。每一条审计发现，都先想清楚“对经营目标的影响是什么”“不整改的后果是什么”，再动笔写“问题是什么”。
-二、重建报告结构：金字塔原理让结论先行
-很多审计报告沿袭了公文写作习惯：背景、过程、发现、结论。但决策层读者需要的顺序恰恰相反——先看结论，再决定要不要往下看细节。把最重要的判断放在第一页，不是摘要，是判断。
-采用“结论先行、层层支撑”的金字塔结构。第一层，核心结论，用一两句话概括审计整体判断。第二层，关键发现，列出最重要的几个风险及影响。第三层，支撑细节，每一项发现的具体证据和分析过程。
-某金融集团审计部在向审计委员会汇报时，第一页PPT永远是“本次审计最重要的三个发现及建议”，每个发现不超过三行字。委员们如果需要深入了解，再翻到后面的详细分析。这套方法让他们审计建议的采纳率大幅提升。
-三、让问题自己说话：用事实和数据的威力替代形容词
-“管理混乱”“存在漏洞”“执行不力”，这些审计报告里最常见的措辞，恰恰是最无力的表达。“混乱”是结论不是事实，“漏洞”是定性不是证据。
-某国企审计部在报告中描述采购问题时，没有写“采购管理不规范”，而是写“在抽查的50笔采购中，有12笔缺少比价记录，涉及金额多少万元；6笔合同的签订日期晚于货物实际交付日期，其中3笔倒签超过30天”。这段文字没有用一个形容词，但所有读到它的人都清楚问题的严重性。
-把每一个形容词或程度副词“显著”“明显”“较为”替换成具体数据。不知道具体数据，说明事实还没查清楚；查清楚了，数据自然会替你说话。
-四、从“要做什么”到“怎么做”：建议的颗粒度决定落地的速度
-很多审计建议的终点是“建议加强管理”，被审计单位的整改回复是“已加强管理”。问题在于，你根本没告诉他“怎么加强”，他也不知道“什么叫加强”。建议的颗粒度，直接决定了整改的落地率。
-一份高质量的审计建议，必须具备三个要素：责任主体是谁、完成时限是什么、验证标准是什么。比如，把“建议完善合同管理”升级为“建议法务部在6月30日前完成标准合同模板的修订，新模板增加XX条款；此后所有新签合同必须使用新模板，审计部将在第三季度抽查验证”。
-最后，一个简单实用的“五分钟写作法则”可以帮你快速提升报告质量。用一分钟先说结论，用三分钟写清楚最核心的风险是什么、不整改的后果是什么，用一分钟给出谁来做、什么时候做完、怎么验证做完。
-审计写作力的本质，不是文字的堆砌，而是思想的呈现。当你把审计专业术语翻译成管理层关心的价值语言，把碎片化的问题提炼成系统性的风险洞察，把泛泛的建议拆解成可执行的动作，你的审计报告就不再是躺在档案柜里的合规文件，而是管理层决策桌上不可或缺的参考。
-写作不是为了展示你多会写，而是为了让你的发现被看见、你的判断被重视、你的建议被采纳。你笔下的每一个字，都是为你的审计价值在投票。从今天开始，用这四个维度重新审视你的每一份报告，你会发现，审计写作的困局从来不是文笔的问题，而是思维的问题。思维一转，天地自宽。
+&nbsp;
+字数 2591，阅读大约需 13 分钟
+我硬盘里躺着大概四五十本技术书PDF，买的时候雄心壮志，三个月后连第七章讲什么都说不上来，极大的浪费。
+有个开源项目&nbsp;
+book-to-skill
+，GitHub 5.3k star。它干了一件事：
+把技术书PDF丢进去，吐出来一个结构化的 Claude Code Skill。
+&nbsp;写代码时打&nbsp;
+/your-book-slug replication
+，Claude Code 从书里找出对应章节回答你。
+book-to-skill到底干了什么
+它不是一个PDF阅读器，也不是一个笔记工具。它是一个编译管线：把一本书（或一堆文档）吃进去，吐出来一个完整的 Agent Skill。
+book-to-skill 把技术书、文档文件夹，甚至一堆资料，转换成 Claude Code 的 Skill。生成后放在&nbsp;
+~/.claude/skills/&lt;slug&gt;/
+&nbsp;下面，里面不只是全文摘录，而是拆成&nbsp;
+SKILL.md
+、章节摘要、术语表、patterns、cheatsheet 这些文件，用到哪章，加载哪章。
+book-to-skill 跑完之后，我们的 skills 目录里会多出这些东西：
+•&nbsp;
+SKILL.md
+：核心心智模型 + 章节索引，约4000 token
+•&nbsp;
+chapters/
+：每章一个文件，每个约800-1200 token，按需加载
+•&nbsp;
+glossary.md
+：所有关键术语，按字母排好，标了章节出处
+•&nbsp;
+patterns.md
+：书里所有的技术模式、算法、设计模式
+•&nbsp;
+cheatsheet.md
+：决策表和速查规则
+这套结构的精妙之处在哪？章节文件是按需加载的，你不问第五章，第五章的文件就躺在硬盘上不占token。只有你&nbsp;
+/book-slug ch05
+&nbsp;的时候，Claude Code 才去读那一个文件。
+对比一下常规操作：把一本400页的PDF直接扔进Claude上下文窗口，200K token一次性烧完，每个问题、每一轮对话都重复烧。book-to-skill 只在第一次处理时烧token，之后每次查询只加载4K核心 + 1K目标章节。
+功能详情
+book-to-skill功能总览
+1. 支持绝大部分格式
+PDF、EPUB、DOCX、TXT、Markdown、reStructuredText、AsciiDoc、HTML、RTF、MOBI/AZW/AZW3。
+我在自己机器上试了，一本PDF格式的《Designing Data-Intensive Applications》，一本EPUB格式的《Clean Code》，都跑通了。纯文本格式（txt、md、rst）不需要额外依赖，PDF和EPUB需要装对应的提取工具。
+2. 智能选提取器，不傻跑
+这是我觉得做得最聪明的地方。book-to-skill 处理PDF之前会先问：这本书是技术书还是纯文本？
+技术书（有代码、表格、公式）走 Docling 这条线，约1.5秒一页，但能保留markdown表格和代码块。
+纯文本走 pdftotext，秒出。pdftotext 没装？自动fallback到 PyPDF2，再不行用 pdfminer.six。
+我在一台Mac上跑了一本103页的技术书做基准测试，结果长这样：
+方法
+时间
+Token数
+表格
+代码块
+pdftotext
+0.1s
+27K
+Docling
+164s
+27K (+1.2%)
+Docling慢很多，但表格和代码块全保住了。pdftotext快但丢掉了所有结构化内容，选哪个取决于你的书长什么样。
+这个"先问再跑"的设计比那些无脑一个方案走到底的工具聪明多了。
+3. 输出不是摘要，是结构
+book-to-skill 不在那给你总结"这本书讲了分布式系统的设计原则"这种废话。它提取的是作者花几年时间搭建的框架：命名的模式、精确的表述、反模式清单。
+作者定了七条质量原则，我挑几条最说明问题的：
+•&nbsp;
+密度优先于完整
+：一份1000 token的摘要比一份10000 token的摘录强
+•&nbsp;
+实践者口吻
+：输出是"用X当Y"，不是"本书解释了X"
+•&nbsp;
+永远不复制原文
+：始终合成、总结、从源头提取信号
+翻译成人话：book-to-skill 产出的东西像你认真读过这本书之后做的笔记，不是把书拆碎了重新排列。
+架构图
+4. 用途不止是书
+名字叫 book-to-skill，但输入可以是任何结构化文字。把整个&nbsp;
+docs/
+&nbsp;文件夹揉成一个skill，写代码的时候直接问，你的架构决策记录、运维手册、新人指南就从一个"偶尔翻翻"的文件夹变成了你工作流里随时能调用的东西。
+品牌书也能转，视觉规范、文案语调、组件原则变成一个团队共享的skill，比翻60页PDF快多了。论文集群加自己的笔记合并成一个skill，新论文来了还能往里加。RFC、API合约、合规文档这些你反复引用但永远记不住的东西，同样适合。
+只要你反复打开同一个文档、每次都想"要是记住就好了"，这东西就适合做成skill。
+5. 增量更新，不是一次性
+生成的skill不是死的。你买了新版的PDF、读了一篇新论文、写了新笔记，可以直接fold进去：
+/book-to-skill ~/articles/new-paper.pdf ~/.claude/skills/project-knowledge
+指向已有的skill目录，它会识别出来，把新内容合并进去。这个设计让skill变成了一个活的、随时间增长的知识库，而不是一次性快照。
+工作流程：一次编译，到处查询
+book-to-skill 的管线分成10步，我把它简化成几个关键阶段说清楚：
+提取阶段
+：你敲&nbsp;
+/book-to-skill your-book.pdf
+，它先问你技术书还是纯文本，然后选提取器。PDF用Docling/pdftotext，EPUB用ebooklib，DOCX用python-docx，以此类推。提取出来的纯文本写到一个临时文件里，同时生成metadata。
+分析阶段
+：Claude读这个文本，识别书名、作者、章节结构、核心主题。如果章节标题是标准格式（"Chapter N" / "第N章"），自动分段。如果不是，也能处理，只是章节索引需要手动指定。
+生成阶段
+：这步是核心。它对每一章做深度分析，生成800-1200 token的章节摘要，包括代码示例和参考表格（技术书的话）。同时生成glossary（所有术语）、patterns（设计模式/算法）、cheatsheet（速查表）。最后生成一个约4000 token的SKILL.md主文件，里面是核心心智模型加上章节索引。
+交付阶段
+：整个skill写到你Agent的skills目录。Claude Code是&nbsp;
+~/.claude/skills/&lt;slug&gt;/
+，Copilot CLI是&nbsp;
+~/.copilot/skills/&lt;slug&gt;/
+，Amp和跨Agent的在&nbsp;
+~/.agents/skills/&lt;slug&gt;/
+，临时文件清理掉。
+贴一组真实数据，作者跑了几本书的转换，用的是Claude Sonnet 4.5：
+格式
+页数
+Token
+章节
+约花费
+Think Python 2
+PDF
+119K
+$0.88
+Working Backwards
+PDF
+175K
+$0.96
+Pro Git
+PDF
+229K
+自动检测失败
+$1.23
+Moby-Dick
+EPUB
+未知
+301K
+自动检测失败
+$1.42
+一本技术书转换成本大概5-10块钱，一次性的，之后每次调用只花极少的token。
+跟RAG和直接灌PDF比，这种东西到底好在哪
+这个问题作者在FAQ里回答的很明白，我直接引他的逻辑：
+跟直接灌PDF比
+：你把一本400页的PDF扔进Claude上下文，约200K token。每个问题、每一轮对话，这200K都要重复处理。book-to-skill处理一次花5元左右，之后每次查询只加载5K。一个500页的Pro Git，token占用差51倍。
+而且LLM在接近满的上下文里检索具体事实会丢精度，这个现象叫"
+lost in the middle
+"。1K精炼过的章节 vs 200K原始文本，哪个回答更准，不需要测试也能猜出来。
+跟RAG比
+：RAG在查询时工作：切块、嵌入、找相似向量、塞进prompt。它擅长"找到提到X的那一段"。
+book-to-skill在编译时工作：一次深度分析提取作者的框架、命名、使用条件、反模式。它回答的是"这个作者构建的12个框架是什么，什么时候用哪个"。
+选哪个取决于场景：几十本书、浅层搜索，RAG合适。一两本书、深度应用，skill合适。它们是互补关系。
+作者还做了一个 "
+Discovery Loop Tax
+" 的基准测试，测量回答一个具体问题token被烧了多少。直接灌PDF（
+Context-dump
+）和Agent自己翻PDF（
+Discovery loop
+） vs book-to-skill：
+Discovery Loop Tax对比
+三本书的测试结果很一致：book-to-skill 比直接灌PDF省24到51倍token，比Agent自己翻书省2.4到15.6倍，章节越大，优势越明显。
+安装和使用
+安装不需要pip，不需要npm，直接git clone。我用Claude Code：
+git clone https://github.com/virgiliojr94/book-to-skill.git ~/.claude/skills/book-to-skill
+或者更简单，直接在Claude Code会话里敲：
+Install book-to-skill: https://raw.githubusercontent.com/virgiliojr94/book-to-skill/master/SKILL.md
+GitHub Copilot CLI用户：
+git clone https://github.com/virgiliojr94/book-to-skill.git ~/.copilot/skills/book-to-skill
+# 然后在copilot会话里：
+/skills reload
+/skills info book-to-skill
+依赖方面，它不强制装任何东西。跑之前可以用&nbsp;
+python3 scripts/extract.py --check
+&nbsp;看哪些提取器已装好、哪些需要补。纯文本格式零依赖。PDF需要pdftotext或docling，EPUB需要ebooklib。缺什么它会告诉你具体装哪个命令。
+使用更简单：
+# 处理一本书，slug自动从文件名生成
+/book-to-skill ~/Downloads/designing-data-intensive-applications.pdf
+# 指定slug
+/book-to-skill ~/books/clean-code.epub clean-code
+# 把多个文件揉成一个skill
+/book-to-skill ~/papers/paper1.pdf ~/notes/export.txt unified-research
+# 整个文件夹一起处理
+/book-to-skill ~/workspace/project-docs/ project-knowledge
+# 增量更新已有skill
+/book-to-skill ~/articles/new-paper.pdf ~/.claude/skills/project-knowledge
+处理完之后直接用：
+/designing-data-intensive-apps
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # 加载核心心智模型
+/designing-data-intensive-apps replication
+&nbsp; &nbsp; &nbsp; &nbsp; # 查具体主题
+/designing-data-intensive-apps ch05
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# 深入第五章
+/designing-data-intensive-apps
+&nbsp;"what chapters do you have?"
+Copilot CLI用户注意：创建完skill后要跑&nbsp;
+/skills reload
+&nbsp;刷新一下。Claude Code和Amp下次启动自动识别。
+一些实际限制需要讲清楚：
+章节自动检测依赖标准格式（"Chapter N" / "Capítulo N"），如果你的书用罗马数字或者纯标题分段，自动检测会失败。书还是能处理，但你需要自己手动指定章节。Pro Git和Moby-Dick就是这种情况，都转换成功了，只是章节索引需要手动操作。
+写在最后
+book-to-skill 解决的是一个真实问题：技术知识读了用不上。它不搞花活，不卖概念，就是把一本书编译成一个Agent Skill，然后你写代码的时候随时能问。
+我装了一个礼拜，把一本技术书和两份使用手册都转成了skill。每次在Claude Code里敲&nbsp;
+/ddia ch05
+&nbsp;的时候，确实觉得这东西补齐了"读书"和"用书"之间那个缺口。
+大家有这方面的需求的话，也可以研究一下这个开源项目。
+GitHub地址：
+https://github.com/virgiliojr94/book-to-skill
+&nbsp;
+点击下方卡片，关注极客之家
+这个公众号曾分享过许多有趣的开源项目。如果你不想逐篇翻阅历史文章，也可以直接关注微信公众号“极客之家”，通过后台留言与我们互动交流
 var first_sceen__time = (+new Date());
             if ("" == 1 && document.getElementById('js_content')) {
               document.getElementById('js_content').addEventListener("selectstart",function(e){ e.preventDefault(); });
@@ -1244,7 +1871,7 @@ try {
     var node = document.createElement('SCRIPT');
     node.type = 'text/javascript';
     node.src = uri;
-    node.setAttribute('nonce', '840095636');
+    node.setAttribute('nonce', '1211837160');
     if (cb) {
       node.onload = cb;
     }
@@ -5401,7 +6028,7 @@ lastSlashPos) {
       export_id: '',
       source: '' * 1,
       item_show_type: '0' * 1,
-      ori_create_time: '1785254400' * 1
+      ori_create_time: '1781409900' * 1
     };
     __setBarData(tmpAppmsgBarData, cgiData, cgiDataNew);
     window.__setBarData = __setBarData;
@@ -7852,9 +8479,9 @@ rectA.bottom);
     }
   };
   if (!window.__second_open__) {
-    var svrDate = '1785302276';
-    var oriCreateTime = '1785254400';
-    var createTime = '2026-07-29 00:00';
+    var svrDate = '1785320854';
+    var oriCreateTime = '1781409900';
+    var createTime = '2026-06-14 12:05';
     var itemShowType = window.a_value_which_never_exists || '0';
     __setPubTime(svrDate, oriCreateTime, createTime, document.getElementById('publish_time'), itemShowType);
     window.__setPubTime = __setPubTime;
@@ -8089,9 +8716,9 @@ parent_width ? parent_width : width,
 
       
 
-      var mid = "" || "" || "2651062192";
-      var biz = "" || "MzI0OTA4MTY1Ng==";
-      var sessionid = "" || "svr_f48a4717fd2";
+      var mid = "" || "" || "2247543961";
+      var biz = "" || "MzU2MTI4MjI0MQ==";
+      var sessionid = "" || "svr_6236d866299";
       var idx = "" || "1";
       var hitInfos = [
               ];
@@ -8105,7 +8732,7 @@ parent_width ? parent_width : width,
         var hit_username = ret.hit_username;
         var sourceBiz = ret.hit_bizuin;
 
-        var selfUserName = "gh_38580a48705a";
+        var selfUserName = "gh_b21c83335f93";
 
         if (ori === 2 && selfUserName !== hit_username) {
           var videoBar = document.createElement('div');

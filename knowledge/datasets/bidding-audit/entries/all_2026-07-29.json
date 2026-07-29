@@ -1,0 +1,1096 @@
+[
+  {
+    "id": "DM-BID-0001",
+    "type": "detection_method",
+    "name": "报价规律异常检测",
+    "alias": "L1-报价规律",
+    "layer": "L1",
+    "confidence_level": "铁证",
+    "method_description": "提取所有投标人的报价，计算报价偏离度（对基准价的偏离百分比），使用聚类算法检测异常报价模式。出现等差/等比排列、三家报价围绕某一值对称分布等非自然模式时判定异常。",
+    "detection_logic": "偏离度 = (投标价 - 基准价) / 基准价 × 100%。对偏离度向量做DBSCAN聚类，eps=3%，min_samples=2。孤立点为异常报价。对异常报价组做报价差值等差数列检测。",
+    "input_data": {
+      "primary": [
+        "开标一览表（含所有投标人报价）",
+        "招标控制价/最高限价"
+      ],
+      "optional": [
+        "历史同类项目中标价",
+        "各投标人分项报价明细"
+      ]
+    },
+    "output": {
+      "format": "异常报价组列表+偏离度矩阵+报价分布图",
+      "fields": [
+        "supplier_group",
+        "deviation_matrix",
+        "pattern_type",
+        "confidence"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "DBSCAN聚类 + 等差/等比序列检测",
+      "threshold": {
+        "eps": 3.0,
+        "min_samples": 2,
+        "等差容差": "0.5%"
+      },
+      "library": "sklearn.cluster.DBSCAN",
+      "code_snippet": "from sklearn.cluster import DBSCAN\nX = deviation_pcts.reshape(-1,1)\nclusters = DBSCAN(eps=3, min_samples=2).fit_predict(X)"
+    },
+    "false_positive_risks": [
+      "市场行情剧烈波动导致报价自然集中",
+      "技术门槛低导致多家报出接近底价"
+    ],
+    "combination_rules": [
+      "与L3文本雷同组合→报价协同+文本同源→铁证",
+      "与L8工商关联组合→报价协同+关联关系→必查"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "报价",
+      "偏离度",
+      "DBSCAN",
+      "聚类",
+      "等差报价",
+      "围标"
+    ],
+    "related_methods": [
+      "DM-BID-0003",
+      "DM-BID-0008"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0003",
+    "type": "detection_method",
+    "name": "投标文件文本雷同检测（TF-IDF+笔误指纹增强）",
+    "alias": "L3-文本雷同",
+    "layer": "L3",
+    "confidence_level": "铁证",
+    "method_description": "对投标文件技术方案全文做TF-IDF向量化，计算两两余弦相似度。增强版新增'共同错别字并集分析'：排除模板化套话后，检测多份文件中的共同笔误（错别字、不规范缩写、术语偏好），人的语言习惯无法伪造。",
+    "detection_logic": "TF-IDF: 相似度≥0.75→雷同。笔误增强: jieba分词→停用词+模板词去除→多文件错别字交集≥3个→同人撰写。",
+    "input_data": {
+      "primary": [
+        "投标文件技术方案全文（电子版）"
+      ],
+      "optional": [
+        "投标文件商务标"
+      ]
+    },
+    "output": {
+      "format": "相似度矩阵+共同错别字清单+笔误指纹报告",
+      "fields": [
+        "similarity_matrix",
+        "common_typos",
+        "idiosyncratic_terms"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "TF-IDF + Cosine Similarity + jieba笔误检测",
+      "threshold": {
+        "cosine_similarity": 0.75,
+        "common_typos_min": 3
+      },
+      "library": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "code_snippet": "from sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.metrics.pairwise import cosine_similarity\nvec = TfidfVectorizer(max_features=5000).fit_transform(docs)\nsim = cosine_similarity(vec)"
+    },
+    "false_positive_risks": [
+      "招标文件提供了技术方案模板→模板化套话会制造假阳性",
+      "同行业通用术语→不是笔误是行业习惯"
+    ],
+    "combination_rules": [
+      "与L4图片哈希组合→文本+图片都雷同→铁证定案",
+      "与L5元数据组合→文本+元数据同源→铁证定案"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/ + AI评标十维反转",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "TF-IDF",
+      "余弦相似度",
+      "错别字",
+      "笔误指纹",
+      "文本雷同",
+      "串标",
+      "同人撰写"
+    ],
+    "related_methods": [
+      "DM-BID-0004",
+      "DM-BID-0005"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0004",
+    "type": "detection_method",
+    "name": "投标文件图片哈希+EXIF设备溯源",
+    "alias": "L4-图片哈希+EXIF",
+    "layer": "L4",
+    "confidence_level": "铁证",
+    "method_description": "提取投标文件（PDF/DOCX）中嵌入的所有图片，计算SHA256+感知哈希（pHash）。SHA256相同→同一张图。pHash汉明距离<5→同一张图缩放/轻微修改。增强版新增EXIF溯源：如果3+字段（相机型号+GPS+软件+时间）跨文件匹配→同人同地同设备制作多份标书。",
+    "detection_logic": "SHA256: 精确匹配。pHash: 汉明距离<5判定为同图。EXIF: 提取271(Make)+272(Model)+34853(GPSInfo)+305(Software)+36867(DateTimeOriginal)，≥3字段跨文件匹配→铁证。",
+    "input_data": {
+      "primary": [
+        "投标文件电子版（PDF/DOCX）"
+      ],
+      "optional": []
+    },
+    "output": {
+      "format": "同图标记清单+EXIF匹配报告+GPS地图标注",
+      "fields": [
+        "image_hash",
+        "hash_type",
+        "matched_files",
+        "exif_match_fields",
+        "gps_coordinates"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "SHA256 + pHash(感知哈希) + EXIF提取",
+      "threshold": {
+        "pHash_hamming": 5,
+        "exif_match_fields": 3
+      },
+      "library": "PIL.Image + imagehash + Python-docx",
+      "code_snippet": "from PIL import Image\nimport imagehash\nh = imagehash.phash(Image.open(img))\n# EXIF: img._getexif() → tags 271/272/34853/305/36867"
+    },
+    "false_positive_risks": [
+      "投标人使用了同一来源的公共素材图片→排除公开来源图片",
+      "同一型号设备是市场主流（如iPhone 15 Pro）→需GPS+时间同时匹配"
+    ],
+    "combination_rules": [
+      "与L3文本雷同组合→图片+文本都雷同→铁证",
+      "与L5元数据组合→图片同源+文件同源→铁证"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/ + AI评标十维反转·维度6",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "图片哈希",
+      "SHA256",
+      "pHash",
+      "EXIF",
+      "GPS",
+      "设备溯源",
+      "同人制作"
+    ],
+    "related_methods": [
+      "DM-BID-0003",
+      "DM-BID-0005"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0005",
+    "type": "detection_method",
+    "name": "投标文件元数据交叉检测（Word属性+PDF溯源+格式指纹）",
+    "alias": "L5-元数据交叉",
+    "layer": "L5",
+    "confidence_level": "铁证",
+    "method_description": "从投标文件中提取三组元数据：①Word属性（作者/公司/修订人/编辑时间，从docProps/core.xml提取）；②PDF溯源（Author/Creator/Producer）；③格式指纹（页边距到毫米级、字体RGB通道值、行距/缩进、表格样式、页码标签）。Word属性跨文件匹配→直接铁证。格式指纹5项中≥3项匹配→组合铁证。",
+    "detection_logic": "Word: 提取dc:creator/cp:lastModifiedBy/company，任一字段跨文件完全匹配→铁证。PDF: 提取Author/Creator/Producer。格式指纹: 四边页边距差值<0.5mm + RGB(R±1,G±1,B±1) + font+size+leading完全匹配→同模板。",
+    "input_data": {
+      "primary": [
+        "投标文件电子版（DOCX/PDF）"
+      ],
+      "optional": []
+    },
+    "output": {
+      "format": "元数据对比表+格式指纹匹配报告",
+      "fields": [
+        "docx_author_match",
+        "pdf_producer_match",
+        "margin_match",
+        "rgb_match",
+        "format_similarity_score"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "python-docx core_properties + PyMuPDF metadata + 格式指纹提取",
+      "threshold": {
+        "margin_tolerance": 0.5,
+        "rgb_tolerance": 1,
+        "format_items_match": 3
+      },
+      "library": "python-docx + fitz(PyMuPDF)",
+      "code_snippet": "from docx import Document\nprops = Document(f).core_properties\n# props.author, props.last_modified_by"
+    },
+    "false_positive_risks": [
+      "同一招标代理机构统一转换格式→需排除代理机构统一处理的情况",
+      "WPS存储.doc格式时SummaryInformation为空→.doc格式是元数据盲区"
+    ],
+    "combination_rules": [
+      "与L3文本雷同组合→元数据+文本→铁证",
+      "与L4图片组合→元数据+图片→三杀定案"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/ + AI评标十维反转·维度1+2+3+4+5+7",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "元数据",
+      "Word属性",
+      "PDF溯源",
+      "页边距",
+      "RGB",
+      "格式指纹",
+      "同源"
+    ],
+    "related_methods": [
+      "DM-BID-0003",
+      "DM-BID-0004"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0008",
+    "type": "detection_method",
+    "name": "投标人工商关联穿透分析",
+    "alias": "L8-工商关联",
+    "layer": "L8",
+    "confidence_level": "铁证",
+    "method_description": "获取全部投标人/中标人的统一社会信用代码，通过天眼查/企查查API做股权穿透，检测：同一实际控制人、交叉持股、高管重叠、同一注册地址/电话/邮箱、历史共同投标记录。构建供应商关联网络图谱，识别隐藏的关联投标人组。",
+    "detection_logic": "输入全部投标人名称→API查询→构建关联图(G=(V,E))→检测联通分量→每个联通分量(≥2节点)即为关联投标人组。",
+    "input_data": {
+      "primary": [
+        "全部投标人/中标人公司全称列表"
+      ],
+      "optional": [
+        "统一社会信用代码",
+        "历史投标台账(≥3年)"
+      ]
+    },
+    "output": {
+      "format": "关联网络图谱+关联关系明细表",
+      "fields": [
+        "connected_components",
+        "relation_type",
+        "shared_personnel",
+        "shared_address",
+        "graph"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "股权穿透(天眼查API) + 网络图连通分量检测",
+      "threshold": {
+        "min_group_size": 2
+      },
+      "library": "networkx + 天眼查/企查查API",
+      "code_snippet": "import networkx as nx\nG = nx.Graph()\n# 边: company1 --[share/executive/address]-- company2\ncomponents = list(nx.connected_components(G))"
+    },
+    "false_positive_risks": [
+      "同行业正常商业合作→需结合投标行为判断",
+      "大型集团内部子公司独立投标→集团内部投标需看是否合规"
+    ],
+    "combination_rules": [
+      "与L1报价组合→关联+协同报价→围标铁证",
+      "与L3文本雷同组合→关联+雷同→串标铁证"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "工商关联",
+      "股权穿透",
+      "实际控制人",
+      "高管重叠",
+      "天眼查",
+      "围标"
+    ],
+    "related_methods": [
+      "DM-BID-0001",
+      "DM-BID-0003"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001",
+      "REG-BID-0002"
+    ]
+  },
+  {
+    "id": "DM-BID-0010",
+    "type": "detection_method",
+    "name": "评标专家打分异常检测",
+    "alias": "L10-评标异常",
+    "layer": "L10",
+    "confidence_level": "铁证",
+    "method_description": "获取所有评委对所有投标人的逐项打分表。计算每个评委对每个投标人的Z-score（偏离该评委平均分的标准差数）。如果某评委对特定投标人的Z-score系统性偏高（≥2.0）或偏低，且其他评委评判正常→评标不公。组合检测：检查该评委与受益投标人是否存在利益关联。",
+    "detection_logic": "对每个评委j，计算其对投标人i的Z-score: z_ij = (score_ij - mean_j) / std_j。|z|≥2.0为异常。进一步检测该评委是否在多个评分项上对同一投标人持续偏高（≥3项）。",
+    "input_data": {
+      "primary": [
+        "评委逐项打分表（评委×投标人×评分项）"
+      ],
+      "optional": [
+        "评委个人简历/工作单位",
+        "评委与投标人关联关系"
+      ]
+    },
+    "output": {
+      "format": "评委打分偏离度矩阵+异常评委标记",
+      "fields": [
+        "zscore_matrix",
+        "biased_judge",
+        "favored_bidder",
+        "consistent_bias_count"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "Z-score异常检测 + 系统性偏差检验(t-test)",
+      "threshold": {
+        "z_score": 2.0,
+        "consistent_bias_items": 3
+      },
+      "library": "scipy.stats.zscore + scipy.stats.ttest_ind",
+      "code_snippet": "from scipy import stats\nz = stats.zscore(scores, axis=1)\nbiased = np.abs(z) >= 2.0"
+    },
+    "false_positive_risks": [
+      "评分项主观性强（如技术方案创新性）→正常差异可能较大",
+      "评委专业背景差异→某些评委天然偏向某些技术路线"
+    ],
+    "combination_rules": [
+      "与L8工商关联组合→评委与受益投标人有关联→利益输送铁证"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "评标",
+      "评委打分",
+      "Z-score",
+      "系统性偏差",
+      "倾向性照顾"
+    ],
+    "related_methods": [
+      "DM-BID-0008"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0003"
+    ]
+  },
+  {
+    "id": "DM-BID-0015",
+    "type": "detection_method",
+    "name": "历史中标模式分析（中标专业户+陪标专业户检测）",
+    "alias": "L15-历史模式",
+    "layer": "L15",
+    "confidence_level": "铁证",
+    "method_description": "基于3年+招投标台账，使用FP-growth频繁模式挖掘算法检测供应商伴随投标行为。识别：①中标专业户（同一供应商在同一采购人名下中标比例异常高）②陪标专业户（始终参与但从不中标）③固定组合（供应商组反复出现在同一项目中）。要求≥3个项目历史数据。",
+    "detection_logic": "FP-growth: min_support=3(至少出现3次), min_confidence=0.8。输出频繁项集→识别固定投标组合。单独统计每个供应商的中标率→中标率≥80%为中标专业户，中标率=0%且参与≥5次为陪标专业户。",
+    "input_data": {
+      "primary": [
+        "≥3年招投标台账（含项目名称/投标人/中标人）"
+      ],
+      "optional": []
+    },
+    "output": {
+      "format": "频繁投标组合+中标/陪标专业户名单",
+      "fields": [
+        "frequent_groups",
+        "winner_specialist",
+        "companion_specialist",
+        "support_confidence"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "FP-growth频繁模式挖掘",
+      "threshold": {
+        "min_support": 3,
+        "min_confidence": 0.8,
+        "winner_rate": 0.8,
+        "companion_participation": 5
+      },
+      "library": "mlxtend.frequent_patterns.fpgrowth",
+      "code_snippet": "from mlxtend.frequent_patterns import fpgrowth\nfreq_itemsets = fpgrowth(onehot, min_support=3/len(onehot), use_colnames=True)"
+    },
+    "false_positive_risks": [
+      "行业竞争不充分→区域内只有少数供应商→自然伴随",
+      "框架协议供应商→按轮次轮流中标是正常的"
+    ],
+    "combination_rules": [
+      "与L1报价组合→伴随+协同报价→系统性围标",
+      "与L3文本雷同组合→伴随+雷同→陪标产业链"
+    ],
+    "provenance": {
+      "source": "skills/procurement-audit-models/",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "历史模式",
+      "FP-growth",
+      "中标专业户",
+      "陪标",
+      "伴随投标",
+      "频繁模式"
+    ],
+    "related_methods": [
+      "DM-BID-0001",
+      "DM-BID-0003",
+      "DM-BID-0008"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0018",
+    "type": "detection_method",
+    "name": "投标设备电子指纹八项检测",
+    "alias": "L18-电子指纹",
+    "layer": "L18",
+    "confidence_level": "铁证",
+    "method_description": "从投标平台日志/投标文件元数据中提取八项设备指纹：IP地址、MAC地址、CPU ID、硬盘序列号、主板序列号、整机机器码、文件创建GUID、图片哈希。任一指纹跨不同投标人匹配→同一设备/同一网络提交→串标。",
+    "detection_logic": "八项指纹逐项提取→构建指纹→投标人映射表→任一指纹被≥2个不同投标人共享→标记。注意：IP/MAC需要从代理后台日志获取；CPU ID/硬盘SN/机器码需要客户端控件上报。",
+    "input_data": {
+      "primary": [
+        "投标平台后台日志（IP/MAC）",
+        "投标客户端上报的设备指纹"
+      ],
+      "optional": [
+        "投标文件中的计算机名残留",
+        "文件创建GUID"
+      ]
+    },
+    "output": {
+      "format": "指纹碰撞矩阵+共享设备清单",
+      "fields": [
+        "fingerprint_type",
+        "shared_value",
+        "shared_bidders",
+        "impact_level"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "精确匹配（八项逐项）",
+      "threshold": {
+        "shared_fingerprints": 1
+      },
+      "library": "无（精确字符串匹配）",
+      "code_snippet": "# IP/MAC: 精确字符串匹配\nshared_ips = df.groupby('ip')['bidder'].unique()\ncollision = shared_ips[shared_ips.apply(len) >= 2]"
+    },
+    "false_positive_risks": [
+      "同一写字楼共用出口IP→NAT环境下的IP碰撞需排除",
+      "投标人在同一代理机构现场投标→IP必然相同"
+    ],
+    "combination_rules": [
+      "与L3文本雷同组合→同IP+文本雷同→排除NAT误报",
+      "与L1报价组合→同IP+协同报价→铁证"
+    ],
+    "provenance": {
+      "source": "微信公众号 PaperSkill + skills/procurement-audit-models/",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "电子指纹",
+      "IP",
+      "MAC",
+      "CPU ID",
+      "硬盘SN",
+      "机器码",
+      "GUID",
+      "同设备"
+    ],
+    "related_methods": [
+      "DM-BID-0001",
+      "DM-BID-0003",
+      "DM-BID-0004"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "DM-BID-0101",
+    "type": "detection_method",
+    "name": "字体颜色RGB通道指纹检测",
+    "alias": "L6a-RGB指纹",
+    "layer": "L6a",
+    "confidence_level": "强信号",
+    "method_description": "逐span提取字体RGB通道值。肉眼看到都是'黑色'，但RGB(0,0,0) vs RGB(26,26,26) vs RGB(1,1,1)来自于不同的软件默认配色。多份标书中同一非纯黑RGB值（如RGB(26,26,26)）跨文件匹配→同源软件/同模板。",
+    "detection_logic": "逐span提取font color的RGB三元组→排除(0,0,0)纯黑→对非纯黑RGB聚类→跨文件相同RGB匹配（R±1,G±1,B±1）→标记。",
+    "input_data": {
+      "primary": [
+        "投标文件PDF/DOCX"
+      ],
+      "optional": []
+    },
+    "output": {
+      "format": "RGB指纹匹配报告",
+      "fields": [
+        "matched_rgb",
+        "matched_files",
+        "span_count"
+      ]
+    },
+    "technical_params": {
+      "algorithm": "PDF span color提取 + RGB聚类",
+      "threshold": {
+        "rgb_tolerance": 1
+      },
+      "library": "PyMuPDF",
+      "code_snippet": "import fitz\ndoc = fitz.open(f)\nfor page in doc:\n    for span in page.get_text('dict')['blocks']: ..."
+    },
+    "false_positive_risks": [
+      "同一软件版本（如WPS Office 2024）可能有相同默认色→需结合其他维度"
+    ],
+    "combination_rules": [
+      "与L5格式指纹(页边距/行距/表格)中≥3项同时命中→铁证"
+    ],
+    "provenance": {
+      "source": "AI评标十维反转·维度2",
+      "author": "融策右护卫",
+      "date_created": "2026-07-29",
+      "date_verified": "",
+      "verifier": ""
+    },
+    "keywords": [
+      "RGB",
+      "字体颜色",
+      "格式指纹",
+      "软件默认色",
+      "同源"
+    ],
+    "related_methods": [
+      "DM-BID-0005"
+    ],
+    "related_cases": [],
+    "related_regulations": [
+      "REG-BID-0001"
+    ]
+  },
+  {
+    "id": "CASE-BID-0001",
+    "type": "case",
+    "title": "虚构采购业务虚增营业成本",
+    "summary": "被审计单位通过与供应商串通，虚构采购合同和入库单据，虚增营业成本以降低利润、逃避税收。审计组通过比对采购台账与库存台账、核实供应商真实性发现异常。",
+    "audit_type": "招投标审计",
+    "sub_type": "货物采购",
+    "violation_category": "串标",
+    "violation_subcategory": "虚构采购业务",
+    "detection_method": [
+      "DM-BID-0008"
+    ],
+    "data_sources": [
+      "采购台账",
+      "库存台账",
+      "供应商工商信息",
+      "入库单",
+      "发票"
+    ],
+    "amount_range": "100-500万",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "国有企业",
+    "industry": "通用",
+    "region": "",
+    "finding_pattern": "",
+    "penetration_chain": {
+      "利益流向": "虚假供应商→资金回流→被审计单位相关人员",
+      "制度博弈": "采购审批权集中在一人→缺乏验收复核",
+      "决策还原": "采购负责人与供应商实际控制人存在利益关系",
+      "宏观坐标": "同行业同期采购价格明显高于市场价",
+      "根因": "采购审批缺少制衡机制，一人控制从供应商选择到验收全流程"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "magazines/财政监督/财政监督2023年3期/004_虚构采购业务虚增营业成本.md",
+      "source_type": "公开报道",
+      "is_real": true,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "虚构采购",
+      "虚增成本",
+      "供应商串通",
+      "库存比对",
+      "逃税"
+    ]
+  },
+  {
+    "id": "CASE-BID-0002",
+    "type": "case",
+    "title": "三家公司投标文件同源—L3文本雷同+L5元数据交叉",
+    "summary": "在某政府工程招标中，三家投标人的技术方案文本相似度超过85%，且Word文档属性中'作者'字段均为同一人名。进一步检测发现三份文件创建时间集中、页边距完全相同到毫米级。经核实，三份标书由同一人使用同一台电脑制作，构成串通投标。",
+    "audit_type": "招投标审计",
+    "sub_type": "工程招标",
+    "violation_category": "串标",
+    "violation_subcategory": "投标人串通投标+同一人制作多份标书",
+    "detection_method": [
+      "DM-BID-0003",
+      "DM-BID-0005"
+    ],
+    "data_sources": [
+      "投标文件技术方案",
+      "投标文件电子版元数据"
+    ],
+    "amount_range": "1000万-1亿",
+    "amount_exact": null,
+    "regulation": [
+      "REG-BID-0001"
+    ],
+    "severity": "P0-重大违法",
+    "entity_type": "政府部门",
+    "industry": "工程建设",
+    "region": "四川",
+    "finding_pattern": "FP-BID-0001",
+    "penetration_chain": {
+      "利益流向": "实际中标人→支付陪标费→其他两家投标人",
+      "制度博弈": "招标文件未要求投标人签署独立性声明",
+      "决策还原": "投标截止前三天三家公司IP集中在同一栋写字楼",
+      "宏观坐标": "同类项目同期中标价高于周边县市23%",
+      "根因": "投标人资格审查流于形式，未做关联关系审查"
+    },
+    "related_cases": [],
+    "provenance": {
+      "source_file": "融策内部经验（综合多个真实案例特征，已脱敏）",
+      "source_type": "审计底稿摘要",
+      "is_real": false,
+      "anonymized": true,
+      "verified_by": 0,
+      "date_collected": "2026-07-29"
+    },
+    "keywords": [
+      "串标",
+      "文本雷同",
+      "元数据",
+      "同一作者",
+      "同源",
+      "L3+L5双杀"
+    ]
+  },
+  {
+    "id": "REG-BID-0001",
+    "type": "regulation",
+    "law_name": "中华人民共和国招标投标法",
+    "law_short": "招标投标法",
+    "law_level": "法律",
+    "article": "第三十二条",
+    "content": "投标人不得相互串通投标报价，不得排挤其他投标人的公平竞争，损害招标人或者其他投标人的合法权益。投标人不得与招标人串通投标，损害国家利益、社会公共利益或者他人的合法权益。禁止投标人以向招标人或者评标委员会成员行贿的手段谋取中标。",
+    "key_point": "禁止投标人相互串通投标报价、投标人与招标人串通、行贿谋取中标",
+    "applicable_scenario": [
+      "串标检测",
+      "围标检测",
+      "投标报价异常",
+      "招标人与投标人利益输送"
+    ],
+    "violation_consequence": "中标无效，处中标项目金额5‰以上10‰以下罚款",
+    "penalty_range": "中标项目金额5‰-10‰罚款；单位直接责任人处单位罚款5%-10%罚款",
+    "related_regulations": [
+      "REG-BID-0002",
+      "REG-BID-0003"
+    ],
+    "related_cases": [
+      "CASE-BID-0001",
+      "CASE-BID-0002"
+    ],
+    "provenance": {
+      "effective_date": "2000-01-01",
+      "amend_date": "2017-12-27",
+      "status": "现行有效"
+    },
+    "keywords": [
+      "串通投标",
+      "投标报价",
+      "禁止行贿",
+      "公平竞争"
+    ]
+  },
+  {
+    "id": "REG-BID-0002",
+    "type": "regulation",
+    "law_name": "中华人民共和国招标投标法实施条例",
+    "law_short": "招标投标法实施条例",
+    "law_level": "行政法规",
+    "article": "第三十四条",
+    "content": "与招标人存在利害关系可能影响招标公正性的法人、其他组织或者个人，不得参加投标。单位负责人为同一人或者存在控股、管理关系的不同单位，不得参加同一标段投标或者未划分标段的同一招标项目投标。违反前两款规定的，相关投标均无效。",
+    "key_point": "利害关系人禁止投标；同一控制人/控股关系单位不得投同一标段",
+    "applicable_scenario": [
+      "工商关联检测",
+      "投标人资格审查",
+      "关联关系穿透"
+    ],
+    "violation_consequence": "相关投标无效",
+    "penalty_range": "投标无效",
+    "related_regulations": [
+      "REG-BID-0001"
+    ],
+    "related_cases": [],
+    "provenance": {
+      "effective_date": "2012-02-01",
+      "amend_date": "2019-03-02",
+      "status": "现行有效"
+    },
+    "keywords": [
+      "利害关系",
+      "控股关系",
+      "管理关系",
+      "同一控制人",
+      "投标无效"
+    ]
+  },
+  {
+    "id": "REG-BID-0003",
+    "type": "regulation",
+    "law_name": "中华人民共和国招标投标法实施条例",
+    "law_short": "招标投标法实施条例",
+    "law_level": "行政法规",
+    "article": "第四十九条",
+    "content": "评标委员会成员应当客观、公正地履行职务，遵守职业道德，对所提出的评审意见承担个人责任。评标委员会成员不得私下接触投标人，不得收受投标人的财物或者其他好处，不得透露对投标文件的评审和比较、中标候选人的推荐情况以及与评标有关的其他情况。",
+    "key_point": "评标委员会成员须客观公正，禁止私下接触投标人、收受财物",
+    "applicable_scenario": [
+      "评标异常检测",
+      "评委打分偏差",
+      "评委与投标人关联"
+    ],
+    "violation_consequence": "给予警告、罚款、取消评标资格；构成犯罪的依法追究刑事责任",
+    "penalty_range": "警告/罚款/取消评标资格/刑事责任",
+    "related_regulations": [
+      "REG-BID-0001"
+    ],
+    "related_cases": [],
+    "provenance": {
+      "effective_date": "2012-02-01",
+      "amend_date": "2019-03-02",
+      "status": "现行有效"
+    },
+    "keywords": [
+      "评标委员会",
+      "客观公正",
+      "禁止接触",
+      "职业道德",
+      "评分异常"
+    ]
+  },
+  {
+    "id": "REG-BID-0004",
+    "type": "regulation",
+    "law_name": "中华人民共和国政府采购法",
+    "law_short": "政府采购法",
+    "law_level": "法律",
+    "article": "第七十七条",
+    "content": "供应商有下列情形之一的，处以采购金额千分之五以上千分之十以下的罚款，列入不良行为记录名单，在一至三年内禁止参加政府采购活动……（一）提供虚假材料谋取中标、成交的；（二）采取不正当手段诋毁、排挤其他供应商的；（三）与采购人、其他供应商或者采购代理机构恶意串通的……",
+    "key_point": "供应商恶意串通、提供虚假材料的处罚：罚款+1-3年禁止参加政府采购",
+    "applicable_scenario": [
+      "政府采购串标",
+      "虚假材料检测",
+      "供应商处罚"
+    ],
+    "violation_consequence": "罚款+列入不良记录+1-3年禁入+中标无效",
+    "penalty_range": "采购金额5‰-10‰罚款；1-3年禁止参加政府采购",
+    "related_regulations": [
+      "REG-BID-0001"
+    ],
+    "related_cases": [],
+    "provenance": {
+      "effective_date": "2003-01-01",
+      "amend_date": "2014-08-31",
+      "status": "现行有效"
+    },
+    "keywords": [
+      "政府采购",
+      "恶意串通",
+      "虚假材料",
+      "不良记录",
+      "禁入"
+    ]
+  },
+  {
+    "id": "REG-BID-0005",
+    "type": "regulation",
+    "law_name": "中华人民共和国刑法",
+    "law_short": "刑法",
+    "law_level": "法律",
+    "article": "第二百二十三条",
+    "content": "投标人相互串通投标报价，损害招标人或者其他投标人利益，情节严重的，处三年以下有期徒刑或者拘役，并处或者单处罚金。投标人与招标人串通投标，损害国家、集体、公民的合法利益的，依照前款的规定处罚。",
+    "key_point": "串通投标情节严重可入刑：三年以下有期徒刑或拘役",
+    "applicable_scenario": [
+      "串标刑事案件移送",
+      "情节严重判定"
+    ],
+    "violation_consequence": "三年以下有期徒刑或拘役，并处或单处罚金",
+    "penalty_range": "三年以下有期徒刑/拘役+罚金",
+    "related_regulations": [
+      "REG-BID-0001"
+    ],
+    "related_cases": [],
+    "provenance": {
+      "effective_date": "1997-10-01",
+      "amend_date": "2020-12-26",
+      "status": "现行有效"
+    },
+    "keywords": [
+      "串通投标罪",
+      "刑事",
+      "有期徒刑",
+      "情节严重"
+    ]
+  },
+  {
+    "id": "FP-BID-0001",
+    "type": "finding_pattern",
+    "name": "L3+L5双杀：文本雷同+元数据同源",
+    "signal_description": "投标文件（1）TF-IDF相似度≥0.75 且（2）Word属性中作者/公司/修订人跨文件匹配 且（3）页边距/RGB/行距/表格/页码中≥3项精确匹配",
+    "inference_chain": [
+      {
+        "step": 1,
+        "observation": "三份技术方案TF-IDF相似度0.85-0.89",
+        "hypothesis": "同一底稿或互相抄袭",
+        "exclusion": "排除招标文件提供的统一模板（模板化套话已在去噪阶段过滤）",
+        "conclusion": "高度雷同，非独立编制"
+      },
+      {
+        "step": 2,
+        "observation": "三份文件Word属性作者均为'张三'",
+        "hypothesis": "同一人制作",
+        "exclusion": "排除招标代理统一转换格式（代理不会用个人名作为作者）",
+        "conclusion": "同一自然人在同一设备上制作了三份标书"
+      },
+      {
+        "step": 3,
+        "observation": "页边距(左2.5cm右2.3cm上下2.0cm)三份完全相同+表格边框0.75pt完全一致",
+        "hypothesis": "同一模板文件",
+        "exclusion": "排除招标文件格式要求统一（招标文件不会规定页边距到毫米）",
+        "conclusion": "三份标书来自同一文档模板→同一人/同一团队制作"
+      }
+    ],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [
+      "投标人委托同一家咨询公司编制标书（需判断是否构成串通）",
+      "招标代理统一排版后转PDF（排除代理操作痕迹）"
+    ],
+    "related_methods": [
+      "DM-BID-0003",
+      "DM-BID-0005"
+    ],
+    "related_patterns": [
+      "FP-BID-0002"
+    ],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "AI评标十维反转 + 23层检测体系",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "L3+L5",
+      "双杀",
+      "文本雷同",
+      "元数据",
+      "同源",
+      "铁证"
+    ]
+  },
+  {
+    "id": "FP-BID-0002",
+    "type": "finding_pattern",
+    "name": "三杀定案：报价协同+文本雷同+关联关系",
+    "signal_description": "同时命中（1）L1报价等差数列或三家报价簇聚（2）L3文本相似度≥0.75（3）L8工商关联（同一实控人/高管重叠/同址）",
+    "inference_chain": [
+      {
+        "step": 1,
+        "observation": "三家投标人报价分别为980万、1000万、1020万——精确等差20万",
+        "hypothesis": "人为协商而非独立报价",
+        "exclusion": "排除三家恰好报出等差数列的极小概率（p<0.001）",
+        "conclusion": "报价经过事先协商"
+      },
+      {
+        "step": 2,
+        "observation": "三家技术方案相似度>85%",
+        "hypothesis": "同一来源",
+        "exclusion": "排除模板效应（已去噪）",
+        "conclusion": "标书由同一来源制作"
+      },
+      {
+        "step": 3,
+        "observation": "A公司实控人张某为B公司前大股东，C公司注册地址与A公司相同",
+        "hypothesis": "三家受同一利益团体控制",
+        "exclusion": "排除正常商业合作（交叉持股≠串标，但结合前两条已无悬念）",
+        "conclusion": "三家公司受同一利益团体控制，系统性围标"
+      }
+    ],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [
+      "框架协议供应商按轮次报价（排除框架协议项目）"
+    ],
+    "related_methods": [
+      "DM-BID-0001",
+      "DM-BID-0003",
+      "DM-BID-0008"
+    ],
+    "related_patterns": [
+      "FP-BID-0001"
+    ],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "23层检测体系·三杀定案策略",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "三杀",
+      "报价协同",
+      "文本雷同",
+      "关联关系",
+      "铁证",
+      "围标"
+    ]
+  },
+  {
+    "id": "FP-BID-0003",
+    "type": "finding_pattern",
+    "name": "四杀锁定：图片同源+EXIF同设备+元数据同人+格式同模板",
+    "signal_description": "同时命中（1）L4图片SHA256/pHash匹配（2）EXIF≥3字段匹配（3）L5 Word属性作者匹配（4）L6a/L6b格式指纹≥3项匹配",
+    "inference_chain": [
+      {
+        "step": 1,
+        "observation": "三份标书中有5张图片SHA256完全相同",
+        "hypothesis": "拷贝同一图片文件",
+        "exclusion": "排除公共素材（检查图片来源是否为公开网络）",
+        "conclusion": "直接复制文件，非独立制作"
+      },
+      {
+        "step": 2,
+        "observation": "图片EXIF显示均为iPhone 15 Pro拍摄，GPS坐标指向同一写字楼，软件均为Snipaste 2.8",
+        "hypothesis": "同人同地同设备截图",
+        "exclusion": "排除iPhone 15 Pro是主流机型（GPS+软件同时匹配排除了巧合）",
+        "conclusion": "同一人在同一地点用同一设备为三家公司制作标书"
+      },
+      {
+        "step": 3,
+        "observation": "三份Word文件作者字段均为'李四'",
+        "hypothesis": "同一人",
+        "exclusion": "排除代理统一处理",
+        "conclusion": "制作人身份确认"
+      },
+      {
+        "step": 4,
+        "observation": "页边距+字体RGB+行距+表格样式+页码——五项格式指纹中四项完全相同",
+        "hypothesis": "同一文档模板",
+        "exclusion": "排除巧合（四项同时匹配的随机概率极低）",
+        "conclusion": "三份标书从同一模板文件生成"
+      }
+    ],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [
+      "同一咨询公司为不同投标人独立编制标书（需结合利益关系判断是否构成串通）"
+    ],
+    "related_methods": [
+      "DM-BID-0004",
+      "DM-BID-0005",
+      "DM-BID-0101"
+    ],
+    "related_patterns": [
+      "FP-BID-0001"
+    ],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "AI评标十维反转 + 23层检测体系",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "四杀",
+      "图片同源",
+      "EXIF",
+      "设备溯源",
+      "GPS",
+      "格式指纹",
+      "铁证"
+    ]
+  },
+  {
+    "id": "FP-BID-0004",
+    "type": "finding_pattern",
+    "name": "评委倾向性照顾：Z-score异常+关联关系",
+    "signal_description": "某个评委对特定投标人的Z-score系统性≥2.0（在≥3个评分项上持续偏高）且该评委与受益投标人存在关联关系",
+    "inference_chain": [
+      {
+        "step": 1,
+        "observation": "评委赵某对A公司在技术方案、项目管理、企业业绩三个评分项上的Z-score分别为+2.3/+2.8/+2.1",
+        "hypothesis": "评委赵某对A公司存在偏好",
+        "exclusion": "排除A公司技术方案确实优于其他投标人（检查其他评委对A的评分——其他评委对A的Z-score在±0.5以内）",
+        "conclusion": "评委赵某对A公司的评分显著偏高，属于系统性偏差"
+      },
+      {
+        "step": 2,
+        "observation": "天眼查显示评委赵某曾任职于A公司的母公司，离职时间距评标仅6个月",
+        "hypothesis": "存在利益关联",
+        "exclusion": "排除正常职业流动（离职6个月内仍属于'利害关系'的时间窗口）",
+        "conclusion": "评委与投标人存在利益关联，评分偏差非偶然"
+      }
+    ],
+    "confidence": "铁证",
+    "min_hits_required": 1,
+    "false_positive_scenarios": [
+      "评委是该技术领域的专家→对特定技术路线有偏好（需结合关联关系判断）"
+    ],
+    "related_methods": [
+      "DM-BID-0010",
+      "DM-BID-0008"
+    ],
+    "related_patterns": [],
+    "severity_when_confirmed": "P0",
+    "provenance": {
+      "source": "23层检测体系·L10评标异常",
+      "date_identified": "2026-07-29"
+    },
+    "keywords": [
+      "评标",
+      "Z-score",
+      "系统性偏差",
+      "利益关联",
+      "倾向性照顾",
+      "铁证"
+    ]
+  }
+]

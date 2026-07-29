@@ -1,0 +1,210 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "招投标审计高质量数据集 Schema v1.0",
+  "description": "融策·审盾 招投标审计场景的结构化数据集标准。四类条目：检测方法、案例、法规条款、疑点模式。",
+  "version": "1.0.0",
+  "date": "2026-07-29",
+
+  "dataset_meta": {
+    "name": "rongce-bidding-audit-dataset",
+    "domain": "招投标审计",
+    "sub_domains": ["串标检测", "围标检测", "评标异常", "招标程序合规", "报价分析", "供应商关联分析"],
+    "total_expected_entries": "800-1200",
+    "entry_types": {
+      "detection_method": "检测方法条目 — 可执行的审计检测逻辑",
+      "case": "案例条目 — 真实/典型招投标审计发现",
+      "regulation": "法规条款条目 — 招投标相关法律法规条款",
+      "finding_pattern": "疑点模式条目 — 异常信号→串标推断的逻辑链路"
+    }
+  },
+
+  "schemas": {
+
+    "detection_method": {
+      "description": "一条可执行的审计检测方法，含输入/输出/技术参数",
+      "required": ["id", "type", "name", "layer", "confidence_level", "method_description", "input_data", "output", "technical_params", "provenance"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^DM-BID-\\d{4}$", "example": "DM-BID-0001"},
+        "type": {"const": "detection_method"},
+        "name": {"type": "string", "example": "报价规律异常检测"},
+        "alias": {"type": "string", "description": "中文简称", "example": "L1-报价规律"},
+        "layer": {"type": "string", "enum": ["L1","L2","L3","L4","L5","L6a","L6b","L7","L8","L9","L10","L11","L15","L18","L19","L20-L23","L-新增"], "description": "23层检测体系层级"},
+        "confidence_level": {"type": "string", "enum": ["铁证", "强信号", "弱信号", "需组合"], "description": "单独命中能否定案"},
+        "method_description": {"type": "string", "description": "方法的自然语言描述（50-200字）"},
+        "detection_logic": {"type": "string", "description": "检测逻辑的伪代码/公式描述"},
+        "input_data": {
+          "type": "object",
+          "properties": {
+            "primary": {"type": "array", "items": {"type": "string"}, "description": "必须的数据源"},
+            "optional": {"type": "array", "items": {"type": "string"}, "description": "可选增强数据源"}
+          }
+        },
+        "output": {
+          "type": "object",
+          "properties": {
+            "format": {"type": "string", "example": "异常供应商组+偏离度分数"},
+            "fields": {"type": "array", "items": {"type": "string"}, "example": ["supplier_group", "deviation_score", "pattern_type"]}
+          }
+        },
+        "technical_params": {
+          "type": "object",
+          "description": "可复现的技术参数",
+          "properties": {
+            "algorithm": {"type": "string"},
+            "threshold": {},
+            "library": {"type": "string", "example": "sklearn.cluster.DBSCAN"},
+            "code_snippet": {"type": "string", "description": "核心代码片段（≤20行）"}
+          }
+        },
+        "false_positive_risks": {"type": "array", "items": {"type": "string"}, "description": "已知误报场景"},
+        "combination_rules": {"type": "array", "items": {"type": "string"}, "description": "与其他方法的组合判定规则"},
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source": {"type": "string", "example": "skills/procurement-audit-models/"},
+            "author": {"type": "string"},
+            "date_created": {"type": "string", "format": "date"},
+            "date_verified": {"type": "string", "format": "date"},
+            "verifier": {"type": "string"}
+          }
+        },
+        "keywords": {"type": "array", "items": {"type": "string"}},
+        "related_methods": {"type": "array", "items": {"type": "string"}, "description": "关联检测方法ID"},
+        "related_cases": {"type": "array", "items": {"type": "string"}, "description": "关联案例ID"},
+        "related_regulations": {"type": "array", "items": {"type": "string"}, "description": "关联法规ID"}
+      }
+    },
+
+    "case": {
+      "description": "一条结构化审计案例条目",
+      "required": ["id", "type", "title", "audit_type", "violation_category", "detection_method", "severity", "provenance"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^CASE-BID-\\d{4}$", "example": "CASE-BID-0001"},
+        "type": {"const": "case"},
+        "title": {"type": "string", "description": "案例标题，≤30字"},
+        "summary": {"type": "string", "description": "案例摘要，≤200字"},
+        "audit_type": {"type": "string", "enum": ["招投标审计", "经责审计", "工程审计", "专项审计"]},
+        "sub_type": {"type": "string", "description": "招投标子类型", "example": "工程招标/货物采购/服务采购"},
+        "violation_category": {"type": "string", "enum": ["串标", "围标", "虚假招标", "规避招标", "评标不公", "利益输送", "价格操纵", "资质造假", "其他"]},
+        "violation_subcategory": {"type": "string", "description": "细化违规类型", "example": "投标人串通投标报价"},
+        "detection_method": {"type": "array", "items": {"type": "string"}, "description": "发现方法（对应detection_method ID列表）"},
+        "data_sources": {"type": "array", "items": {"type": "string"}, "description": "发现所用的数据源"},
+        "amount_range": {"type": "string", "enum": ["<10万", "10-50万", "50-100万", "100-500万", "500-1000万", "1000万-1亿", ">1亿", "不适用"]},
+        "amount_exact": {"type": "number", "description": "涉案金额（精确值，可空）"},
+        "regulation": {"type": "array", "items": {"type": "string"}, "description": "法规依据（对应regulation ID列表）"},
+        "severity": {"type": "string", "enum": ["P0-重大违法", "P1-严重违规", "P2-一般问题", "P3-管理建议"]},
+        "entity_type": {"type": "string", "description": "被审计单位类型", "example": "国有企业/政府部门/事业单位"},
+        "industry": {"type": "string", "description": "行业", "example": "工程建设/信息技术/医疗设备/通用"},
+        "region": {"type": "string", "description": "省份", "example": "四川"},
+        "finding_pattern": {"type": "string", "description": "疑点发现模式（对应finding_pattern ID）"},
+        "penetration_chain": {
+          "type": "object",
+          "description": "五层穿透分析结果",
+          "properties": {
+            "利益流向": {"type": "string"},
+            "制度博弈": {"type": "string"},
+            "决策还原": {"type": "string"},
+            "宏观坐标": {"type": "string"},
+            "根因": {"type": "string"}
+          }
+        },
+        "related_cases": {"type": "array", "items": {"type": "string"}},
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source_file": {"type": "string"},
+            "source_type": {"enum": ["真实案例", "公开报道", "学术文献", "审计底稿摘要", "融策内部"]},
+            "is_real": {"type": "boolean", "description": "是否为真实案例"},
+            "anonymized": {"type": "boolean", "description": "是否已脱敏"},
+            "verified_by": {"type": "integer", "description": "审核人数"},
+            "date_collected": {"type": "string", "format": "date"}
+          }
+        },
+        "keywords": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+
+    "regulation": {
+      "description": "一条招投标相关法规条款",
+      "required": ["id", "type", "law_name", "article", "content", "applicable_scenario", "violation_consequence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^REG-BID-\\d{4}$", "example": "REG-BID-0001"},
+        "type": {"const": "regulation"},
+        "law_name": {"type": "string", "description": "法规全称"},
+        "law_short": {"type": "string", "description": "法规简称"},
+        "law_level": {"type": "string", "enum": ["法律", "行政法规", "部门规章", "规范性文件", "司法解释"]},
+        "article": {"type": "string", "description": "条款号", "example": "第三十二条"},
+        "content": {"type": "string", "description": "条款原文（≤200字）"},
+        "key_point": {"type": "string", "description": "核心要点提炼（≤50字）"},
+        "applicable_scenario": {"type": "array", "items": {"type": "string"}, "description": "适用场景"},
+        "violation_consequence": {"type": "string", "description": "违反后果"},
+        "penalty_range": {"type": "string", "description": "处罚幅度", "example": "中标项目金额5‰-10‰罚款"},
+        "related_regulations": {"type": "array", "items": {"type": "string"}},
+        "related_cases": {"type": "array", "items": {"type": "string"}},
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "effective_date": {"type": "string", "format": "date"},
+            "amend_date": {"type": "string", "format": "date", "description": "最新修订日期"},
+            "status": {"type": "string", "enum": ["现行有效", "已修订", "已废止"]}
+          }
+        },
+        "keywords": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+
+    "finding_pattern": {
+      "description": "一个疑点发现模式——异常信号→串标推断的逻辑链路",
+      "required": ["id", "type", "name", "signal_description", "inference_chain", "confidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^FP-BID-\\d{4}$", "example": "FP-BID-0001"},
+        "type": {"const": "finding_pattern"},
+        "name": {"type": "string", "description": "模式名称", "example": "三家公司报价等差排列"},
+        "signal_description": {"type": "string", "description": "异常信号的详细描述"},
+        "inference_chain": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {"type": "integer"},
+              "observation": {"type": "string", "description": "观察到的现象"},
+              "hypothesis": {"type": "string", "description": "可能的原因"},
+              "exclusion": {"type": "string", "description": "如何排除其他解释"},
+              "conclusion": {"type": "string", "description": "阶段结论"}
+            }
+          }
+        },
+        "confidence": {"type": "string", "enum": ["铁证", "强信号", "需组合"]},
+        "min_hits_required": {"type": "integer", "description": "最低命中次数才能升级为疑点"},
+        "false_positive_scenarios": {"type": "array", "items": {"type": "string"}, "description": "可能是误报的场景"},
+        "related_methods": {"type": "array", "items": {"type": "string"}, "description": "关联检测方法ID"},
+        "related_patterns": {"type": "array", "items": {"type": "string"}, "description": "关联疑点模式ID"},
+        "severity_when_confirmed": {"type": "string", "enum": ["P0", "P1", "P2"]},
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source": {"type": "string"},
+            "date_identified": {"type": "string", "format": "date"}
+          }
+        },
+        "keywords": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+
+  "quality_standards": {
+    "completeness": "所有required字段非空，optional字段填充率≥80%",
+    "consistency": "关联ID（related_*）双向可解析，无悬空引用",
+    "accuracy": "案例严重程度(P0-P3)经2人交叉标注，标注一致性Kappa≥0.75",
+    "currency": "法规条目标注effective_date/amend_date/status，已废止法规标记但不删除",
+    "uniqueness": "同类型条目去重（案例基于title+key_facts的simhash，方法基于name+layer的精确匹配）"
+  },
+
+  "cross_reference_rules": {
+    "case→method": "案例的detection_method字段引用方法ID列表",
+    "case→regulation": "案例的regulation字段引用法规ID列表",
+    "method→regulation": "检测方法的related_regulations引用法规ID列表",
+    "pattern→method": "疑点模式的related_methods引用方法ID列表",
+    "case→pattern": "案例的finding_pattern引用疑点模式ID"
+  }
+}
