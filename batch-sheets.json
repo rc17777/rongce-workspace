@@ -1,0 +1,9 @@
+[
+  {"command":"add","parent":"/","type":"sheet","after":"Sheet1","props":{"name":"调研总览"}},
+  {"command":"add","parent":"/","type":"sheet","after":"调研总览","props":{"name":"随岗观察记录"}},
+  {"command":"add","parent":"/","type":"sheet","after":"随岗观察记录","props":{"name":"需求优先级矩阵"}},
+  {"command":"add","parent":"/","type":"sheet","after":"需求优先级矩阵","props":{"name":"数据可得性评估"}},
+  {"command":"add","parent":"/","type":"sheet","after":"数据可得性评估","props":{"name":"Pilot结果模板"}},
+  {"command":"add","parent":"/","type":"sheet","after":"Pilot结果模板","props":{"name":"交付物清单"}},
+  {"command":"remove","path":"/Sheet1"}
+]

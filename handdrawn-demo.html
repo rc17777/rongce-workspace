@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手绘风格架构图</title>
+<script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+<style>
+  body {
+    margin: 0;
+    background: #fdfbf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  }
+  canvas {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    background: white;
+  }
+</style>
+</head>
+<body>
+<canvas id="c" width="900" height="700"></canvas>
+<script>
+const rc = rough.canvas(document.getElementById('c'));
+
+// === 辅助函数 ===
+function box(x, y, w, h, color, fill) {
+  return rc.rectangle(x, y, w, h, {
+    roughness: 2.5,
+    stroke: color,
+    strokeWidth: 2,
+    fill: fill,
+    fillStyle: 'solid',
+    hachureGap: 8,
+  });
+}
+
+function arrow(x1, y1, x2, y2, color) {
+  // roughjs arrow
+  rc.line(x1, y1, x2, y2, {
+    roughness: 2,
+    stroke: color,
+    strokeWidth: 2,
+  });
+  // arrowhead
+  const angle = Math.atan2(y2 - y1, x2 - x1);
+  const len = 12;
+  rc.line(x2, y2, x2 - len * Math.cos(angle - 0.5), y2 - len * Math.sin(angle - 0.5), {
+    roughness: 2, stroke: color, strokeWidth: 2
+  });
+  rc.line(x2, y2, x2 - len * Math.cos(angle + 0.5), y2 - len * Math.sin(angle + 0.5), {
+    roughness: 2, stroke: color, strokeWidth: 2
+  });
+}
+
+function circle(x, y, r, color, fill) {
+  return rc.circle(x, y, r * 2, {
+    roughness: 2,
+    stroke: color,
+    strokeWidth: 2,
+    fill: fill,
+    fillStyle: 'solid',
+  });
+}
+
+function text(x, y, str, size, color, align) {
+  const ctx = document.getElementById('c').getContext('2d');
+  ctx.save();
+  ctx.font = `bold ${size}px "Comic Sans MS", "KaiTi", "Microsoft YaHei", sans-serif`;
+  ctx.fillStyle = color || '#333';
+  ctx.textAlign = align || 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(str, x, y);
+  ctx.restore();
+}
+
+// === 颜色 ===
+const red = '#e74c3c';
+const blue = '#2c3e50';
+const green = '#27ae60';
+const orange = '#e67e22';
+const purple = '#8e44ad';
+const teal = '#16a085';
+const gray = '#7f8c8d';
+const dark = '#34495e';
+
+// === 标题 ===
+text(450, 40, '融策审计智析Agent · 手绘架构图', 24, dark);
+
+// === L1: 数据采集层 ===
+box(50, 80, 800, 80, teal, '#e8f8f5');
+text(450, 100, '📥 数据采集层', 18, teal);
+text(450, 130, '非结构化预处理 · 文档解析 · 投标数据采集 · API网关', 13, '#555');
+
+// === L2: 分析加工层 ===
+box(50, 200, 800, 220, blue, '#eaf2f8');
+text(450, 220, '⚙️ 分析加工层', 18, blue);
+
+// 工具卡片
+const tools = [
+  {x:70,  y:245, w:180, h:55, name:'文本分析', sub:'TF-IDF · 相似度 · 字段提取', color:purple, fill:'#f5eef8'},
+  {x:265, y:245, w:180, h:55, name:'数值审计', sub:'Benford · 时间序列 · 指纹', color:orange, fill:'#fef5e7'},
+  {x:460, y:245, w:180, h:55, name:'围串标检测', sub:'5维特征 · 交叉评分 · 图谱', color:red, fill:'#fdedec'},
+  {x:655, y:245, w:180, h:55, name:'凭证翻查', sub:'AP/AR/EXP/FA · Prompt模板', color:green, fill:'#eafaf1'},
+];
+tools.forEach(t => {
+  box(t.x, t.y, t.w, t.h, t.color, t.fill);
+  text(t.x + t.w/2, t.y + 18, t.name, 13, t.color);
+  text(t.x + t.w/2, t.y + 38, t.sub, 10, '#777');
+});
+
+// 辩论引擎
+box(265, 320, 375, 80, red, '#fef9e7');
+text(452, 340, '🔥 对偶辩论引擎', 16, '#c0392b');
+text(452, 362, '信任方Agent ⚔️ 质疑方Agent → 多轮辩论 → 仲裁Agent裁定', 12, '#555');
+text(452, 382, 'LangGraph 条件路由 · 并行执行 · Checkpoint中断恢复', 11, '#999');
+
+// 箭头 L1→L2
+arrow(450, 160, 450, 200, teal);
+
+// === L3: 报告输出层 ===
+box(50, 460, 800, 100, green, '#eafaf1');
+text(450, 480, '📊 三级复核 & 报告输出', 18, green);
+
+box(100, 505, 200, 40, green, '#d5f5e3');
+text(200, 525, 'L1: WorkpaperScorer', 13, green);
+
+box(350, 505, 200, 40, orange, '#fdebd0');
+text(450, 525, 'L2: 异常100%全检', 13, orange);
+
+box(600, 505, 200, 40, red, '#fadbd8');
+text(700, 525, 'L3: 独立复核·一票否决', 13, red);
+
+// 箭头 L2→L3
+arrow(200, 540, 150, 505, green);
+arrow(450, 400, 450, 460, blue);
+arrow(600, 540, 650, 505, red);
+
+// === 右侧: 知识库 ===
+box(870, 260, 170, 200, gray, '#f4f6f6');
+text(955, 290, '📚 知识库', 15, gray);
+text(955, 320, 'AGR审计准则', 11, '#888');
+text(955, 345, '法律法规RAG', 11, '#888');
+text(955, 370, '底稿编制标准', 11, '#888');
+text(955, 395, '案例库·模板库', 11, '#888');
+text(955, 420, '用户反馈学习', 11, '#888');
+
+// 箭头 分析层→知识库
+arrow(850, 360, 870, 360, gray);
+
+// === 底部: 输出 ===
+box(300, 600, 300, 60, dark, '#eaecee');
+text(450, 620, '📋 审计报告 · 证据链图谱 · 复核文档', 13, dark);
+
+arrow(450, 560, 450, 600, green);
+
+// === 左下角: 统计面板 ===
+text(50, 670, '🗂️ 全栈模块: 19 | 工具: 12+ | 规则包: ~200条 | Agent角色: 7', 11, '#aaa', 'left');
+
+// === 装饰: 手绘小人 ===
+circle(870, 60, 15, purple, '#f5eef8');
+circle(870, 95, 8, purple);
+circle(860, 115, 8, purple);
+circle(880, 115, 8, purple);
+// 脸
+rc.line(862, 56, 858, 58, {roughness:1.5, stroke:purple, strokeWidth:1.5});
+rc.line(878, 56, 882, 58, {roughness:1.5, stroke:purple, strokeWidth:1.5});
+rc.line(865, 65, 875, 67, {roughness:1.5, stroke:purple, strokeWidth:1.5});
+</script>
+</body>
+</html>

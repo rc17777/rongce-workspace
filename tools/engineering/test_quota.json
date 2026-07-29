@@ -1,0 +1,19 @@
+{
+  "project_name": "XX市道路改造工程（定额审查测试）",
+  "work_items": [
+    {"code": "040101001001", "name": "挖一般土方", "unit": "m³", "quantity": 16800, "applied_quota_code": "D1-1-1", "applied_quota_name": "人工挖土方一二类土", "feature_desc": "机械挖土方，三类土，运距1km"},
+    {"code": "040103002001", "name": "填方碾压", "unit": "m³", "quantity": 12100, "applied_quota_code": "D1-2-3", "applied_quota_name": "填土碾压", "feature_desc": "路基填方碾压，压实度≥95%"},
+    {"code": "040203001001", "name": "水泥稳定碎石基层", "unit": "m²", "quantity": 37000, "applied_quota_code": "", "applied_quota_name": "", "feature_desc": "5%水泥稳定碎石，厚20cm"},
+    {"code": "040205001001", "name": "人行道铺装", "unit": "m²", "quantity": 5000, "applied_quota_code": "D9-9-9", "applied_quota_name": "人行道板铺设", "feature_desc": "花岗岩人行道板，300×600mm"}
+  ],
+  "quota_lib": [
+    {"code": "D1-1-1", "name": "人工挖土方一二类土", "unit": "100m³", "base_price": 2850, "region": "四川省", "year": 2020, "status": "deprecated", "description": "人工开挖一二类土"},
+    {"code": "D1-1-3", "name": "机械挖土方三类土", "unit": "100m³", "base_price": 1580, "region": "四川省", "year": 2024, "status": "active", "description": "反铲挖掘机挖土三类土"},
+    {"code": "D1-1-4", "name": "机械挖土方三四类土", "unit": "100m³", "base_price": 2200, "region": "四川省", "year": 2024, "status": "active", "description": "反铲挖掘机挖土三四类土"},
+    {"code": "D1-2-3", "name": "填土碾压", "unit": "100m³", "base_price": 480, "region": "四川省", "year": 2024, "status": "active", "description": "路基填方碾压"},
+    {"code": "D2-3-5", "name": "水泥稳定碎石基层20cm", "unit": "100m²", "base_price": 7200, "region": "四川省", "year": 2024, "status": "active", "description": "5%水泥稳定碎石，厚度20cm"},
+    {"code": "D2-3-6", "name": "水泥稳定碎石基层25cm", "unit": "100m²", "base_price": 8900, "region": "四川省", "year": 2024, "status": "active", "description": "5%水泥稳定碎石，厚度25cm"},
+    {"code": "D2-3-7", "name": "水泥稳定碎石基层每增减1cm", "unit": "100m²", "base_price": 380, "region": "四川省", "year": 2024, "status": "active", "description": "水泥稳定碎石厚度每增减1cm"},
+    {"code": "D9-9-9", "name": "人行道板铺设", "unit": "100m²", "base_price": 12000, "region": "四川省", "year": 2018, "status": "active", "description": "普通预制人行道板"}
+  ]
+}

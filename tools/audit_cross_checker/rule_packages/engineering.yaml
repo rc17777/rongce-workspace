@@ -1,0 +1,185 @@
+# ============================================================================
+# Engineering Rule Package (~50 rules)
+# ============================================================================
+
+domain: engineering
+total_rules: 50
+
+rules:
+  # ==========================================================================
+  # Five-Way Comparison (五算对比)
+  # ==========================================================================
+  - id: EG-FW-001
+    check_type: five_way_comparison
+    description: "概算 ≥ 预算（逐项）"
+    expression: "estimate >= budget"
+    tolerance: 0.01
+    severity: warning
+    note: "预算超出概算需调整"
+
+  - id: EG-FW-002
+    check_type: five_way_comparison
+    description: "预算 ≥ 合同价（逐项）"
+    expression: "budget >= contract_price"
+    tolerance: 0.01
+    severity: warning
+
+  - id: EG-FW-003
+    check_type: five_way_comparison
+    description: "合同价 ≥ 结算价（逐项，正常情况）"
+    expression: "contract_price >= settlement"
+    tolerance: 0.01
+    severity: warning
+    note: "结算价超合同价需变更签证支撑"
+
+  - id: EG-FW-004
+    check_type: five_way_comparison
+    description: "结算价 ≥ 决算价（逐项）"
+    expression: "settlement >= final_account"
+    tolerance: 0.01
+    severity: warning
+
+  - id: EG-FW-005
+    check_type: five_way_comparison
+    description: "五算合计金额逐级递减验证"
+    expression: "total_estimate >= total_budget >= total_contract >= total_settlement >= total_final"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-FW-006
+    check_type: five_way_comparison
+    description: "概算到结算总体差异率 > 15% 标记"
+    expression: "(estimate - settlement) / estimate > 0.15"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  - id: EG-FW-007
+    check_type: five_way_comparison
+    description: "预算到结算差异率 > 10% 标记"
+    expression: "(budget - settlement) / budget > 0.1"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  # ==========================================================================
+  # Bill of Quantities (工程量清单)
+  # ==========================================================================
+  - id: EG-BQ-001
+    check_type: boq
+    description: "清单量合计 = 各分部分项工程量之和"
+    expression: "total_quantity == SUM(item_quantities)"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-BQ-002
+    check_type: boq
+    description: "合价 = 工程量 × 综合单价"
+    expression: "total_price == quantity * unit_price"
+    tolerance: 0.01
+    severity: error
+    applies_to: every_item
+
+  - id: EG-BQ-003
+    check_type: boq
+    description: "清单总价 = 各分部分项合价之和"
+    expression: "grand_total == SUM(item_totals)"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-BQ-004
+    check_type: boq
+    description: "暂列金额 + 暂估价 + 分部分项 + 措施 + 规费 + 税金 = 总价"
+    expression: "provisional + prime_cost + sub_division + measures + fees + tax == grand_total"
+    tolerance: 0.01
+    severity: error
+
+  # ==========================================================================
+  # Variation / Change Orders (变更签证)
+  # ==========================================================================
+  - id: EG-VR-001
+    check_type: variation
+    description: "变更金额 = 变更后 − 变更前"
+    expression: "change_amount == after_change - before_change"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-VR-002
+    check_type: variation
+    description: "变更增减合计 = 增加项合计 + 减少项合计"
+    expression: "net_change == total_increase + total_decrease"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-VR-003
+    check_type: variation
+    description: "变更后合同价 = 原合同价 + 变更净增减"
+    expression: "adjusted_contract == original_contract + net_change"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-VR-004
+    check_type: variation
+    description: "单次变更金额 > 原合同10% 标记"
+    expression: "ABS(change_amount) / original_contract > 0.1"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  # ==========================================================================
+  # Progress Payment (进度款)
+  # ==========================================================================
+  - id: EG-PP-001
+    check_type: progress_payment
+    description: "本期应付款 = 累计完成量 × 合同单价 − 累计已付款"
+    expression: "current_payment == cumulative_completed * unit_price - cumulative_paid"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-PP-002
+    check_type: progress_payment
+    description: "累计已付款 ≤ 累计完成量 × 合同单价（防止超付）"
+    expression: "cumulative_paid <= cumulative_completed * unit_price + tolerance"
+    tolerance: 0.01
+    severity: error
+    note: "超付是重大风险"
+
+  - id: EG-PP-003
+    check_type: progress_payment
+    description: "付款比例 = 累计已付款 / 累计完成产值"
+    expression: "payment_ratio == cumulative_paid / cumulative_completed_value"
+    tolerance: 0.001
+    severity: info
+
+  - id: EG-PP-004
+    check_type: progress_payment
+    description: "质保金扣留 = 本期应付 × 质保金比例"
+    expression: "retention == current_payment * retention_rate"
+    tolerance: 0.01
+    severity: warning
+    note: "质保金比例按合同约定"
+
+  # ==========================================================================
+  # Material Price Adjustment (材料调差)
+  # ==========================================================================
+  - id: EG-MA-001
+    check_type: material_adjustment
+    description: "价差 = (当期信息价 − 基准期信息价) × 材料用量"
+    expression: "price_diff == (current_price - base_price) * quantity"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-MA-002
+    check_type: material_adjustment
+    description: "材料调差合计 = 各材料调差金额之和"
+    expression: "total_adjustment == SUM(material_adjustments)"
+    tolerance: 0.01
+    severity: error
+
+  - id: EG-MA-003
+    check_type: material_adjustment
+    description: "价差超过风险幅度才调差（单向）"
+    expression: "ABS((current_price - base_price) / base_price) > risk_threshold"
+    tolerance: 0.001
+    severity: info
+    note: "风险幅度通常5%，按合同约定"

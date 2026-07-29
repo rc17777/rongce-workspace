@@ -1,0 +1,160 @@
+# ============================================================================
+# Special Audit Rule Package (~40 rules)
+# ============================================================================
+
+domain: special_audit
+total_rules: 40
+
+rules:
+  # ==========================================================================
+  # Budget vs Actual (预算执行)
+  # ==========================================================================
+  - id: SA-BV-001
+    check_type: budget_vs_actual
+    description: "实际支出 ≤ 批复预算（单项）"
+    expression: "actual_amount <= budget_amount + tolerance"
+    tolerance: 0.01
+    severity: warning
+    note: "超支标记warning；需检查是否有预算调整批复"
+
+  - id: SA-BV-002
+    check_type: budget_vs_actual
+    description: "预算总额 ≥ 各项预算之和"
+    expression: "SUM(item_budgets) <= total_budget + tolerance"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-BV-003
+    check_type: budget_vs_actual
+    description: "实际支出合计 = 各项实际支出之和"
+    expression: "SUM(item_actuals) == total_actual"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-BV-004
+    check_type: budget_vs_actual
+    description: "差异 = 预算 − 实际"
+    expression: "difference == budget_amount - actual_amount"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-BV-005
+    check_type: budget_vs_actual
+    description: "预算执行率 = 实际 / 预算 × 100%"
+    expression: "execution_rate == actual_amount / budget_amount"
+    tolerance: 0.001
+    severity: info
+    note: "用于自动检测过低/过高执行率"
+
+  # ==========================================================================
+  # Term Comparison (任期对比)
+  # ==========================================================================
+  - id: SA-TC-001
+    check_type: term_comparison
+    description: "期末余额 = 期初 + 本期增加 − 本期减少（通用变动表）"
+    expression: "end == begin + increase - decrease"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-TC-002
+    check_type: term_comparison
+    description: "任期变动率 = (期末 − 期初) / 期初 × 100%"
+    expression: "change_rate == (end - begin) / begin"
+    tolerance: 0.001
+    severity: info
+
+  - id: SA-TC-003
+    check_type: term_comparison
+    description: "变动超过20%的项目需审查说明"
+    expression: "ABS((end - begin) / begin) > 0.2"
+    tolerance: 0.0
+    severity: warning
+    requires_human_review: true
+
+  # ==========================================================================
+  # Special Fund Balance (专项资金)
+  # ==========================================================================
+  - id: SA-FB-001
+    check_type: fund_balance
+    description: "专项资金：期初 + 本期拨入 − 本期支出 = 期末余额"
+    expression: "begin + income - expense == end"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-FB-002
+    check_type: fund_balance
+    description: "专项资金：拨入合计 = 各来源拨入之和"
+    expression: "total_income == SUM(source_incomes)"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-FB-003
+    check_type: fund_balance
+    description: "专项资金：支出合计 = 各项支出之和"
+    expression: "total_expense == SUM(item_expenses)"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-FB-004
+    check_type: fund_balance
+    description: "专项资金：期末余额 ≥ 0（不应出现赤字）"
+    expression: "end >= 0"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-FB-005
+    check_type: fund_balance
+    description: "专项资金：拨入金额 = 批复金额"
+    expression: "actual_income == approved_amount"
+    tolerance: 0.01
+    severity: warning
+    requires_human_review: true
+
+  # ==========================================================================
+  # Problem Summary (问题汇总)
+  # ==========================================================================
+  - id: SA-PS-001
+    check_type: problem_summary
+    description: "问题金额合计 = 各类问题金额之和"
+    expression: "total_problem_amount == SUM(category_amounts)"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-PS-002
+    check_type: problem_summary
+    description: "问题数量合计 = 各类问题数量之和"
+    expression: "total_problem_count == SUM(category_counts)"
+    tolerance: 0
+    severity: error
+
+  - id: SA-PS-003
+    check_type: problem_summary
+    description: "单个问题金额 > 0"
+    expression: "problem_amount > 0"
+    tolerance: 0
+    severity: warning
+
+  # ==========================================================================
+  # Rectification Tracking (整改追踪)
+  # ==========================================================================
+  - id: SA-RT-001
+    check_type: rectification
+    description: "已整改 + 正在整改 + 未整改 = 问题总数"
+    expression: "rectified + in_progress + not_rectified == total_problems"
+    tolerance: 0
+    severity: error
+
+  - id: SA-RT-002
+    check_type: rectification
+    description: "已整改金额 + 未整改金额 = 问题总金额"
+    expression: "rectified_amount + pending_amount == total_problem_amount"
+    tolerance: 0.01
+    severity: error
+
+  - id: SA-RT-003
+    check_type: rectification
+    description: "超期未整改事项标记"
+    expression: "days_since_deadline > 0 AND not_rectified == True"
+    tolerance: 0
+    severity: error
+    requires_human_review: true

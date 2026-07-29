@@ -1,0 +1,10 @@
+{
+  "model": "deepseek-chat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello, just a connectivity test. Reply with OK."
+    }
+  ],
+  "max_tokens": 10
+}
