@@ -8,7 +8,7 @@ WORKSPACE = os.path.expanduser('~/.openclaw/workspace')
 ONE_DRIVE = os.path.expanduser('~/OneDrive/融策备份')
 
 def run(cmd, cwd=None):
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=cwd or WORKSPACE, timeout=120)
+    result = subprocess.run(cmd, shell=True, capture_output=True, encoding='gbk', errors='replace', cwd=cwd or WORKSPACE, timeout=120)
     return result.returncode, result.stdout.strip(), result.stderr.strip()
 
 def git_backup():
