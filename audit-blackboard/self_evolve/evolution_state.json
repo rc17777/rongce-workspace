@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "last_full_cycle": null,
+  "cycles_completed": 0,
+  "last_signal_extraction": "2026-07-28T23:41:39.799752+08:00",
+  "last_decision_run": "2026-07-28T23:41:52.145334+08:00",
+  "pending_proposals": [],
+  "applied_mutations": [],
+  "latest_signals": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\self_evolve\\signals\\signals_20260728_2341.json"
+}

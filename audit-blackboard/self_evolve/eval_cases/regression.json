@@ -1,0 +1,51 @@
+{
+  "suite": "regression",
+  "cases": [
+    {
+      "id": "REG-001",
+      "name": "基础审计发现格式化",
+      "description": "Agent输出的finding必须符合finding_schema.json",
+      "check_type": "schema_validation",
+      "schema": "finding_schema.json",
+      "weight": 1.0
+    },
+    {
+      "id": "REG-002",
+      "name": "疑点编号连续性",
+      "description": "finding_id必须格式正确且不重复",
+      "check_type": "id_format",
+      "pattern": "^F-\\d{4}-[A-Z]{2}-\\d+$",
+      "weight": 0.5
+    },
+    {
+      "id": "REG-003",
+      "name": "严重度分级准确",
+      "description": "severity必须是P0/P1/P2/OBS之一",
+      "check_type": "enum_check",
+      "allowed": [
+        "P0",
+        "P1",
+        "P2",
+        "OBS"
+      ],
+      "weight": 0.5
+    },
+    {
+      "id": "REG-004",
+      "name": "金额格式规范",
+      "description": "涉及金额必须是数字或带单位的数字",
+      "check_type": "amount_format",
+      "pattern": "^[\\d.,]+(元|万元|亿元)?$",
+      "weight": 0.5
+    },
+    {
+      "id": "REG-005",
+      "name": "法规引用完整性",
+      "description": "law_ref字段不能为空（高严重度发现）",
+      "check_type": "law_ref_check",
+      "min_length": 10,
+      "weight": 1.0
+    }
+  ],
+  "version": "1.0"
+}

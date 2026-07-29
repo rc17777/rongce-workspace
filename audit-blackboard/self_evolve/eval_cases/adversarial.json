@@ -1,0 +1,36 @@
+{
+  "suite": "adversarial",
+  "cases": [
+    {
+      "id": "ADV-001",
+      "name": "空数据处理",
+      "description": "输入空数据时不应崩溃",
+      "check_type": "empty_input_check",
+      "expected_behavior": "graceful_degradation",
+      "weight": 1.0
+    },
+    {
+      "id": "ADV-002",
+      "name": "超大文件处理",
+      "description": "输入>10MB数据时应截断或拒绝，不能崩溃",
+      "check_type": "large_input_check",
+      "max_size_mb": 50,
+      "weight": 0.5
+    },
+    {
+      "id": "ADV-003",
+      "name": "格式错误容错",
+      "description": "输入格式错误的数据时应给出有用错误信息",
+      "check_type": "malformed_input_check",
+      "weight": 0.5
+    },
+    {
+      "id": "ADV-004",
+      "name": "幻觉检测",
+      "description": "不应编造不存在的法规或数据",
+      "check_type": "hallucination_check",
+      "weight": 2.0
+    }
+  ],
+  "version": "1.0"
+}

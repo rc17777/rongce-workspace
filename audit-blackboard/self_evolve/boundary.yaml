@@ -1,0 +1,122 @@
+# 融策Agent自进化系统 — 治理边界配置 v1.0
+# ═══════════════════════════════════════
+# 这是L6治理层的核心配置文件。
+# 文章核心原则："元层永不让agent自治。卡门线一旦划定，不能再讨论。"
+#
+# 架构：下层提议 → 上层决策 → 上上层锁死
+#   L1-L3: agent可以提案
+#   L4-L5: agent可以建议，但人类批
+#   L6: 人类独占，agent永远不可触碰
+
+version: "1.0"
+last_updated: "2026-07-28"
+
+# ═══════════════════════════════════════
+#  四条禁止（单向不可越界线）
+# ═══════════════════════════════════════
+
+forbidden_actions:
+  # 禁止1: 不允许agent修改L5决策策略
+  - id: FORBID_MODIFY_DECISION
+    description: "不允许agent修改决策引擎的触发规则、阈值、权重"
+    scope: ["decision_engine.py", "boundary.yaml", "decision_rules.json"]
+    severity: CRITICAL
+    message: "决策策略属于L5层，仅人类可以修改"
+
+  # 禁止2: 不允许agent修改L4评估集合
+  - id: FORBID_MODIFY_EVAL
+    description: "不允许agent修改评估用例、评估标准、评估权重"
+    scope: ["eval_runner.py", "eval_cases/", "eval_config.json"]
+    severity: CRITICAL
+    message: "评估集合属于L4层，agent不能给自己当裁判"
+
+  # 禁止3: 不允许agent修改L6治理规则
+  - id: FORBID_MODIFY_GOVERNANCE
+    description: "不允许agent修改治理边界、禁止列表、卡门线配置"
+    scope: ["governance.py", "boundary.yaml", "governance_rules/"]
+    severity: CRITICAL
+    message: "治理规则属于L6层，元层永不让agent自治"
+
+  # 禁止4: 不允许agent跨授权范围修改
+  - id: FORBID_CROSS_AUTHORITY
+    description: "不允许agent修改其他agent的spec、全局配置、共享基础设施"
+    scope: ["agent_specs/*.json", "agent_registry.json", "schemas/", "orchestrate_v3.py"]
+    severity: CRITICAL
+    message: "agent只能修改自己的spec，不能跨授权范围"
+
+# ═══════════════════════════════════════
+#  允许的操作（受限修改域）
+# ═══════════════════════════════════════
+
+allowed_actions:
+  # 允许: agent提L3修改提案
+  - id: ALLOW_PROPOSE_MUTATION
+    description: "agent可以对自己的prompt/skill/hook提修改提案"
+    scope: ["agent_specs/{agent_name}.json", "skills/", "playbooks/"]
+    requires_approval: true
+    approver: "human"
+
+  # 允许: agent提L4/L5改进建议
+  - id: ALLOW_SUGGEST_IMPROVEMENT
+    description: "agent可以对评估用例和决策规则提出改进建议"
+    scope: ["eval_cases/", "decision_rules.json"]
+    requires_approval: true
+    approver: "human"
+    note: "建议≠修改，需要人类审核后手动落地"
+
+# ═══════════════════════════════════════
+#  修改作用域分级 (Mutation Level)
+# ═══════════════════════════════════════
+
+mutation_levels:
+  level_0_frozen:
+    description: "冻结层 — 任何agent都不能修改"
+    scope: ["boundary.yaml", "governance.py", "orchestrate_v3.py"]
+    approver: "NONE"  # 永远不能改
+
+  level_1_human_only:
+    description: "人类独占层 — agent可以提建议但不能改"
+    scope: ["decision_engine.py", "eval_runner.py", "schemas/finding_schema.json"]
+    approver: "human"
+
+  level_2_gated:
+    description: "门控层 — agent可以提PR，人类批准后合并"
+    scope: ["agent_specs/", "skills/", "playbooks/", "knowledge/references/"]
+    approver: "human"
+    max_changes_per_cycle: 3  # 每轮最多3个修改提案
+    require_eval_pass: true   # 必须通过L4评估
+
+  level_3_auto:
+    description: "自动化层 — agent可以自动修改（低风险操作）"
+    scope: ["memory/tmp/", "logs/", "findings/", "status.json"]
+    approver: "auto"
+
+# ═══════════════════════════════════════
+#  卡门线（人类批准的决策节点）
+# ═══════════════════════════════════════
+
+gates:
+  - id: GATE_EVAL_PASS
+    description: "所有修改必须通过独立评估"
+    trigger: "mutation_proposed"
+    action: "run_eval_suite"
+    on_fail: "REJECT"
+
+  - id: GATE_HUMAN_REVIEW
+    description: "Level 1-2的修改需要人类审查"
+    trigger: "eval_passed"
+    action: "create_review_request"
+    timeout_hours: 72  # 72小时人类不响应→自动拒绝
+
+  - id: GATE_ROLLBACK_READY
+    description: "所有修改必须有回滚方案"
+    trigger: "before_apply"
+    action: "verify_snapshot_exists"
+    on_fail: "BLOCK"
+
+  - id: GATE_RATE_LIMIT
+    description: "修改频率限制，防止递归发散"
+    trigger: "mutation_proposed"
+    action: "check_rate_limit"
+    max_per_day: 5
+    max_per_cycle: 10

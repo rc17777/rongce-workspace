@@ -1,0 +1,11 @@
+{
+  "proposal_id": "P-TEST-001",
+  "agent": "contract_hound",
+  "target_files": [
+    "audit-blackboard/self_evolve/governance.py",
+    "audit-blackboard/self_evolve/eval_runner.py",
+    "agent_specs/contract_hound.json"
+  ],
+  "change_type": "prompt_update",
+  "description": "测试提案：越界修改L6治理层+L4评估层"
+}

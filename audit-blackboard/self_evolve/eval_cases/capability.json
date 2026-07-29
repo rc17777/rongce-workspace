@@ -1,0 +1,44 @@
+{
+  "suite": "capability",
+  "cases": [
+    {
+      "id": "CAP-001",
+      "name": "多源确认能力",
+      "description": "Agent是否能从多个数据源交叉验证",
+      "check_type": "multi_source_check",
+      "min_sources": 1,
+      "weight": 2.0
+    },
+    {
+      "id": "CAP-002",
+      "name": "证据链完整性",
+      "description": "每条发现是否有可追溯的证据",
+      "check_type": "evidence_check",
+      "min_evidence_items": 1,
+      "weight": 1.5
+    },
+    {
+      "id": "CAP-003",
+      "name": "交接包完整性",
+      "description": "H-packet是否包含所有必需字段",
+      "check_type": "handover_check",
+      "required_fields": [
+        "goal",
+        "confirmed_facts",
+        "warnings",
+        "findings_summary"
+      ],
+      "weight": 2.0
+    },
+    {
+      "id": "CAP-004",
+      "name": "发现密度合理",
+      "description": "输出发现数在合理范围（不过度也不空转）",
+      "check_type": "density_check",
+      "min_findings": 1,
+      "max_findings": 50,
+      "weight": 1.0
+    }
+  ],
+  "version": "1.0"
+}

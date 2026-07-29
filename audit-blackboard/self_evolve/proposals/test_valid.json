@@ -1,0 +1,7 @@
+{
+  "proposal_id": "P-TEST-002",
+  "agent": "contract_hound",
+  "target_files": ["agent_specs/contract_hound.json"],
+  "change_type": "prompt_update",
+  "description": "合法提案：优化合同审查Agent提示词"
+}

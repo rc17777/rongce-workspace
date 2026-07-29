@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "rules": [
+    {
+      "id": "R001",
+      "name": "交接断裂自动告警",
+      "condition": {
+        "signal_type": "handover_break",
+        "min_severity": "medium"
+      },
+      "action": "alert",
+      "priority": "P0",
+      "message": "检测到Agent交接断裂，建议检查spawn流程"
+    },
+    {
+      "id": "R002",
+      "name": "Agent零发现触发能力审查",
+      "condition": {
+        "signal_type": "agent_zero_findings",
+        "min_severity": "medium"
+      },
+      "action": "propose_review",
+      "priority": "P1",
+      "message": "Agent被派发但无任何发现，建议审查任务分配或增强能力"
+    },
+    {
+      "id": "R003",
+      "name": "Token超预算切换低成本模型",
+      "condition": {
+        "signal_type": "token_budget_warning",
+        "min_severity": "high"
+      },
+      "action": "propose_model_switch",
+      "priority": "P0",
+      "message": "Token超预算，建议切换到低成本模型或压缩Agent任务"
+    },
+    {
+      "id": "R004",
+      "name": "长期未使用Agent评估下线",
+      "condition": {
+        "signal_type": "agent_never_used",
+        "min_severity": "low"
+      },
+      "action": "propose_review",
+      "priority": "P2",
+      "message": "Agent长期未使用，建议评估是否仍需要"
+    },
+    {
+      "id": "R005",
+      "name": "评估未通过阻止合并",
+      "condition": {
+        "signal_type": "eval_failed"
+      },
+      "action": "block",
+      "priority": "P0",
+      "message": "修改提案未通过L4评估，阻止合并"
+    },
+    {
+      "id": "R006",
+      "name": "高失败率触发根因分析",
+      "condition": {
+        "signal_type": "failure_rate_high",
+        "min_severity": "high"
+      },
+      "action": "propose_deep_debug",
+      "priority": "P1",
+      "message": "Agent失败率过高，建议触发AgentDebugX深度调试"
+    },
+    {
+      "id": "R007",
+      "name": "发现密度过低触发提示词优化",
+      "condition": {
+        "signal_type": "agent_zero_findings",
+        "min_severity": "medium"
+      },
+      "action": "propose_prompt_optimize",
+      "priority": "P1",
+      "message": "建议优化Agent提示词以提高发现密度"
+    },
+    {
+      "id": "R008",
+      "name": "评估分数持续下降触发能力加固",
+      "condition": {
+        "signal_type": "eval_declining",
+        "min_severity": "medium"
+      },
+      "action": "propose_capability_hardening",
+      "priority": "P1",
+      "message": "Agent评估分数持续下降，建议能力加固"
+    }
+  ],
+  "decision_policy": {
+    "auto_trigger_threshold": "P0",
+    "max_auto_actions_per_day": 3,
+    "require_human_for": [
+      "model_switch",
+      "agent_removal",
+      "schema_change"
+    ],
+    "cooldown_minutes": 60
+  }
+}

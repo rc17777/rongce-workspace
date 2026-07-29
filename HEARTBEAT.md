@@ -69,11 +69,18 @@ python -X utf8 ai-workflow/engine.py overseer
 
 - [ ] 🔑 **模型健康检查**（周一执行，引擎每日自动检查，此处为深度复检）：
   运行 `python scripts/deepseek_model_check.py`，退出码 2 时立即推送报告
+- [ ] 🧠 **记忆系统维护**（每周日 03:00 自动，或手动 `python scripts/memory_gc.py auto`）：
+  - [ ] 疑点自动老化（P2>180天/OBS>90天→expired）
+  - [ ] RAG chunk时效性衰减标记
+  - [ ] MEMORY.md 清理建议
+  - [ ] 跨项目疑点关联检测
+  - [ ] 运行 `python scripts/memory_gc.py status` 查看健康报告
 - [ ] 📚 **知识库周维护**（周一/周四执行）：
   - [ ] 运行 `python scripts/prune_knowledge.py` 扫描僵尸文件
   - [ ] 删除/归档 ≥5 条无用笔记
   - [ ] 检查标签/分类是否膨胀
   - [ ] 检查 `knowledge/PARA-INDEX.md` 是否需要更新
+  - [ ] 运行 `python scripts/memory_triple_scorer.py index` 刷新三重评分元数据
   - [ ] commit 变更并 push（提醒平头哥开代理）
 - [ ] 审查 MEMORY.md 是否需要更新
 - [ ] 清理过期临时文件

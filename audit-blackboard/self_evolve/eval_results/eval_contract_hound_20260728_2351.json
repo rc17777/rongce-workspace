@@ -1,0 +1,281 @@
+{
+  "evaluated_at": "2026-07-28T23:51:11.042470+08:00",
+  "agent": "contract_hound",
+  "suites": {
+    "adversarial": {
+      "score": 1.0,
+      "findings_evaluated": 2,
+      "details": [
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-004",
+          "eval": {
+            "total_cases": 4,
+            "passed": 4,
+            "failed": 0,
+            "score": 1.0,
+            "results": [
+              {
+                "case_id": "ADV-001",
+                "case_name": "空数据处理",
+                "status": "PASS",
+                "detail": "检查类型 empty_input_check 待实现",
+                "weight": 1.0
+              },
+              {
+                "case_id": "ADV-002",
+                "case_name": "超大文件处理",
+                "status": "PASS",
+                "detail": "检查类型 large_input_check 待实现",
+                "weight": 0.5
+              },
+              {
+                "case_id": "ADV-003",
+                "case_name": "格式错误容错",
+                "status": "PASS",
+                "detail": "检查类型 malformed_input_check 待实现",
+                "weight": 0.5
+              },
+              {
+                "case_id": "ADV-004",
+                "case_name": "幻觉检测",
+                "status": "PASS",
+                "detail": "检查类型 hallucination_check 待实现",
+                "weight": 2.0
+              }
+            ]
+          }
+        },
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-005",
+          "eval": {
+            "total_cases": 4,
+            "passed": 4,
+            "failed": 0,
+            "score": 1.0,
+            "results": [
+              {
+                "case_id": "ADV-001",
+                "case_name": "空数据处理",
+                "status": "PASS",
+                "detail": "检查类型 empty_input_check 待实现",
+                "weight": 1.0
+              },
+              {
+                "case_id": "ADV-002",
+                "case_name": "超大文件处理",
+                "status": "PASS",
+                "detail": "检查类型 large_input_check 待实现",
+                "weight": 0.5
+              },
+              {
+                "case_id": "ADV-003",
+                "case_name": "格式错误容错",
+                "status": "PASS",
+                "detail": "检查类型 malformed_input_check 待实现",
+                "weight": 0.5
+              },
+              {
+                "case_id": "ADV-004",
+                "case_name": "幻觉检测",
+                "status": "PASS",
+                "detail": "检查类型 hallucination_check 待实现",
+                "weight": 2.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "capability": {
+      "score": 0.69,
+      "findings_evaluated": 2,
+      "details": [
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-004",
+          "eval": {
+            "total_cases": 4,
+            "passed": 3,
+            "failed": 0,
+            "score": 0.69,
+            "results": [
+              {
+                "case_id": "CAP-001",
+                "case_name": "多源确认能力",
+                "status": "WARN",
+                "detail": "仅0个来源，建议多源确认",
+                "weight": 2.0
+              },
+              {
+                "case_id": "CAP-002",
+                "case_name": "证据链完整性",
+                "status": "PASS",
+                "detail": "",
+                "weight": 1.5
+              },
+              {
+                "case_id": "CAP-003",
+                "case_name": "交接包完整性",
+                "status": "PASS",
+                "detail": "检查类型 handover_check 待实现",
+                "weight": 2.0
+              },
+              {
+                "case_id": "CAP-004",
+                "case_name": "发现密度合理",
+                "status": "PASS",
+                "detail": "检查类型 density_check 待实现",
+                "weight": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-005",
+          "eval": {
+            "total_cases": 4,
+            "passed": 3,
+            "failed": 0,
+            "score": 0.69,
+            "results": [
+              {
+                "case_id": "CAP-001",
+                "case_name": "多源确认能力",
+                "status": "WARN",
+                "detail": "仅0个来源，建议多源确认",
+                "weight": 2.0
+              },
+              {
+                "case_id": "CAP-002",
+                "case_name": "证据链完整性",
+                "status": "PASS",
+                "detail": "",
+                "weight": 1.5
+              },
+              {
+                "case_id": "CAP-003",
+                "case_name": "交接包完整性",
+                "status": "PASS",
+                "detail": "检查类型 handover_check 待实现",
+                "weight": 2.0
+              },
+              {
+                "case_id": "CAP-004",
+                "case_name": "发现密度合理",
+                "status": "PASS",
+                "detail": "检查类型 density_check 待实现",
+                "weight": 1.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "regression": {
+      "score": 0.43,
+      "findings_evaluated": 2,
+      "details": [
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-004",
+          "eval": {
+            "total_cases": 5,
+            "passed": 2,
+            "failed": 3,
+            "score": 0.43,
+            "results": [
+              {
+                "case_id": "REG-001",
+                "case_name": "基础审计发现格式化",
+                "status": "FAIL",
+                "detail": "缺少字段: ['title', 'description']",
+                "weight": 1.0
+              },
+              {
+                "case_id": "REG-002",
+                "case_name": "疑点编号连续性",
+                "status": "FAIL",
+                "detail": "ID格式不符: F-2026-004",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-003",
+                "case_name": "严重度分级准确",
+                "status": "FAIL",
+                "detail": "无效严重度: 低",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-004",
+                "case_name": "金额格式规范",
+                "status": "PASS",
+                "detail": "",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-005",
+                "case_name": "法规引用完整性",
+                "status": "PASS",
+                "detail": "",
+                "weight": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "file": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\projects\\察隅县专项资金审计\\findings\\contract_hound.json",
+          "finding_id": "F-2026-005",
+          "eval": {
+            "total_cases": 5,
+            "passed": 2,
+            "failed": 3,
+            "score": 0.43,
+            "results": [
+              {
+                "case_id": "REG-001",
+                "case_name": "基础审计发现格式化",
+                "status": "FAIL",
+                "detail": "缺少字段: ['title', 'description']",
+                "weight": 1.0
+              },
+              {
+                "case_id": "REG-002",
+                "case_name": "疑点编号连续性",
+                "status": "FAIL",
+                "detail": "ID格式不符: F-2026-005",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-003",
+                "case_name": "严重度分级准确",
+                "status": "FAIL",
+                "detail": "无效严重度: 低",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-004",
+                "case_name": "金额格式规范",
+                "status": "PASS",
+                "detail": "",
+                "weight": 0.5
+              },
+              {
+                "case_id": "REG-005",
+                "case_name": "法规引用完整性",
+                "status": "PASS",
+                "detail": "",
+                "weight": 1.0
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "overall_score": 0.71,
+  "passed": true,
+  "total_findings_evaluated": 6
+}

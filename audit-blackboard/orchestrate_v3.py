@@ -24,6 +24,10 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# v3.1: 添加workspace根目录到path，使scripts.memory_triple_scorer可导入
+_ws_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _ws_root not in sys.path:
+    sys.path.insert(0, _ws_root)
 sys.stdout.reconfigure(encoding='utf-8')
 CST = timezone(timedelta(hours=8))
 
@@ -156,16 +160,28 @@ def resolve_biz_type(raw_type):
 
 
 def query_rag(query_text, top_n=3):
-    """查询本地RAG知识库"""
+    """查询本地RAG知识库 — v3.1升级：使用三重评分增强检索"""
     try:
-        result = subprocess.run(
-            ['python', '-X', 'utf8', 'scripts/rag_query.py', query_text, '--top', str(top_n)],
-            capture_output=True, text=True, timeout=60,
-            cwd=str(BLACKBOARD.parent)
-        )
-        return result.stdout if result.returncode == 0 else ''
-    except Exception as e:
-        return f'(RAG不可用: {e})'
+        # 优先使用三重评分检索
+        from scripts.memory_triple_scorer import search_with_triple
+        results = search_with_triple(query_text, top_k=top_n * 2)  # 多取一些，去重后还有富余
+        lines = []
+        for r in results:
+            score_pct = int(r['score'] * 100)
+            lines.append(f"[{score_pct}% | R{r['relevance']:.0%} I{r['importance']:.0%} T{r['recency']:.0%}] {r['source']}")
+            lines.append(f"  {r['text'][:200]}")
+        return '\n'.join(lines)
+    except ImportError:
+        # Fallback: 传统TF-IDF检索
+        try:
+            result = subprocess.run(
+                ['python', '-X', 'utf8', 'scripts/rag_query.py', query_text, '--top', str(top_n)],
+                capture_output=True, text=True, timeout=60,
+                cwd=str(BLACKBOARD.parent)
+            )
+            return result.stdout if result.returncode == 0 else ''
+        except Exception as e:
+            return f'(RAG不可用: {e})'
 
 
 def penetrate(project_name, biz_type=None, project_dir=None):

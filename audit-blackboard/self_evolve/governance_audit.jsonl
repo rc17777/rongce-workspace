@@ -1,0 +1,2 @@
+{"timestamp": "2026-07-28T23:51:31.076102+08:00", "action": "check_proposal", "proposal_id": "P-TEST-001", "agent": "contract_hound", "status": "REJECTED", "violation_count": 2, "target_files": ["audit-blackboard/self_evolve/governance.py", "audit-blackboard/self_evolve/eval_runner.py", "agent_specs/contract_hound.json"]}
+{"timestamp": "2026-07-28T23:51:52.659790+08:00", "action": "check_proposal", "proposal_id": "P-TEST-002", "agent": "contract_hound", "status": "NEEDS_REVIEW", "violation_count": 0, "target_files": ["agent_specs/contract_hound.json"]}

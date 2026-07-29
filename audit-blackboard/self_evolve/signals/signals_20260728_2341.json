@@ -1,0 +1,159 @@
+{
+  "extracted_at": "2026-07-28T23:41:39.787809+08:00",
+  "projects_analyzed": 6,
+  "global_signals": true,
+  "total_signals": 14,
+  "failure_signals": 0,
+  "efficiency_signals": 3,
+  "capability_gap_signals": 11,
+  "details": {
+    "global": {
+      "extracted_at": "2026-07-28T23:41:39.614970+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [],
+      "capability_gap_signals": [
+        {
+          "type": "agent_never_used",
+          "agent": "workpaper_crafter",
+          "severity": "low",
+          "message": "Agent workpaper_crafter 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "review_sentinel",
+          "severity": "low",
+          "message": "Agent review_sentinel 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "budget_estimator",
+          "severity": "low",
+          "message": "Agent budget_estimator 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "settlement_auditor",
+          "severity": "low",
+          "message": "Agent settlement_auditor 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "fiscal_reviewer",
+          "severity": "low",
+          "message": "Agent fiscal_reviewer 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "performance_evaluator",
+          "severity": "low",
+          "message": "Agent performance_evaluator 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        },
+        {
+          "type": "agent_never_used",
+          "agent": "expert_bias_detector",
+          "severity": "low",
+          "message": "Agent expert_bias_detector 从未在任何项目中被调用",
+          "suggested_action": "评估该Agent是否仍然需要，或需要调整触发条件"
+        }
+      ]
+    },
+    "test_jingze": {
+      "project": "test_jingze",
+      "extracted_at": "2026-07-28T23:41:39.731463+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [],
+      "capability_gap_signals": [
+        {
+          "type": "agent_zero_findings",
+          "agent": "contract_hound",
+          "severity": "medium",
+          "message": "Agent contract_hound 被派发但无任何发现",
+          "suggested_action": "检查contract_hound的任务分配是否合理或需要能力增强"
+        },
+        {
+          "type": "agent_zero_findings",
+          "agent": "bid_hunter",
+          "severity": "medium",
+          "message": "Agent bid_hunter 被派发但无任何发现",
+          "suggested_action": "检查bid_hunter的任务分配是否合理或需要能力增强"
+        },
+        {
+          "type": "agent_zero_findings",
+          "agent": "data_scout",
+          "severity": "medium",
+          "message": "Agent data_scout 被派发但无任何发现",
+          "suggested_action": "检查data_scout的任务分配是否合理或需要能力增强"
+        },
+        {
+          "type": "agent_zero_findings",
+          "agent": "law_inspector",
+          "severity": "medium",
+          "message": "Agent law_inspector 被派发但无任何发现",
+          "suggested_action": "检查law_inspector的任务分配是否合理或需要能力增强"
+        }
+      ]
+    },
+    "XX局预算执行审计": {
+      "project": "XX局预算执行审计",
+      "extracted_at": "2026-07-28T23:41:39.742199+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [],
+      "capability_gap_signals": []
+    },
+    "_template": {
+      "project": "_template",
+      "extracted_at": "2026-07-28T23:41:39.753334+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [],
+      "capability_gap_signals": []
+    },
+    "察隅县专项资金审计": {
+      "project": "察隅县专项资金审计",
+      "extracted_at": "2026-07-28T23:41:39.753617+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [
+        {
+          "type": "project_metrics",
+          "total_findings": 14,
+          "agents_with_findings": 4,
+          "total_agents": 4
+        }
+      ],
+      "capability_gap_signals": []
+    },
+    "校服采购审计": {
+      "project": "校服采购审计",
+      "extracted_at": "2026-07-28T23:41:39.765452+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [
+        {
+          "type": "project_metrics",
+          "total_findings": 9,
+          "agents_with_findings": 3,
+          "total_agents": 3
+        }
+      ],
+      "capability_gap_signals": []
+    },
+    "校服采购审计v2": {
+      "project": "校服采购审计v2",
+      "extracted_at": "2026-07-28T23:41:39.776685+08:00",
+      "failure_signals": [],
+      "efficiency_signals": [
+        {
+          "type": "project_metrics",
+          "total_findings": 32,
+          "agents_with_findings": 4,
+          "total_agents": 4
+        }
+      ],
+      "capability_gap_signals": []
+    }
+  }
+}
