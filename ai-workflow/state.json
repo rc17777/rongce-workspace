@@ -45,11 +45,11 @@
     "token_watcher": {
       "label": "💰 Token监察员",
       "status": "idle",
-      "last_run": "2026-07-28 20:28",
-      "last_success": "2026-07-28 20:28",
+      "last_run": "2026-07-29 21:52",
+      "last_success": "2026-07-29 21:52",
       "last_failure": null,
       "fail_count": 0,
-      "total_runs": 20,
+      "total_runs": 21,
       "current_task": null
     },
     "model_router": {
@@ -587,11 +587,17 @@
       "time": "2026-07-29 14:06",
       "success": true,
       "error": null
+    },
+    {
+      "agent": "token_watcher",
+      "time": "2026-07-29 21:52",
+      "success": true,
+      "error": null
     }
   ],
   "escalations": [],
   "last_overseer_run": "2026-07-29T21:21:19.066241+08:00",
-  "last_engine_run": "2026-07-29T21:21:19.066267+08:00",
-  "consecutive_runs": 654,
-  "total_tasks_completed": 84
+  "last_engine_run": "2026-07-29T21:52:09.907728+08:00",
+  "consecutive_runs": 655,
+  "total_tasks_completed": 85
 }
