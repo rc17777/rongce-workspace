@@ -1,6 +1,6 @@
 ---
 name: gov-subsidy-penetration-audit
-description: 政府补助/补贴资金穿透式审计技能。覆盖超长期特别国债、以旧换新补贴、涉农补贴、设备更新补贴等政府补助类业务的穿透审计方法论。触发场景：政府补贴审计、补助资金核查、以旧换新审计、国债资金跟踪审计、骗补识别、资金穿透追踪。触发说法："政府补助审计""补贴资金穿透""骗补识别""以旧换新审计""国债资金审计""补贴数据建模"。
+description: "政府补助/补贴资金穿透式审计技能。覆盖超长期特别国债、以旧换新补贴、涉农补贴、设备更新补贴等政府补助类业务的穿透审计方法论。触发场景：政府补贴审计、补助资金核查、以旧换新审计、国债资金跟踪审计、骗补识别、资金穿透追踪。触发说法："政府补助审计""补贴资金穿透""骗补识别""以旧换新审计""国债资金审计""补贴数据建模"。 Uses penetration audit methodology: fund flow tracking from source to end recipient. Covers ultra-long-term special government bonds, trade-in subsidies, agricultural subsidies, and equipment renewal subsidies."
 ---
 
 # 政府补助/补贴资金穿透式审计

@@ -15,11 +15,11 @@
     "knowledge_keeper": {
       "label": "📚 知识管理员",
       "status": "idle",
-      "last_run": "2026-07-28 06:07",
-      "last_success": "2026-07-28 06:07",
+      "last_run": "2026-07-29 14:06",
+      "last_success": "2026-07-29 14:06",
       "last_failure": null,
       "fail_count": 0,
-      "total_runs": 18,
+      "total_runs": 19,
       "current_task": null
     },
     "tender_hunter": {
@@ -581,11 +581,17 @@
       "time": "2026-07-29 08:28",
       "success": true,
       "error": null
+    },
+    {
+      "agent": "knowledge_keeper",
+      "time": "2026-07-29 14:06",
+      "success": true,
+      "error": null
     }
   ],
   "escalations": [],
-  "last_overseer_run": "2026-07-29T12:17:53.875797+08:00",
-  "last_engine_run": "2026-07-29T12:17:53.875842+08:00",
-  "consecutive_runs": 625,
-  "total_tasks_completed": 83
+  "last_overseer_run": "2026-07-29T14:06:08.633000+08:00",
+  "last_engine_run": "2026-07-29T14:06:08.633029+08:00",
+  "consecutive_runs": 633,
+  "total_tasks_completed": 84
 }

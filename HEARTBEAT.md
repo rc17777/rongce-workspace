@@ -3,6 +3,14 @@
 > ⚠️ **吞金兽警报**：心跳必须用低成本模型！
 > 禁止用 GPT-5.5、V4 Pro、Claude 等高成本模型做心跳任务！
 
+## 💾 自动备份（每天14:30，独立cron）
+
+- **Git + OneDrive 双保险**：每日14:30自动执行 `python scripts/backup_daily.py`
+- Git commit + push → GitHub（代理开则成功，关则commit仍保存）
+- D-knowledge → OneDrive 增量同步
+- API Key → OneDrive 备份
+- 如连续3天push失败，下次心跳提醒平头哥开代理
+
 ## 🤖 AI自动化工作流（每次心跳执行）
 
 ### 第一步：运行工作流调度引擎（每次心跳必做）
@@ -60,8 +68,10 @@ python -X utf8 ai-workflow/engine.py overseer
 - [x] 检查当前模型是否为 `custom-cbwyy-top-v1/deepseek-v4-flash`
 
 ### 晚间补充（约20:00-21:00，引擎已自动跑Token监察员）
-- [x] 更新 memory 文件（当日事件记录）
-- [x] 如引擎的Token日报 >5万tokens，备注告知用户
+- [ ] 检查备份 cron 今天是否成功（`python scripts/backup_daily.py` 手动跑一下确认）
+- [ ] 更新 memory 文件（当日事件记录）
+- [ ] 如引擎的Token日报 >5万tokens，备注告知用户
+- [ ] 如 Git push 连续3天失败 → 提醒平头哥开代理
 
 ---
 

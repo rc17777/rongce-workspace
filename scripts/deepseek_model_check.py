@@ -59,7 +59,6 @@ CHECK_PROVIDERS = {
         "role": "🎨 生图专用",
     },
     "custom-cbwyy-qwen": {
-        "url": "https://cbwyy.top/v1/models",
         "expected_models": ["qwen3.7-plus"],
         "role": "🔧 低代价中文·图片",
     },
@@ -118,17 +117,21 @@ def check_provider(provider_id: str, providers: dict, expected: list) -> dict:
     url = CHECK_PROVIDERS.get(provider_id, {}).get("url",
                                                     f"{prov.get('baseUrl', '').rstrip('/')}/models")
 
+    # 尝试 /v1/models 查询（cbwyy代理支持，DashScope等原生API可能不支持）
+    models_from_api = []
     try:
         import urllib.request, ssl
         ctx = ssl.create_default_context()
         req = urllib.request.Request(url, headers={"Authorization": f"Bearer {api_key}"})
         with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
             data = json.loads(resp.read().decode())
+            models_from_api = [m["id"] for m in data.get("data", [])]
+    except Exception:
+        models_from_api = []  # 不走 /models 的 provider 这里会失败，走下方 fallback
 
-        models_from_api = [m["id"] for m in data.get("data", [])]
+    if models_from_api:
         found = [m for m in expected if m in models_from_api]
         missing = [m for m in expected if m not in models_from_api]
-
         return {
             "status": "OK" if not missing else "PARTIAL",
             "models_found": models_from_api,
@@ -136,9 +139,40 @@ def check_provider(provider_id: str, providers: dict, expected: list) -> dict:
             "found": found,
             "missing": missing,
         }
+
+    # Fallback: 轻量 chat completion 测试（适用于 DashScope 等不支持 /models 的 API）
+    try:
+        base = prov.get('baseUrl', '').rstrip('/')
+        model_id = expected[0] if expected else ''
+        if not base or not model_id:
+            return {"status": "ERROR", "models_found": [], "expected": expected, "error": "no baseUrl or model"}
+
+        payload = json.dumps({
+            "model": model_id,
+            "messages": [{"role": "user", "content": "OK"}],
+            "max_tokens": 5,
+            "temperature": 0
+        }).encode('utf-8')
+
+        req = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=payload,
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
+            method='POST'
+        )
+        with urllib.request.urlopen(req, context=ssl.create_default_context(), timeout=30) as resp:
+            result = json.loads(resp.read().decode())
+            content = result.get('choices', [{}])[0].get('message', {}).get('content', '')
+
+        return {
+            "status": "OK" if content else "PARTIAL",
+            "models_found": [model_id],
+            "expected": expected,
+            "found": [model_id] if content else [],
+            "missing": [] if content else expected,
+        }
     except Exception as e:
-        error_msg = str(e)
-        return {"status": "ERROR", "models_found": [], "expected": expected, "error": error_msg}
+        return {"status": "ERROR", "models_found": [], "expected": expected, "error": str(e)}
 
 
 def main():

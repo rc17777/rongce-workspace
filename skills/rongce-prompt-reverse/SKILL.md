@@ -1,6 +1,6 @@
 ---
 name: rongce-prompt-reverse
-description: 看图反推 AI 生图 Prompt。上传标书封面/报告封面/工程方案图/审计图表/数据看板等参考图，自动调用十步分析法反向工程出可复用的正向 Prompt + Negative Prompt。触发场景：反推提示词、逆向工程提示词、克隆这张图的风格、分析这张图的Prompt、看图写提示词、参考图转提示词、这张图怎么画、模仿这个封面风格。
+description: "看图反推 AI 生图 Prompt。上传标书封面/报告封面/工程方案图/审计图表/数据看板等参考图，自动调用十步分析法反向工程出可复用的正向 Prompt + Negative Prompt。触发场景：反推提示词、逆向工程提示词、克隆这张图的风格、分析这张图的Prompt、看图写提示词、参考图转提示词、这张图怎么画、模仿这个封面风格。 Uses ten-step reverse engineering analysis on reference images. Outputs reusable positive prompt + negative prompt for image generation tools."
 ---
 
 # 融策 Prompt 反推工具
