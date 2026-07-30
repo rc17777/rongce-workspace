@@ -10,6 +10,7 @@ import os, sys, json, time, subprocess
 sys.stdout.reconfigure(encoding='utf-8')
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, SCRIPT_DIR)  # 确保独立运行时能找到同级模块
 PIPELINE = os.path.join(SCRIPT_DIR, 'hybrid_ocr_pipeline.py')
 PADDLE_WORKER = os.path.join(SCRIPT_DIR, 'paddle_batch_worker.py')
 STATE = os.path.join(SCRIPT_DIR, 'hybrid_ocr_state.json')
