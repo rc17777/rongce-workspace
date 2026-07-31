@@ -7,6 +7,15 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 - **杂志资料OCR**: `D:\杂志资料`（1086MB/1450文件，审计杂志OCR结果）
 - **备份规则**：换电脑时从旧D盘拷贝到新D盘根目录，路径保持一致
 
+## 网络代理（Git push 依赖）
+
+- **代理软件**：FlClash（`D:\Program Files\FlClash\FlClashCore.exe`），端口 `127.0.0.1:7890`
+- **Git 已配置代理**：`http.proxy=http://127.0.0.1:7890`（workspace 仓库）
+- **直连 GitHub 会被重置**（国内环境），push 必须走代理
+- **故障特征**：`schannel: failed to receive handshake` / `curl 56 server closed abruptly` = 代理节点挂了/不稳，需在 FlClash 切节点或重启，**不是 Git 配置问题**
+- ⚠️ 判断 push 是否成功别只看报错：报 `server closed abruptly` 时数据可能已到达，用 `git ls-remote origin HEAD` 对比本地 HEAD 验证
+- 常见代理端口检查：7890/7891/7897/1080/10808/10809/8889/8118
+
 ## 可执行文件
 
 - **draw.io**：`D:\dwaw\draw.io\draw.io.exe` v30.0.1
