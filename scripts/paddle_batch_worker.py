@@ -6,6 +6,7 @@ PaddleOCR 批量处理器 — 由 hybrid_ocr_pipeline.py 调用
 用法: paddle_python.exe paddle_batch_worker.py <pdf_path> <output_json_path>
 """
 import sys, os, json, time, tempfile
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeout
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -49,8 +50,16 @@ for page_num in range(total_pages):
         tmp.write(img_bytes)
         tmp.close()
 
-        # OCR识别
-        ocr_result = ocr.ocr(tmp.name, cls=True)
+        # OCR识别（带超时，每页最多120秒）
+        ocr_result = None
+        try:
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                future = executor.submit(ocr.ocr, tmp.name, cls=True)
+                ocr_result = future.result(timeout=120)
+        except FutureTimeout:
+            print(f'[PaddleWorker] ⚠️ 第{page_num+1}页超时(>120s)，跳过', flush=True)
+        except Exception as e:
+            print(f'[PaddleWorker] ⚠️ 第{page_num+1}页出错: {e}', flush=True)
 
         # 清理临时文件
         try:

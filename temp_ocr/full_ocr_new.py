@@ -10,7 +10,7 @@ with open(r'C:\Users\scrccpa\.openclaw\openclaw.json') as f:
 api_key = config['models']['providers']['qwen-direct']['apiKey']
 
 from openai import OpenAI
-client = OpenAI(api_key=api_key, base_url='https://dashscope.aliyuncs.com/compatible-mode/v1')
+client = OpenAI(api_key=api_key, base_url='https://dashscope.aliyuncs.com/compatible-mode/v1', timeout=120)
 
 SRC_BASE = r'C:\Users\scrccpa\Desktop\若尔盖审计\若尔盖医保审计\2026年审计资料（医保局财务）'
 OUT_BASE = r'C:\Users\scrccpa\.openclaw\workspace\temp_ocr\output_new'

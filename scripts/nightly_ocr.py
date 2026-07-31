@@ -6,6 +6,7 @@
 由 cron 每日 00:00 触发，按本数限制（每夜最多N本），失败自动重试。
 """
 import os, sys, json, time, subprocess
+import atexit
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -21,6 +22,52 @@ MAX_BOOKS_PER_NIGHT = 8          # 每晚上限本数
 NO_QWEN = True                    # 夜间不调Qwen，¥0费用
 MAX_RETRIES = 2                   # 单本失败最大重试次数
 NIGHTLY_TIMEOUT = 21600           # 6小时硬超时（0点-6点）
+
+# 互斥锁（防多实例并发）
+PID_FILE = os.path.join(SCRIPT_DIR, 'nightly_ocr.pid')
+
+def check_mutex():
+    """检查是否已有实例在运行，有则退出"""
+    if os.path.exists(PID_FILE):
+        try:
+            with open(PID_FILE, 'r') as f:
+                old_pid = f.read().strip()
+            if old_pid:
+                # 检查进程是否还在运行
+                result = subprocess.run(
+                    ['tasklist', '/fi', f'PID eq {old_pid}', '/fo', 'csv', '/nh'],
+                    capture_output=True, text=True, timeout=10
+                )
+                if old_pid in result.stdout:
+                    print(f'[互斥锁] 已有实例运行 (PID {old_pid})，退出')
+                    sys.exit(0)
+                else:
+                    print(f'[互斥锁] 清理过期PID文件: {old_pid}')
+        except Exception as e:
+            print(f'[互斥锁] 检查失败: {e}，继续')
+    
+    # 写入当前PID
+    with open(PID_FILE, 'w') as f:
+        f.write(str(os.getpid()))
+    print(f'[互斥锁] PID {os.getpid()} 已注册')
+
+def cleanup_pid():
+    """退出时清理PID文件"""
+    try:
+        if os.path.exists(PID_FILE):
+            with open(PID_FILE, 'r') as f:
+                pid = f.read().strip()
+            if pid == str(os.getpid()):
+                os.unlink(PID_FILE)
+                print(f'[互斥锁] PID文件已清理')
+    except:
+        pass
+
+# 注册退出清理
+atexit.register(cleanup_pid)
+
+# 启动时检查互斥锁
+check_mutex()
 
 SOURCE_DIR = r'E:\2026\审计方法&政策文件\审计相关书籍'
 OUTPUT_DIR = r'E:\2026\审计方法&政策文件\_ocr_output'
