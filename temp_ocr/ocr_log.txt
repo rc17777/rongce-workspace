@@ -8,4 +8,14 @@ DONE DRG支付2025: 154/154
   [237/514] p0236... OK (318 chars)
   [238/514] p0237... ERR: Request timed out.
   [238/514] p0238... ERR: Request timed out.
-  [238/514] p0239... 
+  [238/514] p0239... OK (602 chars)
+  [239/514] p0240... OK (451 chars)
+  [240/514] p0241... OK (327 chars)
+  [241/514] p0242... OK (347 chars)
+  [242/514] p0243... ERR: Request timed out.
+  [242/514] p0244... OK (2032 chars)
+  [243/514] p0245... OK (2141 chars)
+  [244/514] p0246... ERR: Request timed out.
+  [244/514] p0247... OK (2138 chars)
+  [245/514] p0248... OK (791 chars)
+  [246/514] p0249... 
