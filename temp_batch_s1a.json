@@ -1,0 +1,13 @@
+[
+  {"command":"set","path":"/文章1-Agent工程优化/A1","props":{"value":"章节","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/B1","props":{"value":"核心命题","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/C1","props":{"value":"通用Agent的问题","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/D1","props":{"value":"Harness Engineering解法","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/E1","props":{"value":"与审盾映射","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/A1:E1","props":{"font.size":11}},
+  {"command":"set","path":"/文章1-Agent工程优化/col[A]","props":{"width":18}},
+  {"command":"set","path":"/文章1-Agent工程优化/col[B]","props":{"width":30}},
+  {"command":"set","path":"/文章1-Agent工程优化/col[C]","props":{"width":32}},
+  {"command":"set","path":"/文章1-Agent工程优化/col[D]","props":{"width":32}},
+  {"command":"set","path":"/文章1-Agent工程优化/col[E]","props":{"width":30}}
+]

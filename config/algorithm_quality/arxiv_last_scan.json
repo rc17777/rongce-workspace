@@ -1,248 +1,170 @@
 [
   {
-    "arxiv_id": "2607.13469",
-    "title": "Explainable Artificial Intelligence for Anomaly Detection in Banking Transactions: An Internal Audit Perspective",
-    "authors": [
-      "Anupa Lodhi"
-    ],
+    "arxiv_id": "2606.01023",
+    "title": "Data Collection for Training Quality-Control AI in Carpet Manufacturing",
+    "authors": ["Akbar Erkinov"],
     "summary": "",
     "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2607.13469",
-    "topic": "fraud",
-    "relevance_score": 0.7673059360730594,
+    "pdf_url": "https://arxiv.org/pdf/2606.01023",
+    "topic": "anomaly",
+    "relevance_score": 0.4258,
+    "actionable": false,
+    "suggested_algorithm": ""
+  },
+  {
+    "arxiv_id": "2601.21171",
+    "title": "AC2L-GAD: Active Counterfactual Contrastive Learning for Graph Anomaly Detection",
+    "authors": ["Kamal Berahmand", "Saman Forouzandeh", "Mehrnoush Mohammadi", "Parham Moradi", "Mahdi Jalili"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2601.21171",
+    "topic": "anomaly",
+    "relevance_score": 0.7591,
     "actionable": true,
-    "suggested_algorithm": "XAI"
+    "suggested_algorithm": "AC2L-GAD"
   },
   {
-    "arxiv_id": "2607.09528",
-    "title": "TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems",
-    "authors": [
-      "Refat Ishrak Hemel",
-      "Ehsan Hallaji",
-      "Roozbeh Razavi-Far"
-    ],
+    "arxiv_id": "2509.20184",
+    "title": "An Improved Time Series Anomaly Detection by Applying Structural Similarity",
+    "authors": ["Tiejun Wang", "Rui Wang", "Xudong Mou"],
     "summary": "",
     "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2607.09528",
-    "topic": "fraud",
-    "relevance_score": 0.7673059360730594,
-    "actionable": true,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2606.21356",
-    "title": "SOHET: Sequence Of Heterogeneous Events Transformer with Self-Supervised Pre-Training",
-    "authors": [
-      "Kees Jan de Vries",
-      "Mustafa Radha",
-      "Mathijs de Jong"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.21356",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": "Transformer"
-  },
-  {
-    "arxiv_id": "2606.16663",
-    "title": "Beyond Defensive Reporting: Machine Learning for Active Anti-Money Laundering Control in Insurance",
-    "authors": [
-      "Dara Goldar",
-      "Geir Kjetil Ferkingstad Sandve",
-      "Martin Jullum"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.16663",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2606.08317",
-    "title": "Architectural Evolution and Selection Framework for Database Systems in AI-Ready Data Platforms",
-    "authors": [
-      "Mohit Srivastava"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.08317",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2606.08146",
-    "title": "SAGE: An LLM-driven Self Reflective Agentic Framework for Fraud Detection",
-    "authors": [
-      "Yichen Chen",
-      "Siying Li",
-      "Yuhang Liang",
-      "Lijun Wang",
-      "Renyang Liu"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.08146",
-    "topic": "fraud",
-    "relevance_score": 0.7673059360730594,
-    "actionable": true,
-    "suggested_algorithm": "LLM"
-  },
-  {
-    "arxiv_id": "2606.07589",
-    "title": "Optimality of Sequential Filtering Under Independent Cost and Selectivity Models",
-    "authors": [
-      "Hrishikesh Paranjape",
-      "Abhishek Mandal",
-      "Xian Sun"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.07589",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2606.06265",
-    "title": "Robust Ensemble of Selectively Strengthened and Augmented Predictors",
-    "authors": [
-      "Parsa Memarzadehsaghezi",
-      "Zahra Hashemi",
-      "Pooria Madani",
-      "Mehran Ebrahimi"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2606.06265",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2605.23955",
-    "title": "From Accuracy to Auditability: A Survey of Determinism in Financial AI Systems",
-    "authors": [
-      "Ruizhe Zhou",
-      "Xiaoyang Liu",
-      "Gaoyuan Du",
-      "Yi Zheng",
-      "Shouxi Ren",
-      "Deepayan Chakrabarti",
-      "Dengdu Jiang"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.23955",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2605.17245",
-    "title": "An Efficient Machine Learning-based Framework for Detection and Prevention of Frauds in Telecom Networks",
-    "authors": [
-      "Praveen Hegde",
-      "Mishal Shah"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.17245",
-    "topic": "fraud",
-    "relevance_score": 0.7673059360730594,
+    "pdf_url": "https://arxiv.org/pdf/2509.20184",
+    "topic": "anomaly",
+    "relevance_score": 0.7,
     "actionable": true,
     "suggested_algorithm": ""
   },
   {
-    "arxiv_id": "2605.14467",
-    "title": "Focused PU learning from imbalanced data",
-    "authors": [
-      "Elias Zavitsanos",
-      "Georgios Paliouras"
-    ],
+    "arxiv_id": "2509.19366",
+    "title": "Unsupervised Outlier Detection in Audit Analytics: A Case Study Using USA Spending Data",
+    "authors": ["Buhe Li", "Berkay Kaplan", "Maksym Lazirko"],
     "summary": "",
     "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.14467",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2605.12075",
-    "title": "The Deepfakes We Missed: We Built Detectors for a Threat That Didn&#39;t Arrive",
-    "authors": [
-      "Shaina Raza"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.12075",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
-    "suggested_algorithm": ""
-  },
-  {
-    "arxiv_id": "2605.07133",
-    "title": "GAD in the Wild: Benchmarking Graph Anomaly Detection under Realistic Deployment Challenges",
-    "authors": [
-      "Jingjing Zhou",
-      "Shiyu Huang",
-      "Qing Qing",
-      "Zuquan Yuan",
-      "Huafei Huang",
-      "Ziqi Xu",
-      "Mingliang Hou",
-      "Xikun Zhang",
-      "Renqiang Luo",
-      "Ivan Lee"
-    ],
-    "summary": "",
-    "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.07133",
-    "topic": "fraud",
-    "relevance_score": 1.0,
+    "pdf_url": "https://arxiv.org/pdf/2509.19366",
+    "topic": "anomaly",
+    "relevance_score": 0.85,
     "actionable": true,
     "suggested_algorithm": ""
   },
   {
-    "arxiv_id": "2605.03289",
-    "title": "Imbalanced Classification under Capacity Constraints",
-    "authors": [
-      "Daniel Fraiman",
-      "Ricardo Fraiman"
-    ],
+    "arxiv_id": "2606.28134",
+    "title": "Beyond Sparse Supervision: Diffusion-Guided Learning for Few-Shot Graph Fraud Detection",
+    "authors": ["Liming Liu", "Chao Hu", "Mingfei Lu"],
     "summary": "",
     "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2605.03289",
-    "topic": "fraud",
-    "relevance_score": 0.43397260273972604,
-    "actionable": false,
+    "pdf_url": "https://arxiv.org/pdf/2606.28134",
+    "topic": "graph",
+    "relevance_score": 0.85,
+    "actionable": true,
+    "suggested_algorithm": "Diffusion-Guided GFD"
+  },
+  {
+    "arxiv_id": "2604.14235",
+    "title": "Graph-Based Fraud Detection with Dual-Path Graph Filtering",
+    "authors": ["Wei He", "Wensheng Gan", "Philip S. Yu"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2604.14235",
+    "topic": "graph",
+    "relevance_score": 0.8,
+    "actionable": true,
+    "suggested_algorithm": "Dual-Path Graph Filtering"
+  },
+  {
+    "arxiv_id": "2603.13290",
+    "title": "TAS-GNN: A Status-Aware Signed Graph Neural Network for Anomaly Detection in Bitcoin Trust",
+    "authors": ["Chang Xue", "Fang Liu", "Jiaye Wang"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2603.13290",
+    "topic": "graph",
+    "relevance_score": 0.75,
+    "actionable": true,
+    "suggested_algorithm": "TAS-GNN"
+  },
+  {
+    "arxiv_id": "2601.00990",
+    "title": "Uncertainty-Calibrated Explainable Artificial Intelligence for Fetal Ultrasound Plane Classification",
+    "authors": ["Gustav Olaf Yunus Laitinen-Fredriksson Lundström-Imanov", "Ozkan Gunalp"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2601.00990",
+    "topic": "audit_automation",
+    "relevance_score": 0.65,
+    "actionable": true,
+    "suggested_algorithm": "Uncertainty-Calibrated XAI"
+  },
+  {
+    "arxiv_id": "2511.12668",
+    "title": "AI Bill of Materials and Beyond: Systematizing Security Assurance through the AI Risk Scanner",
+    "authors": ["Samuel Nathanson", "Alexander Lee", "Catherine Chen Kieffer"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2511.12668",
+    "topic": "audit_automation",
+    "relevance_score": 0.7,
+    "actionable": true,
     "suggested_algorithm": ""
   },
   {
-    "arxiv_id": "2604.24590",
-    "title": "Fraud Detection in Cryptocurrency Markets with Spatio-Temporal Graph Neural Networks",
-    "authors": [
-      "Lidia Losavio",
-      "Luca Persia",
-      "Madan Sathe",
-      "Dimosthenis Pasadakis"
-    ],
+    "arxiv_id": "2509.16294",
+    "title": "Balancing Innovation and Oversight: AI in the U.S. Treasury and IRS: A Survey",
+    "authors": ["Sohail Shaikh"],
     "summary": "",
     "published": "2026-01-01",
-    "pdf_url": "https://arxiv.org/pdf/2604.24590",
-    "topic": "fraud",
-    "relevance_score": 1.0,
+    "pdf_url": "https://arxiv.org/pdf/2509.16294",
+    "topic": "audit_automation",
+    "relevance_score": 0.75,
     "actionable": true,
-    "suggested_algorithm": "GNN"
+    "suggested_algorithm": ""
+  },
+  {
+    "arxiv_id": "2607.12454",
+    "title": "Exploring Zero-Shot Foundation Models for Multivariate Time Series Anomaly Detection",
+    "authors": ["Martin Uray", "Saverio Messineo", "Roland Kwitt"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2607.12454",
+    "topic": "timeseries",
+    "relevance_score": 0.85,
+    "actionable": true,
+    "suggested_algorithm": "Foundation Model for TS Anomaly"
+  },
+  {
+    "arxiv_id": "2606.18377",
+    "title": "Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection",
+    "authors": ["Mohamed Bilel Besbes", "Gregory Mierzwinski", "Suhaib Mujahid"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2606.18377",
+    "topic": "timeseries",
+    "relevance_score": 0.7,
+    "actionable": true,
+    "suggested_algorithm": ""
+  },
+  {
+    "arxiv_id": "2606.13486",
+    "title": "CRAFTIIF: Cross-Resolution Analytic Four-Type Interpretable Isolation Forest for Multivariate",
+    "authors": ["William Smits"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2606.13486",
+    "topic": "timeseries",
+    "relevance_score": 0.7,
+    "actionable": true,
+    "suggested_algorithm": "CRAFTIIF"
+  },
+  {
+    "arxiv_id": "2601.07620",
+    "title": "PARL: Position-Aware Relation Learning Network for Document Layout Analysis",
+    "authors": ["Fuyuan Liu", "Dianyu Yu", "He Ren"],
+    "summary": "",
+    "published": "2026-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2601.07620",
+    "topic": "document",
+    "relevance_score": 0.7,
+    "actionable": true,
+    "suggested_algorithm": "PARL"
   }
 ]

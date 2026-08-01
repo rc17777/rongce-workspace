@@ -1,0 +1,31 @@
+[
+  {"command":"set","path":"/文章1-Agent工程优化/A2","props":{"value":"三层分工模型","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/B2","props":{"value":"审计师·Agent·工程链路 三层分工","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/C2","props":{"value":"Agent既做判断又做执行，缺少边界","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/D2","props":{"value":"审计师定口径→Agent处理模糊→工程链路做批量重复","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/E2","props":{"value":"审盾现有：Agent层(22个)+工程链路(orchestrate/api_gateway)，缺审计师介入通道","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/文章1-Agent工程优化/A3","props":{"value":"深度检索","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/B3","props":{"value":"从\"搜到资料\"到\"有依据的结论\"","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/C3","props":{"value":"查不全、乱编造(幻觉补写)、信源不受控、过程不可追溯","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/D3","props":{"value":"四环节：生成查询→控制来源与访问(信源白名单)→迭代检索(缺口驱动)→收敛与证据(停止条件+来源编号)","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/E3","props":{"value":"审盾空白领域。现有仅web_search/web_fetch裸调，无信源白名单、无证据绑定、无停止条件","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/文章1-Agent工程优化/A4","props":{"value":"智能分类","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/B4","props":{"value":"先看清全貌，再逐条归类","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/C4","props":{"value":"上下文窗口不够、重复稀释信息、分类体系无法一次定义","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/D4","props":{"value":"三步法：预打标(工程归组抽样)→构建分类体系(Agent归纳+审计师确认)→全量分类(工程批量+低置信Agent复判)","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/E4","props":{"value":"smart_classify.py v0.1(今日交付)，待接入大模型语义聚类和覆盖率指标","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/文章1-Agent工程优化/A5","props":{"value":"智能问数","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/B5","props":{"value":"先理解数据，再持续分析","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/C5","props":{"value":"每次分析都从头探索、口径不一致、Token消耗大","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/D5","props":{"value":"数据理解底座：结构扫描→画像→语义识别→口径校验→沉淀。分层加载(核心理解自动注入+详细证据按需查询)。回写闭环。","fill":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/E5","props":{"value":"data_profiling/四件套v0.1(今日交付)。profile_builder+caliber_checker+data_understanding_base","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/文章1-Agent工程优化/A6","props":{"value":"Harness本质","bold":"true","fill":"C5955C","font.color":"FFFFFF"}},
+  {"command":"set","path":"/文章1-Agent工程优化/B6","props":{"value":"不是马具(约束)，是外骨骼(增强)","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/C6","props":{"value":"只把Agent当\"黑盒\"调用，依赖临场发挥","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/D6","props":{"value":"模型能力×工程机制×审计师判断，三者配合才能从\"偶尔做对\"走向\"持续做好\"","fill":"F5F2EC"}},
+  {"command":"set","path":"/文章1-Agent工程优化/E6","props":{"value":"审盾一期验证报告的方向对上了——不是在比模型，是在比工程体系和业务know-how","fill":"F5F2EC"}}
+]

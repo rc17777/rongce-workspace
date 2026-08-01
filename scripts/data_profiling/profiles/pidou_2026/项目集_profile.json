@@ -1,0 +1,236 @@
+{
+  "profile_id": "pidou_2026/项目集",
+  "project": {
+    "name": "成都市郫都区政府投资项目评审中心预算绩效指标与标准体系建设",
+    "slug": "pidou_2026",
+    "client": "成都市郫都区政府投资项目评审中心",
+    "year": 2026,
+    "audit_type": "绩效评价"
+  },
+  "created_at": "2026-08-01T08:45:00",
+  "last_confirmed_at": "",
+  "confirmed_by": "",
+  "data_sources": [
+    {
+      "file_name": "郫都评审中心-预算绩效指标与标准体系.xlsx",
+      "file_path": "output/郫都评审中心绩效指标体系/",
+      "format": "excel",
+      "sheet_or_section": "7个Sheet",
+      "row_count": 148,
+      "col_count": 73
+    },
+    {
+      "file_name": "郫都评审中心-预算绩效指标与标准体系（报告）V3.0.docx",
+      "file_path": "output/郫都评审中心绩效指标体系/",
+      "format": "word_table",
+      "sheet_or_section": ""
+    },
+    {
+      "file_name": "14份原始资料",
+      "file_path": "Desktop/新建文件夹/分行业分领域预算绩效指标和标准体系建设/",
+      "format": "pdf",
+      "sheet_or_section": "含编制规定/工作计划/预算指标/绩效目标等"
+    }
+  ],
+  "table_profile": {
+    "business_object": "一个预算绩效指标体系下的指标定义行",
+    "time_granularity": "年",
+    "entity_scope": "郫都区政府投资项目评审中心（副局级事业单位，13项法定职能）",
+    "fields": [
+      {"name": "指标编码", "role": "identifier", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 32, "sample": ["C01", "C02"], "notes": "通用指标库编码体系"},
+      {"name": "一级指标", "role": "category", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 4, "sample": ["成本指标", "产出指标", "效益指标", "满意度指标"], "notes": ""},
+      {"name": "三级指标", "role": "text", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 32, "sample": ["预算执行率", "项目评审金额", "核差率"], "notes": ""},
+      {"name": "指标性质", "role": "category", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 2, "sample": ["定量", "定性"], "notes": ""},
+      {"name": "计量单位", "role": "category", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 6, "sample": ["%", "亿元", "个", "次", "天", "人"], "notes": ""},
+      {"name": "适用项目类型", "role": "category", "data_type": "string", "unit": "", "nullable_pct": 0, "unique_values": 5, "sample": ["ALL", "AB", "A"], "notes": "A=业务服务 B=运转保障 C=党建 D=部门整体"}
+    ],
+    "key_relationships": [
+      {"from_field": "指标来源", "to_profile": "通用指标库", "to_field": "指标编码", "relation_type": "1:1", "verified": true, "notes": "每个业务指标映射到通用库"}
+    ]
+  },
+  "key_calibers": [
+    {
+      "caliber_id": "PIDOU-001",
+      "name": "部门整体年度预算",
+      "definition": "郫都评审中心当年财政批复的全部预算总额",
+      "formula": "评审业务费680万元 + 运行经费40万元 + 党组织活动经费3万元 + 人员经费等",
+      "unit": "万元",
+      "expected_range": {"min": 1100, "max": 1150},
+      "confirmed": true,
+      "confirmed_by": "融策（基于14份资料研读确认）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "年度预算",
+      "business_context": "部门整体绩效目标的基础，各分项预算之和应与之勾稽一致",
+      "common_misunderstandings": [
+        "不含在编人员工资等基本支出（仅含项目支出）",
+        "各项目预算合计数 ≠ 部门整体预算（人员经费等基本支出单列）"
+      ],
+      "cross_references": ["PIDOU-002", "PIDOU-003", "PIDOU-004"]
+    },
+    {
+      "caliber_id": "PIDOU-002",
+      "name": "评审业务费年度预算",
+      "definition": "用于政府投资项目评审业务服务的年度预算金额，属业务服务类项目(A类)",
+      "formula": "680万元（2026年预算批复数）",
+      "unit": "万元",
+      "expected_range": {"min": 650, "max": 700},
+      "confirmed": true,
+      "confirmed_by": "融策（基于预算指标文件确认）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "年度预算",
+      "business_context": "核心业务项目预算，占部门总预算约60%",
+      "common_misunderstandings": [
+        "不含PPP项目物有所值评估费用（法定职能之一，但预算未单独列示）"
+      ],
+      "cross_references": ["PIDOU-003", "PIDOU-008"]
+    },
+    {
+      "caliber_id": "PIDOU-003",
+      "name": "运行经费年度预算",
+      "definition": "用于保障评审中心日常运转的项目经费",
+      "formula": "40万元（2026年预算批复数）",
+      "unit": "万元",
+      "expected_range": {"min": 35, "max": 45},
+      "confirmed": true,
+      "confirmed_by": "融策（基于预算指标文件确认）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "年度预算",
+      "business_context": "运转保障类项目(B类)，在册3个项目",
+      "common_misunderstandings": [
+        "★ V3.0已修复: 此项目原被错配'项目评审金额≥50亿'等业务指标，现已更正为日常保障类指标"
+      ],
+      "cross_references": ["PIDOU-002"]
+    },
+    {
+      "caliber_id": "PIDOU-004",
+      "name": "党组织活动经费",
+      "definition": "用于党支部组织活动的专项经费",
+      "formula": "≥3万元（含党建活动/学习材料/培训等）",
+      "unit": "万元",
+      "expected_range": {"min": 2, "max": 10},
+      "confirmed": true,
+      "confirmed_by": "融策",
+      "confirmed_date": "2026-07-31",
+      "source_field": "年度预算",
+      "business_context": "党建群团类(C类)",
+      "common_misunderstandings": [],
+      "cross_references": ["PIDOU-007"]
+    },
+    {
+      "caliber_id": "PIDOU-005",
+      "name": "项目评审金额",
+      "definition": "当年实际完成的预算评审项目总金额。仅含政府投资项目预算评审，不含PPP物有所值评估",
+      "formula": "∑(当年每项评审项目的送审金额)",
+      "unit": "亿元",
+      "expected_range": {"min": 30, "max": 70},
+      "confirmed": true,
+      "confirmed_by": "融策（基于14份资料分析，具体数值待中心确认）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "三级指标·产出指标·项目评审金额",
+      "business_context": "评审中心核心产出指标。★ 原V2.0将此指标错误分配给了'运行经费'项目(日常保障类)，V3.0已修正——此指标仅适用于A类·评审业务费项目",
+      "common_misunderstandings": [
+        "★ 不应指派给非业务类项目（运行经费、党组织活动经费不应配此指标）",
+        "与'核差额'口径的区别：评审金额是送审金额，核差额是审减金额"
+      ],
+      "cross_references": ["PIDOU-006", "PIDOU-008"]
+    },
+    {
+      "caliber_id": "PIDOU-006",
+      "name": "核差率",
+      "definition": "项目评审累计核减金额占送审总金额的比率",
+      "formula": "∑核减金额 ÷ ∑送审金额 × 100%",
+      "unit": "%",
+      "expected_range": {"min": 0, "max": 15},
+      "confirmed": true,
+      "confirmed_by": "融策（2024年实际8.43%）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "三级指标·效益指标·核差率",
+      "business_context": "★ V2.0目标值设为'≤-3%'存在方向错误：核差率应为正值（表示审减率），不应以负数表示。且'≤'上限约束与'审减越多越好'的绩效导向矛盾。V3.0已修正为'≥5%'。2024年实际值8.43%",
+      "common_misunderstandings": [
+        "★ 方向错误: 审减越多说明评审工作越有效，不应设上限约束",
+        "负值含义不明: ≤-3%可能是填报时正负号混淆",
+        "不同项目类型核差率差异大(房建5-8% vs 市政10-15%)，笼统设一个标准值不合理"
+      ],
+      "cross_references": ["PIDOU-005"]
+    },
+    {
+      "caliber_id": "PIDOU-007",
+      "name": "党组织活动次数",
+      "definition": "年度内支部组织的党员活动次数（含三会一课、主题党日、组织生活会等）",
+      "formula": "∑全年各类党组织活动",
+      "unit": "次",
+      "expected_range": {"min": 6, "max": 18},
+      "confirmed": true,
+      "confirmed_by": "融策（2024年实际7-12次）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "三级指标·产出指标·党组织活动次数",
+      "business_context": "★ V2.0目标值'≥2次'严重低于实际(2024年7-12次，月均至少1次)。V3.0已修正为'≥12次'",
+      "common_misunderstandings": [
+        "★ 目标值过低: ≥2次不符合党组织生活每月至少一次的常规要求",
+        "计数口径: 是否含双重组织生活、是否含外出参观学习"
+      ],
+      "cross_references": ["PIDOU-004"]
+    },
+    {
+      "caliber_id": "PIDOU-008",
+      "name": "PPP项目服务量",
+      "definition": "评审中心13项法定职能中包含PPP项目评审服务（物有所值评估等）",
+      "formula": "★ 待建立",
+      "unit": "个",
+      "expected_range": {},
+      "confirmed": false,
+      "confirmed_by": "",
+      "confirmed_date": "",
+      "source_field": "法定职能§第6条·PPP项目物有所值评估",
+      "business_context": "★ PPP法定职能在绩效目标中完全空白——无对应指标、无预算分配、无产出描述。属于P0级缺失",
+      "common_misunderstandings": [
+        "★ 职能存在但指标体系零覆盖",
+        "是否实际有PPP项目需要评估（需中心确认）"
+      ],
+      "cross_references": ["PIDOU-002"]
+    },
+    {
+      "caliber_id": "PIDOU-009",
+      "name": "在编人数",
+      "definition": "评审中心核定编制人数",
+      "formula": "3个在编项目（基于机构编制文件）",
+      "unit": "人",
+      "expected_range": {"min": 3, "max": 3},
+      "confirmed": true,
+      "confirmed_by": "融策（编制文件确认）",
+      "confirmed_date": "2026-07-31",
+      "source_field": "机构编制文件",
+      "business_context": "3个在编项目分别是评审中心基本支出、运行经费、日常公用经费",
+      "common_misunderstandings": [],
+      "cross_references": []
+    }
+  ],
+  "quality_notes": {
+    "completeness_issues": [
+      "PPP物有所值评估职能——指标体系零覆盖(P0)",
+      "2024年自评'绩效指标和标准体系建设'得0分——体系空白被官方自认",
+      "部分指标的历史标准/行业标准数据缺失(标注'-')"
+    ],
+    "consistency_issues": [
+      "★ 运行经费项目曾错配业务产出指标('项目评审金额≥50亿')——V3.0已修正",
+      "★ 核差率方向错误('≤-3%')——V3.0已修正为'≥5%'",
+      "★ 党组织活动目标值严重偏低('≥2次')——V3.0已修正为'≥12次'",
+      "各项目预算汇总数与部门整体预算之间的勾稽关系有待确认"
+    ],
+    "outliers_noted": [
+      "2024年实际核差率8.43%，显著高于原目标上限3%",
+      "党组织活动实际7-12次，远超原目标≥2次"
+    ],
+    "known_biases": [
+      "通用指标库的'适用项目类型'分类依赖人工判断，可能存在边界模糊"
+    ]
+  },
+  "change_log": [
+    {"date": "2026-07-31", "who": "融策AI+平头哥", "what_changed": "V2.0→V3.0: 修复指标错配(运行经费)/修正核差率方向/提升党组织活动目标/新增通用指标库架构", "reason": "基于14份资料研读发现5项系统性缺陷"},
+    {"date": "2026-08-01", "who": "融策AI", "what_changed": "初始化数据理解档案v0.1，编码9个关键口径+5个已知质量问题", "reason": "审盾P0: 数据理解底座试点"}
+  ],
+  "_ai_confidence": {
+    "auto_inferred_fields": ["指标编码", "一级指标", "三级指标", "指标性质", "计量单位", "适用项目类型"],
+    "needs_human_review": ["PPP项目服务量(PIDOU-008: 口径定义待中心确认)", "项目评审金额具体数值(PIDOU-005: 预期范围基于估计)"]
+  }
+}

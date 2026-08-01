@@ -58,7 +58,9 @@ for label, rel_path, _ in TASKS:
         with open(progress_file) as f:
             done = set(json.load(f).get('done', []))
     
-    remaining = [i for i in range(total) if f'p{i:04d}.md' not in done and f'p{i:04d}.png' not in done]
+    # FIX: PNG is a temp artifact (deleted on success, kept on timeout-skip).
+    # Only .md counts as done, so timeout-skipped pages get re-scanned.
+    remaining = [i for i in range(total) if f'p{i:04d}.md' not in done]
     
     if not remaining:
         print(f'DONE {label}: {total}/{total}')
@@ -79,8 +81,22 @@ for label, rel_path, _ in TASKS:
         
         print(f'  [{len(done)+1}/{total}] p{idx:04d}...', end=' ', flush=True)
         
+        # FIX: retry up to 3 times with backoff (timeout-skipped pages are a known issue)
+        text = None
+        for attempt in range(3):
+            try:
+                text = ocr_page(png_path)
+                break
+            except Exception as e:
+                print(f'ERR(attempt {attempt+1}/3): {e}', flush=True)
+                time.sleep(20 * (attempt + 1))
+        
+        if text is None:
+            print(f'SKIP p{idx:04d} (3 fails)')
+            time.sleep(10)
+            continue
+        
         try:
-            text = ocr_page(png_path)
             with open(md_path, 'w', encoding='utf-8') as f:
                 f.write(f'# {label} page {idx+1}/{total}\n\n{text}')
             

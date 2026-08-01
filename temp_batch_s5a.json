@@ -1,0 +1,12 @@
+[
+  {"command":"set","path":"/第一周行动清单/A1","props":{"value":"优先级","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/第一周行动清单/B1","props":{"value":"行动","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/第一周行动清单/C1","props":{"value":"对标","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/第一周行动清单/D1","props":{"value":"预计产出","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/第一周行动清单/E1","props":{"value":"依赖","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/第一周行动清单/col[A]","props":{"width":10}},
+  {"command":"set","path":"/第一周行动清单/col[B]","props":{"width":28}},
+  {"command":"set","path":"/第一周行动清单/col[C]","props":{"width":12}},
+  {"command":"set","path":"/第一周行动清单/col[D]","props":{"width":38}},
+  {"command":"set","path":"/第一周行动清单/col[E]","props":{"width":28}}
+]

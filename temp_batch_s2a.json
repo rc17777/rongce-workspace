@@ -1,0 +1,12 @@
+[
+  {"command":"set","path":"/文章2-MultiAgent18步/A1","props":{"value":"步骤","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章2-MultiAgent18步/B1","props":{"value":"阶段","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章2-MultiAgent18步/C1","props":{"value":"角色","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章2-MultiAgent18步/D1","props":{"value":"做什么","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章2-MultiAgent18步/E1","props":{"value":"设计原则/陷阱","bold":"true","fill":"0A1F3F","font.color":"FFFFFF","font.size":11}},
+  {"command":"set","path":"/文章2-MultiAgent18步/col[A]","props":{"width":10}},
+  {"command":"set","path":"/文章2-MultiAgent18步/col[B]","props":{"width":18}},
+  {"command":"set","path":"/文章2-MultiAgent18步/col[C]","props":{"width":20}},
+  {"command":"set","path":"/文章2-MultiAgent18步/col[D]","props":{"width":40}},
+  {"command":"set","path":"/文章2-MultiAgent18步/col[E]","props":{"width":38}}
+]

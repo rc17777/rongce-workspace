@@ -1,0 +1,73 @@
+[
+  {"command":"set","path":"/融策现状差距分析/A2","props":{"value":"━━━ 组织纪律 ━━━","bold":"true","fill":"C5955C","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B2","props":{"value":"文章2","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C2","props":{"value":"——","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D2","props":{"value":"","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/E2","props":{"value":"","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A3","props":{"value":"管理Agent(O)","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B3","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C3","props":{"value":"orchestrate_v3.py (调度中枢)","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D3","props":{"value":"🟡","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/E3","props":{"value":"缺目标对齐环节(识别目标/约束/成功标准)、缺首尾闭环校验","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/融策现状差距分析/A4","props":{"value":"Planner(任务拆解+依赖图)","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B4","props":{"value":"文章2","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C4","props":{"value":"5坐标系穿透引擎","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D4","props":{"value":"🟡","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/E4","props":{"value":"缺显式依赖关系图(WBS)、缺并行/串行调度器。任务拆解是隐式的","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A5","props":{"value":"Reviewer(审查+返工)","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B5","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C5","props":{"value":"review_sentinel + agent_debug","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D5","props":{"value":"🟢","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/E5","props":{"value":"15维检查已到位，缺审查意见→精准派单式返工机制(虚线回路)","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/融策现状差距分析/A6","props":{"value":"黑板机制(H-packet)","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B6","props":{"value":"文章2","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C6","props":{"value":"issue_fusion + handover_protocol","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D6","props":{"value":"🟡","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/E6","props":{"value":"H-packet v1.0需统一schema(Goal+事实+警告+产出+置信度+来源编号)、缺按需查询接口","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A7","props":{"value":"虚线反馈回路","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B7","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C7","props":{"value":"agent_debug.py (DebugX)","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D7","props":{"value":"🟡","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/E7","props":{"value":"有4步闭环(Detect→Attribute→Recover→Rerun)，缺退出条件/最大轮次/精准派单","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/融策现状差距分析/A8","props":{"value":"━━━ 工程脚手架 ━━━","bold":"true","fill":"C5955C","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B8","props":{"value":"文章1","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C8","props":{"value":"——","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D8","props":{"value":"","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/E8","props":{"value":"","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A9","props":{"value":"数据理解底座","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B9","props":{"value":"文章1","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C9","props":{"value":"data_profiling四件套 v0.1","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D9","props":{"value":"🔴","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/E9","props":{"value":"v0.1刚起步。缺多行表头解析/多Sheet/数据库表支持、缺分层加载机制、缺口径回写闭环","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/融策现状差距分析/A10","props":{"value":"智能分类","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B10","props":{"value":"文章1","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C10","props":{"value":"smart_classify.py v0.1","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D10","props":{"value":"🔴","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/E10","props":{"value":"v0.1刚起步。缺覆盖率/集中度指标、缺审计师确认环节、缺大模型语义聚类","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A11","props":{"value":"信源白名单层","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B11","props":{"value":"文章1","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C11","props":{"value":"无","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D11","props":{"value":"🔴","fill":"FFFFFF","font.color":"FF0000"}},
+  {"command":"set","path":"/融策现状差距分析/E11","props":{"value":"完全空白。无工具注册表、无必查信源覆盖检查、无来源编号绑定","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/融策现状差距分析/A12","props":{"value":"深度检索模块","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B12","props":{"value":"文章1","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/C12","props":{"value":"仅web_search/web_fetch裸调","fill":"F5F2EC"}},
+  {"command":"set","path":"/融策现状差距分析/D12","props":{"value":"🔴","fill":"F5F2EC","font.color":"FF0000"}},
+  {"command":"set","path":"/融策现状差距分析/E12","props":{"value":"完全空白。无查询生成/迭代检索/收敛证据四环节、无全文深读/引用校验/结果去重","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/融策现状差距分析/A13","props":{"value":"工具标准化接口层","bold":"true","fill":"1A5C6E","font.color":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/B13","props":{"value":"文章1+2","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/C13","props":{"value":"api_gateway.py (14模型路由)","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/D13","props":{"value":"🟡","fill":"FFFFFF"}},
+  {"command":"set","path":"/融策现状差距分析/E13","props":{"value":"缺工具注册(权限/超时/重试/异常处理)、缺调用日志、缺MCP工具统一管理","fill":"FFFFFF"}}
+]

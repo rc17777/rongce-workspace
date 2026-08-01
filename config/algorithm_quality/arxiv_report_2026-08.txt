@@ -1,0 +1,37 @@
+======================================================================
+📡 融策 · arXiv 学术追踪报告
+扫描时间: 2026-08-01 08:30
+追踪主题: 7个 | 算法雷达配套
+======================================================================
+
+🔴 反舞弊与欺诈检测 [P0] — 新论文: 0篇 | 高价值: 0篇
+
+🔴 多维异常检测 [P0] — 新论文: 9篇 | 高价值: 7篇
+  📄 AC2L-GAD: Active Counterfactual Contrastive Learning for Graph Anomaly Detection (arXiv:2601.21171)
+  📄 An Improved Time Series Anomaly Detection by Applying Structural Similarity (arXiv:2509.20184)
+  📄 Unsupervised Outlier Detection in Audit Analytics: A Case Study Using USA Spending Data (arXiv:2509.19366)
+
+🟡 中文自然语言处理 [P1] — 新论文: 0篇 | 高价值: 0篇
+
+🔴 图挖掘与关联分析 [P0] — 新论文: 10篇 | 高价值: 9篇
+  📄 Beyond Sparse Supervision: Diffusion-Guided Learning for Few-Shot Graph Fraud Detection (arXiv:2606.28134)
+  📄 Graph-Based Fraud Detection with Dual-Path Graph Filtering (arXiv:2604.14235)
+  📄 TAS-GNN: A Status-Aware Signed Graph Neural Network for Anomaly Detection in Bitcoin Trust (arXiv:2603.13290)
+
+🟡 审计自动化与AI审计 [P1] — 新论文: 9篇 | 高价值: 9篇
+  📄 Uncertainty-Calibrated XAI for Fetal Ultrasound Plane Classification (arXiv:2601.00990)
+  📄 AI Bill of Materials and Beyond: Systematizing Security Assurance (arXiv:2511.12668)
+  📄 Balancing Innovation and Oversight: AI in the U.S. Treasury and IRS (arXiv:2509.16294)
+
+🟢 时序分析与预测 [P2] — 新论文: 10篇 | 高价值: 8篇
+  📄 Exploring Zero-Shot Foundation Models for Multivariate Time Series Anomaly Detection (arXiv:2607.12454)
+  📄 Exploring Statistical Change Point Detection Techniques (arXiv:2606.18377)
+  📄 CRAFTIIF: Cross-Resolution Analytic Four-Type Interpretable Isolation Forest (arXiv:2606.13486)
+
+🟢 文档理解与版面分析 [P2] — 新论文: 1篇 | 高价值: 1篇
+  📄 PARL: Position-Aware Relation Learning Network for Document Layout Analysis (arXiv:2601.07620)
+
+合计: 39篇新论文 | 34篇高价值
+累计追踪: 54篇
+
+✅ 当前无可触发雷达更新的新趋势

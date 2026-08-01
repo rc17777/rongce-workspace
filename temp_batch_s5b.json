@@ -1,0 +1,43 @@
+[
+  {"command":"set","path":"/第一周行动清单/A2","props":{"value":"P0","bold":"true","fill":"FF0000","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B2","props":{"value":"升级 H-packet Schema 至 v2.0","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/C2","props":{"value":"文章2","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/D2","props":{"value":"handover_protocol.py v2.0 + JSON Schema (Goal+事实+警告+产出+置信度+来源编号)","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/E2","props":{"value":"无","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/第一周行动清单/A3","props":{"value":"P0","bold":"true","fill":"FF0000","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B3","props":{"value":"Reviewer输出结构化为可执行返工指令","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/C3","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/D3","props":{"value":"review_sentinel 输出格式升级：P0/P1/P2 + 指定返工Agent + 具体修改指令","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/E3","props":{"value":"无","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/第一周行动清单/A4","props":{"value":"P1","bold":"true","fill":"E8A317","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B4","props":{"value":"设计信源白名单+来源编号绑定机制","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/C4","props":{"value":"文章1","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/D4","props":{"value":"信源注册表JSON + 编号规范文档 + 覆盖检查逻辑","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/E4","props":{"value":"无","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/第一周行动清单/A5","props":{"value":"P1","bold":"true","fill":"E8A317","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B5","props":{"value":"设计退出条件/最大轮次规范","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/C5","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/D5","props":{"value":"全局配置JSON + 每步骤独立阈值 + 成本熔断规则","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/E5","props":{"value":"无","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/第一周行动清单/A6","props":{"value":"P1","bold":"true","fill":"E8A317","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B6","props":{"value":"数据理解底座 v0.1→v0.2 (对接审盾现有项目)","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/C6","props":{"value":"文章1","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/D6","props":{"value":"profile_builder v0.2：支持多行表头/多Sheet + 郫都项目实测","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/E6","props":{"value":"H1今日已交付v0.1","fill":"F5F2EC"}},
+
+  {"command":"set","path":"/第一周行动清单/A7","props":{"value":"P2","bold":"true","fill":"4CAF50","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B7","props":{"value":"起草审盾Orchestrator Prompt规格","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/C7","props":{"value":"文章2","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/D7","props":{"value":"Agent Spec: orchestrator_v1.md (目标对齐+成功标准+派单+黑板读取+交付)","fill":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/E7","props":{"value":"M1","fill":"FFFFFF"}},
+
+  {"command":"set","path":"/第一周行动清单/A8","props":{"value":"P2","bold":"true","fill":"4CAF50","font.color":"FFFFFF"}},
+  {"command":"set","path":"/第一周行动清单/B8","props":{"value":"起草审盾Planner Prompt规格","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/C8","props":{"value":"文章2","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/D8","props":{"value":"Agent Spec: planner_v1.md (WBS拆解+依赖关系图+并行/串行判定)","fill":"F5F2EC"}},
+  {"command":"set","path":"/第一周行动清单/E8","props":{"value":"M2","fill":"F5F2EC"}}
+]

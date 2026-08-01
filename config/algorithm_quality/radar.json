@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-07-22T17:03:46.816146",
-  "total_entries": 12,
+  "last_updated": "2026-08-01T09:05:00.000000",
+  "total_entries": 15,
+  "scan_history": [
+    {
+      "date": "2026-08-01",
+      "type": "arxiv",
+      "total_papers": 39,
+      "high_value": 34,
+      "topics": ["anomaly", "graph", "audit_automation", "timeseries", "document"],
+      "notable": [
+        "AC2L-GAD: Active Counterfactual Contrastive Learning for Graph Anomaly Detection",
+        "Unsupervised Outlier Detection in Audit Analytics: A Case Study Using USA Spending Data",
+        "Beyond Sparse Supervision: Diffusion-Guided Learning for Few-Shot Graph Fraud Detection",
+        "Exploring Zero-Shot Foundation Models for Multivariate Time Series Anomaly Detection"
+      ],
+      "suggested_algorithms": ["AC2L-GAD", "Diffusion-Guided GFD", "Foundation Model for TS Anomaly"],
+      "status": "completed"
+    }
+  ],
   "entries": [
     {
       "name": "Isolation Forest",
@@ -202,6 +219,57 @@
       "complexity": "low",
       "roe_score": 5,
       "notes": "稠密二部图，完美匹配围标场景",
+      "test_date": "",
+      "test_result": "",
+      "adopted_version": ""
+    },
+    {
+      "name": "Hybrid Outlier Detection",
+      "category": "统计",
+      "scenario": "财政资金异常筛查",
+      "source": "arXiv:2509.19366 (DHHS案例)",
+      "year": 2025,
+      "status": "testing",
+      "replace": "单一离群检测器(LOF/IF单独使用)",
+      "chinese_support": true,
+      "local_deploy": true,
+      "complexity": "low",
+      "roe_score": 5,
+      "notes": "HBOS+RobustPCA+MCD+KNN混合投票，sklearn全栈，零GPU。论文用美国DHHS联邦支出数据验证，多算法组合显著提升鲁棒性。适用场景：政府采购/专项资金/转移支付异常筛查",
+      "test_date": "",
+      "test_result": "",
+      "adopted_version": ""
+    },
+    {
+      "name": "AC2L-GAD",
+      "category": "图分析",
+      "scenario": "围标串标/关联图谱异常检测",
+      "source": "WWW 2026 (arXiv:2601.21171)",
+      "year": 2026,
+      "status": "watching",
+      "replace": "FrauDAR(标签稀缺场景升级)",
+      "chinese_support": true,
+      "local_deploy": true,
+      "complexity": "high",
+      "roe_score": 4,
+      "notes": "主动反事实对比学习，信息论选节点+反事实增强，计算开销降65%。9基准含GADBench金融交易图，顶会认证。适用场景：供应商关联图谱、股权穿透中的异常模式。等代码开源后评估",
+      "test_date": "",
+      "test_result": "",
+      "adopted_version": ""
+    },
+    {
+      "name": "ADC-GNN",
+      "category": "图分析",
+      "scenario": "少样本欺诈检测",
+      "source": "arXiv:2606.28134",
+      "year": 2026,
+      "status": "watching",
+      "replace": "FrauDAR(冷启动/少样本场景)",
+      "chinese_support": true,
+      "local_deploy": false,
+      "complexity": "high",
+      "roe_score": 4,
+      "notes": "扩散特征增强(去噪) + 对比学习 + 多跳谱注意力，1%训练样本即可超越基线。含6万条真实电信交易数据验证。适用场景：审计标注样本极少的冷启动项目、新型欺诈模式识别。需GPU，中远期储备",
       "test_date": "",
       "test_result": "",
       "adopted_version": ""

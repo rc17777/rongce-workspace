@@ -1,0 +1,1258 @@
+{
+  "project": "pidou_2026",
+  "generated_at": "2026-08-01T08:50:42.873462",
+  "profile_version": "v0.1",
+  "phases": {
+    "structure": {
+      "phase": "structure_scan",
+      "source": "C:\\Users\\scrccpa\\.openclaw\\workspace\\output\\郫都评审中心绩效指标体系\\郫都评审中心-预算绩效指标与标准体系.xlsx",
+      "sheets": [
+        {
+          "name": "1-通用指标库",
+          "row_count": 34,
+          "col_count": 14,
+          "columns": [
+            {
+              "index": 0,
+              "name": "预算绩效通用指标库",
+              "letter": "A",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 34,
+              "sample_top5": [
+                "说明：A=业务服务类 B=运转保障类 C=党建群团类 D=上级专项类 ALL=适",
+                "指标编码",
+                "C01",
+                "C02",
+                "C-A01"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 5,
+              "sample_top5": [
+                "一级指标",
+                "成本指标",
+                "成本指标",
+                "成本指标",
+                "成本指标"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 9,
+              "sample_top5": [
+                "二级指标",
+                "经济成本指标",
+                "经济成本指标",
+                "经济成本指标",
+                "经济成本指标"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 33,
+              "sample_top5": [
+                "三级指标",
+                "预算执行率",
+                "项目总成本控制率",
+                "单位服务成本",
+                "费用支付准确率"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 3,
+              "sample_top5": [
+                "指标性质",
+                "定量",
+                "定量",
+                "定量",
+                "定量"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 11,
+              "sample_top5": [
+                "计量单位",
+                "%",
+                "%",
+                "万元/单位",
+                "%"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 33,
+              "sample_top5": [
+                "指标解释",
+                "项目资金实际执行与预算安排的比例",
+                "项目实际支出与预算的比率",
+                "单项服务或单位工作量的平均费用支出",
+                "按合同约定和工作量准确支付的比例"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "",
+              "letter": "H",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 23,
+              "sample_top5": [
+                "评分标准/计算方法",
+                "90%-100%区间得满分，低于90%按比例扣分",
+                "≤100%得满分，每超出1%扣2分",
+                "不超过计划标准值得满分",
+                "准确率=100%得满分"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "",
+              "letter": "I",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 11,
+              "sample_top5": [
+                "计划标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "100%"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "",
+              "letter": "J",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 2,
+              "sample_top5": [
+                "历史标准",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "",
+              "letter": "K",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 11,
+              "sample_top5": [
+                "行业标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "100%"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "",
+              "letter": "L",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 10,
+              "sample_top5": [
+                "适用项目类型",
+                "ALL",
+                "ALL",
+                "A",
+                "A"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "",
+              "letter": "M",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 4,
+              "sample_top5": [
+                "选用级别",
+                "必备",
+                "必备",
+                "推荐",
+                "推荐"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "",
+              "letter": "N",
+              "row_count": 34,
+              "null_count": 1,
+              "null_pct": 2.9,
+              "unique_count": 21,
+              "sample_top5": [
+                "备注",
+                "所有项目必选",
+                "所有项目必选",
+                "如：项目平均评审成本、单个评估费用",
+                "适用于委托服务按量付费项目"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2-项目分类模板",
+          "row_count": 6,
+          "col_count": 7,
+          "columns": [
+            {
+              "index": 0,
+              "name": "项目分类与指标匹配模板",
+              "letter": "A",
+              "row_count": 6,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 6,
+              "sample_top5": [
+                "用法：新增项目→判断项目类型(A/B/C/D)→按模板勾选必选指标→从推荐/可选",
+                "项目类型",
+                "A-业务服务类",
+                "B-运转保障类",
+                "C-党建群团类"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "类型说明",
+                "通过委托第三方或内部专业力量提供特定业务服务的项目",
+                "用于保障单位日常办公运转的项目",
+                "用于开展党组织活动及党务工作的项目",
+                "上级转移支付或专项安排的定向资金项目"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "特征描述",
+                "有明确的服务产出数量、质量标准、完成时限、外部服务对象",
+                "以办公用品、设备维护、软件升级等为支出内容，内部服务型",
+                "以党建活动组织、学习教育等为支出内容，面向党员群体",
+                "资金有明确指定用途（设备采购、设施建设等），按上级要求执行"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "示例",
+                "评审业务费、咨询服务费、评估服务费等",
+                "评审中心运行经费、办公设备购置费等",
+                "党组织活动经费、工会活动经费等",
+                "国产电脑采购、上级专项设备费等"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "必选指标",
+                "C01, C02, Q-N01, Q-Q01, Q-T01, S01",
+                "C01, C02, C-B01, Q-N04, Q-Q01, Q-Q03, Q-",
+                "C01, C02, Q-N06, Q-Q01, Q-Q04, Q-T01, S0",
+                "C01, C02, C-D01, Q-N04, Q-Q05, Q-T01, S0"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "推荐指标",
+                "C-A01, C-A02, Q-N02, Q-N03, Q-Q02, Q-T02",
+                "Q-N05, Q-Q02, S02",
+                "C-C01, Q-T03, B-P01",
+                "Q-T03"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 6,
+              "null_count": 1,
+              "null_pct": 16.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "可选指标",
+                "B-E03, B-S02, B-P01",
+                "C-B02, B-P01, B-S02",
+                "S02",
+                "B-P01"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "3-P1_郫都区政府投资项目（含P",
+          "row_count": 30,
+          "col_count": 13,
+          "columns": [
+            {
+              "index": 0,
+              "name": "郫都区政府投资项目（含PPP项目）评审业务费 —— 绩效指标表",
+              "letter": "A",
+              "row_count": 30,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 30,
+              "sample_top5": [
+                "项目类型：业务服务类 | 年度预算：680万元 | 指标总数：28条（通用库匹配",
+                "序号",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 21,
+              "sample_top5": [
+                "指标来源",
+                "通用库·C01",
+                "通用库·C02",
+                "通用库·Q-N01",
+                "通用库·Q-Q01"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 5,
+              "sample_top5": [
+                "一级指标",
+                "成本指标",
+                "成本指标",
+                "产出指标",
+                "产出指标"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 9,
+              "sample_top5": [
+                "二级指标",
+                "经济成本指标",
+                "经济成本指标",
+                "数量指标",
+                "质量指标"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 29,
+              "sample_top5": [
+                "三级指标",
+                "预算执行率",
+                "项目总成本控制率",
+                "任务/服务完成数量",
+                "任务/服务质量达标率"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 3,
+              "sample_top5": [
+                "指标性质",
+                "定量",
+                "定量",
+                "定量",
+                "定量"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 9,
+              "sample_top5": [
+                "计量单位",
+                "%",
+                "%",
+                "-",
+                "%"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "",
+              "letter": "H",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 21,
+              "sample_top5": [
+                "指标解释",
+                "项目资金实际执行与预算安排的比例",
+                "项目实际支出与预算的比率",
+                "年度内完成的核心任务或服务总数量",
+                "经检查或复核达标的任务/服务占全部的比例"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "",
+              "letter": "I",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 16,
+              "sample_top5": [
+                "评分标准",
+                "90%-100%区间得满分，低于90%按比例扣分",
+                "≤100%得满分，每超出1%扣2分",
+                "达到计划值得满分，未达按比例计分",
+                "达标率≥95%得满分"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "",
+              "letter": "J",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 16,
+              "sample_top5": [
+                "计划标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "≥95%"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "",
+              "letter": "K",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 10,
+              "sample_top5": [
+                "历史标准",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "",
+              "letter": "L",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 9,
+              "sample_top5": [
+                "行业标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "≥95%"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "",
+              "letter": "M",
+              "row_count": 30,
+              "null_count": 1,
+              "null_pct": 3.3,
+              "unique_count": 17,
+              "sample_top5": [
+                "备注",
+                "所有项目必选",
+                "所有项目必选",
+                "通用指标，具体单位按项目定义",
+                "通用核心质量指标"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "3-P2_郫都区政府投资项目评审中",
+          "row_count": 20,
+          "col_count": 13,
+          "columns": [
+            {
+              "index": 0,
+              "name": "郫都区政府投资项目评审中心运行经费 —— 绩效指标表",
+              "letter": "A",
+              "row_count": 20,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 20,
+              "sample_top5": [
+                "项目类型：运转保障类 | 年度预算：40万元 | 指标总数：18条（通用库匹配+",
+                "序号",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 19,
+              "sample_top5": [
+                "指标来源",
+                "通用库·C01",
+                "通用库·C02",
+                "通用库·C-B01",
+                "通用库·Q-N04"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 5,
+              "sample_top5": [
+                "一级指标",
+                "成本指标",
+                "成本指标",
+                "成本指标",
+                "产出指标"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 8,
+              "sample_top5": [
+                "二级指标",
+                "经济成本指标",
+                "经济成本指标",
+                "经济成本指标",
+                "数量指标"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 19,
+              "sample_top5": [
+                "三级指标",
+                "预算执行率",
+                "项目总成本控制率",
+                "日常运维成本",
+                "设备/物资采购完成率"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 3,
+              "sample_top5": [
+                "指标性质",
+                "定量",
+                "定量",
+                "定量",
+                "定量"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 5,
+              "sample_top5": [
+                "计量单位",
+                "%",
+                "%",
+                "万元",
+                "%"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "",
+              "letter": "H",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 19,
+              "sample_top5": [
+                "指标解释",
+                "项目资金实际执行与预算安排的比例",
+                "项目实际支出与预算的比率",
+                "日常办公运转的运维费用总额",
+                "按计划完成采购的设备/物资比例"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "",
+              "letter": "I",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 16,
+              "sample_top5": [
+                "评分标准",
+                "90%-100%区间得满分，低于90%按比例扣分",
+                "≤100%得满分，每超出1%扣2分",
+                "不超过预算标准值得满分",
+                "完成率=100%得满分"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "",
+              "letter": "J",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 11,
+              "sample_top5": [
+                "计划标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "100%"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "",
+              "letter": "K",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 2,
+              "sample_top5": [
+                "历史标准",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "",
+              "letter": "L",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 11,
+              "sample_top5": [
+                "行业标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "100%"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "",
+              "letter": "M",
+              "row_count": 20,
+              "null_count": 1,
+              "null_pct": 5.0,
+              "unique_count": 9,
+              "sample_top5": [
+                "备注",
+                "所有项目必选",
+                "所有项目必选",
+                "含办公用品、耗材、设备维护等",
+                "运转保障类和上级专项类必备"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "3-P3_党组织活动经费",
+          "row_count": 15,
+          "col_count": 13,
+          "columns": [
+            {
+              "index": 0,
+              "name": "党组织活动经费 —— 绩效指标表",
+              "letter": "A",
+              "row_count": 15,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 15,
+              "sample_top5": [
+                "项目类型：党建群团类 | 年度预算：2.04万元 | 指标总数：13条（通用库匹",
+                "序号",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 13,
+              "sample_top5": [
+                "指标来源",
+                "通用库·C01",
+                "通用库·C02",
+                "通用库·Q-N06",
+                "通用库·Q-Q01"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "一级指标",
+                "成本指标",
+                "成本指标",
+                "产出指标",
+                "产出指标"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 8,
+              "sample_top5": [
+                "二级指标",
+                "经济成本指标",
+                "经济成本指标",
+                "数量指标",
+                "质量指标"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 14,
+              "sample_top5": [
+                "三级指标",
+                "预算执行率",
+                "项目总成本控制率",
+                "活动/会议次数",
+                "任务/服务质量达标率"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 3,
+              "sample_top5": [
+                "指标性质",
+                "定量",
+                "定量",
+                "定量",
+                "定量"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 5,
+              "sample_top5": [
+                "计量单位",
+                "%",
+                "%",
+                "次",
+                "%"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "",
+              "letter": "H",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 13,
+              "sample_top5": [
+                "指标解释",
+                "项目资金实际执行与预算安排的比例",
+                "项目实际支出与预算的比率",
+                "年度内组织开展的活动或会议次数",
+                "经检查或复核达标的任务/服务占全部的比例"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "",
+              "letter": "I",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 12,
+              "sample_top5": [
+                "评分标准",
+                "90%-100%区间得满分，低于90%按比例扣分",
+                "≤100%得满分，每超出1%扣2分",
+                "达到计划值得满分",
+                "达标率≥95%得满分"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "",
+              "letter": "J",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 10,
+              "sample_top5": [
+                "计划标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "≥95%"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "",
+              "letter": "K",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 3,
+              "sample_top5": [
+                "历史标准",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "",
+              "letter": "L",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 8,
+              "sample_top5": [
+                "行业标准",
+                "90%-100%",
+                "≤100%",
+                "-",
+                "≥95%"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "",
+              "letter": "M",
+              "row_count": 15,
+              "null_count": 1,
+              "null_pct": 6.7,
+              "unique_count": 8,
+              "sample_top5": [
+                "备注",
+                "所有项目必选",
+                "所有项目必选",
+                "党组织活动、培训等",
+                "通用核心质量指标"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "4-部门整体支出指标",
+          "row_count": 34,
+          "col_count": 9,
+          "columns": [
+            {
+              "index": 0,
+              "name": "成都市郫都区政府投资项目评审中心 部门整体支出绩效指标",
+              "letter": "A",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 34,
+              "sample_top5": [
+                "一级指标",
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "",
+              "letter": "B",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 5,
+              "sample_top5": [
+                "二级指标",
+                "成本指标",
+                "成本指标",
+                "成本指标",
+                "成本指标"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "",
+              "letter": "C",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 12,
+              "sample_top5": [
+                "三级指标",
+                "预算管理",
+                "预算管理",
+                "预算管理",
+                "预算管理"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "",
+              "letter": "D",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 34,
+              "sample_top5": [
+                "指标性质",
+                "财政拨款预算偏离度",
+                "预算年终结余率",
+                "一般性支出金额",
+                "三公经费控制率"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "",
+              "letter": "E",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 3,
+              "sample_top5": [
+                "计量单位",
+                "定量",
+                "定量",
+                "定量",
+                "定量"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "",
+              "letter": "F",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 8,
+              "sample_top5": [
+                "计划标准",
+                "%",
+                "%",
+                "万元",
+                "%"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "",
+              "letter": "G",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 25,
+              "sample_top5": [
+                "历史标准",
+                "≤20%",
+                "≤5%",
+                "≤8.4",
+                "≤100%"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "",
+              "letter": "H",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 23,
+              "sample_top5": [
+                "行业标准",
+                "19.48%",
+                "1.01%",
+                "13.7",
+                "122%"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "",
+              "letter": "I",
+              "row_count": 34,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 2,
+              "sample_top5": [
+                "备注",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "5-赋分规则",
+          "row_count": 9,
+          "col_count": 4,
+          "columns": [
+            {
+              "index": 0,
+              "name": "评分方法",
+              "letter": "A",
+              "row_count": 9,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 9,
+              "sample_top5": [
+                "是否评分法",
+                "分级评分法",
+                "比率分值法",
+                "缺项扣分法",
+                "满意值赋分法"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "适用场景",
+              "letter": "B",
+              "row_count": 9,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 9,
+              "sample_top5": [
+                "合规性正反判断",
+                "定性指标",
+                "连续性比率",
+                "多事项指标",
+                "有明确阈值"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "评分规则",
+              "letter": "C",
+              "row_count": 9,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 9,
+              "sample_top5": [
+                "正向满分，反向0分",
+                "N级权重，按区间计算",
+                "比率×指标分值",
+                "全部具备满分，缺一扣X分",
+                "达标满分，未达标按比例扣"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "示例",
+              "letter": "D",
+              "row_count": 9,
+              "null_count": 0,
+              "null_pct": 0.0,
+              "unique_count": 9,
+              "sample_top5": [
+                "采购合规→满分，违规→0分",
+                "优良中差→100/75/50/25%",
+                "及时率95%→得分=95%×分值",
+                "缺一项制度扣20%",
+                "满意度≥90%满分，每低1%扣2分"
+              ]
+            }
+          ]
+        }
+      ],
+      "timestamp": "2026-08-01T08:50:42.831522"
+    },
+    "profiling": {
+      "phase": "data_profiling",
+      "profiles": {},
+      "timestamp": "2026-08-01T08:50:42.873368"
+    },
+    "semantic": {
+      "phase": "semantic_tagging",
+      "tags": {},
+      "timestamp": "2026-08-01T08:50:42.873388"
+    },
+    "caliber_verify": {
+      "phase": "caliber_verify",
+      "checks": [],
+      "total_checks": 0,
+      "high_severity": 0,
+      "timestamp": "2026-08-01T08:50:42.873451"
+    }
+  },
+  "executive_summary": {
+    "sheets": 7,
+    "total_columns": 73,
+    "amount_columns": 0,
+    "date_columns": 0,
+    "high_missing_cols": 0,
+    "data_quality_flags": 0,
+    "high_severity_flags": 0
+  },
+  "action_items": []
+}

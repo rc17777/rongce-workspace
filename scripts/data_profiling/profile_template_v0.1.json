@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rongce.cn/data-profile/v0.1",
+  "title": "数据理解档案 (Data Understanding Profile) v0.1",
+  "description": "融策·审盾 — 数据口径档案标准格式。一次项目沉淀一份档案，跨项目复用。",
+  "type": "object",
+  "required": ["profile_id", "project", "created_at", "data_sources", "key_calibers"],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "description": "唯一标识，格式: {project_slug}/{dataset_slug}",
+      "examples": ["pidou_2026/运行经费"]
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "slug": {"type": "string"},
+        "client": {"type": "string"},
+        "year": {"type": "integer"},
+        "audit_type": {"type": "string", "description": "绩效评价/经责审计/预算执行/专项资金/招投标/..."}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "last_confirmed_at": {"type": "string", "format": "date-time"},
+    "confirmed_by": {"type": "string", "description": "确认人（审计师姓名），空=AI推断未确认"},
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_name": {"type": "string"},
+          "file_path": {"type": "string"},
+          "format": {"enum": ["excel", "csv", "pdf", "word_table", "manual"]},
+          "sheet_or_section": {"type": "string"},
+          "row_count": {"type": "integer"},
+          "col_count": {"type": "integer"}
+        }
+      }
+    },
+    "table_profile": {
+      "type": "object",
+      "properties": {
+        "business_object": {"type": "string", "description": "一行记录代表什么？如'一笔预算执行记录'、'一个绩效指标'"},
+        "time_granularity": {"enum": ["日", "月", "季", "年", "不适用"]},
+        "entity_scope": {"type": "string", "description": "覆盖哪些单位/人员/项目"},
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "role": {"enum": ["identifier", "amount", "quantity", "date", "category", "text", "code", "boolean", "unknown"]},
+              "data_type": {"enum": ["string", "number", "date", "boolean"]},
+              "unit": {"type": "string", "description": "元/万元/亿元/%/次/人/个/..."},
+              "nullable_pct": {"type": "number"},
+              "unique_values": {"type": "integer"},
+              "sample": {"type": "array", "items": {"type": "string"}, "maxItems": 5},
+              "notes": {"type": "string"}
+            }
+          }
+        },
+        "key_relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from_field": {"type": "string"},
+              "to_profile": {"type": "string"},
+              "to_field": {"type": "string"},
+              "relation_type": {"enum": ["1:1", "1:N", "N:M"]},
+              "verified": {"type": "boolean"},
+              "notes": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "key_calibers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["caliber_id", "name", "definition"],
+        "properties": {
+          "caliber_id": {"type": "string"},
+          "name": {"type": "string", "description": "口径名称，如'项目评审金额'、'当年预算数'"},
+          "definition": {"type": "string", "description": "准确定义，如'当年实际完成的预算评审项目总金额，不含PPP、不含已撤销项目'"},
+          "formula": {"type": "string", "description": "计算公式或SQL/Excel公式"},
+          "unit": {"type": "string"},
+          "expected_range": {"type": "object", "properties": {"min": {}, "max": {}}},
+          "confirmed": {"type": "boolean", "description": "是否经审计师确认"},
+          "confirmed_by": {"type": "string"},
+          "confirmed_date": {"type": "string"},
+          "source_field": {"type": "string", "description": "数据源对应字段"},
+          "business_context": {"type": "string", "description": "业务含义和使用场景"},
+          "common_misunderstandings": {"type": "array", "items": {"type": "string"}, "description": "常见误解/混淆"},
+          "cross_references": {"type": "array", "items": {"type": "string"}, "description": "可交叉验证的其他口径id"}
+        }
+      }
+    },
+    "quality_notes": {
+      "type": "object",
+      "properties": {
+        "completeness_issues": {"type": "array", "items": {"type": "string"}},
+        "consistency_issues": {"type": "array", "items": {"type": "string"}},
+        "outliers_noted": {"type": "array", "items": {"type": "string"}},
+        "known_biases": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "change_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {"type": "string"},
+          "who": {"type": "string"},
+          "what_changed": {"type": "string"},
+          "reason": {"type": "string"}
+        }
+      }
+    },
+    "_ai_confidence": {
+      "type": "object",
+      "description": "AI推断的口径置信度标记，confirmed=false的项需审计师确认",
+      "properties": {
+        "auto_inferred_fields": {"type": "array", "items": {"type": "string"}},
+        "needs_human_review": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
