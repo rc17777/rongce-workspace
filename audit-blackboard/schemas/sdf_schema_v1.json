@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rongce.cn/schemas/sdf-v1.json",
+  "title": "审盾数据帧 (Shendun Data Frame) v1.0",
+  "description": "审盾数据理解底座的统一数据交换格式，所有六种入口归一化后输出此格式",
+  "type": "object",
+  "required": ["sdf_version", "source", "profile", "columns", "data"],
+  "properties": {
+    "sdf_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "SDF格式版本号"
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "original_path", "ingestion_time"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["csv", "excel", "pdf_scanned", "pdf_electronic", "sql_dump", "api"],
+          "description": "原始数据入口类型"
+        },
+        "original_path": {
+          "type": "string",
+          "description": "原始文件路径"
+        },
+        "ingestion_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据入湖时间 (ISO 8601)"
+        },
+        "checksum": {
+          "type": "string",
+          "description": "原始文件SHA256校验和"
+        },
+        "sheet_name": {
+          "type": "string",
+          "description": "Excel工作表名称（仅Excel入口）"
+        },
+        "header_rows": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "检测到的表头行数（中国式多行表头）"
+        },
+        "ocr_quality": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "OCR识别质量分数（仅PDF扫描件入口）"
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": ["row_count", "col_count"],
+      "properties": {
+        "row_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "数据行数（不含表头）"
+        },
+        "col_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "列数"
+        },
+        "encoding": {
+          "type": "string",
+          "description": "文件编码"
+        },
+        "null_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "整体空值率"
+        },
+        "duplicate_rows": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "重复行数"
+        },
+        "memory_size_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "内存占用（字节）"
+        }
+      }
+    },
+    "columns": {
+      "type": "array",
+      "description": "列定义",
+      "items": {
+        "type": "object",
+        "required": ["name", "dtype", "nullable"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "列名（多行表头已合并为单层）"
+          },
+          "dtype": {
+            "type": "string",
+            "enum": ["string", "integer", "decimal", "date", "datetime", "boolean", "unknown"],
+            "description": "推断的数据类型"
+          },
+          "nullable": {
+            "type": "boolean",
+            "description": "是否允许空值"
+          },
+          "unique_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "唯一值比例"
+          },
+          "null_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "该列空值率"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["amount", "quantity", "date", "category", "text", "identifier", "ratio", "unknown"],
+            "description": "语义角色"
+          },
+          "role_confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "角色推断置信度"
+          },
+          "stats": {
+            "type": "object",
+            "description": "数值列统计（仅dtype=integer|decimal时存在）",
+            "properties": {
+              "min": { "type": "number" },
+              "max": { "type": "number" },
+              "mean": { "type": "number" },
+              "std": { "type": "number" },
+              "sum": { "type": "number" },
+              "p25": { "type": "number" },
+              "p50": { "type": "number" },
+              "p75": { "type": "number" }
+            }
+          },
+          "top_values": {
+            "type": "array",
+            "description": "最高频值（仅category/text列）",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "count": { "type": "integer" },
+                "ratio": { "type": "number" }
+              }
+            },
+            "maxItems": 10
+          },
+          "sample_values": {
+            "type": "array",
+            "items": { "type": "string" },
+            "maxItems": 5,
+            "description": "样本值"
+          }
+        }
+      }
+    },
+    "data_preview": {
+      "type": "array",
+      "description": "前5行数据预览（完整data可按需查询）",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 5
+    },
+    "caliber_checks": {
+      "type": "object",
+      "description": "口径一致性检查结果（可选，由口径校验层注入）",
+      "properties": {
+        "passed": { "type": "boolean" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check_name": { "type": "string" },
+              "status": { "type": "string", "enum": ["pass", "warn", "fail"] },
+              "detail": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "project_ref": {
+      "type": "object",
+      "description": "关联的项目信息",
+      "properties": {
+        "project_id": { "type": "string" },
+        "project_name": { "type": "string" },
+        "business_line": { "type": "string" },
+        "year": { "type": "integer" },
+        "label": { "type": "string" }
+      }
+    }
+  }
+}

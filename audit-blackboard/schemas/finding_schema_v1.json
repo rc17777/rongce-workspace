@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rongce.cn/schemas/finding-v1.json",
+  "title": "审盾审计发现 (Finding) v1.0",
+  "description": "审盾模型层L0统一输出格式，要求每条发现必须附带可解释性证据。对应可解释性三级标准：L1规则可解释/L2证据可溯源/L3因果可解释",
+  "type": "object",
+  "required": [
+    "finding_id", "source_model", "dimension", "observed_value",
+    "severity", "risk_score",
+    "explainability_l1", "explainability_l2", "explainability_l3"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "description": "唯一发现编号，格式: F-YYYY-MMDD-NNN",
+      "pattern": "^F-\\d{4}-\\d{4}-\\d{3}$"
+    },
+    "source_model": {
+      "type": "string",
+      "description": "来源模型层，如 L1.R001 / L2.zscore / L3.isolation_forest / L4.path",
+      "pattern": "^L[1-4]\\."
+    },
+    "indicator_id": {
+      "type": "string",
+      "description": "关联的指标ID（来自指标注册器），如 I-P-002"
+    },
+    "entity": {
+      "type": "object",
+      "description": "风险主体",
+      "properties": {
+        "type": { "type": "string", "enum": ["project", "supplier", "employee", "transaction", "account", "contract", "other"] },
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "dimension": {
+      "type": "string",
+      "description": "检查维度，如 '产出完成率' / '报价偏离度' / '供应商关联'"
+    },
+    "observed_value": {
+      "description": "观测值（可以是数字或字符串）"
+    },
+    "expected_range": {
+      "type": "array",
+      "description": "期望区间 [min, max]",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "deviation": {
+      "type": "string",
+      "enum": ["below_threshold", "above_threshold", "outside_range", "pattern_anomaly", "relation_anomaly", "missing", "inconsistent"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2", "info"],
+      "description": "P0=重大矛盾 P1=重大遗漏/风险 P2=口径差异 info=参考"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "风险评分 0-100"
+    },
+
+    "explainability_l1": {
+      "type": "object",
+      "description": "Level 1: 规则可解释 — 必须100%覆盖",
+      "required": ["rule_id", "rule_name", "trigger_condition"],
+      "properties": {
+        "rule_id": {
+          "type": "string",
+          "description": "规则编号，如 R001 / F-P002"
+        },
+        "rule_name": {
+          "type": "string",
+          "description": "规则名称"
+        },
+        "trigger_condition": {
+          "type": "string",
+          "description": "触发条件描述，必须包含触发值和阈值的对比"
+        }
+      }
+    },
+
+    "explainability_l2": {
+      "type": "object",
+      "description": "Level 2: 证据可溯源 — 文件级100% / 页级≥90% / 行级≥70%",
+      "required": ["file_source"],
+      "properties": {
+        "file_source": {
+          "type": "string",
+          "description": "数据来源文件（必须）"
+        },
+        "page": {
+          "description": "页码范围（≥90%发现应包含）"
+        },
+        "line_ref": {
+          "type": "string",
+          "description": "具体行号/单元格引用（≥70%发现应包含）"
+        },
+        "raw_value": {
+          "type": "string",
+          "description": "原始数据截图或摘录"
+        },
+        "data_hash": {
+          "type": "string",
+          "description": "原始数据哈希（防止篡改）"
+        }
+      }
+    },
+
+    "explainability_l3": {
+      "type": "object",
+      "description": "Level 3: 因果可解释 — 目标覆盖率≥60%",
+      "properties": {
+        "causal_chain": {
+          "type": "string",
+          "description": "风险逻辑链: ①数据→②偏离→③风险类型→④建议"
+        },
+        "risk_type": {
+          "type": "string",
+          "description": "风险类型: 资金闲置/虚报/围标/挪用/超标/..."
+        },
+        "impact_estimate": {
+          "type": "string",
+          "description": "影响估计（金额/进度/合规影响）"
+        },
+        "related_cases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "类似案例引用（H-packet X-ref 或知识库引用）"
+        },
+        "suggestion": {
+          "type": "string",
+          "description": "核查建议"
+        }
+      }
+    },
+
+    "confirmation": {
+      "type": "object",
+      "description": "人工确认状态",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pending", "confirmed", "rejected", "adjusted", "escalated"],
+          "default": "pending"
+        },
+        "auditor": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "notes": { "type": "string" },
+        "checklist": {
+          "type": "array",
+          "description": "人工确认清单",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": { "type": "string" },
+              "checked": { "type": "boolean", "default": false }
+            }
+          }
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "created_by": { "type": "string" },
+        "project_id": { "type": "string" },
+        "h_packet_ref": { "type": "string", "description": "来源H-packet编号" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
