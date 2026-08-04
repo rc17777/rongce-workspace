@@ -1,0 +1,18 @@
+[17:54:59] Existing done pages: 125
+[17:54:59] Chunks to process: 11
+[17:59:12] Existing done pages: 125
+[17:59:12] Chunks to process: 11
+[17:59:12] Chunk 1/11: 稽查文件3_chunk_0000-0049.pdf (skipped 50, processed 0)
+[17:59:49] FATAL chunk 稽查文件3_chunk_0000-0049.pdf: '<' not supported between instances of 'str' and 'int'
+[18:02:09] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 49, processed 1)
+[18:48:46]   Progress: 145/506 (28.7%)
+[11:54:07] Existing done pages: 145
+[11:54:07] Chunks to process: 11
+[11:54:07] Chunk 1/11: 稽查文件3_chunk_0000-0049.pdf (skipped 50, processed 0)
+[11:54:07] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 50, processed 0)
+[12:03:14] Chunk 3/11: 稽查文件3_chunk_0100-0149.pdf (skipped 45, processed 5)
+[13:32:02] Existing done pages: 165
+[13:32:02] Chunks to process: 11
+[13:32:02] Chunk 1/11: 稽查文件3_chunk_0000-0049.pdf (skipped 50, processed 0)
+[13:32:02] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 50, processed 0)
+[13:32:02] Chunk 3/11: 稽查文件3_chunk_0100-0149.pdf (skipped 50, processed 0)
