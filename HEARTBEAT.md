@@ -20,6 +20,10 @@ python -X utf8 C:\Users\scrccpa\.openclaw\workspace\temp_ocr\_check_progress.py
 | 有进程正常推进 | 静默（不打扰） |
 | 02:00-07:00 | 静默（不打扰睡眠） |
 
+### 2026-08-03 备注
+- ⚠️ 稽查文件3（336MB超大PDF）：平头哥指令 **下午单独补跑/拆分，上午不做**
+- 下午心跳（13:00 后）主动跟进：检查 worker 是否空闲 → 拆分/补跑稽查文件3
+
 ### 推送目标
 微信用户 `o9cq8017FesQbw9DZlA08fRGu7uE@im.wechat`（平头哥个人微信）
 

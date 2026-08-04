@@ -18,10 +18,11 @@ STATE = os.path.join(SCRIPT_DIR, 'hybrid_ocr_state.json')
 NIGHTLY_LOG = os.path.join(SCRIPT_DIR, '..', 'logs', 'nightly_ocr.log')
 
 # 夜间配置
-MAX_BOOKS_PER_NIGHT = 8          # 每晚上限本数
+MAX_BOOKS_PER_NIGHT = 99         # 每晚上限本数（2026-08-03 平头哥指令：不关机跑完55本，放宽到99）
 NO_QWEN = True                    # 夜间不调Qwen，¥0费用
 MAX_RETRIES = 2                   # 单本失败最大重试次数
-NIGHTLY_TIMEOUT = 21600           # 6小时硬超时（0点-6点）
+NIGHTLY_TIMEOUT = 259200          # 72小时硬超时（平头哥指令：不关机尽量跑完）
+LARGE_BOOK_THRESHOLD_MB = 99999  # Qwen已禁用（API太慢），改回PaddleOCR 3h超时
 
 # 互斥锁（防多实例并发）
 PID_FILE = os.path.join(SCRIPT_DIR, 'nightly_ocr.pid')
@@ -134,9 +135,12 @@ def process_one_pdf(pdf_path, pdf_name, output_dir):
             log(f'  📄 [{attempt}] PaddleOCR: {pdf_name}')
             t0 = time.time()
             
+            # 动态超时：小书1h，大书最多3h
+            file_mb = os.path.getsize(pdf_path)/1024/1024
+            timeout_sec = min(10800, max(3600, int(file_mb * 30)))
             proc = subprocess.run(
                 [PADDLE_PYTHON, PADDLE_WORKER, tmp_cfg.name],
-                capture_output=True, text=True, timeout=3600,
+                capture_output=True, text=True, timeout=timeout_sec,
                 encoding='utf-8', errors='replace'
             )
             
@@ -250,13 +254,128 @@ def process_one_pdf(pdf_path, pdf_name, output_dir):
                 return False, {'error': str(e)}
 
 
+# ============================================================
+# Qwen API 大书OCR（>150MB，PaddleOCR超时兜底）
+# ============================================================
+def process_one_pdf_qwen(pdf_path, pdf_name, output_dir):
+    """用Qwen API逐页OCR超大PDF，避免PaddleOCR 1h超时"""
+    import fitz, requests, base64, io
+    
+    # 读取Qwen配置
+    cfg_path = os.path.join(os.path.expanduser('~'), '.openclaw', 'openclaw.json')
+    cfg = json.load(open(cfg_path, encoding='utf-8'))
+    p = cfg['models']['providers']['custom-cbwyy-qwen']
+    api_key = p['apiKey']
+    base_url = p['baseUrl'].rstrip('/') + '/chat/completions'
+    model = 'qwen3.7-plus'
+    RATE_LIMIT_SEC = 3.0
+    
+    t0 = time.time()
+    doc = fitz.open(pdf_path)
+    total_pages = doc.page_count
+    dpi = 200
+    
+    log(f'  🧠 Qwen API OCR: {pdf_name} (PaddleOCR超时兜底, {total_pages}页, ~{total_pages*RATE_LIMIT_SEC/60:.0f}min ETA)')
+    
+    page_results = []
+    total_tokens = 0
+    failed_pages = 0
+    
+    for pg in range(total_pages):
+        page = doc[pg]
+        pix = page.get_pixmap(dpi=dpi)
+        img_data = pix.tobytes('png')
+        b64 = base64.b64encode(img_data).decode('utf-8')
+        data_url = f'data:image/png;base64,{b64}'
+        
+        payload = {
+            'model': model,
+            'messages': [{'role': 'user', 'content': [
+                {'type': 'image_url', 'image_url': {'url': data_url}},
+                {'type': 'text', 'text': '请完整识别这张扫描件的所有中文文字，包括页眉页脚。保持原文段落和换行。表格用Markdown表格输出。模糊文字标注[模糊]。只输出识别内容，不加解释。'}
+            ]}],
+            'max_tokens': 4096, 'temperature': 0.1
+        }
+        
+        page_text = ''
+        page_tokens = 0
+        for attempt in range(3):
+            try:
+                r = requests.post(base_url,
+                    headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'},
+                    json=payload, timeout=120)
+                if r.status_code == 200:
+                    d = r.json()
+                    page_text = d['choices'][0]['message']['content']
+                    page_tokens = d.get('usage', {}).get('total_tokens', 0)
+                    total_tokens += page_tokens
+                    break
+                elif r.status_code == 429:
+                    time.sleep(min(2**attempt*10, 60))
+                elif attempt < 2:
+                    time.sleep(2**attempt*5)
+                else:
+                    page_text = f'[Qwen HTTP {r.status_code}]'
+            except Exception as e:
+                if attempt < 2:
+                    time.sleep(2**attempt*5)
+                else:
+                    page_text = f'[Qwen Error: {e}]'
+        
+        if not page_text or page_text.startswith('[Qwen'):
+            failed_pages += 1
+            if not page_text:
+                page_text = '[Qwen 返回空]'
+        
+        page_results.append((pg, page_text, 'qwen', 1.0 if not page_text.startswith('[Qwen') else 0))
+        
+        if (pg+1) % 10 == 0:
+            elapsed = time.time() - t0
+            eta = elapsed/(pg+1)*(total_pages-pg-1) if pg>0 else 0
+            log(f'  Qwen: {pg+1}/{total_pages} ({elapsed/60:.0f}min ETA{eta/60:.0f}min)')
+        
+        if pg < total_pages - 1:
+            time.sleep(RATE_LIMIT_SEC)
+    
+    doc.close()
+    
+    cost_est = total_tokens * 0.0075 / 1000  # ¥0.0075/1K blended
+    elapsed = time.time() - t0
+    
+    meta = {
+        'total_pages': total_pages, 'paddle_pages': 0,
+        'qwen_pages': total_pages-failed_pages, 'qwen_tokens': total_tokens,
+        'qwen_cost_est': cost_est,
+        'avg_confidence': (total_pages-failed_pages)/max(total_pages,1),
+        'elapsed': round(elapsed, 1),
+    }
+    
+    from hybrid_ocr_pipeline import get_business_line, sanitize_filename, build_markdown
+    biz_line = get_business_line(pdf_path, pdf_name)
+    md = build_markdown(pdf_name, biz_line, pdf_path, page_results, meta)
+    
+    safe_name = sanitize_filename(pdf_name)
+    out_dir = os.path.join(output_dir, biz_line)
+    os.makedirs(out_dir, exist_ok=True)
+    out_path = os.path.join(out_dir, f'{safe_name}.md')
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write(md)
+    
+    log(f'  📁 {out_path} ({os.path.getsize(out_path)/1024:.0f}KB)')
+    log(f'  💰 Qwen费用: ¥{cost_est:.4f} ({total_tokens}t)')
+    
+    return True, {'name': pdf_name, 'pages': total_pages, 'chars': 0, 'confidence': 1.0,
+        'biz_line': biz_line, 'qwen_pages': total_pages-failed_pages, 'qwen_tokens': total_tokens,
+        'qwen_cost': cost_est, 'time': round(elapsed,1), 'output': out_path, 'retries': 0}
+
+
 def main():
     dry_run = '--dry-run' in sys.argv
     force = '--force' in sys.argv
     
     log('=' * 60)
-    log('夜间OCR批量处理 v2.0 启动')
-    log(f'每晚上限: {MAX_BOOKS_PER_NIGHT}本 | Qwen: {"关闭" if NO_QWEN else "开启"}')
+    log('夜间OCR批量处理 v2.1 启动 (大书Qwen兜底)')
+    log(f'每晚上限: {MAX_BOOKS_PER_NIGHT}本 | 大书阈值: {LARGE_BOOK_THRESHOLD_MB}MB')
     log(f'重试次数: {MAX_RETRIES} | 超时: {NIGHTLY_TIMEOUT//3600}小时')
     
     # 加载进度
@@ -297,9 +416,15 @@ def main():
             break
         
         pdf_path, pdf_name, pdf_size = pending[0]
-        log(f'\n--- 第 {books_done+1}/{MAX_BOOKS_PER_NIGHT} 本: {pdf_name} ({pdf_size/1024/1024:.1f}MB) ---')
+        size_mb = pdf_size / 1024 / 1024
+        is_large = size_mb > LARGE_BOOK_THRESHOLD_MB
         
-        success, result = process_one_pdf(pdf_path, pdf_name, OUTPUT_DIR)
+        log(f'\n--- 第 {books_done+1}/{MAX_BOOKS_PER_NIGHT} 本: {pdf_name} ({size_mb:.0f}MB){" 🔵Qwen" if is_large else ""} ---')
+        
+        if is_large:
+            success, result = process_one_pdf_qwen(pdf_path, pdf_name, OUTPUT_DIR)
+        else:
+            success, result = process_one_pdf(pdf_path, pdf_name, OUTPUT_DIR)
         
         if success:
             done_paths.add(pdf_path)
@@ -311,9 +436,9 @@ def main():
                 'pages': result['pages'],
                 'chars': result.get('chars', 0),
                 'confidence': result.get('confidence', 0),
-                'qwen_pages': 0,
-                'qwen_tokens': 0,
-                'qwen_cost': 0,
+                'qwen_pages': result.get('qwen_pages', 0),
+                'qwen_tokens': result.get('qwen_tokens', 0),
+                'qwen_cost': result.get('qwen_cost', 0),
                 'time': result['time'],
                 'output': result['output'],
                 'retries': result.get('retries', 0),
@@ -321,8 +446,8 @@ def main():
             
             state['done'] = list(done_paths)
             state['results'] = total_results
-            state['total_qwen_tokens'] = state.get('total_qwen_tokens', 0)
-            state['total_qwen_cost'] = state.get('total_qwen_cost', 0)
+            state['total_qwen_tokens'] = state.get('total_qwen_tokens', 0) + result.get('qwen_tokens', 0)
+            state['total_qwen_cost'] = state.get('total_qwen_cost', 0) + result.get('qwen_cost', 0)
             
             # 每本保存一次进度（防崩溃丢进度）
             with open(STATE, 'w', encoding='utf-8') as f:
