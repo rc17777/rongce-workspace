@@ -43,3 +43,5 @@
 [20:32:25] Chunk 4/11: 稽查文件3_chunk_0150-0199.pdf (skipped 50, processed 0)
 [20:45:49]   Progress: 240/506 (47.4%)
 [20:55:37] Chunk 5/11: 稽查文件3_chunk_0200-0249.pdf (skipped 20, processed 30)
+[21:10:17]   Progress: 260/506 (51.4%)
+[21:29:25]   Progress: 280/506 (55.3%)
