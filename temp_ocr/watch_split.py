@@ -20,9 +20,10 @@ def log(msg):
 
 def split_running():
     try:
-        out = subprocess.run(
+        result = subprocess.run(
             ['wmic', 'process', 'where', "name='python.exe'", 'get', 'commandline', '/format:list'],
-            capture_output=True, text=True, timeout=30).stdout
+            capture_output=True, text=True, timeout=30)
+        out = result.stdout or ''
         return 'split_ocr_v2' in out
     except Exception as e:
         log(f'进程检查失败: {e}')
