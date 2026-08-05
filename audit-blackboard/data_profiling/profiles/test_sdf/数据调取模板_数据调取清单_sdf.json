@@ -1,0 +1,146 @@
+{
+  "sdf_version": "1.0.0",
+  "source": {
+    "type": "excel",
+    "original_path": "C:\\Users\\scrccpa\\.openclaw\\workspace\\审计数据调取模板.xlsx",
+    "ingestion_time": "2026-08-04T16:46:03.812549",
+    "checksum": "sha256:5eff7199e27ee8156c6b8a8a558508c1b07eb4e1088a8312f3a59e9bd7971e02",
+    "header_rows": 2,
+    "sheet_name": "数据调取清单"
+  },
+  "profile": {
+    "row_count": 20,
+    "col_count": 4,
+    "encoding": "utf-8",
+    "null_rate": 0.5,
+    "duplicate_rows": 0
+  },
+  "columns": [
+    {
+      "name": "审计资料调取清单_序号",
+      "dtype": "integer",
+      "nullable": false,
+      "unique_rate": 1.0,
+      "null_rate": 0.0,
+      "role": "identifier",
+      "role_confidence": 0.9,
+      "sample_values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "stats": {
+        "min": 1.0,
+        "max": 20.0,
+        "mean": 10.5,
+        "std": 5.9161,
+        "sum": 210.0,
+        "p25": 6.0,
+        "p50": 11.0,
+        "p75": 16.0
+      }
+    },
+    {
+      "name": "资料名称",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 1.0,
+      "null_rate": 0.0,
+      "role": "category",
+      "role_confidence": 0.7,
+      "sample_values": [
+        "资产负债表（审计期间）",
+        "利润表（审计期间）",
+        "现金流量表（审计期间）",
+        "预算批复文件",
+        "决算报告"
+      ],
+      "top_values": [
+        {
+          "value": "资产负债表（审计期间）",
+          "count": 1,
+          "ratio": 0.05
+        },
+        {
+          "value": "利润表（审计期间）",
+          "count": 1,
+          "ratio": 0.05
+        },
+        {
+          "value": "现金流量表（审计期间）",
+          "count": 1,
+          "ratio": 0.05
+        },
+        {
+          "value": "预算批复文件",
+          "count": 1,
+          "ratio": 0.05
+        },
+        {
+          "value": "决算报告",
+          "count": 1,
+          "ratio": 0.05
+        }
+      ]
+    },
+    {
+      "name": "是否提供",
+      "dtype": "string",
+      "nullable": true,
+      "unique_rate": 0.0,
+      "null_rate": 1.0,
+      "role": "unknown",
+      "role_confidence": 0.3,
+      "sample_values": []
+    },
+    {
+      "name": "备注",
+      "dtype": "string",
+      "nullable": true,
+      "unique_rate": 0.0,
+      "null_rate": 1.0,
+      "role": "text",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    }
+  ],
+  "data_preview": [
+    {
+      "审计资料调取清单_序号": "1",
+      "资料名称": "资产负债表（审计期间）",
+      "是否提供": "None",
+      "备注": "None"
+    },
+    {
+      "审计资料调取清单_序号": "2",
+      "资料名称": "利润表（审计期间）",
+      "是否提供": "None",
+      "备注": "None"
+    },
+    {
+      "审计资料调取清单_序号": "3",
+      "资料名称": "现金流量表（审计期间）",
+      "是否提供": "None",
+      "备注": "None"
+    },
+    {
+      "审计资料调取清单_序号": "4",
+      "资料名称": "预算批复文件",
+      "是否提供": "None",
+      "备注": "None"
+    },
+    {
+      "审计资料调取清单_序号": "5",
+      "资料名称": "决算报告",
+      "是否提供": "None",
+      "备注": "None"
+    }
+  ],
+  "project_ref": {
+    "project_id": "test_sdf",
+    "label": "数据调取模板/数据调取清单"
+  }
+}

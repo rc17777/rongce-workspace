@@ -1,0 +1,110 @@
+{
+  "sdf_version": "1.0.0",
+  "source": {
+    "type": "excel",
+    "original_path": "C:\\Users\\scrccpa\\.openclaw\\workspace\\审计数据调取模板.xlsx",
+    "ingestion_time": "2026-08-04T16:46:03.823816",
+    "checksum": "sha256:5eff7199e27ee8156c6b8a8a558508c1b07eb4e1088a8312f3a59e9bd7971e02",
+    "header_rows": 2,
+    "sheet_name": "财务数据模板"
+  },
+  "profile": {
+    "row_count": 0,
+    "col_count": 8,
+    "encoding": "utf-8",
+    "null_rate": 0.0,
+    "duplicate_rows": 0
+  },
+  "columns": [
+    {
+      "name": "财务数据模板_日期",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "date",
+      "role_confidence": 0.85,
+      "sample_values": []
+    },
+    {
+      "name": "科目编码",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "category",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    },
+    {
+      "name": "科目名称",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "category",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    },
+    {
+      "name": "金额",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "amount",
+      "role_confidence": 0.85,
+      "sample_values": []
+    },
+    {
+      "name": "对方单位",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "category",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    },
+    {
+      "name": "业务事由",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "text",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    },
+    {
+      "name": "附件编号",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "identifier",
+      "role_confidence": 0.9,
+      "sample_values": []
+    },
+    {
+      "name": "备注",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 0.0,
+      "null_rate": 0.0,
+      "role": "text",
+      "role_confidence": 0.7,
+      "sample_values": [],
+      "top_values": []
+    }
+  ],
+  "data_preview": [],
+  "project_ref": {
+    "project_id": "test_sdf",
+    "label": "数据调取模板/财务数据模板"
+  }
+}

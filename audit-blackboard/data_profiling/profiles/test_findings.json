@@ -1,0 +1,26 @@
+[
+  {
+    "finding_id": "F-2026-0804-001",
+    "source_model": "L1.R001",
+    "dimension": "产出完成率",
+    "observed_value": "88.7%",
+    "severity": "P1",
+    "risk_score": 72.5,
+    "explainability_l1": {
+      "rule_id": "R001",
+      "rule_name": "产出指标完成率低于合同约定",
+      "trigger_condition": "实际88.7%<合同95%，差6.3pp"
+    },
+    "explainability_l2": {
+      "file_source": "绩效评价报告.docx",
+      "page": 23,
+      "line_ref": "表5-3",
+      "raw_value": "88.7%"
+    },
+    "explainability_l3": {
+      "causal_chain": "完成率低于合同约定→差口6.3pp→资金效率风险→建议核查",
+      "risk_type": "资金效率",
+      "suggestion": "核查差口原因"
+    }
+  }
+]

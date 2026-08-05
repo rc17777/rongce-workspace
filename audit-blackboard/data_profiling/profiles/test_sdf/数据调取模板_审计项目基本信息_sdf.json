@@ -1,0 +1,52 @@
+{
+  "sdf_version": "1.0.0",
+  "source": {
+    "type": "excel",
+    "original_path": "C:\\Users\\scrccpa\\.openclaw\\workspace\\审计数据调取模板.xlsx",
+    "ingestion_time": "2026-08-04T16:46:03.800366",
+    "checksum": "sha256:5eff7199e27ee8156c6b8a8a558508c1b07eb4e1088a8312f3a59e9bd7971e02",
+    "header_rows": 5,
+    "sheet_name": "审计项目基本信息"
+  },
+  "profile": {
+    "row_count": 1,
+    "col_count": 2,
+    "encoding": "utf-8",
+    "null_rate": 0.5,
+    "duplicate_rows": 0
+  },
+  "columns": [
+    {
+      "name": "审计项目基本信息_被审计单位名称_审计期间_审计类型_审计组负责人",
+      "dtype": "string",
+      "nullable": false,
+      "unique_rate": 1.0,
+      "null_rate": 0.0,
+      "role": "date",
+      "role_confidence": 0.85,
+      "sample_values": [
+        "联系电话"
+      ]
+    },
+    {
+      "name": "Col_2",
+      "dtype": "string",
+      "nullable": true,
+      "unique_rate": 0.0,
+      "null_rate": 1.0,
+      "role": "unknown",
+      "role_confidence": 0.3,
+      "sample_values": []
+    }
+  ],
+  "data_preview": [
+    {
+      "审计项目基本信息_被审计单位名称_审计期间_审计类型_审计组负责人": "联系电话",
+      "Col_2": "None"
+    }
+  ],
+  "project_ref": {
+    "project_id": "test_sdf",
+    "label": "数据调取模板/审计项目基本信息"
+  }
+}
