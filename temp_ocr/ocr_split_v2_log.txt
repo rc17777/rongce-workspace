@@ -17,3 +17,13 @@
 [13:32:02] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 50, processed 0)
 [13:32:02] Chunk 3/11: 稽查文件3_chunk_0100-0149.pdf (skipped 50, processed 0)
 [14:22:50]   Progress: 185/506 (36.6%)
+[15:29:41] Existing done pages: 195
+[15:29:41] Chunks to process: 11
+[15:29:41] Chunk 1/11: 稽查文件3_chunk_0000-0049.pdf (skipped 50, processed 0)
+[15:29:42] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 50, processed 0)
+[15:29:42] Chunk 3/11: 稽查文件3_chunk_0100-0149.pdf (skipped 50, processed 0)
+[17:22:12] Existing done pages: 195
+[17:22:12] Chunks to process: 11
+[17:22:12] Chunk 1/11: 稽查文件3_chunk_0000-0049.pdf (skipped 50, processed 0)
+[17:22:12] Chunk 2/11: 稽查文件3_chunk_0050-0099.pdf (skipped 50, processed 0)
+[17:22:12] Chunk 3/11: 稽查文件3_chunk_0100-0149.pdf (skipped 50, processed 0)
