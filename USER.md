@@ -2,11 +2,11 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** 蔡佳
+- **What to call them:** 蔡佳
 - **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Timezone:** Asia/Shanghai (GMT+8)
+- **Notes:** 融策审计智析Agent的主要使用者
 
 ## Context
 

@@ -1,6 +1,6 @@
 ---
 name: gov-subsidy-penetration-audit
-description: "政府补助/补贴资金穿透式审计技能。覆盖超长期特别国债、以旧换新补贴、涉农补贴、设备更新补贴等政府补助类业务的穿透审计方法论。触发场景：政府补贴审计、补助资金核查、以旧换新审计、国债资金跟踪审计、骗补识别、资金穿透追踪。触发说法："政府补助审计""补贴资金穿透""骗补识别""以旧换新审计""国债资金审计""补贴数据建模"。 Uses penetration audit methodology: fund flow tracking from source to end recipient. Covers ultra-long-term special government bonds, trade-in subsidies, agricultural subsidies, and equipment renewal subsidies."
+description: 政府补助/补贴资金穿透式审计技能。覆盖超长期特别国债、以旧换新补贴、涉农补贴、设备更新补贴、财政金融协同促内需专项资金（贴息/担保/风险补偿）、化债资金等政府补助类业务的穿透审计方法论。触发场景：政府补贴审计、补助资金核查、以旧换新审计、国债资金跟踪审计、骗补识别、资金穿透追踪、贴息套利、化债审计。触发说法："政府补助审计""补贴资金穿透""骗补识别""以旧换新审计""国债资金审计""补贴数据建模""贴息审计""化债资金审计"。Uses penetration audit methodology: fund flow tracking from source to end recipient. Covers ultra-long-term special government bonds, trade-in subsidies, agricultural subsidies, and equipment renewal subsidies.
 ---
 
 # 政府补助/补贴资金穿透式审计
@@ -9,7 +9,9 @@ description: "政府补助/补贴资金穿透式审计技能。覆盖超长期�
 
 ## 适用业务
 
-超长期特别国债 / 消费品以旧换新补贴 / 涉农补贴 / 设备更新补贴 / 消费券 / 新能源补贴 等各类政府补助资金的审计。
+超长期特别国债 / 消费品以旧换新补贴 / 涉农补贴 / 设备更新补贴 / 财政金融协同促内需专项资金（贷款贴息·融资担保·风险补偿）/ 化债资金 / 消费券 / 新能源补贴 等各类政府补助资金的审计。
+
+> 📌 2026年7月30日政治局会议后，下半年审计重点是：**债券资金使用进度、"三保"底线、财政金融协同促内需（1000亿专项资金）、一揽子化债方案**，详见 [references/politburo-h2-2026-policy.md](references/politburo-h2-2026-policy.md)（含1000亿专项资金穿透审计要点）。
 
 ---
 
@@ -109,6 +111,7 @@ description: "政府补助/补贴资金穿透式审计技能。覆盖超长期�
 
 ## 参考案例
 
+- **2026政治局会议政策依据**：[references/politburo-h2-2026-policy.md](references/politburo-h2-2026-policy.md) — 下半年四大审计明线+两暗线，1000亿财政金融协同促内需专项资金三工具穿透要点
 - **海南以旧换新审计**：[references/hainan-case.md](references/hainan-case.md) — 四模型破局+资金闭环追踪，追缴近千万元
 - **湖南全链条联动**：省-市-县纵向联动 + 跨部门横向信息共享 + 问题清单-整改台账-销号管理
 - **泰兴三维管控**：资金流向（底线）+ 项目落地（抓手）+ 政策实效（目标）

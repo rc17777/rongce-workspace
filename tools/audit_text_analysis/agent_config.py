@@ -228,10 +228,45 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "budget_compliance_scan",
             "personnel_profile_check",
             # v7 统计工具
-            "benford_analysis",          # 金额分布异常→分拆发票
-            "timeline_anomaly",          # 先付款后签合同→内控失效
-            "data_script_generator",     # 数据处理脚本生成
-            "journal_entry_validate",    # 会计分录校验
+            "benford_analysis",
+            "timeline_anomaly",
+            "data_script_generator",
+            "journal_entry_validate",
+            # P0: 预算执行审计
+            "budget_deviation_engine",
+            "no_budget_detector",
+            "carryover_compliance",
+            "budget_adjustment_check",
+            # P0: 国有企业审计
+            "triple_one_detector",
+            "asset_preservation_alert",
+            "executive_perks_check",
+            "mixed_reform_asset_check",
+            # P0: 内控制度审计
+            "segregation_duties_check",
+            # P1: 工程竣工决算
+            "four_stage_penetration",
+            # P1: 经责审计+绩效+专项债
+            "tenure_kpi_comparison",
+            "natural_resource_audit",
+            "multi_source_scoring",
+            "performance_benchmark",
+            "revenue_coverage_calc",
+            "negative_list_scanner",
+            "progress_disbursement_match",
+            # P1补充: 收支审计+工程结算
+            "non_tax_revenue_completeness",
+            "revenue_expenditure_two_lines",
+            "change_order_reasonableness",
+            # P2: 司法+监督
+            "fund_trace_visualizer",
+            "loss_quantification_model",
+            "risk_based_inspection_planner",
+            "rectification_tracker",
+            # P2: 财政评审+全过程
+            "estimate_reasonableness",
+            "investment_control_evaluation",
+            "document_chain_trace",
         ],
         trigger_conditions=[
             "审计项目类型为经济责任审计或预算执行审计",
@@ -240,15 +275,25 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "报销凭证 > 100条 → 启动预算合规扫描",
             "发票金额 > 30条 → 启动Benford分析",
             "合同+付款双时间序列 → 启动时间序列异常检测",
+            "预算执行数据可用 → 预算偏差引擎+无预算检测+结转合规+调整合规",
+            "经责审计项目 → 任期指标对比+自然资源审计",
+            "国企审计项目 → 三重一大+资产保值+履职待遇+混改检测",
+            "涉及财政资金拨付进度 → 进度-拨付匹配",
+            "涉及专项债项目 → 收益覆盖率+负面清单扫描",
+            "涉及政府投资工程 → 四阶段穿透+概算评审+投资管控",
+            "涉及非税收入 → 非税收入完整性+收支两条线",
         ],
-        risk_scenarios=_RISK_SCENARIOS["economic_responsibility"],
+        risk_scenarios=_RISK_SCENARIOS["economic_responsibility"] + _RISK_SCENARIOS["budget"] + _RISK_SCENARIOS["subsidy"],
         output_requirements="""
 1. 热词分析输出：风险信号词列表 + 对应的审计关注领域建议
 2. 预算合规输出：违规记录分类（三公经费/采购/车辆/差旅）+ 对应金额汇总
 3. 合同分析输出：超付/提前付款/逾期标记 + 关联的付款记录索引
 4. Benford输出：分布对照表 + 卡方检验结果 + 分品类对比
 5. 时间序列输出：先付后签项目列表 + 经办人聚集统计
-6. 所有输出标注引用依据（法律法规或审计准则条款）
+6. 预算偏差输出：偏差热力图+红/橙/黄分级预警+年末执行偏慢检测
+7. 三重一大输出：四维合规评分（决策/人事/项目/资金）+ 违规明细
+8. 经责审计输出：任期指标变化趋势+异常跳跃点+同业对标
+9. 所有输出标注引用依据（法律法规或审计准则条款）
 """,
     ),
 
@@ -265,10 +310,22 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "budget_compliance_scan",
             "contract_field_extract",
             # v7 统计工具
-            "benford_analysis",              # 金额分布验证→财务数据真实性
-            "supplier_fingerprint",          # 供应商行为相似→隐性关联交易
-            "contract_change_trajectory",    # 变更轨迹→结算水分/虚高定价
-            "data_script_generator",         # 数据处理脚本生成
+            "benford_analysis",
+            "supplier_fingerprint",
+            "contract_change_trajectory",
+            "data_script_generator",
+            # P0: 国有企业审计
+            "asset_preservation_alert",
+            "mixed_reform_asset_check",
+            # P0: 内控制度审计
+            "walkthrough_test_engine",
+            # P1: 工程竣工决算
+            "delivery_asset_reconciliation",
+            # P1: 专项债
+            "revenue_coverage_calc",
+            # P2: 司法审计
+            "fund_trace_visualizer",
+            "loss_quantification_model",
         ],
         trigger_conditions=[
             "审计项目涉及财务报表审计或内控审计",
@@ -277,6 +334,10 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "发票/收入金额 > 50条 → 启动Benford分析",
             "供应商/客户 > 20家 → 启动供应商指纹",
             "合同变更记录 > 10条 → 启动变更轨迹分析",
+            "国企审计→资产减值+混改检测",
+            "穿行测试需求→walkthrough_test_engine",
+            "竣工决算审计→交付资产勾稽",
+            "司法审计/资金追踪→fund_trace_visualizer+损失量化",
         ],
         risk_scenarios=_RISK_SCENARIOS["procurement"],
         output_requirements="""
@@ -285,7 +346,9 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
 3. 合同分析输出：金额差异 + 认定的影响评估
 4. Benford输出：分布异常与财务报表科目对应分析
 5. 供应商指纹输出：隐性关联对 + 对关联交易认定的影响
-6. 审计调整建议附注对财务报表的影响金额
+6. 资产减值输出：公允价值下跌/闲置/终止等信号+风险评分
+7. 损失量化输出：虚增成本/虚减收入/非公允/侵占四类+法条依据
+8. 审计调整建议附注对财务报表的影响金额
 """,
     ),
 
@@ -302,9 +365,36 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "budget_compliance_scan",
             "text_hotword_analysis",
             # v7 统计工具
-            "timeline_anomaly",              # 时滞检测→内控流程漏洞
-            "contract_change_trajectory",    # 变更轨迹→变更管控缺陷
-            "data_script_generator",         # 数据处理脚本生成
+            "timeline_anomaly",
+            "contract_change_trajectory",
+            "data_script_generator",
+            # P0: 预算执行审计
+            "budget_deviation_engine",
+            "no_budget_detector",
+            "carryover_compliance",
+            "budget_adjustment_check",
+            # P0: 内控制度审计（全量）
+            "coso_five_elements",
+            "segregation_duties_check",
+            "walkthrough_test_engine",
+            "ic_deficiency_grading",
+            # P0: 国有企业审计
+            "triple_one_detector",
+            "asset_preservation_alert",
+            "executive_perks_check",
+            # P1: 绩效评价
+            "multi_source_scoring",
+            # P1补充: 收支审计
+            "revenue_expenditure_two_lines",
+            # P1补充: 工程结算
+            "change_order_reasonableness",
+            # P2: 监督检查
+            "risk_based_inspection_planner",
+            "rectification_tracker",
+            # P2: 全过程咨询
+            "contract_performance_monitor",
+            # P2: 专项审计补充
+            "audit_plan_generator",
         ],
         trigger_conditions=[
             "审计项目聚焦内控制度和合规性",
@@ -312,14 +402,22 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "流程测试需求 → 启动合规扫描",
             "合同+付款时间序列 → 启动时间序列异常（内控流程测试）",
             "合同变更记录 > 10条 → 启动变更轨迹（变更管控评估）",
+            "内控评价项目→COSO五要素+职务分离+穿行测试+缺陷分级",
+            "国企/政府审计→三重一大+履职待遇检查",
+            "预算执行审计→预算偏差+无预算+结转+调整合规",
+            "合同履约监控→contract_performance_monitor",
+            "监督检查→风险导向检查计划+整改跟踪",
         ],
         risk_scenarios=_RISK_SCENARIOS["budget"] + _RISK_SCENARIOS["procurement"],
         output_requirements="""
 1. 内控缺陷按重要程度分级（重大/重要/一般）
 2. 每个缺陷标注对应的内控要素（控制环境/风险评估/控制活动/信息沟通/监督）
-3. 时间序列异常→内控流程漏洞的具体环节定位
-4. 变更轨迹异常→变更审批管控的改进建议
-5. 提供改进建议的具体措施和时间表
+3. COSO评估输出：五要素雷达图+制度空白清单+加权评分
+4. 职务分离输出：冲突矩阵+高风险用户+具体证据
+5. 穿行测试输出：逐步判定+断裂点标注+全流程健康度
+6. 时间序列异常→内控流程漏洞的具体环节定位
+7. 变更轨迹异常→变更审批管控的改进建议
+8. 提供改进建议的具体措施和时间表
 """,
     ),
 
@@ -336,13 +434,33 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "text_hotword_analysis",
             "text_similarity_compare",
             # v7 统计工具
-            "benford_analysis",              # 材料/设备金额分布→价格虚高
-            "supplier_fingerprint",          # 承包商行为相似→围标陪标
-            "contract_change_trajectory",    # 变更轨迹→变更套利/结算水分
-            "data_script_generator",         # 数据处理脚本生成
+            "benford_analysis",
+            "supplier_fingerprint",
+            "contract_change_trajectory",
+            "data_script_generator",
             # v9 围标串标检测
-            "bid_rigging_detect",            # 5维围标串标特征检测
-            "evidence_chain_graph",          # 证据链图谱生成
+            "bid_rigging_detect",
+            "evidence_chain_graph",
+            # P1: 工程竣工决算
+            "four_stage_penetration",
+            "apportioned_investment_check",
+            "delivery_asset_reconciliation",
+            # P1: 工程结算补充
+            "boq_vs_actual_quantity_check",
+            "unit_price_compliance_check",
+            "change_order_reasonableness",
+            # P1: 专项债
+            "progress_disbursement_match",
+            # P2: 清单编制
+            "boq_omission_detector",
+            "unit_price_benchmark",
+            # P2: 财政评审
+            "estimate_reasonableness",
+            "investment_control_evaluation",
+            # P2: 全过程工程咨询
+            "evm_auto_analyzer",
+            "contract_performance_monitor",
+            "document_chain_trace",
         ],
         trigger_conditions=[
             "审计项目类型为工程审计或造价审计",
@@ -351,6 +469,12 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "供应商/承包商名单 > 30 → 启动相似度比对 + 供应商指纹",
             "材料/设备发票 > 50条 → 启动Benford分析（价格虚高检测）",
             "招投标标段 > 10 → 启动围标串标检测 + 证据链图谱",
+            "工程竣工决算→四阶段穿透+待摊投资+交付资产勾稽",
+            "工程结算审计→工程量偏差+单价合规+变更签证合理性",
+            "工程量清单审计→漏项检测+单价基准对比",
+            "概算评审→概算合理性+投资控制评价",
+            "全过程咨询→EVM挣值管理+合同履约+文档链追溯",
+            "进度款审计→进度-拨付匹配",
         ],
         risk_scenarios=_RISK_SCENARIOS["project"],
         output_requirements="""
@@ -360,7 +484,10 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
 4. Benford输出：分品类/标段的金额分布，聚焦材料价格异常
 5. 供应商指纹输出：高相似承包商组 + 建议的工商穿透核查方向
 6. 变更轨迹输出：变更率行业对标 + 验收后调减项目清单 + 审减率联动
-7. 围标检测输出：5维特征风险评分(0-5) + 证据链图谱（HTML/Markdown卡片）
+7. 围标检测输出：5维特征风险评分(0-5) + 证据链图谱
+8. 四阶段穿透：概/预/结/决偏差瀑布图+异常项+原因归类
+9. EVM输出：SPI/CPI/EAC+进度-成本双维度诊断
+10. 文档链追溯：缺失文档+时间逻辑错误+交叉引用不一致
 """,
     ),
 
@@ -385,15 +512,39 @@ AGENT_CONFIGS: Dict[str, AuditAgentConfig] = {
             "contract_change_trajectory",
             "data_script_generator",
             # v9 围标串标检测
-            "bid_rigging_detect",            # 5维围标串标特征检测
-            "evidence_chain_graph",          # 证据链图谱生成
+            "bid_rigging_detect",
+            "evidence_chain_graph",
+            # P0: 内控制度审计
+            "coso_five_elements",
+            "ic_deficiency_grading",
+            # P1: 工程竣工决算
+            "four_stage_penetration",
+            # P1: 经责审计+绩效
+            "tenure_kpi_comparison",
+            "multi_source_scoring",
+            "performance_benchmark",
+            # P1补充: 工程结算
+            "boq_vs_actual_quantity_check",
+            # P2: 司法审计
+            "fund_trace_visualizer",
+            # P2: 清单编制
+            "unit_price_benchmark",
+            # P2: 全过程咨询
+            "evm_auto_analyzer",
+            # P2: 专项审计补充
+            "audit_plan_generator",
         ],
         trigger_conditions=[
-            "非结构化数据 > 1000条 → 启动全部v4+v7共9个工具",
+            "非结构化数据 > 1000条 → 启动全部v4+v7工具",
             "大数据审计项目 → 并行执行所有文本分析和统计分析",
             "需要数据可视化 → 输出词云、分布图等",
             "全量数据分析需求 → 遵循'不选择，全部看'范式",
             "多工具交叉验证 → Benford+指纹+时间序列+变更轨迹联动分析",
+            "绩效数据多来源→多源融合评分+绩效对标",
+            "内控评价→COSO五要素+缺陷分级",
+            "工程量数据→工程量偏差检测",
+            "全过程项目→EVM挣值分析",
+            "审计方案需求→审计方案自动生成",
         ],
         risk_scenarios=[
             "数据完整性不足：关键字段缺失或格式不一致",
