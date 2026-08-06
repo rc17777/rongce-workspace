@@ -10,6 +10,37 @@
 
 ---
 
+## 📂 按业务场景目录（场景维度入口，v1.0）
+
+算法库除 Agent 维度外，另提供**业务场景维度**的组织与查询：
+
+| 文件 | 用途 |
+|:--|:--|
+| `scene_taxonomy.json` | 标准业务场景体系（14 个一级场景 + 52 个二级细分 + 关键词规则） |
+| `algorithms_by_scene.json` | 场景 → 算法映射（每算法含主场景 + 附加场景） |
+| `ALGORITHMS_BY_SCENE.md` | 按业务场景目录文档（人读，含归属标注） |
+| `build_scene_catalog.py` | 场景目录构建脚本（从 registry 重建） |
+
+**14 个一级场景**：招投标与政府采购（21）｜ 农业农村审计（14）｜ 民生与社保医保（27）｜ 金融审计（12）｜ 工程与投资审计（22）｜ 资源环境审计（12）｜ 国企审计（25）｜ 财政与政府债务（20）｜ 预算执行与财政管理（24）｜ 绩效评价（13）｜ 经济责任审计（19）｜ 监督检查与经费舞弊（17）｜ 税务审计（6）｜ 全场景通用（5）
+
+**查询示例**（场景目录优先，taxonomy 关键词 + 文本回退）：
+
+```python
+from algorithm_loader import list_scenes, list_algorithms_by_scene, get_scene_catalog_summary
+
+list_scenes()                     # 全部场景 + 算法数
+list_algorithms_by_scene("社保审计")  # 自动命中"民生与社保医保"（27个）
+list_algorithms_by_scene("医院采购")  # 自动命中"招投标与政府采购"（21个）
+list_algorithms_by_scene("小金库")    # 自动命中"监督检查与经费舞弊"（17个）
+get_scene_catalog_summary()       # 135 算法 / 14 场景
+```
+
+重建：`python -X utf8 build_scene_catalog.py`（读取 registry，重新生成三个文件）
+
+---
+
+---
+
 ## 1. 集成架构图
 
 ```

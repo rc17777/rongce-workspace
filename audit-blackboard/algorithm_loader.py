@@ -22,8 +22,11 @@ import json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REGISTRY_PATH = os.path.join(BASE_DIR, "algorithm_registry.json")
+SCENE_CATALOG_PATH = os.path.join(BASE_DIR, "algorithms_by_scene.json")
+TAXONOMY_PATH = os.path.join(BASE_DIR, "scene_taxonomy.json")
 
 _registry = None
+_scene_catalog = None
 
 
 def load_registry(path: str = REGISTRY_PATH) -> dict:
@@ -40,9 +43,37 @@ def load_registry(path: str = REGISTRY_PATH) -> dict:
 
 def reload_registry(path: str = REGISTRY_PATH) -> dict:
     """强制重新加载（注册表文件更新后调用）"""
-    global _registry
+    global _registry, _scene_catalog
     _registry = None
+    _scene_catalog = None
     return load_registry(path)
+
+
+def load_scene_catalog(path: str = SCENE_CATALOG_PATH) -> dict:
+    """加载按业务场景组织的算法目录（algorithms_by_scene.json，带缓存）"""
+    global _scene_catalog
+    if _scene_catalog is not None:
+        return _scene_catalog
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"场景目录不存在: {path}（请运行 build_scene_catalog.py 生成）")
+    with open(path, "r", encoding="utf-8") as f:
+        _scene_catalog = json.load(f)
+    return _scene_catalog
+
+
+def _scene_keyword_match(query: str) -> str | None:
+    """用 scene_taxonomy 的场景规则关键词做二次匹配：
+    输入"社保审计"→ 命中"民生与社保医保"场景。"""
+    try:
+        with open(TAXONOMY_PATH, "r", encoding="utf-8") as f:
+            tax = json.load(f)
+    except Exception:
+        return None
+    for scene, kws in tax.get("scene_rules", []):
+        for kw in kws:
+            if kw and kw in query:
+                return scene
+    return None
 
 
 # ── v5.0 新增 API ──────────────────────────────────────────────────────────
@@ -134,6 +165,90 @@ def list_by_biz_line(biz_line: str) -> list:
     return sorted(out, key=lambda x: (x["priority"] or "P2", x["sn"]))
 
 
+# ── v5.0 场景目录 API（基于 scene_taxonomy + algorithms_by_scene） ─────────────
+
+def list_scenes() -> list:
+    """
+    列出算法库全部一级业务场景及算法数。
+    
+    Returns:
+        [{scene, total, flagship, skeleton}, ...]（total 含主+附加归属）
+    """
+    cat = load_scene_catalog()
+    out = []
+    for scene, items in cat.get("scenes", {}).items():
+        if not items:
+            continue
+        flag = sum(1 for i in items if i["type"] == "旗舰")
+        skel = sum(1 for i in items if i["type"] == "骨架")
+        out.append({"scene": scene, "total": len(items), "flagship": flag, "skeleton": skel})
+    return out
+
+
+def list_algorithms_by_scene(scene: str, fuzzy: bool = True) -> list:
+    """
+    按业务场景列出算法。
+    
+    优先匹配标准场景目录（algorithms_by_scene.json 的 14 个一级场景），
+    未命中时（fuzzy=True）回退到注册表字段的文本包含匹配。
+    
+    Returns:
+        [{sn, name, type, priority, complexity, risk_mechanism, agents, primary_scene, extra_scenes}]
+    """
+    cat = load_scene_catalog()
+    scenes = cat.get("scenes", {})
+    # 精确场景名
+    if scene in scenes and scenes[scene]:
+        return scenes[scene]
+    # 模糊：场景名包含关系
+    for sname, items in scenes.items():
+        if scene in sname or sname in scene:
+            if items:
+                return items
+    # taxonomy 关键词匹配（如"社保审计"→"民生与社保医保"）
+    kw_scene = _scene_keyword_match(scene)
+    if kw_scene and scenes.get(kw_scene):
+        return scenes[kw_scene]
+    if not fuzzy:
+        return []
+    # 回退：注册表文本包含匹配
+    reg = load_registry()
+    out = []
+    for sn, algo in reg.get("algorithms", {}).items():
+        fields = algo.get("scene", []) + [algo.get("biz_line", ""), algo.get("biz_scene", "")]
+        if any(scene in f for f in fields):
+            out.append({
+                "sn": sn,
+                "name": algo.get("name"),
+                "type": algo.get("type"),
+                "priority": algo.get("priority"),
+                "complexity": algo.get("complexity"),
+                "risk_mechanism": algo.get("risk_mechanism"),
+                "agents": algo.get("assigned_agents"),
+                "primary_scene": None,
+                "extra_scenes": [],
+            })
+    return out
+
+
+def get_scene_catalog_summary() -> dict:
+    """场景目录总览：算法数、场景数、主场景分布"""
+    cat = load_scene_catalog()
+    scenes = cat.get("scenes", {})
+    primary = {}
+    for sname, items in scenes.items():
+        for it in items:
+            primary[it["sn"]] = it.get("primary_scene", sname)
+    from collections import Counter
+    dist = Counter(primary.values())
+    return {
+        "version": cat.get("version"),
+        "total_algorithms": cat.get("total_algorithms"),
+        "scene_count": len([s for s in scenes if scenes[s]]),
+        "primary_distribution": dict(dist),
+    }
+
+
 def get_algorithm_count() -> dict:
     """
     v5.0 新增：返回注册表统计信息。
@@ -200,6 +315,12 @@ if __name__ == "__main__":
     print("  ...")
     print(f"\n== '绩效评价' 场景 Agent ==")
     print(get_agent_for_scene("绩效评价"))
+    print(f"\n== 场景目录（前6个场景） ==")
+    for s in list_scenes()[:6]:
+        print(f"  {s['scene']}: {s['total']}个(旗舰{s['flagship']})")
+    print(f"\n== '社保审计' 场景算法（前5） ==")
+    for x in list_algorithms_by_scene("社保审计")[:5]:
+        print(f"  {x['sn']} {x['name'][:35]} [{x['type']}]")
     print(f"\n== '预算执行' 业务线算法 ==")
     for x in list_by_biz_line("预算执行")[:3]:
         print(f"  {x['sn']} {x['name'][:40]} [{x['priority']}]")

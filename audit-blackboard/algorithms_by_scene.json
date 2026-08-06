@@ -1,0 +1,3995 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-06",
+  "total_algorithms": 135,
+  "scenes": {
+    "招投标与政府采购": [
+      {
+        "sn": "BID-DARKMARK-001",
+        "name": "暗标技术标'隐形记号'检测（文档元数据/字体颜色/编号指纹/页眉页脚/EXIF）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_classifier",
+          "bid_hunter",
+          "report_writer"
+        ],
+        "scene": "电子招投标暗标评审；AI清标系统合规检查；投标文件编制质量问题导致的废标审查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BID-PATTERN-005",
+        "name": "Apriori关联规则围标模式识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "政府采购 / 招投标审计 / 工程招标",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "BID-ROTATE-001",
+        "name": "互惠型陪标轮庄识别（跨项目轮流中标闭环+陪标费资金轨迹）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "bid_hunter",
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "政府采购竞争性谈判/竞争性磋商、二次评标项目；供应商陪标行为专项审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-018",
+        "name": "政府采购电子卖场价格偏离检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "政府采购电子卖场专项审计；公共资源交易领域审计调查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-019",
+        "name": "投标单位跨年度虚假资料检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "bid_hunter",
+          "budget_estimator"
+        ],
+        "scene": "部门预算执行审计中跨年度招标投标监管；同类项目（运维/服务）多次招标的投标资料真实性核查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "HOSP-PARAM-001",
+        "name": "公立医院采购围标串标识别（排他性参数+保证金资金同源+隐性收益结算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "公立医院高值医疗设备、药品耗材、后勤服务、基建工程采购审计；政府采购领域专项整治",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保",
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "INVEST-001",
+        "name": "电子投标文件特征码围标串标检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "工程招投标专项审计；电子招投标系统围标串标、陪标问题识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "INVEST2-001",
+        "name": "电子标书特征码串标检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "工程招投标专项审计，电子投标文件围标串标识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "MED-BIDRIG-001",
+        "name": "医疗采购围标串标检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "教科文卫审计 / 政府采购审计 / 公立医院审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "MED2-001",
+        "name": "养老服务工单配置超限检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "居家养老服务采购审计；政府购买养老服务专项资金审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "PERF2-002",
+        "name": "咨询服务费-供应商资质分拆支付检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "fiscal_reviewer",
+          "performance_evaluator"
+        ],
+        "scene": "政府采购咨询服务项目审计，识别虚假服务与资金分拆转移",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      },
+      {
+        "sn": "PROC-CONCEN-001",
+        "name": "供应商采购集中度异常识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "政府采购 / 国企审计 / 工程分包审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "PROC-FAKE-001",
+        "name": "供应商虚假材料三查算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "contract_hound",
+          "bid_hunter",
+          "law_inspector"
+        ],
+        "scene": "招投标审计 / 政府采购",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      },
+      {
+        "sn": "PROC-RELATED-001",
+        "name": "关联方13维检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "政府采购 / 招投标 / 国企审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "PROC2-001",
+        "name": "跨年度投标资料重复套用识别（文本相似度+错别字位置比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "contract_hound",
+          "bid_hunter"
+        ],
+        "scene": "机关事业单位同类型项目（信息化运维、货物服务外包等）跨年度招标投标审计；部门预算执行审计中的投标资料真实性核查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "PROC2-002",
+        "name": "产权交易“受控拍卖”识别（矿业权/资产二次拍卖参数突变比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "review_sentinel"
+        ],
+        "scene": "公共资源交易领域专项审计中矿产、不动产等产权交易真实性公允性核查；矿业权、土地、国有资产挂牌拍卖审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "资源环境审计"
+        ]
+      },
+      {
+        "sn": "PROC2-003",
+        "name": "政府采购电子卖场商品价格偏离度跨平台比价",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "公共资源交易领域专项审计；政府采购电子卖场（网上直购、竞价、询价）商品售价真实性、公允性审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PROC2-004",
+        "name": "无介质围标串标团伙识别（共同投标频次+杰卡德相似系数+图数据库）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "工程招标投标领域专项审计；无硬件介质（MAC地址不同）但行为高度协同的隐蔽围标串标识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-008",
+        "name": "医疗器械供应商壳特征画像检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "公立医院医疗器械采购审计，识别陪标与利益输送供应商",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "SUPV-WARNING-001",
+        "name": "审计预警风险画像算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "全场景（国企审计 / 招投标 / 财政监督 / 经责审计）",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "招投标与政府采购",
+          "国企审计",
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "VENDOR-VERIFY-001",
+        "name": "供应商虚假检测报告/认证证书/合同业绩三查核验（官方平台比对+三查机制）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "bid_hunter",
+          "contract_hound",
+          "law_inspector"
+        ],
+        "scene": "招投标评审与中标后核查；政府采购专项整治（虚假材料占行政处罚近六成）；评标阶段专家核验",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": []
+      }
+    ],
+    "农业农村审计": [
+      {
+        "sn": "AGR-INSFAKE-001",
+        "name": "农业保险虚增面积骗补检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "农业农村审计 / 专项资金审计 / 财政补贴审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "AGRI2-001",
+        "name": "涉农合资公司国资流失检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "乡村振兴产业项目审计；国有涉农平台与民营合资公司运营审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "AGRI3-001",
+        "name": "消费补贴资金回流闭环检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "家电以旧换新、汽车消费券等政府消费补贴审计，海量交易数据中识别骗补",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "AGRI3-002",
+        "name": "补贴农机短期过户-新设主体检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "农机购置补贴、秸秆综合利用等以奖代补项目审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "AGRI3-003",
+        "name": "关联企业重复获补检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "乡村振兴专项资金、产业补贴连续多年发放的审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "AGRI3-004",
+        "name": "物资运输单据时空合理性校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "高标准农田有机肥、砂石建材等大宗物资购销项目审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "AGRI3-005",
+        "name": "无实物交付资产入账检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "adjustment_scribe",
+          "data_scout"
+        ],
+        "scene": "帮扶项目资产、乡村振兴公司固定资产审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "AGRI3-006",
+        "name": "农业保险全出险-无养殖事实检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "奶牛、育肥猪等政策性农业保险承保理赔审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-013",
+        "name": "以工代赈项目虚假用工检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "以工代赈/乡村振兴劳务报酬审计；农业农村审计中务工真实性核查",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-017",
+        "name": "村级财务'白条'入账检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "workpaper_crafter",
+          "budget_estimator"
+        ],
+        "scene": "村级财务审计；基层经济责任审计；群众身边不正之风和腐败问题集中整治",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "FIN-INSFAKE-001",
+        "name": "政策性农业保险虚假投保理赔检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融审计 / 农业农村审计 / 保险基金审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "FIN3-001",
+        "name": "政策性保险投保-理赔交叉校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "政策性农业保险(育肥猪、能繁母猪等)保费补贴审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "GRAIN-001",
+        "name": "储备粮轮换运输真实性核验（过磅单+运输轨迹+费用条款三角验证）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor"
+        ],
+        "scene": "地方储备粮管理情况专项审计；粮库轮换、粮食购销运输环节真实性核查",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "PERF2-004",
+        "name": "储备粮损耗率超限检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "performance_evaluator"
+        ],
+        "scene": "粮食储备企业绩效审计，储备粮轮换与损耗管理",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      }
+    ],
+    "民生与社保医保": [
+      {
+        "sn": "AGRI3-001",
+        "name": "消费补贴资金回流闭环检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "家电以旧换新、汽车消费券等政府消费补贴审计，海量交易数据中识别骗补",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "ASSET-REVIVE-001",
+        "name": "闲置校舍等沉没资产盘活效益评估（转型投入-收益-替代-民生四维测算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "行政事业性国有资产盘活审计；闲置校舍转型养老/经济发展载体项目；'十五五'财政资源统筹背景",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "BIGDATA-SERVICE-001",
+        "name": "服务工单时空验证算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "大数据审计 / 民生审计 / 养老服务审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-008",
+        "name": "补贴对象重复与身份异常申报检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "消费补贴审计（汽车以旧换新/家电补贴）；民生补贴资金真实性审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-009",
+        "name": "民生补贴顶格申报异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "民生补贴审计（适老化改造/标准化定额补贴）；养老服务专项资金审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-010",
+        "name": "惠企减租补贴真实性核验算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "contract_hound",
+          "budget_estimator"
+        ],
+        "scene": "助企纾困政策跟踪审计；减租/降费补贴兑现审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "DATA3-001",
+        "name": "上门服务工单时空冲突检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "养老服务、居家护理等上门服务结算工单审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "EMPLOY-SUB-001",
+        "name": "就业补助资金九项疑点SQL筛查（重复领取/死亡冒领/多头申报/虚假劳动合同）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "就业补助专项资金审计；职业培训/公益性岗位/社保补贴/就业见习补贴等发放数据核查",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "FUND-FRAUD-001",
+        "name": "FP-Growth关联规则骗保/骗补模式识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "performance_evaluator"
+        ],
+        "scene": "专项资金审计 / 社保审计 / 培训补贴审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "FUND2-001",
+        "name": "消费品以旧换新补贴“人货单钱”四维防线",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "bid_hunter"
+        ],
+        "scene": "家电'焕新'补贴、汽车以旧换新/报废更新补贴等促消费政策资金审计；'两新'政策落实情况专项审计调查",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "HOSP-PARAM-001",
+        "name": "公立医院采购围标串标识别（排他性参数+保证金资金同源+隐性收益结算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "公立医院高值医疗设备、药品耗材、后勤服务、基建工程采购审计；政府采购领域专项整治",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保",
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "MED-BIDRIG-001",
+        "name": "医疗采购围标串标检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "教科文卫审计 / 政府采购审计 / 公立医院审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "MED2-001",
+        "name": "养老服务工单配置超限检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "居家养老服务采购审计；政府购买养老服务专项资金审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "POLICY-001",
+        "name": "转移支付资金闭环监管指标算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "中央对地方转移支付资金监管；就业/社保等民生类转移支付项目审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-INS-001",
+        "name": "社保基金多源数据比对检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 养老保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-MAT-001",
+        "name": "医保生育津贴多维骗保检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 医保基金审计 / 社保审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-WELFARE-001",
+        "name": "惠民补贴应享未享与虚报冒领检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 惠民政策落实审计 / 殡葬与公用事业审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "SOCIAL-WORK-001",
+        "name": "工伤保险基金安全多信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 工伤保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-001",
+        "name": "医用耗材领用-结算量偏差检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "公立医院医保基金审计，一次性耗材计费合规性",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-002",
+        "name": "社保高申领率-即停保壳公司检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "生育津贴、失业补助等社保待遇申领审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SOCIAL2-003",
+        "name": "燃气补贴多部门数据一致性校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "气代煤、气价倒挂补贴等民生补贴发放审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-004",
+        "name": "DRG病组套码高付费检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "按疾病诊断相关分组(DRG)付费改革后的医保基金审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-006",
+        "name": "消费券代发核销-真实交易交叉校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "政府消费券发放核销环节审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SOCIAL2-007",
+        "name": "工伤辅助器具高频更换检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "工伤保险基金辅助器具配置审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-008",
+        "name": "医疗器械供应商壳特征画像检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "公立医院医疗器械采购审计，识别陪标与利益输送供应商",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保"
+        ]
+      },
+      {
+        "sn": "SOCIAL3-001",
+        "name": "居家养老上门服务工单真实性（时空重叠+穿越+工单限额+人员资质四规则）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "养老服务领域专项审计调查；政府购买居家养老上门服务（助浴、助洁、康复按摩）结算真实性核查",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": []
+      },
+      {
+        "sn": "TRANSFER-TRACE-001",
+        "name": "转移支付资金全链路追踪算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "财政审计 / 转移支付资金监管 / 就业社保教育资金审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      }
+    ],
+    "金融审计": [
+      {
+        "sn": "AGR-INSFAKE-001",
+        "name": "农业保险虚增面积骗补检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "农业农村审计 / 专项资金审计 / 财政补贴审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "AGRI3-006",
+        "name": "农业保险全出险-无养殖事实检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "奶牛、育肥猪等政策性农业保险承保理赔审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "DATA3-002",
+        "name": "员工-客户资金往来关联检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "穿透性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融机构内部审计，信贷员工与客户利益输送排查",
+        "primary_scene": "金融审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "FIN-INSFAKE-001",
+        "name": "政策性农业保险虚假投保理赔检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融审计 / 农业农村审计 / 保险基金审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "FIN-SHELL-001",
+        "name": "空壳公司信贷欺诈检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融审计 / 国企审计 / 地方商业银行审计",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "FIN2-001",
+        "name": "银行费用支出资金回流检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "银行/金融机构费用真实性审计（宣传费/广告费/印刷费）；金融领域虚开发票套取资金核查",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "FIN3-001",
+        "name": "政策性保险投保-理赔交叉校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "政策性农业保险(育肥猪、能繁母猪等)保费补贴审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计"
+        ]
+      },
+      {
+        "sn": "FIN3-002",
+        "name": "资管产品估值平滑-刚性兑付检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融机构资产管理产品净值化管理专项审计",
+        "primary_scene": "金融审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "FIN3-003",
+        "name": "农商行快贷虚假资料多层交叉验证（客户经理行为+业务集中度+三址合一）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "农商行/村镇银行快贷业务专项审计；信贷业务虚假资料骗贷、中介包装客户、客户经理道德风险核查",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "SOCIAL-INS-001",
+        "name": "社保基金多源数据比对检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 养老保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-WORK-001",
+        "name": "工伤保险基金安全多信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 工伤保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-007",
+        "name": "工伤辅助器具高频更换检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "工伤保险基金辅助器具配置审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      }
+    ],
+    "工程与投资审计": [
+      {
+        "sn": "AGRI3-004",
+        "name": "物资运输单据时空合理性校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "高标准农田有机肥、砂石建材等大宗物资购销项目审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "BID-PATTERN-005",
+        "name": "Apriori关联规则围标模式识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "政府采购 / 招投标审计 / 工程招标",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-002",
+        "name": "政府投资基金资金循环回流检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "bid_hunter",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金'募投管退'全流程审计；基金专项审计调查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "BUDGET-012",
+        "name": "政府投资基金'画皮'项目识别算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金运营审计；经责审计中基金投资项目管理核查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "财政与政府债务",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "CHK-RECON-001",
+        "name": "多源数据勾稽核对通用算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "国有企业审计 / 财政财务收支 / 预算执行 / 工程审计",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计",
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "CONCESS-DEBT-001",
+        "name": "特许经营项目化债风险穿透审计（明股实债/支出责任固化/使用者付费真实性）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L4",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "contract_hound",
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "化债背景下的PPP/特许经营项目审计；地方政府隐性债务风险防控；交通、能源、水利等基础设施项目",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "ENG-FINAL-001",
+        "name": "工程竣工财务决算AI复核算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "settlement_auditor",
+          "review_sentinel",
+          "fiscal_reviewer"
+        ],
+        "scene": "工程竣工决算审计 / 财政评审",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENG-RATIO-001",
+        "name": "工程支出合理性比例检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "效益性",
+        "agents": [
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "工程审计 / 绩效审计 / 政府投资项目审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "ENG-SAMPLE-001",
+        "name": "LightGBM工程结算自动抽样复审算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "效益性",
+        "agents": [
+          "settlement_auditor"
+        ],
+        "scene": "工程竣工决算审计 / 财政评审 / 通信工程审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENG-SCORE-001",
+        "name": "LightGBM一审审计质量自动评分算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "管理性",
+        "agents": [
+          "settlement_auditor",
+          "fiscal_reviewer"
+        ],
+        "scene": "工程竣工决算审计 / 审计质量控制",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENG2-001",
+        "name": "土方挖运工程量GIS真实性核验（变化检测+挖填平衡+弃土量三维测算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "settlement_auditor",
+          "data_scout"
+        ],
+        "scene": "防洪排涝、筑堤、河道疏浚等线性工程跟踪审计；土方挖运、取土场、弃土场工程量真实性核查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "EXPSTD-CHECK-001",
+        "name": "经费类支出标准符合性评审（29项支出定额比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "部门预算评审、零基预算改革背景下的支出标准执行情况审计；经费类项目（会议、培训、赛事、普查、资产购置等非信息化非工程类支出）",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "HOSP-PARAM-001",
+        "name": "公立医院采购围标串标识别（排他性参数+保证金资金同源+隐性收益结算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "公立医院高值医疗设备、药品耗材、后勤服务、基建工程采购审计；政府采购领域专项整治",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "民生与社保医保",
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "INV-APPROVAL-001",
+        "name": "政府投资项目规避审批与概算约束识别（国企代报规避审批+超概算追责）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "contract_hound",
+          "report_writer"
+        ],
+        "scene": "投资审批制度改革（2026年深化意见）背景下的政府投资审计；国有企业投资项目合规性审查；概算刚性约束检查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "INVEST-001",
+        "name": "电子投标文件特征码围标串标检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "工程招投标专项审计；电子招投标系统围标串标、陪标问题识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "INVEST2-001",
+        "name": "电子标书特征码串标检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "工程招投标专项审计，电子投标文件围标串标识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "INVEST2-002",
+        "name": "征拆补偿图斑-影像面积比对",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "征地拆迁补偿资金审计，利用地理信息技术核验补偿标的真实性",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "资源环境审计"
+        ]
+      },
+      {
+        "sn": "INVEST2-003",
+        "name": "工程量签证单虚增检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "settlement_auditor"
+        ],
+        "scene": "市政道路、桥梁等基建项目竣工决算审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ITCOST-001",
+        "name": "信息化项目软件造价审计（功能点分析+三类费用界定）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "settlement_auditor",
+          "contract_hound",
+          "data_scout"
+        ],
+        "scene": "信息化项目造价审计；定制开发软件费、系统集成费、数据建设费计取合理性核查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "PROC-CONCEN-001",
+        "name": "供应商采购集中度异常识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "政府采购 / 国企审计 / 工程分包审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "PROC2-004",
+        "name": "无介质围标串标团伙识别（共同投标频次+杰卡德相似系数+图数据库）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "工程招标投标领域专项审计；无硬件介质（MAC地址不同）但行为高度协同的隐蔽围标串标识别",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计"
+        ]
+      },
+      {
+        "sn": "WAT-CONSTR-001",
+        "name": "水利项目建设资金归集挪用与专款专用核查（资金外借/归集/转移轨迹）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "超长期特别国债支持的水利项目资金监管审计；施工企业集团化资金集中管控下的项目资金安全审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      }
+    ],
+    "资源环境审计": [
+      {
+        "sn": "BUDGET-007",
+        "name": "代征非税收入上缴及时足额性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "非税收入代收代缴审计（污水处理费/垃圾处理费/水资源费）；财政非税收入征管审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "CHK2-001",
+        "name": "污水处理费征缴稽核（差别费率+用水性质+自备水源+代征上缴四模型）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "城市污水处理费收缴管理审计；非税收入征收管理审计（自来水、原水、自备水源、私人水厂多源数据场景）",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "ENV-CHECKLIST-001",
+        "name": "自然资源经责审计清单对照算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "law_inspector",
+          "performance_evaluator"
+        ],
+        "scene": "经责审计 / 自然资源资产离任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ENV-RS-001",
+        "name": "遥感变化图斑穿透检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "资源环境审计 / 经济责任审计 / 自然资源资产离任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ENV3-001",
+        "name": "超许可深度采矿检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "矿产资源审计，矿山企业超许可范围开采核查",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENV3-002",
+        "name": "地表异常变化时序检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "耕地保护、林地、砂石资源及私挖乱采审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENV3-003",
+        "name": "矿业权转让异常溢价检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "contract_hound",
+          "law_inspector"
+        ],
+        "scene": "国有矿业权转让、矿业公司股权变更审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENV4-001",
+        "name": "工业用地“退二进三”违规识别（地址模糊匹配+缓冲区空间相交）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer",
+          "law_inspector"
+        ],
+        "scene": "工业用地高质量利用情况专项审计调查；城市土地管理、土地收益金收缴审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "ENV4-002",
+        "name": "公益林侵占NDVI遥感识别（植被指数+栅格矢量化+图斑相交）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer",
+          "law_inspector"
+        ],
+        "scene": "领导干部自然资源资产任中/离任审计；公益林保护、永久基本农田'非农化''非粮化'遥感筛查",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "INVEST2-002",
+        "name": "征拆补偿图斑-影像面积比对",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "征地拆迁补偿资金审计，利用地理信息技术核验补偿标的真实性",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "资源环境审计"
+        ]
+      },
+      {
+        "sn": "NATRES-AUDIT-001",
+        "name": "自然资源资产离任审计五维问题清单（政策执行/法规遵守/重大决策/目标完成/监督责任）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "report_writer"
+        ],
+        "scene": "市县党政领导干部自然资源资产离任（任中）审计；生态环境保护责任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "PROC2-002",
+        "name": "产权交易“受控拍卖”识别（矿业权/资产二次拍卖参数突变比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "bid_hunter",
+          "review_sentinel"
+        ],
+        "scene": "公共资源交易领域专项审计中矿产、不动产等产权交易真实性公允性核查；矿业权、土地、国有资产挂牌拍卖审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "资源环境审计"
+        ]
+      }
+    ],
+    "国企审计": [
+      {
+        "sn": "AGRI2-001",
+        "name": "涉农合资公司国资流失检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "乡村振兴产业项目审计；国有涉农平台与民营合资公司运营审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "ASSET-MATCH-001",
+        "name": "账实核对资产状态异常检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "资产清查 / 国企审计 / 行政事业单位审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-002",
+        "name": "政府投资基金资金循环回流检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "bid_hunter",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金'募投管退'全流程审计；基金专项审计调查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "BUDGET-006",
+        "name": "国有资产出租收入完整性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "行政事业单位/国企国有资产出租出借收入审计；非税收入'收支两条线'执行情况审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "CHK-LOSS-001",
+        "name": "亏损项目六步穿透检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound",
+          "review_sentinel"
+        ],
+        "scene": "国企审计 / 经责审计 / 成本效益审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "CHK-RD-001",
+        "name": "研发支出三程序穿透算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "review_sentinel"
+        ],
+        "scene": "国企审计 / 成本效益审计 / 科技专项审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "CHK-RECON-001",
+        "name": "多源数据勾稽核对通用算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "国有企业审计 / 财政财务收支 / 预算执行 / 工程审计",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计",
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "FIN-SHELL-001",
+        "name": "空壳公司信贷欺诈检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融审计 / 国企审计 / 地方商业银行审计",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "FIN3-003",
+        "name": "农商行快贷虚假资料多层交叉验证（客户经理行为+业务集中度+三址合一）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "农商行/村镇银行快贷业务专项审计；信贷业务虚假资料骗贷、中介包装客户、客户经理道德风险核查",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "HR-RF-001",
+        "name": "随机森林虚列培训费检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "国企审计 / 人力资源审计 / 经费审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "HR-RF-002",
+        "name": "随机森林在职不在岗人员检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "国企审计 / 人力资源审计 / 编制核查",
+        "primary_scene": "国企审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "INV-APPROVAL-001",
+        "name": "政府投资项目规避审批与概算约束识别（国企代报规避审批+超概算追责）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "contract_hound",
+          "report_writer"
+        ],
+        "scene": "投资审批制度改革（2026年深化意见）背景下的政府投资审计；国有企业投资项目合规性审查；概算刚性约束检查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "LOSS-PENETRATE-001",
+        "name": "亏损项目'六步穿透法'（决策起点-资金流向-程序合规-真假亏损判别）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L4",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "contract_hound",
+          "review_sentinel"
+        ],
+        "scene": "国企投资亏损项目审计；经责审计中的重大投资损失责任认定；海外投资、并购、建厂等项目",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "PERF2-001",
+        "name": "异常贸易-交易对手风险检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "performance_evaluator"
+        ],
+        "scene": "国有企业绩效审计，识别异常激增业务背后的资金损失风险",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PROC-CONCEN-001",
+        "name": "供应商采购集中度异常识别算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "政府采购 / 国企审计 / 工程分包审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "PROC-RELATED-001",
+        "name": "关联方13维检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "bid_hunter"
+        ],
+        "scene": "政府采购 / 招投标 / 国企审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "国企审计"
+        ]
+      },
+      {
+        "sn": "SOE-MIDMAN-001",
+        "name": "中间人异常交易检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国企审计 / 经济责任审计 / 供应链审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "SOE3-001",
+        "name": "集团内业务绕道中间人-无期限合同检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "contract_hound"
+        ],
+        "scene": "国有企业贸易/销售业务审计，识别通过中间人转移利润",
+        "primary_scene": "国企审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SOE3-002",
+        "name": "高息融资突击还款检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国有企业债务专项审计调查，非标融资利益输送识别",
+        "primary_scene": "国企审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SOE3-003",
+        "name": "虚假研发团队工资套取检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国有企业数字化项目、科研项目专项审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SUPV-ANOMALY-001",
+        "name": "Benford定律财务数据异常检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "监督检查 / 财务收支审计 / 国企审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-POCKET-001",
+        "name": "小金库四信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国企审计 / 收支审计 / 经责审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-TRAVEL-001",
+        "name": "差旅费四信号真实性检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "收支审计 / 国企审计 / 经费审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-WARNING-001",
+        "name": "审计预警风险画像算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "全场景（国企审计 / 招投标 / 财政监督 / 经责审计）",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "招投标与政府采购",
+          "国企审计",
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "WAT-CONSTR-001",
+        "name": "水利项目建设资金归集挪用与专款专用核查（资金外借/归集/转移轨迹）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "超长期特别国债支持的水利项目资金监管审计；施工企业集团化资金集中管控下的项目资金安全审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      }
+    ],
+    "财政与政府债务": [
+      {
+        "sn": "BOND-PENETRATE-001",
+        "name": "专项债资金穿透式监测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "财政审计 / 政府债务审计 / 专项债券审计",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-001",
+        "name": "专项债券资金支出进度真实性核验算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "专项债券/政府债券资金使用真实性审计；财政收支审计中债券资金延伸核查",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-002",
+        "name": "政府投资基金资金循环回流检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "bid_hunter",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金'募投管退'全流程审计；基金专项审计调查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "BUDGET-011",
+        "name": "招商引资补贴项目存活异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "招商引资奖补资金审计（厂房装修补贴/固定资产投资补贴）；开发区财政奖补兑现审计",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-012",
+        "name": "政府投资基金'画皮'项目识别算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金运营审计；经责审计中基金投资项目管理核查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "财政与政府债务",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-014",
+        "name": "超长期特别国债资金投向合规检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator"
+        ],
+        "scene": "超长期特别国债审计；'两重''两新'项目资金专项审计",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-015",
+        "name": "专项债收益自平衡真实性评估算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "效率性",
+        "agents": [
+          "budget_estimator"
+        ],
+        "scene": "专项债项目收益与偿债能力审计；政府债务风险监测",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": []
+      },
+      {
+        "sn": "CONCESS-DEBT-001",
+        "name": "特许经营项目化债风险穿透审计（明股实债/支出责任固化/使用者付费真实性）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L4",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "contract_hound",
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "化债背景下的PPP/特许经营项目审计；地方政府隐性债务风险防控；交通、能源、水利等基础设施项目",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "CONCESS-FEE-001",
+        "name": "特许经营公共服务项目费用测算四维框架（成本-收入-风险-绩效+全生命周期）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "效率性",
+        "agents": [
+          "performance_evaluator",
+          "budget_estimator",
+          "data_scout"
+        ],
+        "scene": "特许经营/政府购买服务项目收费标准核定审计；餐厨垃圾处理、污水处理、垃圾焚烧等BOO/BOT项目政府付费审查",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "COUNTY-RISK-001",
+        "name": "县域财政风险预警指标体系（债务率/库款保障/支出刚性/财源结构四维）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "县域财政运行风险监测；地方政府债务风险预警；财政承受能力评估与化债进度跟踪",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "FIN-INSFAKE-001",
+        "name": "政策性农业保险虚假投保理赔检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "金融审计 / 农业农村审计 / 保险基金审计",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "POLICY-001",
+        "name": "转移支付资金闭环监管指标算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "中央对地方转移支付资金监管；就业/社保等民生类转移支付项目审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-INS-001",
+        "name": "社保基金多源数据比对检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 养老保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-MAT-001",
+        "name": "医保生育津贴多维骗保检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 医保基金审计 / 社保审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL-WORK-001",
+        "name": "工伤保险基金安全多信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 社保基金审计 / 工伤保险审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-001",
+        "name": "医用耗材领用-结算量偏差检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "公立医院医保基金审计，一次性耗材计费合规性",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-004",
+        "name": "DRG病组套码高付费检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "按疾病诊断相关分组(DRG)付费改革后的医保基金审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-007",
+        "name": "工伤辅助器具高频更换检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "工伤保险基金辅助器具配置审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "金融审计",
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "TRANSFER-TRACE-001",
+        "name": "转移支付资金全链路追踪算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "财政审计 / 转移支付资金监管 / 就业社保教育资金审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "财政与政府债务"
+        ]
+      },
+      {
+        "sn": "WAT-CONSTR-001",
+        "name": "水利项目建设资金归集挪用与专款专用核查（资金外借/归集/转移轨迹）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "超长期特别国债支持的水利项目资金监管审计；施工企业集团化资金集中管控下的项目资金安全审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "国企审计",
+          "财政与政府债务"
+        ]
+      }
+    ],
+    "预算执行与财政管理": [
+      {
+        "sn": "BUD-CHECKLIST-001",
+        "name": "预算执行60条违规清单对照算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "预算执行审计 / 财政审计 / 部门预算审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "BUDGET-003",
+        "name": "公用经费预算申报偏差检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "budget_estimator"
+        ],
+        "scene": "部门预算编制科学性/基本支出审计；预算执行审计中对水电气暖等基本支出的精细化核查",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-004",
+        "name": "往来科目隐匿资金检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "workpaper_crafter",
+          "budget_estimator"
+        ],
+        "scene": "行政事业单位往来款审计；乡镇/基层单位财政财务收支审计；财政存量资金清理",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": []
+      },
+      {
+        "sn": "BUDGET-005",
+        "name": "公务车辆运行费用异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "三公经费审计；公务用车运行维护费审计；基层单位'四风'隐形变异问题核查",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-006",
+        "name": "国有资产出租收入完整性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "行政事业单位/国企国有资产出租出借收入审计；非税收入'收支两条线'执行情况审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-007",
+        "name": "代征非税收入上缴及时足额性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "非税收入代收代缴审计（污水处理费/垃圾处理费/水资源费）；财政非税收入征管审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-016",
+        "name": "财政收支异常波动检测算法（局部加权线性回归）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3-ML",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "财政收支预测与风险预警；财政资金使用效率评估；全省/全市财政预算执行审计数据分析",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "BUDGET-019",
+        "name": "投标单位跨年度虚假资料检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "bid_hunter",
+          "budget_estimator"
+        ],
+        "scene": "部门预算执行审计中跨年度招标投标监管；同类项目（运维/服务）多次招标的投标资料真实性核查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "BUDGET-020",
+        "name": "公用经费通信费用支出异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "行政事业单位公用经费审计（通信费/电话费）；'过紧日子'要求落实审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": []
+      },
+      {
+        "sn": "CHK-RECON-001",
+        "name": "多源数据勾稽核对通用算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "国有企业审计 / 财政财务收支 / 预算执行 / 工程审计",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计",
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "CHK2-001",
+        "name": "污水处理费征缴稽核（差别费率+用水性质+自备水源+代征上缴四模型）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "城市污水处理费收缴管理审计；非税收入征收管理审计（自来水、原水、自备水源、私人水厂多源数据场景）",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "CONCESS-FEE-001",
+        "name": "特许经营公共服务项目费用测算四维框架（成本-收入-风险-绩效+全生命周期）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "效率性",
+        "agents": [
+          "performance_evaluator",
+          "budget_estimator",
+          "data_scout"
+        ],
+        "scene": "特许经营/政府购买服务项目收费标准核定审计；餐厨垃圾处理、污水处理、垃圾焚烧等BOO/BOT项目政府付费审查",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "ECONRESP-001",
+        "name": "公务用车平台数据异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "经责审计公务用车管理审计；公车改革后'车轮腐败'问题核查",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ECONRESP2-003",
+        "name": "公车超编-里程异常检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "经责审计中\"三公\"经费公务用车管理审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "EXPSTD-CHECK-001",
+        "name": "经费类支出标准符合性评审（29项支出定额比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "部门预算评审、零基预算改革背景下的支出标准执行情况审计；经费类项目（会议、培训、赛事、普查、资产购置等非信息化非工程类支出）",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "PERF-COST-001",
+        "name": "运转类项目成本预算绩效分析六步法（定类型-拆运行-核成本-评绩效-出标准-促管理）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "performance_evaluator",
+          "budget_estimator",
+          "plan_writer"
+        ],
+        "scene": "零基预算改革下运转类项目（公用经费、后勤保障、运维、办公设备购置等）成本预算绩效分析；支出定额标准制定",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF-DEVIATION-001",
+        "name": "绩效指标偏离度多维检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "performance_evaluator"
+        ],
+        "scene": "绩效评价 / 预算绩效管理 / 财政监督",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "PERF-OUTLIER-001",
+        "name": "K-Means聚类孤立点异常检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "performance_evaluator"
+        ],
+        "scene": "绩效评价 / 预算执行 / 财务收支审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF2-003",
+        "name": "预算项目最小单元重复申报识别",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "budget_estimator",
+          "performance_evaluator"
+        ],
+        "scene": "零基预算改革、预算编制审核与绩效审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PROC2-001",
+        "name": "跨年度投标资料重复套用识别（文本相似度+错别字位置比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "contract_hound",
+          "bid_hunter"
+        ],
+        "scene": "机关事业单位同类型项目（信息化运维、货物服务外包等）跨年度招标投标审计；部门预算执行审计中的投标资料真实性核查",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "REV-PREDICT-001",
+        "name": "线性回归收入与用户合理性预测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "预算执行审计 / 企业经营审计 / 财务收支审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SOCIAL-WELFARE-001",
+        "name": "惠民补贴应享未享与虚报冒领检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "民生审计 / 惠民政策落实审计 / 殡葬与公用事业审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "SOCIAL2-003",
+        "name": "燃气补贴多部门数据一致性校验",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "气代煤、气价倒挂补贴等民生补贴发放审计",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "WATER-SQL-001",
+        "name": "水费征收SQL三查（违约金未收/阶梯水价未执行/少收水量）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor"
+        ],
+        "scene": "供水企业领导干部经责审计；水、电、燃气等按量计费公用事业征收审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      }
+    ],
+    "绩效评价": [
+      {
+        "sn": "ASSET-REVIVE-001",
+        "name": "闲置校舍等沉没资产盘活效益评估（转型投入-收益-替代-民生四维测算）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "行政事业性国有资产盘活审计；闲置校舍转型养老/经济发展载体项目；'十五五'财政资源统筹背景",
+        "primary_scene": "民生与社保医保",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "BUDGET-016",
+        "name": "财政收支异常波动检测算法（局部加权线性回归）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3-ML",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "财政收支预测与风险预警；财政资金使用效率评估；全省/全市财政预算执行审计数据分析",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "CHK-LOSS-001",
+        "name": "亏损项目六步穿透检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound",
+          "review_sentinel"
+        ],
+        "scene": "国企审计 / 经责审计 / 成本效益审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "CHK-RD-001",
+        "name": "研发支出三程序穿透算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "review_sentinel"
+        ],
+        "scene": "国企审计 / 成本效益审计 / 科技专项审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "CONCESS-FEE-001",
+        "name": "特许经营公共服务项目费用测算四维框架（成本-收入-风险-绩效+全生命周期）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "效率性",
+        "agents": [
+          "performance_evaluator",
+          "budget_estimator",
+          "data_scout"
+        ],
+        "scene": "特许经营/政府购买服务项目收费标准核定审计；餐厨垃圾处理、污水处理、垃圾焚烧等BOO/BOT项目政府付费审查",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "ENG-RATIO-001",
+        "name": "工程支出合理性比例检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "效益性",
+        "agents": [
+          "settlement_auditor",
+          "budget_estimator"
+        ],
+        "scene": "工程审计 / 绩效审计 / 政府投资项目审计",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF-COST-001",
+        "name": "运转类项目成本预算绩效分析六步法（定类型-拆运行-核成本-评绩效-出标准-促管理）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "performance_evaluator",
+          "budget_estimator",
+          "plan_writer"
+        ],
+        "scene": "零基预算改革下运转类项目（公用经费、后勤保障、运维、办公设备购置等）成本预算绩效分析；支出定额标准制定",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF-DEVIATION-001",
+        "name": "绩效指标偏离度多维检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "performance_evaluator"
+        ],
+        "scene": "绩效评价 / 预算绩效管理 / 财政监督",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "PERF-OUTLIER-001",
+        "name": "K-Means聚类孤立点异常检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout",
+          "performance_evaluator"
+        ],
+        "scene": "绩效评价 / 预算执行 / 财务收支审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF2-001",
+        "name": "异常贸易-交易对手风险检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "performance_evaluator"
+        ],
+        "scene": "国有企业绩效审计，识别异常激增业务背后的资金损失风险",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF2-003",
+        "name": "预算项目最小单元重复申报识别",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "budget_estimator",
+          "performance_evaluator"
+        ],
+        "scene": "零基预算改革、预算编制审核与绩效审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PERF2-004",
+        "name": "储备粮损耗率超限检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "performance_evaluator"
+        ],
+        "scene": "粮食储备企业绩效审计，储备粮轮换与损耗管理",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      },
+      {
+        "sn": "PROC2-003",
+        "name": "政府采购电子卖场商品价格偏离度跨平台比价",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "bid_hunter",
+          "data_scout"
+        ],
+        "scene": "公共资源交易领域专项审计；政府采购电子卖场（网上直购、竞价、询价）商品售价真实性、公允性审计",
+        "primary_scene": "招投标与政府采购",
+        "extra_scenes": [
+          "绩效评价"
+        ]
+      }
+    ],
+    "经济责任审计": [
+      {
+        "sn": "BUDGET-005",
+        "name": "公务车辆运行费用异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "三公经费审计；公务用车运行维护费审计；基层单位'四风'隐形变异问题核查",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-012",
+        "name": "政府投资基金'画皮'项目识别算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "政府投资基金运营审计；经责审计中基金投资项目管理核查",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "财政与政府债务",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-017",
+        "name": "村级财务'白条'入账检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "workpaper_crafter",
+          "budget_estimator"
+        ],
+        "scene": "村级财务审计；基层经济责任审计；群众身边不正之风和腐败问题集中整治",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "CHK-LOSS-001",
+        "name": "亏损项目六步穿透检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound",
+          "review_sentinel"
+        ],
+        "scene": "国企审计 / 经责审计 / 成本效益审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "绩效评价",
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ECONRESP-001",
+        "name": "公务用车平台数据异常检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "经责审计公务用车管理审计；公车改革后'车轮腐败'问题核查",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ECONRESP2-001",
+        "name": "未履约全额结算检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "contract_hound",
+          "fiscal_reviewer"
+        ],
+        "scene": "经济责任审计中延伸至二级单位的合同履约与资金支付审计",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ECONRESP2-002",
+        "name": "收费票据-台账-缴款三账比对",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "经责审计中物业费、停车费等收费环节资金完整性审计",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ECONRESP2-003",
+        "name": "公车超编-里程异常检测",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer"
+        ],
+        "scene": "经责审计中\"三公\"经费公务用车管理审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ENV-CHECKLIST-001",
+        "name": "自然资源经责审计清单对照算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "law_inspector",
+          "performance_evaluator"
+        ],
+        "scene": "经责审计 / 自然资源资产离任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ENV-RS-001",
+        "name": "遥感变化图斑穿透检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "资源环境审计 / 经济责任审计 / 自然资源资产离任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "ENV4-002",
+        "name": "公益林侵占NDVI遥感识别（植被指数+栅格矢量化+图斑相交）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer",
+          "law_inspector"
+        ],
+        "scene": "领导干部自然资源资产任中/离任审计；公益林保护、永久基本农田'非农化''非粮化'遥感筛查",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "FUND-SIPHON-001",
+        "name": "套取资金三分类检测算法（含五对照法）",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "workpaper_crafter"
+        ],
+        "scene": "收支审计 / 专项审计 / 经责审计",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "HR-EATEMPTY-001",
+        "name": "吃空饷'五对照'核查（编制-岗位-任务-考勤-群众言论）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "机关事业单位人员经费审计；经责审计中的人员管理检查；套取人员经费问题",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "LOSS-PENETRATE-001",
+        "name": "亏损项目'六步穿透法'（决策起点-资金流向-程序合规-真假亏损判别）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L4",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "contract_hound",
+          "review_sentinel"
+        ],
+        "scene": "国企投资亏损项目审计；经责审计中的重大投资损失责任认定；海外投资、并购、建厂等项目",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "NATRES-AUDIT-001",
+        "name": "自然资源资产离任审计五维问题清单（政策执行/法规遵守/重大决策/目标完成/监督责任）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "report_writer"
+        ],
+        "scene": "市县党政领导干部自然资源资产离任（任中）审计；生态环境保护责任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SOE-MIDMAN-001",
+        "name": "中间人异常交易检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国企审计 / 经济责任审计 / 供应链审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      },
+      {
+        "sn": "SUPV-POCKET-001",
+        "name": "小金库四信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国企审计 / 收支审计 / 经责审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-WARNING-001",
+        "name": "审计预警风险画像算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "全场景（国企审计 / 招投标 / 财政监督 / 经责审计）",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "招投标与政府采购",
+          "国企审计",
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "WATER-SQL-001",
+        "name": "水费征收SQL三查（违约金未收/阶梯水价未执行/少收水量）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "完整性",
+        "agents": [
+          "data_scout",
+          "settlement_auditor"
+        ],
+        "scene": "供水企业领导干部经责审计；水、电、燃气等按量计费公用事业征收审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "经济责任审计"
+        ]
+      }
+    ],
+    "监督检查与经费舞弊": [
+      {
+        "sn": "BUD-CHECKLIST-001",
+        "name": "预算执行60条违规清单对照算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "预算执行审计 / 财政审计 / 部门预算审计",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "BUDGET-017",
+        "name": "村级财务'白条'入账检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "workpaper_crafter",
+          "budget_estimator"
+        ],
+        "scene": "村级财务审计；基层经济责任审计；群众身边不正之风和腐败问题集中整治",
+        "primary_scene": "农业农村审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "COUNTY-RISK-001",
+        "name": "县域财政风险预警指标体系（债务率/库款保障/支出刚性/财源结构四维）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "县域财政运行风险监测；地方政府债务风险预警；财政承受能力评估与化债进度跟踪",
+        "primary_scene": "财政与政府债务",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "EINV-CROSS-001",
+        "name": "电子发票多源融合智能稽核（重复报销/超范围开票/发票状态异常）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "高校及行政事业单位财务报销审计；电子凭证会计数据标准（财会〔2025〕9号）执行情况审计；报销内控预警",
+        "primary_scene": "监督检查与经费舞弊",
+        "extra_scenes": []
+      },
+      {
+        "sn": "ENV4-001",
+        "name": "工业用地“退二进三”违规识别（地址模糊匹配+缓冲区空间相交）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "fiscal_reviewer",
+          "law_inspector"
+        ],
+        "scene": "工业用地高质量利用情况专项审计调查；城市土地管理、土地收益金收缴审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "EXPSTD-CHECK-001",
+        "name": "经费类支出标准符合性评审（29项支出定额比对）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "budget_estimator",
+          "fiscal_reviewer"
+        ],
+        "scene": "部门预算评审、零基预算改革背景下的支出标准执行情况审计；经费类项目（会议、培训、赛事、普查、资产购置等非信息化非工程类支出）",
+        "primary_scene": "工程与投资审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "FUND-SIPHON-001",
+        "name": "套取资金三分类检测算法（含五对照法）",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "workpaper_crafter"
+        ],
+        "scene": "收支审计 / 专项审计 / 经责审计",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "HR-EATEMPTY-001",
+        "name": "吃空饷'五对照'核查（编制-岗位-任务-考勤-群众言论）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "机关事业单位人员经费审计；经责审计中的人员管理检查；套取人员经费问题",
+        "primary_scene": "经济责任审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "HR-RF-001",
+        "name": "随机森林虚列培训费检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "国企审计 / 人力资源审计 / 经费审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "NATRES-AUDIT-001",
+        "name": "自然资源资产离任审计五维问题清单（政策执行/法规遵守/重大决策/目标完成/监督责任）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "合规性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "report_writer"
+        ],
+        "scene": "市县党政领导干部自然资源资产离任（任中）审计；生态环境保护责任审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "PERF-DEVIATION-001",
+        "name": "绩效指标偏离度多维检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "performance_evaluator"
+        ],
+        "scene": "绩效评价 / 预算绩效管理 / 财政监督",
+        "primary_scene": "预算执行与财政管理",
+        "extra_scenes": [
+          "绩效评价",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-ANOMALY-001",
+        "name": "Benford定律财务数据异常检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "监督检查 / 财务收支审计 / 国企审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-POCKET-001",
+        "name": "小金库四信号检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout",
+          "contract_hound"
+        ],
+        "scene": "国企审计 / 收支审计 / 经责审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-TRAVEL-001",
+        "name": "差旅费四信号真实性检测算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "收支审计 / 国企审计 / 经费审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "SUPV-WARNING-001",
+        "name": "审计预警风险画像算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "全场景（国企审计 / 招投标 / 财政监督 / 经责审计）",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "招投标与政府采购",
+          "国企审计",
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      },
+      {
+        "sn": "TRAVEL-SIGNAL-001",
+        "name": "差旅费报销四信号自动筛查（非工作日/整百金额/多人同额/住宿尾数异常）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "差旅费专项审计；八项规定执行情况检查；以合规形式掩盖不合规目的的报销筛查",
+        "primary_scene": "监督检查与经费舞弊",
+        "extra_scenes": []
+      },
+      {
+        "sn": "WHISTLE-FLOW-001",
+        "name": "财会监督举报受理闭环机制评估（受理-查处-跟踪-整改四环节+运行指标）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "有效性",
+        "agents": [
+          "meeting_minutes_analyzer",
+          "review_sentinel"
+        ],
+        "scene": "基层财政监督机构举报受理机制建设与运行评估；财会监督与群众监督贯通；虚假发票/数据造假/挪用资金/小金库线索处置",
+        "primary_scene": "监督检查与经费舞弊",
+        "extra_scenes": []
+      }
+    ],
+    "税务审计": [
+      {
+        "sn": "BUDGET-006",
+        "name": "国有资产出租收入完整性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "行政事业单位/国企国有资产出租出借收入审计；非税收入'收支两条线'执行情况审计",
+        "primary_scene": "国企审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "BUDGET-007",
+        "name": "代征非税收入上缴及时足额性检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator"
+        ],
+        "scene": "非税收入代收代缴审计（污水处理费/垃圾处理费/水资源费）；财政非税收入征管审计",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "CHK2-001",
+        "name": "污水处理费征缴稽核（差别费率+用水性质+自备水源+代征上缴四模型）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "budget_estimator",
+          "review_sentinel"
+        ],
+        "scene": "城市污水处理费收缴管理审计；非税收入征收管理审计（自来水、原水、自备水源、私人水厂多源数据场景）",
+        "primary_scene": "资源环境审计",
+        "extra_scenes": [
+          "预算执行与财政管理",
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "FIN2-001",
+        "name": "银行费用支出资金回流检测算法",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "银行/金融机构费用真实性审计（宣传费/广告费/印刷费）；金融领域虚开发票套取资金核查",
+        "primary_scene": "金融审计",
+        "extra_scenes": [
+          "税务审计"
+        ]
+      },
+      {
+        "sn": "TAX-001",
+        "name": "网络货运平台虚开发票识别（开票集中度+运单时空矛盾+税收返还套利）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector"
+        ],
+        "scene": "税收征管审计、平台经济专项审计；网络货运（无车承运）平台虚开增值税专用发票、套取地方税收返还核查",
+        "primary_scene": "税务审计",
+        "extra_scenes": []
+      },
+      {
+        "sn": "TAX-ESCAPE-001",
+        "name": "逃逸式注销与非交易过户税源追征核查（虚假清算报告+隐匿资产识别）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "adjustment_scribe"
+        ],
+        "scene": "企业注销便利化改革背景下的税务稽查；持股拟上市/已上市公司股权的企业注销审查；企业所得税追征",
+        "primary_scene": "税务审计",
+        "extra_scenes": []
+      }
+    ],
+    "全场景通用": [
+      {
+        "sn": "BIGDATA-SQL-001",
+        "name": "SQL审计范式模板库算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "异常性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "大数据审计 / 全场景通用 / 审计模型构建",
+        "primary_scene": "全场景通用",
+        "extra_scenes": []
+      },
+      {
+        "sn": "CHK-RECON-001",
+        "name": "多源数据勾稽核对通用算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "国有企业审计 / 财政财务收支 / 预算执行 / 工程审计",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "工程与投资审计",
+          "国企审计",
+          "预算执行与财政管理"
+        ]
+      },
+      {
+        "sn": "CHK2-002",
+        "name": "跨部门同一业务补贴数据勾稽差异识别（双台账一致性校验）",
+        "type": "骨架",
+        "priority": "P1",
+        "complexity": "L2",
+        "risk_mechanism": "真实性",
+        "agents": [
+          "data_scout",
+          "review_sentinel"
+        ],
+        "scene": "县级财政收支审计、民生补贴（燃气双补、能源补贴等）审计；同一业务数据在两个主管部门重复报送场景",
+        "primary_scene": "全场景通用",
+        "extra_scenes": []
+      },
+      {
+        "sn": "RULE-MATCH-001",
+        "name": "语义相似度审计规则智能匹配算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "管理性",
+        "agents": [
+          "data_scout",
+          "law_inspector",
+          "review_sentinel"
+        ],
+        "scene": "所有审计业务场景 / 审计知识管理",
+        "primary_scene": "全场景通用",
+        "extra_scenes": []
+      },
+      {
+        "sn": "SUPV-WARNING-001",
+        "name": "审计预警风险画像算法",
+        "type": "旗舰",
+        "priority": "P0",
+        "complexity": "L3",
+        "risk_mechanism": "廉洁性",
+        "agents": [
+          "data_scout"
+        ],
+        "scene": "全场景（国企审计 / 招投标 / 财政监督 / 经责审计）",
+        "primary_scene": "全场景通用",
+        "extra_scenes": [
+          "招投标与政府采购",
+          "国企审计",
+          "经济责任审计",
+          "监督检查与经费舞弊"
+        ]
+      }
+    ]
+  }
+}
