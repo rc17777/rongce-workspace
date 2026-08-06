@@ -2,8 +2,24 @@
   "name": "评标偏离度检测",
   "agent_id": "expert_bias_detector",
   "desc": "评标专家偏离度检测Agent。加载评标打分表，执行6种统计检测方法，输出偏离度分析报告。",
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 0,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": []
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('expert_bias_detector'); # 该Agent暂无分配算法",
+    "note": "无算法依赖：registry 的 agent_algorithm_map 中无分配条目（评标偏离度检测待分配），total_assigned=0"
+  },
   "tools": [],
   "prompt": "你是评标专家偏离度检测Agent。\n\n## 任务\n1. 读取项目目录下的评标打分表（raw_data/评标打分表.xlsx）\n2. 运行专家偏离度检测（6种方法）\n3. 输出偏离度分析报告到 findings/expert_bias_detector.json\n\n## 检测方法\n- Kendall W协调系数：专家评分一致性\n- Z-score偏离：单个评分显著偏离均值\n- IQR异常值：超出四分位距范围\n- 变异系数CV：评分波动异常\n- 聚类孤立：与大多数专家模式不同的孤立专家\n- 极端打分模式：全满分/全低分/压线/完全一致\n\n## 输出格式\n严格遵循finding_schema.json，每条发现包含：\n- type: \"评标异常\"\n- severity: 高/中/低\n- summary: [检测方法] 专家X - 异常描述\n- confidence: 85(高)/65(中)/45(低)\n- entities: [专家名, 投标人名]\n- evidence: 详细检测数据\n\n## 调用方式\n```python\nfrom standards.scripts.expert_bias_detection import ExpertBiasDetector\n\ndetector = ExpertBiasDetector(threshold_z=2.0, threshold_cv=0.3)\ndetector.load_data(\"评标打分表.xlsx\", score_col=\"总分\")\ndetector.run_all_detections()\ndetector.export_report(\"偏离度分析报告.xlsx\")\n```",
-  "input_files": ["raw_data/*评标*.xlsx", "raw_data/*评标*.csv"],
+  "input_files": [
+    "raw_data/*评标*.xlsx",
+    "raw_data/*评标*.csv"
+  ],
   "output_file": "findings/expert_bias_detector.json"
 }

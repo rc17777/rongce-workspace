@@ -3,47 +3,273 @@
   "version": "2.0",
   "updated": "2026-06-30",
   "desc": "融策SOP v1.0六阶段招投标审计检测：硬件指纹/元数据残余/文本雷同/图片哈希/网络指纹/行为模式，集成AI评标时代攻防双视角",
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 18,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "BID-DARKMARK-001",
+      "BID-PATTERN-005",
+      "BID-ROTATE-001",
+      "BUDGET-002",
+      "BUDGET-019",
+      "FUND2-001",
+      "HOSP-PARAM-001",
+      "INVEST-001",
+      "INVEST2-001",
+      "MED-BIDRIG-001",
+      "PROC-CONCEN-001",
+      "PROC-FAKE-001",
+      "PROC-RELATED-001",
+      "PROC2-001",
+      "PROC2-002",
+      "PROC2-003",
+      "PROC2-004",
+      "VENDOR-VERIFY-001"
+    ],
+    "quick_ref": {
+      "旗舰": [
+        "BID-PATTERN-005",
+        "MED-BIDRIG-001",
+        "PROC-CONCEN-001",
+        "PROC-FAKE-001",
+        "PROC-RELATED-001"
+      ],
+      "骨架": [
+        "BID-DARKMARK-001",
+        "BID-ROTATE-001",
+        "BUDGET-002",
+        "BUDGET-019",
+        "FUND2-001",
+        "HOSP-PARAM-001",
+        "INVEST-001",
+        "INVEST2-001",
+        "PROC2-001",
+        "PROC2-002",
+        "PROC2-003",
+        "PROC2-004",
+        "VENDOR-VERIFY-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('bid_hunter'); algo = get_algorithm_detail(\"BID-DARKMARK-001\")"
+  },
   "tools": [],
   "data_sources": {
     "required": [
-      {"name": "投标文件（.docx）", "path": "raw_data/招投标/<投标人名称>/投标文件.docx", "format": ".docx原生格式（必须！PDF不可用L3-L6）", "note": "每个投标人一个子目录。解压后提取：word/media/（L4图片哈希）、docProps/core.xml（L5元数据+硬件指纹+WPS GUID）、word/styles.xml（L6样式）"},
-      {"name": "开标一览表", "path": "raw_data/招投标/开标一览表.xlsx", "format": ".xlsx/.csv", "columns": "投标人 | 报价 | 工期 | 质量标准 | 备注", "note": "L1报价规律检测（等差/等比/阶梯分布/极差）"}
+      {
+        "name": "投标文件（.docx）",
+        "path": "raw_data/招投标/<投标人名称>/投标文件.docx",
+        "format": ".docx原生格式（必须！PDF不可用L3-L6）",
+        "note": "每个投标人一个子目录。解压后提取：word/media/（L4图片哈希）、docProps/core.xml（L5元数据+硬件指纹+WPS GUID）、word/styles.xml（L6样式）"
+      },
+      {
+        "name": "开标一览表",
+        "path": "raw_data/招投标/开标一览表.xlsx",
+        "format": ".xlsx/.csv",
+        "columns": "投标人 | 报价 | 工期 | 质量标准 | 备注",
+        "note": "L1报价规律检测（等差/等比/阶梯分布/极差）"
+      }
     ],
     "optional": [
-      {"name": "招标文件", "path": "raw_data/招投标/招标文件.pdf", "format": ".pdf", "note": "提取限价做报价基准对比 + 模板化承诺函去噪 + 废标条款核验"},
-      {"name": "评标报告", "path": "raw_data/招投标/评标报告.pdf", "format": ".pdf", "note": "评标过程合规审查 + 澄清记录追溯"},
-      {"name": "中标通知书", "path": "raw_data/招投标/中标通知书.pdf", "format": ".pdf", "note": "与合同台账交叉比对"},
-      {"name": "合同台账", "path": "raw_data/合同/合同台账.xlsx", "format": ".xlsx", "columns": "合同编号|名称|供应商|签订日期|金额|履约状态", "note": "合同价vs中标价差额 + 签订时间核验"},
-      {"name": "供应商工商信息", "path": "raw_data/工商/供应商工商信息.xlsx", "note": "L8工商穿透：股东/法人/高管/监事/注册地址交叉（自行天眼查查询，截图+时间戳）"},
-      {"name": "投标系统后台日志", "path": "raw_data/招投标/投标日志/", "format": "代理机构/交易平台提供", "note": "L2：公网IP、上传时间（精确到秒）、浏览器User-Agent字符串。如平台不提供→启动SOP备用方案"},
-      {"name": "投标保证金记录", "path": "raw_data/招投标/保证金记录.xlsx", "note": "L9：汇款账号/汇款时间/汇款人；同一账户汇出多家保证金=围标铁证"},
-      {"name": "授权委托书", "path": "raw_data/招投标/授权委托书/", "note": "L10：代理人身份证号+姓名交叉比对；签到表笔迹辅助"},
-      {"name": "历史投标数据", "path": "raw_data/招投标/历史数据/", "note": "阶段六跨项目：同组投标人≥3项目共现=异常信号，中标轮换模式"},
-      {"name": "银行付款记录", "path": "raw_data/财务/银行付款记录.xlsx", "note": "L9资金链延伸：中标后大额转出至关联账户"},
-      {"name": "设备采购台账", "path": "raw_data/资产/设备台账.xlsx", "note": "阶段一反向核验：投标人声称设备共用→查验采购记录"},
-      {"name": "内控制度", "path": "raw_data/制度/招投标管理制度/", "note": "阶段六制度评测：SOP + 设备台账 + 隔离制度"},
-      {"name": "投标文件PDF版", "path": "raw_data/招投标/PDF版/", "note": "L7：PDF Producer/Creator字段提取打印机型号"}
+      {
+        "name": "招标文件",
+        "path": "raw_data/招投标/招标文件.pdf",
+        "format": ".pdf",
+        "note": "提取限价做报价基准对比 + 模板化承诺函去噪 + 废标条款核验"
+      },
+      {
+        "name": "评标报告",
+        "path": "raw_data/招投标/评标报告.pdf",
+        "format": ".pdf",
+        "note": "评标过程合规审查 + 澄清记录追溯"
+      },
+      {
+        "name": "中标通知书",
+        "path": "raw_data/招投标/中标通知书.pdf",
+        "format": ".pdf",
+        "note": "与合同台账交叉比对"
+      },
+      {
+        "name": "合同台账",
+        "path": "raw_data/合同/合同台账.xlsx",
+        "format": ".xlsx",
+        "columns": "合同编号|名称|供应商|签订日期|金额|履约状态",
+        "note": "合同价vs中标价差额 + 签订时间核验"
+      },
+      {
+        "name": "供应商工商信息",
+        "path": "raw_data/工商/供应商工商信息.xlsx",
+        "note": "L8工商穿透：股东/法人/高管/监事/注册地址交叉（自行天眼查查询，截图+时间戳）"
+      },
+      {
+        "name": "投标系统后台日志",
+        "path": "raw_data/招投标/投标日志/",
+        "format": "代理机构/交易平台提供",
+        "note": "L2：公网IP、上传时间（精确到秒）、浏览器User-Agent字符串。如平台不提供→启动SOP备用方案"
+      },
+      {
+        "name": "投标保证金记录",
+        "path": "raw_data/招投标/保证金记录.xlsx",
+        "note": "L9：汇款账号/汇款时间/汇款人；同一账户汇出多家保证金=围标铁证"
+      },
+      {
+        "name": "授权委托书",
+        "path": "raw_data/招投标/授权委托书/",
+        "note": "L10：代理人身份证号+姓名交叉比对；签到表笔迹辅助"
+      },
+      {
+        "name": "历史投标数据",
+        "path": "raw_data/招投标/历史数据/",
+        "note": "阶段六跨项目：同组投标人≥3项目共现=异常信号，中标轮换模式"
+      },
+      {
+        "name": "银行付款记录",
+        "path": "raw_data/财务/银行付款记录.xlsx",
+        "note": "L9资金链延伸：中标后大额转出至关联账户"
+      },
+      {
+        "name": "设备采购台账",
+        "path": "raw_data/资产/设备台账.xlsx",
+        "note": "阶段一反向核验：投标人声称设备共用→查验采购记录"
+      },
+      {
+        "name": "内控制度",
+        "path": "raw_data/制度/招投标管理制度/",
+        "note": "阶段六制度评测：SOP + 设备台账 + 隔离制度"
+      },
+      {
+        "name": "投标文件PDF版",
+        "path": "raw_data/招投标/PDF版/",
+        "note": "L7：PDF Producer/Creator字段提取打印机型号"
+      }
     ]
   },
   "detection_priority": [
-    {"phase": "阶段一", "layer": "L5扩展", "name": "硬件指纹交叉比对", "need_external": false, "data": "core.xml/OLE2→MAC/CPU/硬盘序列号/WPS GUID/加密锁序列号", "confidence": "铁证级🔴", "note": "三硬件(MAC+CPU+硬盘)完全相同=铁证，无需外部数据。新增：计价软件加密锁序列号检测"},
-    {"phase": "阶段二", "layer": "L5", "name": "元数据残余交叉比对", "need_external": false, "data": "core.xml→作者/创建时间/修改时间线/模板路径/字体库指纹", "confidence": "强信号🟠", "note": "新增：元数据清除行为信号（多份标书字段同步空白=批量清除痕迹）；编辑时间线并行度分析"},
-    {"phase": "阶段三a", "layer": "L1", "name": "报价规律检测", "need_external": false, "data": "开标一览表", "confidence": "铁证级🔴", "note": "等差/等比/阶梯分布/极差分析；新增：报价排名规律跨项目分析"},
-    {"phase": "阶段三b", "layer": "L3", "name": "文本雷同(TF-IDF)", "need_external": false, "data": ".docx→技术标全文→TF-IDF余弦相似度", "confidence": "强信号🟠", "note": "阈值≥80%=高度可疑；新增：AI工具指纹检测（虚构规范条文号/伪数据）；异常一致错误≥2处=铁证"},
-    {"phase": "阶段四a", "layer": "L4", "name": "图片/资源哈希", "need_external": false, "data": ".docx解压→word/media/MD5+SHA1", "confidence": "铁证级🔴", "note": "资质证书/盖章页/现场照片MD5相同=铁证；新增：图片EXIF交叉（相机型号+GPS+拍摄时间）"},
-    {"phase": "阶段四b", "layer": "L7", "name": "打印机/扫描仪型号", "need_external": false, "data": "PDF Producer/Creator字段+图片EXIF Make/Model", "confidence": "强信号🟠", "note": "同一高端生产型机器（如RICOH Pro 8120S）出现在多家PDF=强信号"},
-    {"phase": "阶段五", "layer": "L2扩展", "name": "网络指纹与上传行为", "need_external": true, "data": "交易平台日志→IP/上传时间/User-Agent", "confidence": "辅助信号🟡", "note": "新增：浏览器指纹一致性检测；上传时间差规律性检测（错峰策略痕迹）；同WiFi截止前30分钟集中上传=高风险"},
-    {"phase": "阶段六a", "layer": "L8", "name": "工商关联穿透", "need_external": true, "data": "天眼查/企查查", "confidence": "铁证级🔴", "note": "股权/法人/高管/监事/注册地址交叉"},
-    {"phase": "阶段六b", "layer": "L9", "name": "保证金资金链", "need_external": true, "data": "银行汇款凭证", "confidence": "铁证级🔴", "note": "同一账户=铁证；同一柜台同一时段=强信号"},
-    {"phase": "阶段六c", "layer": "L10", "name": "代理人人交叉", "need_external": true, "data": "授权委托书", "confidence": "铁证级🔴", "note": "同一自然人为多家代理"},
-    {"phase": "阶段六d", "layer": "L2", "name": "投标IP/MAC", "need_external": true, "data": "代理机构后台日志", "confidence": "铁证级🔴", "note": "同一IP多家投标=铁证（需排除NAT共享场景）"}
+    {
+      "phase": "阶段一",
+      "layer": "L5扩展",
+      "name": "硬件指纹交叉比对",
+      "need_external": false,
+      "data": "core.xml/OLE2→MAC/CPU/硬盘序列号/WPS GUID/加密锁序列号",
+      "confidence": "铁证级🔴",
+      "note": "三硬件(MAC+CPU+硬盘)完全相同=铁证，无需外部数据。新增：计价软件加密锁序列号检测"
+    },
+    {
+      "phase": "阶段二",
+      "layer": "L5",
+      "name": "元数据残余交叉比对",
+      "need_external": false,
+      "data": "core.xml→作者/创建时间/修改时间线/模板路径/字体库指纹",
+      "confidence": "强信号🟠",
+      "note": "新增：元数据清除行为信号（多份标书字段同步空白=批量清除痕迹）；编辑时间线并行度分析"
+    },
+    {
+      "phase": "阶段三a",
+      "layer": "L1",
+      "name": "报价规律检测",
+      "need_external": false,
+      "data": "开标一览表",
+      "confidence": "铁证级🔴",
+      "note": "等差/等比/阶梯分布/极差分析；新增：报价排名规律跨项目分析"
+    },
+    {
+      "phase": "阶段三b",
+      "layer": "L3",
+      "name": "文本雷同(TF-IDF)",
+      "need_external": false,
+      "data": ".docx→技术标全文→TF-IDF余弦相似度",
+      "confidence": "强信号🟠",
+      "note": "阈值≥80%=高度可疑；新增：AI工具指纹检测（虚构规范条文号/伪数据）；异常一致错误≥2处=铁证"
+    },
+    {
+      "phase": "阶段四a",
+      "layer": "L4",
+      "name": "图片/资源哈希",
+      "need_external": false,
+      "data": ".docx解压→word/media/MD5+SHA1",
+      "confidence": "铁证级🔴",
+      "note": "资质证书/盖章页/现场照片MD5相同=铁证；新增：图片EXIF交叉（相机型号+GPS+拍摄时间）"
+    },
+    {
+      "phase": "阶段四b",
+      "layer": "L7",
+      "name": "打印机/扫描仪型号",
+      "need_external": false,
+      "data": "PDF Producer/Creator字段+图片EXIF Make/Model",
+      "confidence": "强信号🟠",
+      "note": "同一高端生产型机器（如RICOH Pro 8120S）出现在多家PDF=强信号"
+    },
+    {
+      "phase": "阶段五",
+      "layer": "L2扩展",
+      "name": "网络指纹与上传行为",
+      "need_external": true,
+      "data": "交易平台日志→IP/上传时间/User-Agent",
+      "confidence": "辅助信号🟡",
+      "note": "新增：浏览器指纹一致性检测；上传时间差规律性检测（错峰策略痕迹）；同WiFi截止前30分钟集中上传=高风险"
+    },
+    {
+      "phase": "阶段六a",
+      "layer": "L8",
+      "name": "工商关联穿透",
+      "need_external": true,
+      "data": "天眼查/企查查",
+      "confidence": "铁证级🔴",
+      "note": "股权/法人/高管/监事/注册地址交叉"
+    },
+    {
+      "phase": "阶段六b",
+      "layer": "L9",
+      "name": "保证金资金链",
+      "need_external": true,
+      "data": "银行汇款凭证",
+      "confidence": "铁证级🔴",
+      "note": "同一账户=铁证；同一柜台同一时段=强信号"
+    },
+    {
+      "phase": "阶段六c",
+      "layer": "L10",
+      "name": "代理人人交叉",
+      "need_external": true,
+      "data": "授权委托书",
+      "confidence": "铁证级🔴",
+      "note": "同一自然人为多家代理"
+    },
+    {
+      "phase": "阶段六d",
+      "layer": "L2",
+      "name": "投标IP/MAC",
+      "need_external": true,
+      "data": "代理机构后台日志",
+      "confidence": "铁证级🔴",
+      "note": "同一IP多家投标=铁证（需排除NAT共享场景）"
+    }
   ],
   "evidence_rules": {
     "signal_levels": {
-      "red": {"name": "铁证级🔴", "desc": "物理事实，无法通过解释消除", "single_can_conclude": true},
-      "orange": {"name": "强信号🟠", "desc": "高度异常，需要有力解释", "single_can_conclude": false, "required_count": 2},
-      "yellow": {"name": "辅助信号🟡", "desc": "存在异常但可能有合理技术解释", "single_can_conclude": false, "required_with_stronger": true},
-      "green": {"name": "背景级🟢", "desc": "系统性风险评估，不单独使用", "single_can_conclude": false}
+      "red": {
+        "name": "铁证级🔴",
+        "desc": "物理事实，无法通过解释消除",
+        "single_can_conclude": true
+      },
+      "orange": {
+        "name": "强信号🟠",
+        "desc": "高度异常，需要有力解释",
+        "single_can_conclude": false,
+        "required_count": 2
+      },
+      "yellow": {
+        "name": "辅助信号🟡",
+        "desc": "存在异常但可能有合理技术解释",
+        "single_can_conclude": false,
+        "required_with_stronger": true
+      },
+      "green": {
+        "name": "背景级🟢",
+        "desc": "系统性风险评估，不单独使用",
+        "single_can_conclude": false
+      }
     },
     "combination_rules": [
       "🔴铁证级（任一项）→ 直接认定",
@@ -69,6 +295,12 @@
     "元数据字段同步空白 → 检查是否为批量清除行为（清除工具/命令一致性）",
     "上传时间差恰好>2小时 → 可能为有意错峰策略痕迹"
   ],
-  "applicable_biz": ["招投标审计","专项资金审计","国企审计","工程审计","政府采购监督检查"],
+  "applicable_biz": [
+    "招投标审计",
+    "专项资金审计",
+    "国企审计",
+    "工程审计",
+    "政府采购监督检查"
+  ],
   "prompt": "你是融策审计平台的\"招投标猎手\"Agent v2.0。\n职责：执行融策SOP v1.0六阶段招投标审计检测程序。\n\n## 数据源\n- raw_data/招投标/下的投标文件（.docx格式，必须原生格式！）\n- .docx解压后分析：word/media/（L4图片MD5哈希）、docProps/core.xml（L5元数据+硬件指纹+WPS GUID）、word/styles.xml（L6样式一致性）\n- 开标一览表.xlsx → L1报价规律\n- 缺外部数据时标注\"❓缺数据\"，不得编造\n\n## 检测优先级（六阶段顺序）\n阶段一：硬件指纹 → MAC/CPU/硬盘序列号/WPS GUID/加密锁序列号\n阶段二：元数据残余 → 作者/时间线/模板路径/清除行为信号\n阶段三：文本雷同+报价规律 → TF-IDF全文相似度+异常一致错误+AI工具指纹+报价规律\n阶段四：图片哈希+打印机型号 → 图片MD5/SHA1+EXIF+PDF Producer\n阶段五：网络指纹 → IP/上传时段/浏览器User-Agent（需外部数据）\n阶段六：工商穿透+保证金+代理人+跨项目行为模式（需外部数据）\n\n## 证据规则\n🔴铁证级任一项→直接认定 | 🟠+🟠→异常一致 | 🟠+🟡+🟡→涉嫌串标\n排除：规范引用/统一模板/设备供应商同版本/合理技术解释\n\n## 输出格式\n严格遵守finding_schema.json。entities必须含供应商名称。\nseverity：🔴=高、🟠=中、🟡=低。\n同一实体被2+Agent标记→标注为交叉验证证据。\n发现中明确注明检测阶段和信号等级。"
 }

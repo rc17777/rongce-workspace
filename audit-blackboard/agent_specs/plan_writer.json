@@ -71,7 +71,14 @@
         "source": "RAG案例库中同类项目的补充资料需求"
       }
     ],
-    "columns": ["序号", "资料名称", "提供状态", "用途说明", "紧急程度", "备注"]
+    "columns": [
+      "序号",
+      "资料名称",
+      "提供状态",
+      "用途说明",
+      "紧急程度",
+      "备注"
+    ]
   },
   "actions": [
     {
@@ -92,7 +99,11 @@
       "name": "重难点识别",
       "action": "基于业务线+资料情况+历史案例，识别审计重难点",
       "method": "对照 rule-library 中已沉淀的A级规则，匹配高风险条款",
-      "source": ["RAG案例库高频问题", "SCENARIO-SKILL-MAP推荐技能", "rule-library"]
+      "source": [
+        "RAG案例库高频问题",
+        "SCENARIO-SKILL-MAP推荐技能",
+        "rule-library"
+      ]
     },
     {
       "step": 4,
@@ -163,5 +174,21 @@
     "plan_review": "claude-sonnet-5-20250915"
   },
   "run_timeout_seconds": 600,
-  "next_phase": "analyze (Phase ③ - 多Agent分析)"
+  "next_phase": "analyze (Phase ③ - 多Agent分析)",
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 1,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "PERF-COST-001"
+    ],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": [
+        "PERF-COST-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('plan_writer'); algo = get_algorithm_detail(\"PERF-COST-001\")"
+  }
 }

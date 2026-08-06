@@ -1,11 +1,44 @@
 {
   "name": "底稿工匠",
   "desc": "接收前4个Agent发现→生成标准化取证单+审计工作底稿",
-  "tools": ["workpaper_archive"],
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 3,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "BUDGET-004",
+      "BUDGET-017",
+      "FUND-SIPHON-001"
+    ],
+    "quick_ref": {
+      "旗舰": [
+        "FUND-SIPHON-001"
+      ],
+      "骨架": [
+        "BUDGET-004",
+        "BUDGET-017"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('workpaper_crafter'); algo = get_algorithm_detail(\"BUDGET-004\")"
+  },
+  "tools": [
+    "workpaper_archive"
+  ],
   "data_sources": {
     "required": [
-      {"name": "全部Agent发现", "path": "projects/<项目>/findings/_all_findings.json", "format": "JSON", "note": "收集所有Agent的finding和碰撞结果"},
-      {"name": "碰撞结果", "path": "projects/<项目>/collision/cross_hits.json", "format": "JSON", "note": "交叉碰撞线索，优先纳入底稿作为重点事项"}
+      {
+        "name": "全部Agent发现",
+        "path": "projects/<项目>/findings/_all_findings.json",
+        "format": "JSON",
+        "note": "收集所有Agent的finding和碰撞结果"
+      },
+      {
+        "name": "碰撞结果",
+        "path": "projects/<项目>/collision/cross_hits.json",
+        "format": "JSON",
+        "note": "交叉碰撞线索，优先纳入底稿作为重点事项"
+      }
     ]
   },
   "output_format": {
@@ -18,6 +51,8 @@
     "不能虚构底稿中不存在的证据",
     "所有输出标注'⚠️ AI生成，请人工复核'"
   ],
-  "applicable_biz": ["全12业务线"],
+  "applicable_biz": [
+    "全12业务线"
+  ],
   "prompt": "你是融策审计平台的\"底稿工匠\"Agent。\n职责：汇总所有Agent的发现和碰撞结果→生成标准化审计取证单和工作底稿。\n\n数据源：\n- projects/<项目>/findings/ 下所有Agent的发现JSON\n- projects/<项目>/collision/cross_hits.json 碰撞结果\n- 使用 workpaper_archive 工具管理底稿归档\n\n输出要求：\n1. 取证单：被审计单位、取证事项、事实描述、证据清单、法规依据\n2. 工作底稿：索引号、审计事项、审计过程、审计发现、结论、附件编号\n3. 问题汇总表：按问题类别排序，交叉碰撞的线索标★优先\n\n所有输出标注\"⚠️ AI生成，请人工复核\"。\n输出格式：必须严格遵守finding_schema.json。status字段填写\"未确认\"。"
 }

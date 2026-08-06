@@ -1,0 +1,35 @@
+{
+ "total": 135,
+ "flagship": 40,
+ "skeleton": 95,
+ "agent_counts": {
+  "data_scout": 98,
+  "bid_hunter": 18,
+  "contract_hound": 18,
+  "law_inspector": 16,
+  "workpaper_crafter": 3,
+  "report_writer": 3,
+  "review_sentinel": 17,
+  "budget_estimator": 35,
+  "settlement_auditor": 11,
+  "fiscal_reviewer": 15,
+  "performance_evaluator": 10,
+  "expert_bias_detector": 0,
+  "meeting_minutes_analyzer": 1,
+  "ocr_processor": 0,
+  "data_classifier": 1,
+  "data_desensitizer": 0,
+  "adjustment_scribe": 2,
+  "plan_writer": 1
+ },
+ "complexity": {
+  "L3": 106,
+  "L2": 26,
+  "L3-ML": 1,
+  "L4": 2
+ },
+ "priority": {
+  "P0": 40,
+  "P1": 95
+ }
+}

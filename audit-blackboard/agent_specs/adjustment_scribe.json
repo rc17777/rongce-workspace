@@ -5,10 +5,18 @@
   "created": "2026-07-17",
   "description": "从审计发现的问题→自动生成标准化审计调整分录。包括错账更正、重分类调整、补记、冲销等。每个分录含借贷科目、金额、摘要、依据。",
   "trigger_phase": "analyze (Phase ③) 或 evidence (Phase ④)",
-  "applicable_biz": ["全部12业务线（涉及财务数据的）"],
+  "applicable_biz": [
+    "全部12业务线（涉及财务数据的）"
+  ],
   "input": {
     "source": "findings/*.json 中涉及金额和科目的问题",
-    "required_fields": ["问题描述", "涉及科目", "涉及金额", "正确做法", "法规依据"]
+    "required_fields": [
+      "问题描述",
+      "涉及科目",
+      "涉及金额",
+      "正确做法",
+      "法规依据"
+    ]
   },
   "output": {
     "files": [
@@ -99,5 +107,23 @@
     "downstream": "workpaper_crafter (分录写入底稿) → report_writer (分录汇总写入报告)",
     "review": "review_sentinel (复核分录的科目对应关系是否正确)"
   },
-  "run_timeout_seconds": 300
+  "run_timeout_seconds": 300,
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 2,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "AGRI3-005",
+      "TAX-ESCAPE-001"
+    ],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": [
+        "AGRI3-005",
+        "TAX-ESCAPE-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('adjustment_scribe'); algo = get_algorithm_detail(\"AGRI3-005\")"
+  }
 }

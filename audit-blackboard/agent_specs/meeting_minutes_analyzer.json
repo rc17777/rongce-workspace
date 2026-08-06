@@ -5,11 +5,27 @@
   "created": "2026-07-17",
   "description": "经责审计核心Agent：分析党委会/办公会/董事会会议纪要，提取重大决策事项，追踪'三重一大'决策流程，与合同/付款做全链条比对。",
   "trigger_phase": "analyze (Phase ③)",
-  "applicable_biz": ["economic_responsibility", "soe", "special_fund", "bidding"],
+  "applicable_biz": [
+    "economic_responsibility",
+    "soe",
+    "special_fund",
+    "bidding"
+  ],
   "input": {
     "source": "raw_data/制度/ 中的会议纪要文件（.pdf/.docx/.md）",
-    "formats": [".pdf", ".docx", ".md", ".txt"],
-    "required_fields": ["会议名称", "会议日期", "参会人员", "议题", "决议"]
+    "formats": [
+      ".pdf",
+      ".docx",
+      ".md",
+      ".txt"
+    ],
+    "required_fields": [
+      "会议名称",
+      "会议日期",
+      "参会人员",
+      "议题",
+      "决议"
+    ]
   },
   "output": {
     "files": [
@@ -20,7 +36,13 @@
   "analysis_capabilities": {
     "decision_extraction": {
       "description": "从纪要中提取所有重大决策事项",
-      "fields": ["决策事项", "提议人", "表决结果", "预算金额", "实施单位"],
+      "fields": [
+        "决策事项",
+        "提议人",
+        "表决结果",
+        "预算金额",
+        "实施单位"
+      ],
       "method": "LLM few-shot提取 + 关键词匹配（同意/通过/批准/原则同意）"
     },
     "sandayi_tracking": {
@@ -35,11 +57,22 @@
     },
     "attendee_analysis": {
       "description": "参会人员分析",
-      "checks": ["应到vs实到", "表决回避情况", "关键人员缺席时作出的重大决策"]
+      "checks": [
+        "应到vs实到",
+        "表决回避情况",
+        "关键人员缺席时作出的重大决策"
+      ]
     },
     "topic_classification": {
       "description": "议题自动分类",
-      "categories": ["人事任免", "重大项目", "大额资金", "重大决策", "制度建设", "其他"],
+      "categories": [
+        "人事任免",
+        "重大项目",
+        "大额资金",
+        "重大决策",
+        "制度建设",
+        "其他"
+      ],
       "method": "LLM分类"
     }
   },
@@ -59,5 +92,21 @@
     "related_skill": "audit-meeting-review",
     "skill_description": "望闻问切阅记法：会议记录四步诊断"
   },
-  "run_timeout_seconds": 600
+  "run_timeout_seconds": 600,
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 1,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "WHISTLE-FLOW-001"
+    ],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": [
+        "WHISTLE-FLOW-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('meeting_minutes_analyzer'); algo = get_algorithm_detail(\"WHISTLE-FLOW-001\")"
+  }
 }

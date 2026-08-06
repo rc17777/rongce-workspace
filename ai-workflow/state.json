@@ -15,11 +15,11 @@
     "knowledge_keeper": {
       "label": "📚 知识管理员",
       "status": "idle",
-      "last_run": "2026-08-04 14:06",
-      "last_success": "2026-08-04 14:06",
+      "last_run": "2026-08-06 14:08",
+      "last_success": "2026-08-06 14:08",
       "last_failure": null,
       "fail_count": 0,
-      "total_runs": 26,
+      "total_runs": 28,
       "current_task": null
     },
     "tender_hunter": {
@@ -35,11 +35,11 @@
     "model_doctor": {
       "label": "🏥 模型医生",
       "status": "idle",
-      "last_run": "2026-08-03 10:29",
-      "last_success": "2026-08-03 10:29",
+      "last_run": "2026-08-06 10:25",
+      "last_success": "2026-08-06 10:25",
       "last_failure": "2026-07-28 06:07",
       "fail_count": 0,
-      "total_runs": 24,
+      "total_runs": 26,
       "current_task": null
     },
     "token_watcher": {
@@ -767,11 +767,35 @@
       "time": "2026-08-05 20:16",
       "success": true,
       "error": null
+    },
+    {
+      "agent": "model_doctor",
+      "time": "2026-08-06 09:57",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "model_doctor",
+      "time": "2026-08-06 10:25",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "knowledge_keeper",
+      "time": "2026-08-06 13:39",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "knowledge_keeper",
+      "time": "2026-08-06 14:08",
+      "success": true,
+      "error": null
     }
   ],
   "escalations": [],
-  "last_overseer_run": "2026-08-05T21:45:35.394687+08:00",
-  "last_engine_run": "2026-08-05T21:45:35.394716+08:00",
-  "consecutive_runs": 891,
-  "total_tasks_completed": 114
+  "last_overseer_run": "2026-08-06T14:08:28.941928+08:00",
+  "last_engine_run": "2026-08-06T14:08:28.941954+08:00",
+  "consecutive_runs": 916,
+  "total_tasks_completed": 118
 }

@@ -7,8 +7,21 @@
   "trigger_phase": "ocr (Phase ①b)",
   "input": {
     "source": "projects/<项目>/raw_data/ 中的扫描PDF、图片、OFD文件",
-    "formats": [".pdf", ".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".ofd"],
-    "exclude": [".docx", ".xlsx", ".csv", ".txt"]
+    "formats": [
+      ".pdf",
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".bmp",
+      ".tiff",
+      ".ofd"
+    ],
+    "exclude": [
+      ".docx",
+      ".xlsx",
+      ".csv",
+      ".txt"
+    ]
   },
   "output": {
     "cache": "raw_data/.ocr_cache/",
@@ -36,25 +49,57 @@
     "step3_invoice_extract": {
       "name": "发票结构化提取",
       "action": "OCR文本 → qwen-vl-max 识别发票字段",
-      "fields": ["发票代码", "发票号码", "开票日期", "销售方名称", "购买方名称", "不含税金额", "税额", "价税合计", "货物名称"],
+      "fields": [
+        "发票代码",
+        "发票号码",
+        "开票日期",
+        "销售方名称",
+        "购买方名称",
+        "不含税金额",
+        "税额",
+        "价税合计",
+        "货物名称"
+      ],
       "output": "invoices.csv"
     },
     "step4_contract_extract": {
       "name": "合同关键字段提取",
       "action": "OCR全文 → qwen3.7-plus 提取关键字段",
-      "fields": ["合同编号", "甲方", "乙方", "签订日期", "合同金额", "付款方式", "履约期限", "违约责任条款"],
+      "fields": [
+        "合同编号",
+        "甲方",
+        "乙方",
+        "签订日期",
+        "合同金额",
+        "付款方式",
+        "履约期限",
+        "违约责任条款"
+      ],
       "output": "contracts.csv"
     },
     "step5_bid_extract": {
       "name": "招投标数据提取",
       "action": "OCR全文 → qwen3.7-plus 提取结构化数据",
-      "fields": ["项目名称", "招标方式", "各投标人报价", "技术得分", "商务得分", "中标候选人"],
+      "fields": [
+        "项目名称",
+        "招标方式",
+        "各投标人报价",
+        "技术得分",
+        "商务得分",
+        "中标候选人"
+      ],
       "output": "bids.csv"
     },
     "step6_bank_extract": {
       "name": "银行单据提取",
       "action": "OCR文本 → 正则+LLM提取交易信息",
-      "fields": ["交易日期", "交易金额", "对方户名", "对方账号", "摘要"],
+      "fields": [
+        "交易日期",
+        "交易金额",
+        "对方户名",
+        "对方账号",
+        "摘要"
+      ],
       "output": "bank_transactions.csv"
     },
     "step7_general": {
@@ -71,9 +116,18 @@
     "bank_extraction": "custom-cbwyy-top-v1/deepseek-v4-pro (金额+户名提取)"
   },
   "cost_estimate": {
-    "small_project_50p": {"paddleocr": "免费", "llm_tokens": "~3K"},
-    "medium_project_200p": {"paddleocr": "免费", "llm_tokens": "~8K"},
-    "large_project_500p": {"paddleocr": "免费", "llm_tokens": "~20K"}
+    "small_project_50p": {
+      "paddleocr": "免费",
+      "llm_tokens": "~3K"
+    },
+    "medium_project_200p": {
+      "paddleocr": "免费",
+      "llm_tokens": "~8K"
+    },
+    "large_project_500p": {
+      "paddleocr": "免费",
+      "llm_tokens": "~20K"
+    }
   },
   "existing_scripts": [
     "scripts/paddleocr_audit_batch.py",
@@ -82,5 +136,18 @@
     "scripts/invoice_ocr.py"
   ],
   "run_timeout_seconds": 600,
-  "next_phase": "classify (Phase ①c - 基于OCR文本的深度分类)"
+  "next_phase": "classify (Phase ①c - 基于OCR文本的深度分类)",
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 0,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": []
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('ocr_processor'); # 该Agent暂无分配算法",
+    "note": "纯工具Agent（OCR预处理层）：不依赖算法资产库，total_assigned=0"
+  }
 }

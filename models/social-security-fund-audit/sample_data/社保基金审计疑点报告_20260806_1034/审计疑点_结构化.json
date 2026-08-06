@@ -1,0 +1,950 @@
+{
+  "generated_at": "2026-08-06T10:34:32.298813",
+  "summary": {
+    "P0": 6,
+    "P1": 3,
+    "P2": 0,
+    "total": 9
+  },
+  "findings": [
+    {
+      "level": "P1",
+      "module": "M1-重复参保",
+      "title": "发现28人重复参保",
+      "detail": [
+        {
+          "id_card": 510100000000000001,
+          "types": "工伤 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000002,
+          "types": "职工养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000003,
+          "types": "职工养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000004,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000005,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000006,
+          "types": "工伤 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000007,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000008,
+          "types": "失业 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000009,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000010,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000011,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000012,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000013,
+          "types": "职工养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000014,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000015,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000016,
+          "types": "居民养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000017,
+          "types": "失业 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000018,
+          "types": "工伤 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000019,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000020,
+          "types": "工伤 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000021,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000022,
+          "types": "职工养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000023,
+          "types": "职工养老 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000024,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000025,
+          "types": "失业 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000027,
+          "types": "工伤 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000028,
+          "types": "居民医保 + 职工医保"
+        },
+        {
+          "id_card": 510100000000000029,
+          "types": "居民医保 + 职工医保"
+        }
+      ],
+      "risk": "预估多补助 16240 元/年"
+    },
+    {
+      "level": "P0",
+      "module": "M4-死亡参保",
+      "title": "91人死亡后仍在参保状态",
+      "detail": [
+        {
+          "id_card": 510100000000000006,
+          "name": "参保人0006",
+          "death_date": "2023-09-08",
+          "last_payment_date": "2026-02-18"
+        },
+        {
+          "id_card": 510100000000000029,
+          "name": "参保人0029",
+          "death_date": "2025-12-30",
+          "last_payment_date": "2026-06-05"
+        },
+        {
+          "id_card": 510100000000000180,
+          "name": "参保人0180",
+          "death_date": "2024-08-04",
+          "last_payment_date": "2026-08-02"
+        },
+        {
+          "id_card": 510100000000000195,
+          "name": "参保人0195",
+          "death_date": "2026-03-02",
+          "last_payment_date": "2026-06-01"
+        },
+        {
+          "id_card": 510100000000000231,
+          "name": "参保人0231",
+          "death_date": "2025-04-08",
+          "last_payment_date": "2025-10-17"
+        },
+        {
+          "id_card": 510100000000000291,
+          "name": "参保人0291",
+          "death_date": "2025-09-11",
+          "last_payment_date": "2025-10-04"
+        },
+        {
+          "id_card": 510100000000000342,
+          "name": "参保人0342",
+          "death_date": "2024-04-03",
+          "last_payment_date": "2026-07-01"
+        },
+        {
+          "id_card": 510100000000000420,
+          "name": "参保人0420",
+          "death_date": "2025-03-06",
+          "last_payment_date": "2025-11-14"
+        },
+        {
+          "id_card": 510100000000000452,
+          "name": "参保人0452",
+          "death_date": "2024-06-07",
+          "last_payment_date": "2025-11-15"
+        },
+        {
+          "id_card": 510100000000000570,
+          "name": "参保人0570",
+          "death_date": "2025-11-25",
+          "last_payment_date": "2026-04-25"
+        },
+        {
+          "id_card": 510100000000000596,
+          "name": "参保人0596",
+          "death_date": "2024-05-15",
+          "last_payment_date": "2025-09-04"
+        },
+        {
+          "id_card": 510100000000000716,
+          "name": "参保人0716",
+          "death_date": "2025-08-23",
+          "last_payment_date": "2026-05-06"
+        },
+        {
+          "id_card": 510100000000000719,
+          "name": "参保人0719",
+          "death_date": "2023-09-05",
+          "last_payment_date": "2026-01-06"
+        },
+        {
+          "id_card": 510100000000000793,
+          "name": "参保人0793",
+          "death_date": "2025-03-09",
+          "last_payment_date": "2026-05-03"
+        },
+        {
+          "id_card": 510100000000000816,
+          "name": "参保人0816",
+          "death_date": "2026-03-12",
+          "last_payment_date": "2026-06-24"
+        },
+        {
+          "id_card": 510100000000000847,
+          "name": "参保人0847",
+          "death_date": "2025-05-19",
+          "last_payment_date": "2026-02-19"
+        },
+        {
+          "id_card": 510100000000000915,
+          "name": "参保人0915",
+          "death_date": "2024-03-13",
+          "last_payment_date": "2026-04-16"
+        },
+        {
+          "id_card": 510100000000000982,
+          "name": "参保人0982",
+          "death_date": "2024-09-22",
+          "last_payment_date": "2025-12-04"
+        },
+        {
+          "id_card": 510100000000001181,
+          "name": "参保人1181",
+          "death_date": "2023-12-16",
+          "last_payment_date": "2025-09-18"
+        },
+        {
+          "id_card": 510100000000001216,
+          "name": "参保人1216",
+          "death_date": "2025-08-24",
+          "last_payment_date": "2025-08-29"
+        },
+        {
+          "id_card": 510100000000001237,
+          "name": "参保人1237",
+          "death_date": "2025-12-03",
+          "last_payment_date": "2026-05-10"
+        },
+        {
+          "id_card": 510100000000001253,
+          "name": "参保人1253",
+          "death_date": "2025-03-27",
+          "last_payment_date": "2026-02-19"
+        },
+        {
+          "id_card": 510100000000001302,
+          "name": "参保人1302",
+          "death_date": "2025-10-08",
+          "last_payment_date": "2026-07-22"
+        },
+        {
+          "id_card": 510100000000001308,
+          "name": "参保人1308",
+          "death_date": "2025-05-16",
+          "last_payment_date": "2025-08-26"
+        },
+        {
+          "id_card": 510100000000001360,
+          "name": "参保人1360",
+          "death_date": "2024-05-23",
+          "last_payment_date": "2025-12-25"
+        },
+        {
+          "id_card": 510100000000001445,
+          "name": "参保人1445",
+          "death_date": "2024-08-30",
+          "last_payment_date": "2026-07-29"
+        },
+        {
+          "id_card": 510100000000001462,
+          "name": "参保人1462",
+          "death_date": "2025-07-06",
+          "last_payment_date": "2026-01-13"
+        },
+        {
+          "id_card": 510100000000001494,
+          "name": "参保人1494",
+          "death_date": "2023-12-22",
+          "last_payment_date": "2026-06-21"
+        },
+        {
+          "id_card": 510100000000001589,
+          "name": "参保人1589",
+          "death_date": "2025-05-15",
+          "last_payment_date": "2026-05-09"
+        },
+        {
+          "id_card": 510100000000001637,
+          "name": "参保人1637",
+          "death_date": "2025-02-05",
+          "last_payment_date": "2026-05-03"
+        }
+      ],
+      "risk": "涉嫌违规操作或数据未及时更新"
+    },
+    {
+      "level": "P0",
+      "module": "M6-分解住院",
+      "title": "发现28例疑似分解住院",
+      "detail": [
+        {
+          "hospital": "医院E",
+          "case_count": 4,
+          "total_cost": 51246.93384180615
+        },
+        {
+          "hospital": "医院C",
+          "case_count": 3,
+          "total_cost": 43061.237322574576
+        },
+        {
+          "hospital": "医院Q",
+          "case_count": 3,
+          "total_cost": 46982.550689712654
+        },
+        {
+          "hospital": "医院J",
+          "case_count": 2,
+          "total_cost": 41202.61347877412
+        },
+        {
+          "hospital": "医院M",
+          "case_count": 2,
+          "total_cost": 10730.197459358902
+        },
+        {
+          "hospital": "医院T",
+          "case_count": 2,
+          "total_cost": 12445.761929622262
+        },
+        {
+          "hospital": "医院L",
+          "case_count": 2,
+          "total_cost": 16953.485847853797
+        },
+        {
+          "hospital": "医院K",
+          "case_count": 2,
+          "total_cost": 9300.620726907051
+        },
+        {
+          "hospital": "医院F",
+          "case_count": 1,
+          "total_cost": 5032.175499969146
+        },
+        {
+          "hospital": "医院G",
+          "case_count": 1,
+          "total_cost": 3967.275823900962
+        },
+        {
+          "hospital": "医院A",
+          "case_count": 1,
+          "total_cost": 13778.567268555624
+        },
+        {
+          "hospital": "医院D",
+          "case_count": 1,
+          "total_cost": 5561.822474746835
+        },
+        {
+          "hospital": "医院P",
+          "case_count": 1,
+          "total_cost": 15844.922529717922
+        },
+        {
+          "hospital": "医院N",
+          "case_count": 1,
+          "total_cost": 5882.0319539293
+        },
+        {
+          "hospital": "医院R",
+          "case_count": 1,
+          "total_cost": 3116.576777347007
+        },
+        {
+          "hospital": "医院S",
+          "case_count": 1,
+          "total_cost": 6856.62484545243
+        }
+      ],
+      "risk": "涉及金额 291,963 元"
+    },
+    {
+      "level": "P1",
+      "module": "M8-费用异常(STDDEV)",
+      "title": "4个DRG组费用离散度过高(CV>0.5)",
+      "detail": [
+        {
+          "drg_code": "ET15",
+          "count": 1028,
+          "mean": 1472.495286692914,
+          "std": 874.0639682111491,
+          "cv": 0.5935937290327188
+        },
+        {
+          "drg_code": "GD25",
+          "count": 970,
+          "mean": 1512.1226229366614,
+          "std": 863.1879487191202,
+          "cv": 0.5708452050289025
+        },
+        {
+          "drg_code": "RC19",
+          "count": 1037,
+          "mean": 1506.5681245132955,
+          "std": 844.2774326778062,
+          "cv": 0.5603977801870422
+        },
+        {
+          "drg_code": "FS34",
+          "count": 964,
+          "mean": 1542.1171708815814,
+          "std": 855.8144050347591,
+          "cv": 0.5549606872903932
+        }
+      ],
+      "risk": "可能存在过度诊疗或虚记费用"
+    },
+    {
+      "level": "P0",
+      "module": "M11-死亡冒领",
+      "title": "23人死亡后继续领取养老金",
+      "detail": [
+        {
+          "id_card": 510100000000004331,
+          "name": "退休人员0020",
+          "death_date": "2024-11-25",
+          "last_payment_date": "2026-06-01",
+          "months_after": 19,
+          "est_overpayment": 34200
+        },
+        {
+          "id_card": 510100000000000982,
+          "name": "退休人员0021",
+          "death_date": "2024-09-22",
+          "last_payment_date": "2026-07-24",
+          "months_after": 22,
+          "est_overpayment": 39600
+        },
+        {
+          "id_card": 510100000000003913,
+          "name": "退休人员0023",
+          "death_date": "2024-03-26",
+          "last_payment_date": "2026-07-20",
+          "months_after": 28,
+          "est_overpayment": 98000
+        },
+        {
+          "id_card": 510100000000001870,
+          "name": "退休人员0156",
+          "death_date": "2024-11-03",
+          "last_payment_date": "2026-07-07",
+          "months_after": 20,
+          "est_overpayment": 70000
+        },
+        {
+          "id_card": 510100000000002015,
+          "name": "退休人员0231",
+          "death_date": "2024-03-26",
+          "last_payment_date": "2026-07-11",
+          "months_after": 28,
+          "est_overpayment": 224000
+        },
+        {
+          "id_card": 510100000000003365,
+          "name": "退休人员0259",
+          "death_date": "2024-07-13",
+          "last_payment_date": "2026-05-09",
+          "months_after": 22,
+          "est_overpayment": 110000
+        },
+        {
+          "id_card": 510100000000001181,
+          "name": "退休人员0347",
+          "death_date": "2023-12-16",
+          "last_payment_date": "2026-05-10",
+          "months_after": 29,
+          "est_overpayment": 52200
+        },
+        {
+          "id_card": 510100000000003043,
+          "name": "退休人员0429",
+          "death_date": "2024-03-21",
+          "last_payment_date": "2026-06-07",
+          "months_after": 27,
+          "est_overpayment": 48600
+        },
+        {
+          "id_card": 510100000000004609,
+          "name": "退休人员0446",
+          "death_date": "2025-05-25",
+          "last_payment_date": "2026-05-12",
+          "months_after": 12,
+          "est_overpayment": 42000
+        },
+        {
+          "id_card": 510100000000004650,
+          "name": "退休人员0682",
+          "death_date": "2023-10-14",
+          "last_payment_date": "2026-07-26",
+          "months_after": 33,
+          "est_overpayment": 82500
+        },
+        {
+          "id_card": 510100000000004601,
+          "name": "退休人员0697",
+          "death_date": "2026-04-14",
+          "last_payment_date": "2026-06-14",
+          "months_after": 2,
+          "est_overpayment": 16000
+        },
+        {
+          "id_card": 510100000000003969,
+          "name": "退休人员0743",
+          "death_date": "2024-12-21",
+          "last_payment_date": "2026-06-19",
+          "months_after": 18,
+          "est_overpayment": 63000
+        },
+        {
+          "id_card": 510100000000004014,
+          "name": "退休人员0791",
+          "death_date": "2024-12-25",
+          "last_payment_date": "2026-06-14",
+          "months_after": 18,
+          "est_overpayment": 144000
+        },
+        {
+          "id_card": 510100000000003668,
+          "name": "退休人员0828",
+          "death_date": "2025-03-01",
+          "last_payment_date": "2026-07-22",
+          "months_after": 16,
+          "est_overpayment": 80000
+        },
+        {
+          "id_card": 510100000000001869,
+          "name": "退休人员0847",
+          "death_date": "2024-01-06",
+          "last_payment_date": "2026-06-26",
+          "months_after": 29,
+          "est_overpayment": 101500
+        },
+        {
+          "id_card": 510100000000004214,
+          "name": "退休人员0865",
+          "death_date": "2025-01-31",
+          "last_payment_date": "2026-07-09",
+          "months_after": 18,
+          "est_overpayment": 90000
+        },
+        {
+          "id_card": 510100000000002132,
+          "name": "退休人员0866",
+          "death_date": "2024-09-11",
+          "last_payment_date": "2026-05-26",
+          "months_after": 20,
+          "est_overpayment": 70000
+        },
+        {
+          "id_card": 510100000000000452,
+          "name": "退休人员0887",
+          "death_date": "2024-06-07",
+          "last_payment_date": "2026-06-14",
+          "months_after": 24,
+          "est_overpayment": 43200
+        },
+        {
+          "id_card": 510100000000004331,
+          "name": "退休人员0020",
+          "death_date": "2024-11-25",
+          "last_payment_date": "2026-05-22",
+          "months_after": 18,
+          "est_overpayment": 45000
+        },
+        {
+          "id_card": 510100000000002608,
+          "name": "退休人员0919",
+          "death_date": "2025-01-01",
+          "last_payment_date": "2026-06-24",
+          "months_after": 17,
+          "est_overpayment": 30600
+        },
+        {
+          "id_card": 510100000000000291,
+          "name": "退休人员0924",
+          "death_date": "2025-09-11",
+          "last_payment_date": "2026-06-28",
+          "months_after": 9,
+          "est_overpayment": 45000
+        },
+        {
+          "id_card": 510100000000000847,
+          "name": "退休人员0966",
+          "death_date": "2025-05-19",
+          "last_payment_date": "2026-05-17",
+          "months_after": 12,
+          "est_overpayment": 21600
+        },
+        {
+          "id_card": 510100000000002693,
+          "name": "退休人员0992",
+          "death_date": "2026-05-05",
+          "last_payment_date": "2026-05-17",
+          "months_after": 0,
+          "est_overpayment": 0
+        }
+      ],
+      "risk": "估算多支付 1,551,000 元"
+    },
+    {
+      "level": "P1",
+      "module": "M14-非工伤用药",
+      "title": "外伤职工结算100条非外伤用药",
+      "detail": [
+        {
+          "drug_name": "阿托伐他汀钙片",
+          "institution_name": "医院G",
+          "person_count": 2,
+          "total_cost": 7207.104736492838
+        },
+        {
+          "drug_name": "氨氯地平片",
+          "institution_name": "医院K",
+          "person_count": 3,
+          "total_cost": 5969.906563345636
+        },
+        {
+          "drug_name": "肺力咳合剂",
+          "institution_name": "医院I",
+          "person_count": 1,
+          "total_cost": 5389.593795143093
+        },
+        {
+          "drug_name": "蓝芩口服液",
+          "institution_name": "医院N",
+          "person_count": 2,
+          "total_cost": 4665.463043593963
+        },
+        {
+          "drug_name": "氨氯地平片",
+          "institution_name": "医院O",
+          "person_count": 2,
+          "total_cost": 4338.677516994889
+        },
+        {
+          "drug_name": "硝苯地平控释片",
+          "institution_name": "医院L",
+          "person_count": 2,
+          "total_cost": 4314.147618853894
+        },
+        {
+          "drug_name": "阿托伐他汀钙片",
+          "institution_name": "医院E",
+          "person_count": 2,
+          "total_cost": 4154.2962778218425
+        },
+        {
+          "drug_name": "磷酸西格列汀片",
+          "institution_name": "医院I",
+          "person_count": 2,
+          "total_cost": 3975.6231727487393
+        },
+        {
+          "drug_name": "肺力咳合剂",
+          "institution_name": "医院S",
+          "person_count": 2,
+          "total_cost": 3670.9481668392445
+        },
+        {
+          "drug_name": "蓝芩口服液",
+          "institution_name": "医院F",
+          "person_count": 2,
+          "total_cost": 3225.9019724202894
+        },
+        {
+          "drug_name": "肺力咳合剂",
+          "institution_name": "医院N",
+          "person_count": 2,
+          "total_cost": 3199.869829116993
+        },
+        {
+          "drug_name": "肺力咳合剂",
+          "institution_name": "医院O",
+          "person_count": 1,
+          "total_cost": 2993.4375181390506
+        },
+        {
+          "drug_name": "肺力咳合剂",
+          "institution_name": "医院J",
+          "person_count": 1,
+          "total_cost": 2966.3761414074124
+        },
+        {
+          "drug_name": "盐酸二甲双胍片",
+          "institution_name": "医院C",
+          "person_count": 1,
+          "total_cost": 2915.424848128301
+        },
+        {
+          "drug_name": "硝苯地平控释片",
+          "institution_name": "医院O",
+          "person_count": 1,
+          "total_cost": 2857.461818992273
+        },
+        {
+          "drug_name": "阿托伐他汀钙片",
+          "institution_name": "医院L",
+          "person_count": 1,
+          "total_cost": 2815.655441659592
+        },
+        {
+          "drug_name": "氨氯地平片",
+          "institution_name": "医院S",
+          "person_count": 1,
+          "total_cost": 2756.565624068612
+        },
+        {
+          "drug_name": "硝苯地平控释片",
+          "institution_name": "医院S",
+          "person_count": 1,
+          "total_cost": 2744.926645139927
+        },
+        {
+          "drug_name": "厄贝沙坦片",
+          "institution_name": "医院I",
+          "person_count": 1,
+          "total_cost": 2661.54187511528
+        },
+        {
+          "drug_name": "厄贝沙坦片",
+          "institution_name": "医院F",
+          "person_count": 2,
+          "total_cost": 2610.6952796161954
+        }
+      ],
+      "risk": "涉及金额 156,378 元"
+    },
+    {
+      "level": "P0",
+      "module": "M15-辅具异常",
+      "title": "发现1条辅助器具异常配置",
+      "detail": [
+        {
+          "person_id": "P002599",
+          "device_type": "助听器",
+          "prev_date": "2022-07-24",
+          "curr_date": "2025-09-16",
+          "days_gap": 1150,
+          "price": 3000,
+          "flag": "MIN_YEAR"
+        }
+      ],
+      "risk": "疑似利用最低使用年限规则套取基金"
+    },
+    {
+      "level": "P0",
+      "module": "飞检15领域",
+      "title": "12个高固有风险领域需优先飞检",
+      "detail": [
+        {
+          "field": "骨科",
+          "risk_desc": "高值耗材虚记、假体串换",
+          "inherent_risk": "🔴 高",
+          "check_method": "进销存耗材追踪 + 手术记录 vs 结算比对"
+        },
+        {
+          "field": "心内科",
+          "risk_desc": "支架/球囊/导管/起搏器虚记",
+          "inherent_risk": "🔴 高",
+          "check_method": "支架序列号追踪 + DSA影像核实"
+        },
+        {
+          "field": "血透",
+          "risk_desc": "虚记透析次数、去世后仍收费",
+          "inherent_risk": "🔴 高",
+          "check_method": "透析记录 vs 结算次数 + 死亡数据交叉"
+        },
+        {
+          "field": "口腔",
+          "risk_desc": "种植牙串换、义齿超标准",
+          "inherent_risk": "🔴 高",
+          "check_method": "种植体追溯码 + 实物盘点"
+        },
+        {
+          "field": "眼科",
+          "risk_desc": "白内障手术耗材串换",
+          "inherent_risk": "🔴 高",
+          "check_method": "晶体序列号追踪 + 手术视频核实"
+        },
+        {
+          "field": "精神医学",
+          "risk_desc": "挂床住院、虚记治疗项目",
+          "inherent_risk": "🔴 高",
+          "check_method": "住院患者现场核查 + 病历审阅"
+        },
+        {
+          "field": "康复医学",
+          "risk_desc": "过度治疗、虚记康复次数",
+          "inherent_risk": "🔴 高",
+          "check_method": "治疗记录 vs 结算项目 + 患者回访"
+        },
+        {
+          "field": "肿瘤科",
+          "risk_desc": "靶向药超适应症",
+          "inherent_risk": "🟡 中",
+          "check_method": "适应症审查 + 基因检测结果核实"
+        },
+        {
+          "field": "检验检查",
+          "risk_desc": "打包收费、虚记检查",
+          "inherent_risk": "🔴 高",
+          "check_method": "LIS系统日志 vs 结算明细"
+        },
+        {
+          "field": "影像学",
+          "risk_desc": "第三方无资质、AI实为人工",
+          "inherent_risk": "🟡 中",
+          "check_method": "第三方机构资质审查 + DICOM元数据"
+        },
+        {
+          "field": "中医理疗",
+          "risk_desc": "虚记针灸/推拿次数",
+          "inherent_risk": "🔴 高",
+          "check_method": "治疗记录 vs 结算 + 患者回访"
+        },
+        {
+          "field": "血液制品",
+          "risk_desc": "白蛋白滥用、串换",
+          "inherent_risk": "🔴 高",
+          "check_method": "出入库记录 + 适应症审核"
+        },
+        {
+          "field": "定点药店A",
+          "risk_desc": "刷卡套现",
+          "inherent_risk": "🔴 高",
+          "check_method": "刷卡记录异常聚类 + 监控调阅"
+        },
+        {
+          "field": "定点药店B",
+          "risk_desc": "日用品串换",
+          "inherent_risk": "🔴 高",
+          "check_method": "药品进销存品类 vs 刷卡品类"
+        },
+        {
+          "field": "定点药店C",
+          "risk_desc": "处方药无方销售",
+          "inherent_risk": "🟡 中",
+          "check_method": "处方真实性核实 + 电话回访"
+        }
+      ]
+    },
+    {
+      "level": "P0",
+      "module": "刑事责任映射(法发2024-6号)",
+      "title": "根据法发2024-6号，以下违规类型可直接入刑",
+      "detail": [
+        {
+          "type": "分解住院",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第5条第4项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "挂床住院",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第5条第4项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "串换药品",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第5条第6项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "虚记费用",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第5条第3项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "冒名就医",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第6条第2项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "死亡冒领",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第6条第1项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "重复参保",
+          "crime": "诈骗罪(刑法266条)",
+          "ref": "法发2024-6号第6条第4项",
+          "max_penalty": "无期徒刑"
+        },
+        {
+          "type": "药品回流",
+          "crime": "掩饰隐瞒犯罪所得罪(刑法312条)",
+          "ref": "法发2024-6号第9条",
+          "max_penalty": "7年有期徒刑"
+        }
+      ],
+      "risk": "注意：行政取证可直接作为刑事定案证据（第18条）"
+    }
+  ],
+  "fly_inspection_fields": {
+    "骨科": "高值耗材虚记、假体串换",
+    "心内科": "支架/球囊/导管/起搏器虚记",
+    "血透": "虚记透析次数、去世后仍收费",
+    "口腔": "种植牙串换、义齿超标准",
+    "眼科": "白内障手术耗材串换",
+    "精神医学": "挂床住院、虚记治疗项目",
+    "康复医学": "过度治疗、虚记康复次数",
+    "肿瘤科": "靶向药超适应症",
+    "检验检查": "打包收费、虚记检查",
+    "影像学": "第三方无资质、AI实为人工",
+    "中医理疗": "虚记针灸/推拿次数",
+    "血液制品": "白蛋白滥用、串换",
+    "定点药店A": "刷卡套现",
+    "定点药店B": "日用品串换",
+    "定点药店C": "处方药无方销售"
+  }
+}

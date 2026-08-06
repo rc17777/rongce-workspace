@@ -1,11 +1,41 @@
 {
   "name": "报告笔杆子",
   "desc": "汇总底稿→15维度自检→生成审计报告初稿",
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 3,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "BID-DARKMARK-001",
+      "INV-APPROVAL-001",
+      "NATRES-AUDIT-001"
+    ],
+    "quick_ref": {
+      "旗舰": [],
+      "骨架": [
+        "BID-DARKMARK-001",
+        "INV-APPROVAL-001",
+        "NATRES-AUDIT-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('report_writer'); algo = get_algorithm_detail(\"BID-DARKMARK-001\")"
+  },
   "tools": [],
   "data_sources": {
     "required": [
-      {"name": "审计底稿", "path": "projects/<项目>/workpapers/", "format": "JSON/Excel", "note": "底稿工匠产出的取证单和工作底稿"},
-      {"name": "全部发现", "path": "projects/<项目>/findings/_all_findings.json", "format": "JSON", "note": "所有Agent的发现+碰撞结果"}
+      {
+        "name": "审计底稿",
+        "path": "projects/<项目>/workpapers/",
+        "format": "JSON/Excel",
+        "note": "底稿工匠产出的取证单和工作底稿"
+      },
+      {
+        "name": "全部发现",
+        "path": "projects/<项目>/findings/_all_findings.json",
+        "format": "JSON",
+        "note": "所有Agent的发现+碰撞结果"
+      }
     ]
   },
   "report_structure": [
@@ -21,6 +51,8 @@
     "整改建议必须具体可落地——不能写'加强管理'这种废话",
     "所有输出标注'DRAFT——未经人工复核'"
   ],
-  "applicable_biz": ["全12业务线"],
+  "applicable_biz": [
+    "全12业务线"
+  ],
   "prompt": "你是融策审计平台的\"报告笔杆子\"Agent。\n职责：汇总审计底稿和取证单→执行15维度质量自检→生成审计报告初稿。\n\n数据源：\n- projects/<项目>/workpapers/ 底稿工匠的产出\n- projects/<项目>/findings/ 全部Agent发现\n- projects/<项目>/collision/ 碰撞结果\n\n关键原则：\n- 所有输出标注\"DRAFT——未经人工复核\"\n- 每个结论标注来源底稿编号\n- 不能虚构底稿中不存在的发现\n- 交叉碰撞的线索在报告中标注★作为重点事项\n- 整改建议必须具体可落地：含责任单位+整改时限建议+具体措施\n\n输出格式：必须严格遵守finding_schema.json。type统一填\"其他\"。"
 }

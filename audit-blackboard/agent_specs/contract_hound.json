@@ -1,16 +1,95 @@
 {
   "name": "合同猎犬",
   "desc": "扫描全量合同→提取关键条款→比对标书/验收单→发现违规",
-  "tools": ["contract_review"],
+  "algorithms": {
+    "version": "v5.0",
+    "total_assigned": 18,
+    "registry": "audit-blackboard/algorithm_registry.json",
+    "loader": "from audit_blackboard.algorithm_loader import get_algorithms_for_agent, get_algorithm_detail",
+    "assigned": [
+      "AGRI2-001",
+      "BUDGET-010",
+      "CHK-LOSS-001",
+      "CONCESS-DEBT-001",
+      "ECONRESP2-001",
+      "ENV3-003",
+      "HOSP-PARAM-001",
+      "INV-APPROVAL-001",
+      "ITCOST-001",
+      "LOSS-PENETRATE-001",
+      "PROC-FAKE-001",
+      "PROC2-001",
+      "SOE-MIDMAN-001",
+      "SOE3-001",
+      "SOE3-002",
+      "SOE3-003",
+      "SUPV-POCKET-001",
+      "VENDOR-VERIFY-001"
+    ],
+    "quick_ref": {
+      "旗舰": [
+        "CHK-LOSS-001",
+        "PROC-FAKE-001",
+        "SOE-MIDMAN-001",
+        "SUPV-POCKET-001"
+      ],
+      "骨架": [
+        "AGRI2-001",
+        "BUDGET-010",
+        "CONCESS-DEBT-001",
+        "ECONRESP2-001",
+        "ENV3-003",
+        "HOSP-PARAM-001",
+        "INV-APPROVAL-001",
+        "ITCOST-001",
+        "LOSS-PENETRATE-001",
+        "PROC2-001",
+        "SOE3-001",
+        "SOE3-002",
+        "SOE3-003",
+        "VENDOR-VERIFY-001"
+      ]
+    },
+    "usage": "from algorithm_loader import get_algorithms_for_agent, get_algorithm_detail; algos = get_algorithms_for_agent('contract_hound'); algo = get_algorithm_detail(\"AGRI2-001\")"
+  },
+  "tools": [
+    "contract_review"
+  ],
   "data_sources": {
     "required": [
-      {"name": "合同台账", "path": "raw_data/合同/合同台账.xlsx", "format": ".xlsx或.csv", "columns": "合同编号 | 合同名称 | 供应商 | 签订日期 | 合同金额 | 已付金额 | 未付金额 | 履约状态 | 验收日期", "note": "合同编号必须唯一，否则标记冲突"},
-      {"name": "验收单", "path": "raw_data/合同/验收单/", "format": ".pdf或.docx", "note": "用于与合同条款比对：验收日期/数量/质量标准"}
+      {
+        "name": "合同台账",
+        "path": "raw_data/合同/合同台账.xlsx",
+        "format": ".xlsx或.csv",
+        "columns": "合同编号 | 合同名称 | 供应商 | 签订日期 | 合同金额 | 已付金额 | 未付金额 | 履约状态 | 验收日期",
+        "note": "合同编号必须唯一，否则标记冲突"
+      },
+      {
+        "name": "验收单",
+        "path": "raw_data/合同/验收单/",
+        "format": ".pdf或.docx",
+        "note": "用于与合同条款比对：验收日期/数量/质量标准"
+      }
     ],
     "optional": [
-      {"name": "付款凭证", "path": "raw_data/合同/付款记录.xlsx", "format": ".xlsx", "note": "用于验证付款时间是否先于合同签订"},
-      {"name": "招标文件（合同对照）", "path": "raw_data/招投标/招标文件.pdf", "format": ".pdf", "note": "比对合同条款是否偏离招标要求（如规格/含棉量等）"},
-      {"name": "三方比价记录", "path": "raw_data/合同/比价记录/", "format": ".pdf", "note": "验证是否履行比价程序"}
+      {
+        "name": "付款凭证",
+        "path": "raw_data/合同/付款记录.xlsx",
+        "format": ".xlsx",
+        "note": "用于验证付款时间是否先于合同签订"
+      },
+      {
+        "name": "招标文件（合同对照）",
+        "path": "raw_data/招投标/招标文件.pdf",
+        "format": ".pdf",
+        "note": "比对合同条款是否偏离招标要求（如规格/含棉量等）"
+      },
+      {
+        "name": "三方比价记录",
+        "path": "raw_data/合同/比价记录/",
+        "format": ".pdf",
+        "note": "验证是否履行比价程序"
+      }
     ]
   },
   "quality_checks": [
@@ -19,6 +98,14 @@
     "合同无验收条款 → 高置信度合同违规",
     "付款日期<签订日期 → 先付款后签合同，高置信度程序违规"
   ],
-  "applicable_biz": ["经济责任审计","专项资金审计","招投标审计","国企审计","工程审计","政府补贴审计","成本效益审计"],
+  "applicable_biz": [
+    "经济责任审计",
+    "专项资金审计",
+    "招投标审计",
+    "国企审计",
+    "工程审计",
+    "政府补贴审计",
+    "成本效益审计"
+  ],
   "prompt": "你是融策审计平台的\"合同猎犬\"Agent。\n职责：扫描全量合同文件，提取关键条款，比对招标文件/投标文件/验收单/付款记录。\n\n数据源：优先读取 raw_data/合同/合同台账.xlsx。\n使用 contract_review 工具对每份合同执行12项风险规则检测。\n\n发现类型：\n- 合同违规：缺验收条款/质保条款、付款条件异常、价格偏离市场价\n- 程序违规：先付款后签合同、无三方比价、拆分合同规避招标\n- 虚增成本：合同金额与验收单不符、虚增变更签证\n\n输出格式：必须严格遵守finding_schema.json。entities字段必须包含合同编号（如HT-2023-045）。\n这是碰撞分析的基础——合同编号是最重要的实体标识。"
 }

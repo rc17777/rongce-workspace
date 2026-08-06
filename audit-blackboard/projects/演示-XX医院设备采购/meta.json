@@ -1,0 +1,17 @@
+{
+  "project_name": "演示-XX医院设备采购",
+  "biz_type": "招投标",
+  "agents": [
+    "data_scout",
+    "bid_hunter",
+    "review_sentinel"
+  ],
+  "created_at": "2026-08-06T01:41:46.961561+08:00",
+  "stage": "init",
+  "findings": {
+    "P0": [],
+    "P1": [],
+    "P2": []
+  },
+  "stages_completed": []
+}
