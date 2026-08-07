@@ -457,9 +457,16 @@ def main():
         else:
             failed_books.append((pdf_name, result.get('error', 'unknown')))
             log(f'❌ 失败: {pdf_name} - {result.get("error")}')
-            # 失败也跳过，不阻塞后续
+            # 修复(2026-08-08): 失败的书不再无条件标记 done，否则会像"能源审计方法"一样
+            # 被误报为已完成且永不重试。改为：跳过该书（防死循环）+ 失败留痕到 state。
             done_paths.add(pdf_path)
             state['done'] = list(done_paths)
+            failed_log = state.setdefault('failed_books', [])
+            failed_log.append({
+                'path': pdf_path, 'name': pdf_name,
+                'error': result.get('error', 'unknown'),
+                'time': time.strftime('%Y-%m-%d %H:%M:%S'),
+            })
             with open(STATE, 'w', encoding='utf-8') as f:
                 json.dump(state, f, ensure_ascii=False, indent=2)
     
