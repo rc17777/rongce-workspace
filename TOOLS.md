@@ -5,7 +5,9 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 ## 数据目录（换电脑时需迁移）
 
 - **杂志资料OCR**: `D:\杂志资料`（1086MB/1450文件，审计杂志OCR结果）
-- **备份规则**：换电脑时从旧D盘拷贝到新D盘根目录，路径保持一致
+- **审计书籍OCR**: 源 `E:\2026\审计方法&政策文件\审计相关书籍`（55本PDF，5.9GB）→ 输出 `E:\2026\审计方法&政策文件\_ocr_output`（96个md，14.5MB字，含 `_manifest.json` 索引）
+- **备份规则**：换电脑时从旧D盘拷贝到新D盘根目录，路径保持一致；**E盘审计书籍OCR目录也要同步迁移**（含源PDF+输出）
+- **manifest 重新生成**：`python scripts/regenerate_ocr_manifest.py`（自动统计页数/字数/覆盖率）
 
 ## 网络代理（Git push 依赖）
 
