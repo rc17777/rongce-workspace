@@ -42,3 +42,5 @@ maigret/
 # RAG索引产物（大文件，禁止入库）
 .rag_index/
 .rag_vector_index/
+temp_ocr/split_chunks/
+scripts/data_profiling/adapters/testdata/*.pdf
