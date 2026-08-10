@@ -38,3 +38,7 @@ tools/engineering/output_*.md
 
 # 宓屽浠撳簱
 maigret/
+
+# RAG索引产物（大文件，禁止入库）
+.rag_index/
+.rag_vector_index/
