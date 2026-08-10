@@ -66,6 +66,12 @@
       "items": {"type": "string"},
       "description": "参考法规条款"
     },
+    "cause_type": {
+      "type": "string",
+      "enum": ["执行偏差", "体制缺陷", "机制缺陷", "待研判"],
+      "default": "待研判",
+      "description": "成因归类（全数据穿透式范式·问题穿透），由分析Agent填写，为报告阶段分层分类建议提供输入：执行偏差=操作层问题，机制缺陷=管理/流程层问题，体制缺陷=制度/政策层问题"
+    },
     "related_findings": {
       "type": "array",
       "items": {"type": "string"},
