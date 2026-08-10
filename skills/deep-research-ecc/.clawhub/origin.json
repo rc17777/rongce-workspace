@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "deep-research-ecc",
+  "installedVersion": "1.0.0",
+  "installedAt": 1782897638113,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "a66a4c3346a795b834ff4b3c280e061dff2a4b5e042dcf3525136f07067d0d09",
+    "integrity": "sha256-pmpMM0anlbg0/0s8KA4GHf8qS14ELc81JRNvBwZ9DQk="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "12571f9450a9ab290652804aff420421ae00c4b07c6d4be1655f348673636d55"
+  }
+}

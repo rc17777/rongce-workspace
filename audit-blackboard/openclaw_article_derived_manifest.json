@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-08-08 08:05:41",
+  "mode": "本地资料库+Obsidian审计公众号/文章深挖模式",
+  "scanned_files": 929,
+  "deduped_source_docs": 544,
+  "duplicates_collapsed": 383,
+  "skipped_non_audit": 1,
+  "skipped_empty": 1,
+  "source_roots": [
+    "C:\\Users\\scrccpa\\.openclaw\\workspace\\obsidian-vault\\audit-articles",
+    "C:\\Users\\scrccpa\\.openclaw\\workspace\\obsidian-vault\\magazines",
+    "D:\\openclaw-workspace\\knowledge\\11-杂志文献"
+  ],
+  "algorithm_candidates": 664,
+  "rule_indicators": 2754,
+  "case_evidence": 1141,
+  "source_docs_by_kind": {
+    "OpenClaw本地杂志文献": 81,
+    "Obsidian杂志/文章笔记": 421,
+    "Obsidian审计公众号文章": 42
+  },
+  "scenes": {
+    "预算执行/财政收支": 200,
+    "内部控制/内审管理": 26,
+    "国资国企/财务审计": 140,
+    "工程建设/投资审计": 34,
+    "绩效评价/政策落实": 62,
+    "农业农村/乡村振兴": 9,
+    "民生资金/社保医保教育": 20,
+    "资源环境/能源": 22,
+    "经济责任": 13,
+    "金融/债务": 12,
+    "政府采购/招投标": 5,
+    "全场景通用": 1
+  },
+  "outputs": {
+    "alg_csv": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_algorithm_candidate_library.csv",
+    "rule_csv": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_rule_indicator_library.csv",
+    "case_csv": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_case_evidence_library.csv",
+    "alg_json": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_algorithm_candidate_library.json",
+    "rule_json": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_rule_indicator_library.json",
+    "case_json": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_case_evidence_library.json",
+    "xlsx": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_three_libraries.xlsx",
+    "manifest": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_manifest.json",
+    "report": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_article_derived_report.md"
+  },
+  "openclaw_blackboard_copies": [
+    "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_article_derived_algorithm_candidate_library.json",
+    "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_article_derived_rule_indicator_library.json",
+    "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_article_derived_case_evidence_library.json"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "obsidian-bases",
+  "installedVersion": "1.0.0",
+  "installedAt": 1783740801194,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "0a45f91b0cdc8ab1519e765148ee148d29fa28123b327adedd5e040ecd35e0e7",
+    "integrity": "sha256-CkX5GwzcirFRnnZRSO4UjSn6KBI7Mnre3V4EDs014Oc="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "1785f37a2b00d900d259ed57faac6a3f9c589f9fb40ec5ccdeba83daa850452c"
+  }
+}

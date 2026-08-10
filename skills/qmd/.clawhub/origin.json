@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "qmd",
+  "installedVersion": "1.0.0",
+  "installedAt": 1783740801387,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "d7d7badf195ae25449e5cbcccb9214dee7d76b51c761a13c9a13f2a82857c25e",
+    "integrity": "sha256-19e63xla4lRJ5cvMy5IU3ufXa1HHYaE8mhPyqChXwl4="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "8d0a688885a61062a655259d755d050e5a51a54d80fe1c1643756bf0dbba41cf"
+  }
+}

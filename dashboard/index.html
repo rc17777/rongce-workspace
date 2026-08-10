@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>融策 Agent 监控面板</title>
+<style>
+:root {
+  --bg: #0a0f1a;
+  --card-bg: #111827;
+  --card-hover: #1a2332;
+  --border: #1e293b;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #3b82f6;
+  --green: #10b981;
+  --red: #ef4444;
+  --yellow: #f59e0b;
+  --blue: #3b82f6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 网格背景 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container { max-width: 1600px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
+
+/* 头部 */
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; margin-bottom: 24px;
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+}
+.header-left { display: flex; align-items: center; gap: 12px; }
+.logo { font-size: 28px; }
+.header h1 { font-size: 20px; font-weight: 700; }
+.header-sub { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+.header-right { display: flex; align-items: center; gap: 12px; }
+.clock { font-size: 14px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.status-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block; margin-right: 6px;
+}
+.status-dot.online { background: var(--green); box-shadow: 0 0 8px var(--green); }
+
+/* 统计条 */
+.stats-bar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}
+.stat-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+  padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+}
+.stat-icon { font-size: 24px; opacity: 0.8; }
+.stat-value { font-size: 28px; font-weight: 700; }
+.stat-label { font-size: 12px; color: var(--text-dim); }
+
+/* 分类标签 */
+.cat-tabs {
+  display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+}
+.cat-tab {
+  padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;
+  background: var(--card-bg); border: 1px solid var(--border); color: var(--text-dim);
+  transition: all .2s; user-select: none;
+}
+.cat-tab:hover { border-color: var(--accent); color: var(--text); }
+.cat-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Agent 网格 */
+.agent-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.agent-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px; transition: all .2s; position: relative; overflow: hidden;
+}
+.agent-card:hover { border-color: var(--accent); background: var(--card-hover); }
+.agent-card.working { border-color: var(--green); }
+.agent-card.working::after {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: var(--green); animation: pulse-bar 1.5s ease-in-out infinite;
+}
+.agent-card.stuck { border-color: var(--yellow); }
+.agent-card.stuck::after {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: var(--yellow); animation: blink-bar .8s ease-in-out infinite;
+}
+.agent-card.error { border-color: var(--red); background: rgba(239,68,68,0.05); }
+.agent-card.completed { border-color: var(--blue); }
+.agent-card.offline { opacity: 0.5; }
+
+@keyframes pulse-bar {
+  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+@keyframes blink-bar {
+  0%,100% { opacity: 1; } 50% { opacity: 0; }
+}
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.card-name { display: flex; align-items: center; gap: 8px; }
+.card-icon { font-size: 22px; }
+.card-title { font-weight: 600; font-size: 15px; }
+.card-model { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+/* 状态指示灯 */
+.status-indicator {
+  display: flex; align-items: center; gap: 6px;
+}
+.status-light {
+  width: 12px; height: 12px; border-radius: 50%; position: relative;
+}
+.status-light.working {
+  background: var(--green); box-shadow: 0 0 12px rgba(16,185,129,0.6);
+  animation: pulse-dot 1s ease-in-out infinite;
+}
+.status-light.stuck {
+  background: var(--yellow); box-shadow: 0 0 12px rgba(245,158,11,0.6);
+  animation: blink-dot .6s ease-in-out infinite;
+}
+.status-light.error {
+  background: var(--red); box-shadow: 0 0 12px rgba(239,68,68,0.6);
+}
+.status-light.completed { background: var(--blue); }
+.status-light.idle { background: var(--text-muted); }
+.status-light.offline { background: #374151; }
+
+@keyframes pulse-dot {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+@keyframes blink-dot {
+  0%,100% { opacity: 1; } 50% { opacity: 0.2; }
+}
+
+.status-text { font-size: 12px; color: var(--text-dim); }
+
+/* 标签 */
+.card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.badge {
+  font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 600;
+}
+.badge-tier-t0 { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.badge-tier-t1 { background: rgba(59,130,246,0.2); color: #93c5fd; }
+.badge-tier-t2 { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+.badge-tier-t4 { background: rgba(148,163,184,0.15); color: #94a3b8; }
+.badge-region-domestic { background: rgba(245,158,11,0.15); color: #fcd34d; }
+.badge-region-overseas { background: rgba(139,92,246,0.15); color: #c4b5fd; }
+.badge-cost { background: rgba(148,163,184,0.1); color: #94a3b8; }
+
+/* 统计行 */
+.card-stats { display: flex; gap: 14px; font-size: 11px; color: var(--text-dim); }
+.card-stats span { display: flex; align-items: center; gap: 3px; }
+.stat-good { color: var(--green); }
+.stat-bad { color: var(--red); }
+
+.card-task { 
+  font-size: 11px; color: var(--text-muted); margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid var(--border); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* 告警面板 */
+.alerts-panel {
+  margin-top: 24px; background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.alerts-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px; border-bottom: 1px solid var(--border);
+}
+.alerts-header h2 { font-size: 16px; display: flex; align-items: center; gap: 8px; }
+.alert-count { font-size: 12px; color: var(--text-muted); }
+.alerts-list { max-height: 300px; overflow-y: auto; }
+.alert-item {
+  display: flex; align-items: flex-start; gap: 10px; padding: 10px 20px;
+  border-bottom: 1px solid rgba(30,41,59,0.5); font-size: 13px;
+}
+.alert-item:last-child { border-bottom: none; }
+.alert-level { 
+  width: 8px; height: 8px; border-radius: 50%; margin-top: 4px; flex-shrink: 0;
+}
+.alert-level.error { background: var(--red); }
+.alert-level.warn { background: var(--yellow); }
+.alert-level.info { background: var(--blue); }
+.alert-time { color: var(--text-muted); font-size: 11px; min-width: 50px; }
+.alert-agent { color: var(--accent); font-size: 11px; min-width: 70px; }
+.alert-msg { flex: 1; color: var(--text-dim); }
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .agent-grid { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .header { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+/* 设置区 */
+.settings-row {
+  display: flex; gap: 10px; margin-bottom: 20px; align-items: center;
+}
+.settings-row input {
+  flex: 1; padding: 8px 14px; background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-size: 13px; outline: none;
+}
+.settings-row input:focus { border-color: var(--accent); }
+.btn {
+  padding: 8px 18px; border-radius: 8px; font-size: 13px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--card-bg); color: var(--text);
+  transition: all .2s; white-space: nowrap;
+}
+.btn:hover { border-color: var(--accent); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { opacity: 0.9; }
+.btn-sm { padding: 4px 10px; font-size: 11px; }
+
+.empty-state {
+  text-align: center; padding: 40px 20px; color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 头部 -->
+  <div class="header">
+    <div class="header-left">
+      <span class="logo">🦡</span>
+      <div>
+        <h1>融策 Agent 监控面板</h1>
+        <div class="header-sub">18 Agents · 16 Models · 5 Tiers</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="connection" style="font-size:12px;color:var(--green)">● 已连接</span>
+      <span class="clock" id="clock">--</span>
+    </div>
+  </div>
+
+  <!-- 统计 -->
+  <div class="stats-bar">
+    <div class="stat-card"><span class="stat-icon">🟢</span><div><div class="stat-value" id="stat-working">0</div><div class="stat-label">运行中</div></div></div>
+    <div class="stat-card"><span class="stat-icon">⏸</span><div><div class="stat-value" id="stat-idle">18</div><div class="stat-label">空闲</div></div></div>
+    <div class="stat-card"><span class="stat-icon">🟡</span><div><div class="stat-value" id="stat-stuck">0</div><div class="stat-label">卡住</div></div></div>
+    <div class="stat-card"><span class="stat-icon">🔴</span><div><div class="stat-value" id="stat-error">0</div><div class="stat-label">异常</div></div></div>
+    <div class="stat-card"><span class="stat-icon">✅</span><div><div class="stat-value" id="stat-success">0</div><div class="stat-label">累计成功</div></div></div>
+    <div class="stat-card"><span class="stat-icon">📊</span><div><div class="stat-value" id="stat-total">0</div><div class="stat-label">总任务数</div></div></div>
+  </div>
+
+  <!-- Webhook 设置 -->
+  <div class="settings-row">
+    <input type="text" id="webhookUrl" placeholder="钉钉/企微 Webhook URL（告警自动推送）" />
+    <button class="btn btn-primary" onclick="saveWebhook()">保存</button>
+    <button class="btn" onclick="resetAll()">重置全部</button>
+  </div>
+
+  <!-- 分类标签 -->
+  <div class="cat-tabs" id="catTabs">
+    <div class="cat-tab active" data-cat="all">全部 (18)</div>
+    <div class="cat-tab" data-cat="核心审计">核心审计 (7)</div>
+    <div class="cat-tab" data-cat="工程咨询">工程咨询 (3)</div>
+    <div class="cat-tab" data-cat="绩效评价">绩效评价 (1)</div>
+    <div class="cat-tab" data-cat="专项检测">专项检测 (2)</div>
+    <div class="cat-tab" data-cat="数据运维">数据运维 (4)</div>
+    <div class="cat-tab" data-cat="方案撰写">方案撰写 (1)</div>
+  </div>
+
+  <!-- Agent 网格 -->
+  <div class="agent-grid" id="agentGrid"></div>
+
+  <!-- 告警面板 -->
+  <div class="alerts-panel">
+    <div class="alerts-header">
+      <h2>🚨 告警记录 <span class="alert-count" id="alertCount"></span></h2>
+      <button class="btn btn-sm" onclick="clearAlerts()">清空</button>
+    </div>
+    <div class="alerts-list" id="alertsList">
+      <div class="empty-state">暂无告警 🎉</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = '';
+
+// 状态颜色映射
+const STATUS = {
+  idle:      { label: '空闲',   color: '#6b7280', cssClass: 'idle' },
+  working:   { label: '运行中', color: '#10b981', cssClass: 'working' },
+  stuck:     { label: '卡住',   color: '#f59e0b', cssClass: 'stuck' },
+  error:     { label: '异常',   color: '#ef4444', cssClass: 'error' },
+  completed: { label: '完成',   color: '#3b82f6', cssClass: 'completed' },
+  offline:   { label: '离线',   color: '#374151', cssClass: 'offline' },
+};
+
+let currentCat = 'all';
+let lastState = null;
+
+// ─── 初始化 ─────────────────────────────────────
+async function init() {
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentCat = tab.dataset.cat;
+      renderAgents();
+    });
+  });
+
+  await poll();
+  setInterval(poll, 3000);
+  setInterval(updateClock, 1000);
+  updateClock();
+}
+
+// ─── 数据获取 ────────────────────────────────────
+async function poll() {
+  try {
+    const resp = await fetch(`${API_BASE}/api/state`);
+    if (!resp.ok) throw new Error('API error');
+    const data = await resp.json();
+    lastState = data;
+    updateStats(data);
+    renderAgents();
+    renderAlerts(data.alerts);
+    document.getElementById('webhookUrl').value = data.stats.webhookUrl || '';
+    document.getElementById('connection').innerHTML = '<span style="color:#10b981">● 已连接</span>';
+  } catch (e) {
+    document.getElementById('connection').innerHTML = '<span style="color:#ef4444">● 断开</span>';
+  }
+}
+
+// ─── 统计 ────────────────────────────────────────
+function updateStats(data) {
+  let working = 0, idle = 0, stuck = 0, error = 0;
+  for (const [id, info] of Object.entries(data.agents)) {
+    if (info.status === 'working') working++;
+    else if (info.status === 'idle') idle++;
+    else if (info.status === 'stuck') stuck++;
+    else if (info.status === 'error') error++;
+  }
+  document.getElementById('stat-working').textContent = working;
+  document.getElementById('stat-idle').textContent = idle;
+  document.getElementById('stat-stuck').textContent = stuck;
+  document.getElementById('stat-error').textContent = error;
+  document.getElementById('stat-success').textContent = data.stats.totalSuccess || 0;
+  document.getElementById('stat-total').textContent = data.stats.totalTasks || 0;
+}
+
+// ─── Agent 卡片 ──────────────────────────────────
+function renderAgents() {
+  if (!lastState) return;
+  const grid = document.getElementById('agentGrid');
+  const { agents, agentMeta } = lastState;
+
+  grid.innerHTML = '';
+  for (const [id, info] of Object.entries(agents)) {
+    const meta = agentMeta[id];
+    if (!meta) continue;
+    if (currentCat !== 'all' && meta.cat !== currentCat) continue;
+
+    const st = STATUS[info.status] || STATUS.idle;
+    const card = document.createElement('div');
+    card.className = `agent-card ${st.cssClass}`;
+
+    const tierClass = meta.tier.toLowerCase().replace('→', '-').startsWith('t0') ? 't0' : meta.tier.toLowerCase().replace('→', '-');
+    const regionClass = meta.region === '国产' ? 'domestic' : 'overseas';
+    const successRate = info.taskCount > 0 ? Math.round(info.successCount / info.taskCount * 100) : '--';
+
+    card.innerHTML = `
+      <div class="card-header">
+        <div class="card-name">
+          <span class="card-icon">${meta.icon}</span>
+          <div>
+            <div class="card-title">${meta.name}</div>
+            <div class="card-model">${meta.model}</div>
+          </div>
+        </div>
+        <div class="status-indicator">
+          <div class="status-light ${st.cssClass}"></div>
+          <span class="status-text">${st.label}</span>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-tier-${tierClass}">${meta.tier}</span>
+        <span class="badge badge-region-${regionClass}">${meta.region}</span>
+        <span class="badge badge-cost">${meta.cost}</span>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">${meta.desc}</div>
+      <div class="card-stats">
+        <span>📦 ${info.taskCount}</span>
+        <span class="stat-good">✅ ${info.successCount}</span>
+        <span class="stat-bad">❌ ${info.failCount}</span>
+        <span>📈 ${successRate}%</span>
+      </div>
+      ${info.currentTask ? `<div class="card-task">🔄 ${info.currentTask}</div>` : ''}
+      ${info.lastError ? `<div class="card-task" style="color:var(--red)">⚠ ${info.lastError}</div>` : ''}
+    `;
+    grid.appendChild(card);
+  }
+}
+
+// ─── 告警 ────────────────────────────────────────
+function renderAlerts(alerts) {
+  const list = document.getElementById('alertsList');
+  document.getElementById('alertCount').textContent = `(${alerts.length} 条)`;
+
+  if (!alerts || alerts.length === 0) {
+    list.innerHTML = '<div class="empty-state">暂无告警 🎉</div>';
+    return;
+  }
+
+  list.innerHTML = alerts.slice(0, 30).map(a => `
+    <div class="alert-item">
+      <div class="alert-level ${a.level}"></div>
+      <span class="alert-time">${a.time}</span>
+      <span class="alert-agent">${a.agentName}</span>
+      <span class="alert-msg">${a.message}</span>
+    </div>
+  `).join('');
+}
+
+// ─── Webhook ─────────────────────────────────────
+async function saveWebhook() {
+  const url = document.getElementById('webhookUrl').value.trim();
+  try {
+    const resp = await fetch(`${API_BASE}/api/webhook`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({url})
+    });
+    if (resp.ok) alert('Webhook 已保存');
+  } catch(e) { alert('保存失败'); }
+}
+
+// ─── 重置 ────────────────────────────────────────
+async function resetAll() {
+  if (!confirm('确认重置所有 Agent 状态？')) return;
+  try {
+    await fetch(`${API_BASE}/api/reset`, {method: 'POST'});
+    await poll();
+  } catch(e) {}
+}
+
+async function clearAlerts() {
+  await resetAll();
+}
+
+// ─── 时钟 ────────────────────────────────────────
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent = 
+    now.toLocaleString('zh-CN', { hour12: false });
+}
+
+// ─── 启动 ────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

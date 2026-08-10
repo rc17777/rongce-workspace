@@ -1,0 +1,18 @@
+integration_done
+timestamp: 2026-08-06T01:26:00+08:00
+task: 从registry提取Agent映射数据，补齐8个辅助Agent和集成文档
+status: COMPLETED
+
+8 auxiliary agents updated:
+- adjustment_scribe.json: 2 algorithms (AGRI3-005, TAX-ESCAPE-001)
+- data_classifier.json: 1 algorithm (BID-DARKMARK-001)
+- data_desensitizer.json: 0 algorithms (纯工具Agent)
+- expert_bias_detector.json: 0 algorithms (无算法依赖)
+- meeting_minutes_analyzer.json: 1 algorithm (WHISTLE-FLOW-001)
+- ocr_processor.json: 0 algorithms (纯工具Agent)
+- plan_writer.json: 1 algorithm (PERF-COST-001)
+- report_writer.json: 3 algorithms (BID-DARKMARK-001, INV-APPROVAL-001, NATRES-AUDIT-001)
+
+ALGORITHM_INTEGRATION.md: rewritten with complete 18-agent matrix, notes, v5.0 stats.
+Verified: registry agent_algorithm_map ↔ agent_specs data consistency 100%.
+249 total assignments, 66 flagship, 183 skeleton.

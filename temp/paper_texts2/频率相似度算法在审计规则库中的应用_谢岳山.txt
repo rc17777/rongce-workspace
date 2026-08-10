@@ -1,0 +1,322 @@
+154 2012，48（28） ComputerEngineeringandApplications计算机工程与应用
+频率相似度算法在审计规则库中的应用
+谢岳山1，樊晓平1，廖志芳2，邱丽霞2
+XIEYueshan1,FAN Xiaoping1,LIAO Zhifang2,QIU Lixia2
+1.中南大学 信息科学与工程学院，长沙 410075
+2.中南大学 软件学院，长沙 410002
+1.CollegeofInformationScienceandEngineering,CentralSouthUniversity,Changsha410075,China
+2.CollegeofSoftware,CentralSouthUniversity,Changsha410002,China
+XIE Yueshan, FAN Xiaoping, LIAO Zhifang, et al. Application of frequency similarity algorithm in audit
+rulebase.ComputerEngineeringandApplications,2012,48（28）：154-158.
+Abstract：AssentencesemanticsimilarityalgorithmsbasedonHowNetignoretheweightthatdifferentwordshave
+different contribution to the sentence similarity value, the similarity result is not reasonable based on these algo-
+rithms. In order to solve this problem, the paper improves the traditional semantic similarity algorithm by adding a
+frequent function of words in corpus as a weight factor into the final sentence semantic similarity algorithm, this
+functioncandecreasetheproportionthathighfrequencewordsdevotetohighsentencesimilarityvalueandimprove
+the accuracy. In aspect of algorithm application, it is known that audit methods summarized by auditing administra-
+tion are always reduplicated and not clear, in order to reuse these audit methods, this paper builds an audit rule base
+according to the audit methods. On this basis, it adopts the improved semantic similarity algorithm to calculate the
+similarityvaluebetweenuserinputandrulesinauditrulebase.Itwillreturnthecorrespondingauditmethodsofthe
+auditruleswhosesimilarityvaluesatisfythegiventhreshold,auditorscanpickthemostappropriateauditmethodto
+audittheprogramme.Theapplicationshowsthealgorithmimprovestheauditefficiency.
+Keywords：semanticsimilarity;auditmethod;auditrulebase;rulematching
+摘 要：在语句语义相似度计算的算法中，没有考虑语句中的不同词语对语句之间相似度值的不同贡献程度，
+以致计算结果不理想。为此提出了基于频率函数的改进词语相似度算法，该算法将词语在语料库中的频率函
+数作为权重值，引入至语句的词语相似度计算中，以降低高频率词语在语句相似度值中的比重，提高算法精确
+率。由于当前审计方法存在散、乱、重复等现象，为了更好地复用已有的审计方法，将根据审计方法建立审计
+规则库，在此基础上，利用上述改进的语义相似度算法，计算用户输入与审计规则之间的相似度值，返回满足
+相似度阈值条件的审计规则所对应的审计方法，用户根据所返回的审计方法，选择合适的审计方法进行审计
+工作。实际应用表明，该算法的应用减少了人工搜索审计方法的时间，提高了审计效率。
+关键词：语义相似度；审计方法；审计规则库；规则匹配
+文章编号：1002-8331（2012）28-0154-05 文献标识码：A 中图分类号：TP311
+1 引言 展，例如，在信息检索、机器翻译、信息过滤、自动问
+语义相似度计算在实际中有着广泛的应用，它 答系统等方面，相似度计算都是一个非常关键的技
+的研究状况直接决定着其他一些相关领域的研究进 术[1]。文本相似度[2-3]是表示两个或多个文本之间匹
+基金项目：国家科技支撑项目（No.2012BAH08B01）；湖南省2012自然科学基金（No.12JJ3074）。
+作者简介：谢岳山（1965—），男，高级经济师，博士，研究方向：数据挖掘在审计中的应用；樊晓平（1961—），教授，博导，研究方向：智能
+信息处理；廖志芳（1968—），女，副教授，博士；邱丽霞（1987—），女，硕士，研究方向：数据挖掘。E-mail：zfliao@csu.edu.cn
+收稿日期：2012-05-26 修回日期：2012-08-06
+DOI：10.3778/j.issn.1002-8331.2012.28.032
+
+谢岳山，樊晓平，廖志芳，等：频率相似度算法在审计规则库中的应用 2012，48（28） 155
+配程度的一个度量参数，相似度越大，说明对比的内 计算式。
+容相似程度越高，反之越低。 步骤3 计算词语之间的相似度值。在HowNet
+审计方法[4]是指审计人员为了行使审计职能、完 中，词语是由多个概念的描述组成的，故以步骤2为
+成审计任务、达到审计目标所采取的方式、手段和技 基础，最终计算式为：
+术的总称，而审计署总结的审计方法存在着散、乱、 sim(WW )= max sim(S S )
+1 2 i=12m;j=12n 1i 2j
+重复等现象，其原因是因为审计方法并不是一个单
+步骤4 计算语句之间的相似度值。在计算时，
+独的人或机构提出的，而是由分布在全国各地的审
+对传统的算法进行改进，将词语在语料库中的频率
+计人员根据不同的审计对象，对个体性经验的总结，
+函数 I(W)加入到最终计算式中。 I(W)函数所具有
+缺少向一般性规律的升华[5]。所以，对于相同或相似
+的特点是：词语在语料库中出现的频率越大，该词语
+的待审计项目，如何合理有效地利用已有的审计方
+对语句之间的相似度值贡献度越小，反之越大，改进
+法，进行当前审计项目和已有审计方法的匹配，为审
+后的语句语义相似度计算式为：
+计人员提供一个与待审计项目相关度最大的审计方
+sim(SenSen )=
+1 2
+法作为参考是本文的研究重点，因此本文的主要工
+m n
+åI(W )•I(W )•a åI(W )•I(W )•b
+作是将改进的语句语义相似度算法应用在审计规则 1i 2s i 1t 2j j
+(i=1 + j=1 )/2
+匹配过程中，以期找到相似度最高的审计方法。 m n
+其中 I(W)=e-λlog(num+1)/log(N+1) ，num表示词语W 在语
+2 改进的语句语义相似度算法 料库中出现的次数，N 表示语料库中词语的总数。s等
+本文中的语义相似度算法主要研究语句之间的 于W 与W (j=12n)取相似度最大值时，j的
+1i 2j
+语义相似度计算，并对算法进行适当的改进。该算 值，t 等于W (i=12m)与W 取相似度最大值
+1i 2j
+法将HowNet作为语义词典库，以HowNet的义原树
+时，i的值，λ>0是可调节的参数。
+状结构为基础，研究了义原之间、概念之间、词语之
+a =max(sim(W W )sim(W W )sim(W W ))
+i 1i 21 1i 22 1i 2n
+间的相似度计算。在算法改进时，将词语在语料库
+b =max(sim(W W )sim(W W )sim(W W ))
+j 11 2j 12 2j 1m 2j
+中的频率函数作为权重值引入至语句语义相似度计
+上述四个步骤描述了本文中经过改进的语句语
+算公式中，词语在语料库中出现的频率越大，对语句
+义相似度算法，由步骤4可知，语句之间的相似度值
+之间相似度值的贡献度越小。
+最终由词语之间的相似度加权构成。频率函数 I(w)
+2.1 改进的语句语义相似度算法描述
+的值决定着词语w对语句相似度值的贡献度大小，
+假设Sen,Sen 是两个语句；W、W 分别是Sen
+1 2 1 2 1 I(w)越大，表明词语w在语料库中出现的次数较少，
+和 Sen 中的一个词语；S (i=12m)是W 中的
+2 1i 1 而w在语句相似度值中所占的比重会越大。
+所有概念，S (j=12n) 是W 中的所有概念；
+2j 2 在本文中引入语料库，为每个词语在语句相似
+p (k=12s)是S 的义原，p (l=12t)是
+度计算时赋予了不同的权重，充分体现了不同词语
+1ik 1i 1jl
+S 的义原。则有如下的算法计算步骤[6-7]： 对相似度值的贡献程度，经过改进的语句相似度的
+2j
+步骤1 计算义原之间的相似度值。计算公式为 计算结果更为合理，同时也与人们的主观判断更为
+sim(p p )=e-αl•
+eβh -e-βh
+，其中l 代表义原树中义
+接近。
+1ik 2jl eβh +e-βh 2.2 改进的语句语义相似度算法实验
+原之间的距离，h代表义原之间的深度。 本文采用两种方法，测试了50个语句对之间的
+步骤2 计算概念之间的相似度值。以步骤1为 语义相似度值，部分实验结果如表1所示。方法1是
+基础，首先分别对每个概念中包含的不同类型的义 刘群等[8]人提出的语句相似度算法，方法2是本文中
+原计算相似度值，包括第一基本义原、其他独立义原、 经过改进的语句相似度算法。
+关系义原、符号义原。最终的计算公式为sim(S S )=
+1i 2j
+4 s 3 语义相似度算法在审计规则匹配中的应用
+åβ Õsim(S S ) ，其中 β >0 是可调节的参数，
+s t 1i 2j s
+s=1 t=1 本文根据已有的审计方法建立审计规则库，采
+sim(S S )表示概念中四种不同类型义原的相似度 用if…then…的产生式形式来表示规则，并将语句相
+t 1i 2j
+
+156 2012，48（28） ComputerEngineeringandApplications计算机工程与应用
+表1 两种方法计算的语句语义相似度实验结果对比
+审计
+方法
+序号 测试语句对 方法1 方法2
+a.使用手机银行服务，如何收费?
+1 0.793 0.842
+b.怎样缴纳手机银行服务的费用? 方法分析
+a.计算机售价如何?
+2 1.000 0.984
+b.电脑价格怎样?
+税收审 农业审 金融审 资源环保
+a.如何办理网上银行业务? …
+3 0.685 0.735 计方法 计方法 计方法 审计方法
+b.我想去柜台办理银行业务。
+a.商业银行一年期定期存款利率多少?
+4 0.877 0.645
+b.如何在银行购买风险投资产品? 特征提取
+a.申办银联卡需要什么材料?
+5 0.900 0.826
+b.银联卡丢失，如何重新办理?
+a.信用卡如何进行购汇? 税收审 农业审 金融审 资源环保
+6 1.000 0.973 …
+计规则 计规则 计规则 审计规则
+b.信用卡进行购汇的操作步骤怎样?
+a.新基金成立多久才开放申购业务? 规则库
+7 1.000 0.879
+b.新基金申购何时开始?
+图1 审计方法规则库结构
+a.新基金成立多久才开放赎回业务?
+8 0.898 0.580
+b.基金前端收费和后端收费的区别? 库未更新前，表示税收审计等8类不同类别的审计，
+9 a.电子直销网上开户有时间限制吗? 0.848 0.601 其详细的表结构设计如表2所示。
+b.基金开户需要提交什么材料?
+表2 AuditTypes表结构
+a.基金在持有多长时间后可赎回或转换转出?
+10 0.895 0.717
+b.在什么条件下可以赎回基金? 序号 字段名称 数据类型 含义
+a.如果我身份证丢了，怎么办? 1 ID int 表的主键
+11 0.793 0.821
+b.如何处理身份证丢失的情况? 2 AuditType int 不同审计类别的序号
+12
+a.北京的户口指标是如何分配的?
+0.797 0.856
+3 AuditTypeName varchar 不同审计类别的名称
+b.公司可以解决北京的户口吗?
+上述表2中，AuditTypeName是if…then…产生式
+规则中if的一部分。
+似度算法应用到规则匹配过程中。
+（2）AuditMethods表
+3.1 审计规则库设计
+该表对应的是审计中所有的审计方法，与每个
+本文根据不同审计类别建立审计规则库。在设
+审计条件相对应，是if…then…产生式规则中的then
+计规则库时，将同一审计类别下的审计方法归纳在
+部分，即“触发事件”部分，其详细的表结构设计如下。
+一起，这样有利于提高规则匹配时的效率，也有利于
+表3 AuditMethods表结构
+审计规则库的更新。
+序号 字段名称 数据类型 含义
+根据已有的资料，在规则库更新之前，本文将建
+1 ID int 表的主键
+立税收审计、农业审计、企业审计、社会保障审计、固
+2 AuditMethodName varchar 具体的审计方法名称
+定资产投资审计、外资运用审计、金融审计、资源环
+（3）AuditRules表
+保审计这8个类别的审计规则[9]，每条审计规则对应
+该表对应的是产生式规则中if的另一组成部分，
+一个具体的审计方法。在实际应用中，可以采用人
+根据不同审计类别中的审计方法抽取出不同审计条
+工的方式添加新的审计类别。审计规则库结构如
+件，其详细的表结构设计如表4。
+图1所示。
+表4 AuditRules表结构
+审计规则库中的规则描述不同审计类别中的审
+序号 字段名称 数据类型 含义
+计特征及每条规则对应的审计方法。规则库由多个
+1 ID int 表的主键
+规则集组成[4]，一个规则集对应一类审计领域。本文
+表示本条记录属于哪个审计
+采用“if 条件 then 触发事件”的产生式规则表示形 2 AuditType int 类别，与AuditTypes表的
+式，设计了3个规则库表：AuditTypes、AuditMethods、
+AuditType字段相关联
+3 AuditRule varchar 与审计类别对应的审计条件
+AuditRules。
+与该审计条件相对应的审计
+（1）AuditTypes表
+4 AuditMethodID int 方法，外键，与AuditMethods
+该表对应审计中所有不同的审计类别，在规则 表的ID字段相关联
+
+谢岳山，樊晓平，廖志芳，等：频率相似度算法在审计规则库中的应用 2012，48（28） 157
+根据上述if…then…产生式规则以及规则库中的 多组召回率和精确率值进行算术加权平均，得到各
+数据，本文中的审计规则形式如下： 自方法最终的召回率和精确率，结果如表5所示。
+规则1 if税收审计and福利企业税收优惠，then
+表5 采用三种方法进行审计规则
+福利企业税收优惠审计方法。 匹配后的评价值
+规则2 if资源环保审计and城镇污水垃圾处理
+方法 召回率 精确率
+专项资金使用，then城镇污水垃圾处理专项资金使用 方法1 0.562 0.434
+合理性审计方法。 方法2 0.625 0.627
+方法3 0.751 0.717
+规则3 if农业审计and违规船舶申报并且享受
+渔业石油价格补助，then违规船舶申报并且享受渔业
+方法1是在计算词语的相似度时，仅使用了
+石油价格补助审计方法。
+HowNet概念描述式中的第一基本义原的方法。方
+3.2 审计规则匹配流程
+法2[8]为刘群的基于知网的相似度计算方法，方法3是
+3.1节介绍了审计规则库的表结构设计以及审计
+本文中改进的语义相似度计算方法。
+规则的表示形式，本节将把2.1中改进的语句语义相 由表5的第3行可知，本文中经过改进的方法3，
+似度算法应用到审计规则匹配过程中，并将满足阈 其精确率比方法1和方法2高。因此，从标准的评价
+值条件的审计方法按照语义相似度值由大到小的顺 值来看，本文中改进的语句语义相似度计算方法在
+序返回，供审计人员参考使用。 进行审计规则匹配时能够取得更好的效果，匹配结
+审计规则库建立好之后，根据以下步骤进行规 果更合理，精确度更高。
+则匹配。 下述柱状图2中的精确率图显示了在三种不同
+（1）初始化，i=0，methodlist=NULL，threshold= 相似度算法下进行规则匹配的精确率，图中可知，本
+0.7，len=0。 文中经过改进的方法3精确率更高。同时，本文利用
+（2）用户在输入界面上选择审计类别，输入关键词。 上述三种方法重复执行100次规则匹配过程，并记录
+（3）根据用户选择的类别，在AuditRules表中查 了每种方法所需要的时间，时间柱状图的纵轴以秒
+询出该类别对应的所有审计条件rules，len=rules.size。 为单位，方法3执行100次匹配只需3.252秒，很好地
+（4）将关键字组成短句，利用语句语义相似度算 降低了匹配所需的时间，提高了效率。
+法，计算该短句与（3）中审计条件之间的语义相似度
+1.0 10 9.452
+值，i自加1。 精确率 时间
+0.8 8
+（5）将（4）中的相似度值与阈值threshold比较， 0.672 0.717
+如果大于等于阈值，就根据该审计条件的Audit- 0.6 6 5.013
+0.434
+MethodID字段，查询AuditMethods表中ID=’Audit- 0.4 4 3.252
+MethodID’的审计方法AuditMethodName，加入到返 0.2 2
+回结果methodlist中。
+0 0
+方法1 方法2 方法3 方法1 方法2 方法3
+（6）如果i<len，转（4），否则转（7）。
+图2 三种算法的精确率和时间复杂度对比
+（7）如果methodlist.size>0，输出methodlist，结束；
+否则，提示用户重新选择审计类别或更改关键词，转（3）。
+本文将改进的语义相似度算法应用在审计规则
+3.3 审计规则匹配结果分析
+匹配中，从匹配的实验结果可知，改进的语义相似度
+本文中采用召回率和精确率对匹配结果进行客 算法不仅提高了匹配的精确率，同时也提高了时间
+观评价。召回率衡量检索的查全率，精确率衡量检 效率。在实际应用得到的匹配结果能够为审计人员
+索的查准率。在此实验中，设定相似度阈值为0.7，将 根据匹配度大小按序提供与待审项目相关的审计方
+规则库中100个审计规则作为测试数据集，这些规则 法，审计人员根据此结果来选择最合适的审计方法
+中，有彼此相关的，有不相关的。对于用户输入的一 进行项目审计，而不是重新撰写一个新的审计方法，
+个关键词短句，采用三种相似度计算方法来计算语 造成审计方法的重复与冗余。
+句相似度值，并返回满足阈值条件的审计方法，同时
+计算每种方法的召回率和精确率。在实验中更改用 4 规则库更新
+户输入的关键词短句，进行多次实验，对每种方法的 审计规则库中存储着重要的审计方法信息，无
+
+158 2012，48（28） ComputerEngineeringandApplications计算机工程与应用
+论对于课题研究或是对于实际的审计工作的开展都 算法在进行规则匹配时，能够取得更高的精确率与
+意义重大。在实际应用中，一旦出现新的审计方法， 时间匹配效率。
+则需要审计人员手动更新规则库，并且根据新的审
+计方法，提取出审计规则，以便规则库中保存最新的 参考文献：
+规则信息。
+[1] 田久乐，赵蔚.基于同义词词林的词语相似度计算方法[J].
+在进行审计规则库更新时，需要保证规则库中 吉林大学学报，2010，28（6）：602-608.
+数据的一致性，其方法如下。 [2] 高思丹，袁春风.语句相似度计算在主观题自动批改技术
+步骤1 更新审计类别规则库表AuditTypes，根据 中的初步应用[J].计算机工程与应用，2004，40（14）：132-135.
+实际需要添加暂未添加的审计类别。 [3] 曹勇刚，曹羽中，金茂忠，等.面向信息检索的自适应中文
+步骤2 更新审计方法规则库表AuditMethods， 分词系统[J].软件学报，2006，17（3）.
+添加最新的审计方法。 [4] 刘胜宗.联网模拟审计知识库[D].长沙：中南大学，2011.
+步骤3 更新审计条件规则库表AuditRules，根据 [5] 刘汝焯.审计数据的多维分析技术[M].北京：清华大学出版
+社，2005.
+最新的审计方法提取审计条件。
+[6] Heylen K，Peirsman Y，Geeraerts D，et al.Modelling
+word similarity-an evaluation of automatic synonymy
+5 结论
+extraction algorithms[C]//Sixth International Language
+本文首先研究了改进的语句语义相似度算法，
+Resources and Evaluation Edition，2008：3243-3249.
+然后介绍了审计方法的规则库建立，包括规则库表
+[7] Xu J M，Tang W S，Chen Z Y，et al.A word similarity
+结构设计，审计规则的表式形式。在此基础上，将改
+based belief network IR model with two term layers[J].
+进的语句语义相似度算法应用到审计规则匹配过程
+WRI Global Congress on Intelligent Systems，2009.
+中，当用户输入的关键词短句与规则库中规则的语
+[8] 刘群，李素建.基于《知网》的词汇语义相似度计算[C]//第
+义相似度值满足一定的阈值条件时，就将该规则对 三语义学研讨会论文集.台北：台北中央研究院，2002：
+应的审计方法作为匹配结果返回。用户可以参考匹 149-163.
+配出来的审计方法，选择其中最合适的一个方法指 [9] 万星.福利企业税收优惠审计方法[R].审计署驻长沙特派
+导项目审计工作。实验证明，改进后的语义相似度 员办事处，2011.
+（上接142页） [11] Khaldi K，Boundaa A O.A new EMD denoising ap-
+[6] 朱杰，韦晓东.噪声环境中基于HMM模型的语音信号端点 proach dedicated to voiced speech signals[C]//IEEE In-
+检测方法[J].上海交通大学学报，1998，32（10）：14-16. ternational Conference on Signals，Circuits and Sys-
+[7] Huang N E，Shen Z，Long S R，et al.The empirical tems，2008：1-5.
+mode decomposition and the Hilbert spectrum for non- [12] Lu Zhimao，Liu Baisen，Shen Liran.Speech endpoint de-
+linear and non-stationary time series analysis[C]//Proc tection in strong noisy environment based on Hil-
+R Soc Lond A，1998（454）：903-995. bert-Huang Transrorm[C]//IEEE International Confer-
+[8] Huang N E.Review of empirical mode deconposition[C]// ence on Mechatronics and Automation，2009：4322-4326.
+Proceedings of SPIE-The International Society for Opti- [13] 杨志华，齐东旭，杨力华.基于Hilbert-Huang变换的基音
+cal Engineering，2001，4391：71-80. 周期的提取方法[J].声学学报，2006，31（1）：35-41.
+[9] Zhang Ray Ruichong，Ma Shuo，Safak E.Hilbert-Huang [14] 许艳红.HHT变换在说话人识别中的应用[D].杭州：浙江
+tansform analysis of dynamic and earthquake motion 大学，2005.
+recordings[J].Journal of Engineering Mechanics，2003， [15] 宋倩倩，于凤芹.基于EMD和改进双门限法的语音端点
+129（8）：861-875. 检测[J].语音技术，2009（8）：60-63.
+[10] Nunes J C，Bouaoune Y，Delechelle E，et al.Image anal- [16] 李晋，王景芳，高金定.基于经验模态分解和递归图的语
+ysis by bidimensional empirical mode decomposition[J]. 音端点检测算法[J].计算机工程与应用，2010，46（34）：
+Image and Vision Computing，2003，21（12）：1019-1026. 132-135.

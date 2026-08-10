@@ -1,0 +1,93 @@
+{
+  "version": "6.0-optimized-three-library",
+  "generated_at": "2026-08-08",
+  "raw_counts": {
+    "early_candidate_draft": 36,
+    "current_package_assets": 871,
+    "current_rule_indicator_assets": 2178,
+    "current_case_evidence_assets": 559,
+    "current_effective_total_three_libraries": 3608
+  },
+  "optimized_counts": {
+    "algorithm_candidate_library": 359,
+    "rule_indicator_library": 2615,
+    "case_evidence_library": 559,
+    "optimized_registry_total_with_v5": 494
+  },
+  "dedupe": {
+    "algorithm_duplicate_groups": 6,
+    "rule_duplicates_removed": 0,
+    "evidence_duplicates_removed": 66
+  },
+  "files": {
+    "openclaw_v6_optimized_algorithm_candidate_library.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_algorithm_candidate_library.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_algorithm_candidate_library.json"
+    },
+    "openclaw_v6_optimized_rule_indicator_library.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_rule_indicator_library.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_rule_indicator_library.json"
+    },
+    "openclaw_v6_optimized_case_evidence_library.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_case_evidence_library.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_case_evidence_library.json"
+    },
+    "algorithm_registry_v6_optimized_staging.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\algorithm_registry_v6_optimized_staging.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\algorithm_registry_v6_optimized_staging.json"
+    },
+    "algorithms_by_scene_v6_optimized.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\algorithms_by_scene_v6_optimized.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\algorithms_by_scene_v6_optimized.json"
+    },
+    "openclaw_v6_optimized_three_library_manifest.json": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_three_library_manifest.json",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_three_library_manifest.json"
+    },
+    "openclaw_v6_optimized_algorithm_candidate_library.csv": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_algorithm_candidate_library.csv",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_algorithm_candidate_library.csv"
+    },
+    "openclaw_v6_optimized_rule_indicator_library.csv": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_rule_indicator_library.csv",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_rule_indicator_library.csv"
+    },
+    "openclaw_v6_optimized_case_evidence_library.csv": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_case_evidence_library.csv",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_case_evidence_library.csv"
+    },
+    "openclaw_v6_optimized_three_library_report.md": {
+      "outputs": "C:\\Users\\scrccpa\\Documents\\Codex\\2026-08-08\\new-chat-2\\outputs\\openclaw_v6_optimized_three_library_report.md",
+      "openclaw": "C:\\Users\\scrccpa\\.openclaw\\workspace\\audit-blackboard\\openclaw_v6_optimized_three_library_report.md"
+    }
+  },
+  "strict_curation": {
+    "downgraded_from_algorithm_candidates": 10,
+    "hard_negative_terms": [
+      "格式",
+      "目录",
+      "前言",
+      "序言",
+      "重要性和必要性",
+      "基本概念",
+      "概述",
+      "思维能力训练",
+      "审计案例.pdf",
+      "活动",
+      "会议",
+      "党日",
+      "展播",
+      "交流",
+      "荣获",
+      "召开",
+      "座谈",
+      "妇联",
+      "代表大会",
+      "锦旗",
+      "足球",
+      "理事会",
+      "监事会"
+    ],
+    "strict_algorithm_keep_rate": 0.9729
+  }
+}
