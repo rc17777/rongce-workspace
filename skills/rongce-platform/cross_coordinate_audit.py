@@ -517,7 +517,10 @@ def run_sample_all():
     """运行所有示例"""
     for m in MODELS:
         results = m["func"](m["sample"])
-        print_report(m, results)
+        if m.get("special_print") == "m111":
+            print_m111_report(results)
+        else:
+            print_report(m, results)
 
 
 def run_model(model_id, filepath=None):
