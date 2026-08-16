@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "dayKey": "2026-06-04",
+  "spent": 0,
+  "dedup": {
+    "b5bee933d996946f5a7b9c38": {
+      "ts": 1780591814017,
+      "failed": true
+    }
+  }
+}

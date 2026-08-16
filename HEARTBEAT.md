@@ -9,7 +9,7 @@
 ## Periodic Checks (Rotate through these)
 
 ### 1. Weather Check (Every 4 hours)
-- Check current weather for Shanghai
+- Check current weather for 成都市金牛区
 - useful if user might go out
 
 ### 2. System Status (Every 2 hours)

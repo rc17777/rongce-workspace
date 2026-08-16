@@ -21,6 +21,7 @@ description: >
 
 - **AI做执行，人做判断**：异常筛查、底稿生成、报告初稿由AI完成；问题定性、专业判断、最终结论由人完成
 - **规则驱动**：所有AI输出基于明确的风险规则库和模板，确保一致性和可追溯性
+- **案例意识**：执行审计时带"案例思维"——不是每个发现都值得入库，只有满足5条质量标准的发现才沉淀为组织记忆（详见[案例质量标准](references/case-quality-criteria.md)）
 - **数据安全优先**：处理政府审计数据时，遵循"数据不出域、最小权限、全程留痕"原则
 
 ## 快速开始
@@ -34,7 +35,11 @@ description: >
 | 生成投标方案 | [bid-proposal.md](references/bid-proposal.md) | 投标技术方案 |
 | 跨类型全流程SOP | [multi-type-sop.md](references/multi-type-sop.md) | 分类型的8环节操作手册 |
 | 审计方法论落地 | [methodology-modules.md](references/methodology-modules.md) | 9大方法模块实施指南 |
+| 案例质量标准 | [case-quality-criteria.md](references/case-quality-criteria.md) | 5条标准+模块融合+案例潜力打分 |
+| 跨坐标系审计方法 | [cross-coordinate-audit-methods.md](references/cross-coordinate-audit-methods.md) | 5坐标系×6审计类型的审计措施落地 |
+| 亲属工商索引检查表 | [kinship-business-check.md](references/kinship-business-check.md) | 领导+亲属×供应商工商信息交叉索引模板 |
 | 5库自动化补全 | [library-automation.md](references/library-automation.md) | 法规案例+操作指引库的自动采集方案 |
+| 调用审计分析模型 | 参见 rongce-platform skill | 费用舞弊/预算执行/资金异常/风险排序 |
 
 ## 政府审计类型识别
 

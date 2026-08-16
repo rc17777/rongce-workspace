@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-04T16:00:59.321Z",
+  "entries": {
+    "memory:memory/2026-06-02.md:35:63": {
+      "key": "memory:memory/2026-06-02.md:35:63",
+      "path": "memory/2026-06-02.md",
+      "startLine": 35,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "- 来源：郑石桥（南京审计大学）《财会通讯》2026年第10期 - 整合到：Obsidian + AuditKB规则库 + rongce-gov-audit SKILL.md - 两种取证思路：事实发现型(问题导向) vs 命题论证型(结论导向) - 三种建模来源：业务规则/数据驱动/审计目标分解 - 融策技能全部映射到取证思路框架中 ## 方法论改进 ### SQL审计技能体系（audit-sql-patterns） - 从 4777→24910 字符（5.2倍增长） - 四大场景完整：法院经责 + 农业保险 + 医疗保险 + 公积金 - 每个案例都有完整逻辑链 ### 串标审计能力升级（bid-collusion-audit） - 从 5740→15990 字符（2.8倍增长） - 覆盖：MAC/IP/PDF元数据/报价规律 + 电子招投标大数据四法 ### 审计数据分析能力升级（audit-data-analyst） - 从 2601→8466 字符（3.3倍增长） - 新增：TextGrocery机器学习审计分类 + 完整落地工具 ### skill-vetter 审查规则 - 新增\"Audit Case Quality Standard\"章节 - 要求每个审计案例附带逻辑链，格式：数据异常→追问→收敛→人物关联→证据闭环→事实 ## 今日待解决 - 智析智能体文件分析：用户说放到桌面但未找到，需后续跟进 - 公积金审计已整合完成",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.8472691563403565,
+      "maxScore": 0.43439814421515255,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T16:00:59.321Z",
+      "queryHashes": [
+        "d84b7d8463da",
+        "bb3b1269d517"
+      ],
+      "recallDays": [
+        "2026-06-04",
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "rongce-gov-audit",
+        "skill.md",
+        "业务规则/数据驱动/审计目标分解",
+        "audit-sql-patterns",
+        "5.2倍增长",
+        "bid-collusion-audit",
+        "2.8倍增长",
+        "mac/ip/pdf元数据/报价规律"
+      ]
+    },
+    "memory:memory/2026-06-03.md:78:99": {
+      "key": "memory:memory/2026-06-03.md:78:99",
+      "path": "memory/2026-06-03.md",
+      "startLine": 78,
+      "endLine": 99,
+      "source": "memory",
+      "snippet": "8. ✅ 审计报告（CRUD+4类型+自动汇总底稿/取证/问题+导出Word+上传模板） 9. ✅ 数据分析中心（统计卡片+分析结果汇总+多源数据管理） 10. ✅ SQL分析（多数据库连接管理+SQL编辑器+结果展示+脚本库+异常高亮） 11. ✅ 文件管理（按文件夹分类+按项目筛选+上传+预览+删除） 12. ✅ 知识库中心（分类树+知识条目CRUD+Obsidian同步设置+标签体系） 13. ✅ 预算成本（项目预算编制+工时管理+对比分析+进度条+超支/节支标识） 14. ✅ AI审计助手（对话式+多模型切换+Token统计+预设回复） 15. ✅ 智能体中心（4个Agent：风险扫描/SQL生成/底稿生成/报告生成+运行历史+过程可追溯） 16. ✅ 工具箱（SQL格式化+数据脱敏+审计抽样计算+OCR入口+日期计算+金额大写） 17. ✅ 系统管理（用户CRUD+角色管理+模型配置+数据备份+导入导出） ### 数据库设计（14张核心表） - users, projects, project_members, status_logs（用户与项目） - drafts, draft_evidences, draft_issues（底稿与关联） - evidences, issues, issue_evidences（取证与问题关联） - reports, budgets, costs, timesheets（报告与预算） - sql_scripts, ai_runs（SQL脚本与AI运行记录） ### 项目目录结构 ``` audit-platform/ ├── p",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.42799348564276435,
+      "maxScore": 0.42799348564276435,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T15:15:07.055Z",
+      "queryHashes": [
+        "d84b7d8463da"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "备份",
+        "自动汇总底稿/取证/问题",
+        "超支/节支标识",
+        "风险扫描/sql生成/底稿生成/报告生成",
+        "project-members",
+        "status-logs",
+        "draft-evidences",
+        "draft-issues"
+      ]
+    },
+    "memory:memory/2026-06-03.md:22:51": {
+      "key": "memory:memory/2026-06-03.md:22:51",
+      "path": "memory/2026-06-03.md",
+      "startLine": 22,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- 知识库（AuditKB升级版） - OpenClaw AI深度集成 - 角色权限（合伙人/总监/项目经理/助理/客户） ## 技术选型（待定） - 候选：Tauri v2 + Vue3 + SQLite 或 Electron + Vue3 + SQLite - 关键约束：数据不出本地、直接访问数据库、跨平台 ## 关键参考 - 微信公众号「数审派」2026-06-03文章《审计人的项目到底该怎么管？我做了一个软件试试》 - 四川省审计厅数据服务采购需求文件（1.docx）, 要求掌握Oracle/SQL Server/MySQL/DB2/Sybase/神通/达梦, Python/R/Java, OCR/文本挖掘/图谱分析 ## 待完善事项 - [ ] 技术栈最终决策 - [ ] 开发人员招聘 - [ ] 第一期3个月详细计划 - [ ] 数据库表结构设计 - [ ] UI原型设计 # 审计项目实施服务平台 - 产品开发项目 ## 项目概述 - **项目名称**：审计项目实施服务平台（桌面软件） - **发起日期**：2026-06-03 - **发起人**：融策平头哥 - **产品定位**：审计行业本地部署桌面软件，覆盖审计项目全生命周期 - **启动资金**：20万 - **开发人员**：平头哥（产品经理/领域专家）+ AI辅助（OpenClaw） - **技术栈**：Electron + Vue3 + Element Plus + SQLite（sql.js替代better-sqlite3） - **运行环境**：开发阶段在浏览器运行（模拟数据），正式需打包El",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4255772940784983,
+      "maxScore": 0.4255772940784983,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T15:15:07.055Z",
+      "queryHashes": [
+        "d84b7d8463da"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "合伙人/总监/项目经理/助理/客户",
+        "2026-06-03文章",
+        "1.docx",
+        "要求掌握oracle/sql",
+        "server/mysql/db2/sybase/神通/达梦",
+        "python/r/java",
+        "ocr/文本挖掘/图谱分析",
+        "产品经理/领域专家"
+      ]
+    },
+    "memory:memory/2026-06-02.md:18:38": {
+      "key": "memory:memory/2026-06-02.md:18:38",
+      "path": "memory/2026-06-02.md",
+      "startLine": 18,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "- 来源：许方义（荆门市审计局）《中国审计》2023年第17期 - 整合到：audit-data-analyst + 完整落地脚本 - 关键改进：原文用TextGrocery(需Ubuntu虚拟机) → 改用jieba+sklearn(Windows直接跑,无需虚拟机) - 产出文件：fund_audit.py（命令行工具，输入Excel→自动分类→输出审计结果Excel） - 验证结果：训练准确率100%，测试26条全部正确分类，无致命误判 - 支持三类专项资金：信息化/农业/教育 ### 4. 住房公积金信息系统审计 - 来源：王建敏、赵楚悦（十堰市审计局）《中国审计》2023年第2期 - 整合到：audit-sql-patterns 案例4 - 三个SQL案例：利率执行比对(利息公式)/保证金应退未退(身份证JOIN)/长期封存户(DATEDIFF) - 数据规模：Oracle 100GB，效果：上缴6000万+退还保证金1亿 - 逻辑链：100GB数据采集→三个案例(利率/保证金/封存户)→成果闭环 ## 理论框架整合 ### 数据式审计取证逻辑（郑石桥） - 来源：郑石桥（南京审计大学）《财会通讯》2026年第10期 - 整合到：Obsidian + AuditKB规则库 + rongce-gov-audit SKILL.md - 两种取证思路：事实发现型(问题导向) vs 命题论证型(结论导向) - 三种建模来源：业务规则/数据驱动/审计目标分解",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.8392026074136943,
+      "maxScore": 0.42245287002866655,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T16:00:59.321Z",
+      "queryHashes": [
+        "d84b7d8463da",
+        "bb3b1269d517"
+      ],
+      "recallDays": [
+        "2026-06-04",
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "audit-data-analyst",
+        "fund-audit.py",
+        "信息化/农业/教育",
+        "audit-sql-patterns",
+        "利率/保证金/封存户",
+        "rongce-gov-audit",
+        "skill.md",
+        "业务规则/数据驱动/审计目标分解"
+      ]
+    },
+    "memory:memory/2026-06-01.md:87:103": {
+      "key": "memory:memory/2026-06-01.md:87:103",
+      "path": "memory/2026-06-01.md",
+      "startLine": 87,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "新增\"AuditKB 入库规范\"章节： - 必含4模块：元数据/正文/关联/逻辑链 - 逻辑链格式模板 - 5种逻辑链类型速查表（深度推断型/特征叠加型/数据驱动型/制度对照型/清单遍历型） - 6项入库检查清单 ## 关键洞察 1. **CASE-NONSTRUCT-226的特殊性**：逻辑链起点不是\"数据里找异常\"，而是\"数据太多处理不了→先解决能力→分析自然出来\"——所有大数据审计场景的第一步都是这个 2. **CASE-BID-APRIORI + CASE-LAW-BID = 招投标审计完整闭环**：前者是技术发现，后者是法律认定，两者缺一不可 3. **CASE-BID-SHIELD反向价值**：8条企业自保指南翻转过来就是8个审计检测点——知道对手怎么防，就知道从哪突破 4. **CASE-BID-2026的数据源扩展**：从IP/MAC两个维度→社保/资质/信用7个维度，审计可调取的外部数据扩大了3倍 ## 主索引临时问题 主索引（index.md）在快速编辑过程中CASE-001~004行被误删，需要后续整理恢复。当前主索引表内容正确但顺序有些乱，不影响功能使用。",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.8227512915718511,
+      "maxScore": 0.42519604404357986,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T16:00:59.321Z",
+      "queryHashes": [
+        "d84b7d8463da",
+        "bb3b1269d517"
+      ],
+      "recallDays": [
+        "2026-06-04",
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "元数据/正文/关联/逻辑链",
+        "深度推断型/特征叠加型/数据驱动型/制度对照型/清单遍历型",
+        "case-nonstruct-226的特殊性",
+        "case-bid-apriori",
+        "case-law-bid",
+        "case-bid-shield反向价值",
+        "case-bid-2026的数据源扩展",
+        "从ip/mac两个维度"
+      ]
+    },
+    "memory:memory/2026-06-03.md:65:81": {
+      "key": "memory:memory/2026-06-03.md:65:81",
+      "path": "memory/2026-06-03.md",
+      "startLine": 65,
+      "endLine": 81,
+      "source": "memory",
+      "snippet": "2. **产品定位**：从内部工具升级为商用产品，三层架构（融策版/同行版/客户版） 3. **开发模式**：平头哥（产品+业务+验收）+ OpenClaw AI（技术+代码+数据库） 4. **Logo**：已复制融策logo到项目 `/public/logo.png` 5. **启动资金**：20万，预留招1个全栈开发（12-15K/月） ### 已完成功能模块（全部16个模块，当天完成） 1. ✅ 登录页（Logo+金色行草标题+磨砂玻璃背景+测试账号5个） 2. ✅ 左侧导航（深蓝色+Logo+四川融策·智审审计平台，14个菜单项） 3. ✅ 工作台首页（统计卡片+今日待办+我的项目列表） 4. ✅ 项目中心（列表/卡片双视图+搜索筛选+新建+详情8Tab+状态流转） 5. ✅ 审计工作底稿（CRUD+4种类型+富文本编辑器+关联取证单/问题+导出Word） 6. ✅ 取证单管理（CRUD+4类证据+关联底稿+关联问题） 7. ✅ 问题线索（CRUD+风险等级+涉及金额+发现→整改→销号全流程） 8. ✅ 审计报告（CRUD+4类型+自动汇总底稿/取证/问题+导出Word+上传模板） 9. ✅ 数据分析中心（统计卡片+分析结果汇总+多源数据管理） 10. ✅ SQL分析（多数据库连接管理+SQL编辑器+结果展示+脚本库+异常高亮） 11. ✅ 文件管理（按文件夹分类+按项目筛选+上传+预览+删除）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3943236337325936,
+      "maxScore": 0.3943236337325936,
+      "firstRecalledAt": "2026-06-04T15:15:07.055Z",
+      "lastRecalledAt": "2026-06-04T15:15:07.055Z",
+      "queryHashes": [
+        "d84b7d8463da"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "融策版/同行版/客户版",
+        "public/logo.png",
+        "12-15k/月",
+        "列表/卡片双视图",
+        "关联取证单/问题",
+        "自动汇总底稿/取证/问题",
+        "产品",
+        "定位"
+      ]
+    },
+    "memory:memory/2026-06-01.md:67:94": {
+      "key": "memory:memory/2026-06-01.md:67:94",
+      "path": "memory/2026-06-01.md",
+      "startLine": 67,
+      "endLine": 94,
+      "source": "memory",
+      "snippet": "| CASE-003 天府广场 | 标杆对标→差距识别 | | CASE-004 发票虚开 | 特征聚类→身份画像 | | CASE-005 国企活牛 | 实物盘点→决策追溯 | | CASE-006 国储林 | 资金流向→空间验证 | | CASE-007 湿地占补 | 空间叠加→冲突检测 | | CASE-DATA-VOUCHER | 五层漏斗：多维画像→Apriori→K-Means | | CASE-MED-ECA | 制度对照型（预设型） | | CASE-ECA-14Q | 归纳总结型 | | CASE-PROJ-75 | 清单遍历型 | | P005 阴阳合同 | 深度推断型 | | P012 关联方输送 | 深度推断型 | ## 算法注册表（ALGORITHM_REGISTRY.md） - 创建 `AuditKB/tools/ALGORITHM_REGISTRY.md`：8个算法/工具注册 - 挂载到 `audit-data-analyst` SKILL.md 的L5层（算法自动匹配） - 场景→算法自动匹配表：围标串标_海量/精读、合同审查、招投标批量、凭证翻查、扫描件转换、现金流量分析、医保异常等7个场景路由 ## TOOLS.md 入库规范固化 新增\"AuditKB 入库规范\"章节： - 必含4模块：元数据/正文/关联/逻辑链 - 逻辑链格式模板 - 5种逻辑链类型速查表（深度推断型/特征叠加型/数据驱动型/制度对照型/清单遍历型） - 6项入库检查清单 ## 关键洞察",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4498147258564012,
+      "maxScore": 0.4498147258564012,
+      "firstRecalledAt": "2026-06-04T16:00:59.321Z",
+      "lastRecalledAt": "2026-06-04T16:00:59.321Z",
+      "queryHashes": [
+        "bb3b1269d517"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "case-003",
+        "case-004",
+        "case-005",
+        "case-006",
+        "case-007",
+        "case-data-voucher",
+        "k-means",
+        "case-med-eca"
+      ]
+    },
+    "memory:memory/2026-06-04.md:202:223": {
+      "key": "memory:memory/2026-06-04.md:202:223",
+      "path": "memory/2026-06-04.md",
+      "startLine": 202,
+      "endLine": 223,
+      "source": "memory",
+      "snippet": "- 诊断结果见MEMORY.md ## 财政部四项新规入库（下午） - 来源：https://mp.weixin.qq.com/s/q5tdBRtFHQV-d-vS6PHScQ - 入库4条新规到AuditKB/wiki/rules/： - RULE-FIN-001：金融工具确认和计量（IFRS 9/ECL） - RULE-FIN-002：固定资产捐赠会计处理（政府补助定性） - RULE-FIN-003：股份有限公司内部控制评价指引（五要素38项） - RULE-FIN-004：中央储备粮经营管理中心资金管理办法（专户管理+穿透监管） ## 新建技能：部门预算执行情况审计 - 路径：skills/budget-execution-audit/SKILL.md - 关联RULE-FIN-001~004，输出预算执行情况表+问题清单+资料清单+内控评价矩阵 ## AuditKB被清理后重建 - AuditKB从audit-platform目录移出，在workspace根目录重建 - 当前路径：C:\\Users\\Admin\\AuditKB - 已有：4条新规（RULE-FIN-001~004）、index.md（更新规则索引） ## 待续 - [ ] AuditKB index.md未更新FIN新规（规则索引部分的offset=31行之后需要插入FIN规则） - [ ] 验证AuditKB完整性（规则总数/案例总数）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.42470119619079266,
+      "maxScore": 0.42470119619079266,
+      "firstRecalledAt": "2026-06-04T16:00:59.321Z",
+      "lastRecalledAt": "2026-06-04T16:00:59.321Z",
+      "queryHashes": [
+        "bb3b1269d517"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "诊断结果见memory.md",
+        "入库4条新规到auditkb/wiki/rules",
+        "rule-fin-001",
+        "9/ecl",
+        "rule-fin-002",
+        "rule-fin-003",
+        "rule-fin-004",
+        "关联rule-fin-001"
+      ]
+    }
+  }
+}

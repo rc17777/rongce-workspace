@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "profiles": {
+    "openai:default": {
+      "type": "api_key",
+      "provider": "openai",
+      "key": "sk-4d166f3d5e8942338a9a0a1c1c4c572ee8f6c1654bc8499672d574f98d481c8f"
+    },
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "sk-4d166f3d5e8942338a9a0a1c1c4c572ee8f6c1654bc8499672d574f98d481c8f"
+    },
+    "google:default": {
+      "type": "api_key",
+      "provider": "google",
+      "key": "sk-4d166f3d5e8942338a9a0a1c1c4c572ee8f6c1654bc8499672d574f98d481c8f"
+    },
+    "custom-custom66:default": {
+      "type": "api_key",
+      "provider": "custom-custom66",
+      "key": "sk-ag-370ac25a9767638747249e360d117f8f"
+    },
+    "custom-custom3d:default": {
+      "type": "api_key",
+      "provider": "custom-custom3d",
+      "key": "sk-ag-370ac25a9767638747249e360d117f8f"
+    }
+  },
+  "order": {
+    "custom-custom3d": [
+      "custom-custom3d:default"
+    ]
+  },
+  "lastGood": {
+    "custom-custom3d": "custom-custom3d:default"
+  },
+  "usageStats": {
+    "custom-custom3d:default": {
+      "errorCount": 0,
+      "lastUsed": 1777192838353
+    }
+  }
+}

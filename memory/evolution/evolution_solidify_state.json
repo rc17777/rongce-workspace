@@ -1,0 +1,121 @@
+{
+  "last_run": {
+    "run_id": "run_1780591814075",
+    "created_at": "2026-06-04T16:50:14.189Z",
+    "parent_event_id": null,
+    "selected_gene_id": "gene_gep_innovate_from_opportunity",
+    "selected_capsule_id": null,
+    "selector": {
+      "selected": "gene_gep_innovate_from_opportunity",
+      "reason": [
+        "signals match gene.signals_match",
+        "signals: protocol_drift, capability_gap, high_tool_usage:exec, repeated_tool_usage:exec, user_feature_request, tool_bypass, hub_search_miss_with_problem",
+        "drift_intensity: 0.408",
+        "selection_path: random"
+      ],
+      "alternatives": [
+        "gene_gep_optimize_tool_usage",
+        "gene_gep_optimize_prompt_and_assets",
+        "gene_gep_repair_from_errors",
+        "gene_tool_integrity"
+      ],
+      "selectionPath": "random",
+      "memoryUsed": false
+    },
+    "signals": [
+      "protocol_drift",
+      "capability_gap",
+      "high_tool_usage:exec",
+      "repeated_tool_usage:exec",
+      "user_feature_request",
+      "tool_bypass",
+      "hub_search_miss_with_problem"
+    ],
+    "mutation": {
+      "type": "Mutation",
+      "id": "mut_1780591814040",
+      "category": "innovate",
+      "trigger_signals": [
+        "protocol_drift",
+        "capability_gap",
+        "high_tool_usage:exec",
+        "repeated_tool_usage:exec",
+        "user_feature_request",
+        "tool_bypass",
+        "hub_search_miss_with_problem"
+      ],
+      "target": "gene:gene_gep_innovate_from_opportunity",
+      "expected_effect": "explore new strategy combinations to escape local optimum",
+      "risk_level": "medium"
+    },
+    "mutation_id": "mut_1780591814040",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 0.7,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "personality_key": "rigor=0.7|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_known": false,
+    "personality_mutations": [],
+    "drift": false,
+    "selected_by": "selector",
+    "source_type": "generated",
+    "reused_asset_id": null,
+    "reused_source_node": null,
+    "reused_chain_id": null,
+    "baseline_untracked": [
+      ".evolver/gep/candidates.jsonl",
+      ".evolver/gep/capsules.json",
+      ".evolver/gep/events.jsonl",
+      ".evolver/gep/failed_capsules.json",
+      ".evolver/gep/genes.json",
+      ".evolver/gep/genes.jsonl",
+      "memory/.dreams/short-term-recall.json",
+      "memory/2026-06-02.md",
+      "memory/2026-06-03.md",
+      "memory/2026-06-04-1622.md",
+      "memory/2026-06-04.md",
+      "memory/atp-autobuyer-ledger.json",
+      "memory/evolution/memory_graph.jsonl",
+      "memory/evolution/memory_graph_state.json",
+      "memory/evolution/personality_state.json",
+      "memory/evolver_update_check.json",
+      "memory/readme.txt",
+      "memory/skills_list_cache.json",
+      "\"\\345\\256\\241\\350\\256\\241\\351\\241\\271\\347\\233\\256\\345\\256\\236\\346\\226\\275\\346\\234\\215\\345\\212\\241\\345\\271\\263\\345\\217\\260_PRD_v1.md\"",
+      "\"\\345\\256\\241\\350\\256\\241\\351\\241\\271\\347\\233\\256\\345\\256\\236\\346\\226\\275\\346\\234\\215\\345\\212\\241\\345\\271\\263\\345\\217\\260_\\345\\256\\214\\346\\225\\264\\344\\272\\247\\345\\223\\201\\346\\226\\271\\346\\241\\210.md\""
+    ],
+    "baseline_git_head": "507692c72473661d62ce3dd7864aa6006d686922",
+    "blast_radius_estimate": {
+      "files": 25,
+      "lines": 2000
+    },
+    "strategy_policy": {
+      "name": "balanced",
+      "label": "Balanced",
+      "description": "Normal operation. Steady growth with stability.",
+      "forceInnovate": false,
+      "cautiousExecution": false,
+      "highRiskGene": false,
+      "repairStreak": 0,
+      "failureStreak": 0,
+      "blastRadiusMaxFiles": 25,
+      "directives": [
+        "Base strategy: Balanced (Normal operation. Steady growth with stability.)",
+        "Target max files for this cycle: 25."
+      ]
+    },
+    "active_task_id": null,
+    "active_task_title": null,
+    "worker_assignment_id": null,
+    "worker_pending": false,
+    "commitment_deadline": null,
+    "applied_lessons": [],
+    "hub_lessons": [],
+    "cycleId": "0001",
+    "initial_user_prompt": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-control-ui\",\n  \"id\": \"openclaw-control-ui\"\n}\n```\n\n[Fri 2026-06-05 00:24 GMT+8] 安装memos、evomap"
+  }
+}
