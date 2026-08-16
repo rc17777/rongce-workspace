@@ -1,0 +1,63 @@
+{
+  "tier": "atomic",
+  "category": "抽样与数据获取",
+  "skills": [
+    {
+      "id": "atom-stratified-sampling",
+      "name": "分层随机抽样",
+      "tool": "sampling",
+      "description": "按金额/类型/时间等维度分层后，在各层内独立随机抽样。大额层通常全覆盖或高比例，中小额层按统计量抽取。",
+      "constraints": [
+        "层数≥3（大/中/小），避免层内方差过大",
+        "每层样本量≥30（统计推断下限）",
+        "大额层建议100%覆盖，中层20-50%，小额层5-10%"
+      ],
+      "param_patterns": {
+        "strata_by": ["金额", "类型", "时间"],
+        "strata_count": {"min": 3, "max": 5},
+        "sample_ratio": {"大额": "100%", "中额": "20-50%", "小额": "5-10%"}
+      },
+      "failure_modes": [
+        "分层标准与审计目标无关（如按时段分层对金额测试无意义）",
+        "样本量不足无法统计推断",
+        "仅覆盖大额而忽略小额但多次的累积舞弊风险"
+      ],
+      "use_conditions": ["总体数量较大（>500条）", "总体内金额差异显著"],
+      "evidence_standard": "方案需记录分层标准、每层样本量计算依据、实际抽样过程"
+    },
+    {
+      "id": "atom-mus",
+      "name": "货币单位抽样(MUS)",
+      "tool": "sampling",
+      "description": "以金额为抽样单位——金额越大被抽中概率越高。特别适合高估测试（如虚增收入/资产）。",
+      "constraints": [
+        "适用于高估测试，不适合低估/漏记测试",
+        "总体中不能有大量零值或负值",
+        "总体金额需准确"
+      ],
+      "param_patterns": {
+        "confidence": 0.95,
+        "tolerable_error": "可容忍错报金额",
+        "expected_error": "预期错报金额"
+      },
+      "failure_modes": [
+        "对低估/漏记不敏感——这是MUS的天然短板",
+        "有大量零值或负值的总体不适用",
+        "样本量计算错误导致测试不足或过度测试"
+      ],
+      "use_conditions": ["高估风险是主要关注点", "总体金额准确且为正", "总体量较大"],
+      "evidence_standard": "需记录置信度、可容忍误差、预期误差的设定依据及计算过程"
+    },
+    {
+      "id": "atom-pps-sampling",
+      "name": "概率比例规模抽样(PPS)",
+      "tool": "sampling",
+      "description": "按金额比例确定每个项目被选中的概率，与MUS类似但更灵活。",
+      "constraints": ["总体中不能有零值或负值", "适用于实质性测试"],
+      "param_patterns": {"confidence": 0.90, "tolerable_error": "可容忍错报", "expected_error": "预期错报"},
+      "failure_modes": ["零值或负值导致抽样失败", "样本代表性不足"],
+      "use_conditions": ["实质性测试", "总体以金额为关注维度"],
+      "evidence_standard": "抽样方案+样本清单+推断结论"
+    }
+  ]
+}
