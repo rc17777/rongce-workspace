@@ -11,7 +11,9 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ## 网络代理（Git push 依赖）
 
-- **代理软件**：FlClash（`D:\Program Files\FlClash\FlClashCore.exe`），端口 `127.0.0.1:7890`
+- **代理软件**：FlClash（`D:\Program Files\FlClash\FlClash.exe`），端口 `127.0.0.1:7890`
+  - ⚠️ 要启动 **FlClash.exe（GUI）**，Core 会随 GUI 拉起；单独启动 FlClashCore.exe 不会监听代理端口
+  - ⚠️ GUI 启动后若无节点监听，需手动在界面点连接/选节点
 - **Git 已配置代理**：`http.proxy=http://127.0.0.1:7890`（workspace 仓库）
 - **直连 GitHub 会被重置**（国内环境），push 必须走代理
 - **故障特征**：`schannel: failed to receive handshake` / `curl 56 server closed abruptly` = 代理节点挂了/不稳，需在 FlClash 切节点或重启，**不是 Git 配置问题**
