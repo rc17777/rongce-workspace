@@ -14,7 +14,12 @@ from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-WORKSPACE = r'C:\Users\scrccpa\.openclaw\workspace'
+WORKSPACE = os.environ.get(
+    'OPENCLAW_WORKSPACE',
+    r'C:\Users\15528\.openclaw\workspace-main'
+    if os.path.exists(r'C:\Users\15528\.openclaw\workspace-main')
+    else r'C:\Users\scrccpa\.openclaw\workspace'
+)
 LOG_DIR = os.path.join(WORKSPACE, 'logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 
@@ -85,8 +90,81 @@ GLOBAL_FALLBACKS = [
     'deepseek-direct/deepseek-chat',
 ]
 
+# ====== v6 路由接入（四信号×四方法，config/model_routing_v6.py）======
+# 开关（环境变量可覆盖）：
+#   V6_ROUTER_ENABLED=0  关闭 v6，完全走旧逻辑
+#   V6_SHADOW_MODE=0     退出影子模式：v6 决策真正生效
+V6_ROUTER_ENABLED = os.environ.get('V6_ROUTER_ENABLED', '1') == '1'
+V6_SHADOW_MODE = os.environ.get('V6_SHADOW_MODE', '1') == '1'
+
+
+def _load_v6_router():
+    """加载 v6 路由模块；失败返回 None（不影响旧逻辑）"""
+    try:
+        if WORKSPACE not in sys.path:
+            sys.path.insert(0, WORKSPACE)
+        from config.model_routing_v6 import Router
+        return Router(log_path=os.path.join(LOG_DIR, 'routing_trajectory.jsonl'))
+    except Exception:
+        return None
+
+
+_v6_router = _load_v6_router()
+
+# error_cost_level → v6 场景映射（影子对比和正式切换共用）
+COST_LEVEL_TO_SCENARIO = {
+    0: 'lightweight',
+    1: 'data_check',
+    2: 'gov_document',
+    3: 'compliance_check',
+    4: 'final_review',
+    5: 'final_review',
+    'consulting': 'consulting',
+}
+
+# 旧路由的错误代价 → 场景映射（修复：原代码引用不存在的 cost_* 键会 KeyError）
+_LEGACY_LEVEL_MAP = {
+    0: 'lightweight',
+    1: 'data_check',
+    2: 'gov_document',
+    3: 'compliance_check',
+    4: 'final_review',
+    5: 'final_review',
+}
+
+
+def _legacy_route(task_type, error_cost_level, spent, context_length=0):
+    """旧路由逻辑（v6 关闭或影子模式下的实际执行模型）"""
+    # 长文档（v6 关闭时保留此能力）
+    if context_length > 128000:
+        return {'model': 'gemini-3.1-pro-preview', 'reason': 'long_context', 'budget_spent': spent}
+    if error_cost_level == 'consulting':
+        model = MODEL_ROUTES['consulting']['primary']
+        reason = 'consulting'
+    else:
+        scenario = _LEGACY_LEVEL_MAP.get(error_cost_level, 'lightweight')
+        cfg = MODEL_ROUTES.get(scenario, MODEL_ROUTES['lightweight'])
+        model = cfg['primary']
+        reason = 'standard'
+    if spent > DAILY_BUDGET * BUDGET_WARN:
+        reason = 'budget_warning'
+        if error_cost_level in (0, 1):
+            model = MODEL_ROUTES['lightweight']['primary']
+    return {'model': model, 'reason': reason, 'budget_spent': spent}
+
+
 def resolve_model(agent_name=None, scenario=None):
-    """双层路由：Agent优先，场景兜底，全局保底"""
+    """双层路由：Agent优先，场景兜底，全局保底（v6 启用时先问 v6）"""
+    if _v6_router and V6_ROUTER_ENABLED:
+        v6d = _v6_router.route({
+            'task_id': f'gw-{int(time.time() * 1000)}',
+            'agent': agent_name or None,
+            'scenario': scenario or None,
+            'shadow': V6_SHADOW_MODE,
+        })
+        if not V6_SHADOW_MODE:
+            return {'primary': v6d['model'], 'fallbacks': v6d['chain'][1:],
+                    'v6_method': v6d['method'], 'v6_reason': v6d['reason']}
     if agent_name:
         for key in AGENT_MODEL_MAP:
             if key in agent_name.lower() or agent_name.lower() in key:
@@ -134,39 +212,44 @@ def daily_cost():
 
 # ====== 路由决策引擎 ======
 def route_model(task_type, error_cost_level, context_length=0):
-    """根据任务类型 + 错误代价 + 上下文长度 选择模型"""
+    """根据任务类型 + 错误代价 + 上下文长度 选择模型
+
+    v6 启用时：先问 v6 Router（四信号：任务/轨迹/系统/风险）。
+    影子模式（默认）：返回旧路由结果，附 v6 建议字段，只记录不切换；
+    正式模式：直接采用 v6 决策。
+    """
     # 预算检查
     spent = daily_cost()
     if spent > DAILY_BUDGET * BUDGET_CUTOFF:
-        return {'model': MODEL_ROUTES['cost_0_free'][0], 'reason': 'budget_cutoff', 'budget_spent': spent}
-    
-    # 长文档
-    if context_length > 128000:
-        return {'model': 'gemini-3.1-pro-preview', 'reason': 'long_context', 'budget_spent': spent}
-    
-    # 错误代价路由
-    cost_map = {
-        0: 'cost_0_free',
-        1: 'cost_1_low',
-        2: 'cost_2_medium',
-        3: 'cost_3_high',
-        4: 'cost_4_critical',
-        5: 'cost_5_max',
-        'consulting': 'cost_consulting',
-    }
-    
-    level_key = cost_map.get(error_cost_level, 'cost_0_free')
-    models = MODEL_ROUTES.get(level_key, MODEL_ROUTES['cost_0_free'])
-    model = models[0]
-    
-    # 预算预警
-    reason = 'standard'
-    if spent > DAILY_BUDGET * BUDGET_WARN:
-        reason = 'budget_warning'
-        if error_cost_level <= 1:  # 低代价降级到免费
-            model = MODEL_ROUTES['cost_0_free'][0]
-    
-    return {'model': model, 'reason': reason, 'budget_spent': spent}
+        return {'model': MODEL_ROUTES['lightweight']['primary'],
+                'reason': 'budget_cutoff', 'budget_spent': spent}
+
+    # v6 四信号路由
+    if _v6_router and V6_ROUTER_ENABLED:
+        scenario = COST_LEVEL_TO_SCENARIO.get(error_cost_level, task_type)
+        v6d = _v6_router.route({
+            'task_id': f'gateway-{int(time.time() * 1000)}',
+            'scenario': scenario if scenario in MODEL_ROUTES else task_type,
+            'context_chars': context_length,
+            'shadow': V6_SHADOW_MODE,
+        })
+        if V6_SHADOW_MODE:
+            # 影子模式：实际执行仍用旧路由，v6 建议落盘并随响应返回供对比
+            old = _legacy_route(task_type, error_cost_level, spent, context_length)
+            old['v6_suggestion'] = v6d['model']
+            old['v6_tier'] = v6d['tier']
+            old['v6_method'] = v6d['method']
+            old['v6_reason'] = v6d['reason']
+            old['shadow'] = True
+            return old
+        return {'model': v6d['model'],
+                'reason': f"v6:{v6d['method']}:{v6d['reason']}",
+                'budget_spent': spent,
+                'v6_tier': v6d['tier'], 'v6_method': v6d['method'],
+                'v6_reason': v6d['reason'], 'shadow': False}
+
+    # 旧路由（v6 关闭时）
+    return _legacy_route(task_type, error_cost_level, spent, context_length)
 
 # ====== RAG 上下文注入 ======
 def inject_rag_context(query, top_k=5):
@@ -237,6 +320,15 @@ def audit_qa(query, error_cost_level=1, with_rag=True, model_override=None):
         'user_prompt': user_prompt,
         'duration_ms': int((time.time() - start_time) * 1000),
     }
+    # v6 影子对比字段（正式切换后无 v6_suggestion，仅有 v6_method/reason）
+    if 'v6_suggestion' in route:
+        result['v6_suggestion'] = route['v6_suggestion']
+    if 'v6_tier' in route:
+        result['v6_tier'] = route['v6_tier']
+    if 'v6_method' in route:
+        result['v6_method'] = route['v6_method']
+    if 'v6_reason' in route:
+        result['v6_reason'] = route['v6_reason']
     
     # Log
     log_call(route['model'], 'qa', len(user_prompt), 0, 0, result['duration_ms'])
@@ -392,8 +484,10 @@ def serve(port=5002):
             'message': f'工作流 {workflow} 已就绪，{len(selected)} 个步骤待执行',
         })
     
+    v6_state = '影子模式(只建议不切换)' if (V6_SHADOW_MODE and V6_ROUTER_ENABLED and _v6_router) else \
+               ('正式切换' if (V6_ROUTER_ENABLED and _v6_router) else 'v6未启用')
     print(f'\n╔══════════════════════════════════╗')
-    print(f'║   融策 Audit API Gateway v1.0   ║')
+    print(f'║   融策 Audit API Gateway v1.1   ║')
     print(f'╚══════════════════════════════════╝')
     print(f'\n  http://127.0.0.1:{port}')
     print(f'  POST /qa         - 审计问答(RAG增强)')
@@ -402,7 +496,8 @@ def serve(port=5002):
     print(f'  GET  /budget      - 预算查询')
     print(f'  POST /tasks       - 工作流编排')
     print(f'  GET  /health      - 健康检查')
-    print(f'\n  预算: ¥{DAILY_BUDGET}/天 | 已用: ¥{daily_cost():.2f}')
+    print(f'\n  模型路由: v6 [{v6_state}]')
+    print(f'  预算: ¥{DAILY_BUDGET}/天 | 已用: ¥{daily_cost():.2f}')
     app.run(host='127.0.0.1', port=port, debug=False)
 
 if __name__ == '__main__':
