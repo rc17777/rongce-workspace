@@ -50,6 +50,7 @@ for agent in key_agents:
 
 # ─── Agent路由（敏感项目） ───
 print(f"\n  ─── Agent路由（敏感项目：经责审计）───")
+print(f"  ⚙️ 开关 SENSITIVE_FORCE_DOMESTIC_PRIMARY = {SENSITIVE_FORCE_DOMESTIC_PRIMARY}")
 pi = {"name": "X县经济责任审计", "type": "经责"}
 for agent in key_agents:
     t, k, route = get_best_route(agent_name=agent, project_info=pi)
@@ -61,7 +62,12 @@ for agent in key_agents:
         MODEL_POOL.get(m, {}).get("region") == "国产" 
         for m in route["fallbacks"]
     )
-    print(f"    {agent:<22s} {p:<16s}[{region}] 🛡️全国产={all_domestic} → {f}")
+    primary_domestic = MODEL_POOL.get(route["primary"], {}).get("region") == "国产"
+    assert all_domestic, f"{agent} 敏感链混入海外fallback: {route['fallbacks']}"
+    if SENSITIVE_FORCE_DOMESTIC_PRIMARY:
+        assert primary_domestic, f"{agent} 敏感项目primary非国产: {route['primary']}"
+    flag = "🛡️" if primary_domestic else "⚠️"
+    print(f"    {agent:<22s} {p:<16s}[{region}] {flag}全国产={all_domestic} → {f}")
 
 # ─── 场景路由 ───
 print(f"\n  ─── 场景路由 ───")

@@ -398,6 +398,16 @@ SENSITIVE_FALLBACK = {
 
 
 # ═══════════════════════════════════════════
+# 敏感项目开关
+# ═══════════════════════════════════════════
+
+# 敏感项目强制国产 primary（默认开启）
+# True  → Agent级路由在敏感项目下，primary 也强制换为国产品牌（涉密数据不出境）
+# False → 仅过滤 fallback 为国产，primary 保持 Agent 专属模型（v6 旧行为）
+SENSITIVE_FORCE_DOMESTIC_PRIMARY = True
+
+
+# ═══════════════════════════════════════════
 # 敏感项目自动识别
 # ═══════════════════════════════════════════
 
@@ -431,13 +441,12 @@ def get_agent_route(agent_name: str, project_info: dict = None):
     if not route:
         return GLOBAL_DEFAULT
 
-    # 敏感项目：强制替换海外fallback为国产品牌
+    # 敏感项目：强制国产链（primary + fallbacks）
     if project_info and is_sensitive_project(
         project_info.get("name", ""),
         project_info.get("type", "")
     ):
-        route = route.copy()
-        route["fallbacks"] = _filter_domestic(route["fallbacks"])
+        route = _sensitive_route(route)
 
     return route
 
@@ -465,8 +474,7 @@ def get_best_route(agent_name=None, scenario=None, project_info=None):
     if agent_name and agent_name in AGENT_MODEL_ROUTES:
         route = AGENT_MODEL_ROUTES[agent_name]
         if is_sensitive:
-            route = route.copy()
-            route["fallbacks"] = _filter_domestic(route["fallbacks"])
+            route = _sensitive_route(route)
         return ("agent", agent_name, route)
 
     if scenario and scenario in SCENARIO_MODEL_ROUTES:
@@ -498,6 +506,34 @@ def get_model_region(model_id: str):
 def get_cost_estimate(model_id: str):
     """查模型成本"""
     return MODEL_POOL.get(model_id, {}).get("cost", "未知")
+
+
+def _sensitive_route(route: dict) -> dict:
+    """敏感项目路由：强制全国产（primary + fallbacks）
+
+    - fallbacks 一律过滤为国产
+    - SENSITIVE_FORCE_DOMESTIC_PRIMARY=True 时，海外 primary 也替换为国产：
+      优先提升 fallback 中排位最前的国产模型；若无可提升项则用敏感链默认
+    """
+    route = route.copy()
+    route["fallbacks"] = _filter_domestic(route["fallbacks"])
+
+    if SENSITIVE_FORCE_DOMESTIC_PRIMARY and \
+            MODEL_POOL.get(route["primary"], {}).get("region") != "国产":
+        if route["fallbacks"]:
+            # 提升排位最前的国产 fallback 为 primary；
+            # 原海外 primary 不入链（敏感项目链条必须全国产）
+            route["primary"] = route["fallbacks"][0]
+            route["fallbacks"] = route["fallbacks"][1:]
+            if not route["fallbacks"]:
+                # 无剩余国产降级 → 补敏感链默认降级
+                route["fallbacks"] = list(SENSITIVE_FALLBACK["fallbacks"])
+        else:
+            # 该 Agent 无国产 fallback → 整体走敏感链
+            route["primary"] = SENSITIVE_FALLBACK["primary"]
+            route["fallbacks"] = list(SENSITIVE_FALLBACK["fallbacks"])
+
+    return route
 
 
 def _filter_domestic(fallbacks: list) -> list:

@@ -88,10 +88,12 @@ Token 存储：`logs/token_usage.jsonl`（JSONL 格式）
 - 核心引用：`references/data-standard.md`、`references/rule-library-v1.md`、`references/output-spec.md`
 - 触发："调用财政监督检查模型"、"用财会监督模型跑疑点"等
 
-## 模型路由方案 v5.0（双层路由）
+## 模型路由方案 v7.0（三层路由）
 
-> 完整配置 → **`config/model_routing_v5.py`**
+> 完整配置 → **`config/model_routing_v7.py`**（v5/v6 已废弃，勿用）
 > 路由优先级：**Agent路由 > 场景路由 > 全局默认**
+> 敏感项目开关：**`SENSITIVE_FORCE_DOMESTIC_PRIMARY = True`**（默认开启：敏感项目下 Agent 路由 primary 也强制换国产；设为 False 恢复 v6 旧行为——仅 fallback 国产）
+> 验证：`python scripts/test_routing_v7.py` + `python scripts/verify_routing.py`；生产决策轨迹见 `logs/routing_trajectory.jsonl`
 
 ### 第一层：场景速查
 
